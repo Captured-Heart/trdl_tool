@@ -79,6 +79,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           Navigator.push(
@@ -89,7 +90,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
           );
         },
         label: Text(
-          'OVERSLAAN',
+          'VERDER',
           style: GoogleFonts.questrial(),
         ),
       ),
