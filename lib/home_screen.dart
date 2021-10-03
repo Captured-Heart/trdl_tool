@@ -19,8 +19,7 @@ class HomeScreen extends StatelessWidget {
         ),
         title: Text(
           'TRDLtool',
-          style: GoogleFonts.questrial(
-              textStyle: TextStyle(fontWeight: FontWeight.w700)),
+          style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
       ),
       body: SafeArea(
@@ -122,6 +121,9 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBox(
+                        height: 8.0,
+                      ),
                       FittedBox(
                         fit: BoxFit.cover,
                         child: Row(
@@ -131,9 +133,7 @@ class HomeScreen extends StatelessWidget {
                               onPressed: () {},
                               child: Text(
                                 'Werkwijze',
-                                style: GoogleFonts.questrial(
-                                    textStyle:
-                                        TextStyle(fontWeight: FontWeight.bold)),
+                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                               ),
                             ),
                             SizedBox(
@@ -143,9 +143,7 @@ class HomeScreen extends StatelessWidget {
                               onPressed: () {},
                               child: Text(
                                 'Achtergrondinfo',
-                                style: GoogleFonts.questrial(
-                                    textStyle:
-                                        TextStyle(fontWeight: FontWeight.bold)),
+                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                               ),
                             ),
                             SizedBox(
@@ -155,9 +153,7 @@ class HomeScreen extends StatelessWidget {
                               onPressed: () {},
                               child: Text(
                                 'Incidenten',
-                                style: GoogleFonts.questrial(
-                                    textStyle:
-                                        TextStyle(fontWeight: FontWeight.bold)),
+                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                               ),
                             ),
                           ],
