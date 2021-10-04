@@ -43,19 +43,31 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.train),
+            icon: Icon(
+              Icons.train,
+              size: 18.0,
+            ),
             label: 'Werkwijze',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.menu_book),
+            icon: Icon(
+              Icons.menu_book,
+              size: 18.0,
+            ),
             label: 'Achtergrond',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.sports_esports),
+            icon: Icon(
+              Icons.sports_esports,
+              size: 18.0,
+            ),
             label: 'ProQuiz',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.forum),
+            icon: Icon(
+              Icons.forum,
+              size: 18.0,
+            ),
             label: 'ProChat',
           ),
         ],
