@@ -41,32 +41,29 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
               Icons.train,
-              size: 18.0,
             ),
             label: 'Werkwijze',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.menu_book,
-              size: 18.0,
             ),
             label: 'Achtergrond',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.sports_esports,
-              size: 18.0,
             ),
             label: 'ProQuiz',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.forum,
-              size: 18.0,
             ),
             label: 'ProChat',
           ),
