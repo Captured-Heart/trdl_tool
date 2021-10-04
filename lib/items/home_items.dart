@@ -405,7 +405,7 @@ class HomeIndex3 extends StatelessWidget {
           ),
         ),
         title: Text(
-          'ProChat',
+          'TRDLtool',
           style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
       ),

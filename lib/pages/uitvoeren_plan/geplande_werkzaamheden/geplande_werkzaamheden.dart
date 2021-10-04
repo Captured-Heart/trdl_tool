@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class UitvoerenPlan extends StatelessWidget {
-  const UitvoerenPlan({Key? key}) : super(key: key);
+class GeplandeWerkzaamheden extends StatelessWidget {
+  const GeplandeWerkzaamheden({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class UitvoerenPlan extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Uitvoeren Plan',
+                              'Geplande Werkzaamheden',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 24.0,
@@ -56,7 +56,7 @@ class UitvoerenPlan extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'De treindienstleider voert het actuele plan uit en stelt infra ter beschikking volgens vooraf gemaakte afspraken.',
+                              'Dit zijn vooraf geplande werkzaamheden die zijn vastgelegd in een Werkplek Beveiligings Instructie (WBI/WECO).',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -97,11 +97,9 @@ class UitvoerenPlan extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'geplandewerkzaamheden');
-                            },
+                            onPressed: () {},
                             child: Text(
-                              'Geplande Werkzaamheden',
+                              'Aanvang Werkzaamheden',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
@@ -111,7 +109,7 @@ class UitvoerenPlan extends StatelessWidget {
                           ElevatedButton(
                             onPressed: () {},
                             child: Text(
-                              'Bijzonderheden Rijwegen',
+                              'Controleren WBI',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
@@ -121,37 +119,7 @@ class UitvoerenPlan extends StatelessWidget {
                           ElevatedButton(
                             onPressed: () {},
                             child: Text(
-                              'Bijzonderheden Trein',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text(
-                              'Communicatie',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text(
-                              'NCBG',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: Text(
-                              'Dienstovergave',
+                              'Fouten in de WBI',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
