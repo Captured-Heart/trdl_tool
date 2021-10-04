@@ -59,6 +59,9 @@ class Login extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBox(
+                        height: 8.0,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
