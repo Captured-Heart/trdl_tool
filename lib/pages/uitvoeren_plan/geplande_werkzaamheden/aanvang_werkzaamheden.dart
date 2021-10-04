@@ -147,6 +147,65 @@ class AanvangWerkzaamheden extends StatelessWidget {
                   ),
                 ),
               ),
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              'Context',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              'Bij geplande werkzaamheden wordt in de voorbereiding op de werkzaamheden een werkplekbeveiligingsinstructie (WBI) gemaakt. In de WBI/WECO worden de gemaakte afspraken voor de werkplekbeveiliging vastgelegd.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              'Voorafgaand aan de werkzaamheden stellen treindienstleider en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
