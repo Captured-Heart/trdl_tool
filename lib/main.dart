@@ -21,6 +21,8 @@ class MainEntry extends StatelessWidget {
       routes: {
         'uitvoerenplan': (context) => UitvoerenPlan(),
         'geplandewerkzaamheden': (context) => GeplandeWerkzaamheden(),
+        'aanvangwerkzaamheden': (context) => AanvangWerkzaamheden(),
+        'controlerenwbi': (context) => ControlerenWbi(),
       },
     );
   }

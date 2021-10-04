@@ -97,7 +97,9 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'aanvangwerkzaamheden');
+                            },
                             child: Text(
                               'Aanvang Werkzaamheden',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
@@ -107,7 +109,9 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                             height: 8.0,
                           ),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'controlerenwbi');
+                            },
                             child: Text(
                               'Controleren WBI',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
