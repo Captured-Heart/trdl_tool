@@ -97,7 +97,7 @@ class UitvoerenPlan extends StatelessWidget {
                         height: 8.0,
                       ),
                       Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
                             onPressed: () {},
@@ -107,7 +107,7 @@ class UitvoerenPlan extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            width: 8.0,
+                            height: 8.0,
                           ),
                           ElevatedButton(
                             onPressed: () {},
@@ -117,7 +117,7 @@ class UitvoerenPlan extends StatelessWidget {
                             ),
                           ),
                           SizedBox(
-                            width: 8.0,
+                            height: 8.0,
                           ),
                           ElevatedButton(
                             onPressed: () {},
@@ -125,6 +125,9 @@ class UitvoerenPlan extends StatelessWidget {
                               'Bijzonderheden Trein',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
+                          ),
+                          SizedBox(
+                            height: 8.0,
                           ),
                           ElevatedButton(
                             onPressed: () {},
