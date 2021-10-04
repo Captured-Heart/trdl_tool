@@ -22,6 +22,17 @@ class HomeScreen extends StatelessWidget {
           style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
       ),
+      bottomNavigationBar: BottomNavigationBar(items: const <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: Icon(Icons.train),
+          label: 'Werkwijze',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.menu_book),
+          label: 'Achtergrond',
+        ),
+        BottomNavigationBarItem(icon: Icon(Icons.sports_esports), label: 'ProQuiz'),
+      ]),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
