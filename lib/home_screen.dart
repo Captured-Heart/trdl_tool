@@ -21,10 +21,10 @@ class BottomNavigationScreen extends StatefulWidget {
 /// This is the private State class that goes with BottomNavigationScreen.
 class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
+  static final List<Widget> _widgetOptions = <Widget>[
     HomeIndex0(),
     HomeIndex1(),
-    HomeIndex3(),
+    HomeIndex2(),
   ];
 
   void _onItemTapped(int index) {
