@@ -15,7 +15,7 @@ class HomeIndex0 extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
           child: CircleAvatar(
-            child: Icon(Icons.home),
+            child: Icon(Icons.person),
           ),
         ),
         title: Text(
@@ -199,7 +199,7 @@ class HomeIndex1 extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
           child: CircleAvatar(
-            child: Icon(Icons.home),
+            child: Icon(Icons.person),
           ),
         ),
         title: Text(
@@ -316,7 +316,7 @@ class HomeIndex2 extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
           child: CircleAvatar(
-            child: Icon(Icons.home),
+            child: Icon(Icons.person),
           ),
         ),
         title: Text(
