@@ -96,7 +96,7 @@ class UitvoerenPlan extends StatelessWidget {
                       SizedBox(
                         height: 8.0,
                       ),
-                      Row(
+                      Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           ElevatedButton(
