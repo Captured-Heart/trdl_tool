@@ -14,4 +14,9 @@ List items = [
     "description": "Test je kennis",
     "image": "assets/images/welcomescreen3.png"
   },
+  {
+    "header": "Praat",
+    "description": "Klets met je collega\'s",
+    "image": "assets/images/welcomescreen4.png"
+  },
 ];
