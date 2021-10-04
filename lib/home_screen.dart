@@ -24,9 +24,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   static const List<Widget> _widgetOptions = <Widget>[
     HomeIndex0(),
     HomeIndex1(),
-    Text(
-      'Index 2: School',
-    ),
+    HomeIndex3(),
   ];
 
   void _onItemTapped(int index) {
