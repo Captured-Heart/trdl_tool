@@ -97,7 +97,9 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'aanvangwerkzaamheden');
+                            },
                             child: Text(
                               'Aanvang Werkzaamheden',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),

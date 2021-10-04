@@ -10,3 +10,4 @@ export 'package:trdl_tool/home_screen.dart';
 export 'package:trdl_tool/welcome_screen.dart';
 export 'package:trdl_tool/pages/uitvoeren_plan/uitvoeren_plan.dart';
 export 'package:trdl_tool/pages/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden.dart';
+export 'package:trdl_tool/pages/uitvoeren_plan/geplande_werkzaamheden/aanvang_werkzaamheden.dart';
