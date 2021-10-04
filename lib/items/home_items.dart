@@ -220,7 +220,7 @@ class HomeIndex1 extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Verantwoordelijkheden Treindienstleider',
+                              'Achtergrondinformatie Treindienstleider',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 24.0,
@@ -237,7 +237,7 @@ class HomeIndex1 extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Als treindienstleider ben je verantwoordelijk voor het verdelen van de infracapaciteit in een aan jou toegewezen geografisch gebied. Dit doe je door het uitvoeren van een vooraf aangeleverd plan.',
+                              'De Werkwijze Treindienstleider is online beschikbaar op SharePoint. Deze werkwijze is altijd actueel en wordt inhoudelijk beheerd door de staf Verkeersleiding, treindienstleiding i.s.m. Human Factors Verkeersleiding (HF VL).',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -254,7 +254,7 @@ class HomeIndex1 extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Wanneer er zich situaties voordoen die een aanpassing op dat plan noodzakelijk maken, doe je dit door gebruik te maken van vooraf bepaalde procedures in deze werkwijze.',
+                              'De achtergrondinformatie is onderdeel van de Werkwijze Treindienstleiding, samen met de documenten Vakmanschap en TRA (Taak Risico Analyse). De opbouw van de achtergrondinformatie volgt de opbouw van de nieuwe werkwijze.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -271,7 +271,7 @@ class HomeIndex1 extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Op momenten dat oplossingen ter plekke moeten worden bedacht, kan besloten worden een procedure niet geheel of anders uit te voeren. Het is het vakmanschap van de treindienstleider om te bepalen welke VKA\'s nodig zijn om de risico\'s te beheersen.',
+                              'De TRDLtool is nog volop in ontwikkeling en krijgt regelmatig updates. Kom snel terug voor meer achtergrondinformatie.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
