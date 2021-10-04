@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:trdl_tool/home_screen.dart';
 
 class HomeIndex0 extends StatelessWidget {
   const HomeIndex0({Key? key}) : super(key: key);
@@ -206,6 +207,16 @@ class HomeIndex1 extends StatelessWidget {
           style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.home),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => HomeScreen(),
+              ),
+            );
+          }),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
