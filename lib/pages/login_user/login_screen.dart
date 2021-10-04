@@ -17,9 +17,7 @@ class Login extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Expanded(
-                      child: Image.asset(
-                          'assets/images/trdlToolLogoSmallPNG.png')),
+                  Expanded(child: Image.asset('assets/images/trdlToolLogoSmallPNG.png')),
                 ],
               ),
             ),
@@ -43,11 +41,7 @@ class Login extends StatelessWidget {
                         children: [
                           Expanded(
                             child: TextField(
-                              decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  labelText: 'Emailadres',
-                                  hintText:
-                                      'Email moet eindigen op @prorail.nl'),
+                              decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Emailadres', hintText: 'Email moet eindigen op @prorail.nl'),
                             ),
                           ),
                         ],
@@ -60,20 +54,26 @@ class Login extends StatelessWidget {
                           Expanded(
                             child: TextField(
                               obscureText: true,
-                              decoration: InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  labelText: 'Wachtwoord',
-                                  hintText:
-                                      'Wachtwoord bevat minimaal 6 tekens'),
+                              decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Wachtwoord', hintText: 'Wachtwoord bevat minimaal 6 tekens'),
                             ),
                           ),
                         ],
+                      ),
+                      SizedBox(
+                        height: 8.0,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => HomeScreen(),
+                                ),
+                              );
+                            },
                             child: Text('Login'),
                           ),
                         ],
