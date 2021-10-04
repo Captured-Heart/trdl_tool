@@ -132,7 +132,27 @@ class UitvoerenPlan extends StatelessWidget {
                           ElevatedButton(
                             onPressed: () {},
                             child: Text(
-                              'Bijzonderheden Trein',
+                              'Communicatie',
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 8.0,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              'NCBG',
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 8.0,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Dienstovergave',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
