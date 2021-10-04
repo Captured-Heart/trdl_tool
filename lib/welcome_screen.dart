@@ -63,7 +63,11 @@ class _WelcomeScreen extends State<WelcomeScreen> {
             margin: EdgeInsets.symmetric(horizontal: 3.0),
             height: 12.0,
             width: 12.0,
-            decoration: BoxDecoration(color: currentPage.round() == index ? Color(0xFF0D4F18) : Color(0xFF0D4F18).withOpacity(0.3), borderRadius: BorderRadius.circular(10.0)),
+            decoration: BoxDecoration(
+                color: currentPage.round() == index
+                    ? Color(0xFF0D4F18)
+                    : Color(0xFF0D4F18).withOpacity(0.3),
+                borderRadius: BorderRadius.circular(10.0)),
           ));
 
   double currentPage = 0.0;
@@ -78,7 +82,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => HomeScreen(),
+              builder: (context) => Login(),
             ),
           );
         },
