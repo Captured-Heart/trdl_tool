@@ -77,7 +77,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                               '- Neem de (veiligheids)maatregelen die in de WBI/WECO zijn vermeld of met de LWB zijn afgesproken;',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
-                                  fontSize: 14.0,
+                                  fontSize: 16.0,
                                 ),
                               ),
                             ),
@@ -94,7 +94,49 @@ class AanvangWerkzaamheden extends StatelessWidget {
                               '- Meld de LWB dat je de infracapaciteit benoemd op de WBI/WECO beschikbaar hebt gesteld voor werkzaamheden.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
-                                  fontSize: 14.0,
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              'Risico\'s',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
                                 ),
                               ),
                             ),
