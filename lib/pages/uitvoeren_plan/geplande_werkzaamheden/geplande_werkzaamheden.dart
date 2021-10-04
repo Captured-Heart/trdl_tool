@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:trdl_tool/home_screen.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class GeplandeWerkzaamheden extends StatelessWidget {
   const GeplandeWerkzaamheden({Key? key}) : super(key: key);

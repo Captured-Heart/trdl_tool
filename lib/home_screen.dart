@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:trdl_tool/items/home_items.dart';
+import 'all_imports.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);

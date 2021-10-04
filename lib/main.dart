@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:trdl_tool/welcome_screen.dart';
-import 'package:flex_color_scheme/flex_color_scheme.dart';
-import 'package:trdl_tool/pages/uitvoeren_plan/uitvoeren_plan.dart';
-import 'package:trdl_tool/pages/uitvoeren_plan/geplande_werkzaamheden.dart';
+import 'all_imports.dart';
 
 void main() {
   runApp(
