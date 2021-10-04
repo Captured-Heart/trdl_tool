@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:trdl_tool/home_screen.dart';
 
 class UitvoerenPlan extends StatelessWidget {
   const UitvoerenPlan({Key? key}) : super(key: key);
@@ -19,7 +20,12 @@ class UitvoerenPlan extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.home),
         onPressed: () {
-          //TODO insert route
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => HomeScreen(),
+            ),
+          );
         },
       ),
       body: SafeArea(
@@ -90,40 +96,44 @@ class UitvoerenPlan extends StatelessWidget {
                       SizedBox(
                         height: 8.0,
                       ),
-                      FittedBox(
-                        fit: BoxFit.cover,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Uitvoeren',
-                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                              ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Geplande Werkzaamheden',
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
-                            SizedBox(
-                              width: 8.0,
+                          ),
+                          SizedBox(
+                            width: 8.0,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Bijzonderheden Rijwegen',
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Aanpassen',
-                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                              ),
+                          ),
+                          SizedBox(
+                            width: 8.0,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Bijzonderheden Trein',
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
-                            SizedBox(
-                              width: 8.0,
+                          ),
+                          ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Bijzonderheden Trein',
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Incidenten',
-                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
