@@ -13,7 +13,7 @@ class UitvoerenPlan extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Uitvoeren Plan',
+          'TRDLtool',
           style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
       ),
