@@ -15,7 +15,10 @@ class HomeIndex0 extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
           child: CircleAvatar(
-            child: Icon(Icons.home),
+            child: Hero(
+              tag: 'goHome',
+              child: Icon(Icons.home),
+            ),
           ),
         ),
         title: Text(
@@ -196,19 +199,16 @@ class HomeIndex1 extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
-          child: CircleAvatar(
-            child: Icon(Icons.home),
-          ),
-        ),
         title: Text(
           'TRDLtool',
           style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
       ),
       floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.home),
+          child: Hero(
+            tag: 'goHome',
+            child: Icon(Icons.home),
+          ),
           onPressed: () {
             Navigator.push(
               context,
