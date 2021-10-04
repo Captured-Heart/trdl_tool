@@ -25,6 +25,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
     HomeIndex0(),
     HomeIndex1(),
     HomeIndex2(),
+    HomeIndex3(),
   ];
 
   void _onItemTapped(int index) {
@@ -52,6 +53,10 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.sports_esports),
             label: 'ProQuiz',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.forum),
+            label: 'ProChat',
           ),
         ],
         currentIndex: _selectedIndex,
