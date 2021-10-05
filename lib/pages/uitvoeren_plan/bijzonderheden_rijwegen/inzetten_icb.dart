@@ -106,11 +106,13 @@ class InzettenICB extends StatelessWidget {
                           SizedBox(
                             width: 16.0,
                           ),
-                          Text(
-                            '- overlegt waar hij het railwegvoertuig ICB in het spoor (inzetspoor) kan plaatsen;',
-                            style: GoogleFonts.questrial(
-                              textStyle: TextStyle(
-                                fontSize: 16.0,
+                          Expanded(
+                            child: Text(
+                              '- overlegt waar hij het railwegvoertuig ICB in het spoor (inzetspoor) kan plaatsen;',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
                               ),
                             ),
                           ),
