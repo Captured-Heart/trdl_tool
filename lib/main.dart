@@ -26,6 +26,7 @@ class MainEntry extends StatelessWidget {
         'foutenindewbi': (context) => FoutenWBI(),
         'bijzonderhedenrijwegen': (context) => BijzonderhedenRijwegen(),
         'rijwegenexploitatie': (context) => RijwegenExploitatie(),
+        'kopvantrein': (context) => KopvanTrein(),
       },
     );
   }

@@ -81,7 +81,7 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              //TODO
+                              Navigator.pushNamed(context, 'rijwegenexploitatie');
                             },
                             child: Text(
                               'Sporen buiten exploitatie',
@@ -93,7 +93,7 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              //TODO
+                              Navigator.pushNamed(context, 'kpovantrein');
                             },
                             child: Text(
                               'Kop van trein voorbij sein',
