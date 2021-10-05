@@ -74,7 +74,7 @@ class InzettenICB extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              '- Neem de (veiligheids)maatregelen die in de WBI/WECO zijn vermeld of met de LWB zijn afgesproken;',
+                              'Voor het inzetten van het railvoertuig incidentenbestrijding bij calamiteiten heb je contact met de AL.​​​​​​​',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -91,11 +91,26 @@ class InzettenICB extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              '- Meld de LWB dat je de infracapaciteit benoemd op de WBI/WECO beschikbaar hebt gesteld voor werkzaamheden.',
+                              '- De machinist van het railvoertuig ICB meldt zich en je:',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
                                 ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 16.0,
+                          ),
+                          Text(
+                            '- overlegt waar hij het railwegvoertuig ICB in het spoor (inzetspoor) kan plaatsen;',
+                            style: GoogleFonts.questrial(
+                              textStyle: TextStyle(
+                                fontSize: 16.0,
                               ),
                             ),
                           ),

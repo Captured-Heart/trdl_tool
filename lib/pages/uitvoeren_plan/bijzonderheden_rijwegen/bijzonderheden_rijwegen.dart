@@ -105,7 +105,7 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              //TODO
+                              Navigator.pushNamed(context, 'inzettenicb');
                             },
                             child: Text(
                               'Inzetten railvoertuig ICB',
