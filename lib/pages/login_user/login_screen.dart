@@ -109,10 +109,16 @@ class Login extends StatelessWidget {
               height: 8.0,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
                   onPressed: () {},
-                  child: Text('Nog geen account? Klik hier'),
+                  child: Text(
+                    'Nog geen account?',
+                    style: GoogleFonts.questrial(
+                      textStyle: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -120,10 +126,16 @@ class Login extends StatelessWidget {
               height: 8.0,
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
                   onPressed: () {},
-                  child: Text('Wachtwoord vergeten? Klik hier'),
+                  child: Text(
+                    'Wachtwoord vergeten?',
+                    style: GoogleFonts.questrial(
+                      textStyle: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
                 ),
               ],
             ),
