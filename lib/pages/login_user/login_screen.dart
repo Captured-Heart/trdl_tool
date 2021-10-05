@@ -29,29 +29,29 @@ class Login extends StatelessWidget {
               height: 300,
               child: Card(
                 elevation: 6.0,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
-                      children: [
-                        Expanded(
-                          child: Text(
-                            'Login',
-                            style: GoogleFonts.questrial(
-                              textStyle: TextStyle(
-                                fontSize: 24.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(24.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              'Login',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 24.0,
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 24.0,
-                        right: 24.0,
+                        ],
                       ),
-                      child: Row(
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Row(
                         children: [
                           Expanded(
                             child: TextField(
@@ -64,16 +64,10 @@ class Login extends StatelessWidget {
                           ),
                         ],
                       ),
-                    ),
-                    SizedBox(
-                      height: 8.0,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        left: 24.0,
-                        right: 24.0,
+                      SizedBox(
+                        height: 8.0,
                       ),
-                      child: Row(
+                      Row(
                         children: [
                           Expanded(
                             child: TextField(
@@ -87,27 +81,27 @@ class Login extends StatelessWidget {
                           ),
                         ],
                       ),
-                    ),
-                    SizedBox(
-                      height: 8.0,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomeScreen(),
-                              ),
-                            );
-                          },
-                          child: Text('Login'),
-                        ),
-                      ],
-                    ),
-                  ],
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => HomeScreen(),
+                                ),
+                              );
+                            },
+                            child: Text('Login'),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
