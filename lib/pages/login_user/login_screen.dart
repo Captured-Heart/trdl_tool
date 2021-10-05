@@ -12,8 +12,8 @@ class Login extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(
                 top: 16.0,
-                left: 16.0,
-                right: 16.0,
+                left: 24.0,
+                right: 24.0,
               ),
               child: Row(
                 children: [
@@ -96,7 +96,7 @@ class Login extends StatelessWidget {
                                 ),
                               );
                             },
-                            child: Text('Login'),
+                            child: Text('LOGIN'),
                           ),
                         ],
                       ),
@@ -104,6 +104,28 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: 8.0,
+            ),
+            Row(
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: Text('Nog geen account? Klik hier'),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 8.0,
+            ),
+            Row(
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: Text('Wachtwoord vergeten? Klik hier'),
+                ),
+              ],
             ),
           ],
         ),
