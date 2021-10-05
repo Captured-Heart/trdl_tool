@@ -143,7 +143,9 @@ class HomeIndex0 extends StatelessWidget {
                               width: 8.0,
                             ),
                             ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, 'aanpassenplan');
+                              },
                               child: Text(
                                 'Aanpassen',
                                 style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),

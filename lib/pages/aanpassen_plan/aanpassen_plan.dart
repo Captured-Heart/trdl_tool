@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class UitvoerenPlan extends StatelessWidget {
-  const UitvoerenPlan({Key? key}) : super(key: key);
+class AanpassenPlan extends StatelessWidget {
+  const AanpassenPlan({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class UitvoerenPlan extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Uitvoeren Plan',
+                              'Aanpassen Plan',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 24.0,
@@ -56,7 +56,7 @@ class UitvoerenPlan extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'De treindienstleider voert het actuele plan uit en stelt infra ter beschikking volgens vooraf gemaakte afspraken.',
+                              'Het actuele plan aanpassen als gevolg van een incident of extra capaciteitsaanvraag.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -98,10 +98,10 @@ class UitvoerenPlan extends StatelessWidget {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'geplandewerkzaamheden');
+                              //TODO
                             },
                             child: Text(
-                              'Geplande Werkzaamheden',
+                              'Stappenplan Versperringen',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
@@ -110,10 +110,10 @@ class UitvoerenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'bijzonderhedenrijwegen');
+                              //TODO
                             },
                             child: Text(
-                              'Bijzonderheden Rijwegen',
+                              'Incidenten',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
@@ -122,10 +122,10 @@ class UitvoerenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'bijzonderhedentrein');
+                              //TODO
                             },
                             child: Text(
-                              'Bijzonderheden Trein',
+                              'Ongepland Werk',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
@@ -134,10 +134,10 @@ class UitvoerenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'communicatie');
+                              //TODO
                             },
                             child: Text(
-                              'Communicatie',
+                              'Vertragingen',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
@@ -146,22 +146,10 @@ class UitvoerenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'ncbg');
+                              //TODO
                             },
                             child: Text(
-                              'NCBG',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'dienstovergave');
-                            },
-                            child: Text(
-                              'Dienstovergave',
+                              'Orderacceptatie',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),

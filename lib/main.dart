@@ -19,6 +19,7 @@ class MainEntry extends StatelessWidget {
       themeMode: ThemeMode.system,
       home: WelcomeScreen(),
       routes: {
+        //UitvoerenPlan routes
         'uitvoerenplan': (context) => UitvoerenPlan(),
         'geplandewerkzaamheden': (context) => GeplandeWerkzaamheden(),
         'aanvangwerkzaamheden': (context) => AanvangWerkzaamheden(),
@@ -32,6 +33,10 @@ class MainEntry extends StatelessWidget {
         'bijzonderhedentrein': (context) => BijzonderhedenTrein(),
         'communicatie': (context) => Communicatie(),
         'mondelingecommunicatie': (context) => MondelingeCommunicatie(),
+        'ncbg': (context) => Ncbg(),
+        'dienstovergave': (context) => Dienstovergave(),
+        //AanpassenPlan routes
+        'aanpassenplan': (context) => AanpassenPlan(),
       },
     );
   }
