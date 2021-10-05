@@ -16,3 +16,4 @@ export 'package:trdl_tool/pages/uitvoeren_plan/geplande_werkzaamheden/aanvang_we
 export 'package:trdl_tool/pages/uitvoeren_plan/geplande_werkzaamheden/controleren_wbi.dart';
 export 'package:trdl_tool/pages/uitvoeren_plan/geplande_werkzaamheden/fouten_in_de_wbi.dart';
 export 'package:trdl_tool/pages/uitvoeren_plan/bijzonderheden_rijwegen/bijzonderheden_rijwegen.dart';
+export 'package:trdl_tool/pages/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_exploitatie.dart';
