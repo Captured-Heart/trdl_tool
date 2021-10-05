@@ -28,6 +28,7 @@ class MainEntry extends StatelessWidget {
         'rijwegenexploitatie': (context) => RijwegenExploitatie(),
         'kopvantrein': (context) => KopvanTrein(),
         'inzettenicb': (context) => InzettenICB(),
+        'toelatenwerktreinen': (context) => ToelatenWerktreinen(),
       },
     );
   }

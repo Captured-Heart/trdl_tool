@@ -19,3 +19,4 @@ export 'package:trdl_tool/pages/uitvoeren_plan/bijzonderheden_rijwegen/bijzonder
 export 'package:trdl_tool/pages/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_exploitatie.dart';
 export 'package:trdl_tool/pages/uitvoeren_plan/bijzonderheden_rijwegen/kop_van_trein_voorbij_sein.dart';
 export 'package:trdl_tool/pages/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_icb.dart';
+export 'package:trdl_tool/pages/uitvoeren_plan/bijzonderheden_rijwegen/toelaten_werktreinen.dart';

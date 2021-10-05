@@ -117,7 +117,7 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              //TODO
+                              Navigator.pushNamed(context, 'toelatenwerktreinen');
                             },
                             child: Text(
                               'Toelaten werktreinen',
