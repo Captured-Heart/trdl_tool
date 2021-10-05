@@ -29,6 +29,9 @@ class MainEntry extends StatelessWidget {
         'kopvantrein': (context) => KopvanTrein(),
         'inzettenicb': (context) => InzettenICB(),
         'toelatenwerktreinen': (context) => ToelatenWerktreinen(),
+        'bijzonderhedentrein': (context) => BijzonderhedenTrein(),
+        'communicatie': (context) => Communicatie(),
+        'mondelingecommunicatie': (context) => MondelingeCommunicatie(),
       },
     );
   }
