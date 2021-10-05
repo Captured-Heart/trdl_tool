@@ -12,8 +12,8 @@ class Login extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(
                 top: 16.0,
-                left: 16.0,
-                right: 16.0,
+                left: 24.0,
+                right: 24.0,
               ),
               child: Row(
                 children: [
@@ -30,18 +30,36 @@ class Login extends StatelessWidget {
               child: Card(
                 elevation: 6.0,
                 child: Padding(
-                  padding: const EdgeInsets.only(
-                    left: 24.0,
-                    right: 24.0,
-                  ),
+                  padding: const EdgeInsets.all(24.0),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Row(
                         children: [
                           Expanded(
+                            child: Text(
+                              'Login',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 24.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
                             child: TextField(
-                              decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Emailadres', hintText: 'Email moet eindigen op @prorail.nl'),
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                labelText: 'Emailadres',
+                                hintText: 'Email moet eindigen op @prorail.nl',
+                              ),
                             ),
                           ),
                         ],
@@ -54,7 +72,11 @@ class Login extends StatelessWidget {
                           Expanded(
                             child: TextField(
                               obscureText: true,
-                              decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Wachtwoord', hintText: 'Wachtwoord bevat minimaal 6 tekens'),
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                labelText: 'Wachtwoord',
+                                hintText: 'Wachtwoord bevat minimaal 6 tekens',
+                              ),
                             ),
                           ),
                         ],
@@ -74,7 +96,7 @@ class Login extends StatelessWidget {
                                 ),
                               );
                             },
-                            child: Text('Login'),
+                            child: Text('LOGIN'),
                           ),
                         ],
                       ),
@@ -82,6 +104,40 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: 8.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Nog geen account?',
+                    style: GoogleFonts.questrial(
+                      textStyle: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 8.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                TextButton(
+                  onPressed: () {},
+                  child: Text(
+                    'Wachtwoord vergeten?',
+                    style: GoogleFonts.questrial(
+                      textStyle: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

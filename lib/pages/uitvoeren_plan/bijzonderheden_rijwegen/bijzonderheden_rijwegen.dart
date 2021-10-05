@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class UitvoerenPlan extends StatelessWidget {
-  const UitvoerenPlan({Key? key}) : super(key: key);
+class BijzonderhedenRijwegen extends StatelessWidget {
+  const BijzonderhedenRijwegen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,27 +39,10 @@ class UitvoerenPlan extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Uitvoeren Plan',
+                              'Bijzonderheden Rijwegen',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 24.0,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'De treindienstleider voert het actuele plan uit en stelt infra ter beschikking volgens vooraf gemaakte afspraken.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
                                 ),
                               ),
                             ),
@@ -98,10 +81,10 @@ class UitvoerenPlan extends StatelessWidget {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'geplandewerkzaamheden');
+                              Navigator.pushNamed(context, 'rijwegenexploitatie');
                             },
                             child: Text(
-                              'Geplande Werkzaamheden',
+                              'Sporen buiten exploitatie',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
@@ -110,10 +93,10 @@ class UitvoerenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'bijzonderhedenrijwegen');
+                              Navigator.pushNamed(context, 'kopvantrein');
                             },
                             child: Text(
-                              'Bijzonderheden Rijwegen',
+                              'Kop van trein voorbij sein',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
@@ -122,10 +105,10 @@ class UitvoerenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'bijzonderhedentrein');
+                              Navigator.pushNamed(context, 'inzettenicb');
                             },
                             child: Text(
-                              'Bijzonderheden Trein',
+                              'Inzetten railvoertuig ICB',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
@@ -134,34 +117,10 @@ class UitvoerenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'communicatie');
+                              Navigator.pushNamed(context, 'toelatenwerktreinen');
                             },
                             child: Text(
-                              'Communicatie',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'ncbg');
-                            },
-                            child: Text(
-                              'NCBG',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'dienstovergave');
-                            },
-                            child: Text(
-                              'Dienstovergave',
+                              'Toelaten werktreinen',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),

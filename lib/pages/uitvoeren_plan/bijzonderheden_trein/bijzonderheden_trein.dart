@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class GeplandeWerkzaamheden extends StatelessWidget {
-  const GeplandeWerkzaamheden({Key? key}) : super(key: key);
+class BijzonderhedenTrein extends StatelessWidget {
+  const BijzonderhedenTrein({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Geplande Werkzaamheden',
+                              'Treinen met een Vervoersregeling',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 24.0,
@@ -56,7 +56,25 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Dit zijn vooraf geplande werkzaamheden die zijn vastgelegd in een Werkplek Beveiligings Instructie (WBI/WECO).',
+                              'Procedure',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              'Je volgt voor zowel een BP trein als een BV trein de beperkingen op zoals die in de regeling zijn aangegeven.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -80,10 +98,11 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Ga snel naar',
+                              'Risico\'s',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
-                                  fontSize: 24.0,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),
@@ -93,40 +112,58 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                       SizedBox(
                         height: 8.0,
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      Row(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'aanvangwerkzaamheden');
-                            },
+                          Expanded(
                             child: Text(
-                              'Aanvang Werkzaamheden',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              'Conflicterend spoorgebruik, voor treinen met beperkende voorwaarden.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
                             ),
                           ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'controlerenwbi');
-                            },
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
                             child: Text(
-                              'Controleren WBI',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              'Context',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ),
                           ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'foutenindewbi');
-                            },
+                        ],
+                      ),
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
                             child: Text(
-                              'Fouten in de WBI',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              'Voor vervoer waarbij afmetingen, gewicht, aard van de lading of het materieeltype maatregelen vergen, wordt een vervoersregeling gemaakt. De betrokken trein wordt dan of een BV trein of een BP trein. Voor een BP trein gelden de standaard voorwaarden BP 1-2-3.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
                             ),
                           ),
                         ],

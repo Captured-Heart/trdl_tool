@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class GeplandeWerkzaamheden extends StatelessWidget {
-  const GeplandeWerkzaamheden({Key? key}) : super(key: key);
+class KopvanTrein extends StatelessWidget {
+  const KopvanTrein({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Geplande Werkzaamheden',
+                              'Kop van de trein/rangeerdeel voorbij het sein',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 24.0,
@@ -56,7 +56,25 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Dit zijn vooraf geplande werkzaamheden die zijn vastgelegd in een Werkplek Beveiligings Instructie (WBI/WECO).',
+                              'Procedure',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              'Je stelt een rijweg in en deelt de machinist mee dat het sein uit de stand stop is gebracht, of je neemt veiligheidsmaatregelen en geeft de machinist opdracht om te gaan rijden.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -80,10 +98,11 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Ga snel naar',
+                              'Risico\'s',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
-                                  fontSize: 24.0,
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),
@@ -93,40 +112,58 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                       SizedBox(
                         height: 8.0,
                       ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      Row(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'aanvangwerkzaamheden');
-                            },
+                          Expanded(
                             child: Text(
-                              'Aanvang Werkzaamheden',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              'Treinen komen niet tijdig tot stilstand voor een gevaarpunt.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
                             ),
                           ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'controlerenwbi');
-                            },
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
                             child: Text(
-                              'Controleren WBI',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              'Context',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ),
                           ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'foutenindewbi');
-                            },
+                        ],
+                      ),
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
                             child: Text(
-                              'Fouten in de WBI',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              'Wanneer de kop van de trein of rangeerdeel bij vertrek voorbij het sein staat, kan de machinist niet waarnemen of het sein veilig staat voor vertrek en kan het vertrekproces niet gestart worden.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
                             ),
                           ),
                         ],
