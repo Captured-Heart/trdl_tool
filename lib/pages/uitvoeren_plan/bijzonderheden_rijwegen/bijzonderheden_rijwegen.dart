@@ -93,7 +93,7 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'kpovantrein');
+                              Navigator.pushNamed(context, 'kopvantrein');
                             },
                             child: Text(
                               'Kop van trein voorbij sein',
