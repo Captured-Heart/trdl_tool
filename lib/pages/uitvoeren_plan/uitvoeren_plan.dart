@@ -109,7 +109,9 @@ class UitvoerenPlan extends StatelessWidget {
                             height: 8.0,
                           ),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'bijzonderhedenrijwegen');
+                            },
                             child: Text(
                               'Bijzonderheden Rijwegen',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),

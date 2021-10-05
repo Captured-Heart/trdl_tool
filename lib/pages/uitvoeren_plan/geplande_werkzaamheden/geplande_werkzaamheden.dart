@@ -121,7 +121,9 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                             height: 8.0,
                           ),
                           ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, 'foutenindewbi');
+                            },
                             child: Text(
                               'Fouten in de WBI',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
