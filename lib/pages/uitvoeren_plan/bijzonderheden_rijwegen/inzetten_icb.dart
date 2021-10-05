@@ -108,7 +108,153 @@ class InzettenICB extends StatelessWidget {
                           ),
                           Expanded(
                             child: Text(
-                              '- overlegt waar hij het railwegvoertuig ICB in het spoor (inzetspoor) kan plaatsen;',
+                              '1. overlegt waar hij het railwegvoertuig ICB in het spoor (inzetspoor) kan plaatsen;',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 16.0,
+                          ),
+                          Expanded(
+                            child: Text(
+                              '2. vertelt over welke route (verplaatsingsspoor) hij naar de calamiteitenplek (bestemmingsspoor) gaat;',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBox(
+                            width: 16.0,
+                          ),
+                          Expanded(
+                            child: Text(
+                              '3. vertelt welke infra-objecten hij in de te berijden route naar de calamiteitenplek zal tegenkomen.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              '- De machinist geeft aan of hij binnen de PVR van het nevenspoor komt.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              '- Tref veiligheidsmaatregelen en stel infracapaciteit beschikbaar.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              '- Geef de machinist toestemming om het railvoertuig ICB in het spoor te plaatsen.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              '- De machinist meldt dat het railvoertuig is geplaatst.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              '- Stel een rijweg over het verplaatsingsspoor ter beschikking. Behandel het voertuig als een voertuig zonder juiste treindetectie.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              '- Vertel de machinist waar hij zich moet melden. Als er infracapaciteit beschikbaar is gesteld aan een LWB moet hij zich melden bij deze LWB en anders bij aankomst op het bestemmingsspoor.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              '- Na de melding van het vrij zijn en blijven van zowel inzet-, verplaatsing- als bestemmingsspoor, hef je de maatregelen op.',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              'In overige situaties moeten alle sporen buitendienst gesteld zijn.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -192,24 +338,7 @@ class InzettenICB extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Bij geplande werkzaamheden wordt in de voorbereiding op de werkzaamheden een werkplekbeveiligingsinstructie (WBI) gemaakt. In de WBI/WECO worden de gemaakte afspraken voor de werkplekbeveiliging vastgelegd.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Voorafgaand aan de werkzaamheden stellen treindienstleider en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
+                              'Om materieel ten behoeve van afhandeling incidenten snel en zo dicht mogelijk bij de incidentlocatie te krijgen zijn railvoertuigen Incidentenbestrijding beschikbaar. Deze worden op inzetlocaties in het spoor geplaatst en via het spoor verplaatst naar de incidentlocatie. De machinist van het railvoertuig heeft meestal geen plaatselijke wegbekendheid.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
