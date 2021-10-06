@@ -19,6 +19,9 @@ class MainEntry extends StatelessWidget {
       themeMode: ThemeMode.system,
       home: WelcomeScreen(),
       routes: {
+        //LoginUser routes
+        'login': (context) => Login(),
+        'register': (context) => Register(),
         //UitvoerenPlan routes
         'uitvoerenplan': (context) => UitvoerenPlan(),
         'geplandewerkzaamheden': (context) => GeplandeWerkzaamheden(),

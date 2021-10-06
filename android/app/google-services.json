@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "35344141665",
+    "project_id": "trdltool-2021",
+    "storage_bucket": "trdltool-2021.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35344141665:android:0a6a0c57711f7946334920",
+        "android_client_info": {
+          "package_name": "nl.plotsklapps.trdl_tool"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35344141665-45ep7aroqtb10ko7pttlgp1fpr29gmi5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAKJBLnQbowS5wJN2K-0X2Gvoz8cBwvFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "35344141665-45ep7aroqtb10ko7pttlgp1fpr29gmi5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
