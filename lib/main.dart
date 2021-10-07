@@ -1,3 +1,5 @@
+import 'package:trdl_tool/splash_screen.dart';
+
 import 'all_imports.dart';
 
 void main() async {
@@ -19,13 +21,21 @@ class MainEntry extends StatelessWidget {
       theme: FlexColorScheme.light(scheme: FlexScheme.jungle).toTheme,
       darkTheme: FlexColorScheme.dark(scheme: FlexScheme.jungle).toTheme,
       themeMode: ThemeMode.system,
-      home: WelcomeScreen(),
+      home: SplashScreen(),
       routes: {
-        //LoginUser routes
+        // LoginUser routes
+        'welcomescreen': (context) => WelcomeScreen(),
         'login': (context) => Login(),
         'register': (context) => Register(),
         'homescreen': (context) => HomeScreen(),
-        //UitvoerenPlan routes
+
+        // HomePage routes
+        'homeindex0': (context) => HomeIndex0(),
+        'homeindex1': (context) => HomeIndex1(),
+        'homeindex2': (context) => HomeIndex2(),
+        'homeindex3': (context) => HomeIndex3(),
+
+        // UitvoerenPlan routes
         'uitvoerenplan': (context) => UitvoerenPlan(),
         'geplandewerkzaamheden': (context) => GeplandeWerkzaamheden(),
         'aanvangwerkzaamheden': (context) => AanvangWerkzaamheden(),
@@ -41,7 +51,8 @@ class MainEntry extends StatelessWidget {
         'mondelingecommunicatie': (context) => MondelingeCommunicatie(),
         'ncbg': (context) => Ncbg(),
         'dienstovergave': (context) => Dienstovergave(),
-        //AanpassenPlan routes
+
+        // AanpassenPlan routes
         'aanpassenplan': (context) => AanpassenPlan(),
       },
     );

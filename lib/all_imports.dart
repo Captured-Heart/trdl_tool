@@ -10,16 +10,22 @@ export 'package:firebase_auth/firebase_auth.dart';
 //Other packages
 export 'package:google_fonts/google_fonts.dart';
 export 'package:flex_color_scheme/flex_color_scheme.dart';
+export 'package:flutter_spinkit/flutter_spinkit.dart';
 
 //Modules and services
-export 'package:trdl_tool/items/home_items.dart';
-export 'package:trdl_tool/items/welcome_items.dart';
+export 'package:trdl_tool/item_lists/welcome_items.dart';
 
 //Main pages
 export 'package:trdl_tool/home_screen.dart';
 export 'package:trdl_tool/welcome_screen.dart';
 export 'package:trdl_tool/pages/login_user/login_screen.dart';
 export 'package:trdl_tool/pages/login_user/register_screen.dart';
+
+//HomeScreen pages
+export 'package:trdl_tool/pages/home_pages/home_index0.dart';
+export 'package:trdl_tool/pages/home_pages/home_index1.dart';
+export 'package:trdl_tool/pages/home_pages/home_index2.dart';
+export 'package:trdl_tool/pages/home_pages/home_index3.dart';
 
 //Uitvoeren plan pages
 export 'package:trdl_tool/pages/uitvoeren_plan/uitvoeren_plan.dart';

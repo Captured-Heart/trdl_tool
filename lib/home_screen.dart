@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-/// This is the stateful widget that the main application instantiates.
+// This is the stateful widget that the main application instantiates.
 class BottomNavigationScreen extends StatefulWidget {
   const BottomNavigationScreen({Key? key}) : super(key: key);
 
@@ -17,7 +17,7 @@ class BottomNavigationScreen extends StatefulWidget {
   State<BottomNavigationScreen> createState() => _BottomNavigationScreenState();
 }
 
-/// This is the private State class that goes with BottomNavigationScreen.
+// This is the private State class that goes with BottomNavigationScreen.
 class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
