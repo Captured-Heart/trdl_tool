@@ -9,9 +9,11 @@ class GeplandeWerkzaamheden extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'TRDLtool',
-          style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
+          style: GoogleFonts.questrial(
+              textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -98,11 +100,14 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'aanvangwerkzaamheden');
+                              Navigator.pushNamed(
+                                  context, 'aanvangwerkzaamheden');
                             },
                             child: Text(
                               'Aanvang Werkzaamheden',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(
+                                  textStyle:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -114,7 +119,9 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                             },
                             child: Text(
                               'Controleren WBI',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(
+                                  textStyle:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -126,7 +133,9 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                             },
                             child: Text(
                               'Fouten in de WBI',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(
+                                  textStyle:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                         ],

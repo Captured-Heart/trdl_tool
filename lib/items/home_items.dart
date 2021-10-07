@@ -1,10 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:trdl_tool/home_screen.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class HomeIndex0 extends StatelessWidget {
-  const HomeIndex0({Key? key}) : super(key: key);
+  final _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +9,7 @@ class HomeIndex0 extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         leading: Padding(
           padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
           child: CircleAvatar(
@@ -20,8 +18,18 @@ class HomeIndex0 extends StatelessWidget {
         ),
         title: Text(
           'TRDLtool',
-          style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
+          style: GoogleFonts.questrial(
+              textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              _auth.signOut();
+              Navigator.pushNamed(context, 'login');
+            },
+            icon: Icon(Icons.logout),
+          ),
+        ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -136,7 +144,9 @@ class HomeIndex0 extends StatelessWidget {
                               },
                               child: Text(
                                 'Uitvoeren',
-                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                                style: GoogleFonts.questrial(
+                                    textStyle:
+                                        TextStyle(fontWeight: FontWeight.bold)),
                               ),
                             ),
                             SizedBox(
@@ -148,7 +158,9 @@ class HomeIndex0 extends StatelessWidget {
                               },
                               child: Text(
                                 'Aanpassen',
-                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                                style: GoogleFonts.questrial(
+                                    textStyle:
+                                        TextStyle(fontWeight: FontWeight.bold)),
                               ),
                             ),
                             SizedBox(
@@ -158,7 +170,9 @@ class HomeIndex0 extends StatelessWidget {
                               onPressed: () {},
                               child: Text(
                                 'Incidenten',
-                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                                style: GoogleFonts.questrial(
+                                    textStyle:
+                                        TextStyle(fontWeight: FontWeight.bold)),
                               ),
                             ),
                           ],
@@ -192,7 +206,7 @@ class HomeIndex0 extends StatelessWidget {
 }
 
 class HomeIndex1 extends StatelessWidget {
-  const HomeIndex1({Key? key}) : super(key: key);
+  final _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -200,6 +214,7 @@ class HomeIndex1 extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         leading: Padding(
           padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
           child: CircleAvatar(
@@ -208,8 +223,18 @@ class HomeIndex1 extends StatelessWidget {
         ),
         title: Text(
           'TRDLtool',
-          style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
+          style: GoogleFonts.questrial(
+              textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              _auth.signOut();
+              Navigator.pushNamed(context, 'login');
+            },
+            icon: Icon(Icons.logout),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.home),
@@ -309,7 +334,7 @@ class HomeIndex1 extends StatelessWidget {
 }
 
 class HomeIndex2 extends StatelessWidget {
-  const HomeIndex2({Key? key}) : super(key: key);
+  final _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -317,6 +342,7 @@ class HomeIndex2 extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         leading: Padding(
           padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
           child: CircleAvatar(
@@ -325,8 +351,18 @@ class HomeIndex2 extends StatelessWidget {
         ),
         title: Text(
           'TRDLtool',
-          style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
+          style: GoogleFonts.questrial(
+              textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              _auth.signOut();
+              Navigator.pushNamed(context, 'login');
+            },
+            icon: Icon(Icons.logout),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.home),
@@ -392,7 +428,7 @@ class HomeIndex2 extends StatelessWidget {
 }
 
 class HomeIndex3 extends StatelessWidget {
-  const HomeIndex3({Key? key}) : super(key: key);
+  final _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -400,6 +436,7 @@ class HomeIndex3 extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         leading: Padding(
           padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
           child: CircleAvatar(
@@ -408,8 +445,18 @@ class HomeIndex3 extends StatelessWidget {
         ),
         title: Text(
           'TRDLtool',
-          style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
+          style: GoogleFonts.questrial(
+              textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              _auth.signOut();
+              Navigator.pushNamed(context, 'login');
+            },
+            icon: Icon(Icons.logout),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.home),

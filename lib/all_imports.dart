@@ -1,6 +1,13 @@
-//Flutter and packages from outside
+//Flutter packages
 export 'package:flutter/material.dart';
 export 'package:flutter/painting.dart';
+
+//Firebase packages
+export 'package:firebase_core/firebase_core.dart';
+export 'package:cloud_firestore/cloud_firestore.dart';
+export 'package:firebase_auth/firebase_auth.dart';
+
+//Other packages
 export 'package:google_fonts/google_fonts.dart';
 export 'package:flex_color_scheme/flex_color_scheme.dart';
 

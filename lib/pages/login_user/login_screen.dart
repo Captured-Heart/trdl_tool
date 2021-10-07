@@ -1,7 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
 class Login extends StatelessWidget {
-  const Login({Key? key}) : super(key: key);
+  final _auth = FirebaseAuth.instance;
+  late String email;
+  late String password;
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +60,12 @@ class Login extends StatelessWidget {
                           children: [
                             Expanded(
                               child: TextField(
+                                keyboardType: TextInputType.emailAddress,
+                                textAlign: TextAlign.center,
+                                onChanged: (value) {
+                                  email = value;
+                                },
+                                style: GoogleFonts.questrial(),
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
@@ -75,7 +83,12 @@ class Login extends StatelessWidget {
                           children: [
                             Expanded(
                               child: TextField(
+                                textAlign: TextAlign.center,
+                                onChanged: (value) {
+                                  password = value;
+                                },
                                 obscureText: true,
+                                style: GoogleFonts.questrial(),
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
@@ -93,13 +106,26 @@ class Login extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => HomeScreen(),
+                              onPressed: () async {
+                                final snackBar = SnackBar(
+                                  content: Text(
+                                      'Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?'),
+                                  action: SnackBarAction(
+                                    label: 'OK',
+                                    onPressed: () {},
                                   ),
                                 );
+                                try {
+                                  final user =
+                                      await _auth.signInWithEmailAndPassword(
+                                          email: email, password: password);
+                                  if (user != null) {
+                                    Navigator.pushNamed(context, 'homescreen');
+                                  }
+                                } catch (e) {
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(snackBar);
+                                }
                               },
                               child: Text('LOGIN'),
                             ),

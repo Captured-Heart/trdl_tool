@@ -9,9 +9,11 @@ class KopvanTrein extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'TRDLtool',
-          style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
+          style: GoogleFonts.questrial(
+              textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
       ),
       floatingActionButton: FloatingActionButton(

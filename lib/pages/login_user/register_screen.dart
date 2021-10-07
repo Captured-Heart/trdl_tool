@@ -1,7 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
 class Register extends StatelessWidget {
-  const Register({Key? key}) : super(key: key);
+  final _auth = FirebaseAuth.instance;
+  late String email;
+  late String password;
 
   @override
   Widget build(BuildContext context) {
@@ -58,6 +60,12 @@ class Register extends StatelessWidget {
                           children: [
                             Expanded(
                               child: TextField(
+                                keyboardType: TextInputType.emailAddress,
+                                textAlign: TextAlign.center,
+                                onChanged: (value) {
+                                  email = value;
+                                },
+                                style: GoogleFonts.questrial(),
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
@@ -75,6 +83,11 @@ class Register extends StatelessWidget {
                           children: [
                             Expanded(
                               child: TextField(
+                                textAlign: TextAlign.center,
+                                onChanged: (value) {
+                                  password = value;
+                                },
+                                style: GoogleFonts.questrial(),
                                 obscureText: true,
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
@@ -93,13 +106,41 @@ class Register extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             ElevatedButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => HomeScreen(),
-                                  ),
-                                );
+                              onPressed: () async {
+                                if (!email.endsWith('@prorail.nl')) {
+                                  final wrongEmail = SnackBar(
+                                    content: Text(
+                                        'Email moet eindigen op @prorail.nl'),
+                                    action: SnackBarAction(
+                                      label: 'OK',
+                                      onPressed: () {},
+                                    ),
+                                  );
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(wrongEmail);
+                                } else if (password.length < 6) {
+                                  final shortPassword = SnackBar(
+                                    content: Text(
+                                        'Kies een wachtwoord van minimaal 6 tekens'),
+                                    action: SnackBarAction(
+                                      label: 'OK',
+                                      onPressed: () {},
+                                    ),
+                                  );
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(shortPassword);
+                                } else if (email.endsWith('@prorail.nl')) {
+                                  try {
+                                    final newUser = await _auth
+                                        .createUserWithEmailAndPassword(
+                                            email: email, password: password);
+                                    if (newUser != null) {
+                                      Navigator.pushNamed(context, 'login');
+                                    }
+                                  } catch (e) {
+                                    print(e);
+                                  }
+                                }
                               },
                               child: Text('REGISTREER'),
                             ),
@@ -121,7 +162,7 @@ class Register extends StatelessWidget {
                       Navigator.pushNamed(context, 'login');
                     },
                     child: Text(
-                      'Heb al een account?',
+                      'Heb je al een account?',
                       style: GoogleFonts.questrial(
                         textStyle: TextStyle(fontWeight: FontWeight.bold),
                       ),

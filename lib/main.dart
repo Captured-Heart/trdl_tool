@@ -1,6 +1,8 @@
 import 'all_imports.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(
     MainEntry(),
   );
@@ -13,7 +15,7 @@ class MainEntry extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'MainEntry TRDLtool',
+      title: 'TRDLtool',
       theme: FlexColorScheme.light(scheme: FlexScheme.jungle).toTheme,
       darkTheme: FlexColorScheme.dark(scheme: FlexScheme.jungle).toTheme,
       themeMode: ThemeMode.system,
@@ -22,6 +24,7 @@ class MainEntry extends StatelessWidget {
         //LoginUser routes
         'login': (context) => Login(),
         'register': (context) => Register(),
+        'homescreen': (context) => HomeScreen(),
         //UitvoerenPlan routes
         'uitvoerenplan': (context) => UitvoerenPlan(),
         'geplandewerkzaamheden': (context) => GeplandeWerkzaamheden(),

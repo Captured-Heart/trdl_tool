@@ -9,9 +9,11 @@ class AanpassenPlan extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'TRDLtool',
-          style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
+          style: GoogleFonts.questrial(
+              textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -102,7 +104,9 @@ class AanpassenPlan extends StatelessWidget {
                             },
                             child: Text(
                               'Stappenplan Versperringen',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(
+                                  textStyle:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -114,7 +118,9 @@ class AanpassenPlan extends StatelessWidget {
                             },
                             child: Text(
                               'Incidenten',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(
+                                  textStyle:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -126,7 +132,9 @@ class AanpassenPlan extends StatelessWidget {
                             },
                             child: Text(
                               'Ongepland Werk',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(
+                                  textStyle:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -138,7 +146,9 @@ class AanpassenPlan extends StatelessWidget {
                             },
                             child: Text(
                               'Vertragingen',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(
+                                  textStyle:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -150,7 +160,9 @@ class AanpassenPlan extends StatelessWidget {
                             },
                             child: Text(
                               'Orderacceptatie',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(
+                                  textStyle:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                         ],

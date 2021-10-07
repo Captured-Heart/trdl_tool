@@ -9,9 +9,11 @@ class Communicatie extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(
           'TRDLtool',
-          style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.w700)),
+          style: GoogleFonts.questrial(
+              textStyle: TextStyle(fontWeight: FontWeight.w700)),
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -81,11 +83,14 @@ class Communicatie extends StatelessWidget {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'mondelingecommunicatie');
+                              Navigator.pushNamed(
+                                  context, 'mondelingecommunicatie');
                             },
                             child: Text(
                               'Mondelinge Communicatie',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(
+                                  textStyle:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                         ],
