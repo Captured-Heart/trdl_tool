@@ -17,6 +17,7 @@ class OngeplandWerk extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              //Procedure Card
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -34,6 +35,7 @@ class OngeplandWerk extends StatelessWidget {
                   ),
                 ),
               ),
+              //Navigation Card
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -43,43 +45,24 @@ class OngeplandWerk extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Ga snel naar',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'Ga snel naar:',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'materieelongeplandwerk');
-                            },
-                            child: Text(
-                              'Materieel',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'Materieel',
+                            destination: 'materieelongeplandwerk',
                           ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'infraongeplandwerk');
-                            },
-                            child: Text(
-                              'Infrastructuur',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Infrastructuur',
+                            destination: 'infraongeplandwerk',
                           ),
                         ],
                       ),

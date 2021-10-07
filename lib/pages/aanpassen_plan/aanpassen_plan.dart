@@ -17,6 +17,7 @@ class AanpassenPlan extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              //Procedure Card
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -26,23 +27,18 @@ class AanpassenPlan extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Aanpassen Plan'),
+                            child: TitleText(
+                              title: 'Aanpassen Plan',
+                            ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Het actuele plan aanpassen als gevolg van een incident of extra capaciteitsaanvraag.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Het actuele plan aanpassen als gevolg van een incident of extra capaciteitsaanvraag.',
                             ),
                           ),
                         ],
@@ -51,6 +47,7 @@ class AanpassenPlan extends StatelessWidget {
                   ),
                 ),
               ),
+              //Navigation Card
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -60,99 +57,39 @@ class AanpassenPlan extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Ga snel naar',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'Ga snel naar:',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'stappenplanversperringen');
-                            },
-                            child: Text(
-                              'Stappenplan Versperringen',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Stappenplan Versperringen',
+                            destination: 'stappenplanversperringen',
                           ),
-                          SizedBox(
-                            height: 8.0,
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Incidenten',
+                            destination: 'incidenten',
                           ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'incidenten');
-                            },
-                            child: Text(
-                              'Incidenten',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Ongepland Werk',
+                            destination: 'ongeplandwerk',
                           ),
-                          SizedBox(
-                            height: 8.0,
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Vertragingen',
+                            destination: 'vertragingen',
                           ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'ongeplandwerk');
-                            },
-                            child: Text(
-                              'Ongepland Werk',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'vertragingen');
-                            },
-                            child: Text(
-                              'Vertragingen',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'orderacceptatie');
-                            },
-                            child: Text(
-                              'Orderacceptatie',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Orderacceptatie',
+                            destination: 'orderacceptatie',
                           ),
                         ],
                       ),

@@ -70,3 +70,61 @@ class SubTitleText extends StatelessWidget {
     );
   }
 }
+
+class BodyText extends StatelessWidget {
+  final String text;
+  const BodyText({required this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: GoogleFonts.questrial(
+        textStyle: TextStyle(
+          fontSize: 16.0,
+        ),
+      ),
+    );
+  }
+}
+
+class SizedBoxH extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 8.0,
+    );
+  }
+}
+
+class SizedBoxW extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 8.0,
+    );
+  }
+}
+
+class NavButton extends StatelessWidget {
+  final String destination;
+  final String buttontext;
+  const NavButton({required this.buttontext, required this.destination});
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.pushNamed(context, destination);
+      },
+      child: Text(
+        buttontext,
+        style: GoogleFonts.questrial(
+          textStyle: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+    );
+  }
+}

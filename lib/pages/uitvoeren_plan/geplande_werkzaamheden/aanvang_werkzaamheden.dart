@@ -17,6 +17,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              //Procedure Card
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -26,50 +27,38 @@ class AanvangWerkzaamheden extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Aanvang Werkzaamheden'),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: SubTitleText(subtitle: 'Procedure'),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              '- Neem de (veiligheids)maatregelen die in de WBI/WECO zijn vermeld of met de LWB zijn afgesproken;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'Aanvang Werkzaamheden',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              '- Meld de LWB dat je de infracapaciteit benoemd op de WBI/WECO beschikbaar hebt gesteld voor werkzaamheden.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Procedure',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: '- Neem de (veiligheids)maatregelen die in de WBI/WECO zijn vermeld of met de LWB zijn afgesproken;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: '- Meld de LWB dat je de infracapaciteit benoemd op de WBI/WECO beschikbaar hebt gesteld voor werkzaamheden.',
                             ),
                           ),
                         ],
@@ -78,6 +67,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                   ),
                 ),
               ),
+              //Risico Card
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -87,23 +77,18 @@ class AanvangWerkzaamheden extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: SubTitleText(subtitle: 'Risico\'s'),
+                            child: SubTitleText(
+                              subtitle: 'Risico\'s',
+                            ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
                             ),
                           ),
                         ],
@@ -112,6 +97,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                   ),
                 ),
               ),
+              //Context Card
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -121,40 +107,28 @@ class AanvangWerkzaamheden extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: SubTitleText(subtitle: 'Context'),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Bij geplande werkzaamheden wordt in de voorbereiding op de werkzaamheden een werkplekbeveiligingsinstructie (WBI) gemaakt. In de WBI/WECO worden de gemaakte afspraken voor de werkplekbeveiliging vastgelegd.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Context',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Voorafgaand aan de werkzaamheden stellen treindienstleider en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Bij geplande werkzaamheden wordt in de voorbereiding op de werkzaamheden een werkplekbeveiligingsinstructie (WBI) gemaakt. In de WBI/WECO worden de gemaakte afspraken voor de werkplekbeveiliging vastgelegd.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Voorafgaand aan de werkzaamheden stellen treindienstleider en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
                             ),
                           ),
                         ],

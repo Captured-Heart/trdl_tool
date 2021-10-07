@@ -17,6 +17,7 @@ class InfraOngeplandWerk extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              //Procedure Card
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -26,234 +27,140 @@ class InfraOngeplandWerk extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Infra (ongepland werk)'),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Procedure',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'Infra (ongepland werk)',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Ongeplande werkzaamheden aan de railinfrastructuur met WBI/WECO:',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Procedure',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 8.0,
-                          ),
                           Expanded(
-                            child: Text(
-                              '- Met (maatwerk)storings WBI/WECO.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Ongeplande werkzaamheden aan de railinfrastructuur met WBI/WECO:',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              'Ongeplande werkzaamheden aan de railinfrastructuur zonder WBI/WECO:',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Met (maatwerk)storings WBI/WECO.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 8.0,
-                          ),
                           Expanded(
-                            child: Text(
-                              '- Je werkt op RVO nummer en handelt als volgt:',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Ongeplande werkzaamheden aan de railinfrastructuur zonder WBI/WECO:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Je werkt op RVO nummer en handelt als volgt:',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 16.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Vraag welke infra betrokken is en hoelang de werkzaamheden gaan duren;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Vraag welke infra betrokken is en hoelang de werkzaamheden gaan duren;',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 16.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- De DVL beslist bij werkzaamheden op de vrije baan over het aanvangstijdstip;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- De DVL beslist bij werkzaamheden op de vrije baan over het aanvangstijdstip;',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 16.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Overleg met de LWB over:',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Overleg met de LWB over:',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 24.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Niveau van de werkplekbeveiliging;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Niveau van de werkplekbeveiliging;',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 24.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Veiligheidsmaatregelen LWB;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Veiligheidsmaatregelen LWB;',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 24.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Veiligheidsmaatregelen treindienstleider;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Veiligheidsmaatregelen treindienstleider;',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 24.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Exacte aanduiding werkplek.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Exacte aanduiding werkplek.',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 16.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Maak met de LWB een WECO op.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Maak met de LWB een WECO op.',
                             ),
                           ),
                         ],
@@ -262,6 +169,7 @@ class InfraOngeplandWerk extends StatelessWidget {
                   ),
                 ),
               ),
+              //Risico Card
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -271,31 +179,16 @@ class InfraOngeplandWerk extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Risico\'s',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
+                            child: SubTitleText(subtitle: 'Risico\'s'),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
                             ),
                           ),
                         ],
@@ -304,6 +197,7 @@ class InfraOngeplandWerk extends StatelessWidget {
                   ),
                 ),
               ),
+              //Context Card
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -313,31 +207,18 @@ class InfraOngeplandWerk extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Context',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Context',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Voor het oplossen van (dreigende) storingen en/of calamiteiten kan het nodig zijn ongepland infracapaciteit beschikbaar te stellen voor werkzaamheden. Om deze werkzaamheden te beveiligen kan gebruik worden gemaakt van vooraf voorbereide storingsWBI’s of maatwerkWBI’s. Wanneer beide mogelijkheden niet beschikbaar zijn kan ook een unieke WECO met de LWB opgemaakt worden.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Voor het oplossen van (dreigende) storingen en/of calamiteiten kan het nodig zijn ongepland infracapaciteit beschikbaar te stellen voor werkzaamheden. Om deze werkzaamheden te beveiligen kan gebruik worden gemaakt van vooraf voorbereide storingsWBI’s of maatwerkWBI’s. Wanneer beide mogelijkheden niet beschikbaar zijn kan ook een unieke WECO met de LWB opgemaakt worden.',
                             ),
                           ),
                         ],
