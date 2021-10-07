@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class Dienstovergave extends StatelessWidget {
-  const Dienstovergave({Key? key}) : super(key: key);
+class HerroepenSein extends StatelessWidget {
+  const HerroepenSein({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class Dienstovergave extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Dienstovergave'),
+                            child: TitleText(title: 'Herroepen van een sein'),
                           ),
                         ],
                       ),
@@ -55,7 +55,7 @@ class Dienstovergave extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Om de dienst over te dragen/over te nemen maak je gebruik van het ‘dienstovergave formulier’. Door het invullen van dit formulier borg je een uniforme manier van dienstovergave of dienstovername.',
+                              'Voor bijsturing mag je een sein herroepen nadat de machinist is ingelicht of wanneer je zeker weet dat er geen machinist op of bij de trein aanwezig is.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -72,7 +72,7 @@ class Dienstovergave extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Je draagt of neemt de dienst persoonlijk over na elke onderbreking van je reguliere dienst. Je spreekt samen de bijzonderheden door en tekent het formulier voor overgave of overname.',
+                              'Benader de machinist via de bestaande communicatiemogelijkheden. Als je geen contact krijgt, herroep je het sein.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -114,7 +114,7 @@ class Dienstovergave extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Het rijden van treinen op sporen waarop zij niet of met beperkingen mogen rijden.',
+                              'Het ten onrechte herroepen van seinen.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -156,7 +156,7 @@ class Dienstovergave extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Een treindienstleider draagt de verantwoordelijkheid voor een bediengebied over aan een bevoegd treindienstleider, waarbij hij deze informeert over bijzonderheden die afwijken van het oorspronkelijke plan en waarvoor eventuele aanpassingen moeten worden gedaan.',
+                              'Het herroepen van een sein kan noodzakelijk zijn om een verstoring van de treindienst te voorkomen of beperken. Bij het herroepen van een sein voor bijsturing is het inlichten van de machinist wenselijk, om hem niet te laten schrikken van een wisselend seinbeeld.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,

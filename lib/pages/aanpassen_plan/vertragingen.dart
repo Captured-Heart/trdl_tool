@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class AanvangWerkzaamheden extends StatelessWidget {
-  const AanvangWerkzaamheden({Key? key}) : super(key: key);
+class Vertragingen extends StatelessWidget {
+  const Vertragingen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,17 +26,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Aanvang Werkzaamheden'),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: SubTitleText(subtitle: 'Procedure'),
+                            child: TitleText(title: 'Vertragingen'),
                           ),
                         ],
                       ),
@@ -47,7 +37,25 @@ class AanvangWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              '- Neem de (veiligheids)maatregelen die in de WBI/WECO zijn vermeld of met de LWB zijn afgesproken;',
+                              'Procedure',
+                              style: GoogleFonts.questrial(
+                                textStyle: TextStyle(
+                                  fontSize: 18.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 8.0,
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Text(
+                              'Bij vertragingen is het belangrijk de treinenloop zo goed mogelijk volgens plan te laten verlopen. Daar waar het plan aangepast moet worden, gebeurt dat zoveel mogelijk volgens vooraf afgesproken afhandelingsafspraken. Deze afhandelingsafspraken zijn:',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -62,9 +70,12 @@ class AanvangWerkzaamheden extends StatelessWidget {
                       ),
                       Row(
                         children: [
+                          SizedBox(
+                            width: 8.0,
+                          ),
                           Expanded(
                             child: Text(
-                              '- Meld de LWB dat je de infracapaciteit benoemd op de WBI/WECO beschikbaar hebt gesteld voor werkzaamheden.',
+                              '- Infragerelateerd, of;',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -74,82 +85,14 @@ class AanvangWerkzaamheden extends StatelessWidget {
                           ),
                         ],
                       ),
-                    ],
-                  ),
-                ),
-              ),
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
                       Row(
                         children: [
-                          Expanded(
-                            child: SubTitleText(subtitle: 'Risico\'s'),
+                          SizedBox(
+                            width: 8.0,
                           ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
                           Expanded(
                             child: Text(
-                              'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: SubTitleText(subtitle: 'Context'),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Bij geplande werkzaamheden wordt in de voorbereiding op de werkzaamheden een werkplekbeveiligingsinstructie (WBI) gemaakt. In de WBI/WECO worden de gemaakte afspraken voor de werkplekbeveiliging vastgelegd.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Voorafgaand aan de werkzaamheden stellen treindienstleider en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
+                              '- Treingerelateerd.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,

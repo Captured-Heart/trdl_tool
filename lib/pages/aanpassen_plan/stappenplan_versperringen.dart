@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class Dienstovergave extends StatelessWidget {
-  const Dienstovergave({Key? key}) : super(key: key);
+class StappenplanVersperringen extends StatelessWidget {
+  const StappenplanVersperringen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class Dienstovergave extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Dienstovergave'),
+                            child: TitleText(title: 'Stappenplan Versperringen'),
                           ),
                         ],
                       ),
@@ -55,24 +55,7 @@ class Dienstovergave extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Om de dienst over te dragen/over te nemen maak je gebruik van het ‘dienstovergave formulier’. Door het invullen van dit formulier borg je een uniforme manier van dienstovergave of dienstovername.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Je draagt of neemt de dienst persoonlijk over na elke onderbreking van je reguliere dienst. Je spreekt samen de bijzonderheden door en tekent het formulier voor overgave of overname.',
+                              'Bepaal samen met de DVL de (infra)beperkingen en mogelijkheden en neem samen met de DVL het verdelingsbesluit. Op verzoek van de DVL toets je de versperringsmaatregel en geef je hierbij aan of en vanaf wanneer de versperringsmaatregel uitvoerbaar is.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -114,7 +97,7 @@ class Dienstovergave extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Het rijden van treinen op sporen waarop zij niet of met beperkingen mogen rijden.',
+                              'Foutief getoetste planaanpassing.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -156,7 +139,7 @@ class Dienstovergave extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Een treindienstleider draagt de verantwoordelijkheid voor een bediengebied over aan een bevoegd treindienstleider, waarbij hij deze informeert over bijzonderheden die afwijken van het oorspronkelijke plan en waarvoor eventuele aanpassingen moeten worden gedaan.',
+                              'Wanneer er onvoldoende infra beschikbaar is om volgens plan te kunnen rijden, dient de wel beschikbare infra herverdeeld te worden. In overleg met de vervoerders wordt vastgesteld welke aanpassingen op het plan maakbaar en uitvoerbaar zijn.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,

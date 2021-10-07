@@ -10,23 +10,9 @@ class UitvoerenPlan extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          'TRDLtool',
-          style: GoogleFonts.questrial(
-              textStyle: TextStyle(fontWeight: FontWeight.w700)),
-        ),
+        title: AppBarText(title: 'TRDLtool'),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.home),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => HomeScreen(),
-            ),
-          );
-        },
-      ),
+      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -40,14 +26,7 @@ class UitvoerenPlan extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Uitvoeren Plan',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
-                            ),
+                            child: TitleText(title: 'Uitvoeren Plan'),
                           ),
                         ],
                       ),
@@ -100,14 +79,11 @@ class UitvoerenPlan extends StatelessWidget {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(
-                                  context, 'geplandewerkzaamheden');
+                              Navigator.pushNamed(context, 'geplandewerkzaamheden');
                             },
                             child: Text(
                               'Geplande Werkzaamheden',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -115,14 +91,11 @@ class UitvoerenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(
-                                  context, 'bijzonderhedenrijwegen');
+                              Navigator.pushNamed(context, 'bijzonderhedenrijwegen');
                             },
                             child: Text(
                               'Bijzonderheden Rijwegen',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -130,14 +103,11 @@ class UitvoerenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(
-                                  context, 'bijzonderhedentrein');
+                              Navigator.pushNamed(context, 'bijzonderhedentrein');
                             },
                             child: Text(
                               'Bijzonderheden Trein',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -149,9 +119,7 @@ class UitvoerenPlan extends StatelessWidget {
                             },
                             child: Text(
                               'Communicatie',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -163,9 +131,7 @@ class UitvoerenPlan extends StatelessWidget {
                             },
                             child: Text(
                               'NCBG',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -177,9 +143,7 @@ class UitvoerenPlan extends StatelessWidget {
                             },
                             child: Text(
                               'Dienstovergave',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                         ],

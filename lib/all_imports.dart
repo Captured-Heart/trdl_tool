@@ -15,6 +15,7 @@ export 'package:flutter_spinkit/flutter_spinkit.dart';
 
 //Modules and services
 export 'package:trdl_tool/item_lists/welcome_items.dart';
+export 'package:trdl_tool/widgets/constants.dart';
 
 //Main pages
 export 'package:trdl_tool/home_screen.dart';
@@ -47,3 +48,13 @@ export 'package:trdl_tool/pages/uitvoeren_plan/dienstovergave/dienstovergave.dar
 
 //Aanpassen plan pages
 export 'package:trdl_tool/pages/aanpassen_plan/aanpassen_plan.dart';
+export 'package:trdl_tool/pages/aanpassen_plan/stappenplan_versperringen.dart';
+export 'package:trdl_tool/pages/aanpassen_plan/orderacceptatie.dart';
+export 'package:trdl_tool/pages/aanpassen_plan/ongepland_werk/ongepland_werk.dart';
+export 'package:trdl_tool/pages/aanpassen_plan/ongepland_werk/materieel.dart';
+export 'package:trdl_tool/pages/aanpassen_plan/ongepland_werk/infra.dart';
+export 'package:trdl_tool/pages/aanpassen_plan/vertragingen.dart';
+
+//Incidenten pages
+export 'package:trdl_tool/pages/incidenten/incidenten.dart';
+export 'package:trdl_tool/pages/incidenten/herroepen_sein.dart';

@@ -16,11 +16,7 @@ class HomeIndex2 extends StatelessWidget {
             child: Icon(Icons.person),
           ),
         ),
-        title: Text(
-          'TRDLtool',
-          style: GoogleFonts.questrial(
-              textStyle: TextStyle(fontWeight: FontWeight.w700)),
-        ),
+        title: AppBarText(title: 'TRDLtool'),
         actions: [
           IconButton(
             onPressed: () {
@@ -31,16 +27,7 @@ class HomeIndex2 extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.home),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => HomeScreen(),
-              ),
-            );
-          }),
+      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -54,14 +41,7 @@ class HomeIndex2 extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'ProQuiz',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
-                            ),
+                            child: TitleText(title: 'ProQuiz'),
                           ),
                         ],
                       ),

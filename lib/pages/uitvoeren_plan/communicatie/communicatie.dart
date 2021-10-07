@@ -10,23 +10,9 @@ class Communicatie extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          'TRDLtool',
-          style: GoogleFonts.questrial(
-              textStyle: TextStyle(fontWeight: FontWeight.w700)),
-        ),
+        title: AppBarText(title: 'TRDLtool'),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.home),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => HomeScreen(),
-            ),
-          );
-        },
-      ),
+      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -40,14 +26,7 @@ class Communicatie extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Communicatie',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
-                            ),
+                            child: TitleText(title: 'Communicatie'),
                           ),
                         ],
                       ),
@@ -83,14 +62,11 @@ class Communicatie extends StatelessWidget {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(
-                                  context, 'mondelingecommunicatie');
+                              Navigator.pushNamed(context, 'mondelingecommunicatie');
                             },
                             child: Text(
                               'Mondelinge Communicatie',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                         ],

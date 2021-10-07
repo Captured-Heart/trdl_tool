@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class BijzonderhedenRijwegen extends StatelessWidget {
-  const BijzonderhedenRijwegen({Key? key}) : super(key: key);
+class OngeplandWerk extends StatelessWidget {
+  const OngeplandWerk({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Bijzonderheden Rijwegen'),
+                            child: TitleText(title: 'Ongepland Werk'),
                           ),
                         ],
                       ),
@@ -62,10 +62,10 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'rijwegenexploitatie');
+                              Navigator.pushNamed(context, 'materieelongeplandwerk');
                             },
                             child: Text(
-                              'Sporen buiten exploitatie',
+                              'Materieel',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
@@ -74,34 +74,10 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(context, 'kopvantrein');
+                              Navigator.pushNamed(context, 'infraongeplandwerk');
                             },
                             child: Text(
-                              'Kop van trein voorbij sein',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'inzettenicb');
-                            },
-                            child: Text(
-                              'Inzetten railvoertuig ICB',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'toelatenwerktreinen');
-                            },
-                            child: Text(
-                              'Toelaten werktreinen',
+                              'Infrastructuur',
                               style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),

@@ -54,6 +54,16 @@ class MainEntry extends StatelessWidget {
 
         // AanpassenPlan routes
         'aanpassenplan': (context) => AanpassenPlan(),
+        'stappenplanversperringen': (context) => StappenplanVersperringen(),
+        'ongeplandwerk': (context) => OngeplandWerk(),
+        'orderacceptatie': (context) => Orderacceptatie(),
+        'materieelongeplandwerk': (context) => MaterieelOngeplandWerk(),
+        'infraongeplandwerk': (context) => InfraOngeplandWerk(),
+        'vertragingen': (context) => Vertragingen(),
+
+        // Incidenten routes
+        'incidenten': (context) => Incidenten(),
+        'herroepensein': (context) => HerroepenSein(),
       },
     );
   }

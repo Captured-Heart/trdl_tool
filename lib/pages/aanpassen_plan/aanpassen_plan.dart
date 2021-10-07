@@ -10,23 +10,9 @@ class AanpassenPlan extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          'TRDLtool',
-          style: GoogleFonts.questrial(
-              textStyle: TextStyle(fontWeight: FontWeight.w700)),
-        ),
+        title: AppBarText(title: 'TRDLtool'),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.home),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => HomeScreen(),
-            ),
-          );
-        },
-      ),
+      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -40,14 +26,7 @@ class AanpassenPlan extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Aanpassen Plan',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
-                            ),
+                            child: TitleText(title: 'Aanpassen Plan'),
                           ),
                         ],
                       ),
@@ -100,13 +79,15 @@ class AanpassenPlan extends StatelessWidget {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              //TODO
+                              Navigator.pushNamed(context, 'stappenplanversperringen');
                             },
                             child: Text(
                               'Stappenplan Versperringen',
                               style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                                textStyle: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ),
                           ),
                           SizedBox(
@@ -114,13 +95,15 @@ class AanpassenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              //TODO
+                              Navigator.pushNamed(context, 'incidenten');
                             },
                             child: Text(
                               'Incidenten',
                               style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                                textStyle: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ),
                           ),
                           SizedBox(
@@ -128,13 +111,15 @@ class AanpassenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              //TODO
+                              Navigator.pushNamed(context, 'ongeplandwerk');
                             },
                             child: Text(
                               'Ongepland Werk',
                               style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                                textStyle: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ),
                           ),
                           SizedBox(
@@ -142,13 +127,15 @@ class AanpassenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              //TODO
+                              Navigator.pushNamed(context, 'vertragingen');
                             },
                             child: Text(
                               'Vertragingen',
                               style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                                textStyle: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ),
                           ),
                           SizedBox(
@@ -156,13 +143,15 @@ class AanpassenPlan extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              //TODO
+                              Navigator.pushNamed(context, 'orderacceptatie');
                             },
                             child: Text(
                               'Orderacceptatie',
                               style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                                textStyle: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                             ),
                           ),
                         ],
