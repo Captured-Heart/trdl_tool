@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class AanvangWerkzaamheden extends StatelessWidget {
-  const AanvangWerkzaamheden({Key? key}) : super(key: key);
+class Orderacceptatie extends StatelessWidget {
+  const Orderacceptatie({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +27,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(
-                              title: 'Aanvang Werkzaamheden',
-                            ),
+                            child: TitleText(title: 'Orderacceptatie'),
                           ),
                         ],
                       ),
@@ -48,17 +46,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: '- Neem de (veiligheids)maatregelen die in de WBI/WECO zijn vermeld of met de LWB zijn afgesproken;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: '- Meld de LWB dat je de infracapaciteit benoemd op de WBI/WECO beschikbaar hebt gesteld voor werkzaamheden.',
+                              text: 'Bij een bovenlokale orderaanvraag toetst de DVL de aanvraag bij jou op verdringing op het emplacement conform plannormen. Bij een lokale orderaanvraag toets je zelf op verdringing conform plannormen.',
                             ),
                           ),
                         ],
@@ -88,7 +76,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
+                              text: 'Conflicterend spoorgebruik.',
                             ),
                           ),
                         ],
@@ -118,17 +106,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Bij geplande werkzaamheden wordt in de voorbereiding op de werkzaamheden een werkplekbeveiligingsinstructie (WBI) gemaakt. In de WBI/WECO worden de gemaakte afspraken voor de werkplekbeveiliging vastgelegd.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Voorafgaand aan de werkzaamheden stellen treindienstleider en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
+                              text: 'De schaarse infracapaciteit is op basis van toedelingsregels verdeeld en verwerkt in het plan. Infragebruikers kunnen wijzigingen op het plan aanvragen.',
                             ),
                           ),
                         ],

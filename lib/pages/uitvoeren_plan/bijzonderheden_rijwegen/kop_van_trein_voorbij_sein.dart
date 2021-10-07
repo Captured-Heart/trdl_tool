@@ -10,23 +10,9 @@ class KopvanTrein extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          'TRDLtool',
-          style: GoogleFonts.questrial(
-              textStyle: TextStyle(fontWeight: FontWeight.w700)),
-        ),
+        title: AppBarText(title: 'TRDLtool'),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.home),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => HomeScreen(),
-            ),
-          );
-        },
-      ),
+      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -40,14 +26,7 @@ class KopvanTrein extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Kop van de trein/rangeerdeel voorbij het sein',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
-                            ),
+                            child: TitleText(title: 'Kop van de trein/rangeerdeel voorbij het sein'),
                           ),
                         ],
                       ),

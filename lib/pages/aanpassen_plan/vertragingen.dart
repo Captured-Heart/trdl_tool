@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class Ncbg extends StatelessWidget {
-  const Ncbg({Key? key}) : super(key: key);
+class Vertragingen extends StatelessWidget {
+  const Vertragingen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class Ncbg extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'NCBG'),
+                            child: TitleText(title: 'Vertragingen'),
                           ),
                         ],
                       ),
@@ -37,7 +37,7 @@ class Ncbg extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Sturingsniveau en uitzonderingen',
+                              'Procedure',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 18.0,
@@ -55,7 +55,7 @@ class Ncbg extends StatelessWidget {
                         children: [
                           Expanded(
                             child: Text(
-                              'Binnen een NCBG kent men in beginsel twee verschillende sturingsniveaus, namelijk:',
+                              'Bij vertragingen is het belangrijk de treinenloop zo goed mogelijk volgens plan te laten verlopen. Daar waar het plan aangepast moet worden, gebeurt dat zoveel mogelijk volgens vooraf afgesproken afhandelingsafspraken. Deze afhandelingsafspraken zijn:',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -70,9 +70,12 @@ class Ncbg extends StatelessWidget {
                       ),
                       Row(
                         children: [
+                          SizedBox(
+                            width: 8.0,
+                          ),
                           Expanded(
                             child: Text(
-                              '- Rijwegniveau;',
+                              '- Infragerelateerd, of;',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,
@@ -84,9 +87,12 @@ class Ncbg extends StatelessWidget {
                       ),
                       Row(
                         children: [
+                          SizedBox(
+                            width: 8.0,
+                          ),
                           Expanded(
                             child: Text(
-                              '- TijdRuimte-slotniveau.',
+                              '- Treingerelateerd.',
                               style: GoogleFonts.questrial(
                                 textStyle: TextStyle(
                                   fontSize: 16.0,

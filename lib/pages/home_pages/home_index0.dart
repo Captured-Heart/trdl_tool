@@ -16,11 +16,7 @@ class HomeIndex0 extends StatelessWidget {
             child: Icon(Icons.person),
           ),
         ),
-        title: Text(
-          'TRDLtool',
-          style: GoogleFonts.questrial(
-              textStyle: TextStyle(fontWeight: FontWeight.w700)),
-        ),
+        title: AppBarText(title: 'TRDLtool'),
         actions: [
           IconButton(
             onPressed: () {
@@ -44,14 +40,7 @@ class HomeIndex0 extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Verantwoordelijkheden Treindienstleider',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
-                            ),
+                            child: TitleText(title: 'Verantwoordelijkheden Treindienstleider'),
                           ),
                         ],
                       ),
@@ -144,9 +133,7 @@ class HomeIndex0 extends StatelessWidget {
                               },
                               child: Text(
                                 'Uitvoeren',
-                                style: GoogleFonts.questrial(
-                                    textStyle:
-                                        TextStyle(fontWeight: FontWeight.bold)),
+                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                               ),
                             ),
                             SizedBox(
@@ -158,9 +145,7 @@ class HomeIndex0 extends StatelessWidget {
                               },
                               child: Text(
                                 'Aanpassen',
-                                style: GoogleFonts.questrial(
-                                    textStyle:
-                                        TextStyle(fontWeight: FontWeight.bold)),
+                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                               ),
                             ),
                             SizedBox(
@@ -170,9 +155,7 @@ class HomeIndex0 extends StatelessWidget {
                               onPressed: () {},
                               child: Text(
                                 'Incidenten',
-                                style: GoogleFonts.questrial(
-                                    textStyle:
-                                        TextStyle(fontWeight: FontWeight.bold)),
+                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                               ),
                             ),
                           ],

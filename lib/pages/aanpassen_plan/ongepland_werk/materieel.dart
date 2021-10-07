@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class AanvangWerkzaamheden extends StatelessWidget {
-  const AanvangWerkzaamheden({Key? key}) : super(key: key);
+class MaterieelOngeplandWerk extends StatelessWidget {
+  const MaterieelOngeplandWerk({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: TitleText(
-                              title: 'Aanvang Werkzaamheden',
+                              title: 'Materieel (ongepland werk)',
                             ),
                           ),
                         ],
@@ -48,17 +48,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: '- Neem de (veiligheids)maatregelen die in de WBI/WECO zijn vermeld of met de LWB zijn afgesproken;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: '- Meld de LWB dat je de infracapaciteit benoemd op de WBI/WECO beschikbaar hebt gesteld voor werkzaamheden.',
+                              text: 'Je stelt infracapaciteit ter beschikking voor het ongepland uitvoeren van werkzaamheden en/of de inspectie aan materieel en maakt een tijdsafspraak.',
                             ),
                           ),
                         ],
@@ -118,17 +108,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Bij geplande werkzaamheden wordt in de voorbereiding op de werkzaamheden een werkplekbeveiligingsinstructie (WBI) gemaakt. In de WBI/WECO worden de gemaakte afspraken voor de werkplekbeveiliging vastgelegd.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Voorafgaand aan de werkzaamheden stellen treindienstleider en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
+                              text: 'Door infracapaciteit beschikbaar te stellen, zorg je voor het creëren van een veilige werkplek voor werkzaamheden of inspectie aan materieel.',
                             ),
                           ),
                         ],

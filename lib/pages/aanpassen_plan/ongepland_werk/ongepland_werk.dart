@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class AanpassenPlan extends StatelessWidget {
-  const AanpassenPlan({Key? key}) : super(key: key);
+class OngeplandWerk extends StatelessWidget {
+  const OngeplandWerk({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,19 +27,7 @@ class AanpassenPlan extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(
-                              title: 'Aanpassen Plan',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Het actuele plan aanpassen als gevolg van een incident of extra capaciteitsaanvraag.',
-                            ),
+                            child: TitleText(title: 'Ongepland Werk'),
                           ),
                         ],
                       ),
@@ -68,28 +56,13 @@ class AanpassenPlan extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           NavButton(
-                            buttontext: 'Stappenplan Versperringen',
-                            destination: 'stappenplanversperringen',
+                            buttontext: 'Materieel',
+                            destination: 'materieelongeplandwerk',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Incidenten',
-                            destination: 'incidenten',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Ongepland Werk',
-                            destination: 'ongeplandwerk',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Vertragingen',
-                            destination: 'vertragingen',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Orderacceptatie',
-                            destination: 'orderacceptatie',
+                            buttontext: 'Infrastructuur',
+                            destination: 'infraongeplandwerk',
                           ),
                         ],
                       ),

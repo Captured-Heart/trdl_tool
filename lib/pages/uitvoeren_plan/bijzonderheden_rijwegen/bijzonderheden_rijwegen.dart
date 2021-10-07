@@ -10,23 +10,9 @@ class BijzonderhedenRijwegen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          'TRDLtool',
-          style: GoogleFonts.questrial(
-              textStyle: TextStyle(fontWeight: FontWeight.w700)),
-        ),
+        title: AppBarText(title: 'TRDLtool'),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.home),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => HomeScreen(),
-            ),
-          );
-        },
-      ),
+      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -40,14 +26,7 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Bijzonderheden Rijwegen',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
-                            ),
+                            child: TitleText(title: 'Bijzonderheden Rijwegen'),
                           ),
                         ],
                       ),
@@ -83,14 +62,11 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                         children: [
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(
-                                  context, 'rijwegenexploitatie');
+                              Navigator.pushNamed(context, 'rijwegenexploitatie');
                             },
                             child: Text(
                               'Sporen buiten exploitatie',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -102,9 +78,7 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                             },
                             child: Text(
                               'Kop van trein voorbij sein',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -116,9 +90,7 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                             },
                             child: Text(
                               'Inzetten railvoertuig ICB',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -126,14 +98,11 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {
-                              Navigator.pushNamed(
-                                  context, 'toelatenwerktreinen');
+                              Navigator.pushNamed(context, 'toelatenwerktreinen');
                             },
                             child: Text(
                               'Toelaten werktreinen',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                         ],
