@@ -110,7 +110,13 @@ class Register extends StatelessWidget {
                                 if (!email.endsWith('@prorail.nl')) {
                                   final wrongEmail = SnackBar(
                                     content: Text(
-                                        'Email moet eindigen op @prorail.nl'),
+                                      'Email moet eindigen op @prorail.nl',
+                                      style: GoogleFonts.questrial(
+                                        textStyle: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
                                     action: SnackBarAction(
                                       label: 'OK',
                                       onPressed: () {},
@@ -121,7 +127,13 @@ class Register extends StatelessWidget {
                                 } else if (password.length < 6) {
                                   final shortPassword = SnackBar(
                                     content: Text(
-                                        'Kies een wachtwoord van minimaal 6 tekens'),
+                                      'Kies een wachtwoord van minimaal 6 tekens',
+                                      style: GoogleFonts.questrial(
+                                        textStyle: TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                    ),
                                     action: SnackBarAction(
                                       label: 'OK',
                                       onPressed: () {},
@@ -137,8 +149,23 @@ class Register extends StatelessWidget {
                                     if (newUser != null) {
                                       Navigator.pushNamed(context, 'login');
                                     }
-                                  } catch (e) {
-                                    print(e);
+                                  } catch (errorMessage) {
+                                    final errorRegister = SnackBar(
+                                      content: Text(
+                                        'Er is iets misgegaan: $errorMessage',
+                                        style: GoogleFonts.questrial(
+                                          textStyle: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      action: SnackBarAction(
+                                        label: 'OK',
+                                        onPressed: () {},
+                                      ),
+                                    );
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(errorRegister);
                                   }
                                 }
                               },

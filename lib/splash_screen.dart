@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'all_imports.dart';
 
 class SplashScreen extends StatefulWidget {

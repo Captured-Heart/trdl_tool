@@ -1,6 +1,7 @@
-//Flutter packages
+//Flutter/Dart packages
 export 'package:flutter/material.dart';
 export 'package:flutter/painting.dart';
+export 'dart:async';
 
 //Firebase packages
 export 'package:firebase_core/firebase_core.dart';
