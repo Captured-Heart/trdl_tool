@@ -18,6 +18,7 @@ export 'package:trdl_tool/item_lists/welcome_items.dart';
 export 'package:trdl_tool/widgets/constants.dart';
 
 //Main pages
+export 'package:trdl_tool/splash_screen.dart';
 export 'package:trdl_tool/home_screen.dart';
 export 'package:trdl_tool/welcome_screen.dart';
 export 'package:trdl_tool/pages/login_user/login_screen.dart';

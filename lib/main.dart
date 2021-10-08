@@ -1,5 +1,3 @@
-import 'package:trdl_tool/splash_screen.dart';
-
 import 'all_imports.dart';
 
 void main() async {
