@@ -40,57 +40,41 @@ class HomeIndex0 extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Verantwoordelijkheden Treindienstleider'),
+                            child: TitleText(
+                                title:
+                                    'Verantwoordelijkheden Treindienstleider'),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Als treindienstleider ben je verantwoordelijk voor het verdelen van de infracapaciteit in een aan jou toegewezen geografisch gebied. Dit doe je door het uitvoeren van een vooraf aangeleverd plan.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'Als treindienstleider ben je verantwoordelijk voor het verdelen van de infracapaciteit in een aan jou toegewezen geografisch gebied. Dit doe je door het uitvoeren van een vooraf aangeleverd plan.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Wanneer er zich situaties voordoen die een aanpassing op dat plan noodzakelijk maken, doe je dit door gebruik te maken van vooraf bepaalde procedures in deze werkwijze.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'Wanneer er zich situaties voordoen die een aanpassing op dat plan noodzakelijk maken, doe je dit door gebruik te maken van vooraf bepaalde procedures in deze werkwijze.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Op momenten dat oplossingen ter plekke moeten worden bedacht, kan besloten worden een procedure niet geheel of anders uit te voeren. Het is het vakmanschap van de treindienstleider om te bepalen welke VKA\'s nodig zijn om de risico\'s te beheersen.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'Op momenten dat oplossingen ter plekke moeten worden bedacht, kan besloten worden een procedure niet geheel of anders uit te voeren. Het is het vakmanschap van de treindienstleider om te bepalen welke VKA\'s nodig zijn om de risico\'s te beheersen.',
                             ),
                           ),
                         ],
@@ -99,6 +83,7 @@ class HomeIndex0 extends StatelessWidget {
                   ),
                 ),
               ),
+              //NAVIGATION CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -108,55 +93,31 @@ class HomeIndex0 extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Ga snel naar',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'Ga snel naar',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       FittedBox(
                         fit: BoxFit.cover,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            ElevatedButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, 'uitvoerenplan');
-                              },
-                              child: Text(
-                                'Uitvoeren',
-                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                              ),
+                            NavButton(
+                              buttontext: 'Uitvoeren',
+                              destination: 'uitvoerenplan',
                             ),
-                            SizedBox(
-                              width: 8.0,
+                            SizedBoxW(),
+                            NavButton(
+                              buttontext: 'Aanpassen',
+                              destination: 'aanpassenplan',
                             ),
-                            ElevatedButton(
-                              onPressed: () {
-                                Navigator.pushNamed(context, 'aanpassenplan');
-                              },
-                              child: Text(
-                                'Aanpassen',
-                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 8.0,
-                            ),
-                            ElevatedButton(
-                              onPressed: () {},
-                              child: Text(
-                                'Incidenten',
-                                style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                              ),
+                            SizedBoxW(),
+                            NavButton(
+                              buttontext: 'Incidenten',
+                              destination: 'incidenten',
                             ),
                           ],
                         ),
@@ -165,9 +126,7 @@ class HomeIndex0 extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 8.0,
-              ),
+              SizedBoxH(),
             ],
           ),
         ),

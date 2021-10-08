@@ -8,6 +8,8 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  final alreadySignedInUser = FirebaseAuth.instance.currentUser;
+
   @override
   void initState() {
     super.initState();
@@ -15,15 +17,27 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Timer(
-      Duration(seconds: 2),
-      () => Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (BuildContext context) => WelcomeScreen(),
+    if (alreadySignedInUser != null) {
+      Timer(
+        Duration(seconds: 2),
+        () => Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => HomeScreen(),
+          ),
         ),
-      ),
-    );
+      );
+    } else {
+      Timer(
+        Duration(seconds: 2),
+        () => Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (BuildContext context) => WelcomeScreen(),
+          ),
+        ),
+      );
+    }
 
     return Scaffold(
       body: SafeArea(

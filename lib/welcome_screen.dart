@@ -6,6 +6,8 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreen extends State<WelcomeScreen> {
+  final alreadySignedInUser = FirebaseAuth.instance.currentUser;
+
   List<Widget> slides = items
       .map((item) => Container(
           padding: EdgeInsets.symmetric(horizontal: 18.0),

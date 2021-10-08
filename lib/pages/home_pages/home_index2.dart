@@ -45,19 +45,13 @@ class HomeIndex2 extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'In een latere update zal hier de ProQuiz verschijnen. Beantwoord zoveel mogelijk vragen goed in 1 minuut en test je kennis tegen anderen.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'In een latere update zal hier de ProQuiz verschijnen. Beantwoord zoveel mogelijk vragen goed in 1 minuut en test je kennis tegen anderen.',
                             ),
                           ),
                         ],
