@@ -16,8 +16,8 @@ class MainEntry extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'TRDLtool',
-      theme: FlexColorScheme.light(scheme: FlexScheme.mandyRed).toTheme,
-      darkTheme: FlexColorScheme.dark(scheme: FlexScheme.mandyRed).toTheme,
+      theme: FlexColorScheme.light(scheme: FlexScheme.jungle).toTheme,
+      darkTheme: FlexColorScheme.dark(scheme: FlexScheme.jungle).toTheme,
       themeMode: ThemeMode.system,
       home: SplashScreen(),
       routes: {
