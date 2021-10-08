@@ -11,8 +11,10 @@ class InfraOngeplandWerk extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -48,7 +50,8 @@ class InfraOngeplandWerk extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Ongeplande werkzaamheden aan de railinfrastructuur met WBI/WECO:',
+                              text:
+                                  'Ongeplande werkzaamheden aan de railinfrastructuur met WBI/WECO:',
                             ),
                           ),
                         ],
@@ -69,7 +72,8 @@ class InfraOngeplandWerk extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Ongeplande werkzaamheden aan de railinfrastructuur zonder WBI/WECO:',
+                              text:
+                                  'Ongeplande werkzaamheden aan de railinfrastructuur zonder WBI/WECO:',
                             ),
                           ),
                         ],
@@ -80,7 +84,8 @@ class InfraOngeplandWerk extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Je werkt op RVO nummer en handelt als volgt:',
+                              text:
+                                  '- Je werkt op RVO nummer en handelt als volgt:',
                             ),
                           ),
                         ],
@@ -90,7 +95,8 @@ class InfraOngeplandWerk extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Vraag welke infra betrokken is en hoelang de werkzaamheden gaan duren;',
+                              text:
+                                  '- Vraag welke infra betrokken is en hoelang de werkzaamheden gaan duren;',
                             ),
                           ),
                         ],
@@ -100,7 +106,8 @@ class InfraOngeplandWerk extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- De DVL beslist bij werkzaamheden op de vrije baan over het aanvangstijdstip;',
+                              text:
+                                  '- De DVL beslist bij werkzaamheden op de vrije baan over het aanvangstijdstip;',
                             ),
                           ),
                         ],
@@ -142,7 +149,8 @@ class InfraOngeplandWerk extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Veiligheidsmaatregelen treindienstleider;',
+                              text:
+                                  '- Veiligheidsmaatregelen treindienstleider;',
                             ),
                           ),
                         ],
@@ -190,7 +198,8 @@ class InfraOngeplandWerk extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
+                              text:
+                                  'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
                             ),
                           ),
                         ],
@@ -220,7 +229,8 @@ class InfraOngeplandWerk extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Voor het oplossen van (dreigende) storingen en/of calamiteiten kan het nodig zijn ongepland infracapaciteit beschikbaar te stellen voor werkzaamheden. Om deze werkzaamheden te beveiligen kan gebruik worden gemaakt van vooraf voorbereide storingsWBI’s of maatwerkWBI’s. Wanneer beide mogelijkheden niet beschikbaar zijn kan ook een unieke WECO met de LWB opgemaakt worden.',
+                              text:
+                                  'Voor het oplossen van (dreigende) storingen en/of calamiteiten kan het nodig zijn ongepland infracapaciteit beschikbaar te stellen voor werkzaamheden. Om deze werkzaamheden te beveiligen kan gebruik worden gemaakt van vooraf voorbereide storingsWBI’s of maatwerkWBI’s. Wanneer beide mogelijkheden niet beschikbaar zijn kan ook een unieke WECO met de LWB opgemaakt worden.',
                             ),
                           ),
                         ],

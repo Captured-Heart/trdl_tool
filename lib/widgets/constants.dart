@@ -18,6 +18,21 @@ class AppBarText extends StatelessWidget {
   }
 }
 
+//APPBAR HOME ICONBUTTON
+class HomeButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return IconButton(
+      onPressed: () {
+        Navigator.pushReplacementNamed(context, 'homescreen');
+      },
+      icon: Icon(
+        Icons.home,
+      ),
+    );
+  }
+}
+
 //FloatingActionButton Widget Home
 class FabHome extends StatelessWidget {
   @override

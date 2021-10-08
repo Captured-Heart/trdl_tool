@@ -11,8 +11,10 @@ class MaterieelOngeplandWerk extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -48,7 +50,8 @@ class MaterieelOngeplandWerk extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Je stelt infracapaciteit ter beschikking voor het ongepland uitvoeren van werkzaamheden en/of de inspectie aan materieel en maakt een tijdsafspraak.',
+                              text:
+                                  'Je stelt infracapaciteit ter beschikking voor het ongepland uitvoeren van werkzaamheden en/of de inspectie aan materieel en maakt een tijdsafspraak.',
                             ),
                           ),
                         ],
@@ -78,7 +81,8 @@ class MaterieelOngeplandWerk extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
+                              text:
+                                  'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
                             ),
                           ),
                         ],
@@ -108,7 +112,8 @@ class MaterieelOngeplandWerk extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Door infracapaciteit beschikbaar te stellen, zorg je voor het creëren van een veilige werkplek voor werkzaamheden of inspectie aan materieel.',
+                              text:
+                                  'Door infracapaciteit beschikbaar te stellen, zorg je voor het creëren van een veilige werkplek voor werkzaamheden of inspectie aan materieel.',
                             ),
                           ),
                         ],

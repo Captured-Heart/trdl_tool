@@ -11,12 +11,15 @@ class Incidenten extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
+              //PROCEDURE CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -30,176 +33,106 @@ class Incidenten extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Procedure',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Procedure',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Bij een melding van een incident beoordeel je welke van de volgende maatregelen noodzakelijk zijn om een veilige situatie te creëren en/of uitbreiding te voorkomen:',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'Bij een melding van een incident beoordeel je welke van de volgende maatregelen noodzakelijk zijn om een veilige situatie te creëren en/of uitbreiding te voorkomen:',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 8.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Alarmoproep GSM-R uitzenden;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Alarmoproep GSM-R uitzenden;',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 8.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Herroepen van seinen;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Herroepen van seinen;',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 8.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- ARI uitzetten;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- ARI uitzetten;',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 8.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Buurtreindienstleider informeren;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Buurtreindienstleider informeren;',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBox(
-                            width: 8.0,
-                          ),
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Veiligheidsmaatregelen nemen.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Veiligheidsmaatregelen nemen.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Alarmeer of informeer de MKS/BO.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Alarmeer of informeer de MKS/BO.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Wanneer de AL belt, neemt hij de leiding over van het incident en coördineert de afhandeling met de belanghebbenden ter plaatse. Op verzoek stel je de AL de infracapaciteit ter beschikking.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'Wanneer de AL belt, neemt hij de leiding over van het incident en coördineert de afhandeling met de belanghebbenden ter plaatse. Op verzoek stel je de AL de infracapaciteit ter beschikking.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Nadat de AL of de LWB de werkzaamheden als gevolg van het incident gereed meldt, hervat je het treinverkeer, eventueel met inachtneming van de door de AL of LWB genoemde beperking(en).',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'Nadat de AL of de LWB de werkzaamheden als gevolg van het incident gereed meldt, hervat je het treinverkeer, eventueel met inachtneming van de door de AL of LWB genoemde beperking(en).',
                             ),
                           ),
                         ],
@@ -208,6 +141,7 @@ class Incidenten extends StatelessWidget {
                   ),
                 ),
               ),
+              //NAVIGATION CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -217,78 +151,59 @@ class Incidenten extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Ga snel naar',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'Ga snel naar',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'herroepensein');
-                            },
-                            child: Text(
-                              'Herroepen van een sein',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'Herroepen van een sein',
+                            destination: 'herroepensein',
                           ),
-                          SizedBox(
-                            height: 8.0,
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Infrastructuur',
+                            destination: 'infra',
                           ),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'Infrastructuur',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
+                          SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'Derden en/of dieren',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(
+                                  textStyle:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
+                          SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'Materieel',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(
+                                  textStyle:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
+                          SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO
                             },
                             child: Text(
                               'Overige incidenten',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(
+                                  textStyle:
+                                      TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                         ],
@@ -297,6 +212,7 @@ class Incidenten extends StatelessWidget {
                   ),
                 ),
               ),
+              //RISICO CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -306,31 +222,19 @@ class Incidenten extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Risico\'s',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Risico\'s',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Treinen komen niet tijdig tot stilstand voor het gevaarpunt of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],
@@ -339,6 +243,7 @@ class Incidenten extends StatelessWidget {
                   ),
                 ),
               ),
+              //CONTEXT CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -348,31 +253,19 @@ class Incidenten extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Context',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Context',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Bij een melding van een incident is het van belang om betrokkenen op de hoogte te brengen, het incident te isoleren en uitbreiding te voorkomen.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'Bij een melding van een incident is het van belang om betrokkenen op de hoogte te brengen, het incident te isoleren en uitbreiding te voorkomen.',
                             ),
                           ),
                         ],

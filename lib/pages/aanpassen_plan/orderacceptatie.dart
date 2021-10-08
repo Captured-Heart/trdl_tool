@@ -11,8 +11,10 @@ class Orderacceptatie extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -46,7 +48,8 @@ class Orderacceptatie extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Bij een bovenlokale orderaanvraag toetst de DVL de aanvraag bij jou op verdringing op het emplacement conform plannormen. Bij een lokale orderaanvraag toets je zelf op verdringing conform plannormen.',
+                              text:
+                                  'Bij een bovenlokale orderaanvraag toetst de DVL de aanvraag bij jou op verdringing op het emplacement conform plannormen. Bij een lokale orderaanvraag toets je zelf op verdringing conform plannormen.',
                             ),
                           ),
                         ],
@@ -106,7 +109,8 @@ class Orderacceptatie extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'De schaarse infracapaciteit is op basis van toedelingsregels verdeeld en verwerkt in het plan. Infragebruikers kunnen wijzigingen op het plan aanvragen.',
+                              text:
+                                  'De schaarse infracapaciteit is op basis van toedelingsregels verdeeld en verwerkt in het plan. Infragebruikers kunnen wijzigingen op het plan aanvragen.',
                             ),
                           ),
                         ],

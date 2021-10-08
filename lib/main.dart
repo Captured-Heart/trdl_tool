@@ -62,6 +62,7 @@ class MainEntry extends StatelessWidget {
         // Incidenten routes
         'incidenten': (context) => Incidenten(),
         'herroepensein': (context) => HerroepenSein(),
+        'infra': (context) => Infra(),
       },
     );
   }

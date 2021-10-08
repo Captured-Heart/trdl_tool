@@ -21,7 +21,7 @@ class HomeIndex2 extends StatelessWidget {
           IconButton(
             onPressed: () {
               _auth.signOut();
-              Navigator.pushNamed(context, 'login');
+              Navigator.pushReplacementNamed(context, 'login');
             },
             icon: Icon(Icons.logout),
           ),

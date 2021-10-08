@@ -20,7 +20,9 @@ class Register extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Expanded(child: Image.asset('assets/images/trdlToolLogoSmallPNG.png')),
+                    Expanded(
+                        child: Image.asset(
+                            'assets/images/trdlToolLogoSmallPNG.png')),
                   ],
                 ),
               ),
@@ -60,7 +62,8 @@ class Register extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
-                                  hintText: 'Email moet eindigen op @prorail.nl',
+                                  hintText:
+                                      'Email moet eindigen op @prorail.nl',
                                 ),
                               ),
                             ),
@@ -82,7 +85,8 @@ class Register extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
-                                  hintText: 'Wachtwoord bevat minimaal 6 tekens',
+                                  hintText:
+                                      'Wachtwoord bevat minimaal 6 tekens',
                                 ),
                               ),
                             ),
@@ -111,7 +115,8 @@ class Register extends StatelessWidget {
                                       onPressed: () {},
                                     ),
                                   );
-                                  ScaffoldMessenger.of(context).showSnackBar(wrongEmail);
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(wrongEmail);
                                 } else if (password.length < 6) {
                                   final shortPassword = SnackBar(
                                     content: Text(
@@ -127,12 +132,16 @@ class Register extends StatelessWidget {
                                       onPressed: () {},
                                     ),
                                   );
-                                  ScaffoldMessenger.of(context).showSnackBar(shortPassword);
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(shortPassword);
                                 } else if (email.endsWith('@prorail.nl')) {
                                   try {
-                                    final newUser = await _auth.createUserWithEmailAndPassword(email: email, password: password);
+                                    final newUser = await _auth
+                                        .createUserWithEmailAndPassword(
+                                            email: email, password: password);
                                     if (newUser != null) {
-                                      Navigator.pushNamed(context, 'login');
+                                      Navigator.pushReplacementNamed(
+                                          context, 'login');
                                     }
                                   } catch (errorMessage) {
                                     final errorRegister = SnackBar(
@@ -149,7 +158,8 @@ class Register extends StatelessWidget {
                                         onPressed: () {},
                                       ),
                                     );
-                                    ScaffoldMessenger.of(context).showSnackBar(errorRegister);
+                                    ScaffoldMessenger.of(context)
+                                        .showSnackBar(errorRegister);
                                   }
                                 }
                               },

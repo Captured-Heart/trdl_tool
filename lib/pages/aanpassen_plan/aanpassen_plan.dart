@@ -11,8 +11,10 @@ class AanpassenPlan extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -38,7 +40,8 @@ class AanpassenPlan extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Het actuele plan aanpassen als gevolg van een incident of extra capaciteitsaanvraag.',
+                              text:
+                                  'Het actuele plan aanpassen als gevolg van een incident of extra capaciteitsaanvraag.',
                             ),
                           ),
                         ],

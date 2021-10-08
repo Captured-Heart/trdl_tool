@@ -59,3 +59,4 @@ export 'package:trdl_tool/pages/aanpassen_plan/vertragingen.dart';
 //Incidenten pages
 export 'package:trdl_tool/pages/incidenten/incidenten.dart';
 export 'package:trdl_tool/pages/incidenten/herroepen_sein.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/infra.dart';
