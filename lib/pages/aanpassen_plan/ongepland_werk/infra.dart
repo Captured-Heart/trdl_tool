@@ -105,6 +105,7 @@ class InfraOngeplandWerk extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           SizedBoxW(),
@@ -115,6 +116,7 @@ class InfraOngeplandWerk extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           SizedBoxW(),

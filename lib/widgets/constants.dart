@@ -36,6 +36,7 @@ class FabHome extends StatelessWidget {
   }
 }
 
+//TitleText Widget
 class TitleText extends StatelessWidget {
   final String title;
   const TitleText({required this.title});
@@ -53,6 +54,7 @@ class TitleText extends StatelessWidget {
   }
 }
 
+//SubTitleText Widget
 class SubTitleText extends StatelessWidget {
   final String subtitle;
   const SubTitleText({required this.subtitle});
@@ -71,6 +73,7 @@ class SubTitleText extends StatelessWidget {
   }
 }
 
+//BodyText Widget
 class BodyText extends StatelessWidget {
   final String text;
   const BodyText({required this.text});
@@ -88,6 +91,7 @@ class BodyText extends StatelessWidget {
   }
 }
 
+//SizedBox Height 8.0 Widget
 class SizedBoxH extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -97,6 +101,7 @@ class SizedBoxH extends StatelessWidget {
   }
 }
 
+//SizedBox Width 8.0 Widget
 class SizedBoxW extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -106,6 +111,7 @@ class SizedBoxW extends StatelessWidget {
   }
 }
 
+//Button for Navigation Widget
 class NavButton extends StatelessWidget {
   final String destination;
   final String buttontext;

@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
+<html><head>
   <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
@@ -30,6 +28,32 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  
+    <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.0/firebase-analytics.js"></script>
+  <script>
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      console.info("Initializing firebase...")
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyB1czFGBPfmKx2FkRNX2jAEyjTJr2yAZa4",
+        authDomain: "trdltool-2021.firebaseapp.com",
+        projectId: "trdltool-2021",
+        storageBucket: "trdltool-2021.appspot.com",
+        messagingSenderId: "35344141665",
+        appId: "1:35344141665:web:cbd0bb53c9935223334920",
+      };
+  
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+  		firebase.analytics();
+      console.info("App is initialized", app)
+    </script>
+  
+  
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
@@ -96,29 +120,6 @@
       // Service workers not supported. Just drop the <script> tag.
       loadMainDartJs();
     }
-  </script>
-  <script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyB1czFGBPfmKx2FkRNX2jAEyjTJr2yAZa4",
-    authDomain: "trdltool-2021.firebaseapp.com",
-    projectId: "trdltool-2021",
-    storageBucket: "trdltool-2021.appspot.com",
-    messagingSenderId: "35344141665",
-    appId: "1:35344141665:web:cbd0bb53c9935223334920",
-    measurementId: "G-ZDEW4THG8J"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
   </script>
 </body>
 </html>
