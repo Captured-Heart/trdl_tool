@@ -141,7 +141,7 @@ class Register extends StatelessWidget {
                                             email: email, password: password);
                                     if (newUser != null) {
                                       Navigator.pushReplacementNamed(
-                                          context, 'login');
+                                          context, 'verifyscreen');
                                     }
                                   } catch (errorMessage) {
                                     final errorRegister = SnackBar(

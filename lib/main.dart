@@ -25,6 +25,7 @@ class MainEntry extends StatelessWidget {
         'welcomescreen': (context) => WelcomeScreen(),
         'login': (context) => Login(),
         'register': (context) => Register(),
+        'verifyscreen': (context) => VerifyScreen(),
         'homescreen': (context) => HomeScreen(),
 
         // HomePage routes

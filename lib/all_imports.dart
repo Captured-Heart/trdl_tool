@@ -23,6 +23,7 @@ export 'package:trdl_tool/home_screen.dart';
 export 'package:trdl_tool/welcome_screen.dart';
 export 'package:trdl_tool/pages/login_user/login_screen.dart';
 export 'package:trdl_tool/pages/login_user/register_screen.dart';
+export 'package:trdl_tool/pages/login_user/verify_screen.dart';
 
 //HomeScreen pages
 export 'package:trdl_tool/pages/home_pages/home_index0.dart';
