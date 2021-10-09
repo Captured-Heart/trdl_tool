@@ -11,12 +11,15 @@ class KopvanTrein extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
+              //PROCEDURE CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -26,41 +29,29 @@ class KopvanTrein extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Kop van de trein/rangeerdeel voorbij het sein'),
+                            child: TitleText(
+                                title:
+                                    'Kop van de trein/rangeerdeel voorbij het sein'),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Procedure',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Procedure',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Je stelt een rijweg in en deelt de machinist mee dat het sein uit de stand stop is gebracht, of je neemt veiligheidsmaatregelen en geeft de machinist opdracht om te gaan rijden.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'Je stelt een rijweg in en deelt de machinist mee dat het sein uit de stand stop is gebracht, of je neemt veiligheidsmaatregelen en geeft de machinist opdracht om te gaan rijden.',
                             ),
                           ),
                         ],
@@ -69,6 +60,7 @@ class KopvanTrein extends StatelessWidget {
                   ),
                 ),
               ),
+              //RISICO CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -78,31 +70,19 @@ class KopvanTrein extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Risico\'s',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Risico\'s',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Treinen komen niet tijdig tot stilstand voor een gevaarpunt.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'Treinen komen niet tijdig tot stilstand voor een gevaarpunt.',
                             ),
                           ),
                         ],
@@ -111,6 +91,7 @@ class KopvanTrein extends StatelessWidget {
                   ),
                 ),
               ),
+              //CONTEXT CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -120,31 +101,20 @@ class KopvanTrein extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Context',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'Treinen komen niet tijdig tot stilstand voor een gevaarpunt.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Wanneer de kop van de trein of rangeerdeel bij vertrek voorbij het sein staat, kan de machinist niet waarnemen of het sein veilig staat voor vertrek en kan het vertrekproces niet gestart worden.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text:
+                                  'Wanneer de kop van de trein of rangeerdeel bij vertrek voorbij het sein staat, kan de machinist niet waarnemen of het sein veilig staat voor vertrek en kan het vertrekproces niet gestart worden.',
                             ),
                           ),
                         ],

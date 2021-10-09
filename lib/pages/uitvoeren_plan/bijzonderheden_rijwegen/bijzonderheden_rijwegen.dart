@@ -11,8 +11,10 @@ class BijzonderhedenRijwegen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -34,6 +36,7 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                   ),
                 ),
               ),
+              //NAVIGATION CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -43,67 +46,34 @@ class BijzonderhedenRijwegen extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Ga snel naar',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'Ga snel naar',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'rijwegenexploitatie');
-                            },
-                            child: Text(
-                              'Sporen buiten exploitatie',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'Sporen buiten exploitatie',
+                            destination: 'rijwegenexploitatie',
                           ),
-                          SizedBox(
-                            height: 8.0,
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Kop van trein voorbij sein',
+                            destination: 'kopvantrein',
                           ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'kopvantrein');
-                            },
-                            child: Text(
-                              'Kop van trein voorbij sein',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Inzetten railvoertuig ICB',
+                            destination: 'inzettenicb',
                           ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'inzettenicb');
-                            },
-                            child: Text(
-                              'Inzetten railvoertuig ICB',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'toelatenwerktreinen');
-                            },
-                            child: Text(
-                              'Toelaten werktreinen',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Toelaten werktreinen',
+                            destination: 'toelatenwerktreinen',
                           ),
                         ],
                       ),
