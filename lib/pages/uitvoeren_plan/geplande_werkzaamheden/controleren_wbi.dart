@@ -150,11 +150,13 @@ class ControlerenWbi extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       Row(
-                        Expanded(
-                          child: BodyText(
-                            text: 'Fouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging.',
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Fouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging.',
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                     ],
                   ),
