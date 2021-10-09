@@ -11,8 +11,10 @@ class Communicatie extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -34,6 +36,7 @@ class Communicatie extends StatelessWidget {
                   ),
                 ),
               ),
+              //NAVIGATION CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -43,31 +46,19 @@ class Communicatie extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Ga snel naar',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'Ga snel naar',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'mondelingecommunicatie');
-                            },
-                            child: Text(
-                              'Mondelinge Communicatie',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'Mondelinge Communicatie',
+                            destination: 'mondelingecommunicatie',
                           ),
                         ],
                       ),

@@ -19,6 +19,7 @@ class ToelatenWerktreinen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              //PROCEDURE CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -58,8 +59,7 @@ class ToelatenWerktreinen extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Hef éénmalig de daarvoor noodzakelijke veiligheidsmaatregelen op;',
+                              text: '- Hef éénmalig de daarvoor noodzakelijke veiligheidsmaatregelen op;',
                             ),
                           ),
                         ],
@@ -69,8 +69,7 @@ class ToelatenWerktreinen extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Laat de werktrein na overleg met de LWB op een veilige manier toe tot de beschikbaar gestelde infracapaciteit;',
+                              text: '- Laat de werktrein na overleg met de LWB op een veilige manier toe tot de beschikbaar gestelde infracapaciteit;',
                             ),
                           ),
                         ],
@@ -80,8 +79,7 @@ class ToelatenWerktreinen extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Breng de veiligheidsmaatregelen weer aan na het passeren van de werktrein.',
+                              text: '- Breng de veiligheidsmaatregelen weer aan na het passeren van de werktrein.',
                             ),
                           ),
                         ],
@@ -111,8 +109,7 @@ class ToelatenWerktreinen extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
+                              text: 'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
                             ),
                           ),
                         ],
@@ -142,8 +139,7 @@ class ToelatenWerktreinen extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Op de werkplek zijn de werkenden door middel van veiligheidsmaatregelen beschermd tegen aanrijdgevaar. Op het moment dat een trein noodzakelijk voor de werkzaamheden toegelaten moet worden, geeft de LWB toestemming als de werkenden adequaat beschermd zijn.',
+                              text: 'Op de werkplek zijn de werkenden door middel van veiligheidsmaatregelen beschermd tegen aanrijdgevaar. Op het moment dat een trein noodzakelijk voor de werkzaamheden toegelaten moet worden, geeft de LWB toestemming als de werkenden adequaat beschermd zijn.',
                             ),
                           ),
                         ],
@@ -153,8 +149,7 @@ class ToelatenWerktreinen extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Voorafgaand aan de werkzaamheden stellen treindienstleider en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
+                              text: 'Voorafgaand aan de werkzaamheden stellen treindienstleider en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
                             ),
                           ),
                         ],

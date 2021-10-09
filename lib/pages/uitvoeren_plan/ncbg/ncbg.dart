@@ -11,8 +11,10 @@ class Ncbg extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -26,72 +28,49 @@ class Ncbg extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'NCBG'),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Sturingsniveau en uitzonderingen',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'NCBG',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Binnen een NCBG kent men in beginsel twee verschillende sturingsniveaus, namelijk:',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Sturingsniveau en uitzonderingen',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              '- Rijwegniveau;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Binnen een NCBG kent men in beginsel twee verschillende sturingsniveaus, namelijk:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Rijwegniveau;',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- TijdRuimte-slotniveau.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- TijdRuimte-slotniveau.',
                             ),
                           ),
                         ],

@@ -11,8 +11,10 @@ class UitvoerenPlan extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -26,23 +28,18 @@ class UitvoerenPlan extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Uitvoeren Plan'),
+                            child: TitleText(
+                              title: 'Uitvoeren Plan',
+                            ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'De treindienstleider voert het actuele plan uit en stelt infra ter beschikking volgens vooraf gemaakte afspraken.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'De treindienstleider voert het actuele plan uit en stelt infra ter beschikking volgens vooraf gemaakte afspraken.',
                             ),
                           ),
                         ],
@@ -51,6 +48,7 @@ class UitvoerenPlan extends StatelessWidget {
                   ),
                 ),
               ),
+              //NAVIGATION CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -60,91 +58,44 @@ class UitvoerenPlan extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Ga snel naar',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'Ga snel naar',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'geplandewerkzaamheden');
-                            },
-                            child: Text(
-                              'Geplande Werkzaamheden',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'Geplande Werkzaamheden',
+                            destination: 'geplandewerkzaamheden',
                           ),
-                          SizedBox(
-                            height: 8.0,
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Bijzonderheden Rijwegen',
+                            destination: 'bijzonderhedenrijwegen',
                           ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'bijzonderhedenrijwegen');
-                            },
-                            child: Text(
-                              'Bijzonderheden Rijwegen',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Bijzonderheden Trein',
+                            destination: 'bijzonderhedentrein',
                           ),
-                          SizedBox(
-                            height: 8.0,
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Communicatie',
+                            destination: 'communicatie',
                           ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'bijzonderhedentrein');
-                            },
-                            child: Text(
-                              'Bijzonderheden Trein',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'NCBG',
+                            destination: 'ncbg',
                           ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'communicatie');
-                            },
-                            child: Text(
-                              'Communicatie',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'ncbg');
-                            },
-                            child: Text(
-                              'NCBG',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'dienstovergave');
-                            },
-                            child: Text(
-                              'Dienstovergave',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Dienstovergave',
+                            destination: 'dienstovergave',
                           ),
                         ],
                       ),

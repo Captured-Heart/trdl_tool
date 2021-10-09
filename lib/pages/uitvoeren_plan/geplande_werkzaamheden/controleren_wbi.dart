@@ -11,12 +11,15 @@ class ControlerenWbi extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
+              //PROCEDURE CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -26,92 +29,61 @@ class ControlerenWbi extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Controleren WBI'),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Procedure',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'Controleren WBI',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Voor aanvang van de werkzaamheden controleer je of:',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Procedure',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              '- niet onbedoeld een rijweg instelbaar is naar de buitendienststelling;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Voor aanvang van de werkzaamheden controleer je of:',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- de veiligheidsmaatregelen van de LWB invloed hebben op je eigen veiligheidsmaatregelen;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- niet onbedoeld een rijweg instelbaar is naar de buitendienststelling;',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- voldaan is aan de toetscriteria WBI/WECO die beschreven zijn in de werkinstructie WBI/WECO.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- de veiligheidsmaatregelen van de LWB invloed hebben op je eigen veiligheidsmaatregelen;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- voldaan is aan de toetscriteria WBI/WECO die beschreven zijn in de werkinstructie WBI/WECO.',
                             ),
                           ),
                         ],
@@ -120,6 +92,7 @@ class ControlerenWbi extends StatelessWidget {
                   ),
                 ),
               ),
+              //RISICO CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -129,31 +102,18 @@ class ControlerenWbi extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Risico\'s',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Risico\'s',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
                             ),
                           ),
                         ],
@@ -162,6 +122,7 @@ class ControlerenWbi extends StatelessWidget {
                   ),
                 ),
               ),
+              //CONTEXT CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -171,31 +132,28 @@ class ControlerenWbi extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Context',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Context',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'In de voorbereiding is de treindienst aangepast aan de werkzaamheden. Fouten in de WBI/WECO kunnen ervoor zorgen dat werkplekbeveiligingsmaatregelen van de treindienstleider en/of de LWB niet of niet juist getroffen kunnen worden. Fouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'In de voorbereiding is de treindienst aangepast aan de werkzaamheden. Fouten in de WBI/WECO kunnen ervoor zorgen dat werkplekbeveiligingsmaatregelen van de treindienstleider en/of de LWB niet of niet juist getroffen kunnen worden.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Fouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging.',
                             ),
                           ),
                         ],

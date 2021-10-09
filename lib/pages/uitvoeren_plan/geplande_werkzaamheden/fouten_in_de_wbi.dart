@@ -11,12 +11,15 @@ class FoutenWBI extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
+              //PROCEDURE CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -26,58 +29,40 @@ class FoutenWBI extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Fouten in de WBI'),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              'Procedure',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'Fouten in de WBI',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              '- Buiten 72 uur voor uitvoering neem je contact op met de afdeling Werkplekbeveiliging van de regio;',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Procedure',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
+                          SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Binnen 72 uur voor uitvoering neem je contact op met de medewerker 24/7 werkplekbeveiliging',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: '- Buiten 72 uur voor uitvoering neem je contact op met de afdeling Werkplekbeveiliging van de regio;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Binnen 72 uur voor uitvoering neem je contact op met de medewerker 24/7 werkplekbeveiliging',
                             ),
                           ),
                         ],
@@ -86,6 +71,7 @@ class FoutenWBI extends StatelessWidget {
                   ),
                 ),
               ),
+              //RISICO CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -95,31 +81,18 @@ class FoutenWBI extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Risico\'s',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Risico\'s',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
                             ),
                           ),
                         ],
@@ -128,6 +101,7 @@ class FoutenWBI extends StatelessWidget {
                   ),
                 ),
               ),
+              //CONTEXT CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -137,48 +111,28 @@ class FoutenWBI extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Context',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
+                            child: SubTitleText(
+                              subtitle: 'Context',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Fouten in de WBI/WECO kunnen ervoor zorgen dat werkplekbeveiligingsmaatregelen van de treindienstleider en/of de LWB niet of niet juist getroffen kunnen worden.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Fouten in de WBI/WECO kunnen ervoor zorgen dat werkplekbeveiligingsmaatregelen van de treindienstleider en/of de LWB niet of niet juist getroffen kunnen worden.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Fouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging. Zij bepalen of er een nieuwe versie van de WBI/WECO wordt uitgebracht of een penwijziging wordt doorgevoerd.',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Fouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging. Zij bepalen of er een nieuwe versie van de WBI/WECO wordt uitgebracht of een penwijziging wordt doorgevoerd.',
                             ),
                           ),
                         ],
