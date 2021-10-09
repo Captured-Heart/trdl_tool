@@ -40,7 +40,7 @@ class Dienstovergave extends StatelessWidget {
                         children: [
                           Expanded(
                             child: SubTitleText(
-                              title: 'Procedure',
+                              subtitle: 'Procedure',
                             ),
                           ),
                         ],
