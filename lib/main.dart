@@ -21,7 +21,7 @@ class MainEntry extends StatelessWidget {
       themeMode: ThemeMode.system,
       home: SplashScreen(),
       routes: {
-        // LoginUser routes
+        // FirstPages routes
         'welcomescreen': (context) => WelcomeScreen(),
         'login': (context) => Login(),
         'register': (context) => Register(),
