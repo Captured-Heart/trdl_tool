@@ -15,7 +15,7 @@ export 'package:flutter_spinkit/flutter_spinkit.dart';
 
 //Modules and services
 export 'package:trdl_tool/item_lists/welcome_items.dart';
-export 'package:trdl_tool/widgets/constants.dart';
+export 'package:trdl_tool/customs/custom_widgets.dart';
 
 //Main pages
 export 'package:trdl_tool/splash_screen.dart';

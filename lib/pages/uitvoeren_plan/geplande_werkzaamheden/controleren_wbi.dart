@@ -146,13 +146,15 @@ class ControlerenWbi extends StatelessWidget {
                               text: 'In de voorbereiding is de treindienst aangepast aan de werkzaamheden. Fouten in de WBI/WECO kunnen ervoor zorgen dat werkplekbeveiligingsmaatregelen van de treindienstleider en/of de LWB niet of niet juist getroffen kunnen worden.',
                             ),
                           ),
-                          SizedBoxH(),
-                          Expanded(
-                            child: BodyText(
-                              text: 'Fouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging.',
-                            ),
-                          ),
                         ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        Expanded(
+                          child: BodyText(
+                            text: 'Fouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging.',
+                          ),
+                        ),
                       ),
                     ],
                   ),
