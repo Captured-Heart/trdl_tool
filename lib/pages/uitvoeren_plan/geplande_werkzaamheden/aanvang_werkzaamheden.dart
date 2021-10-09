@@ -11,13 +11,15 @@ class AanvangWerkzaamheden extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //Procedure Card
+              //PROCEDURE CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -46,6 +48,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                       SizedBoxH(),
                       Row(
                         children: [
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
                               text: '- Neem de (veiligheids)maatregelen die in de WBI/WECO zijn vermeld of met de LWB zijn afgesproken;',
@@ -56,6 +59,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                       SizedBoxH(),
                       Row(
                         children: [
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
                               text: '- Meld de LWB dat je de infracapaciteit benoemd op de WBI/WECO beschikbaar hebt gesteld voor werkzaamheden.',
@@ -67,7 +71,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                   ),
                 ),
               ),
-              //Risico Card
+              //RISICO CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -97,7 +101,7 @@ class AanvangWerkzaamheden extends StatelessWidget {
                   ),
                 ),
               ),
-              //Context Card
+              //CONTEXT CARD
               Card(
                 elevation: 6.0,
                 child: Padding(

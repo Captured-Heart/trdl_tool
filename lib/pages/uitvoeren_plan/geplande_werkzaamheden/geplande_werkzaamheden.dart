@@ -11,8 +11,10 @@ class GeplandeWerkzaamheden extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: AppBarText(title: 'TRDLtool'),
+        actions: [
+          HomeButton(),
+        ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -26,23 +28,18 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Geplande Werkzaamheden'),
+                            child: TitleText(
+                              title: 'Geplande Werkzaamheden',
+                            ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Dit zijn vooraf geplande werkzaamheden die zijn vastgelegd in een Werkplek Beveiligings Instructie (WBI/WECO).',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 16.0,
-                                ),
-                              ),
+                            child: BodyText(
+                              text: 'Dit zijn vooraf geplande werkzaamheden die zijn vastgelegd in een Werkplek Beveiligings Instructie (WBI/WECO).',
                             ),
                           ),
                         ],
@@ -51,6 +48,7 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                   ),
                 ),
               ),
+              //NAVIGATION CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -60,55 +58,29 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: Text(
-                              'Ga snel naar',
-                              style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
-                                  fontSize: 24.0,
-                                ),
-                              ),
+                            child: TitleText(
+                              title: 'Ga snel naar',
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(
-                        height: 8.0,
-                      ),
+                      SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'aanvangwerkzaamheden');
-                            },
-                            child: Text(
-                              'Aanvang Werkzaamheden',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'Aanvang Werkzaamheden',
+                            destination: 'aanvangwerkzaamheden',
                           ),
-                          SizedBox(
-                            height: 8.0,
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Controleren WBI',
+                            destination: 'controlerenwbi',
                           ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'controlerenwbi');
-                            },
-                            child: Text(
-                              'Controleren WBI',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, 'foutenindewbi');
-                            },
-                            child: Text(
-                              'Fouten in de WBI',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Fouten in de WBI',
+                            destination: 'foutenindewbi',
                           ),
                         ],
                       ),
