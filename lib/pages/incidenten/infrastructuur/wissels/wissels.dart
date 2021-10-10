@@ -63,14 +63,9 @@ class Wissels extends StatelessWidget {
                             destination: 'wisseleindstand',
                           ),
                           SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'Opengereden wissel',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'Opengereden wissel',
+                            destination: 'opengeredenwissel',
                           ),
                           SizedBoxH(),
                           ElevatedButton(

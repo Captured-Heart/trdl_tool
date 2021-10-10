@@ -132,9 +132,7 @@ class Infra extends StatelessWidget {
                             buttontext: 'Wissels',
                             destination: 'wissels',
                           ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
+                          SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;

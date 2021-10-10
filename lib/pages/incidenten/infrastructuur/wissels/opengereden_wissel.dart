@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class WisselEindstand extends StatelessWidget {
-  const WisselEindstand({Key? key}) : super(key: key);
+class OpengeredenWissel extends StatelessWidget {
+  const OpengeredenWissel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class WisselEindstand extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Wissel komt niet in de gevraagde eindstand'),
+                            child: TitleText(title: 'Opengereden wissel'),
                           ),
                         ],
                       ),

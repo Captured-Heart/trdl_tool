@@ -67,3 +67,4 @@ export 'package:trdl_tool/pages/incidenten/materieel.dart';
 export 'package:trdl_tool/pages/incidenten/overige_incidenten/overige_incidenten.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/wissels.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/wissel_eindstand.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/opengereden_wissel.dart';

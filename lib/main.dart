@@ -70,6 +70,7 @@ class MainEntry extends StatelessWidget {
         'overigeincidenten': (context) => OverigeIncidenten(),
         'wissels': (context) => Wissels(),
         'wisseleindstand': (context) => WisselEindstand(),
+        'opengeredenwissel': (context) => OpengeredenWissel(),
       },
     );
   }
