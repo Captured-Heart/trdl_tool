@@ -96,7 +96,7 @@ class Register extends StatelessWidget {
                           children: [
                             ElevatedButton(
                               onPressed: () async {
-                                if (!email.endsWith('@prorail.nl')) {
+                                if (!email.endsWith('@hotmail.com')) {
                                   final wrongEmail = SnackBar(
                                     content: Text(
                                       'Email moet eindigen op @prorail.nl',
