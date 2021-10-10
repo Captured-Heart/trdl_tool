@@ -68,6 +68,8 @@ class MainEntry extends StatelessWidget {
         'derdendieren': (context) => DerdenDieren(),
         'materieelincidenten': (context) => MaterieelIncidenten(),
         'overigeincidenten': (context) => OverigeIncidenten(),
+        'wissels': (context) => Wissels(),
+        'wisseleindstand': (context) => WisselEindstand(),
       },
     );
   }

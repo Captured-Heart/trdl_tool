@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class FoutenWBI extends StatelessWidget {
-  const FoutenWBI({Key? key}) : super(key: key);
+class WisselEindstand extends StatelessWidget {
+  const WisselEindstand({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +29,7 @@ class FoutenWBI extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(
-                              title: 'Fouten in de WBI',
-                            ),
+                            child: TitleText(title: 'Wissel komt niet in de gevraagde eindstand'),
                           ),
                         ],
                       ),
@@ -48,10 +46,9 @@ class FoutenWBI extends StatelessWidget {
                       SizedBoxH(),
                       Row(
                         children: [
-                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Buiten 72 uur voor uitvoering neem je contact op met de afdeling Werkplekbeveiliging van de regio;',
+                              text: 'Na de melding van onbevoegden en/of dieren op of langs het spoor met (potentieel) gevaar voor schade aan mens, materieel en/of infra, handel je als volgt:',
                             ),
                           ),
                         ],
@@ -62,8 +59,46 @@ class FoutenWBI extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Binnen 72 uur voor uitvoering neem je contact op met de medewerker 24/7 werkplekbeveiliging',
+                              text: '- Geef een aanwijzing VR en een schouwopdracht af;',
                             ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Staak het afgeven van aanwijzingen na 2 opeenvolgende nihil meldingen;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Indien de machinist meldt dat de onbevoegde of het dier zich nog steeds op of langs het spoor bevindt of er in het komende half uur geen trein rijdt, informeer je de MKS/BO;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Indien de MKS/BO is ingelicht of de melding van de MKS/BO is verkregen, staak je pas het afgeven van aanwijzingen na toestemming van de MKS/BO.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(text: 'Om aangereden dieren te verwijderen, licht je MKS/BO in.'),
                           ),
                         ],
                       ),
@@ -92,7 +127,7 @@ class FoutenWBI extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
+                              text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],
@@ -122,7 +157,7 @@ class FoutenWBI extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Fouten in de WBI/WECO kunnen ervoor zorgen dat werkplekbeveiligingsmaatregelen van de treindienstleider en/of de LWB niet of niet juist getroffen kunnen worden.',
+                              text: 'Het spoor is afgesloten voor onbevoegden en/of dieren. Betreden van het spoor door onbevoegden en/of dieren kan een gevaarlijke situatie opleveren voor betrokkenen en/of de treindienst. Een machinist kan ter plaatse het risico op een gevaarlijke situatie beoordelen.',
                             ),
                           ),
                         ],
@@ -132,7 +167,7 @@ class FoutenWBI extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Fouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging. Zij bepalen of er een nieuwe versie van de WBI/WECO wordt uitgebracht of een penwijziging wordt doorgevoerd.',
+                              text: 'De treindienstleider meldt onbevoegden en/of dieren langs het spoor zodat deze verwijderd kunnen worden en/of de afscheiding van het spoor hersteld kan worden.',
                             ),
                           ),
                         ],
