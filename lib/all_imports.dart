@@ -24,6 +24,7 @@ export 'package:trdl_tool/welcome_screen.dart';
 export 'package:trdl_tool/pages/login_user/login_screen.dart';
 export 'package:trdl_tool/pages/login_user/register_screen.dart';
 export 'package:trdl_tool/pages/login_user/verify_screen.dart';
+export 'package:trdl_tool/pages/login_user/wachtwoord_screen.dart';
 
 //HomeScreen pages
 export 'package:trdl_tool/pages/home_pages/home_index0.dart';
@@ -61,3 +62,9 @@ export 'package:trdl_tool/pages/aanpassen_plan/vertragingen.dart';
 export 'package:trdl_tool/pages/incidenten/incidenten.dart';
 export 'package:trdl_tool/pages/incidenten/herroepen_sein.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/infra.dart';
+export 'package:trdl_tool/pages/incidenten/derdendieren.dart';
+export 'package:trdl_tool/pages/incidenten/materieel.dart';
+export 'package:trdl_tool/pages/incidenten/overige_incidenten/overige_incidenten.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/wissels.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/wissel_eindstand.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/opengereden_wissel.dart';

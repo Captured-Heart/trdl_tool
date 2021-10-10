@@ -1,8 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
 class VerifyScreen extends StatefulWidget {
-  const VerifyScreen({Key? key}) : super(key: key);
-
   @override
   _VerifyScreenState createState() => _VerifyScreenState();
 }
@@ -10,7 +8,7 @@ class VerifyScreen extends StatefulWidget {
 class _VerifyScreenState extends State<VerifyScreen> {
   final _auth = FirebaseAuth.instance;
   User? user = FirebaseAuth.instance.currentUser;
-  late Timer timer;
+  Timer? timer;
 
   @override
   void initState() {
@@ -30,7 +28,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
 
   @override
   void dispose() {
-    timer.cancel();
+    timer!.cancel();
     super.dispose();
   }
 
@@ -50,8 +48,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               child: Row(
                 children: [
                   Expanded(
-                    child:
-                        Image.asset('assets/images/trdlToolLogoSmallPNG.png'),
+                    child: Image.asset('assets/images/trdlToolLogoSmallPNG.png'),
                   ),
                 ],
               ),
@@ -64,9 +61,15 @@ class _VerifyScreenState extends State<VerifyScreen> {
                 left: 24.0,
                 right: 24.0,
               ),
-              child: TitleText(
-                title:
-                    'Een verificatie email is verstuurd naar ${user!.email}, je kunt inloggen nadat je bent geverifieerd',
+              child: Text(
+                'Een verificatie email is verstuurd naar ${user!.email}, je kunt inloggen nadat je bent geverifieerd. Controleer ook je spamfolder.',
+                style: GoogleFonts.questrial(
+                  textStyle: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
             SizedBox(
@@ -101,7 +104,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
     user = _auth.currentUser!;
     await user!.reload();
     if (user!.emailVerified) {
-      timer.cancel();
+      timer!.cancel();
       Navigator.pushReplacementNamed(
         context,
         'login',

@@ -20,15 +20,12 @@ class Login extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Expanded(
-                        child: Image.asset(
-                            'assets/images/trdlToolLogoSmallPNG.png')),
+                    Expanded(child: Image.asset('assets/images/trdlToolLogoSmallPNG.png')),
                   ],
                 ),
               ),
-              SizedBox(
-                height: 16.0,
-              ),
+              SizedBoxH(),
+              SizedBoxH(),
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: 300,
@@ -46,9 +43,7 @@ class Login extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        SizedBoxH(),
                         Row(
                           children: [
                             Expanded(
@@ -62,16 +57,13 @@ class Login extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
-                                  hintText:
-                                      'Email moet eindigen op @prorail.nl',
+                                  hintText: 'Vul een geldig emailadres in',
                                 ),
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        SizedBoxH(),
                         Row(
                           children: [
                             Expanded(
@@ -85,40 +77,33 @@ class Login extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
-                                  hintText:
-                                      'Wachtwoord bevat minimaal 6 tekens',
+                                  hintText: 'Wachtwoord bevat minimaal 6 tekens',
                                 ),
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        SizedBoxH(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             ElevatedButton(
                               onPressed: () async {
-                                final snackBar = SnackBar(
-                                  content: Text(
-                                      'Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?'),
-                                  action: SnackBarAction(
-                                    label: 'OK',
-                                    onPressed: () {},
-                                  ),
-                                );
                                 try {
-                                  final user =
-                                      await _auth.signInWithEmailAndPassword(
-                                          email: email, password: password);
+                                  final user = await _auth.signInWithEmailAndPassword(email: email, password: password);
                                   if (user != null) {
-                                    Navigator.pushReplacementNamed(
-                                        context, 'homescreen');
+                                    Navigator.pushReplacementNamed(context, 'homescreen');
                                   }
                                 } catch (e) {
-                                  ScaffoldMessenger.of(context)
-                                      .showSnackBar(snackBar);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text('Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?'),
+                                      action: SnackBarAction(
+                                        label: 'OK',
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                  );
                                 }
                               },
                               child: Text('LOGIN'),
@@ -130,9 +115,7 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 8.0,
-              ),
+              SizedBoxH(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -153,7 +136,9 @@ class Login extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'wachtwoordscreen');
+                    },
                     child: Text(
                       'Wachtwoord vergeten?',
                       style: GoogleFonts.questrial(

@@ -25,8 +25,9 @@ class MainEntry extends StatelessWidget {
         'welcomescreen': (context) => WelcomeScreen(),
         'login': (context) => Login(),
         'register': (context) => Register(),
-        'verifyscreen': (context) => VerifyScreen(),
         'homescreen': (context) => HomeScreen(),
+        'verifyscreen': (context) => VerifyScreen(),
+        'wachtwoordscreen': (context) => Wachtwoord(),
 
         // HomePage routes
         'homeindex0': (context) => HomeIndex0(),
@@ -64,6 +65,12 @@ class MainEntry extends StatelessWidget {
         'incidenten': (context) => Incidenten(),
         'herroepensein': (context) => HerroepenSein(),
         'infra': (context) => Infra(),
+        'derdendieren': (context) => DerdenDieren(),
+        'materieelincidenten': (context) => MaterieelIncidenten(),
+        'overigeincidenten': (context) => OverigeIncidenten(),
+        'wissels': (context) => Wissels(),
+        'wisseleindstand': (context) => WisselEindstand(),
+        'opengeredenwissel': (context) => OpengeredenWissel(),
       },
     );
   }

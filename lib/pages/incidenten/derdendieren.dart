@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class Incidenten extends StatelessWidget {
-  const Incidenten({Key? key}) : super(key: key);
+class DerdenDieren extends StatelessWidget {
+  const DerdenDieren({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class Incidenten extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Incidenten'),
+                            child: TitleText(title: 'Derden en/of dieren langs de baan'),
                           ),
                         ],
                       ),
@@ -48,7 +48,7 @@ class Incidenten extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Bij een melding van een incident beoordeel je welke van de volgende maatregelen noodzakelijk zijn om een veilige situatie te creëren en/of uitbreiding te voorkomen:',
+                              text: 'Na de melding van onbevoegden en/of dieren op of langs het spoor met (potentieel) gevaar voor schade aan mens, materieel en/of infra, handel je als volgt:',
                             ),
                           ),
                         ],
@@ -59,7 +59,7 @@ class Incidenten extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Alarmoproep GSM-R uitzenden;',
+                              text: '- Geef een aanwijzing VR en een schouwopdracht af;',
                             ),
                           ),
                         ],
@@ -69,7 +69,7 @@ class Incidenten extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Herroepen van seinen;',
+                              text: '- Staak het afgeven van aanwijzingen na 2 opeenvolgende nihil meldingen;',
                             ),
                           ),
                         ],
@@ -79,7 +79,7 @@ class Incidenten extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- ARI uitzetten;',
+                              text: '- Indien de machinist meldt dat de onbevoegde of het dier zich nog steeds op of langs het spoor bevindt of er in het komende half uur geen trein rijdt, informeer je de MKS/BO;',
                             ),
                           ),
                         ],
@@ -89,17 +89,7 @@ class Incidenten extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Buurtreindienstleider informeren;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Veiligheidsmaatregelen nemen.',
+                              text: '- Indien de MKS/BO is ingelicht of de melding van de MKS/BO is verkregen, staak je pas het afgeven van aanwijzingen na toestemming van de MKS/BO.',
                             ),
                           ),
                         ],
@@ -108,79 +98,7 @@ class Incidenten extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: BodyText(
-                              text: 'Alarmeer of informeer de MKS/BO.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Wanneer de AL belt, neemt hij de leiding over van het incident en coördineert de afhandeling met de belanghebbenden ter plaatse. Op verzoek stel je de AL de infracapaciteit ter beschikking.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Nadat de AL of de LWB de werkzaamheden als gevolg van het incident gereed meldt, hervat je het treinverkeer, eventueel met inachtneming van de door de AL of LWB genoemde beperking(en).',
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              //NAVIGATION CARD
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: TitleText(
-                              title: 'Ga snel naar',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          NavButton(
-                            buttontext: 'Herroepen van een sein',
-                            destination: 'herroepensein',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Infrastructuur',
-                            destination: 'infra',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Derden en/of Dieren',
-                            destination: 'derdendieren',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Materieel',
-                            destination: 'materieelincidenten',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Overige Incidenten',
-                            destination: 'overigeincidenten',
+                            child: BodyText(text: 'Om aangereden dieren te verwijderen, licht je MKS/BO in.'),
                           ),
                         ],
                       ),
@@ -209,7 +127,7 @@ class Incidenten extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                              text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],
@@ -239,7 +157,17 @@ class Incidenten extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Bij een melding van een incident is het van belang om betrokkenen op de hoogte te brengen, het incident te isoleren en uitbreiding te voorkomen.',
+                              text: 'Het spoor is afgesloten voor onbevoegden en/of dieren. Betreden van het spoor door onbevoegden en/of dieren kan een gevaarlijke situatie opleveren voor betrokkenen en/of de treindienst. Een machinist kan ter plaatse het risico op een gevaarlijke situatie beoordelen.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'De treindienstleider meldt onbevoegden en/of dieren langs het spoor zodat deze verwijderd kunnen worden en/of de afscheiding van het spoor hersteld kan worden.',
                             ),
                           ),
                         ],

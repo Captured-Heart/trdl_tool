@@ -58,7 +58,7 @@ class Wachtwoord extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
-                                  hintText: 'Email moet eindigen op @prorail.nl',
+                                  hintText: 'Vul een geldig emailadres in',
                                 ),
                               ),
                             ),
@@ -71,7 +71,7 @@ class Wachtwoord extends StatelessWidget {
                             ElevatedButton(
                               onPressed: () {
                                 final errorSnack = SnackBar(
-                                  content: Text('Er is iets mis!\nBen je al geregistreerd met je @prorail.nl emailadres?'),
+                                  content: Text('Er is iets mis!\nBen je al geregistreerd?'),
                                   action: SnackBarAction(
                                     label: 'OK',
                                     onPressed: () {},
@@ -85,7 +85,7 @@ class Wachtwoord extends StatelessWidget {
                                   ),
                                 );
                                 try {
-                                  if (email != null && email.endsWith('@prorail.nl')) {
+                                  if (email != null) {
                                     _auth.sendPasswordResetEmail(email: email);
                                     ScaffoldMessenger.of(context).showSnackBar(passwordSentSnack);
                                     Navigator.of(context).pop;

@@ -20,15 +20,12 @@ class Register extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Expanded(
-                        child: Image.asset(
-                            'assets/images/trdlToolLogoSmallPNG.png')),
+                    Expanded(child: Image.asset('assets/images/trdlToolLogoSmallPNG.png')),
                   ],
                 ),
               ),
-              SizedBox(
-                height: 16.0,
-              ),
+              SizedBoxH(),
+              SizedBoxH(),
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: 300,
@@ -46,9 +43,8 @@ class Register extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        SizedBoxH(),
+                        //TEXTFIELD EMAIL
                         Row(
                           children: [
                             Expanded(
@@ -62,16 +58,14 @@ class Register extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
-                                  hintText:
-                                      'Email moet eindigen op @prorail.nl',
+                                  hintText: 'Vul een geldig emailadres in',
                                 ),
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        SizedBoxH(),
+                        //TEXTFIELD PASSWORD
                         Row(
                           children: [
                             Expanded(
@@ -85,63 +79,63 @@ class Register extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
-                                  hintText:
-                                      'Wachtwoord bevat minimaal 6 tekens',
+                                  hintText: 'Wachtwoord bevat minimaal 6 tekens',
                                 ),
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        SizedBoxH(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             ElevatedButton(
                               onPressed: () async {
-                                if (!email.endsWith('@prorail.nl')) {
-                                  final wrongEmail = SnackBar(
-                                    content: Text(
-                                      'Email moet eindigen op @prorail.nl',
-                                      style: GoogleFonts.questrial(
-                                        textStyle: TextStyle(
-                                          fontWeight: FontWeight.bold,
+                                if (!email.contains('@')) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        'Controleer het emailadres. Klopt het wel?',
+                                        style: GoogleFonts.questrial(
+                                          textStyle: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    action: SnackBarAction(
-                                      label: 'OK',
-                                      onPressed: () {},
+                                      action: SnackBarAction(
+                                        label: 'OK',
+                                        onPressed: () {},
+                                      ),
                                     ),
                                   );
-                                  ScaffoldMessenger.of(context)
-                                      .showSnackBar(wrongEmail);
                                 } else if (password.length < 6) {
-                                  final shortPassword = SnackBar(
-                                    content: Text(
-                                      'Kies een wachtwoord van minimaal 6 tekens',
-                                      style: GoogleFonts.questrial(
-                                        textStyle: TextStyle(
-                                          fontWeight: FontWeight.bold,
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        'Kies een wachtwoord van minimaal 6 tekens',
+                                        style: GoogleFonts.questrial(
+                                          textStyle: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    action: SnackBarAction(
-                                      label: 'OK',
-                                      onPressed: () {},
+                                      action: SnackBarAction(
+                                        label: 'OK',
+                                        onPressed: () {},
+                                      ),
                                     ),
                                   );
-                                  ScaffoldMessenger.of(context)
-                                      .showSnackBar(shortPassword);
-                                } else if (email.endsWith('@prorail.nl')) {
+                                } else if (email.contains('@')) {
                                   try {
-                                    final newUser = await _auth
-                                        .createUserWithEmailAndPassword(
-                                            email: email, password: password);
+                                    final newUser = await _auth.createUserWithEmailAndPassword(
+                                      email: email,
+                                      password: password,
+                                    );
                                     if (newUser != null) {
                                       Navigator.pushReplacementNamed(
-                                          context, 'verifyscreen');
+                                        context,
+                                        'verifyscreen',
+                                      );
                                     }
                                   } catch (errorMessage) {
                                     final errorRegister = SnackBar(
@@ -158,8 +152,7 @@ class Register extends StatelessWidget {
                                         onPressed: () {},
                                       ),
                                     );
-                                    ScaffoldMessenger.of(context)
-                                        .showSnackBar(errorRegister);
+                                    ScaffoldMessenger.of(context).showSnackBar(errorRegister);
                                   }
                                 }
                               },

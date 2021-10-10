@@ -91,8 +91,8 @@ class FoutenWBI extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
+                            child: BodyText(
+                              text: 'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
                             ),
                           ),
                         ],

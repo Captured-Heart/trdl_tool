@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class HerroepenSein extends StatelessWidget {
-  const HerroepenSein({Key? key}) : super(key: key);
+class OpengeredenWissel extends StatelessWidget {
+  const OpengeredenWissel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +29,7 @@ class HerroepenSein extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(
-                              title: 'Herroepen van een sein',
-                            ),
+                            child: TitleText(title: 'Opengereden wissel'),
                           ),
                         ],
                       ),
@@ -50,17 +48,7 @@ class HerroepenSein extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Voor bijsturing mag je een sein herroepen nadat de machinist is ingelicht of wanneer je zeker weet dat er geen machinist op of bij de trein aanwezig is.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Benader de machinist via de bestaande communicatiemogelijkheden. Als je geen contact krijgt, herroep je het sein.',
+                              text: 'Hier komt nieuwe tekst!',
                             ),
                           ),
                         ],
@@ -79,7 +67,9 @@ class HerroepenSein extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: SubTitleText(subtitle: 'Risico\'s'),
+                            child: SubTitleText(
+                              subtitle: 'Risico\'s',
+                            ),
                           ),
                         ],
                       ),
@@ -88,7 +78,7 @@ class HerroepenSein extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Het ten onrechte herroepen van seinen.',
+                              text: 'Logistiek risico.',
                             ),
                           ),
                         ],
@@ -118,7 +108,7 @@ class HerroepenSein extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Het herroepen van een sein kan noodzakelijk zijn om een verstoring van de treindienst te voorkomen of beperken. Bij het herroepen van een sein voor bijsturing is het inlichten van de machinist wenselijk, om hem niet te laten schrikken van een wisselend seinbeeld.',
+                              text: 'Wanneer een wissel niet in de gevraagde eindstand komt, probeert het wissel gedurende 1 minuut alsnog in de eindstand te komen. Lukt dit niet, dan stopt in de meeste gevallen de wisselmotor. De communicatie met het wissel is niet gestoord en het wissel kan dus nog steeds een opdracht aannemen.',
                             ),
                           ),
                         ],

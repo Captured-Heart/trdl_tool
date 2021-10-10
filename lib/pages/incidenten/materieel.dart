@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class HerroepenSein extends StatelessWidget {
-  const HerroepenSein({Key? key}) : super(key: key);
+class MaterieelIncidenten extends StatelessWidget {
+  const MaterieelIncidenten({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,96 +29,122 @@ class HerroepenSein extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
+                            child: TitleText(title: 'Materieel'),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Je kunt op drie manieren een melding krijgen over materieel:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Door de machinist;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Door derden;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Door systemen.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Als de melding niet van de machinist komt, licht je de machinist van de betrokken trein in.',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              //NAVIGATION CARD
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
                             child: TitleText(
-                              title: 'Herroepen van een sein',
+                              title: 'Ga snel naar',
                             ),
                           ),
                         ],
                       ),
                       SizedBoxH(),
-                      Row(
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Procedure',
+                          ElevatedButton(
+                            onPressed: () {
+                              //TODO
+                            },
+                            child: Text(
+                              'Vaste Rem',
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Voor bijsturing mag je een sein herroepen nadat de machinist is ingelicht of wanneer je zeker weet dat er geen machinist op of bij de trein aanwezig is.',
+                          SizedBoxH(),
+                          ElevatedButton(
+                            onPressed: () {
+                              //TODO;
+                            },
+                            child: Text(
+                              'ATB Veiligheidsstoring',
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Benader de machinist via de bestaande communicatiemogelijkheden. Als je geen contact krijgt, herroep je het sein.',
+                          SizedBoxH(),
+                          ElevatedButton(
+                            onPressed: () {
+                              //TODO;
+                            },
+                            child: Text(
+                              'Hotbox & Quo Vadis',
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              //RISICO CARD
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: SubTitleText(subtitle: 'Risico\'s'),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Het ten onrechte herroepen van seinen.',
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              //CONTEXT CARD
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Context',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Het herroepen van een sein kan noodzakelijk zijn om een verstoring van de treindienst te voorkomen of beperken. Bij het herroepen van een sein voor bijsturing is het inlichten van de machinist wenselijk, om hem niet te laten schrikken van een wisselend seinbeeld.',
+                          SizedBoxH(),
+                          ElevatedButton(
+                            onPressed: () {
+                              //TODO;
+                            },
+                            child: Text(
+                              'Gevaarlijke Stoffen',
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                         ],
