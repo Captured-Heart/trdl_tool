@@ -1,7 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
 class VerifyScreen extends StatefulWidget {
-  const VerifyScreen({Key? key}) : super(key: key);
+  final String email;
+  final String password;
+  const VerifyScreen({Key? key, required this.email, required this.password}) : super(key: key);
 
   @override
   _VerifyScreenState createState() => _VerifyScreenState();
@@ -100,6 +102,10 @@ class _VerifyScreenState extends State<VerifyScreen> {
     await user!.reload();
     if (user!.emailVerified) {
       timer!.cancel();
+      await _auth.createUserWithEmailAndPassword(
+        email: widget.email,
+        password: widget.password,
+      );
       Navigator.pushReplacementNamed(
         context,
         'login',

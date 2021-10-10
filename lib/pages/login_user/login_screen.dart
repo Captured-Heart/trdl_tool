@@ -24,9 +24,8 @@ class Login extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 16.0,
-              ),
+              SizedBoxH(),
+              SizedBoxH(),
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: 300,
@@ -44,9 +43,7 @@ class Login extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        SizedBoxH(),
                         Row(
                           children: [
                             Expanded(
@@ -66,9 +63,7 @@ class Login extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        SizedBoxH(),
                         Row(
                           children: [
                             Expanded(
@@ -88,28 +83,27 @@ class Login extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        SizedBoxH(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             ElevatedButton(
                               onPressed: () async {
-                                final snackBar = SnackBar(
-                                  content: Text('Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?'),
-                                  action: SnackBarAction(
-                                    label: 'OK',
-                                    onPressed: () {},
-                                  ),
-                                );
                                 try {
                                   final user = await _auth.signInWithEmailAndPassword(email: email, password: password);
                                   if (user != null) {
                                     Navigator.pushReplacementNamed(context, 'homescreen');
                                   }
                                 } catch (e) {
-                                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text('Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?'),
+                                      action: SnackBarAction(
+                                        label: 'OK',
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                  );
                                 }
                               },
                               child: Text('LOGIN'),
@@ -121,9 +115,7 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 8.0,
-              ),
+              SizedBoxH(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

@@ -24,9 +24,8 @@ class Register extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 16.0,
-              ),
+              SizedBoxH(),
+              SizedBoxH(),
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: 300,
@@ -44,9 +43,8 @@ class Register extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        SizedBoxH(),
+                        //TEXTFIELD EMAIL
                         Row(
                           children: [
                             Expanded(
@@ -60,15 +58,14 @@ class Register extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
-                                  hintText: 'Email moet eindigen op @prorail.nl',
+                                  hintText: 'Vul een geldig emailadres in',
                                 ),
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        SizedBoxH(),
+                        //TEXTFIELD PASSWORD
                         Row(
                           children: [
                             Expanded(
@@ -88,55 +85,55 @@ class Register extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8.0,
-                        ),
+                        SizedBoxH(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             ElevatedButton(
                               onPressed: () async {
-                                if (!email.endsWith('@hotmail.com')) {
-                                  final wrongEmail = SnackBar(
-                                    content: Text(
-                                      'Email moet eindigen op @prorail.nl',
-                                      style: GoogleFonts.questrial(
-                                        textStyle: TextStyle(
-                                          fontWeight: FontWeight.bold,
+                                if (!email.contains('@')) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        'Controleer het emailadres. Klopt het wel?',
+                                        style: GoogleFonts.questrial(
+                                          textStyle: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    action: SnackBarAction(
-                                      label: 'OK',
-                                      onPressed: () {},
+                                      action: SnackBarAction(
+                                        label: 'OK',
+                                        onPressed: () {},
+                                      ),
                                     ),
                                   );
-                                  ScaffoldMessenger.of(context).showSnackBar(wrongEmail);
                                 } else if (password.length < 6) {
-                                  final shortPassword = SnackBar(
-                                    content: Text(
-                                      'Kies een wachtwoord van minimaal 6 tekens',
-                                      style: GoogleFonts.questrial(
-                                        textStyle: TextStyle(
-                                          fontWeight: FontWeight.bold,
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        'Kies een wachtwoord van minimaal 6 tekens',
+                                        style: GoogleFonts.questrial(
+                                          textStyle: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                       ),
-                                    ),
-                                    action: SnackBarAction(
-                                      label: 'OK',
-                                      onPressed: () {},
+                                      action: SnackBarAction(
+                                        label: 'OK',
+                                        onPressed: () {},
+                                      ),
                                     ),
                                   );
-                                  ScaffoldMessenger.of(context).showSnackBar(shortPassword);
-                                } else if (email.endsWith('@hotmail.com')) {
+                                } else if (email.contains('@')) {
                                   try {
-                                    final newUser = await _auth.createUserWithEmailAndPassword(
-                                      email: email,
-                                      password: password,
-                                    );
-                                    if (newUser != null) {
-                                      Navigator.pushReplacementNamed(context, 'verifyscreen');
-                                    }
+                                    Navigator.pushReplacement(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (BuildContext context) => VerifyScreen(
+                                                  email: email,
+                                                  password: password,
+                                                )));
                                   } catch (errorMessage) {
                                     final errorRegister = SnackBar(
                                       content: Text(
