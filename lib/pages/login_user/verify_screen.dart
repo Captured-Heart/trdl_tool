@@ -9,8 +9,8 @@ class VerifyScreen extends StatefulWidget {
 
 class _VerifyScreenState extends State<VerifyScreen> {
   final _auth = FirebaseAuth.instance;
-  User user;
-  Timer timer;
+  User? user = FirebaseAuth.instance.currentUser;
+  Timer? timer;
 
   @override
   void initState() {
@@ -19,8 +19,8 @@ class _VerifyScreenState extends State<VerifyScreen> {
   }
 
   _asyncMethod() async {
-    if (user != null) {
-      await user.sendEmailVerification();
+    if (user != null && !user!.emailVerified) {
+      await user!.sendEmailVerification();
     }
 
     timer = Timer.periodic(Duration(seconds: 5), (timer) {
@@ -30,7 +30,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
 
   @override
   void dispose() {
-    timer.cancel();
+    timer!.cancel();
     super.dispose();
   }
 
@@ -64,7 +64,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
                 right: 24.0,
               ),
               child: TitleText(
-                title: 'Een verificatie email is verstuurd naar ${user.email}, je kunt inloggen nadat je bent geverifieerd',
+                title: 'Een verificatie email is verstuurd naar ${user!.email}, je kunt inloggen nadat je bent geverifieerd',
               ),
             ),
             SizedBox(
@@ -97,9 +97,9 @@ class _VerifyScreenState extends State<VerifyScreen> {
 
   Future<void> checkEmailVerified() async {
     user = _auth.currentUser!;
-    await user.reload();
-    if (user.emailVerified) {
-      timer.cancel();
+    await user!.reload();
+    if (user!.emailVerified) {
+      timer!.cancel();
       Navigator.pushReplacementNamed(
         context,
         'login',
