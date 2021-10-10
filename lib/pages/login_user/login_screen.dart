@@ -20,9 +20,7 @@ class Login extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Expanded(
-                        child: Image.asset(
-                            'assets/images/trdlToolLogoSmallPNG.png')),
+                    Expanded(child: Image.asset('assets/images/trdlToolLogoSmallPNG.png')),
                   ],
                 ),
               ),
@@ -62,8 +60,7 @@ class Login extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
-                                  hintText:
-                                      'Email moet eindigen op @prorail.nl',
+                                  hintText: 'Email moet eindigen op @prorail.nl',
                                 ),
                               ),
                             ),
@@ -85,8 +82,7 @@ class Login extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
-                                  hintText:
-                                      'Wachtwoord bevat minimaal 6 tekens',
+                                  hintText: 'Wachtwoord bevat minimaal 6 tekens',
                                 ),
                               ),
                             ),
@@ -101,24 +97,19 @@ class Login extends StatelessWidget {
                             ElevatedButton(
                               onPressed: () async {
                                 final snackBar = SnackBar(
-                                  content: Text(
-                                      'Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?'),
+                                  content: Text('Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?'),
                                   action: SnackBarAction(
                                     label: 'OK',
                                     onPressed: () {},
                                   ),
                                 );
                                 try {
-                                  final user =
-                                      await _auth.signInWithEmailAndPassword(
-                                          email: email, password: password);
+                                  final user = await _auth.signInWithEmailAndPassword(email: email, password: password);
                                   if (user != null) {
-                                    Navigator.pushReplacementNamed(
-                                        context, 'homescreen');
+                                    Navigator.pushReplacementNamed(context, 'homescreen');
                                   }
                                 } catch (e) {
-                                  ScaffoldMessenger.of(context)
-                                      .showSnackBar(snackBar);
+                                  ScaffoldMessenger.of(context).showSnackBar(snackBar);
                                 }
                               },
                               child: Text('LOGIN'),
