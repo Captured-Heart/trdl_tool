@@ -137,7 +137,7 @@ class Login extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, 'wachtwoord');
+                      Navigator.pushNamed(context, 'wachtwoordscreen');
                     },
                     child: Text(
                       'Wachtwoord vergeten?',
