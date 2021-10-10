@@ -62,3 +62,6 @@ export 'package:trdl_tool/pages/aanpassen_plan/vertragingen.dart';
 export 'package:trdl_tool/pages/incidenten/incidenten.dart';
 export 'package:trdl_tool/pages/incidenten/herroepen_sein.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/infra.dart';
+export 'package:trdl_tool/pages/incidenten/derdendieren.dart';
+export 'package:trdl_tool/pages/incidenten/materieel.dart';
+export 'package:trdl_tool/pages/incidenten/overige_incidenten/overige_incidenten.dart';

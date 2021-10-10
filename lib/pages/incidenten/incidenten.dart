@@ -48,8 +48,7 @@ class Incidenten extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Bij een melding van een incident beoordeel je welke van de volgende maatregelen noodzakelijk zijn om een veilige situatie te creëren en/of uitbreiding te voorkomen:',
+                              text: 'Bij een melding van een incident beoordeel je welke van de volgende maatregelen noodzakelijk zijn om een veilige situatie te creëren en/of uitbreiding te voorkomen:',
                             ),
                           ),
                         ],
@@ -120,8 +119,7 @@ class Incidenten extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Wanneer de AL belt, neemt hij de leiding over van het incident en coördineert de afhandeling met de belanghebbenden ter plaatse. Op verzoek stel je de AL de infracapaciteit ter beschikking.',
+                              text: 'Wanneer de AL belt, neemt hij de leiding over van het incident en coördineert de afhandeling met de belanghebbenden ter plaatse. Op verzoek stel je de AL de infracapaciteit ter beschikking.',
                             ),
                           ),
                         ],
@@ -131,8 +129,7 @@ class Incidenten extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Nadat de AL of de LWB de werkzaamheden als gevolg van het incident gereed meldt, hervat je het treinverkeer, eventueel met inachtneming van de door de AL of LWB genoemde beperking(en).',
+                              text: 'Nadat de AL of de LWB de werkzaamheden als gevolg van het incident gereed meldt, hervat je het treinverkeer, eventueel met inachtneming van de door de AL of LWB genoemde beperking(en).',
                             ),
                           ),
                         ],
@@ -171,40 +168,19 @@ class Incidenten extends StatelessWidget {
                             destination: 'infra',
                           ),
                           SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'Derden en/of dieren',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'Derden en/of Dieren',
+                            destination: 'derdendieren',
                           ),
                           SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'Materieel',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'Materieel',
+                            destination: 'materieelincidenten',
                           ),
                           SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO
-                            },
-                            child: Text(
-                              'Overige incidenten',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'Overige Incidenten',
+                            destination: 'overigeincidenten',
                           ),
                         ],
                       ),
@@ -233,8 +209,7 @@ class Incidenten extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                              text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],
@@ -264,8 +239,7 @@ class Incidenten extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Bij een melding van een incident is het van belang om betrokkenen op de hoogte te brengen, het incident te isoleren en uitbreiding te voorkomen.',
+                              text: 'Bij een melding van een incident is het van belang om betrokkenen op de hoogte te brengen, het incident te isoleren en uitbreiding te voorkomen.',
                             ),
                           ),
                         ],
