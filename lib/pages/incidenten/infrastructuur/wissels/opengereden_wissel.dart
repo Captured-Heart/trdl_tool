@@ -48,7 +48,7 @@ class OpengeredenWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Probeer het wissel meerdere keren om te leggen. Wanneer het wissel maar in één stand in de controle komt, leg je het wissel in die stand vast.',
+                              text: 'Hier komt nieuwe tekst!',
                             ),
                           ),
                         ],
