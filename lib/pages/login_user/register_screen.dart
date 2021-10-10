@@ -128,9 +128,12 @@ class Register extends StatelessWidget {
                                     ),
                                   );
                                   ScaffoldMessenger.of(context).showSnackBar(shortPassword);
-                                } else if (email.endsWith('@prorail.nl')) {
+                                } else if (email.endsWith('@hotmail.com')) {
                                   try {
-                                    final newUser = await _auth.createUserWithEmailAndPassword(email: email, password: password);
+                                    final newUser = await _auth.createUserWithEmailAndPassword(
+                                      email: email,
+                                      password: password,
+                                    );
                                     if (newUser != null) {
                                       Navigator.pushReplacementNamed(context, 'verifyscreen');
                                     }
