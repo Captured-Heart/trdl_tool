@@ -1,10 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
 class VerifyScreen extends StatefulWidget {
-  final String email;
-  final String password;
-  const VerifyScreen({Key? key, required this.email, required this.password}) : super(key: key);
-
   @override
   _VerifyScreenState createState() => _VerifyScreenState();
 }
@@ -65,8 +61,11 @@ class _VerifyScreenState extends State<VerifyScreen> {
                 left: 24.0,
                 right: 24.0,
               ),
-              child: TitleText(
-                title: 'Een verificatie email is verstuurd naar ${user!.email}, je kunt inloggen nadat je bent geverifieerd',
+              child: Align(
+                alignment: Alignment.center,
+                child: TitleText(
+                  title: 'Een verificatie email is verstuurd naar ${user!.email}, je kunt inloggen nadat je bent geverifieerd',
+                ),
               ),
             ),
             SizedBox(
@@ -102,10 +101,6 @@ class _VerifyScreenState extends State<VerifyScreen> {
     await user!.reload();
     if (user!.emailVerified) {
       timer!.cancel();
-      await _auth.createUserWithEmailAndPassword(
-        email: widget.email,
-        password: widget.password,
-      );
       Navigator.pushReplacementNamed(
         context,
         'login',

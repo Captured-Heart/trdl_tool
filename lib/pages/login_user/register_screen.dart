@@ -127,13 +127,16 @@ class Register extends StatelessWidget {
                                   );
                                 } else if (email.contains('@')) {
                                   try {
-                                    Navigator.pushReplacement(
+                                    final newUser = await _auth.createUserWithEmailAndPassword(
+                                      email: email,
+                                      password: password,
+                                    );
+                                    if (newUser != null) {
+                                      Navigator.pushReplacementNamed(
                                         context,
-                                        MaterialPageRoute(
-                                            builder: (BuildContext context) => VerifyScreen(
-                                                  email: email,
-                                                  password: password,
-                                                )));
+                                        'verifyscreen',
+                                      );
+                                    }
                                   } catch (errorMessage) {
                                     final errorRegister = SnackBar(
                                       content: Text(

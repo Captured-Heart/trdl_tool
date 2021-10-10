@@ -26,6 +26,8 @@ class MainEntry extends StatelessWidget {
         'login': (context) => Login(),
         'register': (context) => Register(),
         'homescreen': (context) => HomeScreen(),
+        'verifyscreen': (context) => VerifyScreen(),
+        'wachtwoordscreen': (context) => Wachtwoord(),
 
         // HomePage routes
         'homeindex0': (context) => HomeIndex0(),

@@ -57,7 +57,7 @@ class Login extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
-                                  hintText: 'Email moet eindigen op @prorail.nl',
+                                  hintText: 'Vul een geldig emailadres in',
                                 ),
                               ),
                             ),
@@ -136,7 +136,9 @@ class Login extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, 'wachtwoord');
+                    },
                     child: Text(
                       'Wachtwoord vergeten?',
                       style: GoogleFonts.questrial(
