@@ -61,11 +61,15 @@ class _VerifyScreenState extends State<VerifyScreen> {
                 left: 24.0,
                 right: 24.0,
               ),
-              child: Align(
-                alignment: Alignment.center,
-                child: TitleText(
-                  title: 'Een verificatie email is verstuurd naar ${user!.email}, je kunt inloggen nadat je bent geverifieerd',
+              child: Text(
+                'Een verificatie email is verstuurd naar ${user!.email}, je kunt inloggen nadat je bent geverifieerd. Controleer ook je spamfolder.',
+                style: GoogleFonts.questrial(
+                  textStyle: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
+                textAlign: TextAlign.center,
               ),
             ),
             SizedBox(
