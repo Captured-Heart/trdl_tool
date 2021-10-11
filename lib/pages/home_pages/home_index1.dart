@@ -27,7 +27,6 @@ class HomeIndex1 extends StatelessWidget {
           ),
         ],
       ),
-      floatingActionButton: FabHome(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
