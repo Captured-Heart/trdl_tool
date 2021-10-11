@@ -19,7 +19,9 @@ class Wachtwoord extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Expanded(child: Image.asset('assets/images/trdlToolLogoSmallPNG.png')),
+                    Expanded(
+                        child: Image.asset(
+                            'assets/images/trdlToolLogoSmallPNG.png')),
                   ],
                 ),
               ),
@@ -70,28 +72,44 @@ class Wachtwoord extends StatelessWidget {
                           children: [
                             ElevatedButton(
                               onPressed: () {
-                                final errorSnack = SnackBar(
-                                  content: Text('Er is iets mis!\nBen je al geregistreerd?'),
-                                  action: SnackBarAction(
-                                    label: 'OK',
-                                    onPressed: () {},
-                                  ),
-                                );
-                                final passwordSentSnack = SnackBar(
-                                  content: Text('Een resetlink om het wachtwoord te wijzigen is verzonden naar $email'),
-                                  action: SnackBarAction(
-                                    label: 'OK',
-                                    onPressed: () {},
-                                  ),
-                                );
                                 try {
                                   if (email != null) {
                                     _auth.sendPasswordResetEmail(email: email);
-                                    ScaffoldMessenger.of(context).showSnackBar(passwordSentSnack);
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          'Een resetlink om het wachtwoord te wijzigen is verzonden naar $email',
+                                          style: GoogleFonts.questrial(
+                                            textStyle: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                          ),
+                                        ),
+                                        action: SnackBarAction(
+                                          label: 'OK',
+                                          onPressed: () {},
+                                        ),
+                                      ),
+                                    );
                                     Navigator.of(context).pop;
                                   }
                                 } catch (e) {
-                                  ScaffoldMessenger.of(context).showSnackBar(errorSnack);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        'Er is iets mis!\nBen je al geregistreerd?',
+                                        style: GoogleFonts.questrial(
+                                          textStyle: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        ),
+                                      ),
+                                      action: SnackBarAction(
+                                        label: 'OK',
+                                        onPressed: () {},
+                                      ),
+                                    ),
+                                  );
                                 }
                               },
                               child: Text('RESET'),

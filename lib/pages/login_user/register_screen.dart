@@ -20,11 +20,12 @@ class Register extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Expanded(child: Image.asset('assets/images/trdlToolLogoSmallPNG.png')),
+                    Expanded(
+                        child: Image.asset(
+                            'assets/images/trdlToolLogoSmallPNG.png')),
                   ],
                 ),
               ),
-              SizedBoxH(),
               SizedBoxH(),
               Container(
                 width: MediaQuery.of(context).size.width,
@@ -44,7 +45,6 @@ class Register extends StatelessWidget {
                           ],
                         ),
                         SizedBoxH(),
-                        //TEXTFIELD EMAIL
                         Row(
                           children: [
                             Expanded(
@@ -65,7 +65,6 @@ class Register extends StatelessWidget {
                           ],
                         ),
                         SizedBoxH(),
-                        //TEXTFIELD PASSWORD
                         Row(
                           children: [
                             Expanded(
@@ -79,7 +78,8 @@ class Register extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
-                                  hintText: 'Wachtwoord bevat minimaal 6 tekens',
+                                  hintText:
+                                      'Wachtwoord bevat minimaal 6 tekens',
                                 ),
                               ),
                             ),
@@ -95,7 +95,7 @@ class Register extends StatelessWidget {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
-                                        'Controleer het emailadres. Klopt het wel?',
+                                        'Controleer het emailadres, is het correct ingevuld?',
                                         style: GoogleFonts.questrial(
                                           textStyle: TextStyle(
                                             fontWeight: FontWeight.bold,
@@ -127,32 +127,30 @@ class Register extends StatelessWidget {
                                   );
                                 } else if (email.contains('@')) {
                                   try {
-                                    final newUser = await _auth.createUserWithEmailAndPassword(
-                                      email: email,
-                                      password: password,
-                                    );
+                                    final newUser = await _auth
+                                        .createUserWithEmailAndPassword(
+                                            email: email, password: password);
                                     if (newUser != null) {
                                       Navigator.pushReplacementNamed(
-                                        context,
-                                        'verifyscreen',
-                                      );
+                                          context, 'verifyscreen');
                                     }
                                   } catch (errorMessage) {
-                                    final errorRegister = SnackBar(
-                                      content: Text(
-                                        'Er is iets misgegaan: $errorMessage',
-                                        style: GoogleFonts.questrial(
-                                          textStyle: TextStyle(
-                                            fontWeight: FontWeight.bold,
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          'Er is iets misgegaan: $errorMessage',
+                                          style: GoogleFonts.questrial(
+                                            textStyle: TextStyle(
+                                              fontWeight: FontWeight.bold,
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      action: SnackBarAction(
-                                        label: 'OK',
-                                        onPressed: () {},
+                                        action: SnackBarAction(
+                                          label: 'OK',
+                                          onPressed: () {},
+                                        ),
                                       ),
                                     );
-                                    ScaffoldMessenger.of(context).showSnackBar(errorRegister);
                                   }
                                 }
                               },
@@ -165,9 +163,7 @@ class Register extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 8.0,
-              ),
+              SizedBoxH(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
