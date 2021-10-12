@@ -9,9 +9,11 @@ class ProQuiz extends StatefulWidget {
 
 class _ProQuizState extends State<ProQuiz> {
   List<Icon> scoreKeeper = [
-    scoreKeeper.add(Icon(
-            Icons.arrow_forward,
-          ));
+    scoreKeeper.add(
+      Icon(
+        Icons.arrow_forward,
+      ),
+    ),
   ];
 
   void checkAnswer(bool userPickedAnswer) {
