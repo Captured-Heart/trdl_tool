@@ -81,7 +81,6 @@ class _ProQuizState extends State<ProQuiz> {
               child: Text(
                 'True',
                 style: TextStyle(
-                  color: Colors.white,
                   fontSize: 20.0,
                 ),
               ),
