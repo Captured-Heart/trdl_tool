@@ -20,9 +20,7 @@ class Login extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Expanded(
-                        child: Image.asset(
-                            'assets/images/trdlToolLogoSmallPNG.png')),
+                    Expanded(child: Image.asset('assets/images/trdlToolLogoSmallPNG.png')),
                   ],
                 ),
               ),
@@ -78,8 +76,7 @@ class Login extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
-                                  hintText:
-                                      'Wachtwoord bevat minimaal 6 tekens',
+                                  hintText: 'Wachtwoord bevat minimaal 6 tekens',
                                 ),
                               ),
                             ),
@@ -92,19 +89,14 @@ class Login extends StatelessWidget {
                             ElevatedButton(
                               onPressed: () async {
                                 try {
-                                  final user =
-                                      await _auth.signInWithEmailAndPassword(
-                                          email: email, password: password);
-                                  if (user != null &&
-                                      _auth.currentUser!.emailVerified) {
-                                    Navigator.pushReplacementNamed(
-                                        context, 'homescreen');
+                                  final user = await _auth.signInWithEmailAndPassword(email: email, password: password);
+                                  if (user != null && _auth.currentUser!.emailVerified) {
+                                    Navigator.pushReplacementNamed(context, 'homescreen');
                                   }
                                 } catch (e) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
-                                      content: Text(
-                                          'Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?'),
+                                      content: Text('Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?'),
                                       action: SnackBarAction(
                                         label: 'OK',
                                         onPressed: () {},
@@ -128,7 +120,10 @@ class Login extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, 'register');
+                      Navigator.pushNamed(
+                        context,
+                        'register',
+                      );
                     },
                     child: Text(
                       'Nog geen account?',
@@ -143,7 +138,12 @@ class Login extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(
+                        context,
+                        'wachtwoordscreen',
+                      );
+                    },
                     child: Text(
                       'Wachtwoord vergeten?',
                       style: GoogleFonts.questrial(
