@@ -78,7 +78,10 @@ class _ProQuizState extends State<ProQuiz> {
             Expanded(
               child: Padding(
                 padding: EdgeInsets.all(15.0),
-                child: ElevatedButton(
+                child: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+                  ),
                   child: Icon(Icons.done),
                   onPressed: () {
                     //The user picked true.
@@ -93,8 +96,8 @@ class _ProQuizState extends State<ProQuiz> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     primary: Colors.red,
-                    shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(30.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
                   child: Icon(Icons.close),
