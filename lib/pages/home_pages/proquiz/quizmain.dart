@@ -93,6 +93,9 @@ class _ProQuizState extends State<ProQuiz> {
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     primary: Colors.red,
+                    shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(30.0),
+                    ),
                   ),
                   child: Icon(Icons.close),
                   onPressed: () {
