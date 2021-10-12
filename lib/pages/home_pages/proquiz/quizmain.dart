@@ -18,7 +18,7 @@ class _QuizzlerState extends State<Quizzler> {
                 flex: 5,
                 child: Center(
                   child: Text(
-                    questionBank[questionNumber].questionText,
+                    QuizBrain.questionBank[questionNumber].questionText,
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 25.0),
                   ),
@@ -39,7 +39,7 @@ class _QuizzlerState extends State<Quizzler> {
                       ),
                       onPressed: () {
                         setState(() {
-                          checkAnswer(true);
+                          QuizBrain.checkAnswer(true);
                         });
                       },
                       child: Text(
@@ -62,7 +62,7 @@ class _QuizzlerState extends State<Quizzler> {
                       ),
                       onPressed: () {
                         setState(() {
-                          checkAnswer(false);
+                          QuizBrain.checkAnswer(false);
                         });
                       },
                       child: Text(
