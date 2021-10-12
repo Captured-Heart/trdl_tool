@@ -73,41 +73,45 @@ class _ProQuizState extends State<ProQuiz> {
             ),
           ),
         ),
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.all(15.0),
-            child: FlatButton(
-              color: Colors.green,
-              child: Text(
-                'True',
-                style: TextStyle(
-                  fontSize: 20.0,
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.all(15.0),
+                child: FlatButton(
+                  color: Colors.green,
+                  child: Text(
+                    'True',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  onPressed: () {
+                    //The user picked true.
+                    checkAnswer(true);
+                  },
                 ),
               ),
-              onPressed: () {
-                //The user picked true.
-                checkAnswer(true);
-              },
             ),
-          ),
-        ),
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.all(15.0),
-            child: FlatButton(
-              color: Colors.red,
-              child: Text(
-                'False',
-                style: TextStyle(
-                  fontSize: 20.0,
+            Expanded(
+              child: Padding(
+                padding: EdgeInsets.all(15.0),
+                child: FlatButton(
+                  color: Colors.red,
+                  child: Text(
+                    'False',
+                    style: TextStyle(
+                      fontSize: 20.0,
+                    ),
+                  ),
+                  onPressed: () {
+                    //The user picked false.
+                    checkAnswer(false);
+                  },
                 ),
               ),
-              onPressed: () {
-                //The user picked false.
-                checkAnswer(false);
-              },
             ),
-          ),
+          ],
         ),
         Row(
           children: scoreKeeper,
