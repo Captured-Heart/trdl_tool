@@ -77,7 +77,7 @@ class _ProQuizState extends State<ProQuiz> {
           children: [
             Expanded(
               child: Padding(
-                padding: EdgeInsets.all(15.0),
+                padding: EdgeInsets.all(40.0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
@@ -94,7 +94,7 @@ class _ProQuizState extends State<ProQuiz> {
             ),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.all(15.0),
+                padding: EdgeInsets.all(40.0),
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     primary: Colors.red,
