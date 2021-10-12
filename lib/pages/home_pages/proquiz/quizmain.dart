@@ -91,7 +91,9 @@ class _ProQuizState extends State<ProQuiz> {
               child: Padding(
                 padding: EdgeInsets.all(15.0),
                 child: ElevatedButton(
-                  color: Colors.red,
+                  style: ElevatedButtonStyle(
+                    color: Colors.red,
+                  ),
                   child: Icon(Icons.close),
                   onPressed: () {
                     //The user picked false.
