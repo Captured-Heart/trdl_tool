@@ -1,8 +1,8 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class Quizzler extends StatefulWidget {
+class ProQuiz extends StatefulWidget {
   @override
-  _QuizzlerState createState() => _QuizzlerState();
+  _ProQuizState createState() => _ProQuizState();
 }
 
 class Question {
@@ -12,7 +12,7 @@ class Question {
   Question(this.questionText, this.questionAnswer);
 }
 
-class _QuizzlerState extends State<Quizzler> {
+class _ProQuizState extends State<ProQuiz> {
   List<Widget> scoreKeeper = [
     Icon(
       Icons.arrow_forward,
@@ -95,7 +95,7 @@ class _QuizzlerState extends State<Quizzler> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Quizzler'),
+        title: Text('ProQuiz'),
       ),
       body: SafeArea(
         child: Padding(
