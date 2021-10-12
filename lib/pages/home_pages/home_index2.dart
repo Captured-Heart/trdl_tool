@@ -28,40 +28,7 @@ class HomeIndex2 extends StatelessWidget {
         ],
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: TitleText(title: 'ProQuiz'),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'In een latere update zal hier de ProQuiz verschijnen. Beantwoord zoveel mogelijk vragen goed in 1 minuut en test je kennis tegen anderen.',
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
+        child: ProQuiz(),
       ),
     );
   }
