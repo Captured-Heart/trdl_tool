@@ -88,6 +88,7 @@ class _ProQuizState extends State<ProQuiz> {
               ),
             ),
             Expanded(
+              backgroundcolor: Colors.red,
               child: Padding(
                 padding: EdgeInsets.all(15.0),
                 child: ElevatedButton(
