@@ -71,4 +71,3 @@ export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/opengereden_wi
 
 //ProQuiz pages
 export 'package:trdl_tool/pages/home_pages/proquiz/quizmain.dart';
-export 'package:trdl_tool/pages/home_pages/proquiz/quizbrain.dart';

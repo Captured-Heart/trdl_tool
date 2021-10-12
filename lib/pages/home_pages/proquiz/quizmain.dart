@@ -1,128 +1,170 @@
 import 'package:trdl_tool/all_imports.dart';
 
-QuizBrain quizBrain = QuizBrain();
-
 class ProQuiz extends StatefulWidget {
   @override
   _ProQuizState createState() => _ProQuizState();
 }
 
+class Question {
+  late String questionText;
+  late bool questionAnswer;
+
+  Question(this.questionText, this.questionAnswer);
+}
+
 class _ProQuizState extends State<ProQuiz> {
-  List<Icon> scoreKeeper = [];
+  List<Widget> scoreKeeper = [
+    Icon(
+      Icons.arrow_forward,
+    ),
+  ];
+
+  List<Question> questionBank = [
+    Question('Prince Harry is taller than Prince William', false),
+    Question('The star sign Aquarius is represented by a tiger', true),
+    Question('Meryl Streep has won two Academy Awards', false),
+    Question('Marrakesh is the capital of Morocco', false),
+    Question('Idina Menzel sings \'let it go\' 20 times in \'Let It Go\' from Frozen', false),
+    Question('Waterloo has the greatest number of tube platforms in London', true),
+    Question('M&M stands for Mars and Moordale', false),
+    Question('Gin is typically included in a Long Island Iced Tea', true),
+    Question('The unicorn is the national animal of Scotland', true),
+    Question('There are two parts of the body that can\t heal themselves', false),
+    Question('Howard Donald is the oldest member of Take That', true),
+    Question('The Great Wall of China is longer than the distance between London and Beijing', true),
+    Question('There are 219 episodes of Friends', false),
+    Question('\'A\' is the most common letter used in the English language', false),
+    Question('A lion\'s roar can be heard up to eight kilometres away', true),
+  ];
 
   void checkAnswer(bool userPickedAnswer) {
-    bool correctAnswer = quizBrain.getCorrectAnswer();
-
+    bool correctAnswer = questionBank[questionNumber].questionAnswer;
     setState(() {
-      if (quizBrain.isFinished() == true) {
-        //TODO Step 4 Part A - show an alert using rFlutter_alert,
-
-        //This is the code for the basic alert from the docs for rFlutter Alert:
-        //Alert(context: context, title: "RFLUTTER", desc: "Flutter is awesome.").show();
-
-        //Modified for our purposes:
-        // Alert(
-        //   context: context,
-        //   title: 'Finished!',
-        //   desc: 'You\'ve reached the end of the quiz.',
-        // ).show();
-
-        //TODO Step 4 Part C - reset the questionNumber,
-        quizBrain.reset();
-
-        //TODO Step 4 Part D - empty out the scoreKeeper.
-        scoreKeeper = [];
-      }
-
-      //TODO: Step 6 - If we've not reached the end, ELSE do the answer checking steps below 👇
-      else {
+      if (isFinished() == true) {
+        quizReset();
+        scoreKeeper = [
+          Icon(
+            Icons.arrow_forward_outlined,
+            color: Colors.white,
+          ),
+        ];
+      } else {
         if (userPickedAnswer == correctAnswer) {
-          scoreKeeper.add(Icon(
-            Icons.check,
-            color: Colors.green,
-          ));
+          scoreKeeper.add(
+            Icon(
+              Icons.check,
+              color: Colors.green,
+            ),
+          );
         } else {
-          scoreKeeper.add(Icon(
-            Icons.close,
-            color: Colors.red,
-          ));
+          scoreKeeper.add(
+            Icon(
+              Icons.close,
+              color: Colors.red,
+            ),
+          );
         }
-        quizBrain.nextQuestion();
+        nextQuestion();
       }
     });
   }
 
+  int questionNumber = 0;
+
+  bool isFinished() {
+    if (questionNumber >= questionBank.length - 1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  void quizReset() {
+    questionNumber = 0;
+  }
+
+  void nextQuestion() {
+    if (questionNumber < questionBank.length - 1) {
+      questionNumber++;
+    } else {
+      isFinished();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
-        Expanded(
-          flex: 5,
-          child: Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Center(
-              child: Text(
-                quizBrain.getQuestionText(),
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 25.0,
-                  color: Colors.white,
+    return Scaffold(
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          child: Column(
+            children: [
+              Expanded(
+                flex: 5,
+                child: Center(
+                  child: Text(
+                    questionBank[questionNumber].questionText,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 25.0),
+                  ),
                 ),
               ),
-            ),
-          ),
-        ),
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.all(15.0),
-            child: FlatButton(
-              textColor: Colors.white,
-              color: Colors.green,
-              child: Text(
-                'True',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20.0,
+              SizedBox(
+                height: 10.0,
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.green,
+                        elevation: 6.0,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          checkAnswer(true);
+                        });
+                      },
+                      child: Text(
+                        'True',
+                        style: TextStyle(fontSize: 24.0),
+                      ),
+                    ),
+                  ),
                 ),
               ),
-              onPressed: () {
-                //The user picked true.
-                checkAnswer(true);
-              },
-            ),
-          ),
-        ),
-        Expanded(
-          child: Padding(
-            padding: EdgeInsets.all(15.0),
-            child: FlatButton(
-              color: Colors.red,
-              child: Text(
-                'False',
-                style: TextStyle(
-                  fontSize: 20.0,
-                  color: Colors.white,
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    width: double.infinity,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.red,
+                        elevation: 6.0,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          checkAnswer(false);
+                        });
+                      },
+                      child: Text(
+                        'False',
+                        style: TextStyle(fontSize: 24.0),
+                      ),
+                    ),
+                  ),
                 ),
               ),
-              onPressed: () {
-                //The user picked false.
-                checkAnswer(false);
-              },
-            ),
+              Row(
+                children: scoreKeeper,
+              ),
+            ],
           ),
         ),
-        Row(
-          children: scoreKeeper,
-        )
-      ],
+      ),
     );
   }
 }
-
-/*
-question1: 'You can lead a cow down stairs but not up stairs.', false,
-question2: 'Approximately one quarter of human bones are in the feet.', true,
-question3: 'A slug\'s blood is green.', true,
-*/
