@@ -45,16 +45,18 @@ class HomeIndex2 extends StatelessWidget {
                         ],
                       ),
                       SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'In een latere update zal hier de ProQuiz verschijnen. Beantwoord zoveel mogelijk vragen goed in 1 minuut en test je kennis tegen anderen.',
-                            ),
-                          ),
-                        ],
-                      ),
+
+                      ProQuiz(),
+                      // Row(
+                      //   children: [
+                      //     Expanded(
+                      //       child: BodyText(
+                      //         text:
+                      //             'In een latere update zal hier de ProQuiz verschijnen. Beantwoord zoveel mogelijk vragen goed in 1 minuut en test je kennis tegen anderen.',
+                      //       ),
+                      //     ),
+                      //   ],
+                      // ),
                     ],
                   ),
                 ),
