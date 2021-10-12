@@ -100,7 +100,6 @@ class _ProQuizState extends State<ProQuiz> {
                 'False',
                 style: TextStyle(
                   fontSize: 20.0,
-                  color: Colors.white,
                 ),
               ),
               onPressed: () {
