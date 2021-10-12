@@ -8,7 +8,11 @@ class ProQuiz extends StatefulWidget {
 }
 
 class _ProQuizState extends State<ProQuiz> {
-  List<Icon> scoreKeeper = [];
+  List<Icon> scoreKeeper = [
+    scoreKeeper.add(Icon(
+            Icons.arrow_forward,
+          ));
+  ];
 
   void checkAnswer(bool userPickedAnswer) {
     bool correctAnswer = quizBrain.getCorrectAnswer();
@@ -86,8 +90,8 @@ class _ProQuizState extends State<ProQuiz> {
                   ),
                   child: Icon(Icons.check),
                   onPressed: () {
-                    //The user picked false.
-                    checkAnswer(false);
+                    //The user picked true.
+                    checkAnswer(true);
                   },
                 ),
               ),
