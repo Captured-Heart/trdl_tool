@@ -80,11 +80,10 @@ class _ProQuizState extends State<ProQuiz> {
                 padding: EdgeInsets.all(15.0),
                 child: ElevatedButton(
                   child: Icon(Icons.done),
-                  ),
                   onPressed: () {
                     //The user picked true.
                     checkAnswer(true);
-                  },
+                  },),
                 ),
               ),
             ),
