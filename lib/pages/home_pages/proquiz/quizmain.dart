@@ -83,7 +83,7 @@ class _ProQuizState extends State<ProQuiz> {
                   onPressed: () {
                     //The user picked true.
                     checkAnswer(true);
-                  },),
+                  },
                 ),
               ),
             ),
