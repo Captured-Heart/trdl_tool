@@ -82,6 +82,7 @@ class _ProQuizState extends State<ProQuiz> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30.0),
                   ),
+                ),
                   child: Icon(Icons.done),
                   onPressed: () {
                     //The user picked true.
