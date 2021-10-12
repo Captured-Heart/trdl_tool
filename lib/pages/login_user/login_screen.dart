@@ -141,7 +141,7 @@ class Login extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushNamed(
                         context,
-                        'wachtwoordvergeten',
+                        'wachtwoordscreen',
                       );
                     },
                     child: Text(
