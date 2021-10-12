@@ -78,7 +78,7 @@ class _ProQuizState extends State<ProQuiz> {
             Expanded(
               child: Padding(
                 padding: EdgeInsets.all(15.0),
-                child: FlatButton(
+                child: ElevatedButton(
                   color: Colors.green,
                   child: Text(
                     'True',
@@ -96,7 +96,7 @@ class _ProQuizState extends State<ProQuiz> {
             Expanded(
               child: Padding(
                 padding: EdgeInsets.all(15.0),
-                child: FlatButton(
+                child: ElevatedButton(
                   color: Colors.red,
                   child: Text(
                     'False',
