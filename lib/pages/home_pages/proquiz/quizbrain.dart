@@ -4,60 +4,97 @@ class Question {
   late String questionText;
   late bool questionAnswer;
 
-  Question(String q, bool a) {
-    questionText = q;
-    questionAnswer = a;
-  }
+  Question(this.questionText, this.questionAnswer);
 }
 
 class QuizBrain {
-  int _questionNumber = 0;
-
-  List<Question> _questionBank = [
-    Question('Some cats are actually allergic to humans', true),
-    Question('You can lead a cow down stairs but not up stairs.', false),
-    Question('Approximately one quarter of human bones are in the feet.', true),
-    Question('A slug\'s blood is green.', true),
-    Question('Buzz Aldrin\'s mother\'s maiden name was \"Moon\".', true),
-    Question('It is illegal to pee in the Ocean in Portugal.', true),
-    Question('No piece of square dry paper can be folded in half more than 7 times.', false),
-    Question('In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.', true),
-    Question('The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.', false),
-    Question('The total surface area of two human lungs is approximately 70 square metres.', true),
-    Question('Google was originally called \"Backrub\".', true),
-    Question('Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.', true),
-    Question('In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.', true),
+  List<Widget> scoreKeeper = [
+    Icon(
+      Icons.arrow_forward,
+    ),
   ];
 
-  void nextQuestion() {
-    if (_questionNumber < _questionBank.length - 1) {
-      _questionNumber++;
-    }
-  }
+  int _questionNumber = 0;
 
-  String getQuestionText() {
-    return _questionBank[_questionNumber].questionText;
-  }
+  List<Question> questionBank = [
+    Question('Prince Harry is taller than Prince William', false),
+    Question('The star sign Aquarius is represented by a tiger', true),
+    Question('Meryl Streep has won two Academy Awards', false),
+    Question('Marrakesh is the capital of Morocco', false),
+    Question('Idina Menzel sings \'let it go\' 20 times in \'Let It Go\' from Frozen', false),
+    Question('Waterloo has the greatest number of tube platforms in London', true),
+    Question('M&M stands for Mars and Moordale', false),
+    Question('Gin is typically included in a Long Island Iced Tea', true),
+    Question('The unicorn is the national animal of Scotland', true),
+    Question('There are two parts of the body that can\t heal themselves', false),
+    Question('Howard Donald is the oldest member of Take That', true),
+    Question('The Great Wall of China is longer than the distance between London and Beijing', true),
+    Question('There are 219 episodes of Friends', false),
+    Question('\'A\' is the most common letter used in the English language', false),
+    Question('A lion\'s roar can be heard up to eight kilometres away', true),
+  ];
 
-  bool getCorrectAnswer() {
-    return _questionBank[_questionNumber].questionAnswer;
+  void checkAnswer(bool userPickedAnswer) {
+    bool correctAnswer = questionBank[questionNumber].questionAnswer;
+    setState(() {
+      if (isFinished() == true) {
+        Alert(
+          context: context,
+          type: AlertType.success,
+          title: "GOOD JOB!",
+          desc: "You\'ve reached the end of the quiz!",
+          buttons: [
+            DialogButton(
+              child: Text('OK'),
+              onPressed: () => Navigator.of(context, rootNavigator: true).pop(),
+            ),
+          ],
+        ).show();
+        quizReset();
+        scoreKeeper = [
+          Icon(
+            Icons.arrow_forward_outlined,
+            color: Colors.white,
+          ),
+        ];
+      } else {
+        if (userPickedAnswer == correctAnswer) {
+          scoreKeeper.add(
+            Icon(
+              Icons.check,
+              color: Colors.green,
+            ),
+          );
+        } else {
+          scoreKeeper.add(
+            Icon(
+              Icons.close,
+              color: Colors.red,
+            ),
+          );
+        }
+        nextQuestion();
+      }
+    });
   }
-
-  //TODO: Step 3 Part A - Create a method called isFinished() here that checks to see if we have reached the last question. It should return (have an output) true if we've reached the last question and it should return false if we're not there yet.
 
   bool isFinished() {
-    if (_questionNumber >= _questionBank.length - 1) {
-      //TODO: Step 3 Part B - Use a print statement to check that isFinished is returning true when you are indeed at the end of the quiz and when a restart should happen.
-
-      print('Now returning true');
+    if (questionNumber >= questionBank.length - 1) {
       return true;
     } else {
       return false;
     }
   }
 
-  //TODO: Step 4 part B - Create a reset() method here that sets the questionNumber back to 0.
-  void reset() {
-    _questionNumber = 0;
+  void quizReset() {
+    questionNumber = 0;
+  }
+
+  void nextQuestion() {
+    if (questionNumber < questionBank.length - 1) {
+      questionNumber++;
+    } else {
+      isFinished();
+    }
   }
 }
