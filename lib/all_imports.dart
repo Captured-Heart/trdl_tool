@@ -70,6 +70,15 @@ export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/wissel_eindsta
 export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/opengereden_wissel.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/gestoord_wissel.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/beschadigd_wissel.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/overwegen/overwegen.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/beveiliging/beveiliging.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/beveiliging/tegen_rijrichting.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/beveiliging/veiligheidsstoring_sein.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/beveiliging/reset_assenteller.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/bovenleiding/bovenleiding.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/bovenleiding/procedure_ruclu.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/bovenleiding/schakelen_bovenleiding.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/bovenleiding/schouwen_bovenleiding.dart';
 
 //ProQuiz pages
 export 'package:trdl_tool/pages/home_pages/proquiz/quizmain.dart';

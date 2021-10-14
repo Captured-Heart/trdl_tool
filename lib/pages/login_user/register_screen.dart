@@ -2,8 +2,8 @@ import 'package:trdl_tool/all_imports.dart';
 
 class Register extends StatelessWidget {
   final _auth = FirebaseAuth.instance;
-  late String email;
-  late String password;
+  late final String email;
+  late final String password;
 
   @override
   Widget build(BuildContext context) {

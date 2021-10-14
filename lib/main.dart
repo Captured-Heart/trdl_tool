@@ -73,6 +73,15 @@ class MainEntry extends StatelessWidget {
         'opengeredenwissel': (context) => OpengeredenWissel(),
         'gestoordwissel': (context) => GestoordWissel(),
         'beschadigdwissel': (context) => BeschadigdWissel(),
+        'overwegen': (context) => Overwegen(),
+        'beveiliging': (context) => Beveiliging(),
+        'tegenrijrichting': (context) => TegenRijrichting(),
+        'veiligheidsstoringsein': (context) => VeiligheidsstoringSein(),
+        'resetassenteller': (context) => ResetAssenteller(),
+        'bovenleiding': (context) => Bovenleiding(),
+        'procedureruclu': (context) => ProcedureRuClu(),
+        'schakelenbovenleiding': (context) => SchakelenBovenleiding(),
+        'schouwenbovenleiding': (context) => SchouwenBovenleiding(),
 
         // ProQuiz routes
         'quizmain': (context) => ProQuiz(),
