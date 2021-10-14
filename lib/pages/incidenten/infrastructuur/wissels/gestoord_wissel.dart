@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class OpengeredenWissel extends StatelessWidget {
-  const OpengeredenWissel({Key? key}) : super(key: key);
+class GestoordWissel extends StatelessWidget {
+  const GestoordWissel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class OpengeredenWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: TitleText(
-                              title: 'Opengereden wissel',
+                              title: 'Gestoord wissel',
                             ),
                           ),
                         ],
@@ -50,7 +50,7 @@ class OpengeredenWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Stel vast of het wissel eendelig, meerdelig of EBI-switch is.',
+                              text: 'Verhinder het wissel voor bediening en stel de laatst gestuurde stand vast. Stel vast of het wissel eendelig of meerdelig is.',
                             ),
                           ),
                         ],
@@ -61,7 +61,7 @@ class OpengeredenWissel extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Eendelig: laat het wissel alleen met de punt mee vrijmaken wanneer er geen uiterlijke beschadigingen zijn. Je mag het wissel weer laten berijden na de constatering dat de tongen in de juiste stand liggen en aansluiten. Dit laat je doen met maximaal 10 km/h, tenzij anders wordt aangegeven door de storingsdienst;',
+                              text: '- Eendelig: laat het wissel met de punt mee berijden, met een controle opdracht en een aanwijzing STS, in de laatst gestuurde stand. Doe dit door middel van de procedure SSCV*. In alle overige situaties laat je het wissel niet berijden, tenzij de plaatselijke regelgeving anders aangeeft;',
                             ),
                           ),
                         ],
@@ -71,17 +71,53 @@ class OpengeredenWissel extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Meerdelig: laat het wissel alleen met de punt mee vrijmaken met maximaal 10 km/h na toestemming van de storingsdienst;',
+                              text: '- Meerdelig: laat het wissel niet berijden tot na toestemming van de storingsdienst.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: '* SSCV staat voor:',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
-                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- EBI-switch: laat het wissel alleen met de punt mee vrijmaken met maximaal 10 km/h en behandel het als een beschadigd wissel.',
+                              text: 'S = Stoppen voor het wissel;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'S = Stand van het wissel controleren;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'C = Controleren of de wisseltongen aansluiten en er geen uiterlijke beschadigingen zijn;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'V = voorzichtig berijden met max 10 km/h.',
                             ),
                           ),
                         ],
@@ -141,7 +177,7 @@ class OpengeredenWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Een trein kan een wissel met de punt mee in de verkeerde stand berijden. De wisseltongen worden dan open gereden en het wissel is daardoor niet meer veilig berijdbaar. Van een open gereden wissel moet de afstelling gecontroleerd worden.',
+                              text: 'Bij een gestoord wissel kan de treindienstleider geen bedienopdracht meer geven aan het wissel. Dit kan komen doordat de bedienopdracht niet aangekomen is bij het wissel, het wissel niet volledig is omgelopen, of de eindstand van het wissel niet terug gemeld wordt aan de bediening.',
                             ),
                           ),
                         ],

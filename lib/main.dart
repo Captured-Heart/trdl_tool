@@ -71,6 +71,7 @@ class MainEntry extends StatelessWidget {
         'wissels': (context) => Wissels(),
         'wisseleindstand': (context) => WisselEindstand(),
         'opengeredenwissel': (context) => OpengeredenWissel(),
+        'gestoordwissel': (context) => GestoordWissel(),
 
         // ProQuiz routes
         'quizmain': (context) => ProQuiz(),
