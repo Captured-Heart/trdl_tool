@@ -1,6 +1,6 @@
 # TRDL tool
 
-TRDLtool: App for train dispatchers in the Netherlands. Background information, work procedures a quiz and chat. That about sums it up!
+TRDLtool: App for train dispatchers in the Netherlands. Background information, work procedures, a quiz and chat. That about sums it up!
 
 ## Getting Started
 
