@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class GestoordWissel extends StatelessWidget {
-  const GestoordWissel({Key? key}) : super(key: key);
+class BeschadigdWissel extends StatelessWidget {
+  const BeschadigdWissel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class GestoordWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: TitleText(
-                              title: 'Gestoord wissel',
+                              title: 'Beschadigd wissel',
                             ),
                           ),
                         ],
@@ -50,28 +50,7 @@ class GestoordWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Verhinder het wissel voor bediening en stel de laatst gestuurde stand vast. Stel vast of het wissel eendelig of meerdelig is.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Eendelig: laat het wissel met de punt mee berijden, met een controle opdracht en een aanwijzing STS, in de laatst gestuurde stand. Doe dit door middel van de procedure SSCV*. In alle overige situaties laat je het wissel niet berijden, tenzij de plaatselijke regelgeving anders aangeeft;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Meerdelig: laat het wissel niet berijden tot na toestemming van de storingsdienst.',
+                              text: 'Bij een beschadigd wissel staak je het treinverkeer over het betrokken wissel.',
                             ),
                           ),
                         ],
@@ -81,43 +60,27 @@ class GestoordWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: '* SSCV staat voor:',
+                              text: 'Een wissel moet als beschadigd worden beschouwd als:',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'S = Stoppen voor het wissel;',
+                              text: '- het bij een ontsporing betrokken is geweest, of',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'S = Stand van het wissel controleren;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'C = Controleren of de wisseltongen aansluiten en er geen uiterlijke beschadigingen zijn;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'V = voorzichtig berijden met max 10 km/h.',
+                              text: '- als het een breuk of andere uiterlijke afwijking vertoont.',
                             ),
                           ),
                         ],
@@ -147,7 +110,7 @@ class GestoordWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                              text: 'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],
@@ -177,7 +140,17 @@ class GestoordWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Bij een gestoord wissel kan de treindienstleider geen bedienopdracht meer geven aan het wissel. Dit kan komen doordat de bedienopdracht niet aangekomen is bij het wissel, het wissel niet volledig is omgelopen, of de eindstand van het wissel niet terug gemeld wordt aan de bediening.',
+                              text: 'Bij een beschadigd wissel is de veilige berijdbaarheid van het wissel niet meer gegarandeerd. Dat is niet altijd zichtbaar in Procesleiding.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'De storingsmonteur kan de veilige berijdbaarheid ter plaatse vaststellen. De storingsmonteur bepaalt of en hoe je het betrokken wissel weer mag laten berijden.',
                             ),
                           ),
                         ],
