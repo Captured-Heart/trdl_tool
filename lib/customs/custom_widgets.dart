@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-//AppbarText Widget TRDLtool
+//APPBAR TEXT
 class AppBarText extends StatelessWidget {
   final String title;
   const AppBarText({required this.title});
@@ -33,25 +33,7 @@ class HomeButton extends StatelessWidget {
   }
 }
 
-//FloatingActionButton Widget Home
-class FabHome extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return FloatingActionButton(
-      child: Icon(Icons.home),
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => HomeScreen(),
-          ),
-        );
-      },
-    );
-  }
-}
-
-//TitleText Widget
+//TITLETEXT
 class TitleText extends StatelessWidget {
   final String title;
   const TitleText({required this.title});
@@ -69,7 +51,7 @@ class TitleText extends StatelessWidget {
   }
 }
 
-//SubTitleText Widget
+//SUBTITLETEXT
 class SubTitleText extends StatelessWidget {
   final String subtitle;
   const SubTitleText({required this.subtitle});
@@ -88,7 +70,7 @@ class SubTitleText extends StatelessWidget {
   }
 }
 
-//BodyText Widget
+//BODYTEXT
 class BodyText extends StatelessWidget {
   final String text;
   const BodyText({required this.text});
@@ -106,7 +88,7 @@ class BodyText extends StatelessWidget {
   }
 }
 
-//SizedBox Height 8.0 Widget
+//SIZEDBOXHEIGHT 8
 class SizedBoxH extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -116,7 +98,7 @@ class SizedBoxH extends StatelessWidget {
   }
 }
 
-//SizedBox Width 8.0 Widget
+//SIZEDBOXWITH 8
 class SizedBoxW extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -126,7 +108,7 @@ class SizedBoxW extends StatelessWidget {
   }
 }
 
-//Button for Navigation Widget
+//BUTTON NAVIGATION
 class NavButton extends StatelessWidget {
   final String destination;
   final String buttontext;
@@ -138,6 +120,13 @@ class NavButton extends StatelessWidget {
       onPressed: () {
         Navigator.pushNamed(context, destination);
       },
+      style: ElevatedButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(
+            24.0,
+          ),
+        ),
+      ),
       child: Text(
         buttontext,
         style: GoogleFonts.questrial(
