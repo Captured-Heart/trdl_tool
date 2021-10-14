@@ -123,7 +123,7 @@ class NavButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(
-            24.0,
+            12.0,
           ),
         ),
       ),
