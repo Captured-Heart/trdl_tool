@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class OpengeredenWissel extends StatelessWidget {
-  const OpengeredenWissel({Key? key}) : super(key: key);
+class BeschadigdWissel extends StatelessWidget {
+  const BeschadigdWissel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class OpengeredenWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: TitleText(
-                              title: 'Opengereden wissel',
+                              title: 'Beschadigd wissel',
                             ),
                           ),
                         ],
@@ -50,7 +50,7 @@ class OpengeredenWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Stel vast of het wissel eendelig, meerdelig of EBI-switch is.',
+                              text: 'Bij een beschadigd wissel staak je het treinverkeer over het betrokken wissel.',
                             ),
                           ),
                         ],
@@ -58,10 +58,9 @@ class OpengeredenWissel extends StatelessWidget {
                       SizedBoxH(),
                       Row(
                         children: [
-                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Eendelig: laat het wissel alleen met de punt mee vrijmaken wanneer er geen uiterlijke beschadigingen zijn. Je mag het wissel weer laten berijden na de constatering dat de tongen in de juiste stand liggen en aansluiten. Dit laat je doen met maximaal 10 km/h, tenzij anders wordt aangegeven door de storingsdienst;',
+                              text: 'Een wissel moet als beschadigd worden beschouwd als:',
                             ),
                           ),
                         ],
@@ -71,7 +70,7 @@ class OpengeredenWissel extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Meerdelig: laat het wissel alleen met de punt mee vrijmaken met maximaal 10 km/h na toestemming van de storingsdienst;',
+                              text: '- het bij een ontsporing betrokken is geweest, of',
                             ),
                           ),
                         ],
@@ -81,7 +80,7 @@ class OpengeredenWissel extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- EBI-switch: laat het wissel alleen met de punt mee vrijmaken met maximaal 10 km/h en behandel het als een beschadigd wissel.',
+                              text: '- als het een breuk of andere uiterlijke afwijking vertoont.',
                             ),
                           ),
                         ],
@@ -111,7 +110,7 @@ class OpengeredenWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                              text: 'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],
@@ -141,7 +140,17 @@ class OpengeredenWissel extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Een trein kan een wissel met de punt mee in de verkeerde stand berijden. De wisseltongen worden dan open gereden en het wissel is daardoor niet meer veilig berijdbaar. Van een open gereden wissel moet de afstelling gecontroleerd worden.',
+                              text: 'Bij een beschadigd wissel is de veilige berijdbaarheid van het wissel niet meer gegarandeerd. Dat is niet altijd zichtbaar in Procesleiding.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'De storingsmonteur kan de veilige berijdbaarheid ter plaatse vaststellen. De storingsmonteur bepaalt of en hoe je het betrokken wissel weer mag laten berijden.',
                             ),
                           ),
                         ],

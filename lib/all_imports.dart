@@ -68,6 +68,8 @@ export 'package:trdl_tool/pages/incidenten/overige_incidenten/overige_incidenten
 export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/wissels.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/wissel_eindstand.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/opengereden_wissel.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/gestoord_wissel.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/beschadigd_wissel.dart';
 
 //ProQuiz pages
 export 'package:trdl_tool/pages/home_pages/proquiz/quizmain.dart';
