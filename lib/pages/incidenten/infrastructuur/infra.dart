@@ -152,29 +152,15 @@ class Infra extends StatelessWidget {
                             buttontext: 'Spoor',
                             destination: 'spoor',
                           ),
-                          SizedBox(
-                            height: 8.0,
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Kunstwerken',
+                            destination: 'kunstwerken',
                           ),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO
-                            },
-                            child: Text(
-                              'Kunstwerken',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
-                          ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO
-                            },
-                            child: Text(
-                              'Sectie',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Sectiestoring',
+                            destination: 'sectiestoring',
                           ),
                         ],
                       ),

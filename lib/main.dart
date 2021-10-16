@@ -86,6 +86,10 @@ class MainEntry extends StatelessWidget {
         'gladspoor': (context) => GladSpoor(),
         'onregelmatighedenbaan': (context) => OnregelmatighedenBaan(),
         'roestvorming': (context) => Roestvorming(),
+        'kunstwerken': (context) => Kunstwerken(),
+        'aanrijdingviaduct': (context) => AanrijdingViaduct(),
+        'storingbrug': (context) => StoringBrug(),
+        'sectiestoring': (context) => SectieStoring(),
 
         // ProQuiz routes
         'quizmain': (context) => ProQuiz(),
