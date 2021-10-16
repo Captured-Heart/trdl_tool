@@ -48,8 +48,7 @@ class Infra extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Bij een melding gestoorde of defecte infra, handel je als volgt:',
+                              text: 'Bij een melding gestoorde of defecte infra, handel je als volgt:',
                             ),
                           ),
                         ],
@@ -60,8 +59,7 @@ class Infra extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Bepaal de urgentie en neem samen met de DVL een verdelingsbesluit over de directe gevolgen van de storing;',
+                              text: '- Bepaal de urgentie en neem samen met de DVL een verdelingsbesluit over de directe gevolgen van de storing;',
                             ),
                           ),
                         ],
@@ -71,8 +69,7 @@ class Infra extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Meld de storing aan bij de MKS/BO onder vermelding van urgent/urgent met tijdsafspraak/niet urgent. Indien aanwezig, vermeld je het nummer van de storings WBI. Geef aan of en wanneer urgent herstel met tijdsafspraak moet of kan plaatsvinden;',
+                              text: '- Meld de storing aan bij de MKS/BO onder vermelding van urgent/urgent met tijdsafspraak/niet urgent. Indien aanwezig, vermeld je het nummer van de storings WBI. Geef aan of en wanneer urgent herstel met tijdsafspraak moet of kan plaatsvinden;',
                             ),
                           ),
                         ],
@@ -82,8 +79,7 @@ class Infra extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Wanneer de geschatte aankomsttijd bekend is, bepaal je samen met de DVL de exacte aanvang en einde van de beschikbaar te stellen infracapaciteit met een maximale periode van 25 minuten;',
+                              text: '- Wanneer de geschatte aankomsttijd bekend is, bepaal je samen met de DVL de exacte aanvang en einde van de beschikbaar te stellen infracapaciteit met een maximale periode van 25 minuten;',
                             ),
                           ),
                         ],
@@ -93,8 +89,7 @@ class Infra extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Na deze analyse maak je in overleg met de LWB een heroverweging over urgent/urgent met tijdsafspraak/niet urgent herstel en informeer je de DVL.',
+                              text: '- Na deze analyse maak je in overleg met de LWB een heroverweging over urgent/urgent met tijdsafspraak/niet urgent herstel en informeer je de DVL.',
                             ),
                           ),
                         ],
@@ -104,8 +99,7 @@ class Infra extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Het streven is de infracapaciteit beschikbaar te stellen binnen 10 minuten na prognose aankomst LWB. Als er geen urgent herstel plaats hoeft te vinden en je de gestoorde infra wel laat berijden, dan kan een analyse op veilige berijdbaarheid nodig zijn. Dit hoor je van de MKS/BO.',
+                              text: 'Het streven is de infracapaciteit beschikbaar te stellen binnen 10 minuten na prognose aankomst LWB. Als er geen urgent herstel plaats hoeft te vinden en je de gestoorde infra wel laat berijden, dan kan een analyse op veilige berijdbaarheid nodig zijn. Dit hoor je van de MKS/BO.',
                             ),
                           ),
                         ],
@@ -153,19 +147,10 @@ class Infra extends StatelessWidget {
                             buttontext: 'Bovenleiding',
                             destination: 'bovenleiding',
                           ),
-                          SizedBox(
-                            height: 8.0,
-                          ),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO
-                            },
-                            child: Text(
-                              'Spoor',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Spoor',
+                            destination: 'spoor',
                           ),
                           SizedBox(
                             height: 8.0,
@@ -176,9 +161,7 @@ class Infra extends StatelessWidget {
                             },
                             child: Text(
                               'Kunstwerken',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                           SizedBox(
@@ -190,9 +173,7 @@ class Infra extends StatelessWidget {
                             },
                             child: Text(
                               'Sectie',
-                              style: GoogleFonts.questrial(
-                                  textStyle:
-                                      TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                         ],
