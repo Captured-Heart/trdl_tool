@@ -81,6 +81,8 @@ export 'package:trdl_tool/pages/incidenten/infrastructuur/bovenleiding/schakelen
 export 'package:trdl_tool/pages/incidenten/infrastructuur/bovenleiding/schouwen_bovenleiding.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/spoor/spoor.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/spoor/glad_spoor.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/spoor/onregelmatigheden_baan.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/spoor/roestvorming.dart';
 
 //ProQuiz pages
 export 'package:trdl_tool/pages/home_pages/proquiz/quizmain.dart';
