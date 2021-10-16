@@ -48,8 +48,7 @@ class SchakelenBovenleiding extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Op advies van het OBI laat je de bovenleiding schouwen, indien mogelijk vanaf het nevenspoor. Schouwen op het betrokken spoor doe je met een trein zonder reizigers. De machinist moet wel aangeven of deze in staat is om te schouwen.',
+                              text: 'Het OBI meldt welke groepen geschakeld zijn/gaan worden. Je maakt een WECO op.',
                             ),
                           ),
                         ],
@@ -79,8 +78,7 @@ class SchakelenBovenleiding extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                              text: 'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
                             ),
                           ),
                         ],
@@ -110,8 +108,7 @@ class SchakelenBovenleiding extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Bij een onregelmatigheid aan de bovenleiding kan het gewenst zijn de situatie buiten te laten beoordelen door een machinist. De mogelijkheid bestaat dat de schouwtrein vastloopt op de locatie van de onregelmatigheid, waarbij eventuele reizigers niet meer handelingsvrij zijn.',
+                              text: 'De bedieningsdeskundige van het OBI is installatieverantwoordelijke voor de bovenleiding. Wanneer de bovenleiding ongepland geschakeld wordt heeft dit gevolgen voor het kunnen rijden met elektrische tractie. De treinen in het betrokken gebied moeten de stroomafnemers laten zakken, omdat er problemen kunnen ontstaan wanneer het OBI de groepen weer onder spanning brengt.',
                             ),
                           ),
                         ],
