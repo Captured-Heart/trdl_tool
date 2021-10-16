@@ -82,6 +82,14 @@ class MainEntry extends StatelessWidget {
         'procedureruclu': (context) => ProcedureRuClu(),
         'schakelenbovenleiding': (context) => SchakelenBovenleiding(),
         'schouwenbovenleiding': (context) => SchouwenBovenleiding(),
+        'spoor': (context) => Spoor(),
+        'gladspoor': (context) => GladSpoor(),
+        'onregelmatighedenbaan': (context) => OnregelmatighedenBaan(),
+        'roestvorming': (context) => Roestvorming(),
+        'kunstwerken': (context) => Kunstwerken(),
+        'aanrijdingviaduct': (context) => AanrijdingViaduct(),
+        'storingbrug': (context) => StoringBrug(),
+        'sectiestoring': (context) => SectieStoring(),
 
         // ProQuiz routes
         'quizmain': (context) => ProQuiz(),

@@ -79,6 +79,14 @@ export 'package:trdl_tool/pages/incidenten/infrastructuur/bovenleiding/bovenleid
 export 'package:trdl_tool/pages/incidenten/infrastructuur/bovenleiding/procedure_ruclu.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/bovenleiding/schakelen_bovenleiding.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/bovenleiding/schouwen_bovenleiding.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/spoor/spoor.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/spoor/glad_spoor.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/spoor/onregelmatigheden_baan.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/spoor/roestvorming.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/kunstwerken/kunstwerken.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/kunstwerken/aanrijding_viaduct.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/kunstwerken/storing_brug.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/sectiestoring/sectiestoring.dart';
 
 //ProQuiz pages
 export 'package:trdl_tool/pages/home_pages/proquiz/quizmain.dart';
