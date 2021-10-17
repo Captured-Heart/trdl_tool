@@ -139,6 +139,9 @@ class _ProQuizState extends State<ProQuiz> {
                       child: Container(
                         width: double.infinity,
                         child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.red,
+                          ),
                           onPressed: () {
                             setState(() {
                               checkAnswer(false);
