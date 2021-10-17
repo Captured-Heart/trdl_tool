@@ -88,11 +88,11 @@ class Register extends StatelessWidget {
                           children: [
                             ElevatedButton(
                               onPressed: () async {
-                                if (email.isEmpty) {
+                                if (email.isEmpty || !email.contains('@prorail.nl')) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
-                                        'Controleer het emailadres, is het correct ingevuld?',
+                                        'Controleer het emailadres, is het correct ingevuld? LET OP: Het emailadres moet eindingen op @prorail.nl',
                                         style: GoogleFonts.questrial(
                                           textStyle: TextStyle(
                                             fontWeight: FontWeight.bold,
