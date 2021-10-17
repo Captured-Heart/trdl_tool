@@ -90,7 +90,7 @@ class MainEntry extends StatelessWidget {
         'aanrijdingviaduct': (context) => AanrijdingViaduct(),
         'storingbrug': (context) => StoringBrug(),
         'sectiestoring': (context) => SectieStoring(),
-        'atbveiligheid': (context) => ATBVeiligheid(),
+        'atbveiligheidsstoring': (context) => ATBVeiligheid(),
 
         // ProQuiz routes
         'quizmain': (context) => ProQuiz(),

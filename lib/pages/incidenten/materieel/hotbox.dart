@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class ATBVeiligheid extends StatelessWidget {
-  const ATBVeiligheid({Key? key}) : super(key: key);
+class HotBox extends StatelessWidget {
+  const HotBox({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class ATBVeiligheid extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'ATB veiligheidsstoring'),
+                            child: TitleText(title: 'Hotbox & Quo Vadis'),
                           ),
                         ],
                       ),
@@ -48,7 +48,7 @@ class ATBVeiligheid extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Bij een ATB veiligheidsstoring aan de baan voorkom je rijweginstelling naar het betrokken spoor.',
+                              text: '- Geef de gegevens van de melding (type alarm, asnummer, zijde van de trein) door aan de machinist;',
                             ),
                           ),
                         ],
@@ -58,7 +58,35 @@ class ATBVeiligheid extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Je stelt pas een rijweg in naar het betrokken spoor nadat je de machinist hebt ingelicht.',
+                              text: '- Laat de trein bij een Hotbox melding beheerst tot stilstand brengen;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: '- Neem de trein bij een Quo Vadis melding bij de eerstvolgende mogelijkheid aan de kant voor onderzoek;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: '- Alarmeer als gestrande trein.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Je hoort van de machinist wanneer en onder welke voorwaarden de trein weer kan rijden.',
                             ),
                           ),
                         ],
@@ -88,7 +116,7 @@ class ATBVeiligheid extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Het opvolgen van het onjuiste seinbeeld door machinisten.',
+                              text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],
@@ -118,7 +146,17 @@ class ATBVeiligheid extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Er is sprake van een ATB veiligheidsstoring wanneer de treinbeveiliging (ATB) een hogere snelheid aangeeft dan de blokbeveiliging (seinen). De machinist is mogelijk niet op de hoogte van de afwijking en wordt niet door de treinbeveiliging beschermd.',
+                              text: 'Het spoor is afgesloten voor onbevoegden en/of dieren. Betreden van het spoor door onbevoegden en/of dieren kan een gevaarlijke situatie opleveren voor betrokkenen en/of de treindienst. Een machinist kan ter plaatse het risico op een gevaarlijke situatie beoordelen.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'De treindienstleider meldt onbevoegden en/of dieren langs het spoor zodat deze verwijderd kunnen worden en/of de afscheiding van het spoor hersteld kan worden.',
                             ),
                           ),
                         ],
