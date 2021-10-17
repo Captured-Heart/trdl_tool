@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class HotBox extends StatelessWidget {
-  const HotBox({Key? key}) : super(key: key);
+class GevaarlijkeStoffen2 extends StatelessWidget {
+  const GevaarlijkeStoffen2({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class HotBox extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Hotbox & Quo Vadis'),
+                            child: TitleText(title: 'Gevaarlijke stoffen'),
                           ),
                         ],
                       ),
@@ -48,7 +48,37 @@ class HotBox extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: '- Geef de gegevens van de melding (type alarm, asnummer, zijde van de trein) door aan de machinist;',
+                              text: 'Als je een onregelmatigheid met gevaarlijke stoffen gemeld krijgt, neem je de volgende maatregelen:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Staak de trein- en rangeerdienst op het betrokken gebied;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Voorkom rijweginstelling naar het betrokken gebied;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Laat de MKS/BO de wisselverwarming doven;',
                             ),
                           ),
                         ],
@@ -58,25 +88,37 @@ class HotBox extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: '- Laat de trein bij een Hotbox melding beheerst tot stilstand brengen;',
+                              text: 'Jouw melding bevat in ieder geval:',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Neem de trein bij een Quo Vadis melding bij de eerstvolgende mogelijkheid aan de kant voor onderzoek;',
+                              text: '- De plaats van de onregelmatigheid;',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: [
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Alarmeer als gestrande trein.',
+                              text: '- De betrokken trein;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- De aard van de onregelmatigheid.',
                             ),
                           ),
                         ],
@@ -86,7 +128,57 @@ class HotBox extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Je hoort van de machinist wanneer en onder welke voorwaarden de trein weer kan rijden.',
+                              text: 'En indien mogelijk:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- GEVI-nummer;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- UN-nummer;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Gevaaretiket;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Plaats van de wagen in de trein;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Wagennummer.',
                             ),
                           ),
                         ],
@@ -146,27 +238,7 @@ class HotBox extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Hotbox meet de temperatuur van de aslagers en de wielen.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Quo Vadis meet de wielrondheid van de trein, de asbelasting en de correcte belading van de trein.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Bij een overschrijding van de ingestelde grenswaarden genereert het systeem een automatische melding omdat er verhoogd risico is op ontsporing.',
+                              text: 'Een trein waarbij een incident met gevaarlijke stoffen optreedt mag niet verder rijden. Afhankelijk van de gevaarlijke stof moet de trein- en rangeerdienst gestaakt worden. De hulpdiensten bepalen op basis van windrichting, locatie, gevaarlijke stof en/of grootte van uitstroom hun inzet.',
                             ),
                           ),
                         ],

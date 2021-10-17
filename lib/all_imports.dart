@@ -89,6 +89,10 @@ export 'package:trdl_tool/pages/incidenten/infrastructuur/sectiestoring/sectiest
 export 'package:trdl_tool/pages/incidenten/materieel/materieel.dart';
 export 'package:trdl_tool/pages/incidenten/materieel/vasterem.dart';
 export 'package:trdl_tool/pages/incidenten/materieel/atb_veiligheidsstoring.dart';
+export 'package:trdl_tool/pages/incidenten/materieel/hotbox.dart';
+export 'package:trdl_tool/pages/incidenten/materieel/gevaarlijke_stoffen/gevaarlijke_stoffen1.dart';
+export 'package:trdl_tool/pages/incidenten/materieel/gevaarlijke_stoffen/gevaarlijke_stoffen2.dart';
+export 'package:trdl_tool/pages/incidenten/materieel/gevaarlijke_stoffen/milieu_meldingen.dart';
 
 //ProQuiz pages
 export 'package:trdl_tool/pages/home_pages/proquiz/quizmain.dart';
