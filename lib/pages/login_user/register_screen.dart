@@ -56,7 +56,7 @@ class Register extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
-                                  hintText: 'Vul een geldig emailadres in',
+                                  hintText: 'Vul een geldig @PRORAIL.NL adres in',
                                 ),
                               ),
                             ),
@@ -92,7 +92,7 @@ class Register extends StatelessWidget {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
-                                        'Controleer het emailadres, is het correct ingevuld? LET OP: Het emailadres moet eindingen op @prorail.nl',
+                                        'Controleer het emailadres. LET OP: Het emailadres moet eindingen op @prorail.nl',
                                         style: GoogleFonts.questrial(
                                           textStyle: TextStyle(
                                             fontWeight: FontWeight.bold,
@@ -105,7 +105,7 @@ class Register extends StatelessWidget {
                                       ),
                                     ),
                                   );
-                                } else if (password.isEmpty || password.length < 6) {
+                                } else if (password.length < 6) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(

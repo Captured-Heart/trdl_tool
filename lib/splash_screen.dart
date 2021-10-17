@@ -53,8 +53,7 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Row(
                 children: [
                   Expanded(
-                    child:
-                        Image.asset('assets/images/trdlToolLogoSmallPNG.png'),
+                    child: Image.asset('assets/images/trdlToolLogoSmallPNG.png'),
                   ),
                 ],
               ),
@@ -80,6 +79,14 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 30.0,
               width: 100.0,
               child: Image.asset('assets/images/plotsklappsLogo.png'),
+            ),
+            SizedBoxH(),
+            Container(
+              height: 30.0,
+              width: 100.0,
+              child: FlutterLogo(
+                size: 40.0,
+              ),
             ),
           ],
         ),
