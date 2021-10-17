@@ -112,43 +112,47 @@ class _ProQuizState extends State<ProQuiz> {
               SizedBox(
                 height: 10.0,
               ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          checkAnswer(true);
-                        });
-                      },
-                      child: Text(
-                        'True',
-                        style: TextStyle(fontSize: 24.0),
+              Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              checkAnswer(true);
+                            });
+                          },
+                          child: Text(
+                            'True',
+                            style: TextStyle(fontSize: 24.0),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      onPressed: () {
-                        setState(() {
-                          checkAnswer(false);
-                        });
-                      },
-                      child: Text(
-                        'False',
-                        style: TextStyle(fontSize: 24.0),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              checkAnswer(false);
+                            });
+                          },
+                          child: Text(
+                            'False',
+                            style: TextStyle(fontSize: 24.0),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
+                ],
               ),
               Row(
                 children: scoreKeeper,
