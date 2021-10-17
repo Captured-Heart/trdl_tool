@@ -61,10 +61,9 @@ export 'package:trdl_tool/pages/aanpassen_plan/vertragingen.dart';
 //Incidenten pages
 export 'package:trdl_tool/pages/incidenten/incidenten.dart';
 export 'package:trdl_tool/pages/incidenten/herroepen_sein.dart';
-export 'package:trdl_tool/pages/incidenten/infrastructuur/infra.dart';
 export 'package:trdl_tool/pages/incidenten/derdendieren.dart';
-export 'package:trdl_tool/pages/incidenten/materieel.dart';
 export 'package:trdl_tool/pages/incidenten/overige_incidenten/overige_incidenten.dart';
+export 'package:trdl_tool/pages/incidenten/infrastructuur/infra.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/wissels.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/wissel_eindstand.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/wissels/opengereden_wissel.dart';
@@ -87,6 +86,13 @@ export 'package:trdl_tool/pages/incidenten/infrastructuur/kunstwerken/kunstwerke
 export 'package:trdl_tool/pages/incidenten/infrastructuur/kunstwerken/aanrijding_viaduct.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/kunstwerken/storing_brug.dart';
 export 'package:trdl_tool/pages/incidenten/infrastructuur/sectiestoring/sectiestoring.dart';
+export 'package:trdl_tool/pages/incidenten/materieel/materieel.dart';
+export 'package:trdl_tool/pages/incidenten/materieel/vasterem.dart';
+export 'package:trdl_tool/pages/incidenten/materieel/atb_veiligheidsstoring.dart';
+export 'package:trdl_tool/pages/incidenten/materieel/hotbox.dart';
+export 'package:trdl_tool/pages/incidenten/materieel/gevaarlijke_stoffen/gevaarlijke_stoffen1.dart';
+export 'package:trdl_tool/pages/incidenten/materieel/gevaarlijke_stoffen/gevaarlijke_stoffen2.dart';
+export 'package:trdl_tool/pages/incidenten/materieel/gevaarlijke_stoffen/milieu_meldingen.dart';
 
 //ProQuiz pages
 export 'package:trdl_tool/pages/home_pages/proquiz/quizmain.dart';

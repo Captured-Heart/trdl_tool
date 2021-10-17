@@ -112,51 +112,52 @@ class _ProQuizState extends State<ProQuiz> {
               SizedBox(
                 height: 10.0,
               ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.green,
-                        elevation: 6.0,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          checkAnswer(true);
-                        });
-                      },
-                      child: Text(
-                        'True',
-                        style: TextStyle(fontSize: 24.0),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        primary: Colors.red,
-                        elevation: 6.0,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          checkAnswer(false);
-                        });
-                      },
-                      child: Text(
-                        'False',
-                        style: TextStyle(fontSize: 24.0),
+              Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Feedback.forTap(context);
+                            setState(() {
+                              checkAnswer(true);
+                            });
+                          },
+                          child: Text(
+                            'True',
+                            style: TextStyle(fontSize: 24.0),
+                          ),
+                        ),
                       ),
                     ),
                   ),
-                ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.red,
+                          ),
+                          onPressed: () {
+                            Feedback.forTap(context);
+                            setState(() {
+                              checkAnswer(false);
+                            });
+                          },
+                          child: Text(
+                            'False',
+                            style: TextStyle(fontSize: 24.0),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
               Row(
                 children: scoreKeeper,

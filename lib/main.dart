@@ -90,6 +90,11 @@ class MainEntry extends StatelessWidget {
         'aanrijdingviaduct': (context) => AanrijdingViaduct(),
         'storingbrug': (context) => StoringBrug(),
         'sectiestoring': (context) => SectieStoring(),
+        'atbveiligheidsstoring': (context) => ATBVeiligheid(),
+        'hotbox': (context) => HotBox(),
+        'gevaarlijkestoffen1': (context) => GevaarlijkeStoffen1(),
+        'gevaarlijkestoffen2': (context) => GevaarlijkeStoffen2(),
+        'milieumeldingen': (context) => MilieuMeldingen(),
 
         // ProQuiz routes
         'quizmain': (context) => ProQuiz(),

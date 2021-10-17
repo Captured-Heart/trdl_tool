@@ -113,34 +113,19 @@ class MaterieelIncidenten extends StatelessWidget {
                             destination: 'vasterem',
                           ),
                           SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'ATB Veiligheidsstoring',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'ATB Veiligheidsstoring',
+                            destination: 'atbveiligheidsstoring',
                           ),
                           SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'Hotbox & Quo Vadis',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'Hotbox & Quo Vadis',
+                            destination: 'hotbox',
                           ),
                           SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'Gevaarlijke Stoffen',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
-                            ),
+                          NavButton(
+                            buttontext: 'Gevaarlijke stoffen',
+                            destination: 'gevaarlijkestoffen1',
                           ),
                         ],
                       ),

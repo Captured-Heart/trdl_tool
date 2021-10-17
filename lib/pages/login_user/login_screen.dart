@@ -56,7 +56,7 @@ class Login extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
-                                  hintText: 'Vul een geldig emailadres in',
+                                  hintText: 'Vul een @prorail.nl emailadres in',
                                 ),
                               ),
                             ),

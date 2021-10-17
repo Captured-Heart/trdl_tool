@@ -50,17 +50,16 @@ class _VerifyScreenState extends State<VerifyScreen> {
               child: Row(
                 children: [
                   Expanded(
-                    child:
-                        Image.asset('assets/images/trdlToolLogoSmallPNG.png'),
+                    child: Image.asset('assets/images/trdlToolLogoSmallPNG.png'),
                   ),
                 ],
               ),
             ),
-            SizedBoxH(),
-            SizedBoxH(),
-            SizedBoxH(),
+            SizedBox(
+              height: 24.0,
+            ),
             Text(
-              'Een verificatie email is verstuurd naar ${user!.email}, controleer ook de spamfolder. U wordt doorgestuurd naar de inlogpagina als u bent geverifieerd.',
+              'Een verificatie email is verstuurd naar ${user!.email}, controleer ook de junk-/spamfolder. U wordt doorgestuurd naar de inlogpagina als u op de verificatielink hebt geklikt.',
               style: GoogleFonts.questrial(
                 textStyle: TextStyle(
                   fontSize: 24.0,
@@ -90,6 +89,21 @@ class _VerifyScreenState extends State<VerifyScreen> {
               height: 30.0,
               width: 100.0,
               child: Image.asset('assets/images/plotsklappsLogo.png'),
+            ),
+            SizedBoxH(),
+            Text(
+              'and',
+              style: GoogleFonts.questrial(
+                  textStyle: TextStyle(
+                fontSize: 8.0,
+              )),
+            ),
+            Container(
+              height: 30.0,
+              width: 100.0,
+              child: FlutterLogo(
+                size: 30.0,
+              ),
             ),
           ],
         ),

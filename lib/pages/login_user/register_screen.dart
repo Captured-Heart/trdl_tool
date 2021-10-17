@@ -2,8 +2,8 @@ import 'package:trdl_tool/all_imports.dart';
 
 class Register extends StatelessWidget {
   final _auth = FirebaseAuth.instance;
-  late final String email;
-  late final String password;
+  late String email;
+  late String password;
 
   @override
   Widget build(BuildContext context) {
@@ -20,9 +20,7 @@ class Register extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Expanded(
-                        child: Image.asset(
-                            'assets/images/trdlToolLogoSmallPNG.png')),
+                    Expanded(child: Image.asset('assets/images/trdlToolLogoSmallPNG.png')),
                   ],
                 ),
               ),
@@ -58,7 +56,7 @@ class Register extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
-                                  hintText: 'Vul een geldig emailadres in',
+                                  hintText: 'Vul een geldig @PRORAIL.NL adres in',
                                 ),
                               ),
                             ),
@@ -78,8 +76,7 @@ class Register extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
-                                  hintText:
-                                      'Wachtwoord bevat minimaal 6 tekens',
+                                  hintText: 'Wachtwoord bevat minimaal 6 tekens',
                                 ),
                               ),
                             ),
@@ -91,11 +88,11 @@ class Register extends StatelessWidget {
                           children: [
                             ElevatedButton(
                               onPressed: () async {
-                                if (!email.contains('@')) {
+                                if (email.isEmpty || !email.contains('@prorail.nl')) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
-                                        'Controleer het emailadres, is het correct ingevuld?',
+                                        'Controleer het emailadres. LET OP: Het emailadres moet eindingen op @prorail.nl',
                                         style: GoogleFonts.questrial(
                                           textStyle: TextStyle(
                                             fontWeight: FontWeight.bold,
@@ -125,14 +122,11 @@ class Register extends StatelessWidget {
                                       ),
                                     ),
                                   );
-                                } else if (email.contains('@')) {
+                                } else {
                                   try {
-                                    final newUser = await _auth
-                                        .createUserWithEmailAndPassword(
-                                            email: email, password: password);
+                                    final newUser = await _auth.createUserWithEmailAndPassword(email: email, password: password);
                                     if (newUser != null) {
-                                      Navigator.pushReplacementNamed(
-                                          context, 'verifyscreen');
+                                      Navigator.pushReplacementNamed(context, 'verifyscreen');
                                     }
                                   } catch (errorMessage) {
                                     ScaffoldMessenger.of(context).showSnackBar(

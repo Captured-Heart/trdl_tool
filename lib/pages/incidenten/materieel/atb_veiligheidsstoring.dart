@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class MaterieelIncidenten extends StatelessWidget {
-  const MaterieelIncidenten({Key? key}) : super(key: key);
+class ATBVeiligheid extends StatelessWidget {
+  const ATBVeiligheid({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class MaterieelIncidenten extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Materieel'),
+                            child: TitleText(title: 'ATB veiligheidsstoring'),
                           ),
                         ],
                       ),
@@ -37,39 +37,8 @@ class MaterieelIncidenten extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: BodyText(
-                              text: 'Je kunt op drie manieren een melding krijgen over materieel:',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Door de machinist;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Door derden;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Door systemen.',
+                            child: SubTitleText(
+                              subtitle: 'Procedure',
                             ),
                           ),
                         ],
@@ -79,7 +48,17 @@ class MaterieelIncidenten extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Als de melding niet van de machinist komt, licht je de machinist van de betrokken trein in.',
+                              text: 'Bij een ATB veiligheidsstoring aan de baan voorkom je rijweginstelling naar het betrokken spoor.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Je stelt pas een rijweg in naar het betrokken spoor nadat je de machinist hebt ingelicht.',
                             ),
                           ),
                         ],
@@ -88,7 +67,7 @@ class MaterieelIncidenten extends StatelessWidget {
                   ),
                 ),
               ),
-              //NAVIGATION CARD
+              //RISICO CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -98,48 +77,48 @@ class MaterieelIncidenten extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(
-                              title: 'Ga snel naar',
+                            child: SubTitleText(
+                              subtitle: 'Risico\'s',
                             ),
                           ),
                         ],
                       ),
                       SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      Row(
                         children: [
-                          NavButton(
-                            buttontext: 'Vaste rem',
-                            destination: 'vasterem',
-                          ),
-                          SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'ATB Veiligheidsstoring',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Het opvolgen van het onjuiste seinbeeld door machinisten.',
                             ),
                           ),
-                          SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'Hotbox & Quo Vadis',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              //CONTEXT CARD
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Context',
                             ),
                           ),
-                          SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'Gevaarlijke Stoffen',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Er is sprake van een ATB veiligheidsstoring wanneer de treinbeveiliging (ATB) een hogere snelheid aangeeft dan de blokbeveiliging (seinen). De machinist is mogelijk niet op de hoogte van de afwijking en wordt niet door de treinbeveiliging beschermd.',
                             ),
                           ),
                         ],
