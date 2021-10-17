@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class MaterieelIncidenten extends StatelessWidget {
-  const MaterieelIncidenten({Key? key}) : super(key: key);
+class VasteRem extends StatelessWidget {
+  const VasteRem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,17 @@ class MaterieelIncidenten extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(title: 'Materieel'),
+                            child: TitleText(title: 'Vaste rem'),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Procedure',
+                            ),
                           ),
                         ],
                       ),
@@ -38,7 +48,7 @@ class MaterieelIncidenten extends StatelessWidget {
                         children: [
                           Expanded(
                             child: BodyText(
-                              text: 'Je kunt op drie manieren een melding krijgen over materieel:',
+                              text: 'Na een melding van een vaste rem/rook of vuur onder de trein:',
                             ),
                           ),
                         ],
@@ -49,7 +59,7 @@ class MaterieelIncidenten extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Door de machinist;',
+                              text: '- Geef je de machinist opdracht de trein beheerst tot stilstand te brengen;',
                             ),
                           ),
                         ],
@@ -59,7 +69,7 @@ class MaterieelIncidenten extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Door derden;',
+                              text: '- Stel je de gevraagde infra ter beschikking aan de machinist (nevenspoor);',
                             ),
                           ),
                         ],
@@ -69,17 +79,7 @@ class MaterieelIncidenten extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Door systemen.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Als de melding niet van de machinist komt, licht je de machinist van de betrokken trein in.',
+                              text: '- De machinist geeft aan onder welke omstandigheden hij verder mag rijden.',
                             ),
                           ),
                         ],
@@ -88,7 +88,7 @@ class MaterieelIncidenten extends StatelessWidget {
                   ),
                 ),
               ),
-              //NAVIGATION CARD
+              //RISICO CARD
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -98,48 +98,48 @@ class MaterieelIncidenten extends StatelessWidget {
                       Row(
                         children: [
                           Expanded(
-                            child: TitleText(
-                              title: 'Ga snel naar',
+                            child: SubTitleText(
+                              subtitle: 'Risico\'s',
                             ),
                           ),
                         ],
                       ),
                       SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      Row(
                         children: [
-                          NavButton(
-                            buttontext: 'Vaste rem',
-                            destination: 'vasterem',
-                          ),
-                          SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'ATB Veiligheidsstoring',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Trein komt niet tijdig tot stilstand voor het gevaarpunt.',
                             ),
                           ),
-                          SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'Hotbox & Quo Vadis',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              //CONTEXT CARD
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Context',
                             ),
                           ),
-                          SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: Text(
-                              'Gevaarlijke Stoffen',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Een vaste rem verhit de wielband. Wanneer de temperatuur te hoog oploopt, kan de wielband van het wiel lopen. Het is van belang de trein zo recht mogelijk door wissels te laten rijden.',
                             ),
                           ),
                         ],

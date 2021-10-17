@@ -113,6 +113,10 @@ class MaterieelIncidenten extends StatelessWidget {
                             destination: 'vasterem',
                           ),
                           SizedBoxH(),
+                          NavButton(
+                            buttontext: 'ATB Veiligheidsstoring',
+                            destination: 'atbveiligheidsstoring',
+                          ),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
