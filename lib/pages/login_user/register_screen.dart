@@ -20,9 +20,7 @@ class Register extends StatelessWidget {
                 ),
                 child: Row(
                   children: [
-                    Expanded(
-                        child: Image.asset(
-                            'assets/images/trdlToolLogoSmallPNG.png')),
+                    Expanded(child: Image.asset('assets/images/trdlToolLogoSmallPNG.png')),
                   ],
                 ),
               ),
@@ -78,8 +76,7 @@ class Register extends StatelessWidget {
                                 decoration: InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
-                                  hintText:
-                                      'Wachtwoord bevat minimaal 6 tekens',
+                                  hintText: 'Wachtwoord bevat minimaal 6 tekens',
                                 ),
                               ),
                             ),
@@ -91,7 +88,7 @@ class Register extends StatelessWidget {
                           children: [
                             ElevatedButton(
                               onPressed: () async {
-                                if (!email.contains('@')) {
+                                if (email.isEmpty) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
@@ -108,7 +105,7 @@ class Register extends StatelessWidget {
                                       ),
                                     ),
                                   );
-                                } else if (password.length < 6) {
+                                } else if (password.isEmpty || password.length < 6) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(
@@ -125,14 +122,11 @@ class Register extends StatelessWidget {
                                       ),
                                     ),
                                   );
-                                } else if (email.contains('@')) {
+                                } else {
                                   try {
-                                    final newUser = await _auth
-                                        .createUserWithEmailAndPassword(
-                                            email: email, password: password);
+                                    final newUser = await _auth.createUserWithEmailAndPassword(email: email, password: password);
                                     if (newUser != null) {
-                                      Navigator.pushReplacementNamed(
-                                          context, 'verifyscreen');
+                                      Navigator.pushReplacementNamed(context, 'verifyscreen');
                                     }
                                   } catch (errorMessage) {
                                     ScaffoldMessenger.of(context).showSnackBar(
