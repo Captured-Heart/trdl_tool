@@ -121,6 +121,7 @@ class _ProQuizState extends State<ProQuiz> {
                         width: double.infinity,
                         child: ElevatedButton(
                           onPressed: () {
+                            Feedback.forTap(context);
                             setState(() {
                               checkAnswer(true);
                             });
@@ -143,6 +144,7 @@ class _ProQuizState extends State<ProQuiz> {
                             primary: Colors.red,
                           ),
                           onPressed: () {
+                            Feedback.forTap(context);
                             setState(() {
                               checkAnswer(false);
                             });
