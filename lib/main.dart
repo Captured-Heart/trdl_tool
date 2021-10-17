@@ -98,6 +98,9 @@ class MainEntry extends StatelessWidget {
 
         // ProQuiz routes
         'quizmain': (context) => ProQuiz(),
+
+        //ProChat routes
+        'prochatmain': (context) => ProChat(),
       },
     );
   }

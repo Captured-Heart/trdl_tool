@@ -2,6 +2,7 @@
 export 'package:flutter/material.dart';
 export 'package:flutter/painting.dart';
 export 'dart:async';
+export 'dart:math';
 
 //Firebase packages
 export 'package:firebase_core/firebase_core.dart';
@@ -96,3 +97,9 @@ export 'package:trdl_tool/pages/incidenten/materieel/gevaarlijke_stoffen/milieu_
 
 //ProQuiz pages
 export 'package:trdl_tool/pages/home_pages/proquiz/quizmain.dart';
+
+//ProChat pages
+export 'package:trdl_tool/pages/home_pages/prochat/prochatmain.dart';
+export 'package:trdl_tool/pages/home_pages/prochat/constants.dart';
+export 'package:trdl_tool/pages/home_pages/prochat/screens/chat_screen.dart';
+export 'package:trdl_tool/pages/home_pages/prochat/components/rounded_button.dart';

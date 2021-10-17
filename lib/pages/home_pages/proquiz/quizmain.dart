@@ -24,16 +24,23 @@ class _ProQuizState extends State<ProQuiz> {
     Question('The star sign Aquarius is represented by a tiger', true),
     Question('Meryl Streep has won two Academy Awards', false),
     Question('Marrakesh is the capital of Morocco', false),
-    Question('Idina Menzel sings \'let it go\' 20 times in \'Let It Go\' from Frozen', false),
-    Question('Waterloo has the greatest number of tube platforms in London', true),
+    Question(
+        'Idina Menzel sings \'let it go\' 20 times in \'Let It Go\' from Frozen',
+        false),
+    Question(
+        'Waterloo has the greatest number of tube platforms in London', true),
     Question('M&M stands for Mars and Moordale', false),
     Question('Gin is typically included in a Long Island Iced Tea', true),
     Question('The unicorn is the national animal of Scotland', true),
-    Question('There are two parts of the body that can\t heal themselves', false),
+    Question(
+        'There are two parts of the body that can\t heal themselves', false),
     Question('Howard Donald is the oldest member of Take That', true),
-    Question('The Great Wall of China is longer than the distance between London and Beijing', true),
+    Question(
+        'The Great Wall of China is longer than the distance between London and Beijing',
+        true),
     Question('There are 219 episodes of Friends', false),
-    Question('\'A\' is the most common letter used in the English language', false),
+    Question(
+        '\'A\' is the most common letter used in the English language', false),
     Question('A lion\'s roar can be heard up to eight kilometres away', true),
   ];
 
@@ -84,6 +91,12 @@ class _ProQuizState extends State<ProQuiz> {
   }
 
   void nextQuestion() {
+    // var randomPicker = List<int>.generate(questionBank.length - 1, (i) => i + 1)
+    //   ..shuffle();
+    // int random1 = randomPicker.removeLast();
+    // int random2 = randomPicker.removeLast();
+    // assert(random1 != random2);
+
     if (questionNumber < questionBank.length - 1) {
       questionNumber++;
     } else {
@@ -116,19 +129,31 @@ class _ProQuizState extends State<ProQuiz> {
                 children: [
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.fromLTRB(
+                        16.0,
+                        0.0,
+                        16.0,
+                        24.0,
+                      ),
                       child: Container(
                         width: double.infinity,
+                        height: 80.0,
                         child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                12.0,
+                              ),
+                            ),
+                          ),
                           onPressed: () {
-                            Feedback.forTap(context);
                             setState(() {
                               checkAnswer(true);
                             });
                           },
-                          child: Text(
-                            'True',
-                            style: TextStyle(fontSize: 24.0),
+                          child: Icon(
+                            Icons.check,
+                            size: 48.0,
                           ),
                         ),
                       ),
@@ -136,22 +161,32 @@ class _ProQuizState extends State<ProQuiz> {
                   ),
                   Expanded(
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.fromLTRB(
+                        16.0,
+                        0.0,
+                        16.0,
+                        24.0,
+                      ),
                       child: Container(
                         width: double.infinity,
+                        height: 80.0,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
                             primary: Colors.red,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(
+                                12.0,
+                              ),
+                            ),
                           ),
                           onPressed: () {
-                            Feedback.forTap(context);
                             setState(() {
                               checkAnswer(false);
                             });
                           },
-                          child: Text(
-                            'False',
-                            style: TextStyle(fontSize: 24.0),
+                          child: Icon(
+                            Icons.close,
+                            size: 48.0,
                           ),
                         ),
                       ),

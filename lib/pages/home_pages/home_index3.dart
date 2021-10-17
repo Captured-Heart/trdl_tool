@@ -55,6 +55,13 @@ class HomeIndex3 extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBox(
+                        height: 24.0,
+                      ),
+                      NavButton(
+                        buttontext: 'Klik hier voor de testversie',
+                        destination: 'prochatmain',
+                      ),
                     ],
                   ),
                 ),
