@@ -81,11 +81,19 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Image.asset('assets/images/plotsklappsLogo.png'),
             ),
             SizedBoxH(),
+            Text(
+              'and',
+              style: GoogleFonts.questrial(
+                  textStyle: TextStyle(
+                fontSize: 8.0,
+              )),
+            ),
+            SizedBoxH(),
             Container(
               height: 30.0,
               width: 100.0,
               child: FlutterLogo(
-                size: 40.0,
+                size: 30.0,
               ),
             ),
           ],
