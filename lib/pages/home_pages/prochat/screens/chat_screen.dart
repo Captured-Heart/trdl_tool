@@ -38,6 +38,7 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         actions: [
           IconButton(
             icon: Icon(Icons.logout),
@@ -53,7 +54,7 @@ class _ChatScreenState extends State<ChatScreen> {
             },
           ),
         ],
-        title: Text('ProChat'),
+        title: AppBarText(title: 'TRDLtool'),
       ),
       body: SafeArea(
         child: Column(
@@ -159,7 +160,7 @@ class MessageBubble extends StatelessWidget {
         children: [
           Text(
             sender,
-            style: TextStyle(
+            style: GoogleFonts.questrial(
               fontSize: 12.0,
             ),
           ),
@@ -172,7 +173,7 @@ class MessageBubble extends StatelessWidget {
                 bottomLeft: Radius.circular(24.0),
                 bottomRight: Radius.circular(24.0),
               ),
-              color: isMe ? Colors.lightBlueAccent : Colors.white60,
+              color: isMe ? Color(0xFF0D4F18) : Colors.white60,
               child: Padding(
                 padding: EdgeInsets.symmetric(
                   horizontal: 20.0,
@@ -180,8 +181,8 @@ class MessageBubble extends StatelessWidget {
                 ),
                 child: Text(
                   message,
-                  style: TextStyle(
-                    fontSize: 20.0,
+                  style: GoogleFonts.questrial(
+                    fontSize: 18.0,
                     color: isMe ? Colors.white : Colors.black,
                   ),
                 ),
