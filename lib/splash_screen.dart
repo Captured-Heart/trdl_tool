@@ -17,23 +17,27 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    /* Check if user is already signed in*/
     if (alreadySignedInUser != null) {
+      Logger().d('User is known and logged in, go to home_screen.');
       Timer(
-        Duration(seconds: 2),
+        const Duration(seconds: 2),
         () => Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (BuildContext context) => HomeScreen(),
+            builder: (BuildContext context) => const HomeScreen(),
           ),
         ),
       );
     } else {
+      Logger().d('User is unknown or new, go to welcome_screen.');
+      /*Go to welcome_screen, user is unknown*/
       Timer(
-        Duration(seconds: 2),
+        const Duration(seconds: 2),
         () => Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (BuildContext context) => WelcomeScreen(),
+            builder: (BuildContext context) => const WelcomeScreen(),
           ),
         ),
       );
@@ -53,43 +57,46 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Row(
                 children: [
                   Expanded(
+                    //TODO: Get someone to make a better logo!
                     child: Image.asset('assets/images/trdlToolLogoSmallPNG.png'),
                   ),
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 24.0,
             ),
-            SpinKitDoubleBounce(
+            const SpinKitDoubleBounce(
+              /*Show a spinner, duration endless*/
               color: Color(0xFF0D4F18),
               size: 100.0,
             ),
-            SizedBox(
+            const SizedBox(
               height: 24.0,
             ),
             Text(
               'powered by',
               style: GoogleFonts.questrial(
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                 fontSize: 8.0,
               )),
             ),
-            Container(
+            SizedBox(
               height: 30.0,
               width: 100.0,
+              //TODO: Get someone to make a better logo!
               child: Image.asset('assets/images/plotsklappsLogo.png'),
             ),
-            SizedBoxH(),
+            const SizedBoxH(),
             Text(
               'and',
               style: GoogleFonts.questrial(
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                 fontSize: 8.0,
               )),
             ),
-            SizedBoxH(),
-            Container(
+            const SizedBoxH(),
+            const SizedBox(
               height: 30.0,
               width: 100.0,
               child: FlutterLogo(

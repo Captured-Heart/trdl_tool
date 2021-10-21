@@ -13,6 +13,7 @@ export 'package:firebase_auth/firebase_auth.dart';
 export 'package:google_fonts/google_fonts.dart';
 export 'package:flex_color_scheme/flex_color_scheme.dart';
 export 'package:flutter_spinkit/flutter_spinkit.dart';
+export 'package:logger/logger.dart';
 
 //Modules and services
 export 'package:trdl_tool/item_lists/welcome_items.dart';

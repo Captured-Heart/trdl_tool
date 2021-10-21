@@ -1,10 +1,13 @@
 import 'all_imports.dart';
 
 void main() async {
+  /*Standard methods for Firebase usage*/
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  Logger().d('App started from main().');
   runApp(
-    MainEntry(),
+    /*Main entry point for the app! DO NOT ALTER!*/
+    const MainEntry(),
   );
 }
 
@@ -15,91 +18,95 @@ class MainEntry extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'TRDLtool',
+      title: 'TRDL-tool',
+      //TODO: Get GoogleFonts.questrial() inside the FlexColorScheme
+      /*Package from FlexColorScheme, making the WHOLE APP the same theme*/
       theme: FlexColorScheme.light(scheme: FlexScheme.jungle).toTheme,
       darkTheme: FlexColorScheme.dark(scheme: FlexScheme.jungle).toTheme,
+      //TODO: Make a custom switch in app for light/dark mode
       themeMode: ThemeMode.system,
-      home: SplashScreen(),
+      /*MainEntry goes to splash_screen*/
+      home: const SplashScreen(),
       routes: {
-        // FirstPages routes
-        'welcomescreen': (context) => WelcomeScreen(),
+        /*First Page routes*/
+        'welcomescreen': (context) => const WelcomeScreen(),
         'login': (context) => Login(),
         'register': (context) => Register(),
-        'homescreen': (context) => HomeScreen(),
-        'verifyscreen': (context) => VerifyScreen(),
+        'homescreen': (context) => const HomeScreen(),
+        'verifyscreen': (context) => const VerifyScreen(),
         'wachtwoordscreen': (context) => Wachtwoord(),
 
-        // HomePage routes
+        /*Home Page routes*/
         'homeindex0': (context) => HomeIndex0(),
         'homeindex1': (context) => HomeIndex1(),
         'homeindex2': (context) => HomeIndex2(),
         'homeindex3': (context) => HomeIndex3(),
 
-        // UitvoerenPlan routes
-        'uitvoerenplan': (context) => UitvoerenPlan(),
-        'geplandewerkzaamheden': (context) => GeplandeWerkzaamheden(),
-        'aanvangwerkzaamheden': (context) => AanvangWerkzaamheden(),
-        'controlerenwbi': (context) => ControlerenWbi(),
-        'foutenindewbi': (context) => FoutenWBI(),
-        'bijzonderhedenrijwegen': (context) => BijzonderhedenRijwegen(),
-        'rijwegenexploitatie': (context) => RijwegenExploitatie(),
-        'kopvantrein': (context) => KopvanTrein(),
-        'inzettenicb': (context) => InzettenICB(),
-        'toelatenwerktreinen': (context) => ToelatenWerktreinen(),
-        'bijzonderhedentrein': (context) => BijzonderhedenTrein(),
-        'communicatie': (context) => Communicatie(),
-        'mondelingecommunicatie': (context) => MondelingeCommunicatie(),
-        'ncbg': (context) => Ncbg(),
-        'dienstovergave': (context) => Dienstovergave(),
+        /*Uitvoeren Plan routes*/
+        'uitvoerenplan': (context) => const UitvoerenPlan(),
+        'geplandewerkzaamheden': (context) => const GeplandeWerkzaamheden(),
+        'aanvangwerkzaamheden': (context) => const AanvangWerkzaamheden(),
+        'controlerenwbi': (context) => const ControlerenWbi(),
+        'foutenindewbi': (context) => const FoutenWBI(),
+        'bijzonderhedenrijwegen': (context) => const BijzonderhedenRijwegen(),
+        'rijwegenexploitatie': (context) => const RijwegenExploitatie(),
+        'kopvantrein': (context) => const KopvanTrein(),
+        'inzettenicb': (context) => const InzettenICB(),
+        'toelatenwerktreinen': (context) => const ToelatenWerktreinen(),
+        'bijzonderhedentrein': (context) => const BijzonderhedenTrein(),
+        'communicatie': (context) => const Communicatie(),
+        'mondelingecommunicatie': (context) => const MondelingeCommunicatie(),
+        'ncbg': (context) => const Ncbg(),
+        'dienstovergave': (context) => const Dienstovergave(),
 
-        // AanpassenPlan routes
-        'aanpassenplan': (context) => AanpassenPlan(),
-        'stappenplanversperringen': (context) => StappenplanVersperringen(),
-        'ongeplandwerk': (context) => OngeplandWerk(),
-        'orderacceptatie': (context) => Orderacceptatie(),
-        'materieelongeplandwerk': (context) => MaterieelOngeplandWerk(),
-        'infraongeplandwerk': (context) => InfraOngeplandWerk(),
-        'vertragingen': (context) => Vertragingen(),
+        /*Aanpassen Plan routes*/
+        'aanpassenplan': (context) => const AanpassenPlan(),
+        'stappenplanversperringen': (context) => const StappenplanVersperringen(),
+        'ongeplandwerk': (context) => const OngeplandWerk(),
+        'orderacceptatie': (context) => const Orderacceptatie(),
+        'materieelongeplandwerk': (context) => const MaterieelOngeplandWerk(),
+        'infraongeplandwerk': (context) => const InfraOngeplandWerk(),
+        'vertragingen': (context) => const Vertragingen(),
 
-        // Incidenten routes
-        'incidenten': (context) => Incidenten(),
-        'herroepensein': (context) => HerroepenSein(),
-        'infra': (context) => Infra(),
-        'derdendieren': (context) => DerdenDieren(),
-        'materieelincidenten': (context) => MaterieelIncidenten(),
-        'overigeincidenten': (context) => OverigeIncidenten(),
-        'wissels': (context) => Wissels(),
-        'wisseleindstand': (context) => WisselEindstand(),
-        'opengeredenwissel': (context) => OpengeredenWissel(),
-        'gestoordwissel': (context) => GestoordWissel(),
-        'beschadigdwissel': (context) => BeschadigdWissel(),
-        'overwegen': (context) => Overwegen(),
-        'beveiliging': (context) => Beveiliging(),
-        'tegenrijrichting': (context) => TegenRijrichting(),
-        'veiligheidsstoringsein': (context) => VeiligheidsstoringSein(),
-        'resetassenteller': (context) => ResetAssenteller(),
-        'bovenleiding': (context) => Bovenleiding(),
-        'procedureruclu': (context) => ProcedureRuClu(),
-        'schakelenbovenleiding': (context) => SchakelenBovenleiding(),
-        'schouwenbovenleiding': (context) => SchouwenBovenleiding(),
-        'spoor': (context) => Spoor(),
-        'gladspoor': (context) => GladSpoor(),
-        'onregelmatighedenbaan': (context) => OnregelmatighedenBaan(),
-        'roestvorming': (context) => Roestvorming(),
-        'kunstwerken': (context) => Kunstwerken(),
-        'aanrijdingviaduct': (context) => AanrijdingViaduct(),
-        'storingbrug': (context) => StoringBrug(),
-        'sectiestoring': (context) => SectieStoring(),
-        'atbveiligheidsstoring': (context) => ATBVeiligheid(),
-        'hotbox': (context) => HotBox(),
-        'gevaarlijkestoffen1': (context) => GevaarlijkeStoffen1(),
-        'gevaarlijkestoffen2': (context) => GevaarlijkeStoffen2(),
-        'milieumeldingen': (context) => MilieuMeldingen(),
+        /*Incidenten Routes*/
+        'incidenten': (context) => const Incidenten(),
+        'herroepensein': (context) => const HerroepenSein(),
+        'infra': (context) => const Infra(),
+        'derdendieren': (context) => const DerdenDieren(),
+        'materieelincidenten': (context) => const MaterieelIncidenten(),
+        'overigeincidenten': (context) => const OverigeIncidenten(),
+        'wissels': (context) => const Wissels(),
+        'wisseleindstand': (context) => const WisselEindstand(),
+        'opengeredenwissel': (context) => const OpengeredenWissel(),
+        'gestoordwissel': (context) => const GestoordWissel(),
+        'beschadigdwissel': (context) => const BeschadigdWissel(),
+        'overwegen': (context) => const Overwegen(),
+        'beveiliging': (context) => const Beveiliging(),
+        'tegenrijrichting': (context) => const TegenRijrichting(),
+        'veiligheidsstoringsein': (context) => const VeiligheidsstoringSein(),
+        'resetassenteller': (context) => const ResetAssenteller(),
+        'bovenleiding': (context) => const Bovenleiding(),
+        'procedureruclu': (context) => const ProcedureRuClu(),
+        'schakelenbovenleiding': (context) => const SchakelenBovenleiding(),
+        'schouwenbovenleiding': (context) => const SchouwenBovenleiding(),
+        'spoor': (context) => const Spoor(),
+        'gladspoor': (context) => const GladSpoor(),
+        'onregelmatighedenbaan': (context) => const OnregelmatighedenBaan(),
+        'roestvorming': (context) => const Roestvorming(),
+        'kunstwerken': (context) => const Kunstwerken(),
+        'aanrijdingviaduct': (context) => const AanrijdingViaduct(),
+        'storingbrug': (context) => const StoringBrug(),
+        'sectiestoring': (context) => const SectieStoring(),
+        'atbveiligheidsstoring': (context) => const ATBVeiligheid(),
+        'hotbox': (context) => const HotBox(),
+        'gevaarlijkestoffen1': (context) => const GevaarlijkeStoffen1(),
+        'gevaarlijkestoffen2': (context) => const GevaarlijkeStoffen2(),
+        'milieumeldingen': (context) => const MilieuMeldingen(),
 
-        // ProQuiz routes
+        /*ProQuiz routes*/
         'quizmain': (context) => ProQuiz(),
 
-        //ProChat routes
+        /*ProChat routes*/
         'prochatmain': (context) => ProChat(),
       },
     );

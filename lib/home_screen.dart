@@ -5,11 +5,10 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationScreen();
+    return const BottomNavigationScreen();
   }
 }
 
-// This is the stateful widget that the main application instantiates.
 class BottomNavigationScreen extends StatefulWidget {
   const BottomNavigationScreen({Key? key}) : super(key: key);
 
@@ -17,10 +16,11 @@ class BottomNavigationScreen extends StatefulWidget {
   State<BottomNavigationScreen> createState() => _BottomNavigationScreenState();
 }
 
-// This is the private State class that goes with BottomNavigationScreen.
+/*This is the private State class that goes with BottomNavigationScreen*/
 class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
+    /*Find these in home_pages folder*/
     HomeIndex0(),
     HomeIndex1(),
     HomeIndex2(),
@@ -29,6 +29,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
 
   void _onItemTapped(int index) {
     setState(() {
+      Logger().d('User tapped BottomNavigationBarItem.');
       _selectedIndex = index;
     });
   }

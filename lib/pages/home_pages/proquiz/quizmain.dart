@@ -133,7 +133,7 @@ class _ProQuizState extends State<ProQuiz> {
                         16.0,
                         0.0,
                         16.0,
-                        24.0,
+                        48.0,
                       ),
                       child: Container(
                         width: double.infinity,
@@ -165,7 +165,7 @@ class _ProQuizState extends State<ProQuiz> {
                         16.0,
                         0.0,
                         16.0,
-                        24.0,
+                        48.0,
                       ),
                       child: Container(
                         width: double.infinity,

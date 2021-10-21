@@ -1,6 +1,7 @@
 import 'all_imports.dart';
 
 class WelcomeScreen extends StatefulWidget {
+  const WelcomeScreen({Key? key}) : super(key: key);
   @override
   _WelcomeScreen createState() => _WelcomeScreen();
 }
@@ -10,13 +11,14 @@ class _WelcomeScreen extends State<WelcomeScreen> {
 
   List<Widget> slides = items
       .map((item) => Container(
-          padding: EdgeInsets.symmetric(horizontal: 18.0),
+          padding: const EdgeInsets.symmetric(horizontal: 18.0),
           child: Column(
             children: <Widget>[
               Flexible(
                 flex: 1,
                 fit: FlexFit.tight,
                 child: Image.asset(
+                  /*Image comes from welcome_items.dart*/
                   item['image'],
                   fit: BoxFit.fitWidth,
                   width: 220.0,
@@ -27,23 +29,25 @@ class _WelcomeScreen extends State<WelcomeScreen> {
                 flex: 1,
                 fit: FlexFit.tight,
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 30.0),
+                  padding: const EdgeInsets.symmetric(horizontal: 30.0),
                   child: Column(
                     children: <Widget>[
                       Text(
+                        /*Header comes from welcome_items.dart*/
                         item['header'],
                         style: GoogleFonts.questrial(
-                          textStyle: TextStyle(
+                          textStyle: const TextStyle(
                             fontSize: 50.0,
                             color: Color(0xFF0D4F18),
                           ),
                         ),
                       ),
                       Text(
+                        /*Description comes from welcome_items.dart*/
                         item['description'],
                         textAlign: TextAlign.center,
                         style: GoogleFonts.questrial(
-                          textStyle: (TextStyle(
+                          textStyle: (const TextStyle(
                             fontSize: 16.0,
                             color: Colors.grey,
                             letterSpacing: 1.2,
@@ -62,18 +66,19 @@ class _WelcomeScreen extends State<WelcomeScreen> {
   List<Widget> indicator() => List<Widget>.generate(
       slides.length,
       (index) => Container(
-            margin: EdgeInsets.symmetric(horizontal: 3.0),
+            margin: const EdgeInsets.symmetric(horizontal: 3.0),
             height: 12.0,
             width: 12.0,
             decoration: BoxDecoration(
                 color: currentPage.round() == index
-                    ? Color(0xFF0D4F18)
-                    : Color(0xFF0D4F18).withOpacity(0.3),
+                /*This green color is taken from FlexColorScheme Jungle*/
+                    ? const Color(0xFF0D4F18)
+                    : const Color(0xFF0D4F18).withOpacity(0.3),
                 borderRadius: BorderRadius.circular(10.0)),
           ));
 
   double currentPage = 0.0;
-  final _pageViewController = new PageController();
+  final _pageViewController = PageController();
 
   @override
   Widget build(BuildContext context) {
@@ -81,6 +86,8 @@ class _WelcomeScreen extends State<WelcomeScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
+          Logger().d('User skips welcome_screen to login_screen.');
+          /*Used to skip or move on from welcome_screen to login_screen*/
           Navigator.push(
             context,
             MaterialPageRoute(
@@ -93,34 +100,34 @@ class _WelcomeScreen extends State<WelcomeScreen> {
           style: GoogleFonts.questrial(),
         ),
       ),
-      body: Container(
-        child: Stack(
-          children: <Widget>[
-            PageView.builder(
-              controller: _pageViewController,
-              itemCount: slides.length,
-              itemBuilder: (BuildContext context, int index) {
-                _pageViewController.addListener(() {
-                  setState(() {
-                    currentPage = _pageViewController.page!;
-                  });
+      body: Stack(
+        children: <Widget>[
+          PageView.builder(
+            controller: _pageViewController,
+            itemCount: slides.length,
+            itemBuilder: (BuildContext context, int index) {
+              _pageViewController.addListener(() {
+                Logger().d('User swipes the screen.');
+                /*Swiping the welcome_screen.*/
+                setState(() {
+                  currentPage = _pageViewController.page!;
                 });
-                return slides[index];
-              },
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                margin: EdgeInsets.only(top: 70.0),
-                padding: EdgeInsets.symmetric(vertical: 40.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: indicator(),
-                ),
+              });
+              return slides[index];
+            },
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              margin: const EdgeInsets.only(top: 70.0),
+              padding: const EdgeInsets.symmetric(vertical: 40.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: indicator(),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

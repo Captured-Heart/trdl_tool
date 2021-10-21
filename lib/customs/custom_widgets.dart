@@ -1,16 +1,16 @@
 import 'package:trdl_tool/all_imports.dart';
 
-//APPBAR TEXT
+/*Appbar Text*/
 class AppBarText extends StatelessWidget {
+  const AppBarText({Key? key, required this.title}) : super(key: key);
   final String title;
-  const AppBarText({required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       title,
       style: GoogleFonts.questrial(
-        textStyle: TextStyle(
+        textStyle: const TextStyle(
           fontWeight: FontWeight.w700,
         ),
       ),
@@ -18,32 +18,33 @@ class AppBarText extends StatelessWidget {
   }
 }
 
-//APPBAR HOME ICONBUTTON
+/*AppBar IconButton*/
 class HomeButton extends StatelessWidget {
+  const HomeButton({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
         Navigator.pushReplacementNamed(context, 'homescreen');
       },
-      icon: Icon(
+      icon: const Icon(
         Icons.home,
       ),
     );
   }
 }
 
-//TITLETEXT
+/*Title Text*/
 class TitleText extends StatelessWidget {
+  const TitleText({Key? key, required this.title}) : super(key: key);
   final String title;
-  const TitleText({required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       title,
       style: GoogleFonts.questrial(
-        textStyle: TextStyle(
+        textStyle: const TextStyle(
           fontSize: 24.0,
         ),
       ),
@@ -51,17 +52,17 @@ class TitleText extends StatelessWidget {
   }
 }
 
-//SUBTITLETEXT
+/*Subtitle Text*/
 class SubTitleText extends StatelessWidget {
+  const SubTitleText({Key? key, required this.subtitle}) : super(key: key);
   final String subtitle;
-  const SubTitleText({required this.subtitle});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       subtitle,
       style: GoogleFonts.questrial(
-        textStyle: TextStyle(
+        textStyle: const TextStyle(
           fontSize: 18.0,
           fontWeight: FontWeight.bold,
         ),
@@ -70,17 +71,17 @@ class SubTitleText extends StatelessWidget {
   }
 }
 
-//BODYTEXT
+/*Body Text*/
 class BodyText extends StatelessWidget {
+  const BodyText({Key? key, required this.text}) : super(key: key);
   final String text;
-  const BodyText({required this.text});
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
       style: GoogleFonts.questrial(
-        textStyle: TextStyle(
+        textStyle: const TextStyle(
           fontSize: 16.0,
         ),
       ),
@@ -88,31 +89,33 @@ class BodyText extends StatelessWidget {
   }
 }
 
-//SIZEDBOXHEIGHT 8
+/*SizedBox Height 8.0*/
 class SizedBoxH extends StatelessWidget {
+  const SizedBoxH({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       height: 8.0,
     );
   }
 }
 
-//SIZEDBOXWITH 8
+/*SizedBox Width 8.0*/
 class SizedBoxW extends StatelessWidget {
+  const SizedBoxW({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return const SizedBox(
       width: 8.0,
     );
   }
 }
 
-//BUTTON NAVIGATION
+/*Navigation Button*/
 class NavButton extends StatelessWidget {
+  const NavButton({Key? key, required this.buttontext, required this.destination,}) : super(key: key);
   final String destination;
   final String buttontext;
-  const NavButton({required this.buttontext, required this.destination});
 
   @override
   Widget build(BuildContext context) {
@@ -130,7 +133,7 @@ class NavButton extends StatelessWidget {
       child: Text(
         buttontext,
         style: GoogleFonts.questrial(
-          textStyle: TextStyle(
+          textStyle: const TextStyle(
             fontWeight: FontWeight.bold,
           ),
         ),
