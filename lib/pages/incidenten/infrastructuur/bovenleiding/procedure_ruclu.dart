@@ -10,8 +10,8 @@ class ProcedureRuClu extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: AppBarText(title: 'TRDLtool'),
-        actions: [
+        title: const AppBarText(title: 'TRDLtool'),
+        actions: const [
           HomeButton(),
         ],
       ),
@@ -27,15 +27,15 @@ class ProcedureRuClu extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(title: 'Procedure RU/CLU'),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Procedure',
@@ -43,9 +43,9 @@ class ProcedureRuClu extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'De MKS/BO verzoekt je de procedure RU/CLU te starten:',
@@ -54,7 +54,7 @@ class ProcedureRuClu extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -64,7 +64,7 @@ class ProcedureRuClu extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -74,7 +74,7 @@ class ProcedureRuClu extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -84,7 +84,7 @@ class ProcedureRuClu extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -94,7 +94,7 @@ class ProcedureRuClu extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -103,9 +103,9 @@ class ProcedureRuClu extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'De AL zorgt voor communicatie tussen EV en brandweer en informeert jou over het verkleinen of inschakelen van het uitgeschakelde gebied.',
@@ -125,7 +125,7 @@ class ProcedureRuClu extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Risico\'s',
@@ -133,9 +133,9 @@ class ProcedureRuClu extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
@@ -155,7 +155,7 @@ class ProcedureRuClu extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Context',
@@ -163,9 +163,9 @@ class ProcedureRuClu extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Om blus- of reddingswerkzaamheden uit te kunnen voeren aan en/of in de nabijheid van de bovenleiding, moet deze elektrisch veiliggesteld zijn.',

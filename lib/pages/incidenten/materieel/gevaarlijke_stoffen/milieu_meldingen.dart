@@ -10,8 +10,8 @@ class MilieuMeldingen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: AppBarText(title: 'TRDLtool'),
-        actions: [
+        title: const AppBarText(title: 'TRDLtool'),
+        actions: const [
           HomeButton(),
         ],
       ),
@@ -27,15 +27,15 @@ class MilieuMeldingen extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(title: 'Meldingen met betrekking tot het milieu'),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Procedure',
@@ -43,9 +43,9 @@ class MilieuMeldingen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Meldingen die je krijgt m.b.t. het milieu in of nabij de infra (zoals bodemvervuiling of geluidsoverlast) geef je door aan de MKS/BO.',
@@ -65,7 +65,7 @@ class MilieuMeldingen extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Risico\'s',
@@ -73,9 +73,9 @@ class MilieuMeldingen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Overtreden van de omgevingsvergunning.',
@@ -95,7 +95,7 @@ class MilieuMeldingen extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Context',
@@ -103,9 +103,9 @@ class MilieuMeldingen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Alle activiteiten op emplacementen vallen onder omgevingsvergunningen. De MKS/BO meldt overtredingen van deze vergunningen aan de milieudienst.',

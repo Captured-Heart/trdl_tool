@@ -10,8 +10,8 @@ class OnregelmatighedenBaan extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: AppBarText(title: 'TRDLtool'),
-        actions: [
+        title: const AppBarText(title: 'TRDLtool'),
+        actions: const [
           HomeButton(),
         ],
       ),
@@ -27,15 +27,15 @@ class OnregelmatighedenBaan extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(title: 'Onregelmatigheden aan de baan'),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Procedure',
@@ -43,9 +43,9 @@ class OnregelmatighedenBaan extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Wanneer een onregelmatigheid aan de baan gemeld wordt, geef je een aanwijzing VR af. Dit doe je totdat de storingsdienst anders aangeeft, of wanneer deze snelheidsbeperking vermeld staat in de van kracht zijnde TSB-Dag- of Weekpublicatie.',
@@ -65,7 +65,7 @@ class OnregelmatighedenBaan extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Risico\'s',
@@ -73,9 +73,9 @@ class OnregelmatighedenBaan extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
@@ -95,7 +95,7 @@ class OnregelmatighedenBaan extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Context',
@@ -103,9 +103,9 @@ class OnregelmatighedenBaan extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Als treindienstleider heb je na een melding van een onregelmatigheid aan de baan geen zicht op de exacte toestand van het spoor. Daarom moet een machinist met aangepaste snelheid (maximaal 40 km/h) rijden tot de storingsdienst ter plaatse is. De machinist kan dan op tijd stoppen voor het gevaarpunt De storingsmonteur kan de exacte toestand van de baan bepalen en geeft aan of de railinfra veilig bereden kan worden en onder welke voorwaarden.',

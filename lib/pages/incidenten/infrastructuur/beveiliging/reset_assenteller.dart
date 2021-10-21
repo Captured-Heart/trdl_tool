@@ -10,8 +10,8 @@ class ResetAssenteller extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: AppBarText(title: 'TRDLtool'),
-        actions: [
+        title: const AppBarText(title: 'TRDLtool'),
+        actions: const [
           HomeButton(),
         ],
       ),
@@ -27,7 +27,7 @@ class ResetAssenteller extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(
                               title: 'Reset assenteller AzLM',
@@ -35,9 +35,9 @@ class ResetAssenteller extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Procedure',
@@ -45,9 +45,9 @@ class ResetAssenteller extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Voorbereidende reset',
@@ -55,9 +55,9 @@ class ResetAssenteller extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text:
@@ -66,9 +66,9 @@ class ResetAssenteller extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text:
@@ -78,7 +78,7 @@ class ResetAssenteller extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -89,7 +89,7 @@ class ResetAssenteller extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -100,7 +100,7 @@ class ResetAssenteller extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -110,9 +110,9 @@ class ResetAssenteller extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Harde reset',
@@ -120,9 +120,9 @@ class ResetAssenteller extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text:
@@ -143,7 +143,7 @@ class ResetAssenteller extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Risico\'s',
@@ -151,9 +151,9 @@ class ResetAssenteller extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text:
@@ -174,7 +174,7 @@ class ResetAssenteller extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Context',
@@ -182,9 +182,9 @@ class ResetAssenteller extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text:
@@ -193,9 +193,9 @@ class ResetAssenteller extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text:
@@ -204,9 +204,9 @@ class ResetAssenteller extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text:

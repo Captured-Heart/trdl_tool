@@ -10,8 +10,8 @@ class Infra extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: AppBarText(title: 'TRDLtool'),
-        actions: [
+        title: const AppBarText(title: 'TRDLtool'),
+        actions: const [
           HomeButton(),
         ],
       ),
@@ -27,15 +27,15 @@ class Infra extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(title: 'Infra'),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Procedure',
@@ -43,9 +43,9 @@ class Infra extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Bij een melding gestoorde of defecte infra, handel je als volgt:',
@@ -53,9 +53,9 @@ class Infra extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -65,7 +65,7 @@ class Infra extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -75,7 +75,7 @@ class Infra extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -85,7 +85,7 @@ class Infra extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -94,9 +94,9 @@ class Infra extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Het streven is de infracapaciteit beschikbaar te stellen binnen 10 minuten na prognose aankomst LWB. Als er geen urgent herstel plaats hoeft te vinden en je de gestoorde infra wel laat berijden, dan kan een analyse op veilige berijdbaarheid nodig zijn. Dit hoor je van de MKS/BO.',
@@ -116,7 +116,7 @@ class Infra extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(
                               title: 'Ga snel naar',
@@ -124,10 +124,10 @@ class Infra extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           NavButton(
                             buttontext: 'Wissels',
                             destination: 'wissels',
@@ -180,7 +180,7 @@ class Infra extends StatelessWidget {
                             child: Text(
                               'Risico\'s',
                               style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
+                                textStyle: const TextStyle(
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -189,7 +189,7 @@ class Infra extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8.0,
                       ),
                       Row(
@@ -198,7 +198,7 @@ class Infra extends StatelessWidget {
                             child: Text(
                               'Treinen komen niet tijdig tot stilstand voor het gevaarpunt of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                               style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
+                                textStyle: const TextStyle(
                                   fontSize: 16.0,
                                 ),
                               ),
@@ -222,7 +222,7 @@ class Infra extends StatelessWidget {
                             child: Text(
                               'Context',
                               style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
+                                textStyle: const TextStyle(
                                   fontSize: 18.0,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -231,7 +231,7 @@ class Infra extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 8.0,
                       ),
                       Row(
@@ -240,7 +240,7 @@ class Infra extends StatelessWidget {
                             child: Text(
                               'Bij het afhandelen van defecte of gestoord infra is bovenstaande procedure de algemene afspraak. Voor de afhandeling van specifieke infra-incidenten staan de procedures beschreven in de betreffende hoofdstukken.',
                               style: GoogleFonts.questrial(
-                                textStyle: TextStyle(
+                                textStyle: const TextStyle(
                                   fontSize: 16.0,
                                 ),
                               ),

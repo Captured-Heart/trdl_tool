@@ -10,8 +10,8 @@ class DerdenDieren extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: AppBarText(title: 'TRDLtool'),
-        actions: [
+        title: const AppBarText(title: 'TRDLtool'),
+        actions: const [
           HomeButton(),
         ],
       ),
@@ -27,15 +27,15 @@ class DerdenDieren extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(title: 'Derden en/of dieren langs de baan'),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Procedure',
@@ -43,9 +43,9 @@ class DerdenDieren extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Na de melding van onbevoegden en/of dieren op of langs het spoor met (potentieel) gevaar voor schade aan mens, materieel en/of infra, handel je als volgt:',
@@ -53,9 +53,9 @@ class DerdenDieren extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -65,7 +65,7 @@ class DerdenDieren extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -75,7 +75,7 @@ class DerdenDieren extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -85,7 +85,7 @@ class DerdenDieren extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -94,9 +94,9 @@ class DerdenDieren extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(text: 'Om aangereden dieren te verwijderen, licht je MKS/BO in.'),
                           ),
@@ -114,7 +114,7 @@ class DerdenDieren extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Risico\'s',
@@ -122,9 +122,9 @@ class DerdenDieren extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
@@ -144,7 +144,7 @@ class DerdenDieren extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Context',
@@ -152,9 +152,9 @@ class DerdenDieren extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Het spoor is afgesloten voor onbevoegden en/of dieren. Betreden van het spoor door onbevoegden en/of dieren kan een gevaarlijke situatie opleveren voor betrokkenen en/of de treindienst. Een machinist kan ter plaatse het risico op een gevaarlijke situatie beoordelen.',
@@ -162,9 +162,9 @@ class DerdenDieren extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'De treindienstleider meldt onbevoegden en/of dieren langs het spoor zodat deze verwijderd kunnen worden en/of de afscheiding van het spoor hersteld kan worden.',

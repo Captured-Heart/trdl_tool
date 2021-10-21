@@ -1,6 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
 class ProQuiz extends StatefulWidget {
+  const ProQuiz({Key? key}) : super(key: key);
   @override
   _ProQuizState createState() => _ProQuizState();
 }
@@ -14,7 +15,7 @@ class Question {
 
 class _ProQuizState extends State<ProQuiz> {
   List<Widget> scoreKeeper = [
-    Icon(
+    const Icon(
       Icons.arrow_forward,
     ),
   ];
@@ -50,7 +51,7 @@ class _ProQuizState extends State<ProQuiz> {
       if (isFinished() == true) {
         quizReset();
         scoreKeeper = [
-          Icon(
+          const Icon(
             Icons.arrow_forward_outlined,
             color: Colors.white,
           ),
@@ -58,14 +59,14 @@ class _ProQuizState extends State<ProQuiz> {
       } else {
         if (userPickedAnswer == correctAnswer) {
           scoreKeeper.add(
-            Icon(
+            const Icon(
               Icons.check,
               color: Colors.green,
             ),
           );
         } else {
           scoreKeeper.add(
-            Icon(
+            const Icon(
               Icons.close,
               color: Colors.red,
             ),
@@ -109,7 +110,7 @@ class _ProQuizState extends State<ProQuiz> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Column(
             children: [
               Expanded(
@@ -118,11 +119,11 @@ class _ProQuizState extends State<ProQuiz> {
                   child: Text(
                     questionBank[questionNumber].questionText,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 25.0),
+                    style: const TextStyle(fontSize: 25.0),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10.0,
               ),
               Row(
@@ -135,7 +136,7 @@ class _ProQuizState extends State<ProQuiz> {
                         16.0,
                         48.0,
                       ),
-                      child: Container(
+                      child: SizedBox(
                         width: double.infinity,
                         height: 80.0,
                         child: ElevatedButton(
@@ -151,7 +152,7 @@ class _ProQuizState extends State<ProQuiz> {
                               checkAnswer(true);
                             });
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.check,
                             size: 48.0,
                           ),
@@ -167,7 +168,7 @@ class _ProQuizState extends State<ProQuiz> {
                         16.0,
                         48.0,
                       ),
-                      child: Container(
+                      child: SizedBox(
                         width: double.infinity,
                         height: 80.0,
                         child: ElevatedButton(
@@ -184,7 +185,7 @@ class _ProQuizState extends State<ProQuiz> {
                               checkAnswer(false);
                             });
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.close,
                             size: 48.0,
                           ),

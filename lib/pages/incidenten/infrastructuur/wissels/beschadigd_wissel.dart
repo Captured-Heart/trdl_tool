@@ -10,8 +10,8 @@ class BeschadigdWissel extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: AppBarText(title: 'TRDLtool'),
-        actions: [
+        title: const AppBarText(title: 'TRDLtool'),
+        actions: const [
           HomeButton(),
         ],
       ),
@@ -27,7 +27,7 @@ class BeschadigdWissel extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(
                               title: 'Beschadigd wissel',
@@ -35,9 +35,9 @@ class BeschadigdWissel extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Procedure',
@@ -45,9 +45,9 @@ class BeschadigdWissel extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Bij een beschadigd wissel staak je het treinverkeer over het betrokken wissel.',
@@ -55,9 +55,9 @@ class BeschadigdWissel extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Een wissel moet als beschadigd worden beschouwd als:',
@@ -66,7 +66,7 @@ class BeschadigdWissel extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -76,7 +76,7 @@ class BeschadigdWissel extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -97,7 +97,7 @@ class BeschadigdWissel extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Risico\'s',
@@ -105,9 +105,9 @@ class BeschadigdWissel extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
@@ -127,7 +127,7 @@ class BeschadigdWissel extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: SubTitleText(
                               subtitle: 'Context',
@@ -135,9 +135,9 @@ class BeschadigdWissel extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Bij een beschadigd wissel is de veilige berijdbaarheid van het wissel niet meer gegarandeerd. Dat is niet altijd zichtbaar in Procesleiding.',
@@ -145,9 +145,9 @@ class BeschadigdWissel extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'De storingsmonteur kan de veilige berijdbaarheid ter plaatse vaststellen. De storingsmonteur bepaalt of en hoe je het betrokken wissel weer mag laten berijden.',

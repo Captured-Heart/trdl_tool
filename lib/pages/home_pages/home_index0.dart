@@ -92,7 +92,7 @@ class HomeIndex0 extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(
                               title: 'Ga snel naar',
@@ -100,12 +100,12 @@ class HomeIndex0 extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       FittedBox(
                         fit: BoxFit.cover,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
+                          children: const [
                             NavButton(
                               buttontext: 'Uitvoeren',
                               destination: 'uitvoerenplan',
@@ -127,7 +127,7 @@ class HomeIndex0 extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBoxH(),
+              const SizedBoxH(),
             ],
           ),
         ),

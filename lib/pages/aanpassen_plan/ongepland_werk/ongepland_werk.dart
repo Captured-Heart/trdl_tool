@@ -10,8 +10,8 @@ class OngeplandWerk extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: AppBarText(title: 'TRDLtool'),
-        actions: [
+        title: const AppBarText(title: 'TRDLtool'),
+        actions: const [
           HomeButton(),
         ],
       ),
@@ -27,7 +27,7 @@ class OngeplandWerk extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(title: 'Ongepland Werk'),
                           ),
@@ -45,7 +45,7 @@ class OngeplandWerk extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(
                               title: 'Ga snel naar:',
@@ -53,10 +53,10 @@ class OngeplandWerk extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           NavButton(
                             buttontext: 'Materieel',
                             destination: 'materieelongeplandwerk',

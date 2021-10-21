@@ -10,8 +10,8 @@ class OverigeIncidenten extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: AppBarText(title: 'TRDLtool'),
-        actions: [
+        title: const AppBarText(title: 'TRDLtool'),
+        actions: const [
           HomeButton(),
         ],
       ),
@@ -26,7 +26,7 @@ class OverigeIncidenten extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(
                               title: 'Overige Incidenten',
@@ -46,7 +46,7 @@ class OverigeIncidenten extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(
                               title: 'Ga snel naar',
@@ -54,7 +54,7 @@ class OverigeIncidenten extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -64,87 +64,87 @@ class OverigeIncidenten extends StatelessWidget {
                             },
                             child: Text(
                               'Gestrande Trein',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          SizedBoxH(),
+                          const SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'Brand',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          SizedBoxH(),
+                          const SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'Weersomstandigheden',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          SizedBoxH(),
+                          const SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'Ontruimen Post',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          SizedBoxH(),
+                          const SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'Stroomstoring',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          SizedBoxH(),
+                          const SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'Wissels Vrijmaken',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          SizedBoxH(),
+                          const SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'STS Passage',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          SizedBoxH(),
+                          const SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'Stilleggen Treindienst',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          SizedBoxH(),
+                          const SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'Systeemstoring',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                         ],

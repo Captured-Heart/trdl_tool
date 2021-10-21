@@ -1,6 +1,13 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class Register extends StatelessWidget {
+class Register extends StatefulWidget {
+  const Register({Key? key}) : super(key: key);
+
+  @override
+  State<Register> createState() => _RegisterState();
+}
+
+class _RegisterState extends State<Register> {
   final _auth = FirebaseAuth.instance;
   late String email;
   late String password;
@@ -24,8 +31,8 @@ class Register extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBoxH(),
-              Container(
+              const SizedBoxH(),
+              SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: 300,
                 child: Card(
@@ -36,13 +43,13 @@ class Register extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Row(
-                          children: [
+                          children: const [
                             Expanded(
                               child: TitleText(title: 'Registreer'),
                             ),
                           ],
                         ),
-                        SizedBoxH(),
+                        const SizedBoxH(),
                         Row(
                           children: [
                             Expanded(
@@ -53,7 +60,7 @@ class Register extends StatelessWidget {
                                   email = value;
                                 },
                                 style: GoogleFonts.questrial(),
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
                                   hintText: 'Vul een geldig @PRORAIL.NL adres in',
@@ -62,7 +69,7 @@ class Register extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBoxH(),
+                        const SizedBoxH(),
                         Row(
                           children: [
                             Expanded(
@@ -73,7 +80,7 @@ class Register extends StatelessWidget {
                                 },
                                 style: GoogleFonts.questrial(),
                                 obscureText: true,
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
                                   hintText: 'Wachtwoord bevat minimaal 6 tekens',
@@ -82,7 +89,7 @@ class Register extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBoxH(),
+                        const SizedBoxH(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
@@ -94,7 +101,7 @@ class Register extends StatelessWidget {
                                       content: Text(
                                         'Controleer het emailadres. LET OP: Het emailadres moet eindingen op @prorail.nl',
                                         style: GoogleFonts.questrial(
-                                          textStyle: TextStyle(
+                                          textStyle: const TextStyle(
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
@@ -111,7 +118,7 @@ class Register extends StatelessWidget {
                                       content: Text(
                                         'Kies een wachtwoord van minimaal 6 tekens',
                                         style: GoogleFonts.questrial(
-                                          textStyle: TextStyle(
+                                          textStyle: const TextStyle(
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
@@ -134,7 +141,7 @@ class Register extends StatelessWidget {
                                         content: Text(
                                           'Er is iets misgegaan: $errorMessage',
                                           style: GoogleFonts.questrial(
-                                            textStyle: TextStyle(
+                                            textStyle: const TextStyle(
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
@@ -148,7 +155,7 @@ class Register extends StatelessWidget {
                                   }
                                 }
                               },
-                              child: Text('REGISTREER'),
+                              child: const Text('REGISTREER'),
                             ),
                           ],
                         ),
@@ -157,7 +164,7 @@ class Register extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBoxH(),
+              const SizedBoxH(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -168,7 +175,7 @@ class Register extends StatelessWidget {
                     child: Text(
                       'Heb je al een account?',
                       style: GoogleFonts.questrial(
-                        textStyle: TextStyle(fontWeight: FontWeight.bold),
+                        textStyle: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),

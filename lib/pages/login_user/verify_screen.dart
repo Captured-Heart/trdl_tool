@@ -23,7 +23,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
       await user!.sendEmailVerification();
     }
 
-    timer = Timer.periodic(Duration(seconds: 5), (timer) {
+    timer = Timer.periodic(const Duration(seconds: 5), (timer) {
       checkEmailVerified();
     });
   }
@@ -55,50 +55,50 @@ class _VerifyScreenState extends State<VerifyScreen> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 24.0,
             ),
             Text(
               'Een verificatie email is verstuurd naar ${user!.email}, controleer ook de junk-/spamfolder. U wordt doorgestuurd naar de inlogpagina als u op de verificatielink hebt geklikt.',
               style: GoogleFonts.questrial(
-                textStyle: TextStyle(
+                textStyle: const TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.w700,
                 ),
               ),
               textAlign: TextAlign.center,
             ),
-            SizedBox(
+            const SizedBox(
               height: 24.0,
             ),
-            SpinKitDoubleBounce(
+            const SpinKitDoubleBounce(
               color: Color(0xFF0D4F18),
               size: 100.0,
             ),
-            SizedBox(
+            const SizedBox(
               height: 24.0,
             ),
             Text(
               'powered by',
               style: GoogleFonts.questrial(
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                 fontSize: 8.0,
               )),
             ),
-            Container(
+            SizedBox(
               height: 30.0,
               width: 100.0,
               child: Image.asset('assets/images/plotsklappsLogo.png'),
             ),
-            SizedBoxH(),
+            const SizedBoxH(),
             Text(
               'and',
               style: GoogleFonts.questrial(
-                  textStyle: TextStyle(
+                  textStyle: const TextStyle(
                 fontSize: 8.0,
               )),
             ),
-            Container(
+            const SizedBox(
               height: 30.0,
               width: 100.0,
               child: FlutterLogo(

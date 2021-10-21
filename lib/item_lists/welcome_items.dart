@@ -16,7 +16,7 @@ List items = [
   },
   {
     "header": "Praat",
-    "description": "Klets met je collega\'s",
+    "description": "Klets met je collega's",
     "image": "assets/images/welcomescreen4.png"
   },
 ];

@@ -1,6 +1,8 @@
 import 'package:trdl_tool/all_imports.dart';
 
 class HomeIndex3 extends StatelessWidget {
+  HomeIndex3({Key? key}) : super(key: key);
+
   final _auth = FirebaseAuth.instance;
 
   @override
@@ -10,20 +12,20 @@ class HomeIndex3 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
+        leading: const Padding(
+          padding: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
           child: CircleAvatar(
             child: Icon(Icons.person),
           ),
         ),
-        title: AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(title: 'TRDLtool'),
         actions: [
           IconButton(
             onPressed: () {
               _auth.signOut();
               Navigator.pushReplacementNamed(context, 'login');
             },
-            icon: Icon(Icons.logout),
+            icon: const Icon(Icons.logout),
           ),
         ],
       ),
@@ -38,15 +40,15 @@ class HomeIndex3 extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(title: 'ProChat'),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text:
@@ -55,10 +57,10 @@ class HomeIndex3 extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 24.0,
                       ),
-                      NavButton(
+                      const NavButton(
                         buttontext: 'Klik hier voor de testversie',
                         destination: 'prochatmain',
                       ),

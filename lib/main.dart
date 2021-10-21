@@ -30,11 +30,11 @@ class MainEntry extends StatelessWidget {
       routes: {
         /*First Page routes*/
         'welcomescreen': (context) => const WelcomeScreen(),
-        'login': (context) => Login(),
-        'register': (context) => Register(),
+        'login': (context) => const Login(),
+        'register': (context) => const Register(),
         'homescreen': (context) => const HomeScreen(),
         'verifyscreen': (context) => const VerifyScreen(),
-        'wachtwoordscreen': (context) => Wachtwoord(),
+        'wachtwoordscreen': (context) => const Wachtwoord(),
 
         /*Home Page routes*/
         'homeindex0': (context) => HomeIndex0(),
@@ -104,10 +104,10 @@ class MainEntry extends StatelessWidget {
         'milieumeldingen': (context) => const MilieuMeldingen(),
 
         /*ProQuiz routes*/
-        'quizmain': (context) => ProQuiz(),
+        'quizmain': (context) => const ProQuiz(),
 
         /*ProChat routes*/
-        'prochatmain': (context) => ProChat(),
+        'prochatmain': (context) => const ProChat(),
       },
     );
   }

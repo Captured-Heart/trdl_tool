@@ -1,6 +1,13 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class Login extends StatelessWidget {
+class Login extends StatefulWidget {
+  const Login({Key? key}) : super(key: key);
+
+  @override
+  State<Login> createState() => _LoginState();
+}
+
+class _LoginState extends State<Login> {
   final _auth = FirebaseAuth.instance;
   late String email;
   late String password;
@@ -24,8 +31,8 @@ class Login extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBoxH(),
-              Container(
+              const SizedBoxH(),
+              SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: 300,
                 child: Card(
@@ -36,13 +43,13 @@ class Login extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Row(
-                          children: [
+                          children: const [
                             Expanded(
                               child: TitleText(title: 'Login'),
                             ),
                           ],
                         ),
-                        SizedBoxH(),
+                        const SizedBoxH(),
                         Row(
                           children: [
                             Expanded(
@@ -53,7 +60,7 @@ class Login extends StatelessWidget {
                                   email = value;
                                 },
                                 style: GoogleFonts.questrial(),
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
                                   hintText: 'Vul een @prorail.nl emailadres in',
@@ -62,7 +69,7 @@ class Login extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBoxH(),
+                        const SizedBoxH(),
                         Row(
                           children: [
                             Expanded(
@@ -73,7 +80,7 @@ class Login extends StatelessWidget {
                                 },
                                 obscureText: true,
                                 style: GoogleFonts.questrial(),
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
                                   hintText: 'Wachtwoord bevat minimaal 6 tekens',
@@ -82,7 +89,7 @@ class Login extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBoxH(),
+                        const SizedBoxH(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
@@ -90,13 +97,14 @@ class Login extends StatelessWidget {
                               onPressed: () async {
                                 try {
                                   final user = await _auth.signInWithEmailAndPassword(email: email, password: password);
+
                                   if (user != null && _auth.currentUser!.emailVerified) {
                                     Navigator.pushReplacementNamed(context, 'homescreen');
                                   }
                                 } catch (e) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
-                                      content: Text('Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?'),
+                                      content: const Text('Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?'),
                                       action: SnackBarAction(
                                         label: 'OK',
                                         onPressed: () {},
@@ -105,7 +113,7 @@ class Login extends StatelessWidget {
                                   );
                                 }
                               },
-                              child: Text('LOGIN'),
+                              child: const Text('LOGIN'),
                             ),
                           ],
                         ),
@@ -114,7 +122,7 @@ class Login extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBoxH(),
+              const SizedBoxH(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -128,7 +136,7 @@ class Login extends StatelessWidget {
                     child: Text(
                       'Nog geen account?',
                       style: GoogleFonts.questrial(
-                        textStyle: TextStyle(fontWeight: FontWeight.bold),
+                        textStyle: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),
@@ -147,7 +155,7 @@ class Login extends StatelessWidget {
                     child: Text(
                       'Wachtwoord vergeten?',
                       style: GoogleFonts.questrial(
-                        textStyle: TextStyle(fontWeight: FontWeight.bold),
+                        textStyle: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),

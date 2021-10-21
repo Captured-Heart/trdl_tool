@@ -4,6 +4,7 @@ final _firestore = FirebaseFirestore.instance;
 late User loggedInUser;
 
 class ChatScreen extends StatefulWidget {
+  const ChatScreen({Key? key}) : super(key: key);
   static const String id = 'chat_screen';
 
   @override
@@ -27,10 +28,10 @@ class _ChatScreenState extends State<ChatScreen> {
       final user = _auth.currentUser;
       if (user != null) {
         loggedInUser = user;
-        print(loggedInUser.email);
+        Logger().d('getCurrentUser() is called if user != null');
       }
     } catch (e) {
-      print(e);
+      Logger().d(e);
     }
   }
 
@@ -41,7 +42,7 @@ class _ChatScreenState extends State<ChatScreen> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.logout),
+            icon: const Icon(Icons.logout),
             onPressed: () async {
               setState(() {
                 showSpinner = true;
@@ -54,14 +55,14 @@ class _ChatScreenState extends State<ChatScreen> {
             },
           ),
         ],
-        title: AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(title: 'TRDLtool'),
       ),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            MessagesStream(),
+            const MessagesStream(),
             Container(
               decoration: kMessageContainerDecoration,
               child: Row(
@@ -85,7 +86,7 @@ class _ChatScreenState extends State<ChatScreen> {
                         'timestamp': FieldValue.serverTimestamp(),
                       });
                     },
-                    child: Text(
+                    child: const Text(
                       'Send',
                       style: kSendButtonTextStyle,
                     ),
@@ -101,6 +102,7 @@ class _ChatScreenState extends State<ChatScreen> {
 }
 
 class MessagesStream extends StatelessWidget {
+  const MessagesStream({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
@@ -108,7 +110,7 @@ class MessagesStream extends StatelessWidget {
           _firestore.collection('messages').orderBy('timestamp').snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(
               backgroundColor: Color(0xFF0D4F18),
             ),
@@ -130,7 +132,7 @@ class MessagesStream extends StatelessWidget {
         return Expanded(
           child: ListView(
             reverse: true,
-            padding: EdgeInsets.symmetric(
+            padding: const EdgeInsets.symmetric(
               horizontal: 10.0,
               vertical: 10.0,
             ),
@@ -143,9 +145,7 @@ class MessagesStream extends StatelessWidget {
 }
 
 class MessageBubble extends StatelessWidget {
-  MessageBubble(
-      {required this.sender, required this.message, required this.isMe});
-
+  const MessageBubble({Key? key, required this.sender, required this.message, required this.isMe,}) : super(key: key);
   final String message;
   final String sender;
   final bool isMe;
@@ -153,7 +153,7 @@ class MessageBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(10.0),
       child: Column(
         crossAxisAlignment:
             isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
@@ -168,14 +168,14 @@ class MessageBubble extends StatelessWidget {
               shadowColor: Colors.white60,
               elevation: 6.0,
               borderRadius: BorderRadius.only(
-                topLeft: isMe ? Radius.circular(24.0) : Radius.circular(0.0),
-                topRight: isMe ? Radius.circular(0.0) : Radius.circular(24.0),
-                bottomLeft: Radius.circular(24.0),
-                bottomRight: Radius.circular(24.0),
+                topLeft: isMe ? const Radius.circular(24.0) : const Radius.circular(0.0),
+                topRight: isMe ? const Radius.circular(0.0) : const Radius.circular(24.0),
+                bottomLeft: const Radius.circular(24.0),
+                bottomRight: const Radius.circular(24.0),
               ),
-              color: isMe ? Color(0xFF0D4F18) : Colors.white60,
+              color: isMe ? const Color(0xFF0D4F18) : Colors.white60,
               child: Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   horizontal: 20.0,
                   vertical: 10.0,
                 ),

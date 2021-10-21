@@ -1,6 +1,13 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class Wachtwoord extends StatelessWidget {
+class Wachtwoord extends StatefulWidget {
+  const Wachtwoord({Key? key}) : super(key: key);
+
+  @override
+  State<Wachtwoord> createState() => _WachtwoordState();
+}
+
+class _WachtwoordState extends State<Wachtwoord> {
   final _auth = FirebaseAuth.instance;
   late String email;
 
@@ -25,9 +32,9 @@ class Wachtwoord extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBoxH(),
-              SizedBoxH(),
-              Container(
+              const SizedBoxH(),
+              const SizedBoxH(),
+              SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: 300,
                 child: Card(
@@ -38,7 +45,7 @@ class Wachtwoord extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Row(
-                          children: [
+                          children: const [
                             Expanded(
                               child: TitleText(
                                 title: 'Reset Wachtwoord',
@@ -46,7 +53,7 @@ class Wachtwoord extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBoxH(),
+                        const SizedBoxH(),
                         Row(
                           children: [
                             Expanded(
@@ -57,7 +64,7 @@ class Wachtwoord extends StatelessWidget {
                                   email = value;
                                 },
                                 style: GoogleFonts.questrial(),
-                                decoration: InputDecoration(
+                                decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
                                   hintText: 'Vul een geldig emailadres in',
@@ -66,7 +73,7 @@ class Wachtwoord extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBoxH(),
+                        const SizedBoxH(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
@@ -80,7 +87,7 @@ class Wachtwoord extends StatelessWidget {
                                         content: Text(
                                           'Een resetlink om het wachtwoord te wijzigen is verzonden naar $email',
                                           style: GoogleFonts.questrial(
-                                            textStyle: TextStyle(
+                                            textStyle: const TextStyle(
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
@@ -99,7 +106,7 @@ class Wachtwoord extends StatelessWidget {
                                       content: Text(
                                         'Er is iets mis!\nBen je al geregistreerd?',
                                         style: GoogleFonts.questrial(
-                                          textStyle: TextStyle(
+                                          textStyle: const TextStyle(
                                             fontWeight: FontWeight.bold,
                                           ),
                                         ),
@@ -112,7 +119,7 @@ class Wachtwoord extends StatelessWidget {
                                   );
                                 }
                               },
-                              child: Text('RESET'),
+                              child: const Text('RESET'),
                             ),
                           ],
                         ),
@@ -121,7 +128,7 @@ class Wachtwoord extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBoxH(),
+              const SizedBoxH(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -132,7 +139,7 @@ class Wachtwoord extends StatelessWidget {
                     child: Text(
                       'Terug naar login',
                       style: GoogleFonts.questrial(
-                        textStyle: TextStyle(fontWeight: FontWeight.bold),
+                        textStyle: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),

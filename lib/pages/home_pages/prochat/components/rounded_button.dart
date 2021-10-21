@@ -1,17 +1,15 @@
 import 'package:trdl_tool/all_imports.dart';
 
 class RoundedButton extends StatelessWidget {
+  const RoundedButton({Key? key, required this.text, required this.color, required this.onPressed,}) : super(key: key,);
   final Color color;
   final String text;
   final VoidCallback onPressed;
 
-  RoundedButton(
-      {required this.text, required this.color, required this.onPressed});
-
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 16.0),
+      padding: const EdgeInsets.symmetric(vertical: 16.0),
       child: Material(
         elevation: 5.0,
         color: color,
@@ -22,7 +20,7 @@ class RoundedButton extends StatelessWidget {
           height: 42.0,
           child: Text(
             text,
-            style: TextStyle(
+            style: const TextStyle(
               color: Colors.white,
             ),
           ),

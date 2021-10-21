@@ -10,8 +10,8 @@ class MaterieelIncidenten extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: AppBarText(title: 'TRDLtool'),
-        actions: [
+        title: const AppBarText(title: 'TRDLtool'),
+        actions: const [
           HomeButton(),
         ],
       ),
@@ -27,15 +27,15 @@ class MaterieelIncidenten extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(title: 'Materieel'),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Je kunt op drie manieren een melding krijgen over materieel:',
@@ -43,9 +43,9 @@ class MaterieelIncidenten extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -55,7 +55,7 @@ class MaterieelIncidenten extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -65,7 +65,7 @@ class MaterieelIncidenten extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -74,9 +74,9 @@ class MaterieelIncidenten extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: BodyText(
                               text: 'Als de melding niet van de machinist komt, licht je de machinist van de betrokken trein in.',
@@ -96,7 +96,7 @@ class MaterieelIncidenten extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: TitleText(
                               title: 'Ga snel naar',
@@ -104,42 +104,42 @@ class MaterieelIncidenten extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          NavButton(
+                          const NavButton(
                             buttontext: 'Vaste rem',
                             destination: 'vasterem',
                           ),
-                          SizedBoxH(),
+                          const SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'ATB Veiligheidsstoring',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          SizedBoxH(),
+                          const SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'Hotbox & Quo Vadis',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
-                          SizedBoxH(),
+                          const SizedBoxH(),
                           ElevatedButton(
                             onPressed: () {
                               //TODO;
                             },
                             child: Text(
                               'Gevaarlijke Stoffen',
-                              style: GoogleFonts.questrial(textStyle: TextStyle(fontWeight: FontWeight.bold)),
+                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
                             ),
                           ),
                         ],
