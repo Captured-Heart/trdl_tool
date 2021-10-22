@@ -1,4 +1,4 @@
-import 'all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -17,10 +17,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    /* Check if user is already signed in*/
+    /*Check if user is already signed in*/
     if (alreadySignedInUser != null) {
       Logger().d('User is known and logged in, go to home_screen.');
       Timer(
+        /*Set timer duration to 2 seconds*/
         const Duration(seconds: 2),
         () => Navigator.pushReplacement(
           context,
@@ -74,12 +75,11 @@ class _SplashScreenState extends State<SplashScreen> {
             const SizedBox(
               height: 24.0,
             ),
-            Text(
-              'powered by',
-              style: GoogleFonts.questrial(
-                  textStyle: const TextStyle(
+            const Text(
+              Strings.splashPoweredBy,
+              style: TextStyle(
                 fontSize: 8.0,
-              )),
+              ),
             ),
             SizedBox(
               height: 30.0,
@@ -88,12 +88,11 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Image.asset('assets/images/plotsklappsLogo.png'),
             ),
             const SizedBoxH(),
-            Text(
-              'and',
-              style: GoogleFonts.questrial(
-                  textStyle: const TextStyle(
+            const Text(
+              Strings.splashAnd,
+              style: TextStyle(
                 fontSize: 8.0,
-              )),
+              ),
             ),
             const SizedBoxH(),
             const SizedBox(

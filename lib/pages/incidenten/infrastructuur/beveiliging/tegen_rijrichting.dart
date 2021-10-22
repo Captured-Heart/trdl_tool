@@ -126,7 +126,7 @@ class TegenRijrichting extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                                 text:
-                                    '- Keren op de vrije baan bij dubbel/enkelspoor beveiliging:'),
+                                    '- Keren op de vrije baan bij dubbel/enkelspoor beveiliging:',),
                           ),
                         ],
                       ),
@@ -136,7 +136,7 @@ class TegenRijrichting extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                                 text:
-                                    '- Geef een aanwijzing OVW af voor de overwegen waarvan de trein de aankondiging volledige gepasseerd is.'),
+                                    '- Geef een aanwijzing OVW af voor de overwegen waarvan de trein de aankondiging volledige gepasseerd is.',),
                           ),
                         ],
                       ),

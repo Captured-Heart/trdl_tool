@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
 class RoundedButton extends StatelessWidget {
-  const RoundedButton({Key? key, required this.text, required this.color, required this.onPressed,}) : super(key: key,);
+  const RoundedButton({required this.text, required this.color, required this.onPressed, Key? key,}) : super(key: key,);
   final Color color;
   final String text;
   final VoidCallback onPressed;

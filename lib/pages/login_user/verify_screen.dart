@@ -83,7 +83,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               style: GoogleFonts.questrial(
                   textStyle: const TextStyle(
                 fontSize: 8.0,
-              )),
+              ),),
             ),
             SizedBox(
               height: 30.0,
@@ -96,7 +96,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               style: GoogleFonts.questrial(
                   textStyle: const TextStyle(
                 fontSize: 8.0,
-              )),
+              ),),
             ),
             const SizedBox(
               height: 30.0,

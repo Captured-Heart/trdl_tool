@@ -126,7 +126,7 @@ class MessagesStream extends StatelessWidget {
           final messageBubble = MessageBubble(
               sender: messageSender,
               message: messageText,
-              isMe: currentUser == messageSender);
+              isMe: currentUser == messageSender,);
           messageBubbles.add(messageBubble);
         }
         return Expanded(
@@ -145,7 +145,7 @@ class MessagesStream extends StatelessWidget {
 }
 
 class MessageBubble extends StatelessWidget {
-  const MessageBubble({Key? key, required this.sender, required this.message, required this.isMe,}) : super(key: key);
+  const MessageBubble({required this.sender, required this.message, required this.isMe, Key? key,}) : super(key: key);
   final String message;
   final String sender;
   final bool isMe;
@@ -186,7 +186,7 @@ class MessageBubble extends StatelessWidget {
                     color: isMe ? Colors.white : Colors.black,
                   ),
                 ),
-              )),
+              ),),
         ],
       ),
     );

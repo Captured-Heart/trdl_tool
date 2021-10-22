@@ -43,7 +43,7 @@ class HomeIndex0 extends StatelessWidget {
                           Expanded(
                             child: TitleText(
                                 title:
-                                    'Verantwoordelijkheden Treindienstleider'),
+                                    'Verantwoordelijkheden Treindienstleider',),
                           ),
                         ],
                       ),

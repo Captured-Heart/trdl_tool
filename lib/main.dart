@@ -1,4 +1,4 @@
-import 'all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 void main() async {
   /*Standard methods for Firebase usage*/
@@ -18,12 +18,11 @@ class MainEntry extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'TRDL-tool',
-      //TODO: Get GoogleFonts.questrial() inside the FlexColorScheme
+      title: Strings.mainTitle,
       /*Package from FlexColorScheme, making the WHOLE APP the same theme*/
-      theme: FlexColorScheme.light(scheme: FlexScheme.jungle).toTheme,
-      darkTheme: FlexColorScheme.dark(scheme: FlexScheme.jungle).toTheme,
-      //TODO: Make a custom switch in app for light/dark mode
+      theme: FlexColorScheme.light(scheme: FlexScheme.jungle, fontFamily: 'Questrial',).toTheme,
+      darkTheme: FlexColorScheme.dark(scheme: FlexScheme.jungle, fontFamily: 'Questrial',).toTheme,
+      // TODO(username): add day/night switch, https://URL-to-issue.
       themeMode: ThemeMode.system,
       /*MainEntry goes to splash_screen*/
       home: const SplashScreen(),

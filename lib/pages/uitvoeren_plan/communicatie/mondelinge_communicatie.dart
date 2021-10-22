@@ -70,7 +70,7 @@ class MondelingeCommunicatie extends StatelessWidget {
                           Expanded(
                               child: BodyText(
                             text: '- Houd je aan de gespreksdiscipline.',
-                          )),
+                          ),),
                         ],
                       ),
                     ],

@@ -2,18 +2,16 @@ import 'package:trdl_tool/all_imports.dart';
 
 /*Appbar Text*/
 class AppBarText extends StatelessWidget {
-  const AppBarText({Key? key, required this.title}) : super(key: key);
+  const AppBarText({required this.title, Key? key}) : super(key: key);
   final String title;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: GoogleFonts.questrial(
-        textStyle: const TextStyle(
+      style: const TextStyle(
           fontWeight: FontWeight.w700,
         ),
-      ),
     );
   }
 }
@@ -36,7 +34,7 @@ class HomeButton extends StatelessWidget {
 
 /*Title Text*/
 class TitleText extends StatelessWidget {
-  const TitleText({Key? key, required this.title}) : super(key: key);
+  const TitleText({required this.title, Key? key}) : super(key: key);
   final String title;
 
   @override
@@ -54,7 +52,7 @@ class TitleText extends StatelessWidget {
 
 /*Subtitle Text*/
 class SubTitleText extends StatelessWidget {
-  const SubTitleText({Key? key, required this.subtitle}) : super(key: key);
+  const SubTitleText({required this.subtitle, Key? key}) : super(key: key);
   final String subtitle;
 
   @override
@@ -73,7 +71,7 @@ class SubTitleText extends StatelessWidget {
 
 /*Body Text*/
 class BodyText extends StatelessWidget {
-  const BodyText({Key? key, required this.text}) : super(key: key);
+  const BodyText({required this.text, Key? key}) : super(key: key);
   final String text;
 
   @override
@@ -113,7 +111,7 @@ class SizedBoxW extends StatelessWidget {
 
 /*Navigation Button*/
 class NavButton extends StatelessWidget {
-  const NavButton({Key? key, required this.buttontext, required this.destination,}) : super(key: key);
+  const NavButton({required this.buttontext, required this.destination, Key? key,}) : super(key: key);
   final String destination;
   final String buttontext;
 

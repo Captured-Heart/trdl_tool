@@ -44,7 +44,7 @@ class HomeIndex1 extends StatelessWidget {
                           Expanded(
                             child: TitleText(
                                 title:
-                                    'Achtergrondinformatie Treindienstleider'),
+                                    'Achtergrondinformatie Treindienstleider',),
                           ),
                         ],
                       ),

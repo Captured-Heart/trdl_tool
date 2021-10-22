@@ -27,21 +27,21 @@ class _ProQuizState extends State<ProQuiz> {
     Question('Marrakesh is the capital of Morocco', false),
     Question(
         'Idina Menzel sings \'let it go\' 20 times in \'Let It Go\' from Frozen',
-        false),
+        false,),
     Question(
-        'Waterloo has the greatest number of tube platforms in London', true),
+        'Waterloo has the greatest number of tube platforms in London', true,),
     Question('M&M stands for Mars and Moordale', false),
     Question('Gin is typically included in a Long Island Iced Tea', true),
     Question('The unicorn is the national animal of Scotland', true),
     Question(
-        'There are two parts of the body that can\t heal themselves', false),
+        'There are two parts of the body that can\t heal themselves', false,),
     Question('Howard Donald is the oldest member of Take That', true),
     Question(
         'The Great Wall of China is longer than the distance between London and Beijing',
-        true),
+        true,),
     Question('There are 219 episodes of Friends', false),
     Question(
-        '\'A\' is the most common letter used in the English language', false),
+        '\'A\' is the most common letter used in the English language', false,),
     Question('A lion\'s roar can be heard up to eight kilometres away', true),
   ];
 

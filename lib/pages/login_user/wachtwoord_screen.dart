@@ -28,7 +28,7 @@ class _WachtwoordState extends State<Wachtwoord> {
                   children: [
                     Expanded(
                         child: Image.asset(
-                            'assets/images/trdlToolLogoSmallPNG.png')),
+                            'assets/images/trdlToolLogoSmallPNG.png',),),
                   ],
                 ),
               ),

@@ -14,10 +14,13 @@ export 'package:google_fonts/google_fonts.dart';
 export 'package:flex_color_scheme/flex_color_scheme.dart';
 export 'package:flutter_spinkit/flutter_spinkit.dart';
 export 'package:logger/logger.dart';
+export 'package:day_night_switcher/day_night_switcher.dart';
 
 //Modules and services
 export 'package:trdl_tool/item_lists/welcome_items.dart';
+export 'package:trdl_tool/item_lists/all_strings.dart';
 export 'package:trdl_tool/customs/custom_widgets.dart';
+export 'package:trdl_tool/services/firebase_services.dart';
 
 //Main pages
 export 'package:trdl_tool/splash_screen.dart';

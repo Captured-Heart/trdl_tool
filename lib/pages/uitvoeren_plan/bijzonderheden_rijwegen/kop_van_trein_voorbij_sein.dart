@@ -31,7 +31,7 @@ class KopvanTrein extends StatelessWidget {
                           Expanded(
                             child: TitleText(
                                 title:
-                                    'Kop van de trein/rangeerdeel voorbij het sein'),
+                                    'Kop van de trein/rangeerdeel voorbij het sein',),
                           ),
                         ],
                       ),

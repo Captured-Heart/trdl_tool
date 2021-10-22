@@ -1,4 +1,4 @@
-import 'all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -35,32 +35,27 @@ class _WelcomeScreen extends State<WelcomeScreen> {
                       Text(
                         /*Header comes from welcome_items.dart*/
                         item['header'],
-                        style: GoogleFonts.questrial(
-                          textStyle: const TextStyle(
+                        style: const TextStyle(
                             fontSize: 50.0,
                             color: Color(0xFF0D4F18),
                           ),
                         ),
-                      ),
                       Text(
                         /*Description comes from welcome_items.dart*/
                         item['description'],
                         textAlign: TextAlign.center,
-                        style: GoogleFonts.questrial(
-                          textStyle: (const TextStyle(
+                        style: const TextStyle(
                             fontSize: 16.0,
                             color: Colors.grey,
                             letterSpacing: 1.2,
                             height: 1.3,
-                          )),
-                        ),
-                      )
+                          ),),
                     ],
                   ),
                 ),
               )
             ],
-          )))
+          ),),)
       .toList();
 
   List<Widget> indicator() => List<Widget>.generate(
@@ -74,8 +69,8 @@ class _WelcomeScreen extends State<WelcomeScreen> {
                 /*This green color is taken from FlexColorScheme Jungle*/
                     ? const Color(0xFF0D4F18)
                     : const Color(0xFF0D4F18).withOpacity(0.3),
-                borderRadius: BorderRadius.circular(10.0)),
-          ));
+                borderRadius: BorderRadius.circular(10.0),),
+          ),);
 
   double currentPage = 0.0;
   final _pageViewController = PageController();
@@ -95,9 +90,8 @@ class _WelcomeScreen extends State<WelcomeScreen> {
             ),
           );
         },
-        label: Text(
-          'VERDER',
-          style: GoogleFonts.questrial(),
+        label: const Text(
+          Strings.welcomeFAB,
         ),
       ),
       body: Stack(
