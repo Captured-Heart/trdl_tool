@@ -59,7 +59,6 @@ class _RegisterState extends State<Register> {
                                 onChanged: (value) {
                                   email = value;
                                 },
-                                style: GoogleFonts.questrial(),
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
@@ -78,7 +77,6 @@ class _RegisterState extends State<Register> {
                                 onChanged: (value) {
                                   password = value;
                                 },
-                                style: GoogleFonts.questrial(),
                                 obscureText: true,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
@@ -98,13 +96,11 @@ class _RegisterState extends State<Register> {
                                 if (email.isEmpty || !email.contains('@prorail.nl')) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
-                                      content: Text(
+                                      content: const Text(
                                         'Controleer het emailadres. LET OP: Het emailadres moet eindingen op @prorail.nl',
-                                        style: GoogleFonts.questrial(
-                                          textStyle: const TextStyle(
+                                        style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                           ),
-                                        ),
                                       ),
                                       action: SnackBarAction(
                                         label: 'OK',
@@ -115,13 +111,11 @@ class _RegisterState extends State<Register> {
                                 } else if (password.length < 6) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
-                                      content: Text(
+                                      content: const Text(
                                         'Kies een wachtwoord van minimaal 6 tekens',
-                                        style: GoogleFonts.questrial(
-                                          textStyle: const TextStyle(
+                                        style: TextStyle(
                                             fontWeight: FontWeight.bold,
                                           ),
-                                        ),
                                       ),
                                       action: SnackBarAction(
                                         label: 'OK',
@@ -131,20 +125,16 @@ class _RegisterState extends State<Register> {
                                   );
                                 } else {
                                   try {
-                                    final newUser = await _auth.createUserWithEmailAndPassword(email: email, password: password);
-                                    if (newUser != null) {
-                                      Navigator.pushReplacementNamed(context, 'verifyscreen');
-                                    }
+                                    await _auth.createUserWithEmailAndPassword(email: email, password: password);
+                                    Navigator.pushReplacementNamed(context, 'verifyscreen');
                                   } catch (errorMessage) {
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
                                         content: Text(
                                           'Er is iets misgegaan: $errorMessage',
-                                          style: GoogleFonts.questrial(
-                                            textStyle: const TextStyle(
+                                          style: const TextStyle(
                                               fontWeight: FontWeight.bold,
                                             ),
-                                          ),
                                         ),
                                         action: SnackBarAction(
                                           label: 'OK',
@@ -172,11 +162,9 @@ class _RegisterState extends State<Register> {
                     onPressed: () {
                       Navigator.pushNamed(context, 'login');
                     },
-                    child: Text(
+                    child: const Text(
                       'Heb je al een account?',
-                      style: GoogleFonts.questrial(
-                        textStyle: const TextStyle(fontWeight: FontWeight.bold),
-                      ),
+                      style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],

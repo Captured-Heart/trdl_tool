@@ -10,7 +10,7 @@ class MaterieelOngeplandWerk extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(title: 'TRDLtool',),
         actions: const [
           HomeButton(),
         ],

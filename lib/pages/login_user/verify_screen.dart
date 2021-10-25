@@ -50,7 +50,8 @@ class _VerifyScreenState extends State<VerifyScreen> {
               child: Row(
                 children: [
                   Expanded(
-                    child: Image.asset('assets/images/trdlToolLogoSmallPNG.png'),
+                    child:
+                        Image.asset('assets/images/trdlToolLogoSmallPNG.png'),
                   ),
                 ],
               ),
@@ -60,11 +61,9 @@ class _VerifyScreenState extends State<VerifyScreen> {
             ),
             Text(
               'Een verificatie email is verstuurd naar ${user!.email}, controleer ook de junk-/spamfolder. U wordt doorgestuurd naar de inlogpagina als u op de verificatielink hebt geklikt.',
-              style: GoogleFonts.questrial(
-                textStyle: const TextStyle(
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.w700,
-                ),
+              style: const TextStyle(
+                fontSize: 24.0,
+                fontWeight: FontWeight.w700,
               ),
               textAlign: TextAlign.center,
             ),
@@ -78,12 +77,11 @@ class _VerifyScreenState extends State<VerifyScreen> {
             const SizedBox(
               height: 24.0,
             ),
-            Text(
+            const Text(
               'powered by',
-              style: GoogleFonts.questrial(
-                  textStyle: const TextStyle(
+              style: TextStyle(
                 fontSize: 8.0,
-              ),),
+              ),
             ),
             SizedBox(
               height: 30.0,
@@ -91,12 +89,11 @@ class _VerifyScreenState extends State<VerifyScreen> {
               child: Image.asset('assets/images/plotsklappsLogo.png'),
             ),
             const SizedBoxH(),
-            Text(
+            const Text(
               'and',
-              style: GoogleFonts.questrial(
-                  textStyle: const TextStyle(
+              style: TextStyle(
                 fontSize: 8.0,
-              ),),
+              ),
             ),
             const SizedBox(
               height: 30.0,

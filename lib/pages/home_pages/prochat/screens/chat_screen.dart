@@ -14,8 +14,8 @@ class ChatScreen extends StatefulWidget {
 class _ChatScreenState extends State<ChatScreen> {
   final messageTextController = TextEditingController();
   final _auth = FirebaseAuth.instance;
-  bool showSpinner = false;
   late String messageText;
+  bool showSpinner = false;
 
   @override
   void initState() {
@@ -28,10 +28,10 @@ class _ChatScreenState extends State<ChatScreen> {
       final user = _auth.currentUser;
       if (user != null) {
         loggedInUser = user;
-        Logger().d('getCurrentUser() is called if user != null');
+        Logger().wtf('getCurrentUser() is called if user != null');
       }
     } catch (e) {
-      Logger().d(e);
+      Logger().wtf(e);
     }
   }
 
@@ -103,6 +103,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
 class MessagesStream extends StatelessWidget {
   const MessagesStream({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
@@ -124,9 +125,10 @@ class MessagesStream extends StatelessWidget {
           final currentUser = loggedInUser.email;
 
           final messageBubble = MessageBubble(
-              sender: messageSender,
-              message: messageText,
-              isMe: currentUser == messageSender,);
+            sender: messageSender,
+            message: messageText,
+            isMe: currentUser == messageSender,
+          );
           messageBubbles.add(messageBubble);
         }
         return Expanded(
@@ -145,7 +147,12 @@ class MessagesStream extends StatelessWidget {
 }
 
 class MessageBubble extends StatelessWidget {
-  const MessageBubble({required this.sender, required this.message, required this.isMe, Key? key,}) : super(key: key);
+  const MessageBubble({
+    required this.sender,
+    required this.message,
+    required this.isMe,
+    Key? key,
+  }) : super(key: key);
   final String message;
   final String sender;
   final bool isMe;
@@ -160,33 +167,38 @@ class MessageBubble extends StatelessWidget {
         children: [
           Text(
             sender,
-            style: GoogleFonts.questrial(
+            style: const TextStyle(
               fontSize: 12.0,
             ),
           ),
           Material(
-              shadowColor: Colors.white60,
-              elevation: 6.0,
-              borderRadius: BorderRadius.only(
-                topLeft: isMe ? const Radius.circular(24.0) : const Radius.circular(0.0),
-                topRight: isMe ? const Radius.circular(0.0) : const Radius.circular(24.0),
-                bottomLeft: const Radius.circular(24.0),
-                bottomRight: const Radius.circular(24.0),
+            shadowColor: Colors.white60,
+            elevation: 6.0,
+            borderRadius: BorderRadius.only(
+              topLeft: isMe
+                  ? const Radius.circular(24.0)
+                  : const Radius.circular(0.0),
+              topRight: isMe
+                  ? const Radius.circular(0.0)
+                  : const Radius.circular(24.0),
+              bottomLeft: const Radius.circular(24.0),
+              bottomRight: const Radius.circular(24.0),
+            ),
+            color: isMe ? const Color(0xFF0D4F18) : Colors.white60,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20.0,
+                vertical: 10.0,
               ),
-              color: isMe ? const Color(0xFF0D4F18) : Colors.white60,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20.0,
-                  vertical: 10.0,
+              child: Text(
+                message,
+                style: TextStyle(
+                  fontSize: 18.0,
+                  color: isMe ? Colors.white : Colors.black,
                 ),
-                child: Text(
-                  message,
-                  style: GoogleFonts.questrial(
-                    fontSize: 18.0,
-                    color: isMe ? Colors.white : Colors.black,
-                  ),
-                ),
-              ),),
+              ),
+            ),
+          ),
         ],
       ),
     );

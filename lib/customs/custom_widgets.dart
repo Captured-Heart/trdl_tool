@@ -10,8 +10,8 @@ class AppBarText extends StatelessWidget {
     return Text(
       title,
       style: const TextStyle(
-          fontWeight: FontWeight.w700,
-        ),
+        fontWeight: FontWeight.w700,
+      ),
     );
   }
 }
@@ -41,10 +41,8 @@ class TitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: GoogleFonts.questrial(
-        textStyle: const TextStyle(
-          fontSize: 24.0,
-        ),
+      style: const TextStyle(
+        fontSize: 24.0,
       ),
     );
   }
@@ -59,11 +57,9 @@ class SubTitleText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       subtitle,
-      style: GoogleFonts.questrial(
-        textStyle: const TextStyle(
-          fontSize: 18.0,
-          fontWeight: FontWeight.bold,
-        ),
+      style: const TextStyle(
+        fontSize: 18.0,
+        fontWeight: FontWeight.bold,
       ),
     );
   }
@@ -78,10 +74,8 @@ class BodyText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.questrial(
-        textStyle: const TextStyle(
-          fontSize: 16.0,
-        ),
+      style: const TextStyle(
+        fontSize: 16.0,
       ),
     );
   }
@@ -111,7 +105,11 @@ class SizedBoxW extends StatelessWidget {
 
 /*Navigation Button*/
 class NavButton extends StatelessWidget {
-  const NavButton({required this.buttontext, required this.destination, Key? key,}) : super(key: key);
+  const NavButton({
+    required this.buttontext,
+    required this.destination,
+    Key? key,
+  }) : super(key: key);
   final String destination;
   final String buttontext;
 
@@ -130,9 +128,45 @@ class NavButton extends StatelessWidget {
       ),
       child: Text(
         buttontext,
-        style: GoogleFonts.questrial(
-          textStyle: const TextStyle(
-            fontWeight: FontWeight.bold,
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
+  }
+}
+
+/*Rounded Button from ChatPage*/
+class RoundedButton extends StatelessWidget {
+  const RoundedButton({
+    required this.text,
+    required this.color,
+    required this.onPressed,
+    Key? key,
+  }) : super(
+          key: key,
+        );
+  final Color color;
+  final String text;
+  final VoidCallback onPressed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 16.0),
+      child: Material(
+        elevation: 5.0,
+        color: color,
+        borderRadius: BorderRadius.circular(30.0),
+        child: MaterialButton(
+          onPressed: onPressed,
+          minWidth: 200.0,
+          height: 42.0,
+          child: Text(
+            text,
+            style: const TextStyle(
+              color: Colors.white,
+            ),
           ),
         ),
       ),

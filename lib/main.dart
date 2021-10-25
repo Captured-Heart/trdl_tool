@@ -19,7 +19,7 @@ class MainEntry extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Strings.mainTitle,
-      /*Package from FlexColorScheme, making the WHOLE APP the same theme*/
+      /*Package from FlexColorScheme, making the WHOLE APP the same theme, including Questrial font*/
       theme: FlexColorScheme.light(scheme: FlexScheme.jungle, fontFamily: 'Questrial',).toTheme,
       darkTheme: FlexColorScheme.dark(scheme: FlexScheme.jungle, fontFamily: 'Questrial',).toTheme,
       // TODO(username): add day/night switch, https://URL-to-issue.

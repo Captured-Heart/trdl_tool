@@ -1,43 +1,43 @@
-//Flutter/Dart packages
+/*Flutter packages*/
 export 'package:flutter/material.dart';
 export 'package:flutter/painting.dart';
 export 'dart:async';
 export 'dart:math';
 
-//Firebase packages
+/*Firebase packages*/
 export 'package:firebase_core/firebase_core.dart';
 export 'package:cloud_firestore/cloud_firestore.dart';
 export 'package:firebase_auth/firebase_auth.dart';
 
-//Other packages
+/*Other packages*/
 export 'package:google_fonts/google_fonts.dart';
 export 'package:flex_color_scheme/flex_color_scheme.dart';
 export 'package:flutter_spinkit/flutter_spinkit.dart';
 export 'package:logger/logger.dart';
 export 'package:day_night_switcher/day_night_switcher.dart';
 
-//Modules and services
+/*Modules and services*/
 export 'package:trdl_tool/item_lists/welcome_items.dart';
 export 'package:trdl_tool/item_lists/all_strings.dart';
 export 'package:trdl_tool/customs/custom_widgets.dart';
-export 'package:trdl_tool/services/firebase_services.dart';
+export 'package:trdl_tool/customs/all_constants.dart';
 
-//Main pages
-export 'package:trdl_tool/splash_screen.dart';
+/*Main pages*/
+export 'package:trdl_tool/pages/login_user/splash_screen.dart';
 export 'package:trdl_tool/home_screen.dart';
-export 'package:trdl_tool/welcome_screen.dart';
+export 'package:trdl_tool/pages/login_user/welcome_screen.dart';
 export 'package:trdl_tool/pages/login_user/login_screen.dart';
 export 'package:trdl_tool/pages/login_user/register_screen.dart';
 export 'package:trdl_tool/pages/login_user/verify_screen.dart';
 export 'package:trdl_tool/pages/login_user/wachtwoord_screen.dart';
 
-//HomeScreen pages
+/*HomeScreen pages*/
 export 'package:trdl_tool/pages/home_pages/home_index0.dart';
 export 'package:trdl_tool/pages/home_pages/home_index1.dart';
 export 'package:trdl_tool/pages/home_pages/home_index2.dart';
 export 'package:trdl_tool/pages/home_pages/home_index3.dart';
 
-//Uitvoeren plan pages
+/*Uitvoeren plan pages*/
 export 'package:trdl_tool/pages/uitvoeren_plan/uitvoeren_plan.dart';
 export 'package:trdl_tool/pages/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden.dart';
 export 'package:trdl_tool/pages/uitvoeren_plan/geplande_werkzaamheden/aanvang_werkzaamheden.dart';
@@ -54,7 +54,7 @@ export 'package:trdl_tool/pages/uitvoeren_plan/communicatie/mondelinge_communica
 export 'package:trdl_tool/pages/uitvoeren_plan/ncbg/ncbg.dart';
 export 'package:trdl_tool/pages/uitvoeren_plan/dienstovergave/dienstovergave.dart';
 
-//Aanpassen plan pages
+/*Aanpassen plan pages*/
 export 'package:trdl_tool/pages/aanpassen_plan/aanpassen_plan.dart';
 export 'package:trdl_tool/pages/aanpassen_plan/stappenplan_versperringen.dart';
 export 'package:trdl_tool/pages/aanpassen_plan/orderacceptatie.dart';
@@ -63,7 +63,7 @@ export 'package:trdl_tool/pages/aanpassen_plan/ongepland_werk/materieel.dart';
 export 'package:trdl_tool/pages/aanpassen_plan/ongepland_werk/infra.dart';
 export 'package:trdl_tool/pages/aanpassen_plan/vertragingen.dart';
 
-//Incidenten pages
+/*Incidenten pages*/
 export 'package:trdl_tool/pages/incidenten/incidenten.dart';
 export 'package:trdl_tool/pages/incidenten/herroepen_sein.dart';
 export 'package:trdl_tool/pages/incidenten/derdendieren.dart';
@@ -99,11 +99,10 @@ export 'package:trdl_tool/pages/incidenten/materieel/gevaarlijke_stoffen/gevaarl
 export 'package:trdl_tool/pages/incidenten/materieel/gevaarlijke_stoffen/gevaarlijke_stoffen2.dart';
 export 'package:trdl_tool/pages/incidenten/materieel/gevaarlijke_stoffen/milieu_meldingen.dart';
 
-//ProQuiz pages
+/*ProQuiz pages*/
 export 'package:trdl_tool/pages/home_pages/proquiz/quizmain.dart';
 
-//ProChat pages
+/*ProChat pages*/
 export 'package:trdl_tool/pages/home_pages/prochat/prochatmain.dart';
 export 'package:trdl_tool/pages/home_pages/prochat/constants.dart';
 export 'package:trdl_tool/pages/home_pages/prochat/screens/chat_screen.dart';
-export 'package:trdl_tool/pages/home_pages/prochat/components/rounded_button.dart';

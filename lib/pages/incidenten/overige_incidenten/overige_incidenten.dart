@@ -10,7 +10,9 @@ class OverigeIncidenten extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -62,9 +64,11 @@ class OverigeIncidenten extends StatelessWidget {
                             onPressed: () {
                               //TODO
                             },
-                            child: Text(
+                            child: const Text(
                               'Gestrande Trein',
-                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           const SizedBoxH(),
@@ -72,9 +76,11 @@ class OverigeIncidenten extends StatelessWidget {
                             onPressed: () {
                               //TODO;
                             },
-                            child: Text(
+                            child: const Text(
                               'Brand',
-                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           const SizedBoxH(),
@@ -82,9 +88,11 @@ class OverigeIncidenten extends StatelessWidget {
                             onPressed: () {
                               //TODO;
                             },
-                            child: Text(
+                            child: const Text(
                               'Weersomstandigheden',
-                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           const SizedBoxH(),
@@ -92,9 +100,11 @@ class OverigeIncidenten extends StatelessWidget {
                             onPressed: () {
                               //TODO;
                             },
-                            child: Text(
+                            child: const Text(
                               'Ontruimen Post',
-                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           const SizedBoxH(),
@@ -102,9 +112,11 @@ class OverigeIncidenten extends StatelessWidget {
                             onPressed: () {
                               //TODO;
                             },
-                            child: Text(
+                            child: const Text(
                               'Stroomstoring',
-                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           const SizedBoxH(),
@@ -112,9 +124,11 @@ class OverigeIncidenten extends StatelessWidget {
                             onPressed: () {
                               //TODO;
                             },
-                            child: Text(
+                            child: const Text(
                               'Wissels Vrijmaken',
-                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           const SizedBoxH(),
@@ -122,9 +136,11 @@ class OverigeIncidenten extends StatelessWidget {
                             onPressed: () {
                               //TODO;
                             },
-                            child: Text(
+                            child: const Text(
                               'STS Passage',
-                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           const SizedBoxH(),
@@ -132,9 +148,11 @@ class OverigeIncidenten extends StatelessWidget {
                             onPressed: () {
                               //TODO;
                             },
-                            child: Text(
+                            child: const Text(
                               'Stilleggen Treindienst',
-                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           const SizedBoxH(),
@@ -142,9 +160,11 @@ class OverigeIncidenten extends StatelessWidget {
                             onPressed: () {
                               //TODO;
                             },
-                            child: Text(
+                            child: const Text(
                               'Systeemstoring',
-                              style: GoogleFonts.questrial(textStyle: const TextStyle(fontWeight: FontWeight.bold)),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],

@@ -9,6 +9,7 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   final _auth = FirebaseAuth.instance;
+  late User user;
   late String email;
   late String password;
 
@@ -27,7 +28,11 @@ class _LoginState extends State<Login> {
                 ),
                 child: Row(
                   children: [
-                    Expanded(child: Image.asset('assets/images/trdlToolLogoSmallPNG.png')),
+                    Expanded(
+                      child: Image.asset(
+                        'assets/images/trdlToolLogoSmallPNG.png',
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -59,7 +64,6 @@ class _LoginState extends State<Login> {
                                 onChanged: (value) {
                                   email = value;
                                 },
-                                style: GoogleFonts.questrial(),
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
@@ -79,11 +83,11 @@ class _LoginState extends State<Login> {
                                   password = value;
                                 },
                                 obscureText: true,
-                                style: GoogleFonts.questrial(),
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
-                                  hintText: 'Wachtwoord bevat minimaal 6 tekens',
+                                  hintText:
+                                      'Wachtwoord bevat minimaal 6 tekens',
                                 ),
                               ),
                             ),
@@ -96,20 +100,27 @@ class _LoginState extends State<Login> {
                             ElevatedButton(
                               onPressed: () async {
                                 try {
-                                  final user = await _auth.signInWithEmailAndPassword(email: email, password: password);
-
-                                  if (user != null && _auth.currentUser!.emailVerified) {
-                                    Navigator.pushReplacementNamed(context, 'homescreen');
+                                  await _auth.signInWithEmailAndPassword(
+                                    email: email,
+                                    password: password,
+                                  );
+                                  if (_auth.currentUser!.emailVerified) {
+                                    Navigator.pushReplacementNamed(
+                                      context,
+                                      'homescreen',
+                                    );
+                                  } else if (!_auth
+                                      .currentUser!.emailVerified) {
+                                    Logger().wtf(
+                                      'Gebruiker heeft zijn emailadres nog niet geverifieerd.',
+                                    );
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      snackBarLoginEmailVerificatie,
+                                    );
                                   }
                                 } catch (e) {
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: const Text('Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?'),
-                                      action: SnackBarAction(
-                                        label: 'OK',
-                                        onPressed: () {},
-                                      ),
-                                    ),
+                                    snackBarLoginErIsIetsMis,
                                   );
                                 }
                               },
@@ -133,10 +144,10 @@ class _LoginState extends State<Login> {
                         'register',
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'Nog geen account?',
-                      style: GoogleFonts.questrial(
-                        textStyle: const TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
@@ -152,10 +163,10 @@ class _LoginState extends State<Login> {
                         'wachtwoordscreen',
                       );
                     },
-                    child: Text(
+                    child: const Text(
                       'Wachtwoord vergeten?',
-                      style: GoogleFonts.questrial(
-                        textStyle: const TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),

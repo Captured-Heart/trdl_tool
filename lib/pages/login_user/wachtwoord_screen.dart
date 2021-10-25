@@ -27,8 +27,10 @@ class _WachtwoordState extends State<Wachtwoord> {
                 child: Row(
                   children: [
                     Expanded(
-                        child: Image.asset(
-                            'assets/images/trdlToolLogoSmallPNG.png',),),
+                      child: Image.asset(
+                        'assets/images/trdlToolLogoSmallPNG.png',
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -63,7 +65,6 @@ class _WachtwoordState extends State<Wachtwoord> {
                                 onChanged: (value) {
                                   email = value;
                                 },
-                                style: GoogleFonts.questrial(),
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
@@ -80,42 +81,14 @@ class _WachtwoordState extends State<Wachtwoord> {
                             ElevatedButton(
                               onPressed: () {
                                 try {
-                                  if (email != null) {
-                                    _auth.sendPasswordResetEmail(email: email);
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        content: Text(
-                                          'Een resetlink om het wachtwoord te wijzigen is verzonden naar $email',
-                                          style: GoogleFonts.questrial(
-                                            textStyle: const TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
-                                          ),
-                                        ),
-                                        action: SnackBarAction(
-                                          label: 'OK',
-                                          onPressed: () {},
-                                        ),
-                                      ),
-                                    );
-                                    Navigator.of(context).pop;
-                                  }
+                                  _auth.sendPasswordResetEmail(email: email);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    snackBarWachtwoordEmailVerzonden,
+                                  );
+                                  Navigator.of(context).pop;
                                 } catch (e) {
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: Text(
-                                        'Er is iets mis!\nBen je al geregistreerd?',
-                                        style: GoogleFonts.questrial(
-                                          textStyle: const TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ),
-                                      action: SnackBarAction(
-                                        label: 'OK',
-                                        onPressed: () {},
-                                      ),
-                                    ),
+                                    snackBarWachtwoordErIsIetsMis,
                                   );
                                 }
                               },
@@ -136,10 +109,10 @@ class _WachtwoordState extends State<Wachtwoord> {
                     onPressed: () {
                       Navigator.pushReplacementNamed(context, 'login');
                     },
-                    child: Text(
+                    child: const Text(
                       'Terug naar login',
-                      style: GoogleFonts.questrial(
-                        textStyle: const TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
