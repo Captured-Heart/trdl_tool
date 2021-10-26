@@ -4,7 +4,7 @@ void main() async {
   /*Standard methods for Firebase usage*/
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  Logger().d('App started from main().');
+  Logger().wtf('App started from main().');
   runApp(
     /*Main entry point for the app! DO NOT ALTER!*/
     const MainEntry(),
@@ -20,11 +20,17 @@ class MainEntry extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: Strings.mainTitle,
       /*Package from FlexColorScheme, making the WHOLE APP the same theme, including Questrial font*/
-      theme: FlexColorScheme.light(scheme: FlexScheme.jungle, fontFamily: 'Questrial',).toTheme,
-      darkTheme: FlexColorScheme.dark(scheme: FlexScheme.jungle, fontFamily: 'Questrial',).toTheme,
-      // TODO(username): add day/night switch, https://URL-to-issue.
+      theme: FlexColorScheme.light(
+        scheme: FlexScheme.jungle,
+        fontFamily: 'Questrial',
+      ).toTheme,
+      darkTheme: FlexColorScheme.dark(
+        scheme: FlexScheme.jungle,
+        fontFamily: 'Questrial',
+      ).toTheme,
+      // TODO(plotsklapps): add day/night switch, https://URL-to-issue.
       themeMode: ThemeMode.system,
-      /*MainEntry goes to splash_screen*/
+      /*MainEntry always goes to splash_screen*/
       home: const SplashScreen(),
       routes: {
         /*First Page routes*/
@@ -60,7 +66,8 @@ class MainEntry extends StatelessWidget {
 
         /*Aanpassen Plan routes*/
         'aanpassenplan': (context) => const AanpassenPlan(),
-        'stappenplanversperringen': (context) => const StappenplanVersperringen(),
+        'stappenplanversperringen': (context) =>
+            const StappenplanVersperringen(),
         'ongeplandwerk': (context) => const OngeplandWerk(),
         'orderacceptatie': (context) => const Orderacceptatie(),
         'materieelongeplandwerk': (context) => const MaterieelOngeplandWerk(),

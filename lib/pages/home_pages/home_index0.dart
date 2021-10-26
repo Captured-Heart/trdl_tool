@@ -11,23 +11,13 @@ class HomeIndex0 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        leading: const Padding(
-          padding: EdgeInsets.only(left: 8.0, top: 8.0, bottom: 8.0),
-          child: CircleAvatar(
-            child: Icon(Icons.person),
-          ),
-        ),
+        leading: const AvatarMenu(),
         title: const AppBarText(title: 'TRDLtool'),
         actions: [
-          IconButton(
-            onPressed: () {
-              _auth.signOut();
-              Navigator.pushReplacementNamed(context, 'login');
-            },
-            icon: const Icon(Icons.logout),
-          ),
+          LogOutButton(auth: _auth),
         ],
       ),
+      drawer: const DrawerWidget(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -42,8 +32,8 @@ class HomeIndex0 extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: TitleText(
-                                title:
-                                    'Verantwoordelijkheden Treindienstleider',),
+                              title: 'Verantwoordelijkheden Treindienstleider',
+                            ),
                           ),
                         ],
                       ),

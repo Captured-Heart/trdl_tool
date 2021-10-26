@@ -19,17 +19,13 @@ class _RegisterState extends State<Register> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(
+              const Padding(
+                padding: EdgeInsets.only(
                   top: 16.0,
                   left: 24.0,
                   right: 24.0,
                 ),
-                child: Row(
-                  children: [
-                    Expanded(child: Image.asset('assets/images/trdlToolLogoSmallPNG.png')),
-                  ],
-                ),
+                child: TRDLtoolLogo(),
               ),
               const SizedBoxH(),
               SizedBox(
@@ -53,6 +49,7 @@ class _RegisterState extends State<Register> {
                         Row(
                           children: [
                             Expanded(
+                              /*Email Textfield*/
                               child: TextField(
                                 keyboardType: TextInputType.emailAddress,
                                 textAlign: TextAlign.center,
@@ -62,7 +59,8 @@ class _RegisterState extends State<Register> {
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
-                                  hintText: 'Vul een geldig @PRORAIL.NL adres in',
+                                  hintText:
+                                      'Vul een geldig @PRORAIL.NL adres in',
                                 ),
                               ),
                             ),
@@ -72,6 +70,7 @@ class _RegisterState extends State<Register> {
                         Row(
                           children: [
                             Expanded(
+                              /*Password Textfield*/
                               child: TextField(
                                 textAlign: TextAlign.center,
                                 onChanged: (value) {
@@ -81,7 +80,8 @@ class _RegisterState extends State<Register> {
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Wachtwoord',
-                                  hintText: 'Wachtwoord bevat minimaal 6 tekens',
+                                  hintText:
+                                      'Wachtwoord bevat minimaal 6 tekens',
                                 ),
                               ),
                             ),
@@ -93,48 +93,37 @@ class _RegisterState extends State<Register> {
                           children: [
                             ElevatedButton(
                               onPressed: () async {
-                                if (email.isEmpty || !email.contains('@prorail.nl')) {
+                                /*Check if email is empty OR does NOT contain @prorail.nl*/
+                                if (email.isEmpty ||
+                                    !email.contains('@prorail.nl')) {
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: const Text(
-                                        'Controleer het emailadres. LET OP: Het emailadres moet eindingen op @prorail.nl',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                      ),
-                                      action: SnackBarAction(
-                                        label: 'OK',
-                                        onPressed: () {},
-                                      ),
-                                    ),
+                                    snackBarRegisterEmailWrong,
                                   );
-                                } else if (password.length < 6) {
+                                }
+                                /*Check if password length is >= 6 for Firebase*/
+                                else if (password.length < 6) {
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: const Text(
-                                        'Kies een wachtwoord van minimaal 6 tekens',
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                      ),
-                                      action: SnackBarAction(
-                                        label: 'OK',
-                                        onPressed: () {},
-                                      ),
-                                    ),
+                                    snackBarRegisterPasswordShort,
                                   );
                                 } else {
                                   try {
-                                    await _auth.createUserWithEmailAndPassword(email: email, password: password);
-                                    Navigator.pushReplacementNamed(context, 'verifyscreen');
-                                  } catch (errorMessage) {
+                                    /*Create user and go to verify_screen*/
+                                    await _auth.createUserWithEmailAndPassword(
+                                        email: email, password: password);
+                                    Navigator.pushReplacementNamed(
+                                        context, 'verifyscreen');
+                                  }
+                                  /*Catch all errors and show snack with error*/
+                                  catch (errorMessage) {
+                                    Logger()
+                                        .wtf('Er is iets mis: $errorMessage');
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
                                         content: Text(
                                           'Er is iets misgegaan: $errorMessage',
                                           style: const TextStyle(
-                                              fontWeight: FontWeight.bold,
-                                            ),
+                                            fontWeight: FontWeight.bold,
+                                          ),
                                         ),
                                         action: SnackBarAction(
                                           label: 'OK',
@@ -160,6 +149,7 @@ class _RegisterState extends State<Register> {
                 children: [
                   TextButton(
                     onPressed: () {
+                      /*Back to login*/
                       Navigator.pushNamed(context, 'login');
                     },
                     child: const Text(

@@ -87,7 +87,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          Logger().d('User skips welcome_screen to login_screen.');
+          Logger().wtf('User skips welcome_screen to login_screen.');
           /*Used to skip or move on from welcome_screen to login_screen*/
           Navigator.push(
             context,

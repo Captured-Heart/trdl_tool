@@ -1,5 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
+/*Darkgreen color constant*/
+
+int kDarkGreen = 0xFF0D4F18;
+
 /*ProChat constants*/
 late String hintText;
 
@@ -44,7 +48,7 @@ final snackBarLoginEmailVerificatie = SnackBar(
     ),
   ),
   duration: const Duration(
-    seconds: 3,
+    seconds: 5,
   ),
   action: SnackBarAction(
     label: 'OK',
@@ -60,7 +64,7 @@ final snackBarLoginErIsIetsMis = SnackBar(
     ),
   ),
   duration: const Duration(
-    seconds: 3,
+    seconds: 5,
   ),
   action: SnackBarAction(
     label: 'OK',
@@ -76,7 +80,7 @@ final snackBarWachtwoordEmailVerzonden = SnackBar(
     ),
   ),
   duration: const Duration(
-    seconds: 3,
+    seconds: 5,
   ),
   action: SnackBarAction(
     label: 'OK',
@@ -92,7 +96,39 @@ final snackBarWachtwoordErIsIetsMis = SnackBar(
     ),
   ),
   duration: const Duration(
-    seconds: 3,
+    seconds: 5,
+  ),
+  action: SnackBarAction(
+    label: 'OK',
+    onPressed: () {},
+  ),
+);
+
+final snackBarRegisterEmailWrong = SnackBar(
+  content: const Text(
+    'Controleer het emailadres. LET OP: Het emailadres moet eindingen op @prorail.nl',
+    style: TextStyle(
+      fontWeight: FontWeight.bold,
+    ),
+  ),
+  duration: const Duration(
+    seconds: 5,
+  ),
+  action: SnackBarAction(
+    label: 'OK',
+    onPressed: () {},
+  ),
+);
+
+final snackBarRegisterPasswordShort = SnackBar(
+  content: const Text(
+    'Kies een wachtwoord van minimaal 6 tekens',
+    style: TextStyle(
+      fontWeight: FontWeight.bold,
+    ),
+  ),
+  duration: const Duration(
+    seconds: 5,
   ),
   action: SnackBarAction(
     label: 'OK',

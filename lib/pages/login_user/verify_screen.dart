@@ -41,20 +41,13 @@ class _VerifyScreenState extends State<VerifyScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(
+            const Padding(
+              padding: EdgeInsets.only(
                 top: 16.0,
                 left: 24.0,
                 right: 24.0,
               ),
-              child: Row(
-                children: [
-                  Expanded(
-                    child:
-                        Image.asset('assets/images/trdlToolLogoSmallPNG.png'),
-                  ),
-                ],
-              ),
+              child: TRDLtoolLogo(),
             ),
             const SizedBox(
               height: 24.0,
@@ -88,9 +81,8 @@ class _VerifyScreenState extends State<VerifyScreen> {
               width: 100.0,
               child: Image.asset('assets/images/plotsklappsLogo.png'),
             ),
-            const SizedBoxH(),
             const Text(
-              'and',
+              Strings.splashWith,
               style: TextStyle(
                 fontSize: 8.0,
               ),

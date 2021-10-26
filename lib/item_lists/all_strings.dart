@@ -4,7 +4,7 @@ class Strings {
 
   /*SPLASH strings*/
   static const String splashPoweredBy = 'powered by';
-  static const String splashAnd = 'and';
+  static const String splashWith = 'with';
 
   /*WELCOME strings*/
   static const String welcomeFAB = 'VERDER';

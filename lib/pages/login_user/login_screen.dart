@@ -20,21 +20,13 @@ class _LoginState extends State<Login> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(
+              const Padding(
+                padding: EdgeInsets.only(
                   top: 16.0,
                   left: 24.0,
                   right: 24.0,
                 ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Image.asset(
-                        'assets/images/trdlToolLogoSmallPNG.png',
-                      ),
-                    ),
-                  ],
-                ),
+                child: TRDLtoolLogo(),
               ),
               const SizedBoxH(),
               SizedBox(
@@ -58,6 +50,7 @@ class _LoginState extends State<Login> {
                         Row(
                           children: [
                             Expanded(
+                              /*Email Textfield*/
                               child: TextField(
                                 keyboardType: TextInputType.emailAddress,
                                 textAlign: TextAlign.center,
@@ -77,6 +70,7 @@ class _LoginState extends State<Login> {
                         Row(
                           children: [
                             Expanded(
+                              /*Password Textfield*/
                               child: TextField(
                                 textAlign: TextAlign.center,
                                 onChanged: (value) {
@@ -100,17 +94,23 @@ class _LoginState extends State<Login> {
                             ElevatedButton(
                               onPressed: () async {
                                 try {
+                                  /*Sign in*/
                                   await _auth.signInWithEmailAndPassword(
                                     email: email,
                                     password: password,
                                   );
+                                  /*If user clicked verification mail*/
                                   if (_auth.currentUser!.emailVerified) {
+                                    Logger().wtf(
+                                      'Gebruiker heeft netjes zijn emailadres geverifieerd.',
+                                    );
                                     Navigator.pushReplacementNamed(
                                       context,
                                       'homescreen',
                                     );
-                                  } else if (!_auth
-                                      .currentUser!.emailVerified) {
+                                  }
+                                  /*If user did NOT click verification mail*/
+                                  else if (!_auth.currentUser!.emailVerified) {
                                     Logger().wtf(
                                       'Gebruiker heeft zijn emailadres nog niet geverifieerd.',
                                     );
@@ -118,6 +118,7 @@ class _LoginState extends State<Login> {
                                       snackBarLoginEmailVerificatie,
                                     );
                                   }
+                                  /*All other error situations*/
                                 } catch (e) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarLoginErIsIetsMis,
@@ -139,6 +140,7 @@ class _LoginState extends State<Login> {
                 children: [
                   TextButton(
                     onPressed: () {
+                      /*Go to register_screen*/
                       Navigator.pushNamed(
                         context,
                         'register',
@@ -158,6 +160,7 @@ class _LoginState extends State<Login> {
                 children: [
                   TextButton(
                     onPressed: () {
+                      /*Go to wachtwoord_screen*/
                       Navigator.pushNamed(
                         context,
                         'wachtwoordscreen',

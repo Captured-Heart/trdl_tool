@@ -18,21 +18,13 @@ class _WachtwoordState extends State<Wachtwoord> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(
+              const Padding(
+                padding: EdgeInsets.only(
                   top: 16.0,
                   left: 24.0,
                   right: 24.0,
                 ),
-                child: Row(
-                  children: [
-                    Expanded(
-                      child: Image.asset(
-                        'assets/images/trdlToolLogoSmallPNG.png',
-                      ),
-                    ),
-                  ],
-                ),
+                child: TRDLtoolLogo(),
               ),
               const SizedBoxH(),
               const SizedBoxH(),
@@ -59,6 +51,7 @@ class _WachtwoordState extends State<Wachtwoord> {
                         Row(
                           children: [
                             Expanded(
+                              /*Email Textfield*/
                               child: TextField(
                                 keyboardType: TextInputType.emailAddress,
                                 textAlign: TextAlign.center,
@@ -68,7 +61,8 @@ class _WachtwoordState extends State<Wachtwoord> {
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
-                                  hintText: 'Vul een geldig emailadres in',
+                                  hintText:
+                                      'Vul een geldig @prorail.nl emailadres in',
                                 ),
                               ),
                             ),
@@ -81,12 +75,22 @@ class _WachtwoordState extends State<Wachtwoord> {
                             ElevatedButton(
                               onPressed: () {
                                 try {
+                                  /*Send password reset link*/
+                                  Logger().wtf(
+                                    'Password reset mail sent to $email',
+                                  );
                                   _auth.sendPasswordResetEmail(email: email);
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarWachtwoordEmailVerzonden,
                                   );
-                                  Navigator.of(context).pop;
-                                } catch (e) {
+                                  Navigator.pushNamed(
+                                    context,
+                                    'login',
+                                  );
+                                }
+                                /*Catch all errors and show in snack*/
+                                catch (errorMessage) {
+                                  Logger().wtf('Er is iets mis: $errorMessage');
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarWachtwoordErIsIetsMis,
                                   );
