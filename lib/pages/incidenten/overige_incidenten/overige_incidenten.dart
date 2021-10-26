@@ -102,7 +102,7 @@ class OverigeIncidenten extends StatelessWidget {
                           const SizedBoxH(),
                           NavButton(
                             buttontext: 'Afhandelen systeemstoringen',
-                            destination: 'afhandelen systeemstoringen',
+                            destination: 'afhandelensysteemstoringen',
                           ),
                         ],
                       ),
