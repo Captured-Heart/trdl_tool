@@ -29,7 +29,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
 
   void _onItemTapped(int index) {
     setState(() {
-      Logger().d('User tapped BottomNavigationBarItem.');
+      /*On tap index is changed and new HomeIndex is shown*/
       _selectedIndex = index;
     });
   }
