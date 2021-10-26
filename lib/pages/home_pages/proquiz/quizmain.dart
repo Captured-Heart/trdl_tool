@@ -21,28 +21,21 @@ class _ProQuizState extends State<ProQuiz> {
   ];
 
   List<Question> questionBank = [
-    Question('Prince Harry is taller than Prince William', false),
-    Question('The star sign Aquarius is represented by a tiger', true),
-    Question('Meryl Streep has won two Academy Awards', false),
-    Question('Marrakesh is the capital of Morocco', false),
-    Question(
-        'Idina Menzel sings \'let it go\' 20 times in \'Let It Go\' from Frozen',
-        false,),
-    Question(
-        'Waterloo has the greatest number of tube platforms in London', true,),
-    Question('M&M stands for Mars and Moordale', false),
-    Question('Gin is typically included in a Long Island Iced Tea', true),
-    Question('The unicorn is the national animal of Scotland', true),
-    Question(
-        'There are two parts of the body that can\t heal themselves', false,),
-    Question('Howard Donald is the oldest member of Take That', true),
-    Question(
-        'The Great Wall of China is longer than the distance between London and Beijing',
-        true,),
-    Question('There are 219 episodes of Friends', false),
-    Question(
-        '\'A\' is the most common letter used in the English language', false,),
-    Question('A lion\'s roar can be heard up to eight kilometres away', true),
+    Question('Een storingsmonteur mag pas aan een trein werken als de railinfracapaciteit met WECO aan hem beschikbaar is gesteld door de TRDL.', false),
+    Question('Bij gladde sporen meld je treinnummer, exacte locatie en geconstateerd bij remmen/tractie of beide.', true),
+    Question('Bij gedeeltelijke uitval spraakcommunicatie informeer je alleen de DVL.', false),
+    Question('Het GEVI nummer is het onderste nummer op een gevaaretiket.', false),
+    Question('Bij een groen sein mag een machinist altijd ten minste 80 km/u.', false),
+    Question('Een Hotbox melding geeft type alarm, asnummer, rechter- of linkerzijde en spoor.', true),
+    Question('Wissels vrijmaken mag als de LWB de verantwoordelijkheid van de sporen heeft overgedragen aan de TRDL.', false),
+    Question('Inhoudelijke informatie over een grendel of vrijgave vindt je in de tekstuele BVS.', true),
+    Question('Een wissel dat niet in de eindstand komt, kan nog steeds opdrachten aannemen.', true),
+    Question('De machinist van een gestrande trein moet altijd de stroomafnemers laten zakken.', false),
+    Question('Als TROTS uitvalt, wacht je twee minuten op een automatische herstart.', true),
+    Question('Bij stilleggen treindienst laat je reizigerstreinen in het getroffen gebied stoppen langs het eerstvolgende perron.', true),
+    Question('\'Begrepen\' is een correcte dienstuitdrukking.', false),
+    Question('Het verdelingsbesluit bij een infrabeperking wordt genomen door de VLC.', false),
+    Question('Een wissel met een hoekverhouding van 1:12 mag met 60 km/u worden bereden.', true),
   ];
 
   void checkAnswer(bool userPickedAnswer) {
