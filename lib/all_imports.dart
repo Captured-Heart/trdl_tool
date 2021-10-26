@@ -102,6 +102,11 @@ export 'package:trdl_tool/pages/incidenten/overige_incidenten/gestrande_trein.da
 export 'package:trdl_tool/pages/incidenten/overige_incidenten/brand.dart';
 export 'package:trdl_tool/pages/incidenten/overige_incidenten/weersomstandigheden.dart';
 export 'package:trdl_tool/pages/incidenten/overige_incidenten/ontruimen_post.dart';
+export 'package:trdl_tool/pages/incidenten/overige_incidenten/stroomstoring.dart';
+export 'package:trdl_tool/pages/incidenten/overige_incidenten/wissels_vrijmaken.dart';
+export 'package:trdl_tool/pages/incidenten/overige_incidenten/sts_passage.dart';
+export 'package:trdl_tool/pages/incidenten/overige_incidenten/stilleggen_treindienst.dart';
+export 'package:trdl_tool/pages/incidenten/overige_incidenten/afhandelen_systeemstoringen.dart';
 
 /*ProQuiz pages*/
 export 'package:trdl_tool/pages/home_pages/proquiz/quizmain.dart';

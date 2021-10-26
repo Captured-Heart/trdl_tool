@@ -112,6 +112,11 @@ class MainEntry extends StatelessWidget {
         'brand': (context) => const Brand(),
         'weersomstandigheden': (context) => const Weersomstandigheden(),
         'ontruimenpost': (context) => OntruimenPost(),
+        'stroomstoring': (context) => Stroomstoring(),
+        'wisselsvrijmaken': (context) => WisselsVrijmaken(),
+        'stspassage': (context) => STSPassage(),
+        'stilleggentreindienst': (context) => StilleggenTreindienst(),
+        'afhandelensysteemstoringen': (context) => AfhandelenSysteemstoringen(),
 
         /*ProQuiz routes*/
         'quizmain': (context) => const ProQuiz(),

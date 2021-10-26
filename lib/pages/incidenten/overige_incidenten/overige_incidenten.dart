@@ -80,64 +80,29 @@ class OverigeIncidenten extends StatelessWidget {
                             destination: 'ontruimenpost',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Stroomstoring',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Stroomstoring',
+                            destination: 'stroomstoring',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Wissels Vrijmaken',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Wissels vrijmaken',
+                            destination: 'wisselsvrijmaken',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'STS Passage',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'STS passage',
+                            destination: 'stspassage',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Stilleggen Treindienst',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Stilleggen treindienst',
+                            destination: 'stilleggentreindienst',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Systeemstoring',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Afhandelen systeemstoringen',
+                            destination: 'afhandelen systeemstoringen',
                           ),
                         ],
                       ),
