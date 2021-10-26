@@ -22,7 +22,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Logger().wtf('User is known and logged in, go to home_screen.');
       Timer(
         /*Set timer duration to 2 seconds*/
-        const Duration(seconds: 10),
+        const Duration(seconds: 3),
         () => Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -34,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Logger().wtf('User is unknown or new, go to welcome_screen.');
       /*Go to welcome_screen, user is unknown*/
       Timer(
-        const Duration(seconds: 10),
+        const Duration(seconds: 3),
         () => Navigator.pushReplacement(
           context,
           MaterialPageRoute(
