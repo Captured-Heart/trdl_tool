@@ -108,6 +108,10 @@ class MainEntry extends StatelessWidget {
         'gevaarlijkestoffen2': (context) => const GevaarlijkeStoffen2(),
         'milieumeldingen': (context) => const MilieuMeldingen(),
         'vasterem': (context) => const VasteRem(),
+        'gestrandetrein': (context) => const GestrandeTrein(),
+        'brand': (context) => const Brand(),
+        'weersomstandigheden': (context) => const Weersomstandigheden(),
+        'ontruimenpost': (context) => OntruimenPost(),
 
         /*ProQuiz routes*/
         'quizmain': (context) => const ProQuiz(),

@@ -60,52 +60,24 @@ class OverigeIncidenten extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO
-                            },
-                            child: const Text(
-                              'Gestrande Trein',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Gestrande Trein',
+                            destination: 'gestrandetrein',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Brand',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Brand',
+                            destination: 'brand',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Weersomstandigheden',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Weersomstandigheden',
+                            destination: 'weersomstandigheden',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Ontruimen Post',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Ontruimen Post',
+                            destination: 'ontruimenpost',
                           ),
                           const SizedBoxH(),
                           ElevatedButton(
