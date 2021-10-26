@@ -149,7 +149,7 @@ class WisselsVrijmaken extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De communicatie tussen de beveiliging en de bediening is als gevolg van een stroomonderbreking niet meer betrouwbaar. Met de opdracht 'wissels vrijmaken' breng je de beveiligingsapparatuur na deze stroomonderbreking in de ruststand van de bediening terug.',
+                              text: 'De communicatie tussen de beveiliging en de bediening is als gevolg van een stroomonderbreking niet meer betrouwbaar. Met de opdracht \'wissels vrijmaken\' breng je de beveiligingsapparatuur na deze stroomonderbreking in de ruststand van de bediening terug.',
                             ),
                           ),
                         ],
