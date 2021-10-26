@@ -60,112 +60,49 @@ class OverigeIncidenten extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO
-                            },
-                            child: const Text(
-                              'Gestrande Trein',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Gestrande Trein',
+                            destination: 'gestrandetrein',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Brand',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Brand',
+                            destination: 'brand',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Weersomstandigheden',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Weersomstandigheden',
+                            destination: 'weersomstandigheden',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Ontruimen Post',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Ontruimen Post',
+                            destination: 'ontruimenpost',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Stroomstoring',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Stroomstoring',
+                            destination: 'stroomstoring',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Wissels Vrijmaken',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Wissels vrijmaken',
+                            destination: 'wisselsvrijmaken',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'STS Passage',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'STS passage',
+                            destination: 'stspassage',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Stilleggen Treindienst',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Stilleggen treindienst',
+                            destination: 'stilleggentreindienst',
                           ),
                           const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Systeemstoring',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          NavButton(
+                            buttontext: 'Afhandelen systeemstoringen',
+                            destination: 'afhandelensysteemstoringen',
                           ),
                         ],
                       ),
