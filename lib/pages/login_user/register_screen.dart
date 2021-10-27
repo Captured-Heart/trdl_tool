@@ -93,7 +93,9 @@ class _RegisterState extends State<Register> {
                               onPressed: () async {
                                 if (email.contains('plotsklapps@gmail.com')) {
                                   await _auth.createUserWithEmailAndPassword(
-                                      email: email, password: password);
+                                    email: email,
+                                    password: password,
+                                  );
                                   Navigator.pushReplacementNamed(
                                     context,
                                     'verifyscreen',
@@ -115,7 +117,9 @@ class _RegisterState extends State<Register> {
                                   try {
                                     /*Create user and go to verify_screen*/
                                     await _auth.createUserWithEmailAndPassword(
-                                        email: email, password: password);
+                                      email: email,
+                                      password: password,
+                                    );
                                     Navigator.pushReplacementNamed(
                                       context,
                                       'verifyscreen',
@@ -124,7 +128,8 @@ class _RegisterState extends State<Register> {
                                   /*Catch all errors and show snack with error*/
                                   catch (errorMessage) {
                                     Logger().wtf(
-                                        'Er is iets misgegaan: $errorMessage');
+                                      'Er is iets misgegaan: $errorMessage',
+                                    );
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
                                         content: Text(

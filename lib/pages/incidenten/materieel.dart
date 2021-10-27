@@ -109,46 +109,25 @@ class MaterieelIncidenten extends StatelessWidget {
                       const SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const NavButton(
+                        children: const [
+                          NavButton(
                             buttontext: 'Vaste rem',
                             destination: 'vasterem',
                           ),
-                          const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'ATB Veiligheidsstoring',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'ATB veiligheidsstoring',
+                            destination: 'atbveiligheidsstoring',
                           ),
-                          const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Hotbox & Quo Vadis',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Hotbox & Quo Vadis',
+                            destination: 'hotbox',
                           ),
-                          const SizedBoxH(),
-                          ElevatedButton(
-                            onPressed: () {
-                              //TODO;
-                            },
-                            child: const Text(
-                              'Gevaarlijke Stoffen',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Gevaarlijke Stoffen',
+                            destination: 'gevaarlijkestoffen1',
                           ),
                         ],
                       ),

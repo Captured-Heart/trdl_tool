@@ -48,7 +48,8 @@ class OntruimenPost extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Zorg voor je persoonlijke veiligheid en neem een mobiele noodtelefoon mee.',
+                              text:
+                                  'Zorg voor je persoonlijke veiligheid en neem een mobiele noodtelefoon mee.',
                             ),
                           ),
                         ],
@@ -70,12 +71,13 @@ class OntruimenPost extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Je verlaat de post en plaatst een alarmoproep met de mobiele noodtelefoon.',
+                              text:
+                                  'Je verlaat de post en plaatst een alarmoproep met de mobiele noodtelefoon.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -92,7 +94,8 @@ class OntruimenPost extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Informeer machinisten via de algemene oproep:',
+                              text:
+                                  'Informeer machinisten via de algemene oproep:',
                             ),
                           ),
                         ],
@@ -105,7 +108,8 @@ class OntruimenPost extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Dit bericht is bestemd voor alle machinisten. In verband met een calamiteit op de verkeersleidingspost . . . (naam post) zal iedereen deze post op korte termijn verlaten.',
+                              text:
+                                  'Dit bericht is bestemd voor alle machinisten. In verband met een calamiteit op de verkeersleidingspost . . . (naam post) zal iedereen deze post op korte termijn verlaten.',
                             ),
                           ),
                         ],
@@ -118,7 +122,8 @@ class OntruimenPost extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Machinisten van reizigerstreinen moeten de reizigers op het eerstvolgende perron of anders een andere veilige plaats evacueren. Probeer het langdurig dicht liggen van overwegen te voorkomen. Indien aanvullende opdrachten nodig zijn wordt u hierover zo spoedig mogelijk geïnformeerd. Einde bericht.',
+                              text:
+                                  'Machinisten van reizigerstreinen moeten de reizigers op het eerstvolgende perron of anders een andere veilige plaats evacueren. Probeer het langdurig dicht liggen van overwegen te voorkomen. Indien aanvullende opdrachten nodig zijn wordt u hierover zo spoedig mogelijk geïnformeerd. Einde bericht.',
                             ),
                           ),
                         ],
@@ -148,7 +153,8 @@ class OntruimenPost extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                              text:
+                                  'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],

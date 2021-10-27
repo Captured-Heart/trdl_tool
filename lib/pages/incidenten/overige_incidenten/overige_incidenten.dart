@@ -59,47 +59,47 @@ class OverigeIncidenten extends StatelessWidget {
                       const SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           NavButton(
                             buttontext: 'Gestrande Trein',
                             destination: 'gestrandetrein',
                           ),
-                          const SizedBoxH(),
+                          SizedBoxH(),
                           NavButton(
                             buttontext: 'Brand',
                             destination: 'brand',
                           ),
-                          const SizedBoxH(),
+                          SizedBoxH(),
                           NavButton(
                             buttontext: 'Weersomstandigheden',
                             destination: 'weersomstandigheden',
                           ),
-                          const SizedBoxH(),
+                          SizedBoxH(),
                           NavButton(
                             buttontext: 'Ontruimen Post',
                             destination: 'ontruimenpost',
                           ),
-                          const SizedBoxH(),
+                          SizedBoxH(),
                           NavButton(
                             buttontext: 'Stroomstoring',
                             destination: 'stroomstoring',
                           ),
-                          const SizedBoxH(),
+                          SizedBoxH(),
                           NavButton(
                             buttontext: 'Wissels vrijmaken',
                             destination: 'wisselsvrijmaken',
                           ),
-                          const SizedBoxH(),
+                          SizedBoxH(),
                           NavButton(
                             buttontext: 'STS passage',
                             destination: 'stspassage',
                           ),
-                          const SizedBoxH(),
+                          SizedBoxH(),
                           NavButton(
                             buttontext: 'Stilleggen treindienst',
                             destination: 'stilleggentreindienst',
                           ),
-                          const SizedBoxH(),
+                          SizedBoxH(),
                           NavButton(
                             buttontext: 'Afhandelen systeemstoringen',
                             destination: 'afhandelensysteemstoringen',

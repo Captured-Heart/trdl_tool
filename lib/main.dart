@@ -28,7 +28,6 @@ class MainEntry extends StatelessWidget {
         scheme: FlexScheme.jungle,
         fontFamily: 'Questrial',
       ).toTheme,
-      // TODO(plotsklapps): add day/night switch, https://URL-to-issue.
       themeMode: ThemeMode.system,
       /*MainEntry always goes to splash_screen*/
       home: const SplashScreen(),

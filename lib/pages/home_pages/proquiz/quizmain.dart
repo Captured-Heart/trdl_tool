@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:trdl_tool/all_imports.dart';
 
 class ProQuiz extends StatefulWidget {
@@ -21,21 +22,47 @@ class _ProQuizState extends State<ProQuiz> {
   ];
 
   List<Question> questionBank = [
-    Question('Een storingsmonteur mag pas aan een trein werken als de railinfracapaciteit met WECO aan hem beschikbaar is gesteld door de TRDL.', false),
-    Question('Bij gladde sporen meld je treinnummer, exacte locatie en geconstateerd bij remmen/tractie of beide.', true),
-    Question('Bij gedeeltelijke uitval spraakcommunicatie informeer je alleen de DVL.', false),
-    Question('Het GEVI nummer is het onderste nummer op een gevaaretiket.', false),
-    Question('Bij een groen sein mag een machinist altijd ten minste 80 km/u.', false),
-    Question('Een Hotbox melding geeft type alarm, asnummer, rechter- of linkerzijde en spoor.', true),
-    Question('Wissels vrijmaken mag als de LWB de verantwoordelijkheid van de sporen heeft overgedragen aan de TRDL.', false),
-    Question('Inhoudelijke informatie over een grendel of vrijgave vindt je in de tekstuele BVS.', true),
-    Question('Een wissel dat niet in de eindstand komt, kan nog steeds opdrachten aannemen.', true),
-    Question('De machinist van een gestrande trein moet altijd de stroomafnemers laten zakken.', false),
-    Question('Als TROTS uitvalt, wacht je twee minuten op een automatische herstart.', true),
-    Question('Bij stilleggen treindienst laat je reizigerstreinen in het getroffen gebied stoppen langs het eerstvolgende perron.', true),
+    Question(
+        'Een storingsmonteur mag pas aan een trein werken als de railinfracapaciteit met WECO aan hem beschikbaar is gesteld door de TRDL.',
+        false),
+    Question(
+        'Bij gladde sporen meld je treinnummer, exacte locatie en geconstateerd bij remmen/tractie of beide.',
+        true),
+    Question(
+        'Bij gedeeltelijke uitval spraakcommunicatie informeer je alleen de DVL.',
+        false),
+    Question(
+        'Het GEVI nummer is het onderste nummer op een gevaaretiket.', false),
+    Question('Bij een groen sein mag een machinist altijd ten minste 80 km/u.',
+        false),
+    Question(
+        'Een Hotbox melding geeft type alarm, asnummer, rechter- of linkerzijde en spoor.',
+        true),
+    Question(
+        'Wissels vrijmaken mag als de LWB de verantwoordelijkheid van de sporen heeft overgedragen aan de TRDL.',
+        false),
+    Question(
+        'Inhoudelijke informatie over een grendel of vrijgave vindt je in de tekstuele BVS.',
+        true),
+    Question(
+        'Een wissel dat niet in de eindstand komt, kan nog steeds opdrachten aannemen.',
+        true),
+    Question(
+        'De machinist van een gestrande trein moet altijd de stroomafnemers laten zakken.',
+        false),
+    Question(
+        'Als TROTS uitvalt, wacht je twee minuten op een automatische herstart.',
+        true),
+    Question(
+        'Bij stilleggen treindienst laat je reizigerstreinen in het getroffen gebied stoppen langs het eerstvolgende perron.',
+        true),
     Question('\'Begrepen\' is een correcte dienstuitdrukking.', false),
-    Question('Het verdelingsbesluit bij een infrabeperking wordt genomen door de VLC.', false),
-    Question('Een wissel met een hoekverhouding van 1:12 mag met 60 km/u worden bereden.', true),
+    Question(
+        'Het verdelingsbesluit bij een infrabeperking wordt genomen door de VLC.',
+        false),
+    Question(
+        'Een wissel met een hoekverhouding van 1:12 mag met 60 km/u worden bereden.',
+        true),
   ];
 
   void checkAnswer(bool userPickedAnswer) {
@@ -46,7 +73,6 @@ class _ProQuizState extends State<ProQuiz> {
         scoreKeeper = [
           const Icon(
             Icons.arrow_forward_outlined,
-            color: Colors.white,
           ),
         ];
       } else {
@@ -106,8 +132,24 @@ class _ProQuizState extends State<ProQuiz> {
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Column(
             children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 24.0),
+                child: Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        'TIMER 1:00',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               Expanded(
-                flex: 5,
                 child: Center(
                   child: Text(
                     questionBank[questionNumber].questionText,
