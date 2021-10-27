@@ -71,7 +71,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               height: 24.0,
             ),
             const Text(
-              'powered by',
+              Strings.poweredBy,
               style: TextStyle(
                 fontSize: 8.0,
               ),
@@ -82,7 +82,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               child: Image.asset('assets/images/plotsklappsLogo.png'),
             ),
             const Text(
-              Strings.splashWith,
+              Strings.and,
               style: TextStyle(
                 fontSize: 8.0,
               ),

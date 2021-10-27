@@ -59,8 +59,8 @@ class _LoginState extends State<Login> {
                                 },
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
-                                  labelText: 'Emailadres',
-                                  hintText: 'Vul een @prorail.nl emailadres in',
+                                  labelText: Strings.loginEmail,
+                                  hintText: Strings.loginEmailHint,
                                 ),
                               ),
                             ),
@@ -79,9 +79,8 @@ class _LoginState extends State<Login> {
                                 obscureText: true,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
-                                  labelText: 'Wachtwoord',
-                                  hintText:
-                                      'Wachtwoord bevat minimaal 6 tekens',
+                                  labelText: Strings.loginPassword,
+                                  hintText: Strings.loginPasswordHint,
                                 ),
                               ),
                             ),
@@ -147,7 +146,7 @@ class _LoginState extends State<Login> {
                       );
                     },
                     child: const Text(
-                      'Nog geen account?',
+                      Strings.loginNogGeenAccount,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -167,7 +166,7 @@ class _LoginState extends State<Login> {
                       );
                     },
                     child: const Text(
-                      'Wachtwoord vergeten?',
+                      Strings.loginWachtwoordVergeten,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),

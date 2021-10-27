@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+final alreadySignedInUser = FirebaseAuth.instance.currentUser;
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -8,20 +10,13 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  final alreadySignedInUser = FirebaseAuth.instance.currentUser;
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     /*Check if user is already signed in*/
     if (alreadySignedInUser != null) {
       Logger().wtf('User is known and logged in, go to home_screen.');
       Timer(
-        /*Set timer duration to 2 seconds*/
+        /*Set timer duration to ... seconds*/
         const Duration(seconds: 3),
         () => Navigator.pushReplacement(
           context,
@@ -30,9 +25,10 @@ class _SplashScreenState extends State<SplashScreen> {
           ),
         ),
       );
-    } else {
+    }
+    /*Go to welcome_screen, user is unknown*/
+    else {
       Logger().wtf('User is unknown or new, go to welcome_screen.');
-      /*Go to welcome_screen, user is unknown*/
       Timer(
         const Duration(seconds: 3),
         () => Navigator.pushReplacement(
@@ -69,7 +65,7 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 24.0,
             ),
             const Text(
-              Strings.splashPoweredBy,
+              Strings.poweredBy,
               style: TextStyle(
                 fontSize: 8.0,
               ),
@@ -81,18 +77,14 @@ class _SplashScreenState extends State<SplashScreen> {
               child: Image.asset('assets/images/plotsklappsLogo.png'),
             ),
             const Text(
-              Strings.splashWith,
+              Strings.and,
               style: TextStyle(
                 fontSize: 8.0,
               ),
             ),
             const SizedBoxH(),
-            const SizedBox(
-              height: 30.0,
-              width: 100.0,
-              child: FlutterLogo(
-                size: 30.0,
-              ),
+            const FlutterLogo(
+              size: 24.0,
             ),
           ],
         ),
