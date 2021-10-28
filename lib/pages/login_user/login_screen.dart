@@ -9,7 +9,6 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   final _auth = FirebaseAuth.instance;
-  late User user;
   late String email;
   late String password;
 

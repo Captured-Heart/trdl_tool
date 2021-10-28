@@ -120,7 +120,7 @@ class MainEntry extends StatelessWidget {
             const AfhandelenSysteemstoringen(),
 
         /*ProQuiz routes*/
-        'quizmain': (context) => const ProQuiz(),
+        'proquizmain': (context) => const ProQuiz(),
 
         /*ProChat routes*/
         'prochatmain': (context) => const ProChat(),

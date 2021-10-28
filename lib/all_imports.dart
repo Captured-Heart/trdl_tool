@@ -109,7 +109,8 @@ export 'package:trdl_tool/pages/incidenten/overige_incidenten/stilleggen_treindi
 export 'package:trdl_tool/pages/incidenten/overige_incidenten/afhandelen_systeemstoringen.dart';
 
 /*ProQuiz pages*/
-export 'package:trdl_tool/pages/home_pages/proquiz/quizmain.dart';
+export 'package:trdl_tool/pages/home_pages/proquiz/proquizmain.dart';
+export 'package:trdl_tool/pages/home_pages/proquiz/screens/quiz_screen.dart';
 
 /*ProChat pages*/
 export 'package:trdl_tool/pages/home_pages/prochat/prochatmain.dart';

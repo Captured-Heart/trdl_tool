@@ -14,7 +14,9 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     /*Check if user is already signed in*/
     if (alreadySignedInUser != null) {
-      Logger().wtf('User is known and logged in, go to home_screen.');
+      Logger().wtf(
+        'User is known and logged in, go to home_screen.',
+      );
       Timer(
         /*Set timer duration to ... seconds*/
         const Duration(seconds: 3),
@@ -28,7 +30,9 @@ class _SplashScreenState extends State<SplashScreen> {
     }
     /*Go to welcome_screen, user is unknown*/
     else {
-      Logger().wtf('User is unknown or new, go to welcome_screen.');
+      Logger().wtf(
+        'User is unknown or new, go to welcome_screen. Timer takes 3 seconds.',
+      );
       Timer(
         const Duration(seconds: 3),
         () => Navigator.pushReplacement(
@@ -74,7 +78,9 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 30.0,
               width: 100.0,
               //TODO: Get someone to make a better logo!
-              child: Image.asset('assets/images/plotsklappsLogo.png'),
+              child: Image.asset(
+                'assets/images/plotsklappsLogo.png',
+              ),
             ),
             const Text(
               Strings.and,
