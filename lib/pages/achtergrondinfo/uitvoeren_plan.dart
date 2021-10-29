@@ -385,7 +385,7 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
                       ),
                       Row(
                         children: const [
-                                                      SizedBoxW(),
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
                               text: '- Vertrekseinlichten;',
@@ -396,7 +396,7 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           SizedBoxW(),
-                          Expanded(                            
+                          Expanded(
                             child: BodyText(
                               text: '- Treinaankondiging;',
                             ),
@@ -406,7 +406,7 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           SizedBoxW(),
-                          Expanded(                          
+                          Expanded(
                             child: BodyText(
                               text: '- Fictieve eindseinnummers;',
                             ),
@@ -416,7 +416,7 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           SizedBoxW(),
-                          Expanded(                          
+                          Expanded(
                             child: BodyText(
                               text: '- \'STOP\'/\'DOOR\'-criterium vrije baan;',
                             ),
@@ -426,7 +426,7 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           SizedBoxW(),
-                          Expanded(                           
+                          Expanded(
                             child: BodyText(
                               text: '- Vertraagd uit de stand \'STOP\' komende seinen;',
                             ),
@@ -436,7 +436,7 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           SizedBoxW(),
-                          Expanded(                            
+                          Expanded(
                             child: BodyText(
                               text: '- Overwegen/waarschuwingsinstallaties;',
                             ),
@@ -493,8 +493,8 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: const [
-                          child: Container(
+                        children: [
+                          Container(
                             width: 100,
                             height: 100,
                             child: Placeholder(),
