@@ -65,8 +65,7 @@ class MainEntry extends StatelessWidget {
 
         /*Aanpassen Plan routes*/
         'aanpassenplan': (context) => const AanpassenPlan(),
-        'stappenplanversperringen': (context) =>
-            const StappenplanVersperringen(),
+        'stappenplanversperringen': (context) => const StappenplanVersperringen(),
         'ongeplandwerk': (context) => const OngeplandWerk(),
         'orderacceptatie': (context) => const Orderacceptatie(),
         'materieelongeplandwerk': (context) => const MaterieelOngeplandWerk(),
@@ -116,8 +115,10 @@ class MainEntry extends StatelessWidget {
         'wisselsvrijmaken': (context) => const WisselsVrijmaken(),
         'stspassage': (context) => const STSPassage(),
         'stilleggentreindienst': (context) => const StilleggenTreindienst(),
-        'afhandelensysteemstoringen': (context) =>
-            const AfhandelenSysteemstoringen(),
+        'afhandelensysteemstoringen': (context) => const AfhandelenSysteemstoringen(),
+
+        /*Achtergrondinfo routes*/
+        'uitvoerenplanachtergrond': (context) => UitvoerenPlanAchtergrond(),
 
         /*ProQuiz routes*/
         'proquizmain': (context) => const ProQuiz(),

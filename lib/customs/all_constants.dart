@@ -1,7 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
 /*Darkgreen color constant*/
-
 int kDarkGreen = 0xFF0D4F18;
 
 /*ProChat constants*/

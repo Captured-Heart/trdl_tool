@@ -110,6 +110,9 @@ export 'package:trdl_tool/pages/incidenten/overige_incidenten/sts_passage.dart';
 export 'package:trdl_tool/pages/incidenten/overige_incidenten/stilleggen_treindienst.dart';
 export 'package:trdl_tool/pages/incidenten/overige_incidenten/afhandelen_systeemstoringen.dart';
 
+/*Achtergrondinformatie pages*/
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan.dart';
+
 /*ProQuiz pages*/
 export 'package:trdl_tool/pages/home_pages/proquiz/proquizmain.dart';
 export 'package:trdl_tool/pages/home_pages/proquiz/screens/quiz_screen.dart';
