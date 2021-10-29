@@ -112,6 +112,8 @@ export 'package:trdl_tool/pages/incidenten/overige_incidenten/afhandelen_systeem
 
 /*Achtergrondinformatie pages*/
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/geplande_werkzaamheden/geplande_werkzaamheden.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/geplande_werkzaamheden/geplande_werkzaamheden_basis.dart';
 
 /*ProQuiz pages*/
 export 'package:trdl_tool/pages/home_pages/proquiz/proquizmain.dart';
