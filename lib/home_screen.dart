@@ -36,40 +36,47 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.train,
+    return WillPopScope(
+      onWillPop: () {
+        return showExitPopup(
+          context,
+        );
+      },
+      child: Scaffold(
+        body: Center(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.train,
+              ),
+              label: 'Werkwijze',
             ),
-            label: 'Werkwijze',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.menu_book,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.menu_book,
+              ),
+              label: 'Achtergrond',
             ),
-            label: 'Achtergrond',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.sports_esports,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.sports_esports,
+              ),
+              label: 'ProQuiz',
             ),
-            label: 'ProQuiz',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.forum,
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.forum,
+              ),
+              label: 'ProChat',
             ),
-            label: 'ProChat',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+          ],
+          currentIndex: _selectedIndex,
+          onTap: _onItemTapped,
+        ),
       ),
     );
   }

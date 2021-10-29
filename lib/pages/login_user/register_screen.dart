@@ -147,7 +147,17 @@ class _RegisterState extends State<Register> {
                                   }
                                 }
                               },
-                              child: const Text('REGISTREER'),
+                              child: const Text(
+                                'REGISTREER',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                    12.0,
+                                  ),
+                                ),
+                              ),
                             ),
                           ],
                         ),

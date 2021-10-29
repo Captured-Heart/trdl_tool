@@ -123,7 +123,17 @@ class _LoginState extends State<Login> {
                                   );
                                 }
                               },
-                              child: const Text('LOGIN'),
+                              child: const Text(
+                                'LOGIN',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                    12.0,
+                                  ),
+                                ),
+                              ),
                             ),
                           ],
                         ),

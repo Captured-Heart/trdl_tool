@@ -1,8 +1,10 @@
 /*Flutter packages*/
 export 'package:flutter/material.dart';
 export 'package:flutter/painting.dart';
+export 'package:flutter/services.dart';
 export 'dart:async';
 export 'dart:math';
+export 'dart:io';
 
 /*Firebase packages*/
 export 'package:firebase_core/firebase_core.dart';
@@ -21,6 +23,7 @@ export 'package:trdl_tool/item_lists/welcome_items.dart';
 export 'package:trdl_tool/item_lists/all_strings.dart';
 export 'package:trdl_tool/customs/custom_widgets.dart';
 export 'package:trdl_tool/customs/all_constants.dart';
+export 'package:trdl_tool/customs/exit_popup.dart';
 
 /*Main pages*/
 export 'package:trdl_tool/pages/login_user/splash_screen.dart';

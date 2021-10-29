@@ -96,7 +96,17 @@ class _WachtwoordState extends State<Wachtwoord> {
                                   );
                                 }
                               },
-                              child: const Text('RESET'),
+                              child: const Text(
+                                'RESET',
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(
+                                    12.0,
+                                  ),
+                                ),
+                              ),
                             ),
                           ],
                         ),
