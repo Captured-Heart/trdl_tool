@@ -23,6 +23,8 @@ export 'package:trdl_tool/item_lists/all_strings.dart';
 export 'package:trdl_tool/customs/custom_widgets.dart';
 export 'package:trdl_tool/customs/all_constants.dart';
 export 'package:trdl_tool/customs/exit_popup.dart';
+export 'package:trdl_tool/customs/nav_button.dart';
+export 'package:trdl_tool/customs/avatar_menu.dart';
 
 /*Main pages*/
 export 'package:trdl_tool/pages/login_user/splash_screen.dart';
