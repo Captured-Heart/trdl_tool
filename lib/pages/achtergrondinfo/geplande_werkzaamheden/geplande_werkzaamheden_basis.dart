@@ -226,7 +226,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Inspecteur ILT',
+                              text: '* Inspecteur ILT',
                             ),
                           ),
                         ],
@@ -510,6 +510,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -618,23 +619,24 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Tijdens de planning van werkzaamheden wordt gecontroleerd of de WBI-aanvragen het werkdrukniveau van de treindienstleider niet overschrijden. Er wordt hier gekeken naar het totaal aan WBI\’s op een bepaald tijdstip, waarna bepaald wordt of het haalbaar is of niet.',
+                              text:
+                                  'Tijdens de planning van werkzaamheden wordt gecontroleerd of de WBI-aanvragen het werkdrukniveau van de treindienstleider niet overschrijden. Er wordt hier gekeken naar het totaal aan WBI’s op een bepaald tijdstip, waarna bepaald wordt of het haalbaar is of niet.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
-                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Mocht er door omstandigheden toch te veel werkdruk bij de treindienstleider komen te liggen, dan kan in overleg met de betrokken aannemers en verkeersleiding naar een oplossing worden gezocht.',
+                              text:
+                                  'Mocht er door omstandigheden toch te veel werkdruk bij de treindienstleider komen te liggen, dan kan in overleg met de betrokken aannemers en verkeersleiding naar een oplossing worden gezocht.',
                             ),
                           ),
                         ],
@@ -644,7 +646,8 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle: 'FAB (Flexibele Aanvangstijd Buitendienststelling)',
+                              subtitle:
+                                  'FAB (Flexibele Aanvangstijd Buitendienststelling)',
                             ),
                           ),
                         ],
@@ -654,17 +657,19 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Het kan voorkomen dat werkzaamheden moeten beginnen terwijl er nog vertraagde treinen onderweg zijn. In dit geval wordt er gebruik gemaakt van de FAB. Hierin staan in stroomschema de aanvullende afspraken tussen vervoerders, verkeersleiding en asset management (AM). De start van een dubbelsporige buitendienststelling kan 15 minuten schuiven met behoud van het recht op 4 uur doorlooptijd. AM heeft een inspanningsverplichting het werk toch op de oorspronkelijke tijd af te ronden.',
+                              text:
+                                  'Het kan voorkomen dat werkzaamheden moeten beginnen terwijl er nog vertraagde treinen onderweg zijn. In dit geval wordt er gebruik gemaakt van de FAB. Hierin staan in stroomschema de aanvullende afspraken tussen vervoerders, verkeersleiding en asset management (AM). De start van een dubbelsporige buitendienststelling kan 15 minuten schuiven met behoud van het recht op 4 uur doorlooptijd. AM heeft een inspanningsverplichting het werk toch op de oorspronkelijke tijd af te ronden.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Indien de vertraging van de laatste trein op het laatste knooppunt voor een baanvak versperrende buitendienststelling groter is dan 15 minuten dan handel je als volgt:',
+                              text:
+                                  'Indien de vertraging van de laatste trein op het laatste knooppunt voor een baanvak versperrende buitendienststelling groter is dan 15 minuten dan handel je als volgt:',
                             ),
                           ),
                         ],
@@ -674,8 +679,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Laat deze trein niet vertrekken;',
+                              text: '- Laat deze trein niet vertrekken;',
                             ),
                           ),
                         ],
@@ -690,12 +694,13 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De afspraak met vervoerders wordt opgenomen in een TAD.',
+                              text:
+                                  'De afspraak met vervoerders wordt opgenomen in een TAD.',
                             ),
                           ),
                         ],
@@ -705,8 +710,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'De uitgangspunten zijn:',
+                              text: 'De uitgangspunten zijn:',
                             ),
                           ),
                         ],
@@ -805,24 +809,23 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle:
-                                  'LWB',
+                              subtitle: 'LWB',
                             ),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Binnen het gebied waarop de werkplekbeveiliging van toepassing is, heeft de LWB voor het aspect veiligheid (aanrijd- en electrocutiegevaar) de leiding over al het personeel dat een veiligheidstaak uitoefent. Hij onderhoudt het contact met de TRDL, de CVB\’s, VHM en BBD en bij SL met ploegleider of WV conform regelgeving van de opdrachtgever.',
+                                  'Binnen het gebied waarop de werkplekbeveiliging van toepassing is, heeft de LWB voor het aspect veiligheid (aanrijd- en electrocutiegevaar) de leiding over al het personeel dat een veiligheidstaak uitoefent. Hij onderhoudt het contact met de TRDL, de CVB’s, VHM en BBD en bij SL met ploegleider of WV conform regelgeving van de opdrachtgever.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -838,7 +841,8 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: SubTitleText(
-                              subtitle: '1. Het aantoonbaar beoordelen van de aangeleverde veiligheidsinstructie op veilige uitvoerbaarheid en beargumenteren van de beoordeling als de maatregelen niet voldoen;',
+                              subtitle:
+                                  '1. Het aantoonbaar beoordelen van de aangeleverde veiligheidsinstructie op veilige uitvoerbaarheid en beargumenteren van de beoordeling als de maatregelen niet voldoen;',
                             ),
                           ),
                         ],
@@ -892,8 +896,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle:
-                                  'Zelfsignalerende kortsluitlans',
+                              subtitle: 'Zelfsignalerende kortsluitlans',
                             ),
                           ),
                         ],
@@ -925,8 +928,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle:
-                                  'De kortsluitlans signaleert niet',
+                              subtitle: 'De kortsluitlans signaleert niet',
                             ),
                           ),
                         ],
@@ -980,7 +982,8 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle: 'Werkplekbeveiliging met de zelfsignalerende kortsluitlans (ZKL) in combinatie met rijweginstelling',
+                              subtitle:
+                                  'Werkplekbeveiliging met de zelfsignalerende kortsluitlans (ZKL) in combinatie met rijweginstelling',
                             ),
                           ),
                         ],
@@ -996,32 +999,35 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Er moet wel aan een aantal voorwaarden worden voldaan. Deze zijn om te voorkomen dat er onveilige situaties ontstaan bij het gebruik van deze veiligheidsmaatregel.',
+                              text:
+                                  'Er moet wel aan een aantal voorwaarden worden voldaan. Deze zijn om te voorkomen dat er onveilige situaties ontstaan bij het gebruik van deze veiligheidsmaatregel.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Kijk voor de voorwaarden in de werkwijze treindienstleider.',
+                              text:
+                                  'Kijk voor de voorwaarden in de werkwijze treindienstleider.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Er wordt gebruik gemaakt van twee soorten kortsluitlansen. De ZKL mét remote control (afstandsbediening) en zonder remote control. De LWB kan de ZKL mét remote control al eerder plaatsen zonder dat deze zich signaleert. Hij kan op veilig afstand het sein kan laten bedienen door de treindienstleider en dan met de afstandsbediening  kortsluiting maken in het spoor.',
+                              text:
+                                  'Er wordt gebruik gemaakt van twee soorten kortsluitlansen. De ZKL mét remote control (afstandsbediening) en zonder remote control. De LWB kan de ZKL mét remote control al eerder plaatsen zonder dat deze zich signaleert. Hij kan op veilig afstand het sein kan laten bedienen door de treindienstleider en dan met de afstandsbediening  kortsluiting maken in het spoor.',
                             ),
                           ),
                         ],
@@ -1041,17 +1047,19 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Op sommige baanvakken en emplacementen in Nederland voert men werkzaamheden uit binnen een vaste werkzone (werkzones). Dit zijn een soort vrijgavegebieden waarbinnen gewerkt wordt. Dus altijd met vaste veiligheidsmaatregelen.',
+                              text:
+                                  'Op sommige baanvakken en emplacementen in Nederland voert men werkzaamheden uit binnen een vaste werkzone (werkzones). Dit zijn een soort vrijgavegebieden waarbinnen gewerkt wordt. Dus altijd met vaste veiligheidsmaatregelen.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Uitleg over werkzones en bijbehorende informatie vind je in de achtergrondinformatie bij \‘Geplande werkzaamheden – verdieping: werkzones\’.',
+                              text:
+                                  'Uitleg over werkzones en bijbehorende informatie vind je in de achtergrondinformatie bij ‘Geplande werkzaamheden – verdieping: werkzones’.',
                             ),
                           ),
                         ],
@@ -1085,13 +1093,12 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle:
-                                  'Werktreinen',
+                              subtitle: 'Werktreinen',
                             ),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1102,7 +1109,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1113,7 +1120,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1128,8 +1135,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Rijden op zicht;',
+                              text: '- Rijden op zicht;',
                             ),
                           ),
                         ],
@@ -1156,12 +1162,13 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle: 'De LWB instrueert de BBD en (werktrein)machinist over:',
+                              subtitle:
+                                  'De LWB instrueert de BBD en (werktrein)machinist over:',
                             ),
                           ),
                         ],
@@ -1182,8 +1189,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- De communicatie;',
+                              text: '- De communicatie;',
                             ),
                           ),
                         ],
@@ -1204,8 +1210,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- De VTI;',
+                              text: '- De VTI;',
                             ),
                           ),
                         ],
