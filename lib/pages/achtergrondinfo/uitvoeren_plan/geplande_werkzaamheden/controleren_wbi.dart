@@ -39,8 +39,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle:
-                                  'Toetscriteria WBI/WECO',
+                              subtitle: 'Toetscriteria WBI/WECO',
                             ),
                           ),
                         ],
@@ -58,7 +57,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                       ),
                       Row(
                         children: const [
-                            SizedBoxW(),
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
                               text:
@@ -71,11 +70,9 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- de maatregelen van de LWB invloed hebben op jouw eigen maatregelen;',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                            child: BodyText(
+                              text:
+                                  '- de maatregelen van de LWB invloed hebben op jouw eigen maatregelen;',
                             ),
                           ),
                         ],
@@ -85,7 +82,8 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- bij werkplekbeveiliging met de zelfsignalerende kortsluitlans er geen rijweg ingesteld moet worden vanaf de vrije baan, tenzij de vrije baan onderdeel is van de buitendienststelling;',
+                              text:
+                                  '- bij werkplekbeveiliging met de zelfsignalerende kortsluitlans er geen rijweg ingesteld moet worden vanaf de vrije baan, tenzij de vrije baan onderdeel is van de buitendienststelling;',
                             ),
                           ),
                         ],
@@ -106,7 +104,8 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '* de betrokken treindienstleider(s) in het bezit is (zijn) van de juiste WBI/WECO;',
+                              text:
+                                  '* de betrokken treindienstleider(s) in het bezit is (zijn) van de juiste WBI/WECO;',
                             ),
                           ),
                         ],
@@ -129,7 +128,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 400.0,
+                            height: 300.0,
                             child: Image.asset(
                               'assets/images/achtergrond/wbiOverzicht.png',
                             ),
@@ -153,7 +152,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Via de database zijn de te keuren WBI\’s terug te vinden. Deze hebben de status \‘niet gekeurd\’.  Alle maatregelen die al zijn ingevoerd zijn terug te vinden en door middel van de preview functie zijn alle periodes van een WBI van tevoren te bekijken via een voorbeeld in een oranje kleur.',
+                                  'Via de database zijn de te keuren WBI’s terug te vinden. Deze hebben de status ‘niet gekeurd’.  Alle maatregelen die al zijn ingevoerd zijn terug te vinden en door middel van de preview functie zijn alle periodes van een WBI van tevoren te bekijken via een voorbeeld in een oranje kleur.',
                             ),
                           ),
                         ],
@@ -164,7 +163,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Als een WBI/WECO gekeurd is, krijgt deze de status \‘goedgekeurd\’ of \‘afgekeurd\’ door jou toegewezen in procesleiding.',
+                                  'Als een WBI/WECO gekeurd is, krijgt deze de status ‘goedgekeurd’ of ‘afgekeurd’ door jou toegewezen in procesleiding.',
                             ),
                           ),
                         ],

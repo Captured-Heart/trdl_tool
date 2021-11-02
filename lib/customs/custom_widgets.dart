@@ -55,20 +55,13 @@ class AppBarText extends StatelessWidget {
 
 /*LogOut Button*/
 class LogOutButton extends StatelessWidget {
-  const LogOutButton({
-    required FirebaseAuth auth,
-    Key? key,
-  })  : _auth = auth,
-        super(key: key);
-
-  final FirebaseAuth _auth;
+  const LogOutButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
-        _auth.signOut();
-        Navigator.pushReplacementNamed(context, 'login');
+        showLogOutPopup(context);
       },
       icon: const Icon(Icons.logout),
     );

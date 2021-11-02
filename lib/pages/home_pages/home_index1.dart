@@ -1,9 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
 class HomeIndex1 extends StatelessWidget {
-  HomeIndex1({Key? key}) : super(key: key);
-
-  final _auth = FirebaseAuth.instance;
+  const HomeIndex1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,14 +12,8 @@ class HomeIndex1 extends StatelessWidget {
         centerTitle: true,
         leading: const AvatarMenu(),
         title: const AppBarText(title: 'TRDLtool'),
-        actions: [
-          IconButton(
-            onPressed: () {
-              _auth.signOut();
-              Navigator.pushReplacementNamed(context, 'login');
-            },
-            icon: const Icon(Icons.logout),
-          ),
+        actions: const [
+          LogOutButton(),
         ],
       ),
       drawer: const DrawerWidget(),

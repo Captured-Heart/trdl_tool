@@ -41,9 +41,9 @@ class MainEntry extends StatelessWidget {
         'wachtwoordscreen': (context) => const Wachtwoord(),
 
         /*Home Page routes*/
-        'homeindex0': (context) => HomeIndex0(),
-        'homeindex1': (context) => HomeIndex1(),
-        'homeindex2': (context) => HomeIndex2(),
+        'homeindex0': (context) => const HomeIndex0(),
+        'homeindex1': (context) => const HomeIndex1(),
+        'homeindex2': (context) => const HomeIndex2(),
         'homeindex3': (context) => HomeIndex3(),
 
         /*Uitvoeren Plan routes*/
@@ -126,9 +126,11 @@ class MainEntry extends StatelessWidget {
             const GeplandeWerkzaamhedenAchtergrond(),
         'geplandewerkzaamhedenbasisachtergrond': (context) =>
             const GeplandeWerkzaamhedenBasisAchtergrond(),
-            'controlerenwbiachtergrond': (context) => const ControlerenWBIAchtergrond(),
-            'foutenindewbiachtergrond': (context) => const FoutenWBIAchtergrond(),
-            'aanvangwerkzaamhedenachtergrond': (context) => const AanvangWerkzaamhedenAchtergrond(),
+        'controlerenwbiachtergrond': (context) =>
+            const ControlerenWBIAchtergrond(),
+        'foutenindewbiachtergrond': (context) => const FoutenWBIAchtergrond(),
+        'aanvangwerkzaamhedenachtergrond': (context) =>
+            const AanvangWerkzaamhedenAchtergrond(),
 
         /*ProQuiz routes*/
         'proquizmain': (context) => const ProQuiz(),

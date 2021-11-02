@@ -480,6 +480,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -787,7 +788,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 400.0,
+                            height: 300.0,
                             child: Image.asset(
                               'assets/images/achtergrond/ontrekkingBesluit.png',
                             ),
@@ -840,8 +841,8 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: SubTitleText(
-                              subtitle:
+                            child: BodyText(
+                              text:
                                   '1. Het aantoonbaar beoordelen van de aangeleverde veiligheidsinstructie op veilige uitvoerbaarheid en beargumenteren van de beoordeling als de maatregelen niet voldoen;',
                             ),
                           ),
@@ -1243,7 +1244,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 400.0,
+                            height: 300.0,
                             child: Image.asset(
                               'assets/images/achtergrond/werkTrein.png',
                             ),

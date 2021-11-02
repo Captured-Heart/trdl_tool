@@ -49,10 +49,12 @@ class FoutenWBIAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text:
-                                  'Meer dan 72 uur voor uitvoering:',
-                                  style: TextStyle(fontWeight: FontWeight.bold,),
+                            child: Text(
+                              'Meer dan 72 uur voor uitvoering:',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -67,7 +69,7 @@ class FoutenWBIAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -82,10 +84,12 @@ class FoutenWBIAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text:
-                                  'Binnen 72 uur voor uitvoering:',
-                                  style: TextStyle(fontWeight: FontWeight.bold,),
+                            child: Text(
+                              'Binnen 72 uur voor uitvoering:',
+                              style: TextStyle(
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -100,12 +104,13 @@ class FoutenWBIAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Als er geen overeenstemming wordt bereikt over een penwijziging/versieophoging of een penwijziging/versieophoging geen oplossing biedt en daardoor werkzaamheden dreigen te worden afgeblazen, dan wordt via de medewerker 24/7 werkplekbeveiliging naar de OvD-S geëscaleerd.',
+                              text:
+                                  'Als er geen overeenstemming wordt bereikt over een penwijziging/versieophoging of een penwijziging/versieophoging geen oplossing biedt en daardoor werkzaamheden dreigen te worden afgeblazen, dan wordt via de medewerker 24/7 werkplekbeveiliging naar de OvD-S geëscaleerd.',
                             ),
                           ),
                         ],

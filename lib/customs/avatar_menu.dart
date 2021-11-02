@@ -1,7 +1,5 @@
 import 'package:trdl_tool/all_imports.dart';
 
-final _auth = FirebaseAuth.instance;
-
 class AvatarMenu extends StatelessWidget {
   const AvatarMenu({
     Key? key,
@@ -74,8 +72,6 @@ class DrawerWidget extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   onTap: () {
-                    // Update the state of the app.
-                    // ...
                     Navigator.pop(context);
                   },
                 ),
@@ -85,10 +81,7 @@ class DrawerWidget extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                   onTap: () {
-                    // Update the state of the app.
-                    // ...
-                    _auth.signOut();
-                    Navigator.pushReplacementNamed(context, 'login');
+                    showLogOutPopup(context);
                   },
                 ),
               ],

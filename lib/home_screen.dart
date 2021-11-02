@@ -21,9 +21,9 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
     /*Find these in home_pages folder*/
-    HomeIndex0(),
-    HomeIndex1(),
-    HomeIndex2(),
+    const HomeIndex0(),
+    const HomeIndex1(),
+    const HomeIndex2(),
     HomeIndex3(),
   ];
 
