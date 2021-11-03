@@ -55,11 +55,11 @@ class DrawerWidget extends StatelessWidget {
               // Important: Remove any padding from the ListView.
               padding: EdgeInsets.zero,
               children: [
-                DrawerHeader(
+                const DrawerHeader(
                   decoration: BoxDecoration(
                     color: Color(kDarkGreen),
                   ),
-                  child: const CircleAvatar(
+                  child: CircleAvatar(
                     child: Icon(
                       Icons.person,
                       size: 48.0,

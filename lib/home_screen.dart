@@ -24,7 +24,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
     const HomeIndex0(),
     const HomeIndex1(),
     const HomeIndex2(),
-    HomeIndex3(),
+    const HomeIndex3(),
   ];
 
   void _onItemTapped(int index) {

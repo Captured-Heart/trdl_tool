@@ -12,13 +12,13 @@ class TRDLtoolLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [
+      children: const [
         Icon(
           Icons.mediation_outlined,
           size: 64.0,
           color: Color(kDarkGreen),
         ),
-        const SizedBoxW(),
+        SizedBoxW(),
         Expanded(
           child: FittedBox(
             fit: BoxFit.fitWidth,

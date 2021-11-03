@@ -1,4 +1,8 @@
-import 'package:trdl_tool/all_imports.dart';
+class Question {
+  late String questionText;
+  late bool questionAnswer;
+  Question(this.questionText, this.questionAnswer);
+}
 
 class QuestionBank {
   List<Question> questionBank = [
@@ -61,6 +65,10 @@ class QuestionBank {
     ),
     Question(
       'Een wissel met een hoekverhouding van 1:12 mag met 60 km/u worden bereden.',
+      true,
+    ),
+    Question(
+      'Een KIMO is een stel op VL post Alkmaar.',
       true,
     ),
   ];

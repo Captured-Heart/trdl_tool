@@ -44,7 +44,7 @@ class MainEntry extends StatelessWidget {
         'homeindex0': (context) => const HomeIndex0(),
         'homeindex1': (context) => const HomeIndex1(),
         'homeindex2': (context) => const HomeIndex2(),
-        'homeindex3': (context) => HomeIndex3(),
+        'homeindex3': (context) => const HomeIndex3(),
 
         /*Uitvoeren Plan routes*/
         'uitvoerenplan': (context) => const UitvoerenPlan(),
