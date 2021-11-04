@@ -234,7 +234,6 @@ class ToelatenWerktreinenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -253,6 +252,7 @@ class ToelatenWerktreinenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
