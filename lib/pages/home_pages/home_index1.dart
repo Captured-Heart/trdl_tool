@@ -87,24 +87,27 @@ class HomeIndex1 extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Uitvoeren Plan',
-                            destination: 'uitvoerenplanachtergrond',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Aanpassen Plan',
-                            destination: 'aanpassenplanachtergrond',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Incidenten',
-                            destination: 'incidentenachtergrond',
-                          ),
-                        ],
+                      FittedBox(
+                        fit: BoxFit.cover,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            NavButton(
+                              buttontext: 'Uitvoeren',
+                              destination: 'uitvoerenplanachtergrond',
+                            ),
+                            SizedBoxW(),
+                            NavButton(
+                              buttontext: 'Aanpassen',
+                              destination: 'aanpassenplanachtergrond',
+                            ),
+                            SizedBoxW(),
+                            NavButton(
+                              buttontext: 'Incidenten',
+                              destination: 'incidentenachtergrond',
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
