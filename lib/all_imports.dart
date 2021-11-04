@@ -116,7 +116,8 @@ export 'package:trdl_tool/pages/werkwijze/incidenten/overige_incidenten/stillegg
 export 'package:trdl_tool/pages/werkwijze/incidenten/overige_incidenten/afhandelen_systeemstoringen.dart';
 
 /*Achtergrondinformatie pages*/
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/uitvoeren_plan.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/uitvoeren_plan_basis.dart';
 
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden.dart';
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden_basis.dart';
