@@ -125,6 +125,7 @@ class MainEntry extends StatelessWidget {
         'controlerenwbiachtergrond': (context) => const ControlerenWBIAchtergrond(),
         'foutenindewbiachtergrond': (context) => const FoutenWBIAchtergrond(),
         'aanvangwerkzaamhedenachtergrond': (context) => const AanvangWerkzaamhedenAchtergrond(),
+        'toelatenwerktreinenachtergrond': (context) => const ToelatenWerktreinenAchtergrond(),
 
         /*ProQuiz routes*/
         'proquizmain': (context) => const ProQuiz(),

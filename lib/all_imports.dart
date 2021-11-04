@@ -124,6 +124,7 @@ export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaam
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/controleren_wbi.dart';
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/fouten_wbi.dart';
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/aanvang_werkzaamheden.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/toelaten_werktreinen.dart';
 
 /*ProQuiz pages*/
 export 'package:trdl_tool/pages/home_pages/proquiz/proquizmain.dart';
