@@ -39,8 +39,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'In de voorbereiding naar de uitvoering van werkzaamheden aan de railinfrastructuur worden de volgende stappen doorlopen:',
+                              text: 'In de voorbereiding naar de uitvoering van werkzaamheden aan de railinfrastructuur worden de volgende stappen doorlopen:',
                             ),
                           ),
                         ],
@@ -50,8 +49,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Voor aanvang van de werkzaamheden geeft de LWB aan dat hij wil gaan werken;',
+                              text: '- Voor aanvang van de werkzaamheden geeft de LWB aan dat hij wil gaan werken;',
                             ),
                           ),
                         ],
@@ -61,8 +59,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Je mag, na overleg met de LWB, meewerken aan vooraf plaatsen van materieel ten behoeve van werkzaamheden in de aangeduide werkplek;',
+                              text: '- Je mag, na overleg met de LWB, meewerken aan vooraf plaatsen van materieel ten behoeve van werkzaamheden in de aangeduide werkplek;',
                             ),
                           ),
                         ],
@@ -72,8 +69,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Je overtuigt jezelf ervan dat vooraf toegelaten materieel tot stilstand is gekomen binnen de aangeduide werkplek.',
+                              text: 'Je overtuigt jezelf ervan dat vooraf toegelaten materieel tot stilstand is gekomen binnen de aangeduide werkplek.',
                             ),
                           ),
                         ],
@@ -83,8 +79,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Bij aanvang van de werkzaamheden stel je zelf of via jouw buurtreindienstleider vast of zich treinen in de buitendienststelling bevinden anders dan die volgens het WBI/WECO zijn toegestaan, uitgezonderd materieel ten behoeve van de werkzaamheden. Daarnaast stel je vast of de buurtreindienstleider zijn maatregelen volgens het WBI/WECO heeft genomen. Jij hebt de bevoegdheid om voorrang te verlenen aan deze controle en mag hiervoor dus treinen vertragen en registreert de ontstane vertragingen onder vermelding van het WBI-nummer.',
+                              text: 'Bij aanvang van de werkzaamheden stel je zelf of via jouw buurtreindienstleider vast of zich treinen in de buitendienststelling bevinden anders dan die volgens het WBI/WECO zijn toegestaan, uitgezonderd materieel ten behoeve van de werkzaamheden. Daarnaast stel je vast of de buurtreindienstleider zijn maatregelen volgens het WBI/WECO heeft genomen. Jij hebt de bevoegdheid om voorrang te verlenen aan deze controle en mag hiervoor dus treinen vertragen en registreert de ontstane vertragingen onder vermelding van het WBI-nummer.',
                             ),
                           ),
                         ],
@@ -104,8 +99,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Als de LWB buitendienst wil volgens de WBI, dan neemt deze bij de aanvangstijd van betreffende periode contact op met jou - de (communicerend) treindienstleider. Je controleert of er geen treinbewegingen meer gaande zijn in of naar het buitendienst te stellen gebied.',
+                              text: 'Als de LWB buitendienst wil volgens de WBI, dan neemt deze bij de aanvangstijd van betreffende periode contact op met jou - de (communicerend) treindienstleider. Je controleert of er geen treinbewegingen meer gaande zijn in of naar het buitendienst te stellen gebied.',
                             ),
                           ),
                         ],
@@ -115,8 +109,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Als het spoor schoon is, neem je de afgesproken veiligheidsmaatregelen, zoals deze in het WBI vermeld staan. Als de buitendienststelling van het WBI ook de sporen van anderen treindienstleiders betreft, stel je vast of de buurtreindienstleider zijn maatregelen volgens het WBI/WECO heeft genomen. Jij hebt de bevoegdheid om voorrang te verlenen aan deze controle en mag hiervoor dus treinen vertragen en registreert de ontstane vertragingen onder vermelding van het WBI-nummer.',
+                              text: 'Als het spoor schoon is, neem je de afgesproken veiligheidsmaatregelen, zoals deze in het WBI vermeld staan. Als de buitendienststelling van het WBI ook de sporen van anderen treindienstleiders betreft, stel je vast of de buurtreindienstleider zijn maatregelen volgens het WBI/WECO heeft genomen. Jij hebt de bevoegdheid om voorrang te verlenen aan deze controle en mag hiervoor dus treinen vertragen en registreert de ontstane vertragingen onder vermelding van het WBI-nummer.',
                             ),
                           ),
                         ],
@@ -126,8 +119,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Je bent nu klaar om de railinfracapaciteit, benoemd op het WBI/WECO, ter beschikking te stellen aan de LWB. Je geeft toestemming aan de LWB om zijn werkzaamheden aan te vangen voor de betreffende periode van WBI die geldt voor deze werkzaamheden. De LWB en jij tekenen dan gezamenlijk de juiste periode op de WBI/WECO af.',
+                              text: 'Je bent nu klaar om de railinfracapaciteit, benoemd op het WBI/WECO, ter beschikking te stellen aan de LWB. Je geeft toestemming aan de LWB om zijn werkzaamheden aan te vangen voor de betreffende periode van WBI die geldt voor deze werkzaamheden. De LWB en jij tekenen dan gezamenlijk de juiste periode op de WBI/WECO af.',
                             ),
                           ),
                         ],
@@ -137,8 +129,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Hierna is het aan de LWB om de veiligheidsmaatregelen buiten te nemen, zoals het plaatsen of activeren van de zelfsignalerende kortsluitlansen. Op verzoek van de LWB verleen je assistentie bij de veiligheidsmaatregelen die de LWB neemt. Hiervoor hef je, indien nodig, eenmalig de daarvoor aangewezen veiligheidsmaatregelen op. Breng deze weer aan, nadat de LWB zijn maatregelen heeft genomen.',
+                              text: 'Hierna is het aan de LWB om de veiligheidsmaatregelen buiten te nemen, zoals het plaatsen of activeren van de zelfsignalerende kortsluitlansen. Op verzoek van de LWB verleen je assistentie bij de veiligheidsmaatregelen die de LWB neemt. Hiervoor hef je, indien nodig, eenmalig de daarvoor aangewezen veiligheidsmaatregelen op. Breng deze weer aan, nadat de LWB zijn maatregelen heeft genomen.',
                             ),
                           ),
                         ],
@@ -148,8 +139,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Na het plaatsen van de maatregelen van de LWB is het spoor officieel buitendienst.',
+                              text: 'Na het plaatsen van de maatregelen van de LWB is het spoor officieel buitendienst.',
                             ),
                           ),
                         ],
@@ -159,8 +149,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'De LWB geeft nu toestemming aan de werklieden buiten dat zij het spoor mogen betreden.',
+                              text: 'De LWB geeft nu toestemming aan de werklieden buiten dat zij het spoor mogen betreden.',
                             ),
                           ),
                         ],
@@ -183,8 +172,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle:
-                                  'Werkplekbeveiliging met zelfsignalerende kortsluitlans (ZKL) i.c.m. rijweginstelling',
+                              subtitle: 'Werkplekbeveiliging met zelfsignalerende kortsluitlans (ZKL) i.c.m. rijweginstelling',
                             ),
                           ),
                         ],
@@ -204,8 +192,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Rijweginstelling vanaf de vrije baan is toegestaan als deze buiten dienst is;',
+                              text: '- Rijweginstelling vanaf de vrije baan is toegestaan als deze buiten dienst is;',
                             ),
                           ),
                         ],
@@ -215,8 +202,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- De railinfracapaciteit is beschikbaar gesteld aan de LWB voor werkzaamheden;',
+                              text: '- De railinfracapaciteit is beschikbaar gesteld aan de LWB voor werkzaamheden;',
                             ),
                           ),
                         ],
@@ -226,8 +212,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- ZKL in de eerste sectie achter het sein.',
+                              text: '- ZKL in de eerste sectie achter het sein.',
                             ),
                           ),
                         ],
@@ -237,8 +222,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Voorwaarden bij rijweginstelling met normaal seinbeeld:',
+                              text: 'Voorwaarden bij rijweginstelling met normaal seinbeeld:',
                             ),
                           ),
                         ],
@@ -258,8 +242,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Voorwaarden bij rijweginstelling met normaal seinbeeld:',
+                              text: 'Voorwaarden bij rijweginstelling met normaal seinbeeld:',
                             ),
                           ),
                         ],
@@ -269,8 +252,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Gebruik van ZKL mét remote control (afstandsbediening);',
+                              text: '- Gebruik van ZKL mét remote control (afstandsbediening);',
                             ),
                           ),
                         ],
@@ -280,8 +262,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Alleen toegepast als er geen rijweginstelling met geel knipperend seinbeeld mogelijk is.',
+                              text: '- Alleen toegepast als er geen rijweginstelling met geel knipperend seinbeeld mogelijk is.',
                             ),
                           ),
                         ],
@@ -291,8 +272,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Na het beschikbaar stellen van de railinfracapaciteit voor werkzaamheden middels het aftekenen van het WECO, vraagt de LWB je om mee te werken aan zijn werkplekbeveiliging met ZKL.',
+                              text: 'Na het beschikbaar stellen van de railinfracapaciteit voor werkzaamheden middels het aftekenen van het WECO, vraagt de LWB je om mee te werken aan zijn werkplekbeveiliging met ZKL.',
                             ),
                           ),
                         ],
@@ -302,8 +282,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'De volgende stappen worden hierbij doorlopen:',
+                              text: 'De volgende stappen worden hierbij doorlopen:',
                             ),
                           ),
                         ],
@@ -324,8 +303,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'a. met geel knipperend seinbeeld - de LWB plaatst de ZKL in de eerste sectie achter het sein; of',
+                              text: 'a. met geel knipperend seinbeeld - de LWB plaatst de ZKL in de eerste sectie achter het sein; of',
                             ),
                           ),
                         ],
@@ -336,8 +314,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'b. met normaal seinbeeld - de LWB plaatst de ZKL met remote control in de eerste sectie achter het sein en schakelt deze in de stand \'niet geleidend\';',
+                              text: 'b. met normaal seinbeeld - de LWB plaatst de ZKL met remote control in de eerste sectie achter het sein en schakelt deze in de stand \'niet geleidend\';',
                             ),
                           ),
                         ],
@@ -347,8 +324,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '2. De LWB verlaat het spoor en stelt zich buiten PVR op met zicht op het sein;',
+                              text: '2. De LWB verlaat het spoor en stelt zich buiten PVR op met zicht op het sein;',
                             ),
                           ),
                         ],
@@ -358,8 +334,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '3. Je verhindert rijweginstelling naar het betrokken sein indien noodzakelijk;',
+                              text: '3. Je verhindert rijweginstelling naar het betrokken sein indien noodzakelijk;',
                             ),
                           ),
                         ],
@@ -369,8 +344,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '4. Je stelt vast, indien nodig met hulp van de LWB, of zich op het spoor voor het betrokken sein een trein of rangeerdeel met machinist bevindt. Als dit het geval is neem je, eventueel met hulp van de LWB, contact op met deze machinist. Je geeft de machinist de opdracht om stil te blijven staan;',
+                              text: '4. Je stelt vast, indien nodig met hulp van de LWB, of zich op het spoor voor het betrokken sein een trein of rangeerdeel met machinist bevindt. Als dit het geval is neem je, eventueel met hulp van de LWB, contact op met deze machinist. Je geeft de machinist de opdracht om stil te blijven staan;',
                             ),
                           ),
                         ],
@@ -380,8 +354,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '5. Je stelt op verzoek van de LWB de rijweg in;',
+                              text: '5. Je stelt op verzoek van de LWB de rijweg in;',
                             ),
                           ),
                         ],
@@ -391,8 +364,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '6. Indien van toepassing schakelt de LWB de ZKL met remote control in de stand \'geleidend\';',
+                              text: '6. Indien van toepassing schakelt de LWB de ZKL met remote control in de stand \'geleidend\';',
                             ),
                           ),
                         ],
@@ -402,8 +374,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '7. Je herroept op verzoek van de LWB de rijweg;',
+                              text: '7. Je herroept op verzoek van de LWB de rijweg;',
                             ),
                           ),
                         ],
@@ -413,8 +384,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '8. De LWB controleert de juiste stand van de wissels;',
+                              text: '8. De LWB controleert de juiste stand van de wissels;',
                             ),
                           ),
                         ],
@@ -424,8 +394,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '9. Je verwijdert verhinderingen naar het betrokken sein als deze door jou zijn aangebracht;',
+                              text: '9. Je verwijdert verhinderingen naar het betrokken sein als deze door jou zijn aangebracht;',
                             ),
                           ),
                         ],
@@ -435,8 +404,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '10. Je informeert indien van toepassing de machinisten.',
+                              text: '10. Je informeert indien van toepassing de machinisten.',
                             ),
                           ),
                         ],
@@ -455,8 +423,8 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: TitleText(
-                              title: 'Beproeven infra-elementen',
+                            child: SubTitleText(
+                              subtitle: 'Beproeven infra-elementen',
                             ),
                           ),
                         ],
@@ -466,8 +434,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Tijdens de werkzaamheden kan de LWB aan de treindienstleider vragen of deze infra-elementen, die in de buitendienststelling liggen, wil beproeven. Als de LWB hiervoor je medewerking vraagt, mag je hieraan medewerking verlenen.',
+                              text: 'Tijdens de werkzaamheden kan de LWB aan de treindienstleider vragen of deze infra-elementen, die in de buitendienststelling liggen, wil beproeven. Als de LWB hiervoor je medewerking vraagt, mag je hieraan medewerking verlenen.',
                             ),
                           ),
                         ],
@@ -477,8 +444,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Tijdens het beproeven van infra-elementen mogen zich geen railvoertuigen bevinden op of in de sectie van dit element.',
+                              text: 'Tijdens het beproeven van infra-elementen mogen zich geen railvoertuigen bevinden op of in de sectie van dit element.',
                             ),
                           ),
                         ],
@@ -487,19 +453,8 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: TitleText(
-                              title: 'Uitloop werkzaamheden',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'De treinenloop is in de planning aangepast op geplande werkzaamheden. Dat wil zeggen dat er geen reguliere treinbewegingen gepland zijn in het gebied dat buiten dienst gaat. Het kan echter zo zijn dat de geplande werkzaamheden niet op tijd afgerond kunnen worden. Dit kan verschillende redenen hebben, denk hierbij aan:',
+                            child: SubTitleText(
+                              subtitle: 'Uitloop werkzaamheden',
                             ),
                           ),
                         ],
@@ -509,8 +464,17 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Als het spoor schoon is, neem je de afgesproken veiligheidsmaatregelen, zoals deze in het WBI vermeld staan. Als de buitendienststelling van het WBI ook de sporen van anderen treindienstleiders betreft, stel je vast of de buurtreindienstleider zijn maatregelen volgens het WBI/WECO heeft genomen. Jij hebt de bevoegdheid om voorrang te verlenen aan deze controle en mag hiervoor dus treinen vertragen en registreert de ontstane vertragingen onder vermelding van het WBI-nummer.',
+                              text: 'De treinenloop is in de planning aangepast op geplande werkzaamheden. Dat wil zeggen dat er geen reguliere treinbewegingen gepland zijn in het gebied dat buiten dienst gaat. Het kan echter zo zijn dat de geplande werkzaamheden niet op tijd afgerond kunnen worden. Dit kan verschillende redenen hebben, denk hierbij aan:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Als het spoor schoon is, neem je de afgesproken veiligheidsmaatregelen, zoals deze in het WBI vermeld staan. Als de buitendienststelling van het WBI ook de sporen van anderen treindienstleiders betreft, stel je vast of de buurtreindienstleider zijn maatregelen volgens het WBI/WECO heeft genomen. Jij hebt de bevoegdheid om voorrang te verlenen aan deze controle en mag hiervoor dus treinen vertragen en registreert de ontstane vertragingen onder vermelding van het WBI-nummer.',
                             ),
                           ),
                         ],
@@ -520,8 +484,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- De werkzaamheden zijn later aangevangen dan gepland;',
+                              text: '- De werkzaamheden zijn later aangevangen dan gepland;',
                             ),
                           ),
                         ],
@@ -531,8 +494,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Tijdens de werkzaamheden treden storingen op die niet op tijd hersteld kunnen worden;',
+                              text: '- Tijdens de werkzaamheden treden storingen op die niet op tijd hersteld kunnen worden;',
                             ),
                           ),
                         ],
@@ -542,8 +504,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- Weersomstandigheden zorgen ervoor dat het werk tussentijds onderbroken moet worden;',
+                              text: '- Weersomstandigheden zorgen ervoor dat het werk tussentijds onderbroken moet worden;',
                             ),
                           ),
                         ],
@@ -563,8 +524,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle:
-                                  'Wat is het risico bij werkzaamheden die uitlopen?',
+                              subtitle: 'Wat is het risico bij werkzaamheden die uitlopen?',
                             ),
                           ),
                         ],
@@ -574,8 +534,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Soms staan de eerste (reizigers)treinen opgesteld in de buitendienststelling. Dit staat vermeld op de WBI/WECO. Het vertrek van deze treinen is vaak zeer kort na afloop van de geplande werkzaamheden. Wanneer werkzaamheden uitlopen betekent dit dat ARI de rijwegen voor deze treinen gewoon in kan stellen, ondanks dat het spoor nog buiten dienst is. Dit kan tot gevolg hebben dat een sein in de buitendienststelling veilig wordt gezet en de trein kan gaan rijden, een zeer onwenselijke en gevaarlijke situatie!',
+                              text: 'Soms staan de eerste (reizigers)treinen opgesteld in de buitendienststelling. Dit staat vermeld op de WBI/WECO. Het vertrek van deze treinen is vaak zeer kort na afloop van de geplande werkzaamheden. Wanneer werkzaamheden uitlopen betekent dit dat ARI de rijwegen voor deze treinen gewoon in kan stellen, ondanks dat het spoor nog buiten dienst is. Dit kan tot gevolg hebben dat een sein in de buitendienststelling veilig wordt gezet en de trein kan gaan rijden, een zeer onwenselijke en gevaarlijke situatie!',
                             ),
                           ),
                         ],
@@ -585,8 +544,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Wanneer je als treindienstleider (van de LWB) de melding krijgt dat werkzaamheden uit gaan lopen, zijn een aantal zaken van belang:',
+                              text: 'Wanneer je als treindienstleider (van de LWB) de melding krijgt dat werkzaamheden uit gaan lopen, zijn een aantal zaken van belang:',
                             ),
                           ),
                         ],
@@ -611,8 +569,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Het is van belang te weten hoeveel extra tijd de LWB nodig heeft om de werkzaamheden af te ronden, om een goede inschatting te maken wat de invloed op het treinverkeer is;',
+                              text: 'Het is van belang te weten hoeveel extra tijd de LWB nodig heeft om de werkzaamheden af te ronden, om een goede inschatting te maken wat de invloed op het treinverkeer is;',
                             ),
                           ),
                         ],
@@ -637,8 +594,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Soms staan de eerste (reizigers)treinen opgesteld in de buitendienststelling. Dit staat vermeld op de WBI/WECO. Deze treinen staan vaak gepland voor vertrek zeer kort na afloop van de geplande werkzaamheden. Wanneer werkzaamheden uitlopen betekent dit dat procesleiding de rijwegen voor deze treinen gewoon in kan stellen, ondanks dat het spoor nog buiten dienst is. Dit kan tot gevolg hebben dat een sein in de buitendienststelling veilig wordt gezet en de trein gaat rijden, een zeer onwenselijke en gevaarlijke situatie! Wanneer je de melding krijgt van uitloop van werkzaamheden is het daarom van belang dat je goed kijkt of Procesleiding rijwegen binnen de buitendienststelling veilig kan zetten en dat je maatregelen neemt om dit te voorkomen. Je kunt dit bijvoorbeeld doen door of door een verhinderingsmaatregel te plaatsen;',
+                              text: 'Soms staan de eerste (reizigers)treinen opgesteld in de buitendienststelling. Dit staat vermeld op de WBI/WECO. Deze treinen staan vaak gepland voor vertrek zeer kort na afloop van de geplande werkzaamheden. Wanneer werkzaamheden uitlopen betekent dit dat procesleiding de rijwegen voor deze treinen gewoon in kan stellen, ondanks dat het spoor nog buiten dienst is. Dit kan tot gevolg hebben dat een sein in de buitendienststelling veilig wordt gezet en de trein gaat rijden, een zeer onwenselijke en gevaarlijke situatie! Wanneer je de melding krijgt van uitloop van werkzaamheden is het daarom van belang dat je goed kijkt of Procesleiding rijwegen binnen de buitendienststelling veilig kan zetten en dat je maatregelen neemt om dit te voorkomen. Je kunt dit bijvoorbeeld doen door of door een verhinderingsmaatregel te plaatsen;',
                             ),
                           ),
                         ],
@@ -663,8 +619,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Samen met de DVL bepaal je de gevolgen die de uitloop heeft voor de opstart van het treinverkeer. De DVL kan dit melden aan vervoerders, zodat eventueel treinen kunnen worden opgeheven of omgeleid. Licht ook de OvD-V in;',
+                              text: 'Samen met de DVL bepaal je de gevolgen die de uitloop heeft voor de opstart van het treinverkeer. De DVL kan dit melden aan vervoerders, zodat eventueel treinen kunnen worden opgeheven of omgeleid. Licht ook de OvD-V in;',
                             ),
                           ),
                         ],
@@ -689,8 +644,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Net als iedere onregelmatigheid die gevolgen heeft voor de treindienst, meld je ook deze situatie bij de Meldkamer Spoor/ Backoffice.',
+                              text: 'Net als iedere onregelmatigheid die gevolgen heeft voor de treindienst, meld je ook deze situatie bij de Meldkamer Spoor/ Backoffice.',
                             ),
                           ),
                         ],
@@ -710,8 +664,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Op het moment dat de werkzaamheden zijn afgerond, zorgt de LWB ervoor dat het buitendienst gestelde spoor helemaal vrij is van personen en materieel. Daarna verwijdert hij de door hem geplaatste veiligheidsmaatregelen. Hij neemt contact op met je, deelt mede dat de infra van de buitendienststelling weer vrij en onbelemmerd is, en meldt dat de werkzaamheden gereed zijn.',
+                              text: 'Op het moment dat de werkzaamheden zijn afgerond, zorgt de LWB ervoor dat het buitendienst gestelde spoor helemaal vrij is van personen en materieel. Daarna verwijdert hij de door hem geplaatste veiligheidsmaatregelen. Hij neemt contact op met je, deelt mede dat de infra van de buitendienststelling weer vrij en onbelemmerd is, en meldt dat de werkzaamheden gereed zijn.',
                             ),
                           ),
                         ],
@@ -721,8 +674,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Na beëindiging van de werkzaamheden trekt de LWB in overleg met jou het WBI/WECO in en samen tekenen jullie de WBI/WECO af.',
+                              text: 'Na beëindiging van de werkzaamheden trekt de LWB in overleg met jou het WBI/WECO in en samen tekenen jullie de WBI/WECO af.',
                             ),
                           ),
                         ],
@@ -732,8 +684,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Je heft de door jou geplaatste veiligheidsmaatregelen op, en neemt indien nodig contact op met betrokken buurtreindienstleiders om ook hun maatregelen op te heffen.',
+                              text: 'Je heft de door jou geplaatste veiligheidsmaatregelen op, en neemt indien nodig contact op met betrokken buurtreindienstleiders om ook hun maatregelen op te heffen.',
                             ),
                           ),
                         ],
@@ -743,8 +694,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Nu is het spoor weer in dienst en kan het treinverkeer weer normaal hervat worden.',
+                              text: 'Nu is het spoor weer in dienst en kan het treinverkeer weer normaal hervat worden.',
                             ),
                           ),
                         ],

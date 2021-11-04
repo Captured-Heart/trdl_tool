@@ -29,7 +29,9 @@ class DerdenDieren extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: TitleText(title: 'Derden en/of dieren langs de baan'),
+                            child: TitleText(
+                              title: 'Derden en/of dieren langs de baan',
+                            ),
                           ),
                         ],
                       ),
@@ -98,7 +100,9 @@ class DerdenDieren extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(text: 'Om aangereden dieren te verwijderen, licht je MKS/BO in.'),
+                            child: BodyText(
+                              text: 'Om aangereden dieren te verwijderen, licht je MKS/BO in.',
+                            ),
                           ),
                         ],
                       ),

@@ -41,8 +41,7 @@ class HomeIndex1 extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'De Werkwijze Treindienstleider is online beschikbaar op SharePoint. Deze werkwijze is altijd actueel en wordt inhoudelijk beheerd door de staf Verkeersleiding, treindienstleiding i.s.m. Human Factors Verkeersleiding (HF VL).',
+                              text: 'De Werkwijze Treindienstleider is online beschikbaar op SharePoint. Deze werkwijze is altijd actueel en wordt inhoudelijk beheerd door de staf Verkeersleiding, treindienstleiding i.s.m. Human Factors Verkeersleiding (HF VL).',
                             ),
                           ),
                         ],
@@ -52,8 +51,7 @@ class HomeIndex1 extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'De achtergrondinformatie is onderdeel van de Werkwijze Treindienstleiding, samen met de documenten Vakmanschap en TRA (Taak Risico Analyse). De opbouw van de achtergrondinformatie volgt de opbouw van de nieuwe werkwijze.',
+                              text: 'De achtergrondinformatie is onderdeel van de Werkwijze Treindienstleiding, samen met de documenten Vakmanschap en TRA (Taak Risico Analyse). De opbouw van de achtergrondinformatie volgt de opbouw van de nieuwe werkwijze.',
                             ),
                           ),
                         ],
@@ -63,8 +61,7 @@ class HomeIndex1 extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'De TRDLtool is nog volop in ontwikkeling en krijgt regelmatig updates. Kom snel terug voor meer achtergrondinformatie.',
+                              text: 'De TRDLtool is nog volop in ontwikkeling en krijgt regelmatig updates. Kom snel terug voor meer achtergrondinformatie.',
                             ),
                           ),
                         ],
@@ -90,19 +87,27 @@ class HomeIndex1 extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Uitvoeren Plan',
-                            destination: 'uitvoerenplanachtergrond',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Geplande Werkzaamheden',
-                            destination: 'geplandewerkzaamhedenachtergrond',
-                          ),
-                        ],
+                      FittedBox(
+                        fit: BoxFit.cover,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: const [
+                            NavButton(
+                              buttontext: 'Uitvoeren',
+                              destination: 'uitvoerenplanachtergrond',
+                            ),
+                            SizedBoxW(),
+                            NavButton(
+                              buttontext: 'Aanpassen',
+                              destination: 'aanpassenplanachtergrond',
+                            ),
+                            SizedBoxW(),
+                            NavButton(
+                              buttontext: 'Incidenten',
+                              destination: 'incidentenachtergrond',
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),

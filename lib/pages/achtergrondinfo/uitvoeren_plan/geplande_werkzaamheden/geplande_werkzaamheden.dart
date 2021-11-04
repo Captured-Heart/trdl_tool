@@ -59,8 +59,7 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Basisinformatie',
-                            destination:
-                                'geplandewerkzaamhedenbasisachtergrond',
+                            destination: 'geplandewerkzaamhedenbasisachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
@@ -86,6 +85,30 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
                           NavButton(
                             buttontext: 'Werkzones',
                             destination: 'werkzonesachtergrond',
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              //IMAGE CARD
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      const SizedBoxH(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.75,
+                            height: 200.0,
+                            child: Image.asset(
+                              'assets/images/achtergrond/werkzaamhedenBovenleiding.jpg',
+                            ),
                           ),
                         ],
                       ),
