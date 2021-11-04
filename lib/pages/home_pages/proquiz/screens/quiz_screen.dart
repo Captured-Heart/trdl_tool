@@ -1,6 +1,5 @@
 import 'package:trdl_tool/all_imports.dart';
 
-final _auth = FirebaseAuth.instance;
 bool showSpinner = false;
 bool timerRunning = false;
 bool lastTenSeconds = false;
@@ -121,22 +120,22 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.logout),
-              onPressed: () async {
-                setState(() {
-                  quizReset();
-                  showSpinner = true;
-                });
-                await _auth.signOut();
-                Navigator.pushReplacementNamed(context, 'login');
-                setState(() {
-                  showSpinner = false;
-                });
-              },
-            ),
-          ],
+          // actions: [
+          //   IconButton(
+          //     icon: const Icon(Icons.logout),
+          //     onPressed: () async {
+          //       setState(() {
+          //         quizReset();
+          //         showSpinner = true;
+          //       });
+          //       await _auth.signOut();
+          //       Navigator.pushReplacementNamed(context, 'login');
+          //       setState(() {
+          //         showSpinner = false;
+          //       });
+          //     },
+          //   ),
+          // ],
           title: const AppBarText(title: 'TRDLtool'),
         ),
         body: SafeArea(

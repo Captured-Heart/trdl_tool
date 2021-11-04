@@ -6,13 +6,16 @@ Future<bool> showExitPopup(context) async {
     builder: (BuildContext context) {
       return AlertDialog(
         content: SizedBox(
-          height: 90,
+          width: MediaQuery.of(context).size.width * 0.75,
+          height: MediaQuery.of(context).size.width * 0.50,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               const Text(
                 'Wil je de app verlaten?',
-                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(
                 height: 20,
@@ -25,7 +28,12 @@ Future<bool> showExitPopup(context) async {
                         /*User selected YES*/
                         SystemNavigator.pop();
                       },
-                      child: const Text('Ja'),
+                      child: const Text(
+                        'Ja',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -39,6 +47,9 @@ Future<bool> showExitPopup(context) async {
                       },
                       child: const Text(
                         'Nee',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

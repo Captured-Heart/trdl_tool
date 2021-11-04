@@ -1,7 +1,8 @@
 import 'package:trdl_tool/all_imports.dart';
 
-/*Darkgreen color constant*/
-const kDarkGreen = 0xFF0D4F18;
+/*Jungle Green color constant*/
+const kDarkGreen = 0xFF004E14;
+const kLightGreen = 0xFF738E7E;
 
 /*ProChat constants*/
 late String hintText;

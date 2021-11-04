@@ -8,13 +8,16 @@ Future<bool> showLogOutPopup(context) async {
     builder: (BuildContext context) {
       return AlertDialog(
         content: SizedBox(
-          height: 90,
+          width: MediaQuery.of(context).size.width * 0.75,
+          height: MediaQuery.of(context).size.width * 0.50,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               const Text(
                 'Wil je uitloggen?',
-                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(
                 height: 20,
@@ -31,7 +34,12 @@ Future<bool> showLogOutPopup(context) async {
                           'login',
                         );
                       },
-                      child: const Text('Ja'),
+                      child: const Text(
+                        'Ja',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -45,6 +53,9 @@ Future<bool> showLogOutPopup(context) async {
                       },
                       child: const Text(
                         'Nee',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),

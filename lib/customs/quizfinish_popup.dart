@@ -6,18 +6,23 @@ Future<bool> finishQuizPopup(context) async {
     builder: (BuildContext context) {
       return AlertDialog(
         content: SizedBox(
-          height: 200.0,
+          width: MediaQuery.of(context).size.width * 0.75,
+          height: MediaQuery.of(context).size.width * 0.50,
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              const Text(
-                'Einde van de Quiz',
-              ),
-              const SizedBox(
-                height: 20.0,
-              ),
-              Text(
-                'Je had $correctAmount antwoorden goed en $wrongAmount antwoorden fout.',
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      'Je had $correctAmount antwoorden goed en $wrongAmount antwoorden fout. Wil je de quiz opnieuw doen?',
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(
                 height: 20.0,
@@ -30,7 +35,12 @@ Future<bool> finishQuizPopup(context) async {
                         /*User selected YES*/
                         Navigator.of(context).pop();
                       },
-                      child: const Text('Speel nog een keer'),
+                      child: const Text(
+                        'Ja',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
                   const SizedBox(
@@ -46,7 +56,10 @@ Future<bool> finishQuizPopup(context) async {
                         );
                       },
                       child: const Text(
-                        'Stop en ga terug',
+                        'Nee',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
