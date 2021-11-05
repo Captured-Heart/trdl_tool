@@ -5,7 +5,6 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -18,7 +17,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //Fouten in de WBI Card
+              /*CARD #1*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -44,6 +43,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -54,6 +54,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -67,9 +68,10 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                       const SizedBoxH(),
                       Row(
                         children: const [
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Je overtuigt jezelf ervan dat vooraf toegelaten materieel tot stilstand is gekomen binnen de aangeduide werkplek.',
+                              text: '- Je overtuigt jezelf ervan dat vooraf toegelaten materieel tot stilstand is gekomen binnen de aangeduide werkplek.',
                             ),
                           ),
                         ],
@@ -84,7 +86,17 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBoxH(),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #2*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
                       Row(
                         children: const [
                           Expanded(
@@ -160,14 +172,24 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 300.0,
+                            height: 200.0,
                             child: Image.asset(
                               'assets/images/achtergrond/werkzaamhedenSpoor.png',
                             ),
                           ),
                         ],
                       ),
-                      const SizedBoxH(),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #3*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
                       Row(
                         children: const [
                           Expanded(
@@ -187,6 +209,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -197,6 +220,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -207,6 +231,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -227,6 +252,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -247,6 +273,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -257,6 +284,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -287,6 +315,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -319,6 +348,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -329,6 +359,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -339,6 +370,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -349,6 +381,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -359,6 +392,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -369,6 +403,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -379,6 +414,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -389,6 +425,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -399,6 +436,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -413,7 +451,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                   ),
                 ),
               ),
-              //Beproeven Infra Card
+              /*CARD #4*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -472,15 +510,6 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                       const SizedBoxH(),
                       Row(
                         children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Als het spoor schoon is, neem je de afgesproken veiligheidsmaatregelen, zoals deze in het WBI vermeld staan. Als de buitendienststelling van het WBI ook de sporen van anderen treindienstleiders betreft, stel je vast of de buurtreindienstleider zijn maatregelen volgens het WBI/WECO heeft genomen. Jij hebt de bevoegdheid om voorrang te verlenen aan deze controle en mag hiervoor dus treinen vertragen en registreert de ontstane vertragingen onder vermelding van het WBI-nummer.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
@@ -489,6 +518,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -499,6 +529,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -509,6 +540,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -549,6 +581,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -574,6 +607,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -599,6 +633,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -624,6 +659,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),

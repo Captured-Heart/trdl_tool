@@ -5,7 +5,6 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -18,7 +17,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //TOETSCRITERIA CARD
+              /*CARD #1*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -49,45 +48,45 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Voor aanvang van de werkzaamheden controleer je of:',
+                              text: 'Voor aanvang van de werkzaamheden controleer je of:',
                             ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- niet onbedoeld een rijweg instelbaar is naar het gebied genoemd in de rubriek \'aanduiding van de buitendienststelling\';',
+                              text: '- niet onbedoeld een rijweg instelbaar is naar het gebied genoemd in de rubriek \'aanduiding van de buitendienststelling\';',
                             ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- de maatregelen van de LWB invloed hebben op jouw eigen maatregelen;',
+                              text: '- de maatregelen van de LWB invloed hebben op jouw eigen maatregelen;',
                             ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '- bij werkplekbeveiliging met de zelfsignalerende kortsluitlans er geen rijweg ingesteld moet worden vanaf de vrije baan, tenzij de vrije baan onderdeel is van de buitendienststelling;',
+                              text: '- bij werkplekbeveiliging met de zelfsignalerende kortsluitlans er geen rijweg ingesteld moet worden vanaf de vrije baan, tenzij de vrije baan onderdeel is van de buitendienststelling;',
                             ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -104,8 +103,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '* de betrokken treindienstleider(s) in het bezit is (zijn) van de juiste WBI/WECO;',
+                              text: '* de betrokken treindienstleider(s) in het bezit is (zijn) van de juiste WBI/WECO;',
                             ),
                           ),
                         ],
@@ -116,8 +114,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text:
-                                  '* er geen factoren zijn die de aanvang van de werkzaamheden kunnen beïnvloeden.',
+                              text: '* er geen factoren zijn die de aanvang van de werkzaamheden kunnen beïnvloeden.',
                             ),
                           ),
                         ],
@@ -128,7 +125,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 300.0,
+                            height: 200.0,
                             child: Image.asset(
                               'assets/images/achtergrond/wbiOverzicht.png',
                             ),
@@ -140,8 +137,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Je hebt in procesleiding de beschikking over een koppeling met het WBI kantoor. Dit helpt met het controleren van de WBI.',
+                              text: 'Je hebt in procesleiding de beschikking over een koppeling met het WBI kantoor. Dit helpt met het controleren van de WBI.',
                             ),
                           ),
                         ],
@@ -151,8 +147,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Via de database zijn de te keuren WBI’s terug te vinden. Deze hebben de status ‘niet gekeurd’.  Alle maatregelen die al zijn ingevoerd zijn terug te vinden en door middel van de preview functie zijn alle periodes van een WBI van tevoren te bekijken via een voorbeeld in een oranje kleur.',
+                              text: 'Via de database zijn de te keuren WBI’s terug te vinden. Deze hebben de status ‘niet gekeurd’.  Alle maatregelen die al zijn ingevoerd zijn terug te vinden en door middel van de preview functie zijn alle periodes van een WBI van tevoren te bekijken via een voorbeeld in een oranje kleur.',
                             ),
                           ),
                         ],
@@ -162,8 +157,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Als een WBI/WECO gekeurd is, krijgt deze de status ‘goedgekeurd’ of ‘afgekeurd’ door jou toegewezen in procesleiding.',
+                              text: 'Als een WBI/WECO gekeurd is, krijgt deze de status ‘goedgekeurd’ of ‘afgekeurd’ door jou toegewezen in procesleiding.',
                             ),
                           ),
                         ],

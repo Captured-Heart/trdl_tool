@@ -1,12 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
 void main() async {
-  /*Standard methods for Firebase usage*/
+  /*FIREBASE USAGE*/
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  Logger().wtf('App started from main().');
   runApp(
-    /*Main entry point for the app! DO NOT ALTER!*/
     const MainEntry(),
   );
 }
@@ -19,7 +17,7 @@ class MainEntry extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Strings.mainTitle,
-      /*Package from FlexColorScheme, making the WHOLE APP the same theme, including Questrial font*/
+      /*APPTHEME*/
       theme: FlexColorScheme.light(
         scheme: FlexScheme.jungle,
         fontFamily: 'Questrial',
@@ -29,10 +27,10 @@ class MainEntry extends StatelessWidget {
         fontFamily: 'Questrial',
       ).toTheme,
       themeMode: ThemeMode.system,
-      /*MainEntry always goes to splash_screen*/
+      /*LOAD SPLASH FIRST*/
       home: const SplashScreen(),
       routes: {
-        /*First Page routes*/
+        /*LANDING PAGES ROUTES*/
         'welcomescreen': (context) => const WelcomeScreen(),
         'login': (context) => const Login(),
         'register': (context) => const Register(),
@@ -40,13 +38,13 @@ class MainEntry extends StatelessWidget {
         'verifyscreen': (context) => const VerifyScreen(),
         'wachtwoordscreen': (context) => const Wachtwoord(),
 
-        /*Home Page routes*/
+        /*HOMEPAGES ROUTES*/
         'homeindex0': (context) => const HomeIndex0(),
         'homeindex1': (context) => const HomeIndex1(),
         'homeindex2': (context) => const HomeIndex2(),
         'homeindex3': (context) => const HomeIndex3(),
 
-        /*Uitvoeren Plan routes*/
+        /*UITVOEREN PLAN ROUTES*/
         'uitvoerenplan': (context) => const UitvoerenPlan(),
         'geplandewerkzaamheden': (context) => const GeplandeWerkzaamheden(),
         'aanvangwerkzaamheden': (context) => const AanvangWerkzaamheden(),
@@ -63,17 +61,16 @@ class MainEntry extends StatelessWidget {
         'ncbg': (context) => const Ncbg(),
         'dienstovergave': (context) => const Dienstovergave(),
 
-        /*Aanpassen Plan routes*/
+        /*AANPASSEN PLAN ROUTES*/
         'aanpassenplan': (context) => const AanpassenPlan(),
-        'stappenplanversperringen': (context) =>
-            const StappenplanVersperringen(),
+        'stappenplanversperringen': (context) => const StappenplanVersperringen(),
         'ongeplandwerk': (context) => const OngeplandWerk(),
         'orderacceptatie': (context) => const Orderacceptatie(),
         'materieelongeplandwerk': (context) => const MaterieelOngeplandWerk(),
         'infraongeplandwerk': (context) => const InfraOngeplandWerk(),
         'vertragingen': (context) => const Vertragingen(),
 
-        /*Incidenten Routes*/
+        /*INCIDENTEN ROUTES*/
         'incidenten': (context) => const Incidenten(),
         'herroepensein': (context) => const HerroepenSein(),
         'infra': (context) => const Infra(),
@@ -116,31 +113,23 @@ class MainEntry extends StatelessWidget {
         'wisselsvrijmaken': (context) => const WisselsVrijmaken(),
         'stspassage': (context) => const STSPassage(),
         'stilleggentreindienst': (context) => const StilleggenTreindienst(),
-        'afhandelensysteemstoringen': (context) =>
-            const AfhandelenSysteemstoringen(),
+        'afhandelensysteemstoringen': (context) => const AfhandelenSysteemstoringen(),
 
-        /*Achtergrondinfo routes*/
-        'uitvoerenplanachtergrond': (context) =>
-            const UitvoerenPlanAchtergrond(),
-        'uitvoerenplanbasisachtergrond': (context) =>
-            const UitvoerenPlanBasisAchtergrond(),
-        'geplandewerkzaamhedenachtergrond': (context) =>
-            const GeplandeWerkzaamhedenAchtergrond(),
-        'geplandewerkzaamhedenbasisachtergrond': (context) =>
-            const GeplandeWerkzaamhedenBasisAchtergrond(),
-        'controlerenwbiachtergrond': (context) =>
-            const ControlerenWBIAchtergrond(),
+        /*ACHTERGRONDINFO ROUTES*/
+        'uitvoerenplanachtergrond': (context) => const UitvoerenPlanAchtergrond(),
+        'uitvoerenplanbasisachtergrond': (context) => const UitvoerenPlanBasisAchtergrond(),
+        'geplandewerkzaamhedenachtergrond': (context) => const GeplandeWerkzaamhedenAchtergrond(),
+        'geplandewerkzaamhedenbasisachtergrond': (context) => const GeplandeWerkzaamhedenBasisAchtergrond(),
+        'controlerenwbiachtergrond': (context) => const ControlerenWBIAchtergrond(),
         'foutenindewbiachtergrond': (context) => const FoutenWBIAchtergrond(),
-        'aanvangwerkzaamhedenachtergrond': (context) =>
-            const AanvangWerkzaamhedenAchtergrond(),
-        'toelatenwerktreinenachtergrond': (context) =>
-            const ToelatenWerktreinenAchtergrond(),
+        'aanvangwerkzaamhedenachtergrond': (context) => const AanvangWerkzaamhedenAchtergrond(),
+        'toelatenwerktreinenachtergrond': (context) => const ToelatenWerktreinenAchtergrond(),
         'werkzonesachtergrond': (context) => const WerkzonesAchtergrond(),
 
-        /*ProQuiz routes*/
+        /*PROQUIZ ROUTES*/
         'proquizmain': (context) => const ProQuiz(),
 
-        /*ProChat routes*/
+        /*PROCHAT ROUTES*/
         'prochatmain': (context) => const ProChat(),
       },
     );
