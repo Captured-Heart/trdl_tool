@@ -36,7 +36,7 @@ class ToelatenWerktreinenAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle: 'Toelating (werkt)trein tot buitendienst gesteld gebied',
+                              subtitle: 'Toelating (werk)trein tot buitendienst gesteld gebied',
                             ),
                           ),
                         ],
@@ -86,7 +86,6 @@ class ToelatenWerktreinenAchtergrond extends StatelessWidget {
                       const SizedBoxH(),
                       Row(
                         children: const [
-                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
                               text: 'De LWB instrueert de begeleider buitendienst gesteld spoor (BBD) en (werktrein)machinist over:',
@@ -260,7 +259,6 @@ class ToelatenWerktreinenAchtergrond extends StatelessWidget {
                       const SizedBoxH(),
                       Row(
                         children: const [
-                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
                               text: 'De machinist van trein 89663 moet achter wissel 257A rijden op zicht, de wissels voorzichtig berijden met een snelheid van max. 10 km/h en rekening houden met het niet goed functioneren van de overwegen en krijgt bij deze een rijopdracht van de treindienstleider.\'',
