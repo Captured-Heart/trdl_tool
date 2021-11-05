@@ -360,7 +360,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
               Card(
                 elevation: 6.0,
                 child: Padding(
-                  padding: cons EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
                       Row(
