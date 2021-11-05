@@ -1260,7 +1260,6 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBoxH(),
                     ],
                   ),
                 ),

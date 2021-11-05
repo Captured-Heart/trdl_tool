@@ -5,7 +5,6 @@ class FoutenWBIAchtergrond extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -18,7 +17,7 @@ class FoutenWBIAchtergrond extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //Fouten in de WBI Card
+              /*CARD #1*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -39,8 +38,7 @@ class FoutenWBIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Wanneer er een fout in de WBI is geconstateerd zijn er twee mogelijkheden:',
+                              text: 'Wanneer er een fout in de WBI is geconstateerd zijn er twee mogelijkheden:',
                             ),
                           ),
                         ],
@@ -63,8 +61,7 @@ class FoutenWBIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Bij meer dan 72 uur voor uitvoering neem je contact op met de afdeling Werkplekbeveiliging van uw regio. Treindienstleider en medewerker Werkplekbeveiliging stemmen de vereiste wijzigingen af, waarna de medewerker Werkplekbeveiliging de WBI aanpast in overleg met de betrokken aannemer.',
+                              text: 'Bij meer dan 72 uur voor uitvoering neem je contact op met de afdeling Werkplekbeveiliging van uw regio. Treindienstleider en medewerker Werkplekbeveiliging stemmen de vereiste wijzigingen af, waarna de medewerker Werkplekbeveiliging de WBI aanpast in overleg met de betrokken aannemer.',
                             ),
                           ),
                         ],
@@ -74,8 +71,7 @@ class FoutenWBIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Voorwaarde daarbij is dat de gewijzigde WBI na aanlevering door de treindienstleider in overleg met de medewerker Werkplekbeveiliging wordt gecontroleerd.',
+                              text: 'Voorwaarde daarbij is dat de gewijzigde WBI na aanlevering door de treindienstleider in overleg met de medewerker Werkplekbeveiliging wordt gecontroleerd.',
                             ),
                           ),
                         ],
@@ -98,8 +94,7 @@ class FoutenWBIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Binnen 72 uur voor uitvoering neem je contact op met de medewerker 24/7 werkplekbeveiliging. De medewerker 24/7 Werkplekbeveiliging bepaalt of er een versieophoging of een penwijziging noodzakelijk is. Een versieophoging of penwijziging kan slechts plaatsvinden indien zowel treindienstleider als medewerker 24/7 Werkplekbeveiliging hier mee instemmen.',
+                              text: 'Binnen 72 uur voor uitvoering neem je contact op met de medewerker 24/7 werkplekbeveiliging. De medewerker 24/7 Werkplekbeveiliging bepaalt of er een versieophoging of een penwijziging noodzakelijk is. Een versieophoging of penwijziging kan slechts plaatsvinden indien zowel treindienstleider als medewerker 24/7 Werkplekbeveiliging hier mee instemmen.',
                             ),
                           ),
                         ],
@@ -109,8 +104,7 @@ class FoutenWBIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text:
-                                  'Als er geen overeenstemming wordt bereikt over een penwijziging/versieophoging of een penwijziging/versieophoging geen oplossing biedt en daardoor werkzaamheden dreigen te worden afgeblazen, dan wordt via de medewerker 24/7 werkplekbeveiliging naar de OvD-S geëscaleerd.',
+                              text: 'Als er geen overeenstemming wordt bereikt over een penwijziging/versieophoging of een penwijziging/versieophoging geen oplossing biedt en daardoor werkzaamheden dreigen te worden afgeblazen, dan wordt via de medewerker 24/7 werkplekbeveiliging naar de OvD-S geëscaleerd.',
                             ),
                           ),
                         ],
