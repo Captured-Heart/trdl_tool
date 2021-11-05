@@ -5,8 +5,6 @@ class InfraOngeplandWerk extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,7 +17,7 @@ class InfraOngeplandWerk extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //Procedure Card
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -36,14 +34,8 @@ class InfraOngeplandWerk extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Procedure',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.procedure,
                       ),
                       const SizedBoxH(),
                       Row(
@@ -90,6 +82,7 @@ class InfraOngeplandWerk extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -101,6 +94,7 @@ class InfraOngeplandWerk extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -127,9 +121,10 @@ class InfraOngeplandWerk extends StatelessWidget {
                       Row(
                         children: const [
                           SizedBoxW(),
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Niveau van de werkplekbeveiliging;',
+                              text: '* Niveau van de werkplekbeveiliging;',
                             ),
                           ),
                         ],
@@ -137,20 +132,22 @@ class InfraOngeplandWerk extends StatelessWidget {
                       Row(
                         children: const [
                           SizedBoxW(),
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Veiligheidsmaatregelen LWB;',
+                              text: '* Veiligheidsmaatregelen LWB;',
                             ),
                           ),
                         ],
                       ),
                       Row(
                         children: const [
+                          SizedBoxW(),
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- Veiligheidsmaatregelen treindienstleider;',
+                                  '* Veiligheidsmaatregelen treindienstleider;',
                             ),
                           ),
                         ],
@@ -158,9 +155,10 @@ class InfraOngeplandWerk extends StatelessWidget {
                       Row(
                         children: const [
                           SizedBoxW(),
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Exacte aanduiding werkplek.',
+                              text: '* Exacte aanduiding werkplek.',
                             ),
                           ),
                         ],
@@ -168,9 +166,10 @@ class InfraOngeplandWerk extends StatelessWidget {
                       Row(
                         children: const [
                           SizedBoxW(),
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Maak met de LWB een WECO op.',
+                              text: '* Maak met de LWB een WECO op.',
                             ),
                           ),
                         ],
@@ -179,19 +178,15 @@ class InfraOngeplandWerk extends StatelessWidget {
                   ),
                 ),
               ),
-              //Risico Card
+              /*RISICO CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(subtitle: 'Risico\'s'),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.risico,
                       ),
                       const SizedBoxH(),
                       Row(
@@ -208,21 +203,15 @@ class InfraOngeplandWerk extends StatelessWidget {
                   ),
                 ),
               ),
-              //Context Card
+              /*CONTEXT CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Context',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.context,
                       ),
                       const SizedBoxH(),
                       Row(

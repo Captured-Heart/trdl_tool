@@ -10,7 +10,9 @@ class MaterieelOngeplandWerk extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool',),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -19,7 +21,7 @@ class MaterieelOngeplandWerk extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //Procedure Card
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -36,14 +38,8 @@ class MaterieelOngeplandWerk extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Procedure',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.procedure,
                       ),
                       const SizedBoxH(),
                       Row(
@@ -60,21 +56,15 @@ class MaterieelOngeplandWerk extends StatelessWidget {
                   ),
                 ),
               ),
-              //Risico Card
+              /*RISICO CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Risico\'s',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.risico,
                       ),
                       const SizedBoxH(),
                       Row(
@@ -91,21 +81,15 @@ class MaterieelOngeplandWerk extends StatelessWidget {
                   ),
                 ),
               ),
-              //Context Card
+              /*CONTEXT CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Context',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.context,
                       ),
                       const SizedBoxH(),
                       Row(

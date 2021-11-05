@@ -5,8 +5,6 @@ class VeiligheidsstoringSein extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,7 +17,7 @@ class VeiligheidsstoringSein extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //PROCEDURE CARD
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -36,14 +34,8 @@ class VeiligheidsstoringSein extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Procedure',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.procedure,
                       ),
                       const SizedBoxH(),
                       Row(
@@ -60,21 +52,15 @@ class VeiligheidsstoringSein extends StatelessWidget {
                   ),
                 ),
               ),
-              //RISICO CARD
+              /*RISICO CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Risico\'s',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.risico,
                       ),
                       const SizedBoxH(),
                       Row(
@@ -91,21 +77,15 @@ class VeiligheidsstoringSein extends StatelessWidget {
                   ),
                 ),
               ),
-              //CONTEXT CARD
+              /*CONTEXT CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Context',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.context,
                       ),
                       const SizedBoxH(),
                       Row(

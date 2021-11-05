@@ -5,8 +5,6 @@ class ProcedureRuClu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,7 +17,7 @@ class ProcedureRuClu extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //PROCEDURE CARD
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -34,25 +32,21 @@ class ProcedureRuClu extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Procedure',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.procedure,
                       ),
                       const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De MKS/BO verzoekt je de procedure RU/CLU te starten:',
+                              text:
+                                  'De MKS/BO verzoekt je de procedure RU/CLU te starten:',
                             ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -63,16 +57,19 @@ class ProcedureRuClu extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Staak het treinverkeer in betrokken gebied en neem veiligheidsmaatregelen;',
+                              text:
+                                  '- Staak het treinverkeer in betrokken gebied en neem veiligheidsmaatregelen;',
                             ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -83,22 +80,26 @@ class ProcedureRuClu extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Geef aan de MKS/BO door welk gebied spanningsloos is en wat de beperkingen zijn;',
+                              text:
+                                  '- Geef aan de MKS/BO door welk gebied spanningsloos is en wat de beperkingen zijn;',
                             ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Let er op dat de stroomafnemers van treinen in het betrokken gebied neergelaten zijn voor de spanning weer ingeschakeld wordt;',
+                              text:
+                                  '- Let er op dat de stroomafnemers van treinen in het betrokken gebied neergelaten zijn voor de spanning weer ingeschakeld wordt;',
                             ),
                           ),
                         ],
@@ -108,7 +109,8 @@ class ProcedureRuClu extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De AL zorgt voor communicatie tussen EV en brandweer en informeert jou over het verkleinen of inschakelen van het uitgeschakelde gebied.',
+                              text:
+                                  'De AL zorgt voor communicatie tussen EV en brandweer en informeert jou over het verkleinen of inschakelen van het uitgeschakelde gebied.',
                             ),
                           ),
                         ],
@@ -117,28 +119,23 @@ class ProcedureRuClu extends StatelessWidget {
                   ),
                 ),
               ),
-              //RISICO CARD
+              /*RISICO CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Risico\'s',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.risico,
                       ),
                       const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                              text:
+                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],
@@ -147,28 +144,23 @@ class ProcedureRuClu extends StatelessWidget {
                   ),
                 ),
               ),
-              //CONTEXT CARD
+              /*CONTEXT CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Context',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.context,
                       ),
                       const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Om blus- of reddingswerkzaamheden uit te kunnen voeren aan en/of in de nabijheid van de bovenleiding, moet deze elektrisch veiliggesteld zijn.',
+                              text:
+                                  'Om blus- of reddingswerkzaamheden uit te kunnen voeren aan en/of in de nabijheid van de bovenleiding, moet deze elektrisch veiliggesteld zijn.',
                             ),
                           ),
                         ],

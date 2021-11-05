@@ -5,8 +5,6 @@ class MilieuMeldingen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,7 +17,7 @@ class MilieuMeldingen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //PROCEDURE CARD
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -29,26 +27,23 @@ class MilieuMeldingen extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: TitleText(title: 'Meldingen met betrekking tot het milieu'),
+                            child: TitleText(
+                              title: 'Meldingen met betrekking tot het milieu',
+                            ),
                           ),
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Procedure',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.procedure,
                       ),
                       const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Meldingen die je krijgt m.b.t. het milieu in of nabij de infra (zoals bodemvervuiling of geluidsoverlast) geef je door aan de MKS/BO.',
+                              text:
+                                  'Meldingen die je krijgt m.b.t. het milieu in of nabij de infra (zoals bodemvervuiling of geluidsoverlast) geef je door aan de MKS/BO.',
                             ),
                           ),
                         ],
@@ -57,21 +52,15 @@ class MilieuMeldingen extends StatelessWidget {
                   ),
                 ),
               ),
-              //RISICO CARD
+              /*RISICO CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Risico\'s',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.risico,
                       ),
                       const SizedBoxH(),
                       Row(
@@ -87,28 +76,23 @@ class MilieuMeldingen extends StatelessWidget {
                   ),
                 ),
               ),
-              //CONTEXT CARD
+              /*CONTEXT CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Context',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.context,
                       ),
                       const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Alle activiteiten op emplacementen vallen onder omgevingsvergunningen. De MKS/BO meldt overtredingen van deze vergunningen aan de milieudienst.',
+                              text:
+                                  'Alle activiteiten op emplacementen vallen onder omgevingsvergunningen. De MKS/BO meldt overtredingen van deze vergunningen aan de milieudienst.',
                             ),
                           ),
                         ],

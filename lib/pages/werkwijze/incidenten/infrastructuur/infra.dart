@@ -5,8 +5,6 @@ class Infra extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,7 +17,7 @@ class Infra extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //PROCEDURE CARD
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -34,14 +32,8 @@ class Infra extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Procedure',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.procedure,
                       ),
                       const SizedBoxH(),
                       Row(
@@ -66,6 +58,7 @@ class Infra extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -77,6 +70,7 @@ class Infra extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -88,6 +82,7 @@ class Infra extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -114,7 +109,7 @@ class Infra extends StatelessWidget {
                   ),
                 ),
               ),
-              //NAVIGATION CARD
+              /*NAVIGATION CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(

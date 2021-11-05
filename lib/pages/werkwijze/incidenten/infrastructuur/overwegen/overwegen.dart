@@ -5,8 +5,6 @@ class Overwegen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,7 +17,7 @@ class Overwegen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //PROCEDURE CARD
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -36,14 +34,8 @@ class Overwegen extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Procedure',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.procedure,
                       ),
                       const SizedBoxH(),
                       Row(
@@ -66,6 +58,7 @@ class Overwegen extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -77,6 +70,7 @@ class Overwegen extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -95,8 +89,9 @@ class Overwegen extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                                text:
-                                    "- Een AHOB boom geheel of gedeeltelijk is 'afgebroken´;",),
+                              text:
+                                  "1. Een AHOB boom geheel of gedeeltelijk is 'afgebroken´;",
+                            ),
                           ),
                         ],
                       ),
@@ -106,8 +101,9 @@ class Overwegen extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                                text:
-                                    '- De knipperende rode lichten van meer dan één paal niet branden of niet zichtbaar zijn;',),
+                              text:
+                                  '2. De knipperende rode lichten van meer dan één paal niet branden of niet zichtbaar zijn;',
+                            ),
                           ),
                         ],
                       ),
@@ -117,7 +113,8 @@ class Overwegen extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                                text: '- Geen van de overwegbellen werken;',),
+                              text: '3. Geen van de overwegbellen werken;',
+                            ),
                           ),
                         ],
                       ),
@@ -127,8 +124,9 @@ class Overwegen extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                                text:
-                                    '- Aan tenminste één zijde van de overweg geen herkenbaar Andreaskruis meer aanwezig is.',),
+                              text:
+                                  '4. Aan tenminste één zijde van de overweg geen herkenbaar Andreaskruis meer aanwezig is.',
+                            ),
                           ),
                         ],
                       ),
@@ -137,8 +135,9 @@ class Overwegen extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                                text:
-                                    'Als een overweg die gekoppeld is aan een storingsmelder gestoord is, geef je een aanwijzing OVW af.',),
+                              text:
+                                  'Als een overweg die gekoppeld is aan een storingsmelder gestoord is, geef je een aanwijzing OVW af.',
+                            ),
                           ),
                         ],
                       ),
@@ -148,38 +147,45 @@ class Overwegen extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                                text:
-                                    "- Bij de melding 'meerdere overwegen gestoord' geef je een aanwijzing OVW af voor de overwegen op de desbetreffende melder;",),
+                              text:
+                                  "- Bij de melding 'meerdere overwegen gestoord' geef je een aanwijzing OVW af voor de overwegen op de desbetreffende melder;",
+                            ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                                text:
-                                    '- Voor een storing aan overige overwegen die niet op een storingsmelder zitten, bekijk je de plaatselijke regelgeving;',),
+                              text:
+                                  '- Voor een storing aan overige overwegen die niet op een storingsmelder zitten, bekijk je de plaatselijke regelgeving;',
+                            ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                                text:
-                                    '- Wanneer je een veiligheidsstoring aan een overweg gemeld krijgt, laat je de werking controleren in beide rijrichtingen met een aanwijzing OVW. Bij een daadwerkelijke veiligheidsstoring staak je het treinverkeer over deze overweg;',),
+                              text:
+                                  '- Wanneer je een veiligheidsstoring aan een overweg gemeld krijgt, laat je de werking controleren in beide rijrichtingen met een aanwijzing OVW. Bij een daadwerkelijke veiligheidsstoring staak je het treinverkeer over deze overweg;',
+                            ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                                text:
-                                    '- Als je een melding \'storingsmelder overwegen defect\' of een systeemfoutmelding overwegen (DOSS) krijgt, meld je dit aan de MKS/BO. Geef pas aanwijzingen OVW af nadat je de melding krijgt dat een overweg daadwerkelijk gestoord is.',),
+                              text:
+                                  '- Als je een melding \'storingsmelder overwegen defect\' of een systeemfoutmelding overwegen (DOSS) krijgt, meld je dit aan de MKS/BO. Geef pas aanwijzingen OVW af nadat je de melding krijgt dat een overweg daadwerkelijk gestoord is.',
+                            ),
                           ),
                         ],
                       ),
@@ -188,8 +194,9 @@ class Overwegen extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                                text:
-                                    'Als er een storing gemeld wordt aan een overweg op CBG die niet op de storingsmelder is aangesloten, geef je een aanwijzing VR met een snelheid van max. 10 km/u, met vermelding van reden, aan de betrokken machinisten.',),
+                              text:
+                                  'Als er een storing gemeld wordt aan een overweg op CBG die niet op de storingsmelder is aangesloten, geef je een aanwijzing VR met een snelheid van max. 10 km/u, met vermelding van reden, aan de betrokken machinisten.',
+                            ),
                           ),
                         ],
                       ),
@@ -198,8 +205,9 @@ class Overwegen extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                                text:
-                                    'Je staakt het afgeven van aanwijzingen pas na toestemming van de MKS/BO.',),
+                              text:
+                                  'Je staakt het afgeven van aanwijzingen pas na toestemming van de MKS/BO.',
+                            ),
                           ),
                         ],
                       ),
@@ -208,8 +216,9 @@ class Overwegen extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                                text:
-                                    'Na een aanrijding op een overweg staak je pas met het afgeven van aanwijzing OVW als deze overweg is vrijgegeven door de storingsdienst.',),
+                              text:
+                                  'Na een aanrijding op een overweg staak je pas met het afgeven van aanwijzing OVW als deze overweg is vrijgegeven door de storingsdienst.',
+                            ),
                           ),
                         ],
                       ),
@@ -217,21 +226,15 @@ class Overwegen extends StatelessWidget {
                   ),
                 ),
               ),
-              //RISICO CARD
+              /*RISICO CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Risico\'s',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.risico,
                       ),
                       const SizedBoxH(),
                       Row(
@@ -248,21 +251,15 @@ class Overwegen extends StatelessWidget {
                   ),
                 ),
               ),
-              //CONTEXT CARD
+              /*CONTEXT CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Context',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.context,
                       ),
                       const SizedBoxH(),
                       Row(

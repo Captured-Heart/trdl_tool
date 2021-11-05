@@ -5,8 +5,6 @@ class TegenRijrichting extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,7 +17,7 @@ class TegenRijrichting extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //PROCEDURE CARD
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -36,14 +34,8 @@ class TegenRijrichting extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Procedure',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.procedure,
                       ),
                       const SizedBoxH(),
                       Row(
@@ -51,7 +43,7 @@ class TegenRijrichting extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- Links rijden tegen de rijrichting bij linkerspoor beveiliging:',
+                                  'Links rijden tegen de rijrichting bij linkerspoor beveiliging:',
                             ),
                           ),
                         ],
@@ -73,7 +65,7 @@ class TegenRijrichting extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- Rechts rijden tegen rijrichting bij linkerspoor beveiliging:',
+                                  'Rechts rijden tegen rijrichting bij linkerspoor beveiliging:',
                             ),
                           ),
                         ],
@@ -83,7 +75,7 @@ class TegenRijrichting extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Toegestaan wanneer:',
+                              text: '* Toegestaan wanneer:',
                             ),
                           ),
                         ],
@@ -95,7 +87,7 @@ class TegenRijrichting extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- De overwegen zijn voorzien van een extra aankondigingssectie plus aanwijzing OVW;',
+                                  '1. De overwegen zijn voorzien van een extra aankondigingssectie plus aanwijzing OVW;',
                             ),
                           ),
                         ],
@@ -106,7 +98,7 @@ class TegenRijrichting extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Het baanvak is uitgerust met ULS óf;',
+                              text: '2. Het baanvak is uitgerust met ULS óf;',
                             ),
                           ),
                         ],
@@ -116,7 +108,9 @@ class TegenRijrichting extends StatelessWidget {
                           SizedBoxW(),
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(text: '- Er geen overwegen zijn.'),
+                            child: BodyText(
+                              text: '3. Er geen overwegen zijn.',
+                            ),
                           ),
                         ],
                       ),
@@ -125,8 +119,9 @@ class TegenRijrichting extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                                text:
-                                    '- Keren op de vrije baan bij dubbel/enkelspoor beveiliging:',),
+                              text:
+                                  'Keren op de vrije baan bij dubbel/enkelspoor beveiliging:',
+                            ),
                           ),
                         ],
                       ),
@@ -135,8 +130,9 @@ class TegenRijrichting extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                                text:
-                                    '- Geef een aanwijzing OVW af voor de overwegen waarvan de trein de aankondiging volledige gepasseerd is.',),
+                              text:
+                                  '- Geef een aanwijzing OVW af voor de overwegen waarvan de trein de aankondiging volledig gepasseerd is.',
+                            ),
                           ),
                         ],
                       ),
@@ -144,21 +140,15 @@ class TegenRijrichting extends StatelessWidget {
                   ),
                 ),
               ),
-              //RISICO CARD
+              /*RISICO CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Risico\'s',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.risico,
                       ),
                       const SizedBoxH(),
                       Row(
@@ -175,21 +165,15 @@ class TegenRijrichting extends StatelessWidget {
                   ),
                 ),
               ),
-              //CONTEXT CARD
+              /*CONTEXT CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Context',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.context,
                       ),
                       const SizedBoxH(),
                       Row(

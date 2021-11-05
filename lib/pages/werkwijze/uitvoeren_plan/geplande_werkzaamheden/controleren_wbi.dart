@@ -5,8 +5,6 @@ class ControlerenWbi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,7 +17,7 @@ class ControlerenWbi extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //PROCEDURE CARD
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -36,32 +34,16 @@ class ControlerenWbi extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Procedure',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.procedure,
                       ),
                       const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Voor aanvang van de werkzaamheden controleer je of:',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- niet onbedoeld een rijweg instelbaar is naar de buitendienststelling;',
+                              text:
+                                  'Voor aanvang van de werkzaamheden controleer je of:',
                             ),
                           ),
                         ],
@@ -72,7 +54,8 @@ class ControlerenWbi extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- de veiligheidsmaatregelen van de LWB invloed hebben op je eigen veiligheidsmaatregelen;',
+                              text:
+                                  '- niet onbedoeld een rijweg instelbaar is naar de buitendienststelling;',
                             ),
                           ),
                         ],
@@ -83,7 +66,20 @@ class ControlerenWbi extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- voldaan is aan de toetscriteria WBI/WECO die beschreven zijn in de werkinstructie WBI/WECO.',
+                              text:
+                                  '- de veiligheidsmaatregelen van de LWB invloed hebben op je eigen veiligheidsmaatregelen;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text:
+                                  '- voldaan is aan de toetscriteria WBI/WECO die beschreven zijn in de werkinstructie WBI/WECO.',
                             ),
                           ),
                         ],
@@ -92,28 +88,23 @@ class ControlerenWbi extends StatelessWidget {
                   ),
                 ),
               ),
-              //RISICO CARD
+              /*RISICO CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Risico\'s',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.risico,
                       ),
                       const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
+                              text:
+                                  'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
                             ),
                           ),
                         ],
@@ -122,18 +113,23 @@ class ControlerenWbi extends StatelessWidget {
                   ),
                 ),
               ),
-              //CONTEXT CARD
+              /*CONTEXT CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
+                      const CardTitle(
+                        title: Strings.context,
+                      ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Context',
+                            child: BodyText(
+                              text:
+                                  'In de voorbereiding is de treindienst aangepast aan de werkzaamheden. Fouten in de WBI/WECO kunnen ervoor zorgen dat werkplekbeveiligingsmaatregelen van de treindienstleider en/of de LWB niet of niet juist getroffen kunnen worden.',
                             ),
                           ),
                         ],
@@ -143,17 +139,8 @@ class ControlerenWbi extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'In de voorbereiding is de treindienst aangepast aan de werkzaamheden. Fouten in de WBI/WECO kunnen ervoor zorgen dat werkplekbeveiligingsmaatregelen van de treindienstleider en/of de LWB niet of niet juist getroffen kunnen worden.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Fouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging.',
+                              text:
+                                  'Fouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging.',
                             ),
                           ),
                         ],

@@ -24,4 +24,9 @@ class Strings {
   static const String registerPasswordHint =
       'Wachtwoord bevat minimaal 6 tekens';
   static const String registerAlEenAccount = 'Heb je al een account?';
+
+  /*WERKWIJZE strings*/
+  static const String procedure = 'Procedure';
+  static const String risico = 'Risico';
+  static const String context = 'Context';
 }

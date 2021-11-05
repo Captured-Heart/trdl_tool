@@ -65,7 +65,8 @@ class MainEntry extends StatelessWidget {
 
         /*Aanpassen Plan routes*/
         'aanpassenplan': (context) => const AanpassenPlan(),
-        'stappenplanversperringen': (context) => const StappenplanVersperringen(),
+        'stappenplanversperringen': (context) =>
+            const StappenplanVersperringen(),
         'ongeplandwerk': (context) => const OngeplandWerk(),
         'orderacceptatie': (context) => const Orderacceptatie(),
         'materieelongeplandwerk': (context) => const MaterieelOngeplandWerk(),
@@ -115,18 +116,26 @@ class MainEntry extends StatelessWidget {
         'wisselsvrijmaken': (context) => const WisselsVrijmaken(),
         'stspassage': (context) => const STSPassage(),
         'stilleggentreindienst': (context) => const StilleggenTreindienst(),
-        'afhandelensysteemstoringen': (context) => const AfhandelenSysteemstoringen(),
+        'afhandelensysteemstoringen': (context) =>
+            const AfhandelenSysteemstoringen(),
 
         /*Achtergrondinfo routes*/
-        'uitvoerenplanachtergrond': (context) => const UitvoerenPlanAchtergrond(),
-        'uitvoerenplanbasisachtergrond': (context) => const UitvoerenPlanBasisAchtergrond(),
-        'geplandewerkzaamhedenachtergrond': (context) => const GeplandeWerkzaamhedenAchtergrond(),
-        'geplandewerkzaamhedenbasisachtergrond': (context) => const GeplandeWerkzaamhedenBasisAchtergrond(),
-        'controlerenwbiachtergrond': (context) => const ControlerenWBIAchtergrond(),
+        'uitvoerenplanachtergrond': (context) =>
+            const UitvoerenPlanAchtergrond(),
+        'uitvoerenplanbasisachtergrond': (context) =>
+            const UitvoerenPlanBasisAchtergrond(),
+        'geplandewerkzaamhedenachtergrond': (context) =>
+            const GeplandeWerkzaamhedenAchtergrond(),
+        'geplandewerkzaamhedenbasisachtergrond': (context) =>
+            const GeplandeWerkzaamhedenBasisAchtergrond(),
+        'controlerenwbiachtergrond': (context) =>
+            const ControlerenWBIAchtergrond(),
         'foutenindewbiachtergrond': (context) => const FoutenWBIAchtergrond(),
-        'aanvangwerkzaamhedenachtergrond': (context) => const AanvangWerkzaamhedenAchtergrond(),
-        'toelatenwerktreinenachtergrond': (context) => const ToelatenWerktreinenAchtergrond(),
-        'werkzonesachtergrond': (context) => WerkzonesAchtergrond(),
+        'aanvangwerkzaamhedenachtergrond': (context) =>
+            const AanvangWerkzaamhedenAchtergrond(),
+        'toelatenwerktreinenachtergrond': (context) =>
+            const ToelatenWerktreinenAchtergrond(),
+        'werkzonesachtergrond': (context) => const WerkzonesAchtergrond(),
 
         /*ProQuiz routes*/
         'proquizmain': (context) => const ProQuiz(),

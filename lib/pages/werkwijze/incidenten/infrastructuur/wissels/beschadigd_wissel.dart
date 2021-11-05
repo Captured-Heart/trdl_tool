@@ -5,8 +5,6 @@ class BeschadigdWissel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,7 +17,7 @@ class BeschadigdWissel extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //PROCEDURE CARD
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -36,11 +34,16 @@ class BeschadigdWissel extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
+                      const CardTitle(
+                        title: Strings.procedure,
+                      ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Procedure',
+                            child: BodyText(
+                              text:
+                                  'Bij een beschadigd wissel staak je het treinverkeer over het betrokken wissel.',
                             ),
                           ),
                         ],
@@ -50,7 +53,8 @@ class BeschadigdWissel extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Bij een beschadigd wissel staak je het treinverkeer over het betrokken wissel.',
+                              text:
+                                  'Een wissel moet als beschadigd worden beschouwd als:',
                             ),
                           ),
                         ],
@@ -58,29 +62,23 @@ class BeschadigdWissel extends StatelessWidget {
                       const SizedBoxH(),
                       Row(
                         children: const [
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Een wissel moet als beschadigd worden beschouwd als:',
+                              text:
+                                  '- het bij een ontsporing betrokken is geweest, of',
                             ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- het bij een ontsporing betrokken is geweest, of',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- als het een breuk of andere uiterlijke afwijking vertoont.',
+                              text:
+                                  '- als het een breuk of andere uiterlijke afwijking vertoont.',
                             ),
                           ),
                         ],
@@ -89,28 +87,23 @@ class BeschadigdWissel extends StatelessWidget {
                   ),
                 ),
               ),
-              //RISICO CARD
+              /*RISICO CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Risico\'s',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.risico,
                       ),
                       const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                              text:
+                                  'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],
@@ -119,18 +112,23 @@ class BeschadigdWissel extends StatelessWidget {
                   ),
                 ),
               ),
-              //CONTEXT CARD
+              /*CONTEXT CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
+                      const CardTitle(
+                        title: Strings.context,
+                      ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Context',
+                            child: BodyText(
+                              text:
+                                  'Bij een beschadigd wissel is de veilige berijdbaarheid van het wissel niet meer gegarandeerd. Dat is niet altijd zichtbaar in Procesleiding.',
                             ),
                           ),
                         ],
@@ -140,17 +138,8 @@ class BeschadigdWissel extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Bij een beschadigd wissel is de veilige berijdbaarheid van het wissel niet meer gegarandeerd. Dat is niet altijd zichtbaar in Procesleiding.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'De storingsmonteur kan de veilige berijdbaarheid ter plaatse vaststellen. De storingsmonteur bepaalt of en hoe je het betrokken wissel weer mag laten berijden.',
+                              text:
+                                  'De storingsmonteur kan de veilige berijdbaarheid ter plaatse vaststellen. De storingsmonteur bepaalt of en hoe je het betrokken wissel weer mag laten berijden.',
                             ),
                           ),
                         ],

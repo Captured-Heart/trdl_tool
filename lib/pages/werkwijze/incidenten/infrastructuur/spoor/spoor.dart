@@ -5,8 +5,6 @@ class Spoor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,7 +17,7 @@ class Spoor extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //PROCEDURE CARD
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -37,7 +35,7 @@ class Spoor extends StatelessWidget {
                   ),
                 ),
               ),
-              //NAVIGATION CARD
+              /*NAVIGATION CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(

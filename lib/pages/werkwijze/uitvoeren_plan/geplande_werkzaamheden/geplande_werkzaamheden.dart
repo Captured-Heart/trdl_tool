@@ -5,8 +5,6 @@ class GeplandeWerkzaamheden extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,6 +17,7 @@ class GeplandeWerkzaamheden extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -39,7 +38,8 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Dit zijn vooraf geplande werkzaamheden die zijn vastgelegd in een Werkplek Beveiligings Instructie (WBI/WECO).',
+                              text:
+                                  'Dit zijn vooraf geplande werkzaamheden die zijn vastgelegd in een Werkplek Beveiligings Instructie (WBI/WECO).',
                             ),
                           ),
                         ],
@@ -48,7 +48,7 @@ class GeplandeWerkzaamheden extends StatelessWidget {
                   ),
                 ),
               ),
-              //NAVIGATION CARD
+              /*NAVIGATION CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(

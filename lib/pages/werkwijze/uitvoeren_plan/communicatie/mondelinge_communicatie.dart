@@ -5,8 +5,6 @@ class MondelingeCommunicatie extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,7 +17,7 @@ class MondelingeCommunicatie extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //PROCEDURE CARD
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -34,11 +32,17 @@ class MondelingeCommunicatie extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
+                      const CardTitle(
+                        title: Strings.procedure,
+                      ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
+                          SizedBoxW(),
                           Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Procedure',
+                            child: BodyText(
+                              text:
+                                  '- Bij aanvang van ieder bericht geldt identificatieplicht;',
                             ),
                           ),
                         ],
@@ -49,46 +53,8 @@ class MondelingeCommunicatie extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Bij aanvang van ieder bericht geldt identificatieplicht;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Gebruik bij het voeren van een gesprek de dienstuitdrukkingen en de berichtenstructuur;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                              child: BodyText(
-                            text: '- Houd je aan de gespreksdiscipline.',
-                          ),),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              //RISICO CARD
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Risico\'s',
+                              text:
+                                  '- Gebruik bij het voeren van een gesprek de dienstuitdrukkingen en de berichtenstructuur;',
                             ),
                           ),
                         ],
@@ -96,9 +62,10 @@ class MondelingeCommunicatie extends StatelessWidget {
                       const SizedBoxH(),
                       Row(
                         children: const [
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt of treinen komen onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
+                              text: '- Houd je aan de gespreksdiscipline.',
                             ),
                           ),
                         ],
@@ -107,38 +74,48 @@ class MondelingeCommunicatie extends StatelessWidget {
                   ),
                 ),
               ),
-              //CONTEXT CARD
+              /*RISICO CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Context',
-                            ),
-                          ),
-                        ],
+                      const CardTitle(
+                        title: Strings.risico,
                       ),
                       const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Om onveilige situaties te voorkomen zijn met de gesprekspartners van de treindienstleider uniforme uitgangspunten afgesproken voor het wisselen van mondelinge berichten. De treindienstleider heeft in deze afspraken een sturende rol.',
+                              text:
+                                  'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt of treinen komen onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
                             ),
                           ),
                         ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /*CONTEXT CARD*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      const CardTitle(
+                        title: Strings.context,
                       ),
                       const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Voorafgaand aan de werkzaamheden stellen treindienstleider en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
+                              text:
+                                  'Om onveilige situaties te voorkomen zijn met de gesprekspartners van de treindienstleider uniforme uitgangspunten afgesproken voor het wisselen van mondelinge berichten. De treindienstleider heeft in deze afspraken een sturende rol.',
                             ),
                           ),
                         ],

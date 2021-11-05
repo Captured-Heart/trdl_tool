@@ -5,8 +5,6 @@ class GevaarlijkeStoffen1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,6 +17,7 @@ class GevaarlijkeStoffen1 extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -28,7 +27,8 @@ class GevaarlijkeStoffen1 extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: TitleText(title: 'Gevaarlijke stoffen en milieu'),
+                            child: TitleText(
+                                title: 'Gevaarlijke stoffen en milieu'),
                           ),
                         ],
                       ),
@@ -36,7 +36,7 @@ class GevaarlijkeStoffen1 extends StatelessWidget {
                   ),
                 ),
               ),
-              //NAVIGATION CARD
+              /*NAVIGATION CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(

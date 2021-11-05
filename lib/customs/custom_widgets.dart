@@ -84,6 +84,89 @@ class HomeButton extends StatelessWidget {
   }
 }
 
+/*CardTitle Widget*/
+class CardTitle extends StatelessWidget {
+  final String title;
+
+  const CardTitle({
+    required this.title,
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(
+          child: SubTitleText(
+            subtitle: title,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+/*Procedure Title Widget*/
+class ProcedureTitle extends StatelessWidget {
+  const ProcedureTitle({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: const [
+        Expanded(
+          child: SubTitleText(
+            subtitle: Strings.procedure,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+/*Risico Title Widget*/
+class RisicoTitle extends StatelessWidget {
+  const RisicoTitle({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: const [
+        Expanded(
+          child: SubTitleText(
+            subtitle: Strings.risico,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+/*Context Title Widget*/
+class ContextTitle extends StatelessWidget {
+  const ContextTitle({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: const [
+        Expanded(
+          child: SubTitleText(
+            subtitle: Strings.context,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
 /*Title Text*/
 class TitleText extends StatelessWidget {
   const TitleText({required this.title, Key? key}) : super(key: key);

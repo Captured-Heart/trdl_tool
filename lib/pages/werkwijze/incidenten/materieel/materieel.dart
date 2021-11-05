@@ -5,8 +5,6 @@ class MaterieelIncidenten extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -19,7 +17,7 @@ class MaterieelIncidenten extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //PROCEDURE CARD
+              /*PROCEDURE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -38,7 +36,8 @@ class MaterieelIncidenten extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Je kunt op drie manieren een melding krijgen over materieel:',
+                              text:
+                                  'Je kunt op drie manieren een melding krijgen over materieel:',
                             ),
                           ),
                         ],
@@ -54,6 +53,7 @@ class MaterieelIncidenten extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -64,6 +64,7 @@ class MaterieelIncidenten extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -79,7 +80,8 @@ class MaterieelIncidenten extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Als de melding niet van de machinist komt, licht je de machinist van de betrokken trein in.',
+                              text:
+                                  'Als de melding niet van de machinist komt, licht je de machinist van de betrokken trein in.',
                             ),
                           ),
                         ],
@@ -88,7 +90,7 @@ class MaterieelIncidenten extends StatelessWidget {
                   ),
                 ),
               ),
-              //NAVIGATION CARD
+              /*NAVIGATION CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
