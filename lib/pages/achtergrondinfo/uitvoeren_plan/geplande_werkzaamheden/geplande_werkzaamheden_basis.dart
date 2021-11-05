@@ -345,7 +345,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 400.0,
+                            height: 200.0,
                             child: Image.asset(
                               'assets/images/achtergrond/werkzaamhedenSpoor.png',
                             ),
@@ -376,8 +376,8 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Dit zijn werkzaamheden waarbij geen medewerking van de treindienstleider gevraagd wordt en/of noodzakelijk is. Denk hierbij aan werkzaamheden aan het perron, maar ook aan bijvoorbeeld het maaien van bermen.',
+                            child: BodyText(
+                              text: 'Dit zijn werkzaamheden waarbij geen medewerking van de treindienstleider gevraagd wordt en/of noodzakelijk is. Denk hierbij aan werkzaamheden aan het perron, maar ook aan bijvoorbeeld het maaien van bermen.',
                             ),
                           ),
                         ],
@@ -1082,7 +1082,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 400.0,
+                            height: 200.0,
                             child: Image.asset(
                               'assets/images/achtergrond/zklPlaatsen.png',
                             ),
@@ -1253,7 +1253,7 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 300.0,
+                            height: 200.0,
                             child: Image.asset(
                               'assets/images/achtergrond/werkTrein.png',
                             ),
