@@ -28,7 +28,8 @@ class GevaarlijkeStoffen1 extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: TitleText(
-                                title: 'Gevaarlijke stoffen en milieu'),
+                              title: 'Gevaarlijke stoffen en milieu',
+                            ),
                           ),
                         ],
                       ),

@@ -28,8 +28,9 @@ class WisselEindstand extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: TitleText(
-                                title:
-                                    'Wissel komt niet in de gevraagde eindstand'),
+                              title:
+                                  'Wissel komt niet in de gevraagde eindstand',
+                            ),
                           ),
                         ],
                       ),

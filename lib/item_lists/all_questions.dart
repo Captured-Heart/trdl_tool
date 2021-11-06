@@ -7,7 +7,7 @@ class Question {
 class QuestionBank {
   List<Question> questionBank = [
     Question(
-      'Je hebt 1 minuut om zoveel mogelijk stellingen met goed of fout te beantwoorden. Zit je er klaar voor?',
+      'Je hebt 1 minuut om zoveel mogelijk stellingen met \'waar\' of \'niet waar\' te beantwoorden. Ieder goed antwoord is +1 punt, maar ieder fout antwoord -2 punten! Zit je er klaar voor?',
       true,
     ),
     Question(

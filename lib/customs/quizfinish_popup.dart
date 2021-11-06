@@ -15,9 +15,38 @@ Future<bool> finishQuizPopup(context) async {
                 children: [
                   Expanded(
                     child: Text(
-                      'Je had $correctAmount antwoorden goed en $wrongAmount antwoorden fout. Wil je de quiz opnieuw doen?',
+                      'Je had $correctAmount antwoorden goed en $wrongAmount antwoorden fout. Je eindscore is',
                       textAlign: TextAlign.center,
                       style: const TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBoxH(),
+              Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      '$scorePercentage',
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                        fontSize: 24.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBoxH(),
+              Row(
+                children: const [
+                  Expanded(
+                    child: Text(
+                      'Wil je de quiz opnieuw doen?',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -33,6 +62,10 @@ Future<bool> finishQuizPopup(context) async {
                     child: ElevatedButton(
                       onPressed: () {
                         /*User selected YES*/
+                        correctAmount = 0;
+                        wrongAmount = 0;
+                        accumulatedPoints = 0;
+                        doubleScorePercentage = 0.0;
                         Navigator.of(context).pop();
                       },
                       child: const Text(

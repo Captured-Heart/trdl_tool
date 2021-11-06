@@ -28,7 +28,8 @@ class OnregelmatighedenBaan extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: TitleText(
-                                title: 'Onregelmatigheden aan de baan'),
+                              title: 'Onregelmatigheden aan de baan',
+                            ),
                           ),
                         ],
                       ),

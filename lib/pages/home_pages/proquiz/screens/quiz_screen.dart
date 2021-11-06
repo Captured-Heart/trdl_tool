@@ -9,7 +9,10 @@ int seconds = 60;
 int firstPressToStartTimer = 0;
 int correctAmount = 0;
 int wrongAmount = 0;
-late Timer timer;
+int accumulatedPoints = 0;
+double doubleScorePercentage = 0;
+late String scorePercentage;
+Timer? timer;
 
 class ProQuizScreen extends StatefulWidget {
   const ProQuizScreen({Key? key}) : super(key: key);
@@ -28,6 +31,7 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
         if (seconds == 0) {
           setState(() {
             timer.cancel();
+            calculateScore();
             quizReset();
           });
         } else {
@@ -45,7 +49,7 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
   /*Cancels timer to preserve resources*/
   @override
   void dispose() {
-    timer.cancel();
+    timer!.cancel();
     super.dispose();
   }
 
@@ -93,9 +97,10 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
 
   /*Resets quiz and empties scoreKeeper*/
   void quizReset() {
-    timer.cancel();
+    timer!.cancel();
     lastTenSeconds = false;
     timerRunning = false;
+    finishQuizPopup(context);
     seconds = 60;
     questionNumber = 0;
     firstPressToStartTimer = 0;
@@ -104,8 +109,21 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
         Icons.mediation_outlined,
       ),
     ];
-    //TODO: set correctAmount and wrongAmount to zero, without affecting popup!
-    finishQuizPopup(context);
+  }
+
+  /*Take this score to the quizfinish_popup*/
+  String calculateScore() {
+    accumulatedPoints = correctAmount - (wrongAmount * 2);
+    if (accumulatedPoints <= 0) {
+      return scorePercentage = 'Waardeloos';
+    } else if (accumulatedPoints > 0 && accumulatedPoints <= 10) {
+      return scorePercentage = 'Ga oefenen';
+    } else {
+      doubleScorePercentage =
+          (100 * correctAmount) / accumulatedPoints.toDouble();
+      scorePercentage = doubleScorePercentage.toStringAsFixed(2);
+      return scorePercentage;
+    }
   }
 
   @override
