@@ -1,9 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
 const String treinen_van_ns = 'https://ns.nl/over-ns/treinen-van-ns';
-const String nl_spoorwegmaterieel = 'https://nl.wikipedia.org/wiki/Nederlands_spoorwegmaterieel'
-const String goederenwagon = 'https://nl.wikipedia.org/wiki/Goederenwagon'
-const String wagons = 'https://www.railcargo.nl/spoormarkt/materieel/wagons'
+const String nl_spoorwegmaterieel = 'https://nl.wikipedia.org/wiki/Nederlands_spoorwegmaterieel';
+const String goederenwagon = 'https://nl.wikipedia.org/wiki/Goederenwagon';
+const String wagons = 'https://www.railcargo.nl/spoormarkt/materieel/wagons';
 
 class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
   const BijzonderhedenTreinBasisAchtergrond({Key? key}) : super(key: key);
