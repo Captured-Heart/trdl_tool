@@ -64,14 +64,14 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                           Expanded(
                             child: GestureDetector(
                               onTap: () {
-                                launchTreinenVanNS;
-                              }
+                                launchTreinenVanNS();
+                              },
                               child: Text(
-                              '- Treinen van NS',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                                '- Treinen van NS',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
                             ),
                           ),
                         ],
@@ -695,19 +695,11 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
     );
   }
 
-  void launchTreinenVanNS() async => await canLaunch(treinen_van_ns)
-      ? await launch(treinen_van_ns)
-      : throw 'Could not launch $treinen_van_ns';
+  void launchTreinenVanNS() async => await canLaunch(treinen_van_ns) ? await launch(treinen_van_ns) : throw 'Could not launch $treinen_van_ns';
 
-  void lauchNLSpoorwegMaterieel() async => await canLaunch(nl_spoorwegmaterieel)
-      ? await launch(nl_spoorwegmaterieel)
-      : throw 'Could not launch $nl_spoorwegmaterieel';
+  void lauchNLSpoorwegMaterieel() async => await canLaunch(nl_spoorwegmaterieel) ? await launch(nl_spoorwegmaterieel) : throw 'Could not launch $nl_spoorwegmaterieel';
 
-  void launchGoederenwagon() async => await canLaunch(goederenwagon)
-      ? await launch(goederenwagon)
-      : throw 'Could not launch $goederenwagon';
+  void launchGoederenwagon() async => await canLaunch(goederenwagon) ? await launch(goederenwagon) : throw 'Could not launch $goederenwagon';
 
-  void launchWagons() async => await canLaunch(wagons)
-      ? await launch(wagons)
-      : throw 'Could not launch $wagons';
+  void launchWagons() async => await canLaunch(wagons) ? await launch(wagons) : throw 'Could not launch $wagons';
 }
