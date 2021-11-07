@@ -3,7 +3,6 @@ import 'package:trdl_tool/all_imports.dart';
 const String treinen_van_ns = 'https://ns.nl/over-ns/treinen-van-ns';
 const String nl_spoorwegmaterieel = 'https://nl.wikipedia.org/wiki/Nederlands_spoorwegmaterieel';
 const String goederenwagon = 'https://nl.wikipedia.org/wiki/Goederenwagon';
-const String wagons = 'https://www.railcargo.nl/spoormarkt/materieel/wagons';
 
 class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
   const BijzonderhedenTreinBasisAchtergrond({Key? key}) : super(key: key);
@@ -106,26 +105,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 launchGoederenwagon();
                               },
                               child: Text(
-                                '- Goederenwagons 1',
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: [
-                          SizedBoxW(),
-                          Expanded(
-                            child: GestureDetector(
-                              onTap: () {
-                                launchWagons();
-                              },
-                              child: Text(
-                                '- Goederenwagons 2',
+                                '- Goederenwagons Wiki',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -142,7 +122,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond/goederenTrein.jpg',
+                              'assets/images/achtergrond/goederenTrein.png',
                             ),
                           ),
                         ],
@@ -603,6 +583,4 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
   void lauchNLSpoorwegMaterieel() async => await canLaunch(nl_spoorwegmaterieel) ? await launch(nl_spoorwegmaterieel) : throw 'Could not launch $nl_spoorwegmaterieel';
 
   void launchGoederenwagon() async => await canLaunch(goederenwagon) ? await launch(goederenwagon) : throw 'Could not launch $goederenwagon';
-
-  void launchWagons() async => await canLaunch(wagons) ? await launch(wagons) : throw 'Could not launch $wagons';
 }
