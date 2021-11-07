@@ -115,10 +115,11 @@ export 'package:trdl_tool/pages/werkwijze/incidenten/overige_incidenten/sts_pass
 export 'package:trdl_tool/pages/werkwijze/incidenten/overige_incidenten/stilleggen_treindienst.dart';
 export 'package:trdl_tool/pages/werkwijze/incidenten/overige_incidenten/afhandelen_systeemstoringen.dart';
 
-/*Achtergrondinformatie pages*/
+/*ACHTERGROND INFORMATIE UITVOEREN PLAN PAGES*/
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan.dart';
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/uitvoeren_plan_basis.dart';
 
+/*ACHTERGROND INFORMATIE GEPLANDE WERKZAAMHEDEN PAGES*/
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden.dart';
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden_basis.dart';
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/controleren_wbi.dart';
@@ -126,6 +127,13 @@ export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaam
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/aanvang_werkzaamheden.dart';
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/toelaten_werktreinen.dart';
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/werkzones.dart';
+
+/*ACHTERGROND INFORMATIE BIJZONDERHEDEN TREIN PAGES*/
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_trein/bijzonderheden_trein.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_trein/bijzonderheden_trein_basis.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_trein/vervoersregeling.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_trein/onjuiste_detectie.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_trein/bijzondere_aandacht.dart';
 
 /*ProQuiz pages*/
 export 'package:trdl_tool/pages/home_pages/proquiz/proquizmain.dart';
