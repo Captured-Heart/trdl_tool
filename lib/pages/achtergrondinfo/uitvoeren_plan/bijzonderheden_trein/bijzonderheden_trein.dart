@@ -95,7 +95,7 @@ class BijzonderhedenTreinAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond/werkzaamhedenBovenleiding.jpg',
+                              'assets/images/achtergrond/deKameel.jpg',
                             ),
                           ),
                         ],

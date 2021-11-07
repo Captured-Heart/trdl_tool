@@ -22,7 +22,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //DIENSTREGELING CARD
+              /*CARD #1*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -58,6 +58,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: [
                           SizedBoxW(),
@@ -76,157 +77,59 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
-                        children: const [
-                          SizedBoxW(),
+                        children: [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: 'ProRail en vervoerders stellen samen het ‘basisuurpatroon’ op. Daarin leggen we vast hoeveel treinen er per uur kunnen rijden op een bepaald traject en in welke frequentie. In deze fase worden de grootste knelpunten vast geïnventariseerd;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: Text(
-                              '2. Capaciteitsaanvragen indienen',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                            child: GestureDetector(
+                              onTap: () {
+                                lauchNLSpoorwegMaterieel();
+                              },
+                              child: Text(
+                                '- NL Spoorwegmaterieel',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
-                        children: const [
-                          SizedBoxW(),
+                        children: [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: 'Vervoerders vragen de capaciteit aan die ze nodig hebben. Ze laten weten wanneer ze op het spoor willen rijden, waar en met welke trein. Daarbij wordt het basisuurpatroon als basis gebruikt. Capaciteit aanvragen kan tot de 2e maandag in april. Daarna wordt beoordeeld of de aanvragen aan alle voorwaarden voldoen. Is dat niet het geval? Dan kan de vervoerder zijn aanvraag nog herzien;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: Text(
-                              '3. Conflicten oplossen',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                            child: GestureDetector(
+                              onTap: () {
+                                launchGoederenwagon();
+                              },
+                              child: Text(
+                                '- Goederenwagons 1',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
-                        children: const [
-                          SizedBoxW(),
+                        children: [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: 'Willen twee partijen het spoor tegelijk gebruiken? Dan probeert men met kleine aanpassingen toch in ieders behoefte te voorzien. In meer dan 80% van de gevallen lukt dat ook. Komt men er niet uit? Dan gaat men, samen met de vervoerder aan tafel. Komt men er dan nog niet uit, gaat de zaak naar de Geschillencommissie;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: Text(
-                              '4. Conceptverdeling opstellen',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                            child: GestureDetector(
+                              onTap: () {
+                                launchWagons();
+                              },
+                              child: Text(
+                                '- Goederenwagons 2',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: 'Men stelt een conceptverdeling op, die bekend wordt gemaakt op de1e maandag in juli. Deze conceptverdeling is een eerste detailontwerp met per vervoerder wanneer hij kan rijden en met welke trein. En ook: wanneer een stuk spoor niet beschikbaar is, bijvoorbeeld vanwege onderhoud of nieuwbouw;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: Text(
-                              '5. Reacties op de conceptverdeling',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: 'Vervoerders kunnen reageren op de conceptverdeling;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: Text(
-                              '6. De definitieve verdeling vaststellen',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: 'Op de 3e maandag is augustus wordt de definitieve verdeling vast gelegd en is het “spoorboekje” voor het komende jaar klaar;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: Text(
-                              '7. Start van de nieuwe dienstregeling',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: 'Begin december gaan de treinen rijden volgens de nieuwe dienstregeling.',
                             ),
                           ),
                         ],
@@ -237,9 +140,9 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 400.0,
+                            height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond/spoorKaart2020.jpg',
+                              'assets/images/achtergrond/goederenTrein.jpg',
                             ),
                           ),
                         ],
