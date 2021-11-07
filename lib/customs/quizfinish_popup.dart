@@ -29,7 +29,7 @@ Future<bool> finishQuizPopup(context) async {
                 children: [
                   Expanded(
                     child: Text(
-                      '$scorePercentage',
+                      scorePercentage,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
                         fontSize: 24.0,
