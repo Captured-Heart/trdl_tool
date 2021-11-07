@@ -59,7 +59,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: const [
+                        children: [
                           SizedBoxW(),
                           Expanded(
                             child: GestureDetector(
