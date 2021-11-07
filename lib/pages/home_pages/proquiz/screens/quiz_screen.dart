@@ -114,10 +114,8 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
   /*Take this score to the quizfinish_popup*/
   String calculateScore() {
     accumulatedPoints = correctAmount - (wrongAmount * 2);
-    if (accumulatedPoints <= 0) {
+    if (accumulatedPoints <= 0 && accumulatedPoints <= 10) {
       return scorePercentage = 'Waardeloos';
-    } else if (accumulatedPoints > 0 && accumulatedPoints <= 10) {
-      return scorePercentage = 'Ga oefenen';
     } else {
       doubleScorePercentage =
           (100 * correctAmount) / accumulatedPoints.toDouble();
