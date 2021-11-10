@@ -203,20 +203,161 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                         children: [
                           TableRow(
                             children: [
-                              Text(
-                                'Serie',
+                              Center(
+                                child: Text(
+                                  'Serie',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
-                              Text(
-                                'Vervoerder',
+                              Center(
+                                child: Text(
+                                  'Vervoerder',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
-                              Text(
-                                'Lengte',
+                              Center(
+                                child: Text(
+                                  'Lengte',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
-                              Text(
-                                'Gewicht',
+                              Center(
+                                child: Text(
+                                  'Gewicht',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
-                              Text(
-                                'Max. Snelheid',
+                              Center(
+                                child: Text(
+                                  'Max. snelheid',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  '1250',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'EETC(ACTS)',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '18m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '108 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '150 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  '1600',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'DB Schenker, NSR, HTRS',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '17,5m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '84 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '180 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  '1700',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'NSR',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '17,5m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '86 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '180 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  '189',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'DB Schenker',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '19,5,',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '87 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '140 km/u',
+                                ),
                               ),
                             ],
                           ),
