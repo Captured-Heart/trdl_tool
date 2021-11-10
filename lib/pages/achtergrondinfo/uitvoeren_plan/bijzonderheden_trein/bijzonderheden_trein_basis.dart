@@ -1551,6 +1551,120 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                   ),
                 ),
               ),
+              /*CARD #7*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Onderhoudsmachines',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Center(
+                        child: CarouselSlider(
+                          options: CarouselOptions(
+                            height: 200.0,
+                            autoPlay: true,
+                            autoPlayCurve: Curves.easeInOutBack,
+                            enlargeCenterPage: true,
+                          ),
+                          items: [
+                            1,
+                            2,
+                            3,
+                          ].map((i) {
+                            return Builder(
+                              builder: (BuildContext context) {
+                                return SizedBox(
+                                  width: double.infinity,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(16.0),
+                                          child: Image.asset(
+                                            'assets/images/achtergrond/treinen/onderhouds_machines/onderhoudsMachine$i.jpg',
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              },
+                            );
+                          }).toList(),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #8*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Railwegvoertuigen',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Center(
+                        child: CarouselSlider(
+                          options: CarouselOptions(
+                            height: 200.0,
+                            autoPlay: true,
+                            autoPlayCurve: Curves.easeInOutBack,
+                            enlargeCenterPage: true,
+                          ),
+                          items: [
+                            1,
+                            2,
+                            3,
+                          ].map((i) {
+                            return Builder(
+                              builder: (BuildContext context) {
+                                return SizedBox(
+                                  width: double.infinity,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(16.0),
+                                          child: Image.asset(
+                                            'assets/images/achtergrond/treinen/railweg_voertuigen/railwegVoertuig$i.jpg',
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              },
+                            );
+                          }).toList(),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
