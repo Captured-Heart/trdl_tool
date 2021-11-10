@@ -40,6 +40,10 @@ flutter:
     - assets/images/achtergrond/treinen/elektrische_locs/
     - assets/images/achtergrond/treinen/diesel_locs/
     - assets/images/achtergrond/treinen/elektrische_treinen/
+    - assets/images/achtergrond/treinen/diesel_treinen/
+    - assets/images/achtergrond/treinen/rijtuigen/
+    - assets/images/achtergrond/treinen/onderhouds_machines/
+    - assets/images/achtergrond/treinen/railweg_voertuigen/
 
   fonts:
     - family: Questrial
