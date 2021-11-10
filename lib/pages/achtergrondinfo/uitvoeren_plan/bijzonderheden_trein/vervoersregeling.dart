@@ -108,7 +108,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH()
+                      SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -226,13 +226,13 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BoxyText(
+                            child: BodyText(
                               text: 'In de volgende gevallen is een regeling voor Buitengewoon Vervoer noodzakelijk:',
                             ),
                           ),
                         ],
                       ),
-                      SizedBoxH()
+                      SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -324,7 +324,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BoxyText(
+                            child: BodyText(
                               text: 'Algemene uitgangspunten Buitengewoon Vervoer:',
                             ),
                           ),
@@ -358,7 +358,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Bij wijziging van de treinkarakteristiek van een reeds bestaande trein naar Buitengewoon Vervoer, moet de Spoorwegonderneming voor de betreffende trein een order “wijzigen trein” indienen.', 
+                              text: '- Bij wijziging van de treinkarakteristiek van een reeds bestaande trein naar Buitengewoon Vervoer, moet de Spoorwegonderneming voor de betreffende trein een order “wijzigen trein” indienen.',
                             ),
                           ),
                         ],
@@ -467,7 +467,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH()
+                      SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -499,6 +499,318 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                             child: Image.asset(
                               'assets/images/achtergrond/buitenProfiel.png',
                             ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #4*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Afhandeling treinen met toevoeging BP 1, 2 en 3',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Je stelt pas een rijweg in nadat je:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Kennis hebt genomen van de beperkingen die voor deze treinen gelden;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- De aanwijzingen over de beperkingen hebt opgevolgd.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Afhandeling treinen met toevoeging BV',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Deze treinen behandel je als volgt:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Je stelt de rijweg pas in nadat je:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* kennis hebt genomen van de beperkingen die voor deze treinen gelden;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* de aanwijzingen over de beperkingen hebt opgevolgd.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Als de nevensporen vrijgehouden moeten worden:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* neem je veiligheidsmaatregelen zodat er geen rijweg ingesteld kan worden naar de betrokken railinfra.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Als er technische voorzieningen moeten worden getroffen, dan stel je de rijweg pas in nadat je toestemming hebt van de toezichthoudende functionaris. Ontbreekt een vervoersregeling, dan:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* stel je geen rijweg in;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* licht je de DVL in.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Sterk vertraagde goederentreinen met een BP of BV regeling',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- De DVL moet de trein herplannen;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Zit er op de oorspronkelijke trein een vervoersregeling, dan geldt die ook voor de herplande en opnieuw ingelegde trein.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Lijst met codering standaard bijzonderheden',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Table(
+                        border: TableBorder.all(),
+                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        children: [
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Code',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Omschrijving',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'BV',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Trein met  vervoersregeling Buitengewoon Vervoer',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'BP1',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Trein met standaard omgrenzingsprofiel overschrijding volgens BP1',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'BP2',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Trein met standaard omgrenzingsprofiel overschrijding volgens BP2',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'BP3',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Trein met standaard omgrenzingsprofiel overschrijding volgens BP3',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  '3KT',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Trein zwaarder dan 3000 ton',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'METING',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Meettrein die op dit gedeelte het geplande spoor meet',
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
