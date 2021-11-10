@@ -396,7 +396,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                             1,
                             2,
                             3,
-                            4
+                            4,
                           ].map((i) {
                             return Builder(
                               builder: (BuildContext context) {
@@ -823,7 +823,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                             1,
                             2,
                             3,
-                            4
+                            4,
                           ].map((i) {
                             return Builder(
                               builder: (BuildContext context) {
@@ -1192,7 +1192,6 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                             1,
                             2,
                             3,
-                            4
                           ].map((i) {
                             return Builder(
                               builder: (BuildContext context) {
@@ -1387,7 +1386,6 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                             1,
                             2,
                             3,
-                            4
                           ].map((i) {
                             return Builder(
                               builder: (BuildContext context) {
