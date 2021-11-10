@@ -848,6 +848,317 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                           }).toList(),
                         ),
                       ),
+                      Table(
+                        border: TableBorder.all(),
+                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        children: [
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Serie',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Vervoerder',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Lengte',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Gewicht',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Max. snelheid',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'SGM',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'NSR',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '52,2m\n78,7m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '106 ton\n142 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '120 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'ICM',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'NSR',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '80,6m\n107,1m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '144 ton\n192 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '160 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'DDAR',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'NSR',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '26,5m\n21m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '45 ton\n77 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '140 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'VIRM',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'NSR',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '81m\n107,5m\n108,5m\n162m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '183,4 ton\n234 ton\n236,8 ton\n352,3 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '160 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Thalys',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'NS HiSpeed',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '200m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '383 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '320 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'ICE',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'NS HiSpeed',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '200,8m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '435 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '220 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Protos',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Connexxion',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '54,4m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '108 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '160 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'GTW (1)',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Arriva',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '41m\n56m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '64,5 ton\n83 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '140 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'GTW (2)',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Veolia',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '41m\n56m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '68 ton\n87 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '140 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
