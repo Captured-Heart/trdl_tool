@@ -1163,6 +1163,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                   ),
                 ),
               ),
+              /*CARD #5*/
               Card(
                 elevation: 6.0,
                 child: Padding(
@@ -1204,7 +1205,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                         child: Padding(
                                           padding: const EdgeInsets.all(16.0),
                                           child: Image.asset(
-                                            'assets/images/achtergrond/treinen/elektrische_treinen/dieselTrein$i.jpg',
+                                            'assets/images/achtergrond/treinen/diesel_treinen/dieselTrein$i.jpg',
                                           ),
                                         ),
                                       ),
@@ -1342,6 +1343,201 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                               Center(
                                 child: Text(
                                   '68 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '140 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #6*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Rijtuigen',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Center(
+                        child: CarouselSlider(
+                          options: CarouselOptions(
+                            height: 200.0,
+                            autoPlay: true,
+                            autoPlayCurve: Curves.easeInOutBack,
+                            enlargeCenterPage: true,
+                          ),
+                          items: [
+                            1,
+                            2,
+                            3,
+                            4
+                          ].map((i) {
+                            return Builder(
+                              builder: (BuildContext context) {
+                                return SizedBox(
+                                  width: double.infinity,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    children: [
+                                      Expanded(
+                                        child: Padding(
+                                          padding: const EdgeInsets.all(16.0),
+                                          child: Image.asset(
+                                            'assets/images/achtergrond/treinen/rijtuigen/rijtuigen$i.jpg',
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              },
+                            );
+                          }).toList(),
+                        ),
+                      ),
+                      Table(
+                        border: TableBorder.all(),
+                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        children: [
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Serie',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Vervoerder',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Lengte',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Gewicht',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Max. snelheid',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'ICR-1/2/3',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'NSR',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '26,4m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '41 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '160 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'ICR-3',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'NS HiSpeed',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '26,4m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '41 ton',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '160 km/u',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'DDM-2/3',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'NSR',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '26m',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '41 ton',
                                 ),
                               ),
                               Center(
