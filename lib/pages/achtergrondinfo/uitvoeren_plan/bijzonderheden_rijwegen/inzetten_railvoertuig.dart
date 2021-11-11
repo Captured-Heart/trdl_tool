@@ -238,7 +238,7 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 200.0,
+                            height: 300.0,
                             child: Image.asset(
                               'assets/images/achtergrond/unimog2.jpg',
                             ),
@@ -280,8 +280,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: SubTitleText(
-                              subtitle: '- Koppeling aan voor- en achterzijde;',
+                            child: BodyText(
+                              text: '- Koppeling aan voor- en achterzijde;',
                             ),
                           ),
                         ],
@@ -319,6 +319,7 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -410,32 +411,6 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text: '- AL beslist en overlegt met TRDL over inzet.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            height: 200.0,
-                            child: Image.asset(
-                              'assets/images/achtergrond/unimog1.jpg',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            height: 200.0,
-                            child: Image.asset(
-                              'assets/images/achtergrond/unimog2.jpg',
                             ),
                           ),
                         ],
