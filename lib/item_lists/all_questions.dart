@@ -39,7 +39,7 @@ class QuestionBank {
       false,
     ),
     Question(
-      'Inhoudelijke informatie over een grendel of vrijgave vindt je in de tekstuele BVS.',
+      'Inhoudelijke informatie over een grendel of vrijgave vind je in de tekstuele BVS.',
       true,
     ),
     Question(
