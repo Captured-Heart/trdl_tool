@@ -137,6 +137,10 @@ export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_tr
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_trein/onjuiste_detectie.dart';
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_trein/bijzondere_aandacht.dart';
 
+/*ACHTERGROND INFORMATIE BIJZONDERHEDEN RIJWEGEN PAGES*/
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/bijzonderheden_rijwegen.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig.dart';
+
 /*ProQuiz pages*/
 export 'package:trdl_tool/pages/home_pages/proquiz/proquizmain.dart';
 export 'package:trdl_tool/pages/home_pages/proquiz/screens/quiz_screen.dart';
