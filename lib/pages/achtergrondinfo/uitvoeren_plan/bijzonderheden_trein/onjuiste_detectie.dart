@@ -189,7 +189,6 @@ class OnjuisteDetectieAchtergrond extends StatelessWidget {
                       const SizedBoxH(),
                       Row(
                         children: const [
-                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
                               text: 'Tenzij je links tegen de rijrichting gaat rijden. De Werkwijze Treindienstleider schrijft dan voor dat je met een aanwijzing OVW rijdt.',

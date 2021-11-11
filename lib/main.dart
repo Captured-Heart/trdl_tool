@@ -129,6 +129,7 @@ class MainEntry extends StatelessWidget {
         'bijzonderhedentreinbasisachtergrond': (context) => const BijzonderhedenTreinBasisAchtergrond(),
         'vervoersregelingachtergrond': (context) => const TreinenVervoersregelingAchtergrond(),
         'onjuistedetectieachtergrond': (context) => const OnjuisteDetectieAchtergrond(),
+        'bijzondereaandachtachtergrond': (context) => const BijzondereAandachtAchtergrond(),
 
         /*PROQUIZ ROUTES*/
         'proquizmain': (context) => const ProQuiz(),
