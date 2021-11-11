@@ -82,7 +82,7 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                             ),
                           ),
                         ],
-                      ),,
+                      ),
                     ],
                   ),
                 ),
