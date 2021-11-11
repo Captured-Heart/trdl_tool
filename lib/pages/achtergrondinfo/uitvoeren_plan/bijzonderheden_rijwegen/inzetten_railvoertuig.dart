@@ -238,7 +238,7 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 300.0,
+                            height: 200.0,
                             child: Image.asset(
                               'assets/images/achtergrond/unimog2.jpg',
                             ),
