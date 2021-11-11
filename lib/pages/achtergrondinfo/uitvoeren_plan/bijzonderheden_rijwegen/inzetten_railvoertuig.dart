@@ -419,6 +419,69 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                   ),
                 ),
               ),
+              /*CARD #4*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Langstransport',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Een ander reddingsvoertuig dat gebruikt wordt op de Hogesnelheidslijn (HSL) is het zogenoemde secundair langstransport. In gewone mensentaal: een quadbike op spoorwielen met daarachter een aantal verrijdbare platformen.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'De quadbike wordt gebruikt als redmiddel als zich een ernstig ongeluk voordoet in de Groeneharttunnel, op het tracé van de HSL tussen Rotterdam en Amsterdam. Op het verste punt staat de trein op 26 meter diepte en drie kilometer van de dichtstbijzijnde nooduitgang. Als er dan gewonden zijn, komen de incidentbestrijders met een vrachtwagen waarin twee quads met ieder twee karretjes staan. Gewonde reizigers worden op de quads en de karretjes in veiligheid gebracht. Per karretje kunnen maximaal twee gewonden en een begeleider mee en op de quad passen nog eens drie mensen (inclusief bestuurder en begeleider). Dat betekent dat er per rit vijf gewonden naar de nooduitgang gebracht kunnen worden.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Overigens kunnen de quads ook elders worden ingezet. Denk bijvoorbeeld aan de Moerdijkbrug.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.75,
+                            height: 300.0,
+                            child: Image.asset(
+                              'assets/images/achtergrond/langsTransport.jpg',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
