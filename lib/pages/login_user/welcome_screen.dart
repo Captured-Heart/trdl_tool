@@ -7,8 +7,6 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreen extends State<WelcomeScreen> {
-  final alreadySignedInUser = FirebaseAuth.instance.currentUser;
-
   List<Widget> slides = items
       .map(
         (item) => Container(
@@ -84,7 +82,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           Logger().wtf('User skips welcome_screen to login_screen.');
