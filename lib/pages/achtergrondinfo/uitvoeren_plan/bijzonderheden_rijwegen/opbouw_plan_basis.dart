@@ -47,8 +47,8 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Drie manieren om een rijweg in te stellen',
+                            child: BodyText(
+                              text: 'Drie manieren om een rijweg in te stellen',
                             ),
                           ),
                         ],
@@ -67,12 +67,13 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBoxH(),
                       Row(
                         children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Je maakt afspraken met de LWB over werktreinen, waarbij:',
+                              text: '(ARI = Automatische Rijweg Instelling) - ARI maakt gebruik van een wacht- en een tijdvenster. Instellingen van ARI vind je in de PBH++.',
                             ),
                           ),
                         ],
@@ -82,8 +83,22 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
+                            child: Text(
+                              '- Handmatig, in het planscherm',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
                             child: BodyText(
-                              text: '- alleen de LWB treinen mag toelaten tot buitendienst gestelde sporen;',
+                              text: 'Als ARI de rijweg niet kan instellen, zul je dit handmatig moeten doen. Doe dit zo veel mogelijk in het planscherm.',
                             ),
                           ),
                         ],
@@ -93,29 +108,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- alleen jij treinen mag toelaten op in dienst zijnde sporen.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'De LWB instrueert de begeleider buitendienst gesteld spoor (BBD) en (werktrein)machinist over:',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- De verplaatsingen van en de werkzaamheden uit te voeren met de werktrein;',
+                            child: Text(
+                              '- Handmatig, in het bedienscherm',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -124,42 +121,10 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- De communicatie;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- De aanwezigheid van mensen, obstakels en eventueel andere werktreinen;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- De voertuiginstructie (VTI);',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Bijzondere omstandigheden die van belang zijn voor het veilig rijden.',
+                              text: 'Blijkt het om wat voor reden dan ook niet mogelijk de rijweg in het planscherm in te stellen, dan kun je de rijweg in het bedienscherm instellen.',
                             ),
                           ),
                         ],
@@ -179,7 +144,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle: 'Toelating (werk)trein tot in dienst gesteld gebied',
+                              subtitle: 'Het plan',
                             ),
                           ),
                         ],
@@ -189,7 +154,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Alleen met jouw toestemming mag de (werk)trein toegelaten worden op een in dienst gesteld spoor. Indien een werktrein niet op seinbeeld de buitendienststelling kan verlaten zal je een aantal handelingen moeten verrichten om de trein uit het gebied te krijgen.',
+                              text: 'Om een trein van het ene naar het andere station te laten rijden, gebruik je een plan waarmee je een rijweg kan instellen. Het plan is een uitgebreidere versie van de dienstregeling waarin je alle informatie vindt die nodig is om een trein of rangeerbeweging via de juiste route en op de juiste tijd op de plaats van bestemming te krijgen. In dit deel van de achtergrondinformatie lees je alles over hoe het plan van een treindienstleider in elkaar zit, wat voor soorten rijwegen er zijn en hoe je een rijweg kunt instellen.',
                             ),
                           ),
                         ],
@@ -199,7 +164,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Dit doe je met behulp van een rijopdracht voor de machinist, waarbij je zorg draagt voor de veilige rijweg. Dit kan door middel van de W-route of het handmatig sturen en vastleggen van de infra-elementen die zich in het in dienst gesteld gebied bevinden en het uitsluiten van de tegengestelde rijweg. Voor het gebruik van de W-route dient de buitendienststelling wel met een VHR begrensd te zijn.',
+                              text: 'Een rijweg is het stuk spoor dat voor een trein beschikbaar wordt gesteld om van A naar B te komen.',
                             ),
                           ),
                         ],
@@ -209,7 +174,29 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Indien nodig gebruik je het TOM-venster om een wissel in de juiste stand te sturen en vast te leggen.',
+                              text: 'De mogelijkheid tot verplaatsing wordt aangegeven tussen:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Twee sporen, beginnend op het VAN-spoor en eindigend op het NAAR-spoor;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Waar van toepassing: twee variabele seinen, beginnend met een VAN-sein en eindigend bij het NAAR-sein, corresponderend met de VAN- en NAAR-sporen.',
                             ),
                           ),
                         ],
@@ -219,17 +206,177 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De rijopdracht voor de machinist is vergelijkbaar met een aanwijzing STS, echter staat de machinist niet voor een sein, maar op de grens van de buitendienststelling. Je controleert of de juiste machinist de rijopdracht krijgt, zich op de juiste locatie bevindt en je geeft de bijzonderheden aan in de route. Dit doe je door middel van de 3 u’s: U bent, U staat en U gaat. Vervolgens zal je de inhoudelijke gegevens benoemen die bij de STS horen. Je benoemt alleen de relevante punten.',
+                              text: 'Er zijn 2 verschillende soorten rijwegen:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- Enkelvoudige rijwegen',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Een enkelvoudige rijweg bestaat uit een enkele seinstap. Een seinstap is een rijweginstelling van sein tot het eerstvolgende sein in dezelfde rijrichting.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- Samengestelde rijwegen',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Een samengestelde rijweg bestaat uit 2 of meer aaneengesloten rijwegen (seinstappen). Voor het instellen van een samengestelde rijweg moet het begin- en eindpunt van de totale rijweg worden opgegeven. Een samengestelde rijweg kan in zijn geheel of per deel afzonderlijk worden ingesteld.',
                             ),
                           ),
                         ],
                       ),
                       const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Voorwaarden voor het instellen van een rijweg:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- De rijweg wordt gecontroleerd op tegengestelde bewegingen en indien mogelijk wordt de rijrichting ingesteld en vergrendeld. Een tegengestelde rijweg wordt hierdoor uitgesloten;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- De wissels in de rijweg worden in de juiste stand gestuurd en daarna vergrendeld. Ook eventuele andere bedienbare infraelementen, die in de ingestelde rijweg liggen, worden vergrendeld (grendel, brug, etc.);',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- De rijweg is nu vastgelegd;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- De rijweg wordt gecontroleerd op spoorbezetting;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Het sein komt uit de stand stop, als er geen spoorbezetting is.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Wanneer de rijweg wordt ingesteld met Rijden Op Zicht (ROZ - het seinbeeld geel knipper) vindt er geen controle plaats op eventuele spoorbezetting.',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #3*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
                       Row(
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle: 'Voorbeeld',
+                              subtitle: 'Opbouw planregel - planscherm',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.75,
+                            height: 100.0,
+                            child: Image.asset(
+                              'assets/images/achtergrond/opbouwPlanregelPlanscherm1.png',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.75,
+                            height: 100.0,
+                            child: Image.asset(
+                              'assets/images/achtergrond/opbouwPlanregelPlanscherm2.png',
                             ),
                           ),
                         ],
@@ -239,7 +386,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Nadat de veiligheidsmaatregelen zijn genomen voor de rijopdracht volgt het gesprek met de machinist (machinist herhaalt):',
+                              text: 'Om een trein van het ene naar het andere station te laten rijden, gebruik je een plan waarmee je een rijweg kan instellen. Het plan is een uitgebreidere versie van de dienstregeling waarin je alle informatie vindt die nodig is om een trein of rangeerbeweging via de juiste route en op de juiste tijd op de plaats van bestemming te krijgen. In dit deel van de achtergrondinformatie lees je alles over hoe het plan van een treindienstleider in elkaar zit, wat voor soorten rijwegen er zijn en hoe je een rijweg kunt instellen.',
                             ),
                           ),
                         ],
@@ -249,25 +396,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: '\'U bent de machinist van trein 89663,',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'U staat voor wissel 257A in Eindhoven,',
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'U gaat via wissel 257A rechtsleidend naar spoor Echo Bravo.',
+                              text: 'Een rijweg is het stuk spoor dat voor een trein beschikbaar wordt gesteld om van A naar B te komen.',
                             ),
                           ),
                         ],
@@ -277,7 +406,29 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De machinist van trein 89663 moet achter wissel 257A rijden op zicht, de wissels voorzichtig berijden met een snelheid van max. 10 km/h en rekening houden met het niet goed functioneren van de overwegen en krijgt bij deze een rijopdracht van de treindienstleider.\'',
+                              text: 'De mogelijkheid tot verplaatsing wordt aangegeven tussen:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Twee sporen, beginnend op het VAN-spoor en eindigend op het NAAR-spoor;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Waar van toepassing: twee variabele seinen, beginnend met een VAN-sein en eindigend bij het NAAR-sein, corresponderend met de VAN- en NAAR-sporen.',
                             ),
                           ),
                         ],
@@ -287,7 +438,132 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Zodra de werktrein het gebied veilig heeft verlaten, zorg je ervoor dat de buitendienstelling is afgedekt conform afspraak (bijvoorbeeld door het wissel weer terug te leggen d.m.v. TOM-venster).',
+                              text: 'Er zijn 2 verschillende soorten rijwegen:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- Enkelvoudige rijwegen',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Een enkelvoudige rijweg bestaat uit een enkele seinstap. Een seinstap is een rijweginstelling van sein tot het eerstvolgende sein in dezelfde rijrichting.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- Samengestelde rijwegen',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Een samengestelde rijweg bestaat uit 2 of meer aaneengesloten rijwegen (seinstappen). Voor het instellen van een samengestelde rijweg moet het begin- en eindpunt van de totale rijweg worden opgegeven. Een samengestelde rijweg kan in zijn geheel of per deel afzonderlijk worden ingesteld.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Voorwaarden voor het instellen van een rijweg:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- De rijweg wordt gecontroleerd op tegengestelde bewegingen en indien mogelijk wordt de rijrichting ingesteld en vergrendeld. Een tegengestelde rijweg wordt hierdoor uitgesloten;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- De wissels in de rijweg worden in de juiste stand gestuurd en daarna vergrendeld. Ook eventuele andere bedienbare infraelementen, die in de ingestelde rijweg liggen, worden vergrendeld (grendel, brug, etc.);',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- De rijweg is nu vastgelegd;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- De rijweg wordt gecontroleerd op spoorbezetting;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Het sein komt uit de stand stop, als er geen spoorbezetting is.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Wanneer de rijweg wordt ingesteld met Rijden Op Zicht (ROZ - het seinbeeld geel knipper) vindt er geen controle plaats op eventuele spoorbezetting.',
                             ),
                           ),
                         ],
