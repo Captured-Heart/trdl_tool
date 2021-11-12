@@ -383,7 +383,37 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Om een trein van het ene naar het andere station te laten rijden, gebruik je een plan waarmee je een rijweg kan instellen. Het plan is een uitgebreidere versie van de dienstregeling waarin je alle informatie vindt die nodig is om een trein of rangeerbeweging via de juiste route en op de juiste tijd op de plaats van bestemming te krijgen. In dit deel van de achtergrondinformatie lees je alles over hoe het plan van een treindienstleider in elkaar zit, wat voor soorten rijwegen er zijn en hoe je een rijweg kunt instellen.',
+                              text: 'A: Indicator',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '! = Er is een nog niet afgehandelde vertraging;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '+ = Plan is gewijzigd door een treindienstleider;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '? = Er is voor deze trein een \'uitblijven seinpassage\' opgetreden.',
                             ),
                           ),
                         ],
@@ -393,7 +423,17 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Een rijweg is het stuk spoor dat voor een trein beschikbaar wordt gesteld om van A naar B te komen.',
+                              text: 'B: Treinnummer',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Trein- of rangeernummer (eventueel voorafgegaan door treinletters).',
                             ),
                           ),
                         ],
@@ -403,7 +443,361 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De mogelijkheid tot verplaatsing wordt aangegeven tussen:',
+                              text: 'C: Activiteitssoort',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- D = Doorkomst;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- A = Aankomst;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- V = Vertrek;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- K = Korte stop;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- R = Rangeerbeweging (eventueel gevolgd door een rijwegvolgnummer).',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'D: Rijwegvolgnummer',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Het nummer hoeft niet de volgorde van de rijweg aan te geven (bij opsplitsing in meerdere rijwegen).',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'E: Plantijdstip',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Het tijdstip waarop volgens het plan de treinactiviteit moet plaatsvinden.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'F: Vertragingssoort',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '-   = Exact;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- V = Voorwaardelijke vertraging;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- N = Nader bericht.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'G: Vertragingsduur',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'In minuten. Een positieve waarde geeft een vertraging aan, een negatieve waarde een vervroeging.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'H: Dienstregelpunt',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Dienstregelpunt waar de vertraging is geconstateerd (de eerste 4 karakters worden getoond).',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'I: Gepland insteltijdstip',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Tijdstip waarop volgens plan de instelling van de rijweg moet plaatsvinden.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'J: Instelwijze',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Geeft de wijze van rijweginstelling (I, F, H) of (alleen bij gefaseerde rijweginstelling) het aantal seinstappen voor gefaseerde rijweginstelling (1 t/m 9) aan. Dit instelwijzeveld wordt alleen getoond op een scherm groter dan 17 inch (1280x1024).',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- F = Gefaseerde rijweginstelling. Er worden slechts zoveel enkelvoudige rijwegen van de planregel voor de trein uit ingesteld als nodig. Hoeveel dat zijn, wordt bepaald door het aantal seinstappen dat is opgegeven. Als het aantal niet is opgegeven dan geldt de standaard waarde voor het PPLG zoals door de postbeheerder voor het PPLG ingesteld.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- H = Hoog groene rijweginstelling. Met rijweginstelling wordt al aangevangen als de toeleidende rijweg naar het beginspoor is ingesteld. De wijze van instelling is verder als bij F (gefaseerd met standaard aantal).',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- I = Integrale rijweginstelling. Rijweginstelling van alle enkelvoudige rijwegen in de planregel tegelijk vindt pas plaats op het moment dat zij allemaal beschikbaar zijn.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- 1 t/m 9 = Gefaseerde rijweginstelling met het gegeven aantal seinstappen. Er worden slechts zoveel enkelvoudige rijwegen van de planregel voor de trein uit ingesteld als nodig. Hoeveel dat zijn, wordt bepaald door het cijfer dat is opgegeven.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'K: VAN - Beginspoor (groen bij instelwijze hooggroen, oranje bij instelwijze integraal)',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'L: NAAR - Eindspoor (oranje bij Rijden Op Zicht)',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'M: Dwangrijwegnummer',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Als de rijweg via een afwijkende route moet worden ingesteld. Staat hier niets dan wordt de rijweg via de voorkeursroute ingesteld.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'N: Klaarmeldingsindicator',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Als er voor deze treinactiviteit één of meer niet afgevinkte klaarmeldingen zijn, staat hier een \'K\'. Zijn alle klaarmeldingen afgevinkt verandert de \'K\' in een \'-\'.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'O: Materieelrelatie-indicator',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Als er voor deze treinactiviteit één of meer materieelrelaties zijn, staat hier een \'m\' of een \'M\'. De \'M\' kan verschillende kleuren hebben, waarmee de ABT status wordt aangeduid.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'P: Bijzonderheden',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'De bijzonderheden bij een treinactiviteit kunnen bestaan uit maximaal 2 codes en/of een vrije tekst. Aangezien er ruimte is voor 11 tekens op een 21 inch scherm kan maar een beperkt deel van deze informatie worden   getoond. Deze ruimte wordt benut om eerst informatie over de standaard bijzonderheden te geven en pas daarna om de   bijzonderheden-tekst te tonen, afgekapt op het beschikbare aantal tekenposities. Als laatste teken wordt een speciaal teken (\'>\') getoond om duidelijk te maken dat er meer informatie is die hier niet meer getoond kan worden.',
                             ),
                           ),
                         ],
@@ -414,7 +808,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Twee sporen, beginnend op het VAN-spoor en eindigend op het NAAR-spoor;',
+                              text: 'D.m.v. de knop "Bijz. heden" in de planmenubalk kan de volledige tekst worden bekeken.',
                             ),
                           ),
                         ],
@@ -425,31 +819,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Waar van toepassing: twee variabele seinen, beginnend met een VAN-sein en eindigend bij het NAAR-sein, corresponderend met de VAN- en NAAR-sporen.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Er zijn 2 verschillende soorten rijwegen:',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: Text(
-                              '- Enkelvoudige rijwegen',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                              text: 'Standaard bijzonderheden - Bijzonderheden die aan een trein kunnen worden toegekend, gekozen uit een standaardlijst:',
                             ),
                           ),
                         ],
@@ -460,21 +830,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Een enkelvoudige rijweg bestaat uit een enkele seinstap. Een seinstap is een rijweginstelling van sein tot het eerstvolgende sein in dezelfde rijrichting.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: Text(
-                              '- Samengestelde rijwegen',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                              text: '- BP = Buiten Profiel;',
                             ),
                           ),
                         ],
@@ -485,82 +841,18 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Een samengestelde rijweg bestaat uit 2 of meer aaneengesloten rijwegen (seinstappen). Voor het instellen van een samengestelde rijweg moet het begin- en eindpunt van de totale rijweg worden opgegeven. Een samengestelde rijweg kan in zijn geheel of per deel afzonderlijk worden ingesteld.',
+                              text: '- BV = Bijzonder Vervoer;',
                             ),
                           ),
                         ],
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Voorwaarden voor het instellen van een rijweg:',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- De rijweg wordt gecontroleerd op tegengestelde bewegingen en indien mogelijk wordt de rijrichting ingesteld en vergrendeld. Een tegengestelde rijweg wordt hierdoor uitgesloten;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- De wissels in de rijweg worden in de juiste stand gestuurd en daarna vergrendeld. Ook eventuele andere bedienbare infraelementen, die in de ingestelde rijweg liggen, worden vergrendeld (grendel, brug, etc.);',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- De rijweg is nu vastgelegd;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- De rijweg wordt gecontroleerd op spoorbezetting;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Het sein komt uit de stand stop, als er geen spoorbezetting is.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Wanneer de rijweg wordt ingesteld met Rijden Op Zicht (ROZ - het seinbeeld geel knipper) vindt er geen controle plaats op eventuele spoorbezetting.',
+                              text: '- LSP = LinkerSPoor.',
                             ),
                           ),
                         ],
