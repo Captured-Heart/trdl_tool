@@ -13,7 +13,8 @@ final List<Image> elektrLocsList = [
 ];
 
 const String treinenVanNS = 'https://ns.nl/over-ns/treinen-van-ns';
-const String nlSpoorwegMaterieel = 'https://nl.wikipedia.org/wiki/Nederlands_spoorwegmaterieel';
+const String nlSpoorwegMaterieel =
+    'https://nl.wikipedia.org/wiki/Nederlands_spoorwegmaterieel';
 const String goederenWagon = 'https://nl.wikipedia.org/wiki/Goederenwagon';
 
 class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
@@ -54,7 +55,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'In Nederland is er heel wat rijdend materieel onderweg op het spoor. Dit materieel komt in vele soorten en maten, aangepast voor specifieke trajecten, reizigers of goederen. In dit deel van de achtergrondinformatievind je een overzicht van deze materieelsoorten.',
+                              text:
+                                  'In Nederland is er heel wat rijdend materieel onderweg op het spoor. Dit materieel komt in vele soorten en maten, aangepast voor specifieke trajecten, reizigers of goederen. In dit deel van de achtergrondinformatievind je een overzicht van deze materieelsoorten.',
                             ),
                           ),
                         ],
@@ -64,7 +66,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Handig zijn ook de volgende webpagina\'s (werkende links worden nog toegevoegd):',
+                              text:
+                                  'Handig zijn ook de volgende webpagina\'s (werkende links worden nog toegevoegd):',
                             ),
                           ),
                         ],
@@ -168,18 +171,14 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                             autoPlayCurve: Curves.easeInOutBack,
                             enlargeCenterPage: true,
                           ),
-                          items: [
-                            1,
-                            2,
-                            3,
-                            4
-                          ].map((i) {
+                          items: [1, 2, 3, 4].map((i) {
                             return Builder(
                               builder: (BuildContext context) {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -199,8 +198,9 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                       ),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                        children: [
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
+                        children: const [
                           TableRow(
                             children: [
                               Center(
@@ -403,7 +403,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -423,8 +424,9 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                       ),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                        children: [
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
+                        children: const [
                           TableRow(
                             children: [
                               Center(
@@ -830,7 +832,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -850,8 +853,9 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                       ),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                        children: [
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
+                        children: const [
                           TableRow(
                             children: [
                               Center(
@@ -1198,7 +1202,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -1218,8 +1223,9 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                       ),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                        children: [
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
+                        children: const [
                           TableRow(
                             children: [
                               Center(
@@ -1392,7 +1398,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -1412,8 +1419,9 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                       ),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                        children: [
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
+                        children: const [
                           TableRow(
                             children: [
                               Center(
@@ -1585,7 +1593,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -1641,7 +1650,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -1670,9 +1680,15 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
     );
   }
 
-  void launchTreinenVanNS() async => await canLaunch(treinenVanNS) ? await launch(treinenVanNS) : throw 'Could not launch $treinenVanNS';
+  void launchTreinenVanNS() async => await canLaunch(treinenVanNS)
+      ? await launch(treinenVanNS)
+      : throw 'Could not launch $treinenVanNS';
 
-  void lauchNLSpoorwegMaterieel() async => await canLaunch(nlSpoorwegMaterieel) ? await launch(nlSpoorwegMaterieel) : throw 'Could not launch $nlSpoorwegMaterieel';
+  void lauchNLSpoorwegMaterieel() async => await canLaunch(nlSpoorwegMaterieel)
+      ? await launch(nlSpoorwegMaterieel)
+      : throw 'Could not launch $nlSpoorwegMaterieel';
 
-  void launchGoederenwagon() async => await canLaunch(goederenWagon) ? await launch(goederenWagon) : throw 'Could not launch $goederenWagon';
+  void launchGoederenwagon() async => await canLaunch(goederenWagon)
+      ? await launch(goederenWagon)
+      : throw 'Could not launch $goederenWagon';
 }

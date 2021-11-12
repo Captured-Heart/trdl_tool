@@ -11,6 +11,8 @@ class _RegisterState extends State<Register> {
   final _auth = FirebaseAuth.instance;
   late String email;
   late String password;
+  late String password1;
+  late String password2;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class _RegisterState extends State<Register> {
               const SizedBoxH(),
               SizedBox(
                 width: MediaQuery.of(context).size.width,
-                height: 300,
+                height: 350,
                 child: Card(
                   elevation: 6.0,
                   child: Padding(
@@ -49,7 +51,7 @@ class _RegisterState extends State<Register> {
                         Row(
                           children: [
                             Expanded(
-                              /*Email Textfield*/
+                              /*EMAIL TEXTFIELD*/
                               child: TextField(
                                 keyboardType: TextInputType.emailAddress,
                                 textAlign: TextAlign.center,
@@ -69,17 +71,37 @@ class _RegisterState extends State<Register> {
                         Row(
                           children: [
                             Expanded(
-                              /*Password Textfield*/
+                              /*ENTER PASSWORD*/
                               child: TextField(
                                 textAlign: TextAlign.center,
                                 onChanged: (value) {
-                                  password = value;
+                                  password1 = value;
                                 },
                                 obscureText: true,
                                 decoration: const InputDecoration(
                                   border: OutlineInputBorder(),
                                   labelText: Strings.registerPassword,
                                   hintText: Strings.registerPasswordHint,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBoxH(),
+                        Row(
+                          children: [
+                            Expanded(
+                              /*CHECK PASSWORD*/
+                              child: TextField(
+                                textAlign: TextAlign.center,
+                                onChanged: (value) {
+                                  password2 = value;
+                                },
+                                obscureText: true,
+                                decoration: const InputDecoration(
+                                  border: OutlineInputBorder(),
+                                  labelText: Strings.registerPasswordCheck,
+                                  hintText: Strings.registerPasswordHintCheck,
                                 ),
                               ),
                             ),
@@ -94,7 +116,7 @@ class _RegisterState extends State<Register> {
                                 if (email.contains('plotsklapps@gmail.com')) {
                                   await _auth.createUserWithEmailAndPassword(
                                     email: email,
-                                    password: password,
+                                    password: password1,
                                   );
                                   Navigator.pushReplacementNamed(
                                     context,
@@ -109,23 +131,29 @@ class _RegisterState extends State<Register> {
                                   );
                                 }
                                 /*Check if password length is >= 6 for Firebase*/
-                                else if (password.length < 6) {
+                                else if (password1.length < 6) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarRegisterPasswordShort,
+                                  );
+                                }
+                                /*Check if passwords are equal*/
+                                else if (password1 != password2) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    snackBarRegisterPasswordNotEqual,
                                   );
                                 } else {
                                   try {
                                     /*Create user and go to verify_screen*/
                                     await _auth.createUserWithEmailAndPassword(
                                       email: email,
-                                      password: password,
+                                      password: password1,
                                     );
                                     Navigator.pushReplacementNamed(
                                       context,
                                       'verifyscreen',
                                     );
                                   }
-                                  /*Catch all errors and show snack with error*/
+                                  /*Catch all other errors and show snack with error*/
                                   catch (errorMessage) {
                                     Logger().wtf(
                                       'Er is iets misgegaan: $errorMessage',

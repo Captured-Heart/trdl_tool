@@ -3,7 +3,7 @@ import 'package:trdl_tool/all_imports.dart';
 final _auth = FirebaseAuth.instance;
 String? emailCurrentUser = _auth.currentUser!.email;
 
-/*TRDLtool Logo*/
+/*TRDLTOOL LOGO*/
 class TRDLtoolLogo extends StatelessWidget {
   const TRDLtoolLogo({
     Key? key,
@@ -37,7 +37,7 @@ class TRDLtoolLogo extends StatelessWidget {
   }
 }
 
-/*Appbar Text*/
+/*APPBAR TITLE*/
 class AppBarText extends StatelessWidget {
   const AppBarText({required this.title, Key? key}) : super(key: key);
   final String title;
@@ -53,7 +53,7 @@ class AppBarText extends StatelessWidget {
   }
 }
 
-/*LogOut Button*/
+/*APPBAR LOGOUT BUTTON*/
 class LogOutButton extends StatelessWidget {
   const LogOutButton({Key? key}) : super(key: key);
 
@@ -68,7 +68,7 @@ class LogOutButton extends StatelessWidget {
   }
 }
 
-/*AppBar IconButton*/
+/*APPBAR HOME BUTTON*/
 class HomeButton extends StatelessWidget {
   const HomeButton({Key? key}) : super(key: key);
   @override
@@ -84,7 +84,7 @@ class HomeButton extends StatelessWidget {
   }
 }
 
-/*CardTitle Widget*/
+/*CARDTITLE WIDGET*/
 class CardTitle extends StatelessWidget {
   final String title;
 
@@ -107,67 +107,7 @@ class CardTitle extends StatelessWidget {
   }
 }
 
-/*Procedure Title Widget*/
-class ProcedureTitle extends StatelessWidget {
-  const ProcedureTitle({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: const [
-        Expanded(
-          child: SubTitleText(
-            subtitle: Strings.procedure,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-/*Risico Title Widget*/
-class RisicoTitle extends StatelessWidget {
-  const RisicoTitle({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: const [
-        Expanded(
-          child: SubTitleText(
-            subtitle: Strings.risico,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-/*Context Title Widget*/
-class ContextTitle extends StatelessWidget {
-  const ContextTitle({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: const [
-        Expanded(
-          child: SubTitleText(
-            subtitle: Strings.context,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-/*Title Text*/
+/*TEXT TITLE WIDGET*/
 class TitleText extends StatelessWidget {
   const TitleText({required this.title, Key? key}) : super(key: key);
   final String title;
@@ -183,7 +123,7 @@ class TitleText extends StatelessWidget {
   }
 }
 
-/*Subtitle Text*/
+/*TEXT SUBTITLE WIDGET*/
 class SubTitleText extends StatelessWidget {
   const SubTitleText({required this.subtitle, Key? key}) : super(key: key);
   final String subtitle;
@@ -200,7 +140,7 @@ class SubTitleText extends StatelessWidget {
   }
 }
 
-/*Body Text*/
+/*TEXT BODY WIDGET*/
 class BodyText extends StatelessWidget {
   const BodyText({required this.text, Key? key}) : super(key: key);
   final String text;
@@ -216,7 +156,7 @@ class BodyText extends StatelessWidget {
   }
 }
 
-/*SizedBox Height 8.0*/
+/*SIZEDBOX HEIGHT 8.0*/
 class SizedBoxH extends StatelessWidget {
   const SizedBoxH({Key? key}) : super(key: key);
   @override
@@ -227,7 +167,7 @@ class SizedBoxH extends StatelessWidget {
   }
 }
 
-/*SizedBox Width 8.0*/
+/*SIZEDBOX WIDTH 8.0*/
 class SizedBoxW extends StatelessWidget {
   const SizedBoxW({Key? key}) : super(key: key);
   @override
@@ -238,7 +178,7 @@ class SizedBoxW extends StatelessWidget {
   }
 }
 
-/*Rounded Button from ChatPage*/
+/*ROUNDED BUTTON CHATPAGE*/
 class RoundedButton extends StatelessWidget {
   const RoundedButton({
     required this.text,

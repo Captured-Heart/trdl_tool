@@ -7,7 +7,7 @@ class Strings {
   static const String and = 'with';
 
   /*WELCOME strings*/
-  static const String welcomeFAB = 'VERDER';
+  static const String welcomeFAB = 'OVERSLAAN';
 
   /*LOGIN strings*/
   static const String loginEmail = 'Emailadres';
@@ -21,8 +21,11 @@ class Strings {
   static const String registerEmail = 'Emailadres';
   static const String registerEmailHint = 'Vul een @PRORAIL.NL emailadres in';
   static const String registerPassword = 'Wachtwoord';
+  static const String registerPasswordCheck = 'Wachtwoordcontrole';
   static const String registerPasswordHint =
       'Wachtwoord bevat minimaal 6 tekens';
+  static const String registerPasswordHintCheck =
+      'Wachtwoord dient hetzelfde te zijn';
   static const String registerAlEenAccount = 'Heb je al een account?';
 
   /*WERKWIJZE strings*/

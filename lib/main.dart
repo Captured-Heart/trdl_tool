@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
 void main() async {
-  /*FIREBASE USAGE*/
+  /*START FIREBASE BACKEND*/
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(
@@ -63,7 +63,8 @@ class MainEntry extends StatelessWidget {
 
         /*AANPASSEN PLAN ROUTES*/
         'aanpassenplan': (context) => const AanpassenPlan(),
-        'stappenplanversperringen': (context) => const StappenplanVersperringen(),
+        'stappenplanversperringen': (context) =>
+            const StappenplanVersperringen(),
         'ongeplandwerk': (context) => const OngeplandWerk(),
         'orderacceptatie': (context) => const Orderacceptatie(),
         'materieelongeplandwerk': (context) => const MaterieelOngeplandWerk(),
@@ -113,25 +114,40 @@ class MainEntry extends StatelessWidget {
         'wisselsvrijmaken': (context) => const WisselsVrijmaken(),
         'stspassage': (context) => const STSPassage(),
         'stilleggentreindienst': (context) => const StilleggenTreindienst(),
-        'afhandelensysteemstoringen': (context) => const AfhandelenSysteemstoringen(),
+        'afhandelensysteemstoringen': (context) =>
+            const AfhandelenSysteemstoringen(),
 
         /*ACHTERGRONDINFO ROUTES*/
-        'uitvoerenplanachtergrond': (context) => const UitvoerenPlanAchtergrond(),
-        'uitvoerenplanbasisachtergrond': (context) => const UitvoerenPlanBasisAchtergrond(),
-        'geplandewerkzaamhedenachtergrond': (context) => const GeplandeWerkzaamhedenAchtergrond(),
-        'geplandewerkzaamhedenbasisachtergrond': (context) => const GeplandeWerkzaamhedenBasisAchtergrond(),
-        'controlerenwbiachtergrond': (context) => const ControlerenWBIAchtergrond(),
+        'uitvoerenplanachtergrond': (context) =>
+            const UitvoerenPlanAchtergrond(),
+        'uitvoerenplanbasisachtergrond': (context) =>
+            const UitvoerenPlanBasisAchtergrond(),
+        'geplandewerkzaamhedenachtergrond': (context) =>
+            const GeplandeWerkzaamhedenAchtergrond(),
+        'geplandewerkzaamhedenbasisachtergrond': (context) =>
+            const GeplandeWerkzaamhedenBasisAchtergrond(),
+        'controlerenwbiachtergrond': (context) =>
+            const ControlerenWBIAchtergrond(),
         'foutenindewbiachtergrond': (context) => const FoutenWBIAchtergrond(),
-        'aanvangwerkzaamhedenachtergrond': (context) => const AanvangWerkzaamhedenAchtergrond(),
-        'toelatenwerktreinenachtergrond': (context) => const ToelatenWerktreinenAchtergrond(),
+        'aanvangwerkzaamhedenachtergrond': (context) =>
+            const AanvangWerkzaamhedenAchtergrond(),
+        'toelatenwerktreinenachtergrond': (context) =>
+            const ToelatenWerktreinenAchtergrond(),
         'werkzonesachtergrond': (context) => const WerkzonesAchtergrond(),
-        'bijzonderhedentreinachtergrond': (context) => const BijzonderhedenTreinAchtergrond(),
-        'bijzonderhedentreinbasisachtergrond': (context) => const BijzonderhedenTreinBasisAchtergrond(),
-        'vervoersregelingachtergrond': (context) => const TreinenVervoersregelingAchtergrond(),
-        'onjuistedetectieachtergrond': (context) => const OnjuisteDetectieAchtergrond(),
-        'bijzondereaandachtachtergrond': (context) => const BijzondereAandachtAchtergrond(),
-        'bijzonderhedenrijwegenachtergrond': (context) => const BijzonderhedenRijwegenAchtergrond(),
-        'inzettenrailvoertuigachtergrond': (context) => const InzettenRailvoertuigAchtergrond(),
+        'bijzonderhedentreinachtergrond': (context) =>
+            const BijzonderhedenTreinAchtergrond(),
+        'bijzonderhedentreinbasisachtergrond': (context) =>
+            const BijzonderhedenTreinBasisAchtergrond(),
+        'vervoersregelingachtergrond': (context) =>
+            const TreinenVervoersregelingAchtergrond(),
+        'onjuistedetectieachtergrond': (context) =>
+            const OnjuisteDetectieAchtergrond(),
+        'bijzondereaandachtachtergrond': (context) =>
+            const BijzondereAandachtAchtergrond(),
+        'bijzonderhedenrijwegenachtergrond': (context) =>
+            const BijzonderhedenRijwegenAchtergrond(),
+        'inzettenrailvoertuigachtergrond': (context) =>
+            const InzettenRailvoertuigAchtergrond(),
 
         /*PROQUIZ ROUTES*/
         'proquizmain': (context) => const ProQuiz(),

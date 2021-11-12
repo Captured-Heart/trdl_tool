@@ -48,7 +48,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Voor sommige werkzaamheden is het niet mogelijk om de benodigde materialen via werktreinen bij de buitendienststelling te krijgen. Dan komt het voor dat er railwegvoertuigen in het spoor gezet moeten worden. Dit gebeurt op van tevoren afgesproken rail-inzetplaats, bijvoorbeeld bij een overweg.',
+                              text:
+                                  'Voor sommige werkzaamheden is het niet mogelijk om de benodigde materialen via werktreinen bij de buitendienststelling te krijgen. Dan komt het voor dat er railwegvoertuigen in het spoor gezet moeten worden. Dit gebeurt op van tevoren afgesproken rail-inzetplaats, bijvoorbeeld bij een overweg.',
                             ),
                           ),
                         ],
@@ -58,7 +59,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Voordat een railwegvoertuig in het spoor gezet mag worden, moet er eerst een WECO met de betrokken LWB afgesloten worden. Het betrokken spoor en, indien noodzakelijk, het nevenspoor, waar het materieel ingezet wordt moeten voor deze activiteit ter beschikking zijn gesteld voordat het materieel in het spoor gezet mag worden. Het nevenspoor wordt buitendienst genomen om gevaarlijke situaties te voorkomen, bv als het voertuig door te manoeuvreren buiten profiel kan komen.',
+                              text:
+                                  'Voordat een railwegvoertuig in het spoor gezet mag worden, moet er eerst een WECO met de betrokken LWB afgesloten worden. Het betrokken spoor en, indien noodzakelijk, het nevenspoor, waar het materieel ingezet wordt moeten voor deze activiteit ter beschikking zijn gesteld voordat het materieel in het spoor gezet mag worden. Het nevenspoor wordt buitendienst genomen om gevaarlijke situaties te voorkomen, bv als het voertuig door te manoeuvreren buiten profiel kan komen.',
                             ),
                           ),
                         ],
@@ -78,7 +80,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Een railinzetplaats is een plek langs de spoorbaan waar voertuigen in- en uit het spoor gezet kunnen worden. Deze plaats bestaat uit een stuk verharding in en nabij het spoor dat vanaf de weg bereikbaar is . Een spoorwegovergang kan bijvoorbeeld prima als railinzetplaats gebruikt worden. Maar er zijn ook speciale railinzetplaatsen gecreëerd langs het spoor, deze staan in de BVS aangegeven.',
+                              text:
+                                  'Een railinzetplaats is een plek langs de spoorbaan waar voertuigen in- en uit het spoor gezet kunnen worden. Deze plaats bestaat uit een stuk verharding in en nabij het spoor dat vanaf de weg bereikbaar is . Een spoorwegovergang kan bijvoorbeeld prima als railinzetplaats gebruikt worden. Maar er zijn ook speciale railinzetplaatsen gecreëerd langs het spoor, deze staan in de BVS aangegeven.',
                             ),
                           ),
                         ],
@@ -108,7 +111,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Een uitzondering op de regeling van de railwegvoertuigen is het railvoertuig Incidentenbestrijding van ProRail. Deze mag bij calamiteiten ook in het spoor gezet worden zonder buitendienststelling.',
+                              text:
+                                  'Een uitzondering op de regeling van de railwegvoertuigen is het railvoertuig Incidentenbestrijding van ProRail. Deze mag bij calamiteiten ook in het spoor gezet worden zonder buitendienststelling.',
                             ),
                           ),
                         ],
@@ -118,7 +122,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle: 'Bergingsvoertuig ProRail IncidentenBestrijding',
+                              subtitle:
+                                  'Bergingsvoertuig ProRail IncidentenBestrijding',
                             ),
                           ),
                         ],
@@ -128,7 +133,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De bergingseenheid is een niet detecterend railwegvoertuig (vrachtwagen) met daarop een afzetcontainer, die door middel van een zogenaamde \'haakarm\' afgezet kan worden. zowel op de weg als op het spoor.',
+                              text:
+                                  'De bergingseenheid is een niet detecterend railwegvoertuig (vrachtwagen) met daarop een afzetcontainer, die door middel van een zogenaamde \'haakarm\' afgezet kan worden. zowel op de weg als op het spoor.',
                             ),
                           ),
                         ],
@@ -138,7 +144,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Het inzetten van het voertuig op de spoorinfra wordt uitgevoerd door de gereedschapsmachinist - hij kan de installatie vanuit de cabine zelf bedienen. Het inzetten van het railvoertuig duurt ongeveer een kwartier.',
+                              text:
+                                  'Het inzetten van het voertuig op de spoorinfra wordt uitgevoerd door de gereedschapsmachinist - hij kan de installatie vanuit de cabine zelf bedienen. Het inzetten van het railvoertuig duurt ongeveer een kwartier.',
                             ),
                           ),
                         ],
@@ -148,7 +155,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Rijden over spoor kan in beide richtingen: in de afzetcontainer wordt een bedieningsinrichting geplaatst, zodat de gereedschapsmachinist altijd vooruit tijdens het voertuig bedient.',
+                              text:
+                                  'Rijden over spoor kan in beide richtingen: in de afzetcontainer wordt een bedieningsinrichting geplaatst, zodat de gereedschapsmachinist altijd vooruit tijdens het voertuig bedient.',
                             ),
                           ),
                         ],
@@ -158,7 +166,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De bergingseenheid is gebouwd volgens de laatste inzichten op het gebied van arbo-regels. De inrichting is “logisch”  gemaakt, en er is een kleine verblijfsruimte om schrijfwerk en overleg comfortabel te kunnen doen.',
+                              text:
+                                  'De bergingseenheid is gebouwd volgens de laatste inzichten op het gebied van arbo-regels. De inrichting is “logisch”  gemaakt, en er is een kleine verblijfsruimte om schrijfwerk en overleg comfortabel te kunnen doen.',
                             ),
                           ),
                         ],
@@ -168,7 +177,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Bij herstelwerkzaamheden buiten de reddings- en bestrijdingsfase (dit wordt door de Algemeen Leider aangegeven) moeten alle sporen, dwz in-, uitzet-, verplaatsings- en bestemmingsspoor, beschikbaar gesteld zijn. Hiervoor gelden dezelfde procedures als bij werkzaamheden.',
+                              text:
+                                  'Bij herstelwerkzaamheden buiten de reddings- en bestrijdingsfase (dit wordt door de Algemeen Leider aangegeven) moeten alle sporen, dwz in-, uitzet-, verplaatsings- en bestemmingsspoor, beschikbaar gesteld zijn. Hiervoor gelden dezelfde procedures als bij werkzaamheden.',
                             ),
                           ),
                         ],
@@ -214,7 +224,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Een van de opties om bij gestrande treinen snel te kunnen wegslepen is de Unimog. De eerste zijn gestationeerd op de A2-corridor. De speciaal uitgeruste Mercedes-Benz Unimogs zijn in staat om over het spoor te rijden, gestrande treinen in een uur weg te halen en naar het dichtstbijzijnde station te brengen. Deze auto\'s kunnen gemakkelijk \'off-road\' rijden waarmee ze ook geschikt zijn om over onverharde wegen of weilanden naar het spoor te rijden. Eenmaal op het spoor geplaatst worden er speciale spoorwielen neergelaten waardoor de truck in een railvoertuig verandert.',
+                              text:
+                                  'Een van de opties om bij gestrande treinen snel te kunnen wegslepen is de Unimog. De eerste zijn gestationeerd op de A2-corridor. De speciaal uitgeruste Mercedes-Benz Unimogs zijn in staat om over het spoor te rijden, gestrande treinen in een uur weg te halen en naar het dichtstbijzijnde station te brengen. Deze auto\'s kunnen gemakkelijk \'off-road\' rijden waarmee ze ook geschikt zijn om over onverharde wegen of weilanden naar het spoor te rijden. Eenmaal op het spoor geplaatst worden er speciale spoorwielen neergelaten waardoor de truck in een railvoertuig verandert.',
                             ),
                           ),
                         ],
@@ -270,7 +281,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Multifunctioneel niet detecterend voertuig met:',
+                              text:
+                                  'Multifunctioneel niet detecterend voertuig met:',
                             ),
                           ),
                         ],
@@ -319,7 +331,7 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -335,7 +347,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Inzet op A2 corridor en (eventueel) toeleidende baanvakken;',
+                              text:
+                                  '- Inzet op A2 corridor en (eventueel) toeleidende baanvakken;',
                             ),
                           ),
                         ],
@@ -346,12 +359,13 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Strategische plaatsing op Shl, Ut en Ehv en 1 exemplaar voor opleiding/reserve.',
+                              text:
+                                  '- Strategische plaatsing op Shl, Ut en Ehv en 1 exemplaar voor opleiding/reserve.',
                             ),
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -367,7 +381,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Als extra mogelijkheid om mat af te slepen;',
+                              text:
+                                  '- Als extra mogelijkheid om mat af te slepen;',
                             ),
                           ),
                         ],
@@ -383,7 +398,7 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -399,7 +414,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Inzet Unimog met alleen verhinderingen TRDL en door plaatsing ZKL, of op WECO;',
+                              text:
+                                  '- Inzet Unimog met alleen verhinderingen TRDL en door plaatsing ZKL, of op WECO;',
                             ),
                           ),
                         ],
@@ -410,7 +426,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- AL beslist en overlegt met TRDL over inzet.',
+                              text:
+                                  '- AL beslist en overlegt met TRDL over inzet.',
                             ),
                           ),
                         ],
@@ -440,7 +457,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Een ander reddingsvoertuig dat gebruikt wordt op de Hogesnelheidslijn (HSL) is het zogenoemde secundair langstransport. In gewone mensentaal: een quadbike op spoorwielen met daarachter een aantal verrijdbare platformen.',
+                              text:
+                                  'Een ander reddingsvoertuig dat gebruikt wordt op de Hogesnelheidslijn (HSL) is het zogenoemde secundair langstransport. In gewone mensentaal: een quadbike op spoorwielen met daarachter een aantal verrijdbare platformen.',
                             ),
                           ),
                         ],
@@ -450,7 +468,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De quadbike wordt gebruikt als redmiddel als zich een ernstig ongeluk voordoet in de Groeneharttunnel, op het tracé van de HSL tussen Rotterdam en Amsterdam. Op het verste punt staat de trein op 26 meter diepte en drie kilometer van de dichtstbijzijnde nooduitgang. Als er dan gewonden zijn, komen de incidentbestrijders met een vrachtwagen waarin twee quads met ieder twee karretjes staan. Gewonde reizigers worden op de quads en de karretjes in veiligheid gebracht. Per karretje kunnen maximaal twee gewonden en een begeleider mee en op de quad passen nog eens drie mensen (inclusief bestuurder en begeleider). Dat betekent dat er per rit vijf gewonden naar de nooduitgang gebracht kunnen worden.',
+                              text:
+                                  'De quadbike wordt gebruikt als redmiddel als zich een ernstig ongeluk voordoet in de Groeneharttunnel, op het tracé van de HSL tussen Rotterdam en Amsterdam. Op het verste punt staat de trein op 26 meter diepte en drie kilometer van de dichtstbijzijnde nooduitgang. Als er dan gewonden zijn, komen de incidentbestrijders met een vrachtwagen waarin twee quads met ieder twee karretjes staan. Gewonde reizigers worden op de quads en de karretjes in veiligheid gebracht. Per karretje kunnen maximaal twee gewonden en een begeleider mee en op de quad passen nog eens drie mensen (inclusief bestuurder en begeleider). Dat betekent dat er per rit vijf gewonden naar de nooduitgang gebracht kunnen worden.',
                             ),
                           ),
                         ],
@@ -460,7 +479,8 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Overigens kunnen de quads ook elders worden ingezet. Denk bijvoorbeeld aan de Moerdijkbrug.',
+                              text:
+                                  'Overigens kunnen de quads ook elders worden ingezet. Denk bijvoorbeeld aan de Moerdijkbrug.',
                             ),
                           ),
                         ],
