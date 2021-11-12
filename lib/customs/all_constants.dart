@@ -3,13 +3,14 @@ import 'package:trdl_tool/all_imports.dart';
 /*Jungle Green color constant*/
 const kDarkGreen = 0xFF004E14;
 const kLightGreen = 0xFF738E7E;
+const kSecondaryGreen = 0xFF2F3E32;
 
 /*ProChat constants*/
 late String hintText;
 
 const kSendButtonTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
-  fontSize: 18.0,
+  fontSize: 24.0,
 );
 
 const kMessageTextFieldDecoration = InputDecoration(

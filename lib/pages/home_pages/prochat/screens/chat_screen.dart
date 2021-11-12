@@ -15,7 +15,6 @@ class _ChatScreenState extends State<ChatScreen> {
   final messageTextController = TextEditingController();
   final _auth = FirebaseAuth.instance;
   late String messageText;
-  bool showSpinner = false;
 
   @override
   void initState() {
@@ -40,21 +39,6 @@ class _ChatScreenState extends State<ChatScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        // actions: [
-        //   IconButton(
-        //     icon: const Icon(Icons.logout),
-        //     onPressed: () async {
-        //       setState(() {
-        //         showSpinner = true;
-        //       });
-        //       await _auth.signOut();
-        //       Navigator.pushReplacementNamed(context, 'login');
-        //       setState(() {
-        //         showSpinner = false;
-        //       });
-        //     },
-        //   ),
-        // ],
         title: const AppBarText(title: 'TRDLtool'),
       ),
       body: SafeArea(
@@ -87,7 +71,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       });
                     },
                     child: const Text(
-                      'Send',
+                      '✅',
                       style: kSendButtonTextStyle,
                     ),
                   ),
@@ -135,8 +119,8 @@ class MessagesStream extends StatelessWidget {
           child: ListView(
             reverse: true,
             padding: const EdgeInsets.symmetric(
-              horizontal: 10.0,
-              vertical: 10.0,
+              horizontal: 8.0,
+              vertical: 8.0,
             ),
             children: messageBubbles,
           ),
@@ -160,7 +144,7 @@ class MessageBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(8.0),
       child: Column(
         crossAxisAlignment:
             isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
@@ -172,28 +156,28 @@ class MessageBubble extends StatelessWidget {
             ),
           ),
           Material(
-            shadowColor: Colors.white60,
+            shadowColor: const Color(kSecondaryGreen),
             elevation: 6.0,
             borderRadius: BorderRadius.only(
               topLeft: isMe
-                  ? const Radius.circular(24.0)
-                  : const Radius.circular(0.0),
+                  ? const Radius.circular(12.0)
+                  : const Radius.circular(2.0),
               topRight: isMe
-                  ? const Radius.circular(0.0)
-                  : const Radius.circular(24.0),
-              bottomLeft: const Radius.circular(24.0),
-              bottomRight: const Radius.circular(24.0),
+                  ? const Radius.circular(2.0)
+                  : const Radius.circular(12.0),
+              bottomLeft: const Radius.circular(12.0),
+              bottomRight: const Radius.circular(12.0),
             ),
-            color: isMe ? const Color(0xFF0D4F18) : Colors.white60,
+            color: isMe ? const Color(kDarkGreen) : const Color(kLightGreen),
             child: Padding(
               padding: const EdgeInsets.symmetric(
-                horizontal: 20.0,
-                vertical: 10.0,
+                horizontal: 12.0,
+                vertical: 8.0,
               ),
               child: Text(
                 message,
                 style: TextStyle(
-                  fontSize: 18.0,
+                  fontSize: 16.0,
                   color: isMe ? Colors.white : Colors.black,
                 ),
               ),
