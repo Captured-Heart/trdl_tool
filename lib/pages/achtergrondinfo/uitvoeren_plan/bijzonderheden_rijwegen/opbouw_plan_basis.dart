@@ -553,7 +553,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '-   = Exact;',
+                              text: '- *Leeg* = Exact;',
                             ),
                           ),
                         ],
@@ -707,7 +707,17 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'K: VAN - Beginspoor (groen bij instelwijze hooggroen, oranje bij instelwijze integraal)',
+                              text: 'K: VAN - Beginspoor',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Groen bij instelwijze hooggroen, oranje bij instelwijze integraal.',
                             ),
                           ),
                         ],
@@ -717,7 +727,17 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'L: NAAR - Eindspoor (oranje bij Rijden Op Zicht)',
+                              text: 'L: NAAR - Eindspoor',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Oranje bij Rijden Op Zicht (ROZ).',
                             ),
                           ),
                         ],
@@ -808,7 +828,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'D.m.v. de knop "Bijz. heden" in de planmenubalk kan de volledige tekst worden bekeken.',
+                              text: 'D.m.v. de knop \'Bijz. heden\' in de planmenubalk kan de volledige tekst worden bekeken.',
                             ),
                           ),
                         ],
@@ -819,7 +839,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Standaard bijzonderheden - Bijzonderheden die aan een trein kunnen worden toegekend, gekozen uit een standaardlijst:',
+                              text: 'Standaard bijzonderheden zijn bijzonderheden die aan een trein kunnen worden toegekend, gekozen uit een standaardlijst:',
                             ),
                           ),
                         ],
@@ -853,6 +873,708 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text: '- LSP = LinkerSPoor.',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #4*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Opbouw planregel - mutatiescherm',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Je kunt de planregels vanuit het planscherm omzetten naar het mutatievenster, waar je wijzigingen kunt aanbrengen.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.of(context).size.width * 0.75,
+                            child: Image.asset(
+                              'assets/images/achtergrond/opbouwPlanregelMutatiescherm.png',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Ook hier is de logische opbouw van de planregel voortgezet:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Drglpt:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Dienstregelpunt.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Treinnr:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Trein- of rangeernummer (eventueel voorafgegaan door treinletters).',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Act:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Activiteitsoort.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Ptijd:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Plantijd.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Vtg:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Vertragingssoort en -duur.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Itijd:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Insteltijd.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- ROZ:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Rijden Op Zicht. In het planvenster (en in de historie) krijgt het NAAR-spoor een oranje kleur.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- I:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Instelwijze. Door op de \'I\' te klikken kan de instelwijze bij deze activiteit bekeken en/of gewijzigd worden. Met één van de tekens uit de reeks \'I, H, F, of 1 t/m 9\' kan de rijweg als volgt worden ingesteld:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- I = Integraal;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- H = Hoog groen met het voor dat PPLG geconfigureerde aantal seinstappen;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- F = Gefaseerd met het voor dat PPLG geconfigureerde aantal seinstappen;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- 1 t/m 9 = Gefaseerd met het aantal seinstappen aangegeven door het cijfer;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Als de instelwijze integraal is, zal het VAN-spoor oranje worden getoond in het plan- en historievenster;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Als de instelwijze \'Hoog groen\' is, zal het VAN-spoor in een heldere groene kleur worden getoond in het plan- en historievenster.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Van:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Beginspoor.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Naar:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Eindspoor.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- t/m:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Laatste bezette spoorfase. Dit is van belang voor de Spoorbezettingsgrafiek: bij een lange trein (meer dan één spoorfase bezet) geeft het \'Naar\' spoor de plaats aan waar de kop van de trein staat; het \'t/m\' spoor geeft de plaats aan waar het achterste deel van de trein staat.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- D:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Dwangrijwegnummer bij rijweginstelling via een afwijkende route. Staat er niets dan wordt de rijweg via de voorkeursroute ingesteld.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- K:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Klaarmelding. Door op \'K\' te klikken kan deze activiteit bekeken en/of gewijzigd worden.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- M:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Materieelrelatie. Door op \'M\' te klikken kan deze activiteit bekeken en/of gewijzigd worden. Indien er een aantal planregels zijn geselecteerd in het mutatievenster en er wordt op de \'M\' geklikt dan wordt er een voorstel getoond voor een nieuwe of gewijzigde materieelrelatie. Dit voorstel kan direct ingevoerd worden.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- B:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Bijzonderheid. Door op \'B\' te klikken kan deze activiteit bekeken en/of gewijzigd worden.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Stat:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Status activiteit:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Norm = Normaal;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- NB = Nader bericht trein;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Fac = Facultatieve trein;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Opgh = Opgeheven trein;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- S/D:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Stop/Door. Schakeling voor overweg (maximaal vijf).',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- H:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Herfstcriterium. Als hier een \'H\' ingevuld wordt, worden alle stop/doors in de stand door gezet.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- G:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Goederentreincriterium. Bij goederentreinen die door een tunnel moeten rijden, wordt hier een \'G\' ingevuld.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- D:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Dieseltractie-indicator. Bij dieseltreinen die op of naar een spoor zonder bovenleiding rijden wordt hier een \'D\' ingevuld.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- T:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Tractiecode:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* D = Diesel;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* E = Elektrisch;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Tk:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Treinkenmerk. De lijst toegestane treinkenmerken kan door de postbeheerder worden aangepast.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- S:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Samenstelling materieel. Door op \'S\' te klikken kan deze activiteit bekeken en/of gewijzigd worden. Samenstelling is op basis van jaarplan en kan afwijken van de actuele inzet. Wijzigingen worden alleen op de werkplek opgeslagen.',
                             ),
                           ),
                         ],
