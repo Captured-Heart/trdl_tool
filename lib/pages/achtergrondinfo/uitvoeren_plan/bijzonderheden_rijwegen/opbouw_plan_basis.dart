@@ -48,7 +48,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Drie manieren om een rijweg in te stellen',
+                              text: 'Er zijn drie manieren om een rijweg in te stellen:',
                             ),
                           ),
                         ],
@@ -117,7 +117,6 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -362,7 +361,6 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 100.0,
                             child: Image.asset(
                               'assets/images/achtergrond/opbouwPlanregelPlanscherm1.png',
                             ),
@@ -374,7 +372,6 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 100.0,
                             child: Image.asset(
                               'assets/images/achtergrond/opbouwPlanregelPlanscherm2.png',
                             ),
