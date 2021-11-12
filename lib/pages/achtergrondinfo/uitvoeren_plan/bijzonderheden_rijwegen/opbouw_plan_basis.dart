@@ -382,8 +382,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'A: Indicator',
+                            child: Text(
+                              'A: Indicator',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -422,8 +425,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'B: Treinnummer',
+                            child: Text(
+                              'B: Treinnummer',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -442,8 +448,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'C: Activiteitssoort',
+                            child: Text(
+                              'C: Activiteitssoort',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -502,8 +511,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'D: Rijwegvolgnummer',
+                            child: Text(
+                              'D: Rijwegvolgnummer',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -522,8 +534,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'E: Plantijdstip',
+                            child: Text(
+                              'E: Plantijdstip',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -542,8 +557,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'F: Vertragingssoort',
+                            child: Text(
+                              'F: Vertragingssoort',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -582,8 +600,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'G: Vertragingsduur',
+                            child: Text(
+                              'G: Vertragingsduur',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -602,8 +623,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'H: Dienstregelpunt',
+                            child: Text(
+                              'H: Dienstregelpunt',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -622,8 +646,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'I: Gepland insteltijdstip',
+                            child: Text(
+                              'I: Gepland insteltijdstip',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -642,8 +669,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'J: Instelwijze',
+                            child: Text(
+                              'J: Instelwijze',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -706,8 +736,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'K: VAN - Beginspoor',
+                            child: Text(
+                              'K: VAN - Beginspoor',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -726,8 +759,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'L: NAAR - Eindspoor',
+                            child: Text(
+                              'L: NAAR - Eindspoor',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -746,8 +782,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'M: Dwangrijwegnummer',
+                            child: Text(
+                              'M: Dwangrijwegnummer',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -766,8 +805,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'N: Klaarmeldingsindicator',
+                            child: Text(
+                              'N: Klaarmeldingsindicator',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -786,8 +828,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'O: Materieelrelatie-indicator',
+                            child: Text(
+                              'O: Materieelrelatie-indicator',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -806,8 +851,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'P: Bijzonderheden',
+                            child: Text(
+                              'P: Bijzonderheden',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -934,8 +982,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- Drglpt:',
+                            child: Text(
+                              '- Drglpt:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -956,8 +1007,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- Treinnr:',
+                            child: Text(
+                              '- Treinnr:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -978,8 +1032,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- Act:',
+                            child: Text(
+                              '- Act:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1000,8 +1057,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- Ptijd:',
+                            child: Text(
+                              '- Ptijd:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1022,8 +1082,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- Vtg:',
+                            child: Text(
+                              '- Vtg:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1044,8 +1107,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- Itijd:',
+                            child: Text(
+                              '- Itijd:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1066,8 +1132,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- ROZ:',
+                            child: Text(
+                              '- ROZ:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1088,8 +1157,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- I:',
+                            child: Text(
+                              '- I:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1182,8 +1254,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- Van:',
+                            child: Text(
+                              '- Van:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1204,8 +1279,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- Naar:',
+                            child: Text(
+                              '- Naar:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1226,8 +1304,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- t/m:',
+                            child: Text(
+                              '- t/m:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1248,8 +1329,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- D:',
+                            child: Text(
+                              '- D:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1270,8 +1354,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- K:',
+                            child: Text(
+                              '- K:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1292,8 +1379,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- M:',
+                            child: Text(
+                              '- M:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1314,8 +1404,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- B:',
+                            child: Text(
+                              '- B:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1336,8 +1429,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- Stat:',
+                            child: Text(
+                              '- Stat:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1406,8 +1502,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- S/D:',
+                            child: Text(
+                              '- S/D:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1428,8 +1527,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- H:',
+                            child: Text(
+                              '- H:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1450,8 +1552,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- G:',
+                            child: Text(
+                              '- G:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1472,8 +1577,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- D:',
+                            child: Text(
+                              '- D:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1494,8 +1602,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- T:',
+                            child: Text(
+                              '- T:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1540,8 +1651,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- Tk:',
+                            child: Text(
+                              '- Tk:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1562,8 +1676,11 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: BodyText(
-                              text: '- S:',
+                            child: Text(
+                              '- S:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
