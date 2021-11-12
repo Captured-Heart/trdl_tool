@@ -83,53 +83,50 @@ class _WelcomeScreen extends State<WelcomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 16.0),
-      child: Scaffold(
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerTop,
-        floatingActionButton: FloatingActionButton.extended(
-          onPressed: () {
-            Logger().wtf('User skips welcome_screen to login_screen.');
-            /*Used to skip or move on from welcome_screen to login_screen*/
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const Login(),
-              ),
-            );
-          },
-          label: const Text(
-            Strings.welcomeFAB,
-          ),
+    return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          Logger().wtf('User skips welcome_screen to login_screen.');
+          /*Used to skip or move on from welcome_screen to login_screen*/
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const Login(),
+            ),
+          );
+        },
+        label: const Text(
+          Strings.welcomeFAB,
         ),
-        body: Stack(
-          children: <Widget>[
-            PageView.builder(
-              controller: _pageViewController,
-              itemCount: slides.length,
-              itemBuilder: (BuildContext context, int index) {
-                _pageViewController.addListener(() {
-                  /*Swiping the welcome_screen.*/
-                  setState(() {
-                    currentPage = _pageViewController.page!;
-                  });
+      ),
+      body: Stack(
+        children: <Widget>[
+          PageView.builder(
+            controller: _pageViewController,
+            itemCount: slides.length,
+            itemBuilder: (BuildContext context, int index) {
+              _pageViewController.addListener(() {
+                /*Swiping the welcome_screen.*/
+                setState(() {
+                  currentPage = _pageViewController.page!;
                 });
-                return slides[index];
-              },
-            ),
-            Align(
-              alignment: Alignment.bottomCenter,
-              child: Container(
-                margin: const EdgeInsets.only(top: 70.0),
-                padding: const EdgeInsets.symmetric(vertical: 40.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: indicator(),
-                ),
+              });
+              return slides[index];
+            },
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              margin: const EdgeInsets.only(top: 70.0),
+              padding: const EdgeInsets.symmetric(vertical: 40.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: indicator(),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
