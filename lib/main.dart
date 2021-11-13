@@ -14,18 +14,20 @@ class MainEntry extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const FlexScheme chosenScheme = FlexScheme.jungle;
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Strings.mainTitle,
       /*APPTHEME*/
-      theme: FlexColorScheme.light(
-        scheme: FlexScheme.jungle,
+      theme: FlexThemeData.light(
+        scheme: chosenScheme,
         fontFamily: 'Questrial',
-      ).toTheme,
-      darkTheme: FlexColorScheme.dark(
-        scheme: FlexScheme.jungle,
+      ),
+      darkTheme: FlexThemeData.dark(
+        scheme: chosenScheme,
         fontFamily: 'Questrial',
-      ).toTheme,
+      ),
       themeMode: ThemeMode.system,
       /*LOAD SPLASH FIRST*/
       home: const SplashScreen(),
@@ -133,6 +135,7 @@ class MainEntry extends StatelessWidget {
         'bijzonderhedenrijwegenachtergrond': (context) => const BijzonderhedenRijwegenAchtergrond(),
         'inzettenrailvoertuigachtergrond': (context) => const InzettenRailvoertuigAchtergrond(),
         'rijwegenopbouwplanachtergrond': (context) => const OpbouwPlanBasisAchtergrond(),
+        'rijwegenwerkenmetplanachtergrond': (context) => const RijwegenPlanschermBasis(),
 
         /*PROQUIZ ROUTES*/
         'proquizmain': (context) => const ProQuiz(),

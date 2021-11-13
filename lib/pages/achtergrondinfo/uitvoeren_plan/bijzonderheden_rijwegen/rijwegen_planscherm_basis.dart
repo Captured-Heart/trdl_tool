@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class OpbouwPlanBasisAchtergrond extends StatelessWidget {
-  const OpbouwPlanBasisAchtergrond({Key? key}) : super(key: key);
+class RijwegenPlanschermBasis extends StatelessWidget {
+  const RijwegenPlanschermBasis({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: TitleText(
-                              title: 'Rijwegen - basisinformatie: plan(regel)opbouw',
+                              title: 'Rijwegen - basisinformatie: werken met het plan(scherm)',
                             ),
                           ),
                         ],
@@ -154,16 +154,6 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text: 'Om een trein van het ene naar het andere station te laten rijden, gebruik je een plan waarmee je een rijweg kan instellen. Het plan is een uitgebreidere versie van de dienstregeling waarin je alle informatie vindt die nodig is om een trein of rangeerbeweging via de juiste route en op de juiste tijd op de plaats van bestemming te krijgen. In dit deel van de achtergrondinformatie lees je alles over hoe het plan van een treindienstleider in elkaar zit, wat voor soorten rijwegen er zijn en hoe je een rijweg kunt instellen.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Een rijweg is het stuk spoor dat voor een trein beschikbaar wordt gesteld om van A naar B te komen.',
                             ),
                           ),
                         ],

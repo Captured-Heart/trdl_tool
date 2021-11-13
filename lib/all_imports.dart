@@ -140,7 +140,8 @@ export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_tr
 /*ACHTERGROND INFORMATIE BIJZONDERHEDEN RIJWEGEN PAGES*/
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/bijzonderheden_rijwegen.dart';
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/opbouw_plan_basis.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planopbouw_basis.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planscherm_basis.dart';
 
 /*ProQuiz pages*/
 export 'package:trdl_tool/pages/home_pages/proquiz/proquizmain.dart';
