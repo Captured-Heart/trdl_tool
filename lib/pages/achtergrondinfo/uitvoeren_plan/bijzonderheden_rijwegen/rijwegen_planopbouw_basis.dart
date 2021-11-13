@@ -163,16 +163,6 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Een rijweg is het stuk spoor dat voor een trein beschikbaar wordt gesteld om van A naar B te komen.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
                               text: 'De mogelijkheid tot verplaatsing wordt aangegeven tussen:',
                             ),
                           ),
