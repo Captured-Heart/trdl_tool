@@ -607,6 +607,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -827,7 +828,6 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -860,7 +860,6 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1028,7 +1027,6 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1092,7 +1090,6 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1112,8 +1109,10 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBoxH(),
                       Row(
                         children: const [
+                          SizedBoxW(),
                           Expanded(
                             child: BodyText(
                               text: '- De instelwijze wordt in de menubalk van het mutatievenster getoond als \'F\' (geFaseerd) of \'I\'(Integraal) onder de kop \'I\'. De Instelwijze wordt links van het \'van-spoor\' getoond. In het planvenster wordt het van-spoor altijd oranje getoond als de instelwijze Integraal is, ongeacht of ARI wel of niet aan staat voor de planregel en/of de insteltijd is verstreken. Ook in het historievenster wordt bij een Integrale instelwijze het van-spoor oranje getoond.',
@@ -1131,6 +1130,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1141,6 +1141,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
+                      SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1165,7 +1166,6 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
                       Row(
                         children: [
                           Expanded(
@@ -1245,7 +1245,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: Text(
-                              'De trein kan vanwege een beter seinbeeld met een hogere snelheid het emplacement binnen rijden;',
+                              '- De trein kan vanwege een beter seinbeeld met een hogere snelheid het emplacement binnen rijden;',
                             ),
                           ),
                         ],
@@ -1256,7 +1256,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: Text(
-                              'Na het uit- en instappen van de reizigers kan de HC direct het vertrekproces starten (stationnementduur is niet langer dan noodzakelijk).',
+                              '- Na het uit- en instappen van de reizigers kan de HC direct het vertrekproces starten (stationnementduur is niet langer dan noodzakelijk).',
                             ),
                           ),
                         ],
@@ -1541,7 +1541,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: '- N.B.: Wordt een samengestelde ROZ-rijweg via het bedienscherm ingegeven, dan zijn alle seinstappen ROZ.',
+                              text: 'N.B.: Wordt een samengestelde ROZ-rijweg via het bedienscherm ingegeven, dan zijn alle seinstappen ROZ.',
                             ),
                           ),
                         ],
