@@ -200,7 +200,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -225,7 +225,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -260,7 +260,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -271,7 +271,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -282,7 +282,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -293,7 +293,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -304,7 +304,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -335,7 +335,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -345,7 +345,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -355,7 +355,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -366,7 +366,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -377,7 +377,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -388,7 +388,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -399,7 +399,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -410,7 +410,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -420,7 +420,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -430,7 +430,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -440,7 +440,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -481,7 +481,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -491,7 +491,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -501,7 +501,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -511,7 +511,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -521,7 +521,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -564,7 +564,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -607,7 +607,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -617,7 +617,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -659,7 +659,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -669,7 +669,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -731,7 +731,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -741,7 +741,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -773,7 +773,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -837,7 +837,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -869,7 +869,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -879,7 +879,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -900,7 +900,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -910,7 +910,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -931,7 +931,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -941,7 +941,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -951,7 +951,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -961,7 +961,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -972,7 +972,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -1004,7 +1004,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1036,7 +1036,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1046,7 +1046,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1056,7 +1056,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1066,7 +1066,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1099,7 +1099,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1109,7 +1109,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1120,7 +1120,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1130,7 +1130,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1141,7 +1141,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1167,7 +1167,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: Text(
                               'Wanneer de instelwijze H (Hoog Groen) gebruikt wordt voor een planregel met een vertrekactiviteit geeft dat aan ARI de eis/werking dat de bij een aankomstregel behorende vertrekregel ingesteld wordt op basis van triggering door eindseinreservering, met andere woorden: zodra de aankomstregel is ingesteld (sein hoeft dan nog niet uit de stand stop te zijn, de reservering binnen PRL is voldoende) kan ARI de vertrekregel in behandeling nemen. Gecontroleerd wordt of de uit te voeren instelling ook op basis van de juiste trein is (nummer wordt door ARI teruggezocht in de ingestelde route en gecontroleerd). Wordt het juiste treinnummer gevonden, dan wordt de vertrekregel door ARI ingesteld. Bij de instelwijze H zal geen tijd- of wachtvenster actief zijn, het instelmoment is immers gekoppeld aan het tijdvenster van de aankomstregel.',
@@ -1175,9 +1175,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: Text(
                               'Voorwaarden voor de functionaliteit Hoog Groen:',
@@ -1185,9 +1185,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: Text(
@@ -1196,9 +1196,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: Text(
@@ -1207,9 +1207,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: Text(
@@ -1218,9 +1218,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: Text(
@@ -1229,9 +1229,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: Text(
                               'De tijdwinst is te behalen op 2 fronten:',
@@ -1239,9 +1239,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: Text(
@@ -1250,9 +1250,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           SizedBoxW(),
                           Expanded(
                             child: Text(
@@ -1261,9 +1261,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: Text(
                               'De instelwijze \'H\' is in het procesplan herkenbaar doordat het van-spoor van de vertrekregel \'Hoog Groen\' is gekleurd.',
@@ -1271,7 +1271,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -1283,7 +1283,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -1296,7 +1296,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         ],
                       ),
                       Row(
-                        children: [
+                        children: const [
                           Expanded(
                             child: Text(
                               'Ook in het historievenster is achteraf nog te zien welke instelwijze voor de vertrekregel gold.',
@@ -1304,7 +1304,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -1325,7 +1325,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1335,7 +1335,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1345,7 +1345,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -1366,7 +1366,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -1387,7 +1387,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1398,7 +1398,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1409,7 +1409,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1420,7 +1420,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1451,7 +1451,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1461,7 +1461,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1472,7 +1472,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1483,7 +1483,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1494,7 +1494,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1505,7 +1505,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1516,7 +1516,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1526,7 +1526,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1536,7 +1536,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1566,7 +1566,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1576,7 +1576,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1586,7 +1586,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1597,7 +1597,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1608,7 +1608,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1619,7 +1619,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1649,7 +1649,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1659,7 +1659,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1670,7 +1670,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1681,7 +1681,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1692,7 +1692,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1702,7 +1702,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1712,7 +1712,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1722,7 +1722,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1732,7 +1732,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1743,7 +1743,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1754,7 +1754,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1765,7 +1765,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBoxH(),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
