@@ -38,7 +38,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: '​​​​​​​Procesleiding kent een mogelijkheid om rijwegen automatisch in te stellen: automatische rijweg instelling of de afkorting ARI. ARI is software dat op iedere treindienstleider werkplek draait. Je kunt ervoor kiezen om ARI aan of uit te zetten. Als de software “vastloopt” kun je die vanaf een andere computer, de PBH++ (Post Beheer Systeem), uitzetten. Om de software daarna opnieuw op te starten, heb je hulp van buitenaf nodig.',
+                              text: '​​​​​​​Procesleiding kent een mogelijkheid om rijwegen automatisch in te stellen: automatische rijweg instelling of de afkorting ARI. ARI is software dat op iedere treindienstleider werkplek draait. Je kunt ervoor kiezen om ARI aan of uit te zetten. Als de software \'vastloopt\' kun je die vanaf een andere computer, de PBH++ (Post Beheer Systeem), uitzetten. Om de software daarna opnieuw op te starten, heb je hulp van buitenaf nodig.',
                             ),
                           ),
                         ],
@@ -100,8 +100,8 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Toen procesleiding begin jaren \'90 werd geïntroduceerd, werkte ARI nog niet perfect, maar in de loop van de jaren is ARI steeds slimmer geworden.',
+                            child: BodyText(
+                              text: 'Toen procesleiding begin jaren \'90 werd geïntroduceerd, werkte ARI nog niet perfect, maar in de loop van de jaren is ARI steeds slimmer geworden.',
                             ),
                           ),
                         ],
@@ -393,7 +393,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Het ARI-wachtvenster zorgt ervoor dat ARI een bepaald aantal minuten blijft zoeken naar het juiste treinnummer op een spoor. Er kan per PPLG gekozen worden voor een tijd van 0 en +15 minuten. De instelling van het wachtvenster kan niet door jou gekozen worden, maar wordt door de functioneel beheerder in de PBH++ ingesteld. De meeste wachtvensterinstellingen zijn op 3 minuten geconfigureerd. Het wachtvenster geldt voor rijwegen op een emplacement met een R of V-activiteit.',
+                              text: 'Het ARI-wachtvenster zorgt ervoor dat ARI een bepaald aantal minuten blijft zoeken naar het juiste treinnummer op een spoor. Er kan per PPLG gekozen worden voor een tijd van 0 en +15 minuten. De instelling van het wachtvenster kan niet door jou gekozen worden, maar wordt door de functioneel beheerder in de PBH++ ingesteld. De meeste wachtvensterinstellingen zijn op 3 minuten geconfigureerd. Het wachtvenster geldt voor rijwegen op een emplacement met een R- of V-activiteit.',
                             ),
                           ),
                         ],
@@ -723,6 +723,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1026,6 +1027,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           SizedBoxW(),
@@ -1084,7 +1086,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Waarschuwing - Instellen rijwegen - ARI stelt ROZ-planregel: ...1 niet in, omdat ...2',
+                              text: 'Waarschuwing - Instellen rijwegen - ARI stelt ROZ-planregel: ...1 niet in, omdat ...2.',
                             ),
                           ),
                         ],
@@ -1208,6 +1210,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1217,7 +1220,6 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBoxH(),
                     ],
                   ),
                 ),
@@ -1270,6 +1272,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1334,6 +1337,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1413,6 +1417,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         children: const [
                           Expanded(
@@ -1422,7 +1427,6 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      const SizedBoxH(),
                     ],
                   ),
                 ),
