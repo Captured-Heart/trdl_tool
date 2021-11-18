@@ -136,6 +136,7 @@ class MainEntry extends StatelessWidget {
         'inzettenrailvoertuigachtergrond': (context) => const InzettenRailvoertuigAchtergrond(),
         'rijwegenopbouwplanachtergrond': (context) => const OpbouwPlanBasisAchtergrond(),
         'rijwegenwerkenmetplanachtergrond': (context) => const RijwegenPlanschermBasis(),
+        'rijwegenariachtergrond': (context) => const RijwegenARIAchtergrond(),
 
         /*PROQUIZ ROUTES*/
         'proquizmain': (context) => const ProQuiz(),
