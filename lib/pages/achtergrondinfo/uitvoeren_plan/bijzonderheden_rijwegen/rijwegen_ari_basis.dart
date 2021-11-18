@@ -1284,7 +1284,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: Text(
-                              text: 'Deadlock preventie',
+                              'Deadlock preventie',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -1348,7 +1348,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: Text(
-                              text: 'Deadlocks en handmatige rijweginstelling',
+                              'Deadlocks en handmatige rijweginstelling',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -1383,7 +1383,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: Text(
-                              text: 'Deadlockpreventie en verhinderingen',
+                              'Deadlockpreventie en verhinderingen',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -1468,7 +1468,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: Text(
-                              text: 'LKT-controles',
+                              'LKT-controles',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -1556,7 +1556,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: Text(
-                              text: 'Spoorbezettingsgrafiek',
+                              'Spoorbezettingsgrafiek',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -1610,7 +1610,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: Text(
-                              text: 'Wat is een instelvoorschrift',
+                              'Wat is een instelvoorschrift',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -1633,7 +1633,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: Text(
-                              text: 'Hoe worden instelvoorschriften geconfigureerd',
+                              'Hoe worden instelvoorschriften geconfigureerd',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -1701,7 +1701,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: Text(
-                              text: 'Voorbeelden:',
+                              'Voorbeelden:',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -1957,7 +1957,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: Text(
-                              text: 'Handelingen in de PBH++:',
+                              'Handelingen in de PBH++:',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
