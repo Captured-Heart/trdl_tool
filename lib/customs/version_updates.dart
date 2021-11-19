@@ -15,7 +15,7 @@ Future<bool> showVersionUpdatePopup(context) async {
                 children: const [
                   Expanded(
                     child: Text(
-                      'De huidige versie is 0.0.7',
+                      'De huidige versie is 0.0.8',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
