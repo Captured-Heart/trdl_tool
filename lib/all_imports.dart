@@ -1,4 +1,5 @@
 /*Flutter packages*/
+export 'package:flutter_native_splash/flutter_native_splash.dart';
 export 'package:flutter/material.dart';
 export 'package:flutter/painting.dart';
 export 'package:flutter/services.dart';
@@ -28,6 +29,7 @@ export 'package:trdl_tool/customs/all_constants.dart';
 export 'package:trdl_tool/customs/exit_popup.dart';
 export 'package:trdl_tool/customs/logout_popup.dart';
 export 'package:trdl_tool/customs/quizfinish_popup.dart';
+export 'package:trdl_tool/customs/version_updates.dart';
 export 'package:trdl_tool/customs/nav_button.dart';
 export 'package:trdl_tool/customs/avatar_menu.dart';
 

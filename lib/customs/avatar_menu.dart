@@ -62,7 +62,7 @@ class DrawerWidget extends StatelessWidget {
                   child: CircleAvatar(
                     child: Icon(
                       Icons.person,
-                      size: 48.0,
+                      size: 78.0,
                     ),
                   ),
                 ),
@@ -82,6 +82,15 @@ class DrawerWidget extends StatelessWidget {
                   ),
                   onTap: () {
                     showLogOutPopup(context);
+                  },
+                ),
+                ListTile(
+                  title: const Text(
+                    'Versie & Updates',
+                    textAlign: TextAlign.center,
+                  ),
+                  onTap: () {
+                    showVersionUpdatePopup(context);
                   },
                 ),
               ],
