@@ -36,7 +36,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
                         item['header'],
                         style: const TextStyle(
                           fontSize: 50.0,
-                          color: Color(0xFF0D4F18),
+                          color: Color(kDarkGreen),
                         ),
                       ),
                       Text(

@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-Future<bool> finishQuizPopup(context) async {
-  return await showDialog(
+finishQuizPopup(context) {
+  return showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
@@ -15,6 +15,7 @@ Future<bool> finishQuizPopup(context) async {
                 children: [
                   Expanded(
                     child: Text(
+                      /*GET ANSWER VARIABLES AND SHOW HERE*/
                       'Je had $correctAmount antwoorden goed en $wrongAmount antwoorden fout. Je eindscore is',
                       textAlign: TextAlign.center,
                       style: const TextStyle(
@@ -61,12 +62,14 @@ Future<bool> finishQuizPopup(context) async {
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        /*User selected YES*/
+                        /*USER SELECTED YES*/
                         correctAmount = 0;
                         wrongAmount = 0;
                         accumulatedPoints = 0;
                         doubleScorePercentage = 0.0;
-                        Navigator.of(context).pop();
+                        Navigator.of(context).pushReplacementNamed(
+                          'proquizmain',
+                        );
                       },
                       child: const Text(
                         'Ja',
@@ -82,7 +85,7 @@ Future<bool> finishQuizPopup(context) async {
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        /*User selected NO*/
+                        /*USER SELECTED NO*/
                         Navigator.pushReplacementNamed(
                           context,
                           'homescreen',

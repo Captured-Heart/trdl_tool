@@ -16,22 +16,34 @@ class BottomNavigationScreen extends StatefulWidget {
   State<BottomNavigationScreen> createState() => _BottomNavigationScreenState();
 }
 
-/*This is the private State class that goes with BottomNavigationScreen*/
 class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int _selectedIndex = 0;
-  static final List<Widget> _widgetOptions = <Widget>[
-    /*Find these in home_pages folder*/
-    const HomeIndex0(),
-    const HomeIndex1(),
-    const HomeIndex2(),
-    const HomeIndex3(),
-  ];
+  late PageController _pageController;
 
   void _onItemTapped(int index) {
     setState(() {
-      /*On tap index is changed and new HomeIndex is shown*/
       _selectedIndex = index;
+      /*SET CURVE TO CHOOSE ANIMATION STYLE*/
+      _pageController.animateToPage(
+        index,
+        duration: const Duration(
+          seconds: 2,
+        ),
+        curve: Curves.easeInOutCubicEmphasized,
+      );
     });
+  }
+
+  @override
+  void initState() {
+    _pageController = PageController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 
   @override
@@ -43,8 +55,42 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
         );
       },
       child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          leading: Padding(
+            padding: const EdgeInsets.only(
+              left: 4.0,
+              bottom: 4.0,
+            ),
+            child: CircleAvatar(
+              child: IconButton(
+                icon: const Icon(
+                  Icons.person,
+                ),
+                onPressed: () {
+                  showAvatarPopup(context);
+                },
+              ),
+            ),
+          ),
+          title: const AppBarText(title: 'TRDLtool'),
+          actions: const [
+            LogOutButton(),
+          ],
+        ),
         body: Center(
-          child: _widgetOptions.elementAt(_selectedIndex),
+          child: PageView(
+            controller: _pageController,
+            onPageChanged: (index) {
+              setState(() => _selectedIndex = index);
+            },
+            children: const [
+              HomeIndex0(),
+              HomeIndex1(),
+              HomeIndex2(),
+              HomeIndex3(),
+            ],
+          ),
         ),
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
@@ -76,6 +122,9 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           ],
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
+          selectedIconTheme: const IconThemeData(
+            size: 32.0,
+          ),
         ),
       ),
     );

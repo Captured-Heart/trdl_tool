@@ -59,7 +59,6 @@ class _RegisterState extends State<Register> {
                                   email = value;
                                 },
                                 decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
                                   labelText: Strings.registerEmail,
                                   hintText: Strings.registerEmailHint,
                                 ),
@@ -71,7 +70,7 @@ class _RegisterState extends State<Register> {
                         Row(
                           children: [
                             Expanded(
-                              /*ENTER PASSWORD*/
+                              /*PASSWORD TEXTFIELD*/
                               child: TextField(
                                 textAlign: TextAlign.center,
                                 onChanged: (value) {
@@ -79,7 +78,6 @@ class _RegisterState extends State<Register> {
                                 },
                                 obscureText: true,
                                 decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
                                   labelText: Strings.registerPassword,
                                   hintText: Strings.registerPasswordHint,
                                 ),
@@ -91,7 +89,7 @@ class _RegisterState extends State<Register> {
                         Row(
                           children: [
                             Expanded(
-                              /*CHECK PASSWORD*/
+                              /*CHECK PASSWORD TEXTFIELD*/
                               child: TextField(
                                 textAlign: TextAlign.center,
                                 onChanged: (value) {
@@ -99,7 +97,6 @@ class _RegisterState extends State<Register> {
                                 },
                                 obscureText: true,
                                 decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
                                   labelText: Strings.registerPasswordCheck,
                                   hintText: Strings.registerPasswordHintCheck,
                                 ),
@@ -113,6 +110,7 @@ class _RegisterState extends State<Register> {
                           children: [
                             ElevatedButton(
                               onPressed: () async {
+                                /*SUPERUSER ACCOUNT*/
                                 if (email.contains('plotsklapps@gmail.com')) {
                                   await _auth.createUserWithEmailAndPassword(
                                     email: email,
@@ -123,27 +121,27 @@ class _RegisterState extends State<Register> {
                                     'verifyscreen',
                                   );
                                 }
-                                /*Check if email is empty OR does NOT contain @prorail.nl*/
+                                /*CHECK IF EMAIL IS EMPTY OR NOT PRORAIL*/
                                 else if (email.isEmpty ||
                                     !email.contains('@prorail.nl')) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarRegisterEmailWrong,
                                   );
                                 }
-                                /*Check if password length is >= 6 for Firebase*/
+                                /*CHECK PASSWORD LENGTH > 6 FOR FIREBASE*/
                                 else if (password1.length < 6) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarRegisterPasswordShort,
                                   );
                                 }
-                                /*Check if passwords are equal*/
+                                /*CHECK PASSWORD ARE THE SAME*/
                                 else if (password1 != password2) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarRegisterPasswordNotEqual,
                                   );
                                 } else {
                                   try {
-                                    /*Create user and go to verify_screen*/
+                                    /*CREATE USER AND GO TO VERIFY_SCREEN*/
                                     await _auth.createUserWithEmailAndPassword(
                                       email: email,
                                       password: password1,
@@ -153,7 +151,7 @@ class _RegisterState extends State<Register> {
                                       'verifyscreen',
                                     );
                                   }
-                                  /*Catch all other errors and show snack with error*/
+                                  /*CATCH ALL OTHER ERRORS*/
                                   catch (errorMessage) {
                                     Logger().wtf(
                                       'Er is iets misgegaan: $errorMessage',
@@ -179,13 +177,6 @@ class _RegisterState extends State<Register> {
                                 'REGISTREER',
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                    12.0,
-                                  ),
-                                ),
-                              ),
                             ),
                           ],
                         ),
@@ -200,7 +191,7 @@ class _RegisterState extends State<Register> {
                 children: [
                   TextButton(
                     onPressed: () {
-                      /*Back to login*/
+                      /*BACK TO LOGIN_SCREEN*/
                       Navigator.pushNamed(context, 'login');
                     },
                     child: const Text(

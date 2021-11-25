@@ -2,8 +2,8 @@ import 'package:trdl_tool/all_imports.dart';
 
 final _auth = FirebaseAuth.instance;
 
-Future<bool> showLogOutPopup(context) async {
-  return await showDialog(
+showLogOutPopup(context) {
+  return showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(

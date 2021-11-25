@@ -49,7 +49,7 @@ class _LoginState extends State<Login> {
                         Row(
                           children: [
                             Expanded(
-                              /*Email Textfield*/
+                              /*EMAIL TEXTFIELD*/
                               child: TextField(
                                 keyboardType: TextInputType.emailAddress,
                                 textAlign: TextAlign.center,
@@ -57,7 +57,6 @@ class _LoginState extends State<Login> {
                                   email = value;
                                 },
                                 decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
                                   labelText: Strings.loginEmail,
                                   hintText: Strings.loginEmailHint,
                                 ),
@@ -69,7 +68,7 @@ class _LoginState extends State<Login> {
                         Row(
                           children: [
                             Expanded(
-                              /*Password Textfield*/
+                              /*PASSWORD TEXTFIELD*/
                               child: TextField(
                                 textAlign: TextAlign.center,
                                 onChanged: (value) {
@@ -77,7 +76,6 @@ class _LoginState extends State<Login> {
                                 },
                                 obscureText: true,
                                 decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
                                   labelText: Strings.loginPassword,
                                   hintText: Strings.loginPasswordHint,
                                 ),
@@ -92,12 +90,12 @@ class _LoginState extends State<Login> {
                             ElevatedButton(
                               onPressed: () async {
                                 try {
-                                  /*Sign in*/
+                                  /*SING IN METHOD*/
                                   await _auth.signInWithEmailAndPassword(
                                     email: email,
                                     password: password,
                                   );
-                                  /*If user clicked verification mail*/
+                                  /*IF USER CLICKED VERIFICATION EMAIL*/
                                   if (_auth.currentUser!.emailVerified) {
                                     Logger().wtf(
                                       'Gebruiker heeft netjes zijn emailadres geverifieerd.',
@@ -107,7 +105,7 @@ class _LoginState extends State<Login> {
                                       'homescreen',
                                     );
                                   }
-                                  /*If user did NOT click verification mail*/
+                                  /*IF USER DID NOT CLICK VERIFICATION EMAIL*/
                                   else if (!_auth.currentUser!.emailVerified) {
                                     Logger().wtf(
                                       'Gebruiker heeft zijn emailadres nog niet geverifieerd.',
@@ -116,7 +114,7 @@ class _LoginState extends State<Login> {
                                       snackBarLoginEmailVerificatie,
                                     );
                                   }
-                                  /*All other error situations*/
+                                  /*ALL OTHER ERROR SITUATIONS*/
                                 } catch (e) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarLoginErIsIetsMis,
@@ -126,13 +124,6 @@ class _LoginState extends State<Login> {
                               child: const Text(
                                 'LOGIN',
                                 style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                    12.0,
-                                  ),
-                                ),
                               ),
                             ),
                           ],
@@ -148,7 +139,7 @@ class _LoginState extends State<Login> {
                 children: [
                   TextButton(
                     onPressed: () {
-                      /*Go to register_screen*/
+                      /*GO TO REGISTER_SCREEN*/
                       Navigator.pushNamed(
                         context,
                         'register',
@@ -168,7 +159,7 @@ class _LoginState extends State<Login> {
                 children: [
                   TextButton(
                     onPressed: () {
-                      /*Go to wachtwoord_screen*/
+                      /*GO TO WACHTWOORD_SCREEN*/
                       Navigator.pushNamed(
                         context,
                         'wachtwoordscreen',

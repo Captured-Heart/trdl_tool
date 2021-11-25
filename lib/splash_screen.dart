@@ -10,15 +10,17 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  late Timer timer;
+
   @override
-  Widget build(BuildContext context) {
-    /*Check if user is already signed in*/
+  void initState() {
+    /*USER IS KNOWN => HOME_SCREEN*/
     if (alreadySignedInUser != null) {
       Logger().wtf(
         'User is known and logged in, go to home_screen.',
       );
-      Timer(
-        /*Set timer duration to ... seconds*/
+      timer = Timer(
+        /*SET TIMER TO ... SECONDS*/
         const Duration(seconds: 3),
         () => Navigator.pushReplacement(
           context,
@@ -28,12 +30,12 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       );
     }
-    /*Go to welcome_screen, user is unknown*/
+    /*USER IS UNKNOWN => WELCOME_SCREEN*/
     else {
       Logger().wtf(
         'User is unknown or new, go to welcome_screen. Timer takes 3 seconds.',
       );
-      Timer(
+      timer = Timer(
         const Duration(seconds: 3),
         () => Navigator.pushReplacement(
           context,
@@ -43,7 +45,18 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       );
     }
+    super.initState();
+  }
 
+  @override
+  /*KILL TIMER*/
+  void dispose() {
+    timer.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Column(
@@ -61,7 +74,7 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 24.0,
             ),
             const SpinKitDoubleBounce(
-              /*Show a spinner, duration endless*/
+              /*SPINNER DURATION ENDLESS*/
               color: Color(kDarkGreen),
               size: 100.0,
             ),

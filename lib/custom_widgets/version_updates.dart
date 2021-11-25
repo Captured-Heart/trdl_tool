@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-Future<bool> showVersionUpdatePopup(context) async {
-  return await showDialog(
+showVersionUpdatePopup(context) {
+  return showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
@@ -16,7 +16,20 @@ Future<bool> showVersionUpdatePopup(context) async {
                   children: const [
                     Expanded(
                       child: Text(
-                        'De huidige versie is 0.0.8',
+                        'De huidige versie is 0.0.9',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2021-11-25: 0.0.9\n - Material You design toegepast\n - Navigatie beginscherm aangepast naar swipe\n - UX/UI tweaks',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),

@@ -51,7 +51,7 @@ class _WachtwoordState extends State<Wachtwoord> {
                         Row(
                           children: [
                             Expanded(
-                              /*Email Textfield*/
+                              /*EMAIL TEXTFIELD*/
                               child: TextField(
                                 keyboardType: TextInputType.emailAddress,
                                 textAlign: TextAlign.center,
@@ -59,7 +59,6 @@ class _WachtwoordState extends State<Wachtwoord> {
                                   email = value;
                                 },
                                 decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
                                   labelText: 'Emailadres',
                                   hintText:
                                       'Vul een geldig @prorail.nl emailadres in',
@@ -75,7 +74,7 @@ class _WachtwoordState extends State<Wachtwoord> {
                             ElevatedButton(
                               onPressed: () {
                                 try {
-                                  /*Send password reset link*/
+                                  /*SEND PASSWORD RESETLINK*/
                                   Logger().wtf(
                                     'Password reset mail sent to $email',
                                   );
@@ -88,7 +87,7 @@ class _WachtwoordState extends State<Wachtwoord> {
                                     'login',
                                   );
                                 }
-                                /*Catch all errors and show in snack*/
+                                /*CATCH ALL OTHER ERRORS*/
                                 catch (errorMessage) {
                                   Logger().wtf('Er is iets mis: $errorMessage');
                                   ScaffoldMessenger.of(context).showSnackBar(
@@ -99,13 +98,6 @@ class _WachtwoordState extends State<Wachtwoord> {
                               child: const Text(
                                 'RESET',
                                 style: TextStyle(fontWeight: FontWeight.bold),
-                              ),
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(
-                                    12.0,
-                                  ),
-                                ),
                               ),
                             ),
                           ],
@@ -121,6 +113,7 @@ class _WachtwoordState extends State<Wachtwoord> {
                 children: [
                   TextButton(
                     onPressed: () {
+                      /*BACK TO LOGIN_SCREEN*/
                       Navigator.pushReplacementNamed(context, 'login');
                     },
                     child: const Text(

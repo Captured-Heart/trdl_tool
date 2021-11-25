@@ -3,7 +3,7 @@ description: TRDLtool
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 0.0.8+8
+version: 0.0.9+9
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -37,7 +37,6 @@ flutter_native_splash:
   image_dark: assets/images/plotsklappsIconBlack400x400.png
   android: true
   ios: true
-
   fullscreen: true
 
 flutter:
@@ -55,8 +54,3 @@ flutter:
     - assets/images/achtergrond/treinen/rijtuigen/
     - assets/images/achtergrond/treinen/onderhouds_machines/
     - assets/images/achtergrond/treinen/railweg_voertuigen/
-
-  fonts:
-    - family: Questrial
-      fonts:
-        - asset: assets/fonts/Questrial-Regular.ttf

@@ -47,12 +47,15 @@ class _ChatScreenState extends State<ChatScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             const MessagesStream(),
-            Container(
-              decoration: kMessageContainerDecoration,
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      left: 8.0,
+                      bottom: 8.0,
+                    ),
                     child: TextField(
                       controller: messageTextController,
                       onChanged: (value) {
@@ -61,22 +64,22 @@ class _ChatScreenState extends State<ChatScreen> {
                       decoration: kMessageTextFieldDecoration,
                     ),
                   ),
-                  TextButton(
-                    onPressed: () async {
-                      messageTextController.clear();
-                      await _firestore.collection('messages').add({
-                        'sender': loggedInUser.email,
-                        'text': messageText,
-                        'timestamp': FieldValue.serverTimestamp(),
-                      });
-                    },
-                    child: const Text(
-                      '✅',
-                      style: kSendButtonTextStyle,
-                    ),
+                ),
+                TextButton(
+                  onPressed: () async {
+                    messageTextController.clear();
+                    await _firestore.collection('messages').add({
+                      'sender': loggedInUser.email,
+                      'text': messageText,
+                      'timestamp': FieldValue.serverTimestamp(),
+                    });
+                  },
+                  child: const Text(
+                    '✅',
+                    style: kSendButtonTextStyle,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),

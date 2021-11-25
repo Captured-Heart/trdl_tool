@@ -11,7 +11,7 @@ int correctAmount = 0;
 int wrongAmount = 0;
 int accumulatedPoints = 0;
 double doubleScorePercentage = 0;
-late String scorePercentage;
+String scorePercentage = '';
 Timer? timer;
 
 class ProQuizScreen extends StatefulWidget {
@@ -21,7 +21,7 @@ class ProQuizScreen extends StatefulWidget {
 }
 
 class _ProQuizScreenState extends State<ProQuizScreen> {
-  /*Every quiz needs a timer, right?*/
+  /*SET TIMER*/
   void startTimer() {
     timer = Timer.periodic(
       const Duration(
@@ -46,21 +46,21 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
     );
   }
 
-  /*Cancels timer to preserve resources*/
+  /*KILL TIMER*/
   @override
   void dispose() {
     timer!.cancel();
     super.dispose();
   }
 
-  /*List for scoreKeeper*/
+  /*SCOREKEEPER LIST*/
   List<Widget> scoreKeeper = [
     const Icon(
       Icons.mediation_outlined,
     ),
   ];
 
-  /*Check the answer, fill the scoreKeeper and go to next question*/
+  /*CHECK THE ANSWER, FILL THE SCOREKEEPER AND GO TO NEXQUESTION*/
   void checkAnswer(bool userPickedAnswer) {
     bool correctAnswer =
         QuestionBank().questionBank[questionNumber].questionAnswer;
@@ -88,14 +88,14 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
     });
   }
 
-  /*Next question is from shuffled questionBank List, then adds +1*/
+  /*NEXT QUESTION IS FROM SHUFFLED QUESTIONBANK LIST, THEN ADDS +1*/
   void nextQuestion() {
     Random randomNumber = Random();
     questionNumber =
         randomNumber.nextInt(QuestionBank().questionBank.length - 1) + 1;
   }
 
-  /*Resets quiz and empties scoreKeeper*/
+  /*RESETS QUIZ, CANCELS TIMER, CREATES POPUP, RESETS VARIABLES TO STARTING POSITION*/
   void quizReset() {
     timer!.cancel();
     lastTenSeconds = false;
@@ -111,7 +111,7 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
     ];
   }
 
-  /*Take this score to the quizfinish_popup*/
+  /*TAKE THIS SCORE TO THE POPUP*/
   String calculateScore() {
     accumulatedPoints = correctAmount - (wrongAmount * 2);
     if (accumulatedPoints <= 0 && accumulatedPoints <= 10) {
@@ -128,6 +128,7 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
+        /*PRESSING BACK ON PHONE SHOULD RESET QUIZ*/
         if (firstPressToStartTimer != 0) {
           quizReset();
         }
@@ -136,22 +137,6 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          // actions: [
-          //   IconButton(
-          //     icon: const Icon(Icons.logout),
-          //     onPressed: () async {
-          //       setState(() {
-          //         quizReset();
-          //         showSpinner = true;
-          //       });
-          //       await _auth.signOut();
-          //       Navigator.pushReplacementNamed(context, 'login');
-          //       setState(() {
-          //         showSpinner = false;
-          //       });
-          //     },
-          //   ),
-          // ],
           title: const AppBarText(title: 'TRDLtool'),
         ),
         body: SafeArea(
@@ -167,6 +152,7 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
                       SizedBox(
                         height: 125.0,
                         width: 125.0,
+                        /*DEFINES THE LOOK OF THE TIMER*/
                         child: timerRunning
                             ? countDownTimerRunning()
                             : countDownTimerStopped(),
@@ -200,21 +186,16 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
                           width: double.infinity,
                           height: 80.0,
                           child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(
-                                  12.0,
-                                ),
-                              ),
-                            ),
                             onPressed: () {
                               setState(() {
+                                /*ONLY THE FIRST PRESS STARTS TIMER*/
                                 if (firstPressToStartTimer == 0) {
                                   timerRunning = true;
                                   startTimer();
                                   firstPressToStartTimer++;
                                   nextQuestion();
                                 } else {
+                                  /*NEW PRESSES ONLY CHECK ANSWER*/
                                   checkAnswer(true);
                                 }
                               });
@@ -241,15 +222,16 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               primary: Colors.red,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(
-                                  12.0,
-                                ),
-                              ),
                             ),
                             onPressed: () {
                               setState(() {
-                                checkAnswer(false);
+                                /*FIRST PRESS QUITS QUIZ*/
+                                if (firstPressToStartTimer == 0) {
+                                  finishQuizPopup(context);
+                                } else {
+                                  /*NEW PRESSES ONLY CHECK ANSWER*/
+                                  checkAnswer(false);
+                                }
                               });
                             },
                             child: const Icon(
@@ -281,6 +263,7 @@ Widget countDownTimerRunning() {
   return Stack(
     fit: StackFit.expand,
     children: [
+      /*TIMER LAST 10 SECONDS CHANGE COLOR TO RED*/
       lastTenSeconds
           ? const SpinKitDoubleBounce(
               color: Colors.red,

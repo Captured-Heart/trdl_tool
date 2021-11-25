@@ -14,19 +14,67 @@ class MainEntry extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const FlexScheme chosenScheme = FlexScheme.jungle;
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Strings.mainTitle,
-      /*APPTHEME*/
+      /*APPTHEME FROM FLEXCOLORSCHEME*/
       theme: FlexThemeData.light(
-        scheme: chosenScheme,
-        fontFamily: 'Questrial',
+        scheme: FlexScheme.jungle,
+        surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
+        blendLevel: 25,
+        appBarStyle: FlexAppBarStyle.primary,
+        appBarOpacity: 0.85,
+        appBarElevation: 6,
+        transparentStatusBar: true,
+        tabBarStyle: FlexTabBarStyle.forAppBar,
+        tooltipsMatchBackground: true,
+        swapColors: false,
+        lightIsWhite: false,
+        useSubThemes: true,
+        visualDensity: FlexColorScheme.comfortablePlatformDensity,
+        fontFamily: GoogleFonts.questrial().fontFamily,
+        subThemesData: const FlexSubThemesData(
+          useTextTheme: true,
+          fabUseShape: true,
+          interactionEffects: true,
+          bottomNavigationBarOpacity: 0.85,
+          bottomNavigationBarElevation: 6,
+          inputDecoratorIsFilled: true,
+          inputDecoratorBorderType: FlexInputBorderType.outline,
+          inputDecoratorUnfocusedHasBorder: true,
+          blendOnColors: true,
+          blendTextTheme: true,
+          popupMenuOpacity: 0.95,
+        ),
       ),
       darkTheme: FlexThemeData.dark(
-        scheme: chosenScheme,
-        fontFamily: 'Questrial',
+        scheme: FlexScheme.jungle,
+        surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
+        blendLevel: 25,
+        appBarStyle: FlexAppBarStyle.background,
+        appBarOpacity: 0.85,
+        appBarElevation: 6,
+        transparentStatusBar: true,
+        tabBarStyle: FlexTabBarStyle.forAppBar,
+        tooltipsMatchBackground: true,
+        swapColors: false,
+        darkIsTrueBlack: false,
+        useSubThemes: true,
+        visualDensity: FlexColorScheme.comfortablePlatformDensity,
+        fontFamily: GoogleFonts.questrial().fontFamily,
+        subThemesData: const FlexSubThemesData(
+          useTextTheme: true,
+          fabUseShape: true,
+          interactionEffects: true,
+          bottomNavigationBarOpacity: 0.85,
+          bottomNavigationBarElevation: 6,
+          inputDecoratorIsFilled: true,
+          inputDecoratorBorderType: FlexInputBorderType.outline,
+          inputDecoratorUnfocusedHasBorder: true,
+          blendOnColors: true,
+          blendTextTheme: true,
+          popupMenuOpacity: 0.95,
+        ),
       ),
       themeMode: ThemeMode.system,
       /*LOAD SPLASH FIRST*/
@@ -65,7 +113,8 @@ class MainEntry extends StatelessWidget {
 
         /*AANPASSEN PLAN ROUTES*/
         'aanpassenplan': (context) => const AanpassenPlan(),
-        'stappenplanversperringen': (context) => const StappenplanVersperringen(),
+        'stappenplanversperringen': (context) =>
+            const StappenplanVersperringen(),
         'ongeplandwerk': (context) => const OngeplandWerk(),
         'orderacceptatie': (context) => const Orderacceptatie(),
         'materieelongeplandwerk': (context) => const MaterieelOngeplandWerk(),
@@ -115,27 +164,44 @@ class MainEntry extends StatelessWidget {
         'wisselsvrijmaken': (context) => const WisselsVrijmaken(),
         'stspassage': (context) => const STSPassage(),
         'stilleggentreindienst': (context) => const StilleggenTreindienst(),
-        'afhandelensysteemstoringen': (context) => const AfhandelenSysteemstoringen(),
+        'afhandelensysteemstoringen': (context) =>
+            const AfhandelenSysteemstoringen(),
 
         /*ACHTERGRONDINFO ROUTES*/
-        'uitvoerenplanachtergrond': (context) => const UitvoerenPlanAchtergrond(),
-        'uitvoerenplanbasisachtergrond': (context) => const UitvoerenPlanBasisAchtergrond(),
-        'geplandewerkzaamhedenachtergrond': (context) => const GeplandeWerkzaamhedenAchtergrond(),
-        'geplandewerkzaamhedenbasisachtergrond': (context) => const GeplandeWerkzaamhedenBasisAchtergrond(),
-        'controlerenwbiachtergrond': (context) => const ControlerenWBIAchtergrond(),
+        'uitvoerenplanachtergrond': (context) =>
+            const UitvoerenPlanAchtergrond(),
+        'uitvoerenplanbasisachtergrond': (context) =>
+            const UitvoerenPlanBasisAchtergrond(),
+        'geplandewerkzaamhedenachtergrond': (context) =>
+            const GeplandeWerkzaamhedenAchtergrond(),
+        'geplandewerkzaamhedenbasisachtergrond': (context) =>
+            const GeplandeWerkzaamhedenBasisAchtergrond(),
+        'controlerenwbiachtergrond': (context) =>
+            const ControlerenWBIAchtergrond(),
         'foutenindewbiachtergrond': (context) => const FoutenWBIAchtergrond(),
-        'aanvangwerkzaamhedenachtergrond': (context) => const AanvangWerkzaamhedenAchtergrond(),
-        'toelatenwerktreinenachtergrond': (context) => const ToelatenWerktreinenAchtergrond(),
+        'aanvangwerkzaamhedenachtergrond': (context) =>
+            const AanvangWerkzaamhedenAchtergrond(),
+        'toelatenwerktreinenachtergrond': (context) =>
+            const ToelatenWerktreinenAchtergrond(),
         'werkzonesachtergrond': (context) => const WerkzonesAchtergrond(),
-        'bijzonderhedentreinachtergrond': (context) => const BijzonderhedenTreinAchtergrond(),
-        'bijzonderhedentreinbasisachtergrond': (context) => const BijzonderhedenTreinBasisAchtergrond(),
-        'vervoersregelingachtergrond': (context) => const TreinenVervoersregelingAchtergrond(),
-        'onjuistedetectieachtergrond': (context) => const OnjuisteDetectieAchtergrond(),
-        'bijzondereaandachtachtergrond': (context) => const BijzondereAandachtAchtergrond(),
-        'bijzonderhedenrijwegenachtergrond': (context) => const BijzonderhedenRijwegenAchtergrond(),
-        'inzettenrailvoertuigachtergrond': (context) => const InzettenRailvoertuigAchtergrond(),
-        'rijwegenopbouwplanachtergrond': (context) => const OpbouwPlanBasisAchtergrond(),
-        'rijwegenwerkenmetplanachtergrond': (context) => const RijwegenPlanschermBasis(),
+        'bijzonderhedentreinachtergrond': (context) =>
+            const BijzonderhedenTreinAchtergrond(),
+        'bijzonderhedentreinbasisachtergrond': (context) =>
+            const BijzonderhedenTreinBasisAchtergrond(),
+        'vervoersregelingachtergrond': (context) =>
+            const TreinenVervoersregelingAchtergrond(),
+        'onjuistedetectieachtergrond': (context) =>
+            const OnjuisteDetectieAchtergrond(),
+        'bijzondereaandachtachtergrond': (context) =>
+            const BijzondereAandachtAchtergrond(),
+        'bijzonderhedenrijwegenachtergrond': (context) =>
+            const BijzonderhedenRijwegenAchtergrond(),
+        'inzettenrailvoertuigachtergrond': (context) =>
+            const InzettenRailvoertuigAchtergrond(),
+        'rijwegenopbouwplanachtergrond': (context) =>
+            const OpbouwPlanBasisAchtergrond(),
+        'rijwegenwerkenmetplanachtergrond': (context) =>
+            const RijwegenPlanschermBasis(),
         'rijwegenariachtergrond': (context) => const RijwegenARIAchtergrond(),
 
         /*PROQUIZ ROUTES*/

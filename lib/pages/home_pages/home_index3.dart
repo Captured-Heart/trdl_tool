@@ -8,15 +8,6 @@ class HomeIndex3 extends StatelessWidget {
     // double width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        leading: const AvatarMenu(),
-        title: const AppBarText(title: 'TRDLtool'),
-        actions: const [
-          LogOutButton(),
-        ],
-      ),
-      drawer: const DrawerWidget(),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(

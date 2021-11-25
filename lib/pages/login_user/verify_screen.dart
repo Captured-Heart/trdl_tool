@@ -64,7 +64,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
               height: 24.0,
             ),
             const SpinKitDoubleBounce(
-              color: Color(0xFF0D4F18),
+              color: Color(kDarkGreen),
               size: 100.0,
             ),
             const SizedBox(

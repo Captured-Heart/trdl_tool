@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
 /*Jungle Green color constant*/
-const kDarkGreen = 0xFF004E14;
+const kDarkGreen = 0xFF004E15;
 const kLightGreen = 0xFF738E7E;
 const kSecondaryGreen = 0xFF2F3E32;
 
@@ -10,34 +10,16 @@ late String hintText;
 
 const kSendButtonTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
-  fontSize: 24.0,
+  fontSize: 28.0,
 );
 
 const kMessageTextFieldDecoration = InputDecoration(
   contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
   hintText: 'Typ hier je bericht...',
-  border: InputBorder.none,
-);
-
-const kMessageContainerDecoration = BoxDecoration(
-  border: Border(
-    top: BorderSide(color: Color(0xFF0D4F18), width: 2.0),
-  ),
 );
 
 const kTextFieldDecoration = InputDecoration(
   contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-  border: OutlineInputBorder(
-    borderRadius: BorderRadius.all(Radius.circular(32.0)),
-  ),
-  enabledBorder: OutlineInputBorder(
-    borderSide: BorderSide(color: Color(0xFF0D4F18), width: 1.0),
-    borderRadius: BorderRadius.all(Radius.circular(32.0)),
-  ),
-  focusedBorder: OutlineInputBorder(
-    borderSide: BorderSide(color: Color(0xFF0D4F18), width: 2.0),
-    borderRadius: BorderRadius.all(Radius.circular(32.0)),
-  ),
 );
 
 /*SnackBar constants*/
