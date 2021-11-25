@@ -8,34 +8,128 @@ Future<bool> showVersionUpdatePopup(context) async {
         content: SizedBox(
           width: MediaQuery.of(context).size.width * 0.75,
           height: MediaQuery.of(context).size.width * 0.50,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Row(
-                children: const [
-                  Expanded(
-                    child: Text(
-                      'De huidige versie is 0.0.8',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        'De huidige versie is 0.0.8',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-              Row(
-                children: const [
-                  Expanded(
-                    child: Text(
-                      'Lijst met updates volgt nog.',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2021-11-19: 0.0.8\n - Werkwijze nu compleet\n - Achtergrondinformatie verder uitgebreid (3)',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ],
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2021-11-12: 0.0.7\n - Achtergrondinformatie verder uitgebreid (2)',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2021-11-10: 0.0.6\n - Achtergrondinformatie verder uitgebreid (1)',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2021-11-07: 0.0.5\n - Logout geeft nu ook een popup\n - Carousel_slider toegevoegd',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2021-11-05: 0.0.4\n - Terugknop geeft nu een popup\n - Begin gemaakt met achtergrondinformatie',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2021-11-04: 0.0.3\n - Terugknop verlaat app niet meer\n - Grote aanpassing UI/UX ProQuiz',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2021-10-30: 0.0.2\n - Navigatieknoppen consistentie aangepakt',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2021-10-27: 0.0.1\n - Cherry popped',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       );
