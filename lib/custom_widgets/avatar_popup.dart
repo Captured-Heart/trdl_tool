@@ -11,24 +11,11 @@ showAvatarPopup(context) {
         content: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SizedBox(
-              width: 75.0,
-              height: 75.0,
-              child: Stack(
-                fit: StackFit.expand,
-                children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Color(kDarkGreen),
-                    ),
-                  ),
-                  CircleAvatar(
-                    child: Icon(
-                      Icons.person,
-                      size: 48.0,
-                    ),
-                  ),
-                ],
+            CircleAvatar(
+              radius: 128.0,
+              child: Icon(
+                Icons.person,
+                size: 78.0,
               ),
             ),
             ListTile(
