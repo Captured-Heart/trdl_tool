@@ -12,7 +12,7 @@ showAvatarPopup(context) {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             CircleAvatar(
-              radius: 128.0,
+              radius: 100.0,
               child: Icon(
                 Icons.person,
                 size: 78.0,
@@ -20,7 +20,7 @@ showAvatarPopup(context) {
             ),
             ListTile(
               title: Text(
-                'Huidige gebruiker: $emailCurrentUser',
+                'Huidige gebruiker:\n$emailCurrentUser',
                 textAlign: TextAlign.center,
               ),
               onTap: () {
