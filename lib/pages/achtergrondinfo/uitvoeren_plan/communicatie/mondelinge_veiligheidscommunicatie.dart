@@ -399,7 +399,6 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                   ),
                 ),
               ),
-              //TODO: Hier verder!
               /*CARD #2*/
               Card(
                 elevation: 6.0,
@@ -411,7 +410,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle: 'Wie kan een melding doen?',
+                              subtitle: 'Schriftelijke opdrachten',
                             ),
                           ),
                         ],
@@ -421,17 +420,71 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Je kan als treindienstleider gebeld worden door een medewerker van de MKS-BO in opdracht van de politie, of door de Algemeen Leider (AL).',
+                              text: 'In een aantal gevallen geef je als treindienstleider schriftelijk opdrachten af. Als treindienstleider ben je verantwoordelijk voor het tijdig beschikbaar stellen van veilige rijwegen. Veilige rijwegen stel je beschikbaar middels het instellen van rijwegen (waarbij aan alle rijwegvoorwaarden moet zijn voldaan).. Wanneer de veiligheid niet gegarandeerd kan worden middels seingeving zal je dit moeten doen middels een schriftelijke aanwijzing.',
                             ),
                           ),
                         ],
                       ),
                       const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Komt het sein niet uit de stand \'stop\' dan ga je eerst de zogenaamde rijwegvoorwaarden handmatig bewerkstelligen en geef je een aanwijzing \'STS\' af. Hierop staat aangeven wat de machinist moet doen.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Heb je te maken met een bekend gevaar (toestand baan, derden langs te baan etc.) geeft je aanwijzing \'VR\' af. Je geeft aan van waar tot waar het zogenaamde gevaar zich bevindt en laat de machinist daar rijden met maximaal 40 km/h (of lager mocht dat nodig zijn). Mocht je aanvullende informatie nodig hebben kan je de machinist vragen te schouwen. Dan kruis je het vakje \'schouwen\' ook aan op de aanwijzing.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Is de snelheid die de machinist wel ergens mag rijden door een ter zake kundig iemand aangegeven en is deze lager dan de snelheid die de seinen of borden aangeven dan geef je een aanwijzing \'SB\' af.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Bij een gestoorde of beschadigde overweg geef je dan nog een aanwijzing \'OVW\' af. Daarop staat hoe de machinist moet handelen bij een gestoorde overweg. Zit een overweg niet op de storingsmelder dan handelt de treindienstleider als aangegeven in de Plaatselijke Regelgeving',
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #3*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
                       Row(
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle: 'Afspraken',
+                              subtitle: 'Veiligheidscommunicatie treindienstleider',
                             ),
                           ),
                         ],
@@ -441,7 +494,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Als een trein meteen moet vertrekken geef je, zodra dat mogelijk is, de rijweg vrij en licht je de decentrale verkeersleider in. Wanneer de trein eerder of later moet vertrekken bespreek je dat met de decentrale verkeersleider en die zal door een voorwaardelijke vertraging of vervroeging (VW-vertraging) de trein herplannen. Je verwerkt het bericht in procesleiding.',
+                              text: 'Veiligheidscommunicatie betreft het uitwisselen van veiligheid kritische berichten. Veiligheidscommunicatie vindt plaats tussen treindienstleider en functionarissen zoals genoemd in bijlage 1.',
                             ),
                           ),
                         ],
@@ -450,8 +503,18 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Aandachtspunten',
+                            child: BodyText(
+                              text: 'Dit zijn berichten, die bij onjuiste uitvoering (niet, volledig, te vroeg of te laat), tot veiligheidsincidenten kunnen leiden met slachtoffers en/of schade als gevolg.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Om miscommunicatie zoveel mogelijk uit te sluiten zijn de volgende uitgangspunten van toepassing:',
                             ),
                           ),
                         ],
@@ -462,7 +525,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Houd de trein zoveel rijdend;',
+                              text: '- Identificatieplicht;',
                             ),
                           ),
                         ],
@@ -473,7 +536,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Zet de trein niet aan de kant;',
+                              text: '- Gespreksdiscipline;',
                             ),
                           ),
                         ],
@@ -484,7 +547,53 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Zorg dat gewenste aanpassingen m.b.t. voorbrengen materieel via het lokale orderproces worden aangevraagd;',
+                              text: '- Berichtenstructuur.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Identificatieplicht',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Functionarissen (zoals benoemd in bijlage 1) identificeren zich bij aanvang van een bericht met hun functionele naam (bv MCN met treinnummer en locatie, TRDL met werkplek enz.).',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Gespreksdiscipline',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Onder gespreksdiscipline wordt verstaan de regels, die gelden voor het uitvoeren van de veiligheidscommunicatie. Dit zijn:',
                             ),
                           ),
                         ],
@@ -495,8 +604,729 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Zorg dat vertragings- en vervroegingsoorzaken worden verklaard in monitoring.',
+                              text: '- Gespreksregels;',
                             ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Dienstuitdrukkingen;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- NATO alfabet en getallen.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Table(
+                        border: TableBorder.all(),
+                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        children: const [
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Functionaris',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Communicatie over',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  '(Buur)TRDL',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Alle veiligheidszaken',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Machinist (MCN)',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Plaatsbepaling, toestand materieel, toestand infra',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Medewerker OBI',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Functioneren van de infra',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Storingsdienst',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Functioneren van de infra',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Rangeerder',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Toestand van de infra',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Veiligheidsverantwoordelijke buiten',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Functioneren van de infra',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Algemeen Leider (AL)',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Beperkingen bij hervatten van de treindienst',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Medewerker BackOffice (MKS-BO)',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Gegevens van hulpverlenende instanties',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Verkeersleider',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Orderaanvragen',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Storingsmonteur (STMT)',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Functioneren materieel',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Medewerker Rangeren (KNOCO)',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Lokale orderaanvragen (LOA)',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Medewerker Werkplekbeveiliging (WPB)',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Aanpassen veiligheidsmaatregelen WBI',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Inpecteur Inspectie Leefomgeving & Transport (IL&T)',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Plaatsbepaling, inspectie materieel of infra',
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Gespreksregels',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Spreek elkaar aan op het gebruik van de regels voor veiligheidscommunicatie;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Veiligheidscommunicatie wordt gevoerd via een spreekverbinding die de gesprekken vastlegt (voicelogger en/of GSM-R);',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Het is bij aanvang van elk bericht van belang vast te stellen of de juiste gesprekspartners berichten met elkaar uitwisselen (identificatieplicht en plaatsbepaling);',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Gebruik voor plaatsbepaling de vaste infrastructuur:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* Stationsnaam en/of;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* Baanvak en kilometrering en/of;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* Spoornummers en/of;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* Wisselnummers en/of;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* Seinnummers.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Houd gesprekken kort en zakelijk om de communicatiemiddelen maximaal te beschikking te hebben voor alle toegelaten gebruikers;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Gebruik voor het voeren van gesprekken de berichtenstructuur;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Luister of er een gesprek gaande is voor je gaat spreken, behalve bij een noodbericht;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Laat de ander uitspreken;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Vermijd ontkenningen;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Gebruik bij het spellen losse letters en het NATO-spelalfabet;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Treinnummers/sein- en wisselnummers/getallen worden eerst volledig en daarna cijfer voor cijfer uitgesproken;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Zorg dat misverstanden worden uitgesloten:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* Elk bericht moet door de ontvanger inhoudelijk herhaald worden;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* Elk herhaald bericht moet door de afzender worden gevolgd door de vaste dienstuitdrukking \'correct\' of \'fout ik herhaal\';',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* Elk bericht, behalve het laatste van een gesprek, wordt beëindigd met de uitdrukking: \'over\';',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '* Elk gesprek wordt beëindigd met de uitdrukking: \'sluiten\'.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Dienstuitdrukkingen',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Om de verzending van berichten gedisciplineerd te doen verlopen moeten de volgende dienstuitdrukkingen worden gebruikt:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Table(
+                        border: TableBorder.all(),
+                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        children: const [
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Dienstuitdrukking',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Betekenis',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Over',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Term om de andere partij het woord te geven',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Ontvangen',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Term om aan te geven dat het bericht is ontvangen',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Herhaal bericht',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Uitdrukking om aan te geven dat het bericht selcht ontvangen of moeilijk te begrijpen is en moet worden herhaald',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Correct',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Uitdrukking om aan te geven dat het ontvangen bericht nauwkeurig overeenstemt met het uitgezonden bericht',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Toegestaan',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'U hebt toestemming tot...',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Stoppen',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'U heeft geen toestemming tot... / stoppen',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Herstel',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Ik maakte een fout. Ik begin weer bij het laatste uitgesproken woord',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Fout (+ ik herhaal)',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Uitdrukking om aan te geven dat het ontvangen bericht niet overeenstemt met het uitgezonden bericht',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Sluiten',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Wanneer het gesprek is beëindigd',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Wacht',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Uitdrukking om de ander te laten wachten',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Ik roep u later opnieuw op',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Uitdrukking om aan te geven dat de verbinding wordt verbroken, maar later wordt hervat',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Aanwijzing...voorbereiden',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Uitdrukking voor de voorbereiding van een toepassing van een procedure (aanwijzing) uit het Formulierenboek',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Aanwijzing...annuleren',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Uitdrukking voor het annuleren van een lopende procedure (aanwijzing) uit het Formulierenboek',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'Ik spel...',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Aankondiging dat er gespeld gaat worden (letters en/of cijfers)',
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),

@@ -56,7 +56,7 @@ class CommunicatieAchtergrond extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Communicatie - Werkwijze',
-                            destination: 'communicatie',
+                            destination: 'mondelingecommunicatie',
                           ),
                           SizedBoxH(),
                           NavButton(
@@ -92,7 +92,6 @@ class CommunicatieAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 400.0,
                             child: Image.asset(
                               'assets/images/achtergrond/communicatie/communicatie_main.jpg',
                             ),
