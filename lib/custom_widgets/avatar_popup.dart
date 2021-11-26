@@ -11,18 +11,17 @@ showAvatarPopup(context) {
         content: Column(
           children: [
             Stack(
+              fit: StackFit.expand,
               children: [
                 Container(
                   decoration: BoxDecoration(
                     color: Color(kDarkGreen),
                   ),
                 ),
-                Center(
-                  child: CircleAvatar(
-                    child: Icon(
-                      Icons.person,
-                      size: 78.0,
-                    ),
+                CircleAvatar(
+                  child: Icon(
+                    Icons.person,
+                    size: 78.0,
                   ),
                 ),
               ],
