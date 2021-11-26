@@ -1330,6 +1330,480 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'NATO-spelalfabet en getallen',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Om in uiteenlopende situaties misverstanden te voorkomen, moet elke uitdrukking langzaam en duidelijk worden uitgesproken. Hierbij moeten de woorden, die slecht kunnen worden begrepen, worden gespeld en getallen cijfer voor cijfer worden uitgesproken.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Table(
+                        border: TableBorder.all(),
+                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        children: const [
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'A',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Alpha',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'H',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Hotel',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'O',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Oscar',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'V',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Victor',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'B',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Bravo',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'I',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'India',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'P',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Papa',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'W',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Whisky',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'C',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Charlie',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'J',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Juliet',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Q',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Quebec',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'X',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'X-Ray',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'D',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Delta',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'K',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Kilo',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'R',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Romeo',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Y',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Yankee',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'E',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Echo',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'L',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Lima',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'S',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Sierra',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Z',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Zulu',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'F',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Foxtrot',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'M',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Mike',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'T',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Tango',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '',
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Center(
+                                child: Text(
+                                  'G',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Golf',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'N',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'November',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'U',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  'Uniform',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '',
+                                ),
+                              ),
+                              Center(
+                                child: Text(
+                                  '',
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Getallen',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Getallen spreek je als volgt uit:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- Trein 1724 = Trein één-zeven-twee-vier;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- Overweg 53.6 = Overweg vijf-drie-punt-zes;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- Spoor 12B = Spoor één-twee-bravo;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '* De treindienstleider dient bij het uitspreken van trein-, sein- en wisselnummers en bij kilometrages eerst het nummer getal volledig uit te spreken en daarna cijfer voor cijfer;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '* Bij herhalen van een nummer door de ontvanger is het niet verplicht om dit nummer opnieuw als 1 nummer/getal uit te spreken, het is wel verplicht om dit cijfer voor cijfer uit te spreken.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- 40 Kilometer per uur = Veertig kilometer per uur;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- 10:52 uur = Tien uur tweeënvijftig;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- 12 juni 2018 = twaalf-zes-tweeduizendachttien.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      //TODO: START NEW CARD HERE! BERICHTENSTRUCTUUR
                     ],
                   ),
                 ),
