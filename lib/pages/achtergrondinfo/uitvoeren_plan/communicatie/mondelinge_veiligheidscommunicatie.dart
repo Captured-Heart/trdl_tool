@@ -1363,65 +1363,41 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                               Center(
                                 child: Text(
                                   'A',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
                                 ),
                               ),
                               Center(
                                 child: Text(
                                   'Alpha',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
                                 ),
                               ),
                               Center(
                                 child: Text(
                                   'H',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
                                 ),
                               ),
                               Center(
                                 child: Text(
                                   'Hotel',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
                                 ),
                               ),
                               Center(
                                 child: Text(
                                   'O',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
                                 ),
                               ),
                               Center(
                                 child: Text(
                                   'Oscar',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
                                 ),
                               ),
                               Center(
                                 child: Text(
                                   'V',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
                                 ),
                               ),
                               Center(
                                 child: Text(
                                   'Victor',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                  ),
                                 ),
                               ),
                             ],
