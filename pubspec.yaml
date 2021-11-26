@@ -47,6 +47,7 @@ flutter:
     - assets/fonts/
     - assets/images/
     - assets/images/achtergrond/
+    - assets/images/achtergrond/communicatie
     - assets/images/achtergrond/treinen/elektrische_locs/
     - assets/images/achtergrond/treinen/diesel_locs/
     - assets/images/achtergrond/treinen/elektrische_treinen/

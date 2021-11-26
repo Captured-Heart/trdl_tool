@@ -146,6 +146,10 @@ export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_ri
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planscherm_basis.dart';
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_ari_basis.dart';
 
+/*ACHTERGROND INFORMATIE COMMUNICATIE PAGES*/
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/communicatie/communicatie_main.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/communicatie/mondelinge_veiligheidscommunicatie.dart';
+
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/proquiz/proquizmain.dart';
 export 'package:trdl_tool/proquiz/screens/quiz_screen.dart';
