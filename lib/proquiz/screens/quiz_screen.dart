@@ -12,7 +12,7 @@ int wrongAmount = 0;
 int accumulatedPoints = 0;
 double doubleScorePercentage = 0;
 String scorePercentage = '';
-Timer? timer;
+late Timer timer;
 
 class ProQuizScreen extends StatefulWidget {
   const ProQuizScreen({Key? key}) : super(key: key);
@@ -49,14 +49,13 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
   /*KILL TIMER*/
   @override
   void dispose() {
-    timer!.cancel();
     super.dispose();
   }
 
   /*SCOREKEEPER LIST*/
   List<Widget> scoreKeeper = [
     const Icon(
-      Icons.mediation_outlined,
+      Icons.railway_alert,
     ),
   ];
 
@@ -97,7 +96,7 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
 
   /*RESETS QUIZ, CANCELS TIMER, CREATES POPUP, RESETS VARIABLES TO STARTING POSITION*/
   void quizReset() {
-    timer!.cancel();
+    timer.cancel();
     lastTenSeconds = false;
     timerRunning = false;
     finishQuizPopup(context);
@@ -106,7 +105,7 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
     firstPressToStartTimer = 0;
     scoreKeeper = [
       const Icon(
-        Icons.mediation_outlined,
+        Icons.railway_alert,
       ),
     ];
   }
