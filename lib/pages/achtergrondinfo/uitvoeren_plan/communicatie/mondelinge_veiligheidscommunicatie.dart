@@ -98,7 +98,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Tijdens het werk kan het voorkomen dat je met een ketenpartner afspraken moet maken over het toelaten van een trein tot zijn gebied, anders dan volgens het reguliere plan.',
+                              text: 'Bijvoorbeeld als je communiceert met:',
                             ),
                           ),
                         ],
@@ -218,17 +218,6 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text: '- Doorgeven dat een trein in zijn geheel binnen is, of;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Doorgeven dat een trein niet in zijn geheel binnen is.',
                             ),
                           ),
                         ],
@@ -390,7 +379,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- CRA;',
+                              text: '- CRA.',
                             ),
                           ),
                         ],
@@ -420,7 +409,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'In een aantal gevallen geef je als treindienstleider schriftelijk opdrachten af. Als treindienstleider ben je verantwoordelijk voor het tijdig beschikbaar stellen van veilige rijwegen. Veilige rijwegen stel je beschikbaar middels het instellen van rijwegen (waarbij aan alle rijwegvoorwaarden moet zijn voldaan).. Wanneer de veiligheid niet gegarandeerd kan worden middels seingeving zal je dit moeten doen middels een schriftelijke aanwijzing.',
+                              text: 'In een aantal gevallen geef je als treindienstleider schriftelijk opdrachten af.\nAls treindienstleider ben je verantwoordelijk voor het tijdig beschikbaar stellen van veilige rijwegen. Veilige rijwegen stel je beschikbaar middels het instellen van rijwegen (waarbij aan alle rijwegvoorwaarden moet zijn voldaan). Wanneer de veiligheid niet gegarandeerd kan worden middels seingeving zal je dit moeten doen middels een schriftelijke aanwijzing.',
                             ),
                           ),
                         ],
@@ -431,7 +420,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Komt het sein niet uit de stand \'stop\' dan ga je eerst de zogenaamde rijwegvoorwaarden handmatig bewerkstelligen en geef je een aanwijzing \'STS\' af. Hierop staat aangeven wat de machinist moet doen.',
+                              text: '- Komt het sein niet uit de stand \'stop\' dan ga je eerst de zogenaamde rijwegvoorwaarden handmatig bewerkstelligen en geef je een aanwijzing \'STS\' af. Hierop staat aangegeven wat de machinist moet doen.',
                             ),
                           ),
                         ],
@@ -442,7 +431,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Heb je te maken met een bekend gevaar (toestand baan, derden langs te baan etc.) geeft je aanwijzing \'VR\' af. Je geeft aan van waar tot waar het zogenaamde gevaar zich bevindt en laat de machinist daar rijden met maximaal 40 km/h (of lager mocht dat nodig zijn). Mocht je aanvullende informatie nodig hebben kan je de machinist vragen te schouwen. Dan kruis je het vakje \'schouwen\' ook aan op de aanwijzing.',
+                              text: '- Heb je te maken met een bekend gevaar (toestand baan, derden langs te baan etc.) geef je aanwijzing \'VR\' af. Je geeft aan van waar tot waar het zogenaamde gevaar zich bevindt en laat de machinist daar rijden met maximaal 40 km/h (of lager mocht dat nodig zijn). Mocht je aanvullende informatie nodig hebben kan je de machinist vragen te schouwen. Dan kruis je het vakje \'schouwen\' ook aan op de aanwijzing.',
                             ),
                           ),
                         ],
@@ -494,7 +483,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Veiligheidscommunicatie betreft het uitwisselen van veiligheid kritische berichten. Veiligheidscommunicatie vindt plaats tussen treindienstleider en functionarissen zoals genoemd in bijlage 1.',
+                              text: 'Veiligheidscommunicatie betreft het uitwisselen van veiligheid kritische berichten. Veiligheidscommunicatie vindt plaats tussen treindienstleider en functionarissen zoals genoemd in de tabel hieronder.',
                             ),
                           ),
                         ],
@@ -505,128 +494,6 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text: 'Dit zijn berichten, die bij onjuiste uitvoering (niet, volledig, te vroeg of te laat), tot veiligheidsincidenten kunnen leiden met slachtoffers en/of schade als gevolg.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Om miscommunicatie zoveel mogelijk uit te sluiten zijn de volgende uitgangspunten van toepassing:',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Identificatieplicht;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Gespreksdiscipline;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Berichtenstructuur.',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: Text(
-                              'Identificatieplicht',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Functionarissen (zoals benoemd in bijlage 1) identificeren zich bij aanvang van een bericht met hun functionele naam (bv MCN met treinnummer en locatie, TRDL met werkplek enz.).',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: Text(
-                              'Gespreksdiscipline',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text: 'Onder gespreksdiscipline wordt verstaan de regels, die gelden voor het uitvoeren van de veiligheidscommunicatie. Dit zijn:',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Gespreksregels;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Dienstuitdrukkingen;',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- NATO alfabet en getallen.',
                             ),
                           ),
                         ],
@@ -844,6 +711,128 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
+                            child: BodyText(
+                              text: 'Om miscommunicatie zoveel mogelijk uit te sluiten zijn de volgende uitgangspunten van toepassing:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Identificatieplicht;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Gespreksdiscipline;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Berichtenstructuur.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Identificatieplicht',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Functionarissen identificeren zich bij aanvang van een bericht met hun functionele naam (bijv. MCN met treinnummer en locatie, TRDL met werkplek enz.).',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Gespreksdiscipline',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Onder gespreksdiscipline wordt verstaan de regels, die gelden voor het uitvoeren van de veiligheidscommunicatie. Dit zijn:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Gespreksregels;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Dienstuitdrukkingen;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- NATO alfabet en getallen.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
                             child: Text(
                               'Gespreksregels',
                               style: TextStyle(
@@ -958,7 +947,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Houd gesprekken kort en zakelijk om de communicatiemiddelen maximaal te beschikking te hebben voor alle toegelaten gebruikers;',
+                              text: '- Houd gesprekken kort en zakelijk om de communicatiemiddelen maximaal ter beschikking te hebben voor alle toegelaten gebruikers;',
                             ),
                           ),
                         ],
@@ -2171,7 +2160,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Opmerking (voorbeeld: Er is.../Ik zag.../Ik had.../Ik raakte...;',
+                              text: '- Opmerking (voorbeeld: Er is.../Ik zag.../Ik had.../Ik raakte...);',
                             ),
                           ),
                         ],
@@ -2182,7 +2171,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Positie/plaatsbepaling;',
+                              text: '- Positie/plaatsbepaling;',
                             ),
                           ),
                         ],
