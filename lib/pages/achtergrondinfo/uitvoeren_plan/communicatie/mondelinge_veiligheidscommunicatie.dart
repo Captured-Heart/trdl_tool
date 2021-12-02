@@ -1779,7 +1779,538 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
-                      //TODO: START NEW CARD HERE! BERICHTENSTRUCTUUR
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #4*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: SubTitleText(
+                              subtitle: 'Berichtenstructuur',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'De volgende berichten kunnen worden onderscheiden:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Noodberichten;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Aanwijzingen;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Werkzaamheden;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Overige berichten.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Noodberichten',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'In een noodsituatie gebruik je de alarmknop GSM-R:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Indien de situatie het vereist dat meerdere treinen tot stilstand moeten komen, wordt het volgende bericht gebruikt: \'Noodsituatie: stop alle treinen\';',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Indien de situatie het vereist dat één bepaalde trein tot stilstand moet komen, wordt het volgende bericht gebruikt: \'Trein ...(nummer)... Op spoor ...(stationsnaam/baanvak, spoornummer)... noodstop.\'',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Aanwijzingen',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Aanwijzingen worden gebruikt voor het overbrengen van procedurele berichten tussen treindienstleiders en machinisten. Het is voor goede en duidelijke communicatie van belang dat door de beide partijen gebruikte aanwijzingen qua inhoud consistent zijn aan elkaar. De aanwijzingen van alle partijen zijn in het Formulierenboek opgenomen.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Het afgeven van aanwijzingen moet voorafgegaan worden door het volgende bericht:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: '\'Trein ...(nummer)... Hier treindienstleider ...(werkplek)... ...(aanwijzing)... voorbereiden over\'',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Voorafgaand aan het afgeven van de aanwijzing, vult de treindienstleider de aanwijzing in;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Bij het afgeven van de aanwijzing leest de treindienstleider deze letterlijk voor;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- De machinist noteert de inhoud van de aan hem afgegeven aanwijzing op het daarvoor van toepassing zijnde formulier (Formulierenboek).',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Werkzaamheden',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Dit betreft de communicatie over het starten en beëindigen van werkzaamheden.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Berichten werkzaamheden zonder WBI/WECO:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Hier ...(functie)..., \'ik vraag toestemming om werkzaamheden op ...(spoor/gebied)... aan te mogen vangen, over.\'',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '\'Hier treindienstleider ...(werkplek)..., maatregelen treindienstleider ...(spoor/gebied)... aangebracht, ik geef aan ...(functie)..., om ...(tijd)... toestemming om werkzaamheden op ...(spoor/gebied)... aan te vangen, over.\'',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '\'Hier ...(functie)..., ik krijg om ...(tijd)... toestemming om werkzaamheden op ...(spoor/gebied)... aan te vangen, over.\',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Berichten werkzaamheden met WBI/WECO:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '\'Hier ...(functie)..., WBI ...(nummer)..., werkplek ...(letter)... voorbereiden, over.\'',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '\'Hier treindienstleider ...(werkplek)..., maatregelen treindienstleider volgens WBI ...(nummer)..., werkplek ...(letter)... aangebracht, ik geef om ...(tijd)..., ...(functie)... toestemming om werkzaamheden aan te vangen, over\'',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '\'Hier ...(functie)..., WBI ...(nummer)..., werkplek ...(letter)..., ik krijg om ...(tijd)... toestemming van treindienstleider ...(werkplek)... om de werkzaamheden aan te vangen, over.\'',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Berichten bij het beëindigen van werkzaamheden:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '\'Hier ...(functie)..., ik meld werkzaamheden op ...(spoor/gebied/WBI)... gereed om ...(tijd)..., over.\'',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '\'Hier treindienstleider ...(werkplek)..., de werkzaamheden op ...(spoor/gebied/WBI)... zijn gereed om ...(tijd)..., over.\'',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: Text(
+                              'Overige berichten',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Hieronder vallen informatieve berichten die tussen treindienstleiders en machinisten gebruikt worden om elkaar van situaties op de hoogte te stellen.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'De volgende berichtenstructuur moet hiervoor worden gebruikt:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Reden voor het bericht (informatief en/of gevraagde actie);',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Opmerking (voorbeeld: Er is.../Ik zag.../Ik had.../Ik raakte...;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'Positie/plaatsbepaling;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Aard (betreft: infra/voorwerp/persoon);',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: '- Staat (vast of bewegend).',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'Denk bij het voeren van informatieve gesprekken ook aan Luisteren, Samenvatten, Doorvragen (LSD) en aan de vorm van vraagstelling die je gebruikt voor een zo optimaal mogelijk resultaat:',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- Open vragen',
+                              style: TextStyle(fontWeight: FontWeight.bold,),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'nodigen de ander uit te praten en een eigen invulling aan het antwoord te geven. Deze vragen kunnen beginnen met: hoe, wat, wie, waar, waarom, wanneer, etc.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- Gesloten vragen',
+                              style: TextStyle(fontWeight: FontWeight.bold,),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'geven de mogelijkheid tot een \'ja\' of \'nee\' antwoord. Deze kunnen zinvol zijn als de ander een langdradige spreker is en jij specifieke informatie wilt. Veel gesloten vragen achter elkaar geven het effect van een \'kruisverhoor\'.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- Suggestieve vragen',
+                              style: TextStyle(fontWeight: FontWeight.bold,),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'bevatten al een mening en kunnen manipulatief zijn: \'Vind je ook niet dat...?\' of \'Het is toch zeker zo dat...?\' Dergelijke sturende vragen zetten een ander soms voor het blok.',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: Text(
+                              '- Meerkeuze vragen',
+                              style: TextStyle(fontWeight: FontWeight.bold,),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text: 'laten weinig ruimte voor alternatieven: \'Wil je hier eten of gaan we naar het eetcafé?\' Stimuleert de ander snel een beslissing te nemen.',
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                 ),
