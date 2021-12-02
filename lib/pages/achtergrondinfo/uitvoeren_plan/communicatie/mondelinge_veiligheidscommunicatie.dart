@@ -2037,7 +2037,7 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '\'Hier ...(functie)..., ik krijg om ...(tijd)... toestemming om werkzaamheden op ...(spoor/gebied)... aan te vangen, over.\',
+                              text: '\'Hier ...(functie)..., ik krijg om ...(tijd)... toestemming om werkzaamheden op ...(spoor/gebied)... aan te vangen, over.\'',
                             ),
                           ),
                         ],
@@ -2226,7 +2226,9 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           Expanded(
                             child: Text(
                               '- Open vragen',
-                              style: TextStyle(fontWeight: FontWeight.bold,),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -2249,7 +2251,9 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           Expanded(
                             child: Text(
                               '- Gesloten vragen',
-                              style: TextStyle(fontWeight: FontWeight.bold,),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -2272,7 +2276,9 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           Expanded(
                             child: Text(
                               '- Suggestieve vragen',
-                              style: TextStyle(fontWeight: FontWeight.bold,),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -2295,7 +2301,9 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           Expanded(
                             child: Text(
                               '- Meerkeuze vragen',
-                              style: TextStyle(fontWeight: FontWeight.bold,),
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
