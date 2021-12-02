@@ -87,6 +87,7 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -194,6 +195,7 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -332,8 +334,11 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'Bijzondere situaties',
+                            child: Text(
+                              'Bijzondere situaties',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -666,8 +671,11 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: BodyText(
-                              text: 'Bijzondere situaties:',
+                            child: Text(
+                              'Bijzondere situaties:',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ],
@@ -1136,6 +1144,7 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
