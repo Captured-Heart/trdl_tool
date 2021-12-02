@@ -14,7 +14,7 @@ class TRDLtoolLogo extends StatelessWidget {
     return Row(
       children: const [
         Icon(
-          Icons.mediation_outlined,
+          Icons.railway_alert,
           size: 64.0,
           color: Color(kDarkGreen),
         ),

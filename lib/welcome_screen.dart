@@ -68,7 +68,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
           width: 12.0,
           decoration: BoxDecoration(
             color: currentPage.round() == index
-                /*This green color is taken from FlexColorScheme Jungle*/
+                /*THIS GREEN COLOR IS FROM FLEXCOLORSCHEME JUNGLE*/
                 ? const Color(0xFF0D4F18)
                 : const Color(0xFF0D4F18).withOpacity(0.3),
             borderRadius: BorderRadius.circular(10.0),
@@ -86,7 +86,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           Logger().wtf('User skips welcome_screen to login_screen.');
-          /*Used to skip or move on from welcome_screen to login_screen*/
+          /*SKIP AND GO TO WELCOME_SCREEN*/
           Navigator.push(
             context,
             MaterialPageRoute(
@@ -105,7 +105,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
             itemCount: slides.length,
             itemBuilder: (BuildContext context, int index) {
               _pageViewController.addListener(() {
-                /*Swiping the welcome_screen.*/
+                /*SWIPE THE WELCOME_SCREEN*/
                 setState(() {
                   currentPage = _pageViewController.page!;
                 });

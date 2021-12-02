@@ -11,7 +11,7 @@ showAvatarPopup(context) {
         content: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CircleAvatar(
+            const CircleAvatar(
               radius: 100.0,
               child: Icon(
                 Icons.person,
