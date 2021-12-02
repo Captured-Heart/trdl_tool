@@ -149,6 +149,7 @@ export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_ri
 /*ACHTERGROND INFORMATIE COMMUNICATIE PAGES*/
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/communicatie/communicatie_main.dart';
 export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/communicatie/mondelinge_veiligheidscommunicatie.dart';
+export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/communicatie/communicatiemiddelen_basis.dart';
 
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/proquiz/proquizmain.dart';
