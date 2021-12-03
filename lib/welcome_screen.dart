@@ -17,7 +17,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
                 flex: 1,
                 fit: FlexFit.tight,
                 child: Image.asset(
-                  /*Image comes from welcome_items.dart*/
+                  /*IMAGE FROM WELCOME_ITEMS*/
                   item['image'],
                   fit: BoxFit.fitWidth,
                   width: 220.0,
@@ -32,7 +32,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
                   child: Column(
                     children: <Widget>[
                       Text(
-                        /*Header comes from welcome_items.dart*/
+                        /*HEADER FROM WELCOME_ITEMS*/
                         item['header'],
                         style: const TextStyle(
                           fontSize: 50.0,
@@ -40,7 +40,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
                         ),
                       ),
                       Text(
-                        /*Description comes from welcome_items.dart*/
+                        /*DESCRIPTION FROM WELCOME_ITEMS*/
                         item['description'],
                         textAlign: TextAlign.center,
                         style: const TextStyle(

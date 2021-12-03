@@ -92,7 +92,7 @@ class _SplashScreenState extends State<SplashScreen> {
               width: 100.0,
               //TODO: Get someone to make a better logo!
               child: Image.asset(
-                'assets/images/plotsklappsLogoBlack.png',
+                'assets/logos/plotsklappsLogoBlack.png',
               ),
             ),
             const Text(

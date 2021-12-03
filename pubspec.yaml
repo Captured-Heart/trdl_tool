@@ -32,9 +32,9 @@ dev_dependencies:
 
 flutter_native_splash:
   color: "#FFFFFF"
-  image: assets/images/plotsklappsIconWhite400x400.png
+  image: assets/icons/plotsklappsIconWhite400x400.png
   color_dark: "#000000"
-  image_dark: assets/images/plotsklappsIconBlack400x400.png
+  image_dark: assets/icons/plotsklappsIconBlack400x400.png
   android: true
   ios: true
   fullscreen: true
@@ -46,13 +46,17 @@ flutter:
   assets:
     - assets/fonts/
     - assets/icons/
+    - assets/logos/
     - assets/images/
-    - assets/images/achtergrond/
-    - assets/images/achtergrond/communicatie/
-    - assets/images/achtergrond/treinen/elektrische_locs/
-    - assets/images/achtergrond/treinen/diesel_locs/
-    - assets/images/achtergrond/treinen/elektrische_treinen/
-    - assets/images/achtergrond/treinen/diesel_treinen/
-    - assets/images/achtergrond/treinen/rijtuigen/
-    - assets/images/achtergrond/treinen/onderhouds_machines/
-    - assets/images/achtergrond/treinen/railweg_voertuigen/
+    - assets/images/welcome_screen/
+    - assets/images/achtergrond_info/
+    - assets/images/achtergrond_info/communicatie/
+    - assets/images/achtergrond_info/uitvoeren_plan/
+    - assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/
+    - assets/images/achtergrond_info/treinen/elektrische_locs/
+    - assets/images/achtergrond_info/treinen/diesel_locs/
+    - assets/images/achtergrond_info/treinen/elektrische_treinen/
+    - assets/images/achtergrond_info/treinen/diesel_treinen/
+    - assets/images/achtergrond_info/treinen/rijtuigen/
+    - assets/images/achtergrond_info/treinen/onderhouds_machines/
+    - assets/images/achtergrond_info/treinen/railweg_voertuigen/

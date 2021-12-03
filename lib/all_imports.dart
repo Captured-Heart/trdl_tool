@@ -120,36 +120,36 @@ export 'package:trdl_tool/pages/werkwijze/incidenten/overige_incidenten/stillegg
 export 'package:trdl_tool/pages/werkwijze/incidenten/overige_incidenten/afhandelen_systeemstoringen.dart';
 
 /*ACHTERGROND INFORMATIE UITVOEREN PLAN PAGES*/
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/uitvoeren_plan_basis.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/uitvoeren_plan_basis/uitvoeren_plan_basis.dart';
 
 /*ACHTERGROND INFORMATIE GEPLANDE WERKZAAMHEDEN PAGES*/
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden_basis.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/controleren_wbi.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/fouten_wbi.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/aanvang_werkzaamheden.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/toelaten_werktreinen.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/geplande_werkzaamheden/werkzones.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden_basis.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/controleren_wbi.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/fouten_wbi.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/aanvang_werkzaamheden.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/toelaten_werktreinen.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzones.dart';
 
 /*ACHTERGROND INFORMATIE BIJZONDERHEDEN TREIN PAGES*/
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_trein/bijzonderheden_trein.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_trein/bijzonderheden_trein_basis.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_trein/vervoersregeling.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_trein/onjuiste_detectie.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_trein/bijzondere_aandacht.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/bijzonderheden_trein.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/bijzonderheden_trein_basis.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/vervoersregeling.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/onjuiste_detectie.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/bijzondere_aandacht.dart';
 
 /*ACHTERGROND INFORMATIE BIJZONDERHEDEN RIJWEGEN PAGES*/
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/bijzonderheden_rijwegen.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planopbouw_basis.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planscherm_basis.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_ari_basis.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/bijzonderheden_rijwegen.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planopbouw_basis.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planscherm_basis.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_ari_basis.dart';
 
 /*ACHTERGROND INFORMATIE COMMUNICATIE PAGES*/
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/communicatie/communicatie_main.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/communicatie/mondelinge_veiligheidscommunicatie.dart';
-export 'package:trdl_tool/pages/achtergrondinfo/uitvoeren_plan/communicatie/communicatiemiddelen_basis.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/communicatie/communicatie_main.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/communicatie/mondelinge_veiligheidscommunicatie.dart';
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/communicatie/communicatiemiddelen_basis.dart';
 
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/proquiz/proquizmain.dart';
