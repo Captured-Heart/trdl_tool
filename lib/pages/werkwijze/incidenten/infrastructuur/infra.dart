@@ -195,7 +195,7 @@ class Infra extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: Text(
-                              'Treinen komen niet tijdig tot stilstand voor het gevaarpunt of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                              'Treinen komen niet tijdig tot stilstand voor het gevaarpunt of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
                               style: TextStyle(
                                 fontSize: 16.0,
                               ),

@@ -40,7 +40,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Een rijweg is een spoorgedeelte dat ter beschikking wordt gesteld om verplaatsing van (meestal) een trein van A naar B mogelijk te maken​​​​​​​.',
+                                  'Een rijweg is een spoorgedeelte dat ter beschikking wordt gesteld om verplaatsing van (meestal) een trein van A naar B mogelijk te maken.',
                             ),
                           ),
                         ],
@@ -370,7 +370,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/opbouwPlanregelPlanscherm1.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/planopbouw_basis/opbouwPlanregelPlanscherm1.png',
                             ),
                           ),
                         ],
@@ -381,7 +381,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/opbouwPlanregelPlanscherm2.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/planopbouw_basis/opbouwPlanregelPlanscherm2.png',
                             ),
                           ),
                         ],
@@ -993,7 +993,7 @@ class OpbouwPlanBasisAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/opbouwPlanregelMutatiescherm.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/planopbouw_basis/opbouwPlanregelMutatiescherm.png',
                             ),
                           ),
                         ],

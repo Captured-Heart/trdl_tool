@@ -38,7 +38,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Als treindienstleider ben je vaak afhankelijk van informatie die, behalve uit je systemen, afkomstig is van personen die buiten aan het werk zijn. Ook is het vaak noodzakelijk om informatie te verkrijgen door gericht vragen te stellen aan deze personen. En andersom geeft je ook opdrachten om de trein- en rangeerdienst planmatig en veilig te laten verlopen.',
+                              text:
+                                  'Als treindienstleider ben je vaak afhankelijk van informatie die, behalve uit je systemen, afkomstig is van personen die buiten aan het werk zijn. Ook is het vaak noodzakelijk om informatie te verkrijgen door gericht vragen te stellen aan deze personen. En andersom geeft je ook opdrachten om de trein- en rangeerdienst planmatig en veilig te laten verlopen.',
                             ),
                           ),
                         ],
@@ -58,7 +59,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Een groot deel van de opdrachten die je geeft als treindienstleider gaat gewoon mondeling. Denk bijvoorbeeld aan het vragen aan het oprijden tot aan een sein van een trein om ruimte op het betrokken spoor te creëren, vragen aan een machinist of hij al stilstaat, etc.',
+                              text:
+                                  'Een groot deel van de opdrachten die je geeft als treindienstleider gaat gewoon mondeling. Denk bijvoorbeeld aan het vragen aan het oprijden tot aan een sein van een trein om ruimte op het betrokken spoor te creëren, vragen aan een machinist of hij al stilstaat, etc.',
                             ),
                           ),
                         ],
@@ -68,7 +70,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Maar je kan een iemand ook vragen om je te voorzien van informatie die te maken heeft met de situatie op en rond de spoorbaan. We noemen dit schouwen.',
+                              text:
+                                  'Maar je kan een iemand ook vragen om je te voorzien van informatie die te maken heeft met de situatie op en rond de spoorbaan. We noemen dit schouwen.',
                             ),
                           ),
                         ],
@@ -78,7 +81,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Een dergelijke opdracht is een zogenaamde schouwopdracht: gericht vragen om iets te onderzoeken en terugkoppeling te geven. Zo kan je bijvoorbeeld aan een machinist vragen om te kijken of hij iets bijzonders ziet, een voorgaande melding te verifiëren en hier terugkoppeling over te geven.',
+                              text:
+                                  'Een dergelijke opdracht is een zogenaamde schouwopdracht: gericht vragen om iets te onderzoeken en terugkoppeling te geven. Zo kan je bijvoorbeeld aan een machinist vragen om te kijken of hij iets bijzonders ziet, een voorgaande melding te verifiëren en hier terugkoppeling over te geven.',
                             ),
                           ),
                         ],
@@ -88,7 +92,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Tijdens het werk kan het voorkomen dat je met een ketenpartner afspraken moet maken over het toelaten van een trein tot zijn gebied, anders dan volgens het reguliere plan.',
+                              text:
+                                  'Tijdens het werk kan het voorkomen dat je met een ketenpartner afspraken moet maken over het toelaten van een trein tot zijn gebied, anders dan volgens het reguliere plan.',
                             ),
                           ),
                         ],
@@ -120,7 +125,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '* Er op een baanvak geen blokverband is tussen seinen;',
+                              text:
+                                  '* Er op een baanvak geen blokverband is tussen seinen;',
                             ),
                           ),
                         ],
@@ -142,7 +148,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '* Je een bijzonder vervoer trein (BV) wilt sturen, waarbij de nevensporen vrijgehouden moeten worden.',
+                              text:
+                                  '* Je een bijzonder vervoer trein (BV) wilt sturen, waarbij de nevensporen vrijgehouden moeten worden.',
                             ),
                           ),
                         ],
@@ -153,7 +160,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- De LWB, over toelating van werktreinen tot de beschikbaar gestelde railinfracapaciteit.',
+                              text:
+                                  '- De LWB, over toelating van werktreinen tot de beschikbaar gestelde railinfracapaciteit.',
                             ),
                           ),
                         ],
@@ -163,7 +171,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Je wilt de zekerheid hebben dat een bericht is aangekomen en begrepen.',
+                              text:
+                                  'Je wilt de zekerheid hebben dat een bericht is aangekomen en begrepen.',
                             ),
                           ),
                         ],
@@ -173,7 +182,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Als je communiceert, is het handig om de volgende structuur aan te houden:',
+                              text:
+                                  'Als je communiceert, is het handig om de volgende structuur aan te houden:',
                             ),
                           ),
                         ],
@@ -195,7 +205,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Aannemen, toestaan dat een trein mag vertrekken;',
+                              text:
+                                  '- Aannemen, toestaan dat een trein mag vertrekken;',
                             ),
                           ),
                         ],
@@ -206,7 +217,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Doorgeven dat een trein is vertrokken (afseinen);',
+                              text:
+                                  '- Doorgeven dat een trein is vertrokken (afseinen);',
                             ),
                           ),
                         ],
@@ -217,7 +229,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Doorgeven dat een trein in zijn geheel binnen is, of;',
+                              text:
+                                  '- Doorgeven dat een trein in zijn geheel binnen is, of;',
                             ),
                           ),
                         ],
@@ -228,7 +241,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Doorgeven dat een trein niet in zijn geheel binnen is.',
+                              text:
+                                  '- Doorgeven dat een trein niet in zijn geheel binnen is.',
                             ),
                           ),
                         ],
@@ -251,7 +265,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Een standaardmelding heeft betrekking op specifieke informatie-uitwisseling over afwijkingen van het oorspronkelijk plan. Je moet altijd de zekerheid hebben dat een standaardmelding is aangekomen en begrepen.',
+                              text:
+                                  'Een standaardmelding heeft betrekking op specifieke informatie-uitwisseling over afwijkingen van het oorspronkelijk plan. Je moet altijd de zekerheid hebben dat een standaardmelding is aangekomen en begrepen.',
                             ),
                           ),
                         ],
@@ -261,7 +276,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De volgende meldingen worden door VOS automatisch doorgegeven:',
+                              text:
+                                  'De volgende meldingen worden door VOS automatisch doorgegeven:',
                             ),
                           ),
                         ],
@@ -283,7 +299,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Opheffen en inleggen van treinen;',
+                              text:
+                                  '- Opheffen en inleggen van bijzonderheden_trein;',
                             ),
                           ),
                         ],
@@ -294,7 +311,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Bijzonderheden aan een trein (standaard bijzonderheden).',
+                              text:
+                                  '- Bijzonderheden aan een trein (standaard bijzonderheden).',
                             ),
                           ),
                         ],
@@ -304,7 +322,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Beschikt de buurTRDL niet over VPT-procesleiding, dan moet je de meldingen alsnog telefonisch doorgeven.',
+                              text:
+                                  'Beschikt de buurTRDL niet over VPT-procesleiding, dan moet je de meldingen alsnog telefonisch doorgeven.',
                             ),
                           ),
                         ],
@@ -314,7 +333,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De volgende meldingen worden niet automatisch doorgegeven en moet u dus met de daarvoor aangewezen communicatiemiddelen doorgeven aan belanghebbenden:',
+                              text:
+                                  'De volgende meldingen worden niet automatisch doorgegeven en moet u dus met de daarvoor aangewezen communicatiemiddelen doorgeven aan belanghebbenden:',
                             ),
                           ),
                         ],
@@ -336,7 +356,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Wijzigingen in de volgorde van treinen.',
+                              text:
+                                  '- Wijzigingen in de volgorde van bijzonderheden_trein.',
                             ),
                           ),
                         ],
@@ -409,7 +430,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'In een aantal gevallen geef je als treindienstleider schriftelijk opdrachten af.\nAls treindienstleider ben je verantwoordelijk voor het tijdig beschikbaar stellen van veilige rijwegen. Veilige rijwegen stel je beschikbaar middels het instellen van rijwegen (waarbij aan alle rijwegvoorwaarden moet zijn voldaan). Wanneer de veiligheid niet gegarandeerd kan worden middels seingeving zal je dit moeten doen middels een schriftelijke aanwijzing.',
+                              text:
+                                  'In een aantal gevallen geef je als treindienstleider schriftelijk opdrachten af.\nAls treindienstleider ben je verantwoordelijk voor het tijdig beschikbaar stellen van veilige rijwegen. Veilige rijwegen stel je beschikbaar middels het instellen van rijwegen (waarbij aan alle rijwegvoorwaarden moet zijn voldaan). Wanneer de veiligheid niet gegarandeerd kan worden middels seingeving zal je dit moeten doen middels een schriftelijke aanwijzing.',
                             ),
                           ),
                         ],
@@ -420,7 +442,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Komt het sein niet uit de stand \'stop\' dan ga je eerst de zogenaamde rijwegvoorwaarden handmatig bewerkstelligen en geef je een aanwijzing \'STS\' af. Hierop staat aangegeven wat de machinist moet doen.',
+                              text:
+                                  '- Komt het sein niet uit de stand \'stop\' dan ga je eerst de zogenaamde rijwegvoorwaarden handmatig bewerkstelligen en geef je een aanwijzing \'STS\' af. Hierop staat aangegeven wat de machinist moet doen.',
                             ),
                           ),
                         ],
@@ -431,7 +454,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Heb je te maken met een bekend gevaar (toestand baan, derden langs te baan etc.) geef je aanwijzing \'VR\' af. Je geeft aan van waar tot waar het zogenaamde gevaar zich bevindt en laat de machinist daar rijden met maximaal 40 km/h (of lager mocht dat nodig zijn). Mocht je aanvullende informatie nodig hebben kan je de machinist vragen te schouwen. Dan kruis je het vakje \'schouwen\' ook aan op de aanwijzing.',
+                              text:
+                                  '- Heb je te maken met een bekend gevaar (toestand baan, derden langs te baan etc.) geef je aanwijzing \'VR\' af. Je geeft aan van waar tot waar het zogenaamde gevaar zich bevindt en laat de machinist daar rijden met maximaal 40 km/h (of lager mocht dat nodig zijn). Mocht je aanvullende informatie nodig hebben kan je de machinist vragen te schouwen. Dan kruis je het vakje \'schouwen\' ook aan op de aanwijzing.',
                             ),
                           ),
                         ],
@@ -442,7 +466,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Is de snelheid die de machinist wel ergens mag rijden door een ter zake kundig iemand aangegeven en is deze lager dan de snelheid die de seinen of borden aangeven dan geef je een aanwijzing \'SB\' af.',
+                              text:
+                                  '- Is de snelheid die de machinist wel ergens mag rijden door een ter zake kundig iemand aangegeven en is deze lager dan de snelheid die de seinen of borden aangeven dan geef je een aanwijzing \'SB\' af.',
                             ),
                           ),
                         ],
@@ -453,7 +478,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Bij een gestoorde of beschadigde overweg geef je dan nog een aanwijzing \'OVW\' af. Daarop staat hoe de machinist moet handelen bij een gestoorde overweg. Zit een overweg niet op de storingsmelder dan handelt de treindienstleider als aangegeven in de Plaatselijke Regelgeving',
+                              text:
+                                  '- Bij een gestoorde of beschadigde overweg geef je dan nog een aanwijzing \'OVW\' af. Daarop staat hoe de machinist moet handelen bij een gestoorde overweg. Zit een overweg niet op de storingsmelder dan handelt de treindienstleider als aangegeven in de Plaatselijke Regelgeving',
                             ),
                           ),
                         ],
@@ -473,7 +499,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle: 'Veiligheidscommunicatie treindienstleider',
+                              subtitle:
+                                  'Veiligheidscommunicatie treindienstleider',
                             ),
                           ),
                         ],
@@ -483,7 +510,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Veiligheidscommunicatie betreft het uitwisselen van veiligheid kritische berichten. Veiligheidscommunicatie vindt plaats tussen treindienstleider en functionarissen zoals genoemd in de tabel hieronder.',
+                              text:
+                                  'Veiligheidscommunicatie betreft het uitwisselen van veiligheid kritische berichten. Veiligheidscommunicatie vindt plaats tussen treindienstleider en functionarissen zoals genoemd in de tabel hieronder.',
                             ),
                           ),
                         ],
@@ -493,7 +521,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Dit zijn berichten, die bij onjuiste uitvoering (niet, volledig, te vroeg of te laat), tot veiligheidsincidenten kunnen leiden met slachtoffers en/of schade als gevolg.',
+                              text:
+                                  'Dit zijn berichten, die bij onjuiste uitvoering (niet, volledig, te vroeg of te laat), tot veiligheidsincidenten kunnen leiden met slachtoffers en/of schade als gevolg.',
                             ),
                           ),
                         ],
@@ -501,7 +530,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                       const SizedBoxH(),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
                         children: const [
                           TableRow(
                             children: [
@@ -712,7 +742,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Om miscommunicatie zoveel mogelijk uit te sluiten zijn de volgende uitgangspunten van toepassing:',
+                              text:
+                                  'Om miscommunicatie zoveel mogelijk uit te sluiten zijn de volgende uitgangspunten van toepassing:',
                             ),
                           ),
                         ],
@@ -768,7 +799,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Functionarissen identificeren zich bij aanvang van een bericht met hun functionele naam (bijv. MCN met treinnummer en locatie, TRDL met werkplek enz.).',
+                              text:
+                                  'Functionarissen identificeren zich bij aanvang van een bericht met hun functionele naam (bijv. MCN met treinnummer en locatie, TRDL met werkplek enz.).',
                             ),
                           ),
                         ],
@@ -791,7 +823,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Onder gespreksdiscipline wordt verstaan de regels, die gelden voor het uitvoeren van de veiligheidscommunicatie. Dit zijn:',
+                              text:
+                                  'Onder gespreksdiscipline wordt verstaan de regels, die gelden voor het uitvoeren van de veiligheidscommunicatie. Dit zijn:',
                             ),
                           ),
                         ],
@@ -848,7 +881,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Spreek elkaar aan op het gebruik van de regels voor veiligheidscommunicatie;',
+                              text:
+                                  '- Spreek elkaar aan op het gebruik van de regels voor veiligheidscommunicatie;',
                             ),
                           ),
                         ],
@@ -859,7 +893,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Veiligheidscommunicatie wordt gevoerd via een spreekverbinding die de gesprekken vastlegt (voicelogger en/of GSM-R);',
+                              text:
+                                  '- Veiligheidscommunicatie wordt gevoerd via een spreekverbinding die de gesprekken vastlegt (voicelogger en/of GSM-R);',
                             ),
                           ),
                         ],
@@ -870,7 +905,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Het is bij aanvang van elk bericht van belang vast te stellen of de juiste gesprekspartners berichten met elkaar uitwisselen (identificatieplicht en plaatsbepaling);',
+                              text:
+                                  '- Het is bij aanvang van elk bericht van belang vast te stellen of de juiste gesprekspartners berichten met elkaar uitwisselen (identificatieplicht en plaatsbepaling);',
                             ),
                           ),
                         ],
@@ -881,7 +917,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Gebruik voor plaatsbepaling de vaste infrastructuur:',
+                              text:
+                                  '- Gebruik voor plaatsbepaling de vaste infrastructuur:',
                             ),
                           ),
                         ],
@@ -947,7 +984,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Houd gesprekken kort en zakelijk om de communicatiemiddelen maximaal ter beschikking te hebben voor alle toegelaten gebruikers;',
+                              text:
+                                  '- Houd gesprekken kort en zakelijk om de communicatiemiddelen maximaal ter beschikking te hebben voor alle toegelaten gebruikers;',
                             ),
                           ),
                         ],
@@ -958,7 +996,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Gebruik voor het voeren van gesprekken de berichtenstructuur;',
+                              text:
+                                  '- Gebruik voor het voeren van gesprekken de berichtenstructuur;',
                             ),
                           ),
                         ],
@@ -969,7 +1008,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Luister of er een gesprek gaande is voor je gaat spreken, behalve bij een noodbericht;',
+                              text:
+                                  '- Luister of er een gesprek gaande is voor je gaat spreken, behalve bij een noodbericht;',
                             ),
                           ),
                         ],
@@ -1002,7 +1042,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Gebruik bij het spellen losse letters en het NATO-spelalfabet;',
+                              text:
+                                  '- Gebruik bij het spellen losse letters en het NATO-spelalfabet;',
                             ),
                           ),
                         ],
@@ -1013,7 +1054,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Treinnummers/sein- en wisselnummers/getallen worden eerst volledig en daarna cijfer voor cijfer uitgesproken;',
+                              text:
+                                  '- Treinnummers/sein- en wisselnummers/getallen worden eerst volledig en daarna cijfer voor cijfer uitgesproken;',
                             ),
                           ),
                         ],
@@ -1024,7 +1066,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Zorg dat misverstanden worden uitgesloten:',
+                              text:
+                                  '- Zorg dat misverstanden worden uitgesloten:',
                             ),
                           ),
                         ],
@@ -1035,7 +1078,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '* Elk bericht moet door de ontvanger inhoudelijk herhaald worden;',
+                              text:
+                                  '* Elk bericht moet door de ontvanger inhoudelijk herhaald worden;',
                             ),
                           ),
                         ],
@@ -1046,7 +1090,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '* Elk herhaald bericht moet door de afzender worden gevolgd door de vaste dienstuitdrukking \'correct\' of \'fout ik herhaal\';',
+                              text:
+                                  '* Elk herhaald bericht moet door de afzender worden gevolgd door de vaste dienstuitdrukking \'correct\' of \'fout ik herhaal\';',
                             ),
                           ),
                         ],
@@ -1057,7 +1102,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '* Elk bericht, behalve het laatste van een gesprek, wordt beëindigd met de uitdrukking: \'over\';',
+                              text:
+                                  '* Elk bericht, behalve het laatste van een gesprek, wordt beëindigd met de uitdrukking: \'over\';',
                             ),
                           ),
                         ],
@@ -1068,7 +1114,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '* Elk gesprek wordt beëindigd met de uitdrukking: \'sluiten\'.',
+                              text:
+                                  '* Elk gesprek wordt beëindigd met de uitdrukking: \'sluiten\'.',
                             ),
                           ),
                         ],
@@ -1091,7 +1138,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Om de verzending van berichten gedisciplineerd te doen verlopen moeten de volgende dienstuitdrukkingen worden gebruikt:',
+                              text:
+                                  'Om de verzending van berichten gedisciplineerd te doen verlopen moeten de volgende dienstuitdrukkingen worden gebruikt:',
                             ),
                           ),
                         ],
@@ -1099,7 +1147,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                       const SizedBoxH(),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
                         children: const [
                           TableRow(
                             children: [
@@ -1337,7 +1386,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Om in uiteenlopende situaties misverstanden te voorkomen, moet elke uitdrukking langzaam en duidelijk worden uitgesproken. Hierbij moeten de woorden, die slecht kunnen worden begrepen, worden gespeld en getallen cijfer voor cijfer worden uitgesproken.',
+                              text:
+                                  'Om in uiteenlopende situaties misverstanden te voorkomen, moet elke uitdrukking langzaam en duidelijk worden uitgesproken. Hierbij moeten de woorden, die slecht kunnen worden begrepen, worden gespeld en getallen cijfer voor cijfer worden uitgesproken.',
                             ),
                           ),
                         ],
@@ -1345,7 +1395,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                       const SizedBoxH(),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
                         children: const [
                           TableRow(
                             children: [
@@ -1793,7 +1844,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De volgende berichten kunnen worden onderscheiden:',
+                              text:
+                                  'De volgende berichten kunnen worden onderscheiden:',
                             ),
                           ),
                         ],
@@ -1860,7 +1912,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'In een noodsituatie gebruik je de alarmknop GSM-R:',
+                              text:
+                                  'In een noodsituatie gebruik je de alarmknop GSM-R:',
                             ),
                           ),
                         ],
@@ -1871,7 +1924,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Indien de situatie het vereist dat meerdere treinen tot stilstand moeten komen, wordt het volgende bericht gebruikt: \'Noodsituatie: stop alle treinen\';',
+                              text:
+                                  '- Indien de situatie het vereist dat meerdere bijzonderheden_trein tot stilstand moeten komen, wordt het volgende bericht gebruikt: \'Noodsituatie: stop alle bijzonderheden_trein\';',
                             ),
                           ),
                         ],
@@ -1882,7 +1936,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Indien de situatie het vereist dat één bepaalde trein tot stilstand moet komen, wordt het volgende bericht gebruikt: \'Trein ...(nummer)... Op spoor ...(stationsnaam/baanvak, spoornummer)... noodstop.\'',
+                              text:
+                                  'Indien de situatie het vereist dat één bepaalde trein tot stilstand moet komen, wordt het volgende bericht gebruikt: \'Trein ...(nummer)... Op spoor ...(stationsnaam/baanvak, spoornummer)... noodstop.\'',
                             ),
                           ),
                         ],
@@ -1905,7 +1960,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Aanwijzingen worden gebruikt voor het overbrengen van procedurele berichten tussen treindienstleiders en machinisten. Het is voor goede en duidelijke communicatie van belang dat door de beide partijen gebruikte aanwijzingen qua inhoud consistent zijn aan elkaar. De aanwijzingen van alle partijen zijn in het Formulierenboek opgenomen.',
+                              text:
+                                  'Aanwijzingen worden gebruikt voor het overbrengen van procedurele berichten tussen treindienstleiders en machinisten. Het is voor goede en duidelijke communicatie van belang dat door de beide partijen gebruikte aanwijzingen qua inhoud consistent zijn aan elkaar. De aanwijzingen van alle partijen zijn in het Formulierenboek opgenomen.',
                             ),
                           ),
                         ],
@@ -1915,7 +1971,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Het afgeven van aanwijzingen moet voorafgegaan worden door het volgende bericht:',
+                              text:
+                                  'Het afgeven van aanwijzingen moet voorafgegaan worden door het volgende bericht:',
                             ),
                           ),
                         ],
@@ -1925,18 +1982,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: '\'Trein ...(nummer)... Hier treindienstleider ...(werkplek)... ...(aanwijzing)... voorbereiden over\'',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Voorafgaand aan het afgeven van de aanwijzing, vult de treindienstleider de aanwijzing in;',
+                              text:
+                                  '\'Trein ...(nummer)... Hier treindienstleider ...(werkplek)... ...(aanwijzing)... voorbereiden over\'',
                             ),
                           ),
                         ],
@@ -1947,7 +1994,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Bij het afgeven van de aanwijzing leest de treindienstleider deze letterlijk voor;',
+                              text:
+                                  '- Voorafgaand aan het afgeven van de aanwijzing, vult de treindienstleider de aanwijzing in;',
                             ),
                           ),
                         ],
@@ -1958,7 +2006,20 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- De machinist noteert de inhoud van de aan hem afgegeven aanwijzing op het daarvoor van toepassing zijnde formulier (Formulierenboek).',
+                              text:
+                                  '- Bij het afgeven van de aanwijzing leest de treindienstleider deze letterlijk voor;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text:
+                                  '- De machinist noteert de inhoud van de aan hem afgegeven aanwijzing op het daarvoor van toepassing zijnde formulier (Formulierenboek).',
                             ),
                           ),
                         ],
@@ -1981,7 +2042,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Dit betreft de communicatie over het starten en beëindigen van werkzaamheden.',
+                              text:
+                                  'Dit betreft de communicatie over het starten en beëindigen van werkzaamheden.',
                             ),
                           ),
                         ],
@@ -2004,7 +2066,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'Hier ...(functie)..., \'ik vraag toestemming om werkzaamheden op ...(spoor/gebied)... aan te mogen vangen, over.\'',
+                              text:
+                                  'Hier ...(functie)..., \'ik vraag toestemming om werkzaamheden op ...(spoor/gebied)... aan te mogen vangen, over.\'',
                             ),
                           ),
                         ],
@@ -2015,7 +2078,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '\'Hier treindienstleider ...(werkplek)..., maatregelen treindienstleider ...(spoor/gebied)... aangebracht, ik geef aan ...(functie)..., om ...(tijd)... toestemming om werkzaamheden op ...(spoor/gebied)... aan te vangen, over.\'',
+                              text:
+                                  '\'Hier treindienstleider ...(werkplek)..., maatregelen treindienstleider ...(spoor/gebied)... aangebracht, ik geef aan ...(functie)..., om ...(tijd)... toestemming om werkzaamheden op ...(spoor/gebied)... aan te vangen, over.\'',
                             ),
                           ),
                         ],
@@ -2026,7 +2090,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '\'Hier ...(functie)..., ik krijg om ...(tijd)... toestemming om werkzaamheden op ...(spoor/gebied)... aan te vangen, over.\'',
+                              text:
+                                  '\'Hier ...(functie)..., ik krijg om ...(tijd)... toestemming om werkzaamheden op ...(spoor/gebied)... aan te vangen, over.\'',
                             ),
                           ),
                         ],
@@ -2049,7 +2114,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '\'Hier ...(functie)..., WBI ...(nummer)..., werkplek ...(letter)... voorbereiden, over.\'',
+                              text:
+                                  '\'Hier ...(functie)..., WBI ...(nummer)..., werkplek ...(letter)... voorbereiden, over.\'',
                             ),
                           ),
                         ],
@@ -2060,7 +2126,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '\'Hier treindienstleider ...(werkplek)..., maatregelen treindienstleider volgens WBI ...(nummer)..., werkplek ...(letter)... aangebracht, ik geef om ...(tijd)..., ...(functie)... toestemming om werkzaamheden aan te vangen, over\'',
+                              text:
+                                  '\'Hier treindienstleider ...(werkplek)..., maatregelen treindienstleider volgens WBI ...(nummer)..., werkplek ...(letter)... aangebracht, ik geef om ...(tijd)..., ...(functie)... toestemming om werkzaamheden aan te vangen, over\'',
                             ),
                           ),
                         ],
@@ -2071,7 +2138,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '\'Hier ...(functie)..., WBI ...(nummer)..., werkplek ...(letter)..., ik krijg om ...(tijd)... toestemming van treindienstleider ...(werkplek)... om de werkzaamheden aan te vangen, over.\'',
+                              text:
+                                  '\'Hier ...(functie)..., WBI ...(nummer)..., werkplek ...(letter)..., ik krijg om ...(tijd)... toestemming van treindienstleider ...(werkplek)... om de werkzaamheden aan te vangen, over.\'',
                             ),
                           ),
                         ],
@@ -2094,7 +2162,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '\'Hier ...(functie)..., ik meld werkzaamheden op ...(spoor/gebied/WBI)... gereed om ...(tijd)..., over.\'',
+                              text:
+                                  '\'Hier ...(functie)..., ik meld werkzaamheden op ...(spoor/gebied/WBI)... gereed om ...(tijd)..., over.\'',
                             ),
                           ),
                         ],
@@ -2105,7 +2174,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '\'Hier treindienstleider ...(werkplek)..., de werkzaamheden op ...(spoor/gebied/WBI)... zijn gereed om ...(tijd)..., over.\'',
+                              text:
+                                  '\'Hier treindienstleider ...(werkplek)..., de werkzaamheden op ...(spoor/gebied/WBI)... zijn gereed om ...(tijd)..., over.\'',
                             ),
                           ),
                         ],
@@ -2128,7 +2198,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Hieronder vallen informatieve berichten die tussen treindienstleiders en machinisten gebruikt worden om elkaar van situaties op de hoogte te stellen.',
+                              text:
+                                  'Hieronder vallen informatieve berichten die tussen treindienstleiders en machinisten gebruikt worden om elkaar van situaties op de hoogte te stellen.',
                             ),
                           ),
                         ],
@@ -2138,18 +2209,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'De volgende berichtenstructuur moet hiervoor worden gebruikt:',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Reden voor het bericht (informatief en/of gevraagde actie);',
+                              text:
+                                  'De volgende berichtenstructuur moet hiervoor worden gebruikt:',
                             ),
                           ),
                         ],
@@ -2160,7 +2221,20 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Opmerking (voorbeeld: Er is.../Ik zag.../Ik had.../Ik raakte...);',
+                              text:
+                                  '- Reden voor het bericht (informatief en/of gevraagde actie);',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text:
+                                  '- Opmerking (voorbeeld: Er is.../Ik zag.../Ik had.../Ik raakte...);',
                             ),
                           ),
                         ],
@@ -2203,7 +2277,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Denk bij het voeren van informatieve gesprekken ook aan Luisteren, Samenvatten, Doorvragen (LSD) en aan de vorm van vraagstelling die je gebruikt voor een zo optimaal mogelijk resultaat:',
+                              text:
+                                  'Denk bij het voeren van informatieve gesprekken ook aan Luisteren, Samenvatten, Doorvragen (LSD) en aan de vorm van vraagstelling die je gebruikt voor een zo optimaal mogelijk resultaat:',
                             ),
                           ),
                         ],
@@ -2228,7 +2303,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'nodigen de ander uit te praten en een eigen invulling aan het antwoord te geven. Deze vragen kunnen beginnen met: hoe, wat, wie, waar, waarom, wanneer, etc.',
+                              text:
+                                  'nodigen de ander uit te praten en een eigen invulling aan het antwoord te geven. Deze vragen kunnen beginnen met: hoe, wat, wie, waar, waarom, wanneer, etc.',
                             ),
                           ),
                         ],
@@ -2253,7 +2329,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'geven de mogelijkheid tot een \'ja\' of \'nee\' antwoord. Deze kunnen zinvol zijn als de ander een langdradige spreker is en jij specifieke informatie wilt. Veel gesloten vragen achter elkaar geven het effect van een \'kruisverhoor\'.',
+                              text:
+                                  'geven de mogelijkheid tot een \'ja\' of \'nee\' antwoord. Deze kunnen zinvol zijn als de ander een langdradige spreker is en jij specifieke informatie wilt. Veel gesloten vragen achter elkaar geven het effect van een \'kruisverhoor\'.',
                             ),
                           ),
                         ],
@@ -2278,7 +2355,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'bevatten al een mening en kunnen manipulatief zijn: \'Vind je ook niet dat...?\' of \'Het is toch zeker zo dat...?\' Dergelijke sturende vragen zetten een ander soms voor het blok.',
+                              text:
+                                  'bevatten al een mening en kunnen manipulatief zijn: \'Vind je ook niet dat...?\' of \'Het is toch zeker zo dat...?\' Dergelijke sturende vragen zetten een ander soms voor het blok.',
                             ),
                           ),
                         ],
@@ -2303,7 +2381,8 @@ class MondelingeVeiligheidAchtergrond extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: 'laten weinig ruimte voor alternatieven: \'Wil je hier eten of gaan we naar het eetcafé?\' Stimuleert de ander snel een beslissing te nemen.',
+                              text:
+                                  'laten weinig ruimte voor alternatieven: \'Wil je hier eten of gaan we naar het eetcafé?\' Stimuleert de ander snel een beslissing te nemen.',
                             ),
                           ),
                         ],

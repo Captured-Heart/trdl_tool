@@ -95,7 +95,7 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/communicatie/intel_console_1.png',
+                              'assets/images/achtergrond_info/communicatie/communicatie_middelen/intel_console_1.png',
                             ),
                           ),
                         ],
@@ -207,7 +207,7 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/communicatie/intel_console_2.png',
+                              'assets/images/achtergrond_info/communicatie/communicatie_middelen/intel_console_2.png',
                             ),
                           ),
                         ],
@@ -218,7 +218,7 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/communicatie/intel_console_3.png',
+                              'assets/images/achtergrond_info/communicatie/communicatie_middelen/intel_console_3.png',
                             ),
                           ),
                         ],
@@ -1017,7 +1017,7 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/communicatie/gsm_r_handheld.png',
+                              'assets/images/achtergrond_info/communicatie/communicatie_middelen/gsm_r_handheld.png',
                             ),
                           ),
                         ],
@@ -1048,7 +1048,7 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'De GSM-R portofoon maakt gebruik van het GSM-R netwerk van ProRail, dat deel uitmaakt van de spoorweginfrastructuur. De GSM-R portofoon stelt groepen medewerkers bij het spoor in staat op een veilige manier rechtstreeks met elkaar te communiceren. Daarnaast kan direct worden gesproken met treindienstleiders, met eigen bijstuurders en met machinisten van treinen. Deze nieuwe portofoons staan ook ter beschikking aan de PCA\'s.',
+                                  'De GSM-R portofoon maakt gebruik van het GSM-R netwerk van ProRail, dat deel uitmaakt van de spoorweginfrastructuur. De GSM-R portofoon stelt groepen medewerkers bij het spoor in staat op een veilige manier rechtstreeks met elkaar te communiceren. Daarnaast kan direct worden gesproken met treindienstleiders, met eigen bijstuurders en met machinisten van bijzonderheden_trein. Deze nieuwe portofoons staan ook ter beschikking aan de PCA\'s.',
                             ),
                           ),
                         ],
@@ -1211,7 +1211,7 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/communicatie/portofoon_telefoon.png',
+                              'assets/images/achtergrond_info/communicatie/communicatie_middelen/portofoon_telefoon.png',
                             ),
                           ),
                         ],

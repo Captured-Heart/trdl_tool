@@ -68,7 +68,7 @@ class VeiligheidsstoringSein extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],

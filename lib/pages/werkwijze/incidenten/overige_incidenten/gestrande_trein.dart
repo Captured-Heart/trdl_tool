@@ -88,7 +88,7 @@ class GestrandeTrein extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Conflicterend spoorgebruik en/of Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                                  'Conflicterend spoorgebruik en/of Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],

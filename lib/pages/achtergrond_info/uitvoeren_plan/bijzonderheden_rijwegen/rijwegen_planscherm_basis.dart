@@ -40,7 +40,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Een rijweg is een spoorgedeelte dat ter beschikking wordt gesteld om verplaatsing van (meestal) een trein van A naar B mogelijk te maken​​​​​​​.',
+                                  'Een rijweg is een spoorgedeelte dat ter beschikking wordt gesteld om verplaatsing van (meestal) een trein van A naar B mogelijk te maken.',
                             ),
                           ),
                         ],
@@ -937,7 +937,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/dwangToevoegen1.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/dwangToevoegen1.png',
                             ),
                           ),
                         ],
@@ -970,7 +970,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/dwangToevoegen2.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/dwangToevoegen2.png',
                             ),
                           ),
                         ],
@@ -1037,7 +1037,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/dwangToevoegen3.jpg',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/dwangToevoegen3.jpg',
                             ),
                           ),
                         ],
@@ -1092,7 +1092,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Bij gefaseerde rijweginstelling hoeft met het instellen van de rijweg niet te worden gewacht tot de gehele rijweg beschikbaar is. Dit heeft een gunstig effect op de opvolging van treinen en zal daarmee de punctualiteit verhogen. Ook blijft het nog niet benodigde deel van de rijweg beschikbaar voor andere rijwegen. Zo kunnen andere treinen nog voorlangs passeren. Om een minimale infracapaciteit te claimen, moet ARI bij gefaseerde rijweginstelling niet meer dan een geconfigureerd aantal seinstappen (enkelvoudige rijwegen) voor de trein uit instellen. Indien op een moment dit aantal niet mogelijk is, wordt met een kleiner aantal seinstappen voldaan. In de ARI-configuratie wordt per pplg het aantal in te stellen seinstappen vastgesteld. Default staat dit aantal op twee seinstappen ingesteld.',
+                                  'Bij gefaseerde rijweginstelling hoeft met het instellen van de rijweg niet te worden gewacht tot de gehele rijweg beschikbaar is. Dit heeft een gunstig effect op de opvolging van bijzonderheden_trein en zal daarmee de punctualiteit verhogen. Ook blijft het nog niet benodigde deel van de rijweg beschikbaar voor andere rijwegen. Zo kunnen andere bijzonderheden_trein nog voorlangs passeren. Om een minimale infracapaciteit te claimen, moet ARI bij gefaseerde rijweginstelling niet meer dan een geconfigureerd aantal seinstappen (enkelvoudige rijwegen) voor de trein uit instellen. Indien op een moment dit aantal niet mogelijk is, wordt met een kleiner aantal seinstappen voldaan. In de ARI-configuratie wordt per pplg het aantal in te stellen seinstappen vastgesteld. Default staat dit aantal op twee seinstappen ingesteld.',
                             ),
                           ),
                         ],
@@ -1346,7 +1346,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/hoogGroen1.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen1.png',
                             ),
                           ),
                         ],
@@ -1358,7 +1358,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/hoogGroen2.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen2.png',
                             ),
                           ),
                         ],
@@ -1379,7 +1379,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/hoogGroen3.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen3.png',
                             ),
                           ),
                         ],
@@ -1422,7 +1422,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/hoogGroen4.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen4.png',
                             ),
                           ),
                         ],
@@ -1444,7 +1444,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/hoogGroen5.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen5.png',
                             ),
                           ),
                         ],

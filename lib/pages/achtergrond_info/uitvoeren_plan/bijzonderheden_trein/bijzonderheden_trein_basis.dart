@@ -1,21 +1,21 @@
 import 'package:trdl_tool/all_imports.dart';
 
-final List<Image> elektrLocsList = [
-  Image.asset(
-    'assets/images/achtergrond_info/treinen/elektrische_locs/elektrLoc1.jpg',
-  ),
-  Image.asset(
-    'assets/images/achtergrond_info/treinen/elektrische_locs/elektrLoc2.jpg',
-  ),
-  Image.asset(
-    'assets/images/achtergrond_info/treinen/elektrische_locs/elektrLoc3.jpg',
-  ),
-];
-
-const String treinenVanNS = 'https://ns.nl/over-ns/treinen-van-ns';
+const String treinenVanNS = 'https://ns.nl/over-ns/bijzonderheden_trein-van-ns';
 const String nlSpoorwegMaterieel =
     'https://nl.wikipedia.org/wiki/Nederlands_spoorwegmaterieel';
 const String goederenWagon = 'https://nl.wikipedia.org/wiki/Goederenwagon';
+
+final List<Image> elektrLocsList = [
+  Image.asset(
+    'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/elektrische_locs/elektrLoc1.jpg',
+  ),
+  Image.asset(
+    'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/elektrische_locs/elektrLoc2.jpg',
+  ),
+  Image.asset(
+    'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/elektrische_locs/elektrLoc3.jpg',
+  ),
+];
 
 class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
   const BijzonderhedenTreinBasisAchtergrond({Key? key}) : super(key: key);
@@ -137,7 +137,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/goederenTrein.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/goederenTrein.png',
                             ),
                           ),
                         ],
@@ -184,7 +184,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                         child: Padding(
                                           padding: const EdgeInsets.all(16.0),
                                           child: Image.asset(
-                                            'assets/images/achtergrond_info/treinen/elektrische_locs/elektrLoc$i.jpg',
+                                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/elektrische_locs/elektrLoc$i.jpg',
                                           ),
                                         ),
                                       ),
@@ -410,7 +410,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                         child: Padding(
                                           padding: const EdgeInsets.all(16.0),
                                           child: Image.asset(
-                                            'assets/images/achtergrond_info/treinen/diesel_locs/dieselLoc$i.jpg',
+                                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/diesel_locs/dieselLoc$i.jpg',
                                           ),
                                         ),
                                       ),
@@ -839,7 +839,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                         child: Padding(
                                           padding: const EdgeInsets.all(16.0),
                                           child: Image.asset(
-                                            'assets/images/achtergrond_info/treinen/elektrische_treinen/elektrTrein$i.jpg',
+                                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/elektrische_treinen/elektrTrein$i.jpg',
                                           ),
                                         ),
                                       ),
@@ -1209,7 +1209,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                         child: Padding(
                                           padding: const EdgeInsets.all(16.0),
                                           child: Image.asset(
-                                            'assets/images/achtergrond_info/treinen/diesel_treinen/dieselTrein$i.jpg',
+                                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/diesel_treinen/dieselTrein$i.jpg',
                                           ),
                                         ),
                                       ),
@@ -1405,7 +1405,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                         child: Padding(
                                           padding: const EdgeInsets.all(16.0),
                                           child: Image.asset(
-                                            'assets/images/achtergrond_info/treinen/rijtuigen/rijtuigen$i.jpg',
+                                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/rijtuigen/rijtuigen$i.jpg',
                                           ),
                                         ),
                                       ),
@@ -1600,7 +1600,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                         child: Padding(
                                           padding: const EdgeInsets.all(16.0),
                                           child: Image.asset(
-                                            'assets/images/achtergrond_info/treinen/onderhouds_machines/onderhoudsMachine$i.jpg',
+                                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/onderhouds_machines/onderhoudsMachine$i.jpg',
                                           ),
                                         ),
                                       ),
@@ -1657,7 +1657,7 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                         child: Padding(
                                           padding: const EdgeInsets.all(16.0),
                                           child: Image.asset(
-                                            'assets/images/achtergrond_info/treinen/railweg_voertuigen/railwegVoertuig$i.jpg',
+                                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/railweg_voertuigen/railwegVoertuig$i.jpg',
                                           ),
                                         ),
                                       ),
@@ -1680,15 +1680,21 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
     );
   }
 
-  void launchTreinenVanNS() async => await canLaunch(treinenVanNS)
-      ? await launch(treinenVanNS)
-      : throw 'Could not launch $treinenVanNS';
+  void launchTreinenVanNS() async {
+    if (!await launch(treinenVanNS)) {
+      throw 'Could not launch $treinenVanNS';
+    }
+  }
 
-  void lauchNLSpoorwegMaterieel() async => await canLaunch(nlSpoorwegMaterieel)
-      ? await launch(nlSpoorwegMaterieel)
-      : throw 'Could not launch $nlSpoorwegMaterieel';
+  void lauchNLSpoorwegMaterieel() async {
+    if (!await launch(nlSpoorwegMaterieel)) {
+      throw 'Could not launch $nlSpoorwegMaterieel';
+    }
+  }
 
-  void launchGoederenwagon() async => await canLaunch(goederenWagon)
-      ? await launch(goederenWagon)
-      : throw 'Could not launch $goederenWagon';
+  void launchGoederenwagon() async {
+    if (!await launch(goederenWagon)) {
+      throw 'Could not launch $goederenWagon';
+    }
+  }
 }

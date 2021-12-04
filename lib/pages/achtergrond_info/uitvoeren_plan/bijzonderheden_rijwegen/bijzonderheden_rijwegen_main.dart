@@ -110,7 +110,7 @@ class BijzonderhedenRijwegenAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/icbVoertuig.jpg',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/icbVoertuig.jpg',
                             ),
                           ),
                         ],

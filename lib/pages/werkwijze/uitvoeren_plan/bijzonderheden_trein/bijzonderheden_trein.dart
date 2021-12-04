@@ -68,7 +68,7 @@ class BijzonderhedenTrein extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Conflicterend spoorgebruik, voor treinen met beperkende voorwaarden.',
+                                  'Conflicterend spoorgebruik, voor bijzonderheden_trein met beperkende voorwaarden.',
                             ),
                           ),
                         ],

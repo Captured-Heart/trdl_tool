@@ -62,7 +62,7 @@ class WisselsVrijmaken extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Alle treinen stilstaan;',
+                              text: '- Alle bijzonderheden_trein stilstaan;',
                             ),
                           ),
                         ],
@@ -109,7 +109,7 @@ class WisselsVrijmaken extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],

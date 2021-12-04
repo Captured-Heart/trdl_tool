@@ -79,7 +79,7 @@ class Dienstovergave extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Het rijden van treinen op sporen waarop zij niet of met beperkingen mogen rijden.',
+                                  'Het rijden van bijzonderheden_trein op sporen waarop zij niet of met beperkingen mogen rijden.',
                             ),
                           ),
                         ],
