@@ -86,7 +86,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Bij aanvang van de werkzaamheden stel je zelf of via jouw buurtreindienstleider vast of zich treinen in de buitendienststelling bevinden anders dan die volgens het WBI/WECO zijn toegestaan, uitgezonderd materieel ten behoeve van de werkzaamheden. Daarnaast stel je vast of de buurtreindienstleider zijn maatregelen volgens het WBI/WECO heeft genomen. Jij hebt de bevoegdheid om voorrang te verlenen aan deze controle en mag hiervoor dus treinen vertragen en registreert de ontstane vertragingen onder vermelding van het WBI-nummer.',
+                                  'Bij aanvang van de werkzaamheden stel je zelf of via jouw buurtreindienstleider vast of zich bijzonderheden_trein in de buitendienststelling bevinden anders dan die volgens het WBI/WECO zijn toegestaan, uitgezonderd materieel ten behoeve van de werkzaamheden. Daarnaast stel je vast of de buurtreindienstleider zijn maatregelen volgens het WBI/WECO heeft genomen. Jij hebt de bevoegdheid om voorrang te verlenen aan deze controle en mag hiervoor dus bijzonderheden_trein vertragen en registreert de ontstane vertragingen onder vermelding van het WBI-nummer.',
                             ),
                           ),
                         ],
@@ -128,7 +128,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Als het spoor schoon is, neem je de afgesproken veiligheidsmaatregelen, zoals deze in het WBI vermeld staan. Als de buitendienststelling van het WBI ook de sporen van anderen treindienstleiders betreft, stel je vast of de buurtreindienstleider zijn maatregelen volgens het WBI/WECO heeft genomen. Jij hebt de bevoegdheid om voorrang te verlenen aan deze controle en mag hiervoor dus treinen vertragen en registreert de ontstane vertragingen onder vermelding van het WBI-nummer.',
+                                  'Als het spoor schoon is, neem je de afgesproken veiligheidsmaatregelen, zoals deze in het WBI vermeld staan. Als de buitendienststelling van het WBI ook de sporen van anderen treindienstleiders betreft, stel je vast of de buurtreindienstleider zijn maatregelen volgens het WBI/WECO heeft genomen. Jij hebt de bevoegdheid om voorrang te verlenen aan deze controle en mag hiervoor dus bijzonderheden_trein vertragen en registreert de ontstane vertragingen onder vermelding van het WBI-nummer.',
                             ),
                           ),
                         ],
@@ -185,7 +185,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzaamhedenSpoor.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzaamhedenSpoor.png',
                             ),
                           ),
                         ],
@@ -606,7 +606,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Soms staan de eerste (reizigers)treinen opgesteld in de buitendienststelling. Dit staat vermeld op de WBI/WECO. Het vertrek van deze treinen is vaak zeer kort na afloop van de geplande werkzaamheden. Wanneer werkzaamheden uitlopen betekent dit dat ARI de rijwegen voor deze treinen gewoon in kan stellen, ondanks dat het spoor nog buiten dienst is. Dit kan tot gevolg hebben dat een sein in de buitendienststelling veilig wordt gezet en de trein kan gaan rijden, een zeer onwenselijke en gevaarlijke situatie!',
+                                  'Soms staan de eerste (reizigers)bijzonderheden_trein opgesteld in de buitendienststelling. Dit staat vermeld op de WBI/WECO. Het vertrek van deze bijzonderheden_trein is vaak zeer kort na afloop van de geplande werkzaamheden. Wanneer werkzaamheden uitlopen betekent dit dat ARI de rijwegen voor deze bijzonderheden_trein gewoon in kan stellen, ondanks dat het spoor nog buiten dienst is. Dit kan tot gevolg hebben dat een sein in de buitendienststelling veilig wordt gezet en de trein kan gaan rijden, een zeer onwenselijke en gevaarlijke situatie!',
                             ),
                           ),
                         ],
@@ -671,7 +671,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Soms staan de eerste (reizigers)treinen opgesteld in de buitendienststelling. Dit staat vermeld op de WBI/WECO. Deze treinen staan vaak gepland voor vertrek zeer kort na afloop van de geplande werkzaamheden. Wanneer werkzaamheden uitlopen betekent dit dat procesleiding de rijwegen voor deze treinen gewoon in kan stellen, ondanks dat het spoor nog buiten dienst is. Dit kan tot gevolg hebben dat een sein in de buitendienststelling veilig wordt gezet en de trein gaat rijden, een zeer onwenselijke en gevaarlijke situatie! Wanneer je de melding krijgt van uitloop van werkzaamheden is het daarom van belang dat je goed kijkt of Procesleiding rijwegen binnen de buitendienststelling veilig kan zetten en dat je maatregelen neemt om dit te voorkomen. Je kunt dit bijvoorbeeld doen door of door een verhinderingsmaatregel te plaatsen;',
+                                  'Soms staan de eerste (reizigers)bijzonderheden_trein opgesteld in de buitendienststelling. Dit staat vermeld op de WBI/WECO. Deze bijzonderheden_trein staan vaak gepland voor vertrek zeer kort na afloop van de geplande werkzaamheden. Wanneer werkzaamheden uitlopen betekent dit dat procesleiding de rijwegen voor deze bijzonderheden_trein gewoon in kan stellen, ondanks dat het spoor nog buiten dienst is. Dit kan tot gevolg hebben dat een sein in de buitendienststelling veilig wordt gezet en de trein gaat rijden, een zeer onwenselijke en gevaarlijke situatie! Wanneer je de melding krijgt van uitloop van werkzaamheden is het daarom van belang dat je goed kijkt of Procesleiding rijwegen binnen de buitendienststelling veilig kan zetten en dat je maatregelen neemt om dit te voorkomen. Je kunt dit bijvoorbeeld doen door of door een verhinderingsmaatregel te plaatsen;',
                             ),
                           ),
                         ],
@@ -698,7 +698,7 @@ class AanvangWerkzaamhedenAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Samen met de DVL bepaal je de gevolgen die de uitloop heeft voor de opstart van het treinverkeer. De DVL kan dit melden aan vervoerders, zodat eventueel treinen kunnen worden opgeheven of omgeleid. Licht ook de OvD-V in;',
+                                  'Samen met de DVL bepaal je de gevolgen die de uitloop heeft voor de opstart van het treinverkeer. De DVL kan dit melden aan vervoerders, zodat eventueel bijzonderheden_trein kunnen worden opgeheven of omgeleid. Licht ook de OvD-V in;',
                             ),
                           ),
                         ],

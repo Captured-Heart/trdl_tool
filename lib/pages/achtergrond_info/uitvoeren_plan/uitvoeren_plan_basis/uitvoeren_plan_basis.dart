@@ -85,7 +85,7 @@ class UitvoerenPlanBasisAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'ProRail en vervoerders stellen samen het ‘basisuurpatroon’ op. Daarin leggen we vast hoeveel treinen er per uur kunnen rijden op een bepaald traject en in welke frequentie. In deze fase worden de grootste knelpunten vast geïnventariseerd;',
+                                  'ProRail en vervoerders stellen samen het ‘basisuurpatroon’ op. Daarin leggen we vast hoeveel bijzonderheden_trein er per uur kunnen rijden op een bepaald traject en in welke frequentie. In deze fase worden de grootste knelpunten vast geïnventariseerd;',
                             ),
                           ),
                         ],
@@ -235,7 +235,7 @@ class UitvoerenPlanBasisAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Begin december gaan de treinen rijden volgens de nieuwe dienstregeling.',
+                                  'Begin december gaan de bijzonderheden_trein rijden volgens de nieuwe dienstregeling.',
                             ),
                           ),
                         ],

@@ -40,7 +40,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '​​​​​​​Procesleiding kent een mogelijkheid om rijwegen automatisch in te stellen: automatische rijweg instelling of de afkorting ARI. ARI is software dat op iedere treindienstleider werkplek draait. Je kunt ervoor kiezen om ARI aan of uit te zetten. Als de software \'vastloopt\' kun je die vanaf een andere computer, de PBH++ (Post Beheer Systeem), uitzetten. Om de software daarna opnieuw op te starten, heb je hulp van buitenaf nodig.',
+                                  'Procesleiding kent een mogelijkheid om rijwegen automatisch in te stellen: automatische rijweg instelling of de afkorting ARI. ARI is software dat op iedere treindienstleider werkplek draait. Je kunt ervoor kiezen om ARI aan of uit te zetten. Als de software \'vastloopt\' kun je die vanaf een andere computer, de PBH++ (Post Beheer Systeem), uitzetten. Om de software daarna opnieuw op te starten, heb je hulp van buitenaf nodig.',
                             ),
                           ),
                         ],
@@ -63,7 +63,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/ariAchtergrond.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/ariAchtergrond.png',
                             ),
                           ),
                         ],
@@ -425,7 +425,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/wachtvenster.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/wachtvenster.png',
                             ),
                           ),
                         ],
@@ -449,7 +449,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Als er alleen een tijdvenster zou zijn, dan zouden treinen met een vertrek- of rangeerregel ver voor vertrektijd door ARI worden ingesteld. Het gevolg zou zijn dat infra onnodig lang zal worden vastgehouden. De trein mag immers niet voor vertrektijd vertrekken. Dit beperkt jou in je mogelijkheden van het spoorgebruik. Het ARI-wachtvenster is bedoeld voor rangeer- en vertrekactiviteiten op stations en emplacementen.',
+                                  'Als er alleen een tijdvenster zou zijn, dan zouden bijzonderheden_trein met een vertrek- of rangeerregel ver voor vertrektijd door ARI worden ingesteld. Het gevolg zou zijn dat infra onnodig lang zal worden vastgehouden. De trein mag immers niet voor vertrektijd vertrekken. Dit beperkt jou in je mogelijkheden van het spoorgebruik. Het ARI-wachtvenster is bedoeld voor rangeer- en vertrekactiviteiten op stations en emplacementen.',
                             ),
                           ),
                         ],
@@ -516,7 +516,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '* Op de vrije baan zijn meerdere trots vensters aanwezig. In de PBH++ kan de functioneel beheerder aangeven bij welke vensterverplaatsing ARI actief wordt. Hierbij kan ook onderscheid worden gemaakt in de verschillende treintypen. Zo kunnen treinen die een hogere dienstregelingssnelheid hebben bijvoorbeeld een intercity in een ander venster worden getriggerd dan een trein met een lagere dienstregelingssnelheid bijvoorbeeld een goederentrein.',
+                                  '* Op de vrije baan zijn meerdere trots vensters aanwezig. In de PBH++ kan de functioneel beheerder aangeven bij welke vensterverplaatsing ARI actief wordt. Hierbij kan ook onderscheid worden gemaakt in de verschillende treintypen. Zo kunnen bijzonderheden_trein die een hogere dienstregelingssnelheid hebben bijvoorbeeld een intercity in een ander venster worden getriggerd dan een trein met een lagere dienstregelingssnelheid bijvoorbeeld een goederentrein.',
                             ),
                           ),
                         ],
@@ -574,7 +574,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/eindseinReservering.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/eindseinReservering.png',
                             ),
                           ),
                         ],
@@ -584,7 +584,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: Text(
-                              'ARI aanzetten voor treinen die hun trigger zijn gepasseerd',
+                              'ARI aanzetten voor bijzonderheden_trein die hun trigger zijn gepasseerd',
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -641,7 +641,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/kleurenPlanregels.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/kleurenPlanregels.png',
                             ),
                           ),
                         ],
@@ -666,7 +666,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/instelMinuut.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/instelMinuut.png',
                             ),
                           ),
                         ],
@@ -727,7 +727,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/oranjePlanregel.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/oranjePlanregel.png',
                             ),
                           ),
                         ],
@@ -807,7 +807,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/foutmeldingPlanregel.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/foutmeldingPlanregel.png',
                             ),
                           ),
                         ],
@@ -1124,7 +1124,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- Bij combineren moeten alle aanvoerende treinen (rangeerbewegingen) in dezelfde richting aankomen en mag iedere trein (rangeerbeweging) slechts één keer voorkomen als aanvoerende activiteit in de materieelrelaties die voor de in te stellen planregel gelden.',
+                                  '- Bij combineren moeten alle aanvoerende bijzonderheden_trein (rangeerbewegingen) in dezelfde richting aankomen en mag iedere trein (rangeerbeweging) slechts één keer voorkomen als aanvoerende activiteit in de materieelrelaties die voor de in te stellen planregel gelden.',
                             ),
                           ),
                         ],
@@ -1259,7 +1259,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/instelwijzeARI.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/instelwijzeARI.png',
                             ),
                           ),
                         ],
@@ -1271,7 +1271,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/instelwijzeIntegraal.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/instelwijzeIntegraal.png',
                             ),
                           ),
                         ],
@@ -1313,7 +1313,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Een deadlock is een situatie waarbij twee treinen tegenover elkaar staan en hinderen in de vervolgrijweg of elkaar opsluiten en hinderen in de vervolgrijweg. Een ongewenste situatie, waarbij één van de treinen altijd moet keren.',
+                                  'Een deadlock is een situatie waarbij twee bijzonderheden_trein tegenover elkaar staan en hinderen in de vervolgrijweg of elkaar opsluiten en hinderen in de vervolgrijweg. Een ongewenste situatie, waarbij één van de bijzonderheden_trein altijd moet keren.',
                             ),
                           ),
                         ],
@@ -1336,7 +1336,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/deadLock1.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/deadLock1.png',
                             ),
                           ),
                         ],
@@ -1347,7 +1347,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Deadlock: Door de lengte van de treinen worden zij als het ware \'opgesloten\'.',
+                                  'Deadlock: Door de lengte van de bijzonderheden_trein worden zij als het ware \'opgesloten\'.',
                             ),
                           ),
                         ],
@@ -1405,7 +1405,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/deadLock2.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/deadLock2.png',
                             ),
                           ),
                         ],
@@ -1452,7 +1452,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/deadLock3.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/deadLock3.png',
                             ),
                           ),
                         ],
@@ -1488,7 +1488,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/deadLock4.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/deadLock4.png',
                             ),
                           ),
                         ],
@@ -1529,7 +1529,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Sommige treinen hebben een dusdanige lengte, dat keren op een spoor betekent dat ze zowel de A als de B zijde van dat betreffende spoor bezetten. Het systeem TROTS is hier niet op gebouwd. TROTS kan namelijk geen treinnummers omnummeren als een treinnummer op spoor A binnenkomt en op spoor B vertrekt. Om dit op te lossen is de functie \'Lange kerende treinen\' toegepast in procesleiding.',
+                                  'Sommige bijzonderheden_trein hebben een dusdanige lengte, dat keren op een spoor betekent dat ze zowel de A als de B zijde van dat betreffende spoor bezetten. Het systeem TROTS is hier niet op gebouwd. TROTS kan namelijk geen treinnummers omnummeren als een treinnummer op spoor A binnenkomt en op spoor B vertrekt. Om dit op te lossen is de functie \'Lange kerende bijzonderheden_trein\' toegepast in procesleiding.',
                             ),
                           ),
                         ],
@@ -1624,7 +1624,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/deadLock5.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/deadLock5.png',
                             ),
                           ),
                         ],
@@ -1658,7 +1658,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Lange kerende treinen zijn zichtbaar in de spoorbezettingsgrafiek door 2 horizontale strepen tussen aankomst en vertrek. Dit is het gevolg van de invulling van het spoornummer onder de optie \'t/m\' van de planregel. Bij mutaties als gevolg van spoorwijzigingen op A/B sporen, moet deze voor de spoorbezettingsgrafiek ook worden aangepast.',
+                                  'Lange kerende bijzonderheden_trein zijn zichtbaar in de spoorbezettingsgrafiek door 2 horizontale strepen tussen aankomst en vertrek. Dit is het gevolg van de invulling van het spoornummer onder de optie \'t/m\' van de planregel. Bij mutaties als gevolg van spoorwijzigingen op A/B sporen, moet deze voor de spoorbezettingsgrafiek ook worden aangepast.',
                             ),
                           ),
                         ],
@@ -1690,7 +1690,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Een trein die gedeeltelijk, ten onrechte of opnieuw langs een perron tot stilstand komt, levert risico’s op voor persoonlijke ongevallen. Een trein die stil komt te staan in een wisselstraat kost veel infracapaciteit. Daarnaast stelt ILT ook eisen ter voorkoming van het doorschieten van tot stilstand komende treinen voor kruisende en \'intakkende\' sporen. Beide situaties worden voorkomen door het configureren van lokaal specifieke instelvoorschriften. Deze instelvoorschriften worden in de PBH++ door de functioneel beheerder in ARI vastgelegd.',
+                                  'Een trein die gedeeltelijk, ten onrechte of opnieuw langs een perron tot stilstand komt, levert risico’s op voor persoonlijke ongevallen. Een trein die stil komt te staan in een wisselstraat kost veel infracapaciteit. Daarnaast stelt ILT ook eisen ter voorkoming van het doorschieten van tot stilstand komende bijzonderheden_trein voor kruisende en \'intakkende\' sporen. Beide situaties worden voorkomen door het configureren van lokaal specifieke instelvoorschriften. Deze instelvoorschriften worden in de PBH++ door de functioneel beheerder in ARI vastgelegd.',
                             ),
                           ),
                         ],
@@ -1834,7 +1834,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/instelVoorschrift1.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/instelVoorschrift1.png',
                             ),
                           ),
                         ],
@@ -1857,7 +1857,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/instelVoorschrift2.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/instelVoorschrift2.png',
                             ),
                           ),
                         ],
@@ -1880,7 +1880,7 @@ class RijwegenARIAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/instelVoorschrift3.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/instelVoorschrift3.png',
                             ),
                           ),
                         ],

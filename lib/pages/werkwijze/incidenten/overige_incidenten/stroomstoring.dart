@@ -63,7 +63,7 @@ class Stroomstoring extends StatelessWidget {
                           SizedBoxW(),
                           Expanded(
                             child: BodyText(
-                              text: '- Er rijden geen treinen;',
+                              text: '- Er rijden geen bijzonderheden_trein;',
                             ),
                           ),
                         ],

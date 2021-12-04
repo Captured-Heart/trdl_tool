@@ -93,7 +93,7 @@ class CommunicatieAchtergrond extends StatelessWidget {
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/communicatie/communicatie_main.jpg',
+                              'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_main.jpg',
                             ),
                           ),
                         ],

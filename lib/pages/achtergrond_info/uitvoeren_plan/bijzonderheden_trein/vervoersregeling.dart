@@ -116,7 +116,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Voor treinen met bepaalde standaard bijzonderheden (met name allerlei varianten van \'buiten profiel\') mogen bepaalde stukken van, of punten op/aan, de infrastructuur slechts onder bepaalde voorwaarden of in het geheel niet passeren.',
+                                  'Voor bijzonderheden_trein met bepaalde standaard bijzonderheden (met name allerlei varianten van \'buiten profiel\') mogen bepaalde stukken van, of punten op/aan, de infrastructuur slechts onder bepaalde voorwaarden of in het geheel niet passeren.',
                             ),
                           ),
                         ],
@@ -179,7 +179,8 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Al deze treinen hebben de toevoeging:',
+                              text:
+                                  'Al deze bijzonderheden_trein hebben de toevoeging:',
                             ),
                           ),
                         ],
@@ -298,7 +299,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- Het rijden met treinen, die niet geschikt zijn om te rijden met een snelheid van tenminste 60 km/h op baanvakken met een baanvaksnelheid ≤ 80 km/h',
+                                  '- Het rijden met bijzonderheden_trein, die niet geschikt zijn om te rijden met een snelheid van tenminste 60 km/h op baanvakken met een baanvaksnelheid ≤ 80 km/h',
                             ),
                           ),
                         ],
@@ -322,7 +323,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- Het rijden van treinen waarin spoorvoertuigen zijn opgenomen die de beladingsklasse C2 overschrijden;',
+                                  '- Het rijden van bijzonderheden_trein waarin spoorvoertuigen zijn opgenomen die de beladingsklasse C2 overschrijden;',
                             ),
                           ),
                         ],
@@ -334,7 +335,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- Het rijden met treinen of spoorvoertuigen onder een onder de Spoorwegwet verleende ontheffing waarin in de ontheffingsvoorwaarden een nadere regeling met de beheerder is voorgeschreven;',
+                                  '- Het rijden met bijzonderheden_trein of spoorvoertuigen onder een onder de Spoorwegwet verleende ontheffing waarin in de ontheffingsvoorwaarden een nadere regeling met de beheerder is voorgeschreven;',
                             ),
                           ),
                         ],
@@ -358,7 +359,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- Het rijden met treinen waarvan het laatste spoorvoertuig onberemd is.',
+                                  '- Het rijden met bijzonderheden_trein waarvan het laatste spoorvoertuig onberemd is.',
                             ),
                           ),
                         ],
@@ -447,7 +448,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Op ons (inter)nationale spoornetwerk rijden er treinen met een standaard profieloverschrijding. Om met deze treinen goed om te gaan, in de planning en de dagelijkse uitvoering, is er gekozen voor een vereenvoudigde indeling van deze profieloverschrijdingen binnen Nederland.',
+                                  'Op ons (inter)nationale spoornetwerk rijden er bijzonderheden_trein met een standaard profieloverschrijding. Om met deze bijzonderheden_trein goed om te gaan, in de planning en de dagelijkse uitvoering, is er gekozen voor een vereenvoudigde indeling van deze profieloverschrijdingen binnen Nederland.',
                             ),
                           ),
                         ],
@@ -493,7 +494,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- Bij ProRail verkeersleiding Orderacceptatie moeten alle treinen worden aangevraagd die niet in de plansystemen van ProRail zijn opgenomen. De vervoerder moet aan ProRail verkeersleiding Orderacceptatie de BP code opgeven. Ook alle wijzigingen van de profielen moeten tijdig worden gemeld bij ProRail verkeersleiding Orderacceptatie;',
+                                  '- Bij ProRail verkeersleiding Orderacceptatie moeten alle bijzonderheden_trein worden aangevraagd die niet in de plansystemen van ProRail zijn opgenomen. De vervoerder moet aan ProRail verkeersleiding Orderacceptatie de BP code opgeven. Ook alle wijzigingen van de profielen moeten tijdig worden gemeld bij ProRail verkeersleiding Orderacceptatie;',
                             ),
                           ),
                         ],
@@ -529,7 +530,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- In de niet centraal bediende gebieden is het rijden onder ladingmallen niet toegestaan met treinen met profieloverschrijding;',
+                                  '- In de niet centraal bediende gebieden is het rijden onder ladingmallen niet toegestaan met bijzonderheden_trein met profieloverschrijding;',
                             ),
                           ),
                         ],
@@ -541,7 +542,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- Standaard zendingen aangeduid met BP1, BP2 en BP3 zijn in Nederland alleen in hoogte buiten profiel. Indien in een BV regeling is opgenomen \'Geen BV treinen of treindelen met lading Buiten Profiel op het nevenspoor\' is deze beperking niet van toepassing op standaardzendingen BP1, BP2 en BP3.',
+                                  '- Standaard zendingen aangeduid met BP1, BP2 en BP3 zijn in Nederland alleen in hoogte buiten profiel. Indien in een BV regeling is opgenomen \'Geen BV bijzonderheden_trein of treindelen met lading Buiten Profiel op het nevenspoor\' is deze beperking niet van toepassing op standaardzendingen BP1, BP2 en BP3.',
                             ),
                           ),
                         ],
@@ -554,7 +555,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/buitenProfiel.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/vervoersregeling/buitenProfiel.png',
                             ),
                           ),
                         ],
@@ -575,7 +576,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           Expanded(
                             child: SubTitleText(
                               subtitle:
-                                  'Afhandeling treinen met toevoeging BP 1, 2 en 3',
+                                  'Afhandeling bijzonderheden_trein met toevoeging BP 1, 2 en 3',
                             ),
                           ),
                         ],
@@ -597,7 +598,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- Kennis hebt genomen van de beperkingen die voor deze treinen gelden;',
+                                  '- Kennis hebt genomen van de beperkingen die voor deze bijzonderheden_trein gelden;',
                             ),
                           ),
                         ],
@@ -619,7 +620,8 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: SubTitleText(
-                              subtitle: 'Afhandeling treinen met toevoeging BV',
+                              subtitle:
+                                  'Afhandeling bijzonderheden_trein met toevoeging BV',
                             ),
                           ),
                         ],
@@ -629,7 +631,8 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                         children: const [
                           Expanded(
                             child: BodyText(
-                              text: 'Deze treinen behandel je als volgt:',
+                              text:
+                                  'Deze bijzonderheden_trein behandel je als volgt:',
                             ),
                           ),
                         ],
@@ -652,7 +655,7 @@ class TreinenVervoersregelingAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '* kennis hebt genomen van de beperkingen die voor deze treinen gelden;',
+                                  '* kennis hebt genomen van de beperkingen die voor deze bijzonderheden_trein gelden;',
                             ),
                           ),
                         ],

@@ -70,7 +70,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Een emplacement werkzone bevat geen (onbediend) vrije baan spoor. Een emplacementswerkzone is maximaal even groot als het gebied dat door een beveiligingssysteem wordt beveiligd. Een vrije baan werkzone bevat minimaal een onbediend vrije baan spoor en kan delen van het emplacement.​​​​​​​',
+                                  'Een emplacement werkzone bevat geen (onbediend) vrije baan spoor. Een emplacementswerkzone is maximaal even groot als het gebied dat door een beveiligingssysteem wordt beveiligd. Een vrije baan werkzone bevat minimaal een onbediend vrije baan spoor en kan delen van het emplacement.',
                             ),
                           ),
                         ],
@@ -287,7 +287,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzoneSchakelaarkast.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzoneSchakelaarkast.png',
                             ),
                           ),
                         ],
@@ -300,7 +300,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/handheldTerminal.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/handheldTerminal.png',
                             ),
                           ),
                         ],
@@ -344,7 +344,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 100.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzoneStatusTabel.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzoneStatusTabel.png',
                             ),
                           ),
                         ],
@@ -357,7 +357,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 100.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzoneNormaal.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzoneNormaal.png',
                             ),
                           ),
                         ],
@@ -379,7 +379,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 100.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzoneGegeven.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzoneGegeven.png',
                             ),
                           ),
                         ],
@@ -401,7 +401,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 100.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzoneGenomen.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzoneGenomen.png',
                             ),
                           ),
                         ],
@@ -423,7 +423,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 100.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzoneGestoord.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzoneGestoord.png',
                             ),
                           ),
                         ],
@@ -445,7 +445,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 100.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzonePreview.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzonePreview.png',
                             ),
                           ),
                         ],
@@ -467,7 +467,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 100.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzoneVerhinderd.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzoneVerhinderd.png',
                             ),
                           ),
                         ],
@@ -688,7 +688,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 100.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzoneNegeer1.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzoneNegeer1.png',
                             ),
                           ),
                         ],
@@ -711,7 +711,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 100.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzoneNegeer2.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzoneNegeer2.png',
                             ),
                           ),
                         ],
@@ -734,7 +734,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 100.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzoneNegeer3.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzoneNegeer3.png',
                             ),
                           ),
                         ],
@@ -757,7 +757,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 100.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzoneNegeer4.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzoneNegeer4.png',
                             ),
                           ),
                         ],
@@ -981,7 +981,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 150.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/wbiBedienVenster1.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/wbiBedienVenster1.png',
                             ),
                           ),
                         ],
@@ -994,7 +994,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 150.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/wbiBedienVenster2.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/wbiBedienVenster2.png',
                             ),
                           ),
                         ],
@@ -1062,7 +1062,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 150.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/werkzoneTabel.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzoneTabel.png',
                             ),
                           ),
                         ],

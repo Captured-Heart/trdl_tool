@@ -150,7 +150,7 @@ class StilleggenTreindienst extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'De procedure ‘stilleggen treindienst’ wordt geïnitieerd door de OvD-S wanneer er sprake is van een acuut dreigende situatie voor het treinverkeer. Het doel is om binnen 30 minuten beheerst alle treinen stil te laten staan en alle reizigerstreinen en stationshallen beheerst te ontruimen.',
+                                  'De procedure ‘stilleggen treindienst’ wordt geïnitieerd door de OvD-S wanneer er sprake is van een acuut dreigende situatie voor het treinverkeer. Het doel is om binnen 30 minuten beheerst alle bijzonderheden_trein stil te laten staan en alle reizigerstreinen en stationshallen beheerst te ontruimen.',
                             ),
                           ),
                         ],

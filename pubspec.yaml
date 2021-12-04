@@ -50,13 +50,22 @@ flutter:
     - assets/images/
     - assets/images/welcome_screen/
     - assets/images/achtergrond_info/
-    - assets/images/achtergrond_info/communicatie/
     - assets/images/achtergrond_info/uitvoeren_plan/
     - assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/
-    - assets/images/achtergrond_info/treinen/elektrische_locs/
-    - assets/images/achtergrond_info/treinen/diesel_locs/
-    - assets/images/achtergrond_info/treinen/elektrische_treinen/
-    - assets/images/achtergrond_info/treinen/diesel_treinen/
-    - assets/images/achtergrond_info/treinen/rijtuigen/
-    - assets/images/achtergrond_info/treinen/onderhouds_machines/
-    - assets/images/achtergrond_info/treinen/railweg_voertuigen/
+    - assets/images/achtergrond_info/uitvoeren_plan/communicatie/
+    - assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_middelen/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/planopbouw_basis/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/vervoersregeling/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/elektrische_locs/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/diesel_locs/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/elektrische_treinen/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/diesel_treinen/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/rijtuigen/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/onderhouds_machines/
+    - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/railweg_voertuigen/

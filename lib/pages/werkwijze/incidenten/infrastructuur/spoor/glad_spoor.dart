@@ -121,7 +121,7 @@ class GladSpoor extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Twee uur na de laatste melding vraag je de machinisten van de twee eerstvolgende treinen naar de toestand van de baan. Wanneer het spoor niet meer glad is, staak je bovenstaande maatregelen. Wanneer het spoor nog wel glad is, handhaaf je de maatregelen voor de komende twee uur.​​​',
+                                  'Twee uur na de laatste melding vraag je de machinisten van de twee eerstvolgende bijzonderheden_trein naar de toestand van de baan. Wanneer het spoor niet meer glad is, staak je bovenstaande maatregelen. Wanneer het spoor nog wel glad is, handhaaf je de maatregelen voor de komende twee uur.​​​',
                             ),
                           ),
                         ],
@@ -146,7 +146,7 @@ class GladSpoor extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],
@@ -171,7 +171,7 @@ class GladSpoor extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Door verminderd contact tussen wiel en spoorstaaf, kunnen treinen moeite hebben met optrekken en remmen.  De machinist kan zijn rijgedrag aanpassen wanneer hij hiervan op de hoogte is.',
+                                  'Door verminderd contact tussen wiel en spoorstaaf, kunnen bijzonderheden_trein moeite hebben met optrekken en remmen.  De machinist kan zijn rijgedrag aanpassen wanneer hij hiervan op de hoogte is.',
                             ),
                           ),
                         ],

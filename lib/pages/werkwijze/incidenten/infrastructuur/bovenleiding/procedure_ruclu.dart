@@ -99,7 +99,7 @@ class ProcedureRuClu extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- Let er op dat de stroomafnemers van treinen in het betrokken gebied neergelaten zijn voor de spanning weer ingeschakeld wordt;',
+                                  '- Let er op dat de stroomafnemers van bijzonderheden_trein in het betrokken gebied neergelaten zijn voor de spanning weer ingeschakeld wordt;',
                             ),
                           ),
                         ],
@@ -135,7 +135,7 @@ class ProcedureRuClu extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
                             ),
                           ),
                         ],

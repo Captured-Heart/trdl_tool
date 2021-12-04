@@ -133,7 +133,7 @@ class ControlerenWBIAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/wbiOverzicht.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/wbiOverzicht.png',
                             ),
                           ),
                         ],
