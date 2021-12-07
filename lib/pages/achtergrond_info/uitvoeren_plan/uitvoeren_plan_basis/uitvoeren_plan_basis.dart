@@ -635,7 +635,7 @@ class UitvoerenPlanBasisAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/bvsTekening.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/uitvoeren_plan_basis/bvsTekening.png',
                             ),
                           ),
                         ],
@@ -669,7 +669,7 @@ class UitvoerenPlanBasisAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/osBlad.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/uitvoeren_plan_basis/osBlad.png',
                             ),
                           ),
                         ],
@@ -703,7 +703,7 @@ class UitvoerenPlanBasisAchtergrond extends StatelessWidget {
                             width: MediaQuery.of(context).size.width * 0.75,
                             height: 200.0,
                             child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/bovenleidingSchema.png',
+                              'assets/images/achtergrond_info/uitvoeren_plan/uitvoeren_plan_basis/bovenleidingSchema.png',
                             ),
                           ),
                         ],

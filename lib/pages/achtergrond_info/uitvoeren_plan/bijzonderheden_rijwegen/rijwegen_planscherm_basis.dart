@@ -931,16 +931,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/dwangToevoegen1.png',
-                            ),
-                          ),
-                        ],
+                      const InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/dwangToevoegen1.png',
                       ),
                       Row(
                         children: const [
@@ -964,16 +957,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/dwangToevoegen2.png',
-                            ),
-                          ),
-                        ],
+                      const InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/dwangToevoegen2.png',
                       ),
                       Row(
                         children: const [
@@ -1031,16 +1017,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/dwangToevoegen3.jpg',
-                            ),
-                          ),
-                        ],
+                      const InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/dwangToevoegen3.jpg',
                       ),
                     ],
                   ),
@@ -1092,7 +1071,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  'Bij gefaseerde rijweginstelling hoeft met het instellen van de rijweg niet te worden gewacht tot de gehele rijweg beschikbaar is. Dit heeft een gunstig effect op de opvolging van bijzonderheden_trein en zal daarmee de punctualiteit verhogen. Ook blijft het nog niet benodigde deel van de rijweg beschikbaar voor andere rijwegen. Zo kunnen andere bijzonderheden_trein nog voorlangs passeren. Om een minimale infracapaciteit te claimen, moet ARI bij gefaseerde rijweginstelling niet meer dan een geconfigureerd aantal seinstappen (enkelvoudige rijwegen) voor de trein uit instellen. Indien op een moment dit aantal niet mogelijk is, wordt met een kleiner aantal seinstappen voldaan. In de ARI-configuratie wordt per pplg het aantal in te stellen seinstappen vastgesteld. Default staat dit aantal op twee seinstappen ingesteld.',
+                                  'Bij gefaseerde rijweginstelling hoeft met het instellen van de rijweg niet te worden gewacht tot de gehele rijweg beschikbaar is. Dit heeft een gunstig effect op de opvolging van treinen en zal daarmee de punctualiteit verhogen. Ook blijft het nog niet benodigde deel van de rijweg beschikbaar voor andere rijwegen. Zo kunnen andere treinen nog voorlangs passeren. Om een minimale infracapaciteit te claimen, moet ARI bij gefaseerde rijweginstelling niet meer dan een geconfigureerd aantal seinstappen (enkelvoudige rijwegen) voor de trein uit instellen. Indien op een moment dit aantal niet mogelijk is, wordt met een kleiner aantal seinstappen voldaan. In de ARI-configuratie wordt per pplg het aantal in te stellen seinstappen vastgesteld. Default staat dit aantal op twee seinstappen ingesteld.',
                             ),
                           ),
                         ],
@@ -1237,8 +1216,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: Text(
-                              'Wanneer de instelwijze H (Hoog Groen) gebruikt wordt voor een planregel met een vertrekactiviteit geeft dat aan ARI de eis/werking dat de bij een aankomstregel behorende vertrekregel ingesteld wordt op basis van triggering door eindseinreservering, met andere woorden: zodra de aankomstregel is ingesteld (sein hoeft dan nog niet uit de stand stop te zijn, de reservering binnen PRL is voldoende) kan ARI de vertrekregel in behandeling nemen. Gecontroleerd wordt of de uit te voeren instelling ook op basis van de juiste trein is (nummer wordt door ARI teruggezocht in de ingestelde route en gecontroleerd). Wordt het juiste treinnummer gevonden, dan wordt de vertrekregel door ARI ingesteld. Bij de instelwijze H zal geen tijd- of wachtvenster actief zijn, het instelmoment is immers gekoppeld aan het tijdvenster van de aankomstregel.',
+                            child: BodyText(
+                              text:
+                                  'Wanneer de instelwijze H (Hoog Groen) gebruikt wordt voor een planregel met een vertrekactiviteit geeft dat aan ARI de eis/werking dat de bij een aankomstregel behorende vertrekregel ingesteld wordt op basis van triggering door eindseinreservering, met andere woorden: zodra de aankomstregel is ingesteld (sein hoeft dan nog niet uit de stand stop te zijn, de reservering binnen PRL is voldoende) kan ARI de vertrekregel in behandeling nemen. Gecontroleerd wordt of de uit te voeren instelling ook op basis van de juiste trein is (nummer wordt door ARI teruggezocht in de ingestelde route en gecontroleerd). Wordt het juiste treinnummer gevonden, dan wordt de vertrekregel door ARI ingesteld. Bij de instelwijze H zal geen tijd- of wachtvenster actief zijn, het instelmoment is immers gekoppeld aan het tijdvenster van de aankomstregel.',
                             ),
                           ),
                         ],
@@ -1247,19 +1227,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: Text(
-                              'Voorwaarden voor de functionaliteit Hoog Groen:',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: Text(
-                              '- Hoog Groen is alleen mogelijk in combinatie met vertrekbewegingen (dus niet bij A, K, R of D-activiteiten).',
+                            child: BodyText(
+                              text:
+                                  'Voorwaarden voor de functionaliteit Hoog Groen:',
                             ),
                           ),
                         ],
@@ -1269,8 +1239,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Hoog Groen is alleen mogelijk bij bewegingen die met een N-rijweg worden ingesteld (dus niet bij een ROZ-aankomst).',
+                            child: BodyText(
+                              text:
+                                  '- Hoog Groen is alleen mogelijk in combinatie met vertrekbewegingen (dus niet bij A, K, R of D-activiteiten).',
                             ),
                           ),
                         ],
@@ -1280,8 +1251,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Hoog Groen kan (op termijn) door Bureau Lokaal Plan geleverd worden (in overleg tussen Verkeersleiding en Vervoerders worden de emplacementen bepaald waar de instelwijze nuttig kan zijn. Voor die emplacementen kan de instelwijze structureel in het Procesplan worden opgenomen).',
+                            child: BodyText(
+                              text:
+                                  '- Hoog Groen is alleen mogelijk bij bewegingen die met een N-rijweg worden ingesteld (dus niet bij een ROZ-aankomst).',
                             ),
                           ),
                         ],
@@ -1291,18 +1263,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Hoog Groen wordt niet gebruikt op plaatsen met een overpad/overweg achter het uitrijdsein (Dit is op zich wel mogelijk en kan in situaties met gladde rails zelfs nuttig zijn, maar voor standaard gebruik is het echter ongewenst. Het argument hiervoor is dat in die gevallen de sluitingsduur van het overpad/overweg toe zal nemen).',
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: Text(
-                              'De tijdwinst is te behalen op 2 fronten:',
+                            child: BodyText(
+                              text:
+                                  '- Hoog Groen kan (op termijn) door Bureau Lokaal Plan geleverd worden (in overleg tussen Verkeersleiding en Vervoerders worden de emplacementen bepaald waar de instelwijze nuttig kan zijn. Voor die emplacementen kan de instelwijze structureel in het Procesplan worden opgenomen).',
                             ),
                           ),
                         ],
@@ -1312,8 +1275,19 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- De trein kan vanwege een beter seinbeeld met een hogere snelheid het emplacement binnen rijden;',
+                            child: BodyText(
+                              text:
+                                  '- Hoog Groen wordt niet gebruikt op plaatsen met een overpad/overweg achter het uitrijdsein (Dit is op zich wel mogelijk en kan in situaties met gladde rails zelfs nuttig zijn, maar voor standaard gebruik is het echter ongewenst. Het argument hiervoor is dat in die gevallen de sluitingsduur van het overpad/overweg toe zal nemen).',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          Expanded(
+                            child: BodyText(
+                              text: 'De tijdwinst is te behalen op 2 fronten:',
                             ),
                           ),
                         ],
@@ -1323,8 +1297,21 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         children: const [
                           SizedBoxW(),
                           Expanded(
-                            child: Text(
-                              '- Na het uit- en instappen van de reizigers kan de HC direct het vertrekproces starten (stationnementduur is niet langer dan noodzakelijk).',
+                            child: BodyText(
+                              text:
+                                  '- De trein kan vanwege een beter seinbeeld met een hogere snelheid het emplacement binnen rijden;',
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      Row(
+                        children: const [
+                          SizedBoxW(),
+                          Expanded(
+                            child: BodyText(
+                              text:
+                                  '- Na het uit- en instappen van de reizigers kan de HC direct het vertrekproces starten (stationnementduur is niet langer dan noodzakelijk).',
                             ),
                           ),
                         ],
@@ -1333,8 +1320,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                       Row(
                         children: const [
                           Expanded(
-                            child: Text(
-                              'De instelwijze \'H\' is in het procesplan herkenbaar doordat het van-spoor van de vertrekregel \'Hoog Groen\' is gekleurd.',
+                            child: BodyText(
+                              text:
+                                  'De instelwijze \'H\' is in het procesplan herkenbaar doordat het van-spoor van de vertrekregel \'Hoog Groen\' is gekleurd.',
                             ),
                           ),
                         ],
@@ -1352,37 +1340,24 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen2.png',
-                            ),
-                          ),
-                        ],
+                      const InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen2.png',
                       ),
                       Row(
                         children: const [
                           Expanded(
-                            child: Text(
-                              'Ook in het historievenster is achteraf nog te zien welke instelwijze voor de vertrekregel gold.',
+                            child: BodyText(
+                              text:
+                                  'Ook in het historievenster is achteraf nog te zien welke instelwijze voor de vertrekregel gold.',
                             ),
                           ),
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen3.png',
-                            ),
-                          ),
-                        ],
+                      const InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen3.png',
                       ),
                       Row(
                         children: const [
@@ -1416,16 +1391,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen4.png',
-                            ),
-                          ),
-                        ],
+                      const InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen4.png',
                       ),
                       Row(
                         children: const [
@@ -1438,16 +1406,9 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                         ],
                       ),
                       const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen5.png',
-                            ),
-                          ),
-                        ],
+                      const InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/werkenmetplan_basis/hoogGroen5.png',
                       ),
                       Row(
                         children: const [

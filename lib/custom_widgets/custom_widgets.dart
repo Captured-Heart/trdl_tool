@@ -156,6 +156,31 @@ class BodyText extends StatelessWidget {
   }
 }
 
+/*INSERT IMAGE WIDTH * 0.75*/
+class InsertImage extends StatelessWidget {
+  const InsertImage({
+    required this.image,
+    Key? key,
+  }) : super(key: key);
+
+  final String image;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.75,
+          child: Image.asset(
+            image,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
 /*SIZEDBOX HEIGHT 8.0*/
 class SizedBoxH extends StatelessWidget {
   const SizedBoxH({Key? key}) : super(key: key);

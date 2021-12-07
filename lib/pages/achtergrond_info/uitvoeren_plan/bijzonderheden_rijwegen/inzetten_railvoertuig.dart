@@ -491,7 +491,6 @@ class InzettenRailvoertuigAchtergrond extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: MediaQuery.of(context).size.width * 0.75,
-                            height: 300.0,
                             child: Image.asset(
                               'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig/langsTransport.jpg',
                             ),

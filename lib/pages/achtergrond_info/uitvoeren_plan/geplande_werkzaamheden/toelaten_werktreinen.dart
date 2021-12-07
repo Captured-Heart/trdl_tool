@@ -71,7 +71,7 @@ class ToelatenWerktreinenAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- alleen de LWB bijzonderheden_trein mag toelaten tot buitendienst gestelde sporen;',
+                                  '- alleen de LWB de werktrein mag toelaten tot buitendienst gestelde sporen;',
                             ),
                           ),
                         ],
@@ -83,7 +83,7 @@ class ToelatenWerktreinenAchtergrond extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               text:
-                                  '- alleen jij bijzonderheden_trein mag toelaten op in dienst zijnde sporen.',
+                                  '- alleen jij de werktrein mag toelaten op in dienst zijnde sporen.',
                             ),
                           ),
                         ],

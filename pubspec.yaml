@@ -51,6 +51,7 @@ flutter:
     - assets/images/welcome_screen/
     - assets/images/achtergrond_info/
     - assets/images/achtergrond_info/uitvoeren_plan/
+    - assets/images/achtergrond_info/uitvoeren_plan/uitvoeren_plan_basis/
     - assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/
     - assets/images/achtergrond_info/uitvoeren_plan/communicatie/
     - assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_middelen/
