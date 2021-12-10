@@ -8,7 +8,9 @@ class Ncbg extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -23,58 +25,28 @@ class Ncbg extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(
-                              title: 'NCBG',
-                            ),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'NCBG',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: SubTitleText(
-                              subtitle: 'Sturingsniveau en uitzonderingen',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      CardTitle(
+                        title: 'Sturingsniveau en uitzonderingen',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Binnen een NCBG kent men in beginsel twee verschillende sturingsniveaus, namelijk:',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Binnen een NCBG kent men in beginsel twee verschillende sturingsniveaus, namelijk:',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Rijwegniveau;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Rijwegniveau;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- TijdRuimte-slotniveau.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- TijdRuimte-slotniveau.',
                       ),
                     ],
                   ),

@@ -114,11 +114,17 @@ class TitleText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      title,
-      style: const TextStyle(
-        fontSize: 24.0,
-      ),
+    return Row(
+      children: [
+        Expanded(
+          child: Text(
+            title,
+            style: const TextStyle(
+              fontSize: 24.0,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
@@ -130,29 +136,124 @@ class SubTitleText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      subtitle,
-      style: const TextStyle(
-        fontSize: 18.0,
-        fontWeight: FontWeight.bold,
-      ),
+    return Row(
+      children: [
+        Expanded(
+          child: Text(
+            subtitle,
+            style: const TextStyle(
+              fontSize: 18.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
 
-/*TEXT BODY WIDGET*/
+/*BOLD TEXT WIDGET*/
+class BoldText extends StatelessWidget {
+  const BoldText({required this.boldtext, Key? key}) : super(key: key);
+  final String boldtext;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(
+          child: Text(
+            boldtext,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+/*TEXT BODY WIDGET WITH/WITHOUT INDENTS*/
 class BodyText extends StatelessWidget {
-  const BodyText({required this.text, Key? key}) : super(key: key);
+  const BodyText({required this.indents, required this.text, Key? key}) : super(key: key);
+  final int indents;
   final String text;
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      text,
-      style: const TextStyle(
-        fontSize: 16.0,
-      ),
-    );
+    if (indents == 0) {
+      return Row(
+        children: [
+          Expanded(
+            child: Text(
+              text,
+              style: const TextStyle(
+                fontSize: 16.0,
+              ),
+            ),
+          ),
+        ],
+      );
+    } else if (indents == 1) {
+      return Row(
+        children: [
+          const SizedBoxW(),
+          Expanded(
+            child: Text(
+              text,
+              style: const TextStyle(
+                fontSize: 16.0,
+              ),
+            ),
+          ),
+        ],
+      );
+    } else if (indents == 2) {
+      return Row(
+        children: [
+          const SizedBoxW(),
+          const SizedBoxW(),
+          Expanded(
+            child: Text(
+              text,
+              style: const TextStyle(
+                fontSize: 16.0,
+              ),
+            ),
+          ),
+        ],
+      );
+    } else if (indents == 3) {
+      return Row(
+        children: [
+          const SizedBoxW(),
+          const SizedBoxW(),
+          const SizedBoxW(),
+          Expanded(
+            child: Text(
+              text,
+              style: const TextStyle(
+                fontSize: 16.0,
+              ),
+            ),
+          ),
+        ],
+      );
+    } else {
+      return Row(
+        children: [
+          Expanded(
+            child: Text(
+              text,
+              style: const TextStyle(
+                fontSize: 16.0,
+              ),
+            ),
+          ),
+        ],
+      );
+    }
   }
 }
 
@@ -177,6 +278,47 @@ class InsertImage extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+/*TABLECELL WIDGET BOLD*/
+class TableTextBold extends StatelessWidget {
+  const TableTextBold({
+    required this.text,
+    Key? key,
+  }) : super(key: key);
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text(
+        text,
+        style: const TextStyle(
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
+  }
+}
+
+/*TABLECELL WIDGET*/
+class TableText extends StatelessWidget {
+  const TableText({
+    required this.text,
+    Key? key,
+  }) : super(key: key);
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text(
+        text,
+      ),
     );
   }
 }

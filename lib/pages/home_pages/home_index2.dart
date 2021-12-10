@@ -5,8 +5,6 @@ class HomeIndex2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
-
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(
@@ -17,32 +15,23 @@ class HomeIndex2 extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(title: 'ProQuiz'),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'ProQuiz',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'In een latere update zal hier de ProQuiz verschijnen. Wil je je kennis testen in een zenuwslopende quiz? Ga je gang!',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'In een latere update zal hier de ProQuiz verschijnen. Wil je je kennis testen in een zenuwslopende quiz? Ga je gang!',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 24.0,
                       ),
-                      const NavButton(
+                      NavButton(
                         buttontext: 'Klik hier voor de testversie',
                         destination: 'proquizmain',
                       ),
+                      SizedBoxH(),
                     ],
                   ),
                 ),
