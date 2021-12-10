@@ -8,7 +8,9 @@ class GladSpoor extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -23,108 +25,53 @@ class GladSpoor extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(title: 'Glad Spoor'),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'Glad Spoor',
                       ),
-                      const SizedBoxH(),
-                      const CardTitle(
+                      SizedBoxH(),
+                      CardTitle(
                         title: Strings.procedure,
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Wanneer je een melding krijgt van een glad spoor licht je de DVL.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Wanneer je een melding krijgt van een glad spoor licht je de DVL.',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Bij haltes op de vrije baan verander je de ‘Stops’ in ‘Doors’.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Bij haltes op de vrije baan verander je de ‘Stops’ in ‘Doors’.',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Bij een stop-/doorschakeling in bediend gebied (uitgezonderd kruisingsstations op enkelsporige baanvakken):',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Bij een stop-/doorschakeling in bediend gebied (uitgezonderd kruisingsstations op enkelsporige baanvakken):',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  '- Voeg je opgedeelde rijwegen met ‘D’ of ‘K’ activiteit samen;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Voeg je opgedeelde rijwegen met ‘D’ of ‘K’ activiteit samen;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  '- Verander je het ‘naar’-spoor van de aankomstregel in het ‘naar’-spoor van de vertrekregel;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Verander je het ‘naar’-spoor van de aankomstregel in het ‘naar’-spoor van de vertrekregel;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Hef je de vertrekregel op;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Hef je de vertrekregel op;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  '- Voeg je doorbediening toe aan de aankomstregel.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Voeg je doorbediening toe aan de aankomstregel.',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Twee uur na de laatste melding vraag je de machinisten van de twee eerstvolgende bijzonderheden_trein naar de toestand van de baan. Wanneer het spoor niet meer glad is, staak je bovenstaande maatregelen. Wanneer het spoor nog wel glad is, handhaaf je de maatregelen voor de komende twee uur.​​​',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Twee uur na de laatste melding vraag je de machinisten van de twee eerstvolgende bijzonderheden_trein naar de toestand van de baan. Wanneer het spoor niet meer glad is, staak je bovenstaande maatregelen. Wanneer het spoor nog wel glad is, handhaaf je de maatregelen voor de komende twee uur.​​​',
                       ),
                     ],
                   ),
@@ -136,20 +83,14 @@ class GladSpoor extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      const CardTitle(
+                    children: const [
+                      CardTitle(
                         title: Strings.risico,
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -161,20 +102,14 @@ class GladSpoor extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      const CardTitle(
+                    children: const [
+                      CardTitle(
                         title: Strings.context,
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Door verminderd contact tussen wiel en spoorstaaf, kunnen bijzonderheden_trein moeite hebben met optrekken en remmen.  De machinist kan zijn rijgedrag aanpassen wanneer hij hiervan op de hoogte is.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Door verminderd contact tussen wiel en spoorstaaf, kunnen bijzonderheden_trein moeite hebben met optrekken en remmen.  De machinist kan zijn rijgedrag aanpassen wanneer hij hiervan op de hoogte is.',
                       ),
                     ],
                   ),

@@ -8,7 +8,9 @@ class MaterieelIncidenten extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -23,68 +25,34 @@ class MaterieelIncidenten extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(title: 'Materieel'),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'Materieel',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Je kunt op drie manieren een melding krijgen over materieel:',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Je kunt op drie manieren een melding krijgen over materieel:',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Door de machinist;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Door de machinist;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Door derden;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Door derden;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Door systemen.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Door systemen.',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Als de melding niet van de machinist komt, licht je de machinist van de betrokken trein in.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Als de melding niet van de machinist komt, licht je de machinist van de betrokken trein in.',
                       ),
                     ],
                   ),
@@ -97,14 +65,8 @@ class MaterieelIncidenten extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(
-                              title: 'Ga snel naar',
-                            ),
-                          ),
-                        ],
+                      const TitleText(
+                        title: 'Ga snel naar',
                       ),
                       const SizedBoxH(),
                       Column(
@@ -131,6 +93,7 @@ class MaterieelIncidenten extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                     ],
                   ),
                 ),

@@ -8,7 +8,9 @@ class InfraOngeplandWerk extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -23,156 +25,68 @@ class InfraOngeplandWerk extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(
-                              title: 'Infra (ongepland werk)',
-                            ),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'Infra (ongepland werk)',
                       ),
-                      const SizedBoxH(),
-                      const CardTitle(
+                      SizedBoxH(),
+                      CardTitle(
                         title: Strings.procedure,
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Ongeplande werkzaamheden aan de railinfrastructuur met WBI/WECO:',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Ongeplande werkzaamheden aan de railinfrastructuur met WBI/WECO:',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Met (maatwerk)storings WBI/WECO.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Met (maatwerk)storings WBI/WECO.',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Ongeplande werkzaamheden aan de railinfrastructuur zonder WBI/WECO:',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Ongeplande werkzaamheden aan de railinfrastructuur zonder WBI/WECO:',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  '- Je werkt op RVO nummer en handelt als volgt:',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Je werkt op RVO nummer en handelt als volgt:',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  '- Vraag welke infra betrokken is en hoe lang de werkzaamheden gaan duren;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Vraag welke infra betrokken is en hoe lang de werkzaamheden gaan duren;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  '- De DVL beslist bij werkzaamheden op de vrije baan over het aanvangstijdstip;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- De DVL beslist bij werkzaamheden op de vrije baan over het aanvangstijdstip;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Overleg met de LWB over:',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Overleg met de LWB over:',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '* Niveau van de werkplekbeveiliging;',
-                            ),
-                          ),
-                        ],
+                      BodyText(
+                        indents: 2,
+                        text: '* Niveau van de werkplekbeveiliging;',
                       ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '* Veiligheidsmaatregelen LWB;',
-                            ),
-                          ),
-                        ],
+                      BodyText(
+                        indents: 2,
+                        text: '* Veiligheidsmaatregelen LWB;',
                       ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  '* Veiligheidsmaatregelen treindienstleider;',
-                            ),
-                          ),
-                        ],
+                      BodyText(
+                        indents: 2,
+                        text: '* Veiligheidsmaatregelen treindienstleider;',
                       ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '* Exacte aanduiding werkplek.',
-                            ),
-                          ),
-                        ],
+                      BodyText(
+                        indents: 2,
+                        text: '* Exacte aanduiding werkplek;',
                       ),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '* Maak met de LWB een WECO op.',
-                            ),
-                          ),
-                        ],
+                      BodyText(
+                        indents: 2,
+                        text: '* Maak met de LWB een WECO op.',
                       ),
                     ],
                   ),
@@ -184,20 +98,14 @@ class InfraOngeplandWerk extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      const CardTitle(
+                    children: const [
+                      CardTitle(
                         title: Strings.risico,
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
                       ),
                     ],
                   ),
@@ -209,20 +117,14 @@ class InfraOngeplandWerk extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      const CardTitle(
+                    children: const [
+                      CardTitle(
                         title: Strings.context,
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Voor het oplossen van (dreigende) storingen en/of calamiteiten kan het nodig zijn ongepland infracapaciteit beschikbaar te stellen voor werkzaamheden. Om deze werkzaamheden te beveiligen kan gebruik worden gemaakt van vooraf voorbereide storingsWBI’s of maatwerkWBI’s. Wanneer beide mogelijkheden niet beschikbaar zijn kan ook een unieke WECO met de LWB opgemaakt worden.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Voor het oplossen van (dreigende) storingen en/of calamiteiten kan het nodig zijn ongepland infracapaciteit beschikbaar te stellen voor werkzaamheden. Om deze werkzaamheden te beveiligen kan gebruik worden gemaakt van vooraf voorbereide storingsWBI’s of maatwerkWBI’s. Wanneer beide mogelijkheden niet beschikbaar zijn kan ook een unieke WECO met de LWB opgemaakt worden.',
                       ),
                     ],
                   ),

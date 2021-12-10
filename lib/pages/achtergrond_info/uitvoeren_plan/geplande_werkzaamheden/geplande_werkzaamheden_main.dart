@@ -8,7 +8,9 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -23,13 +25,9 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(title: 'Geplande Werkzaamheden'),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'Geplande Werkzaamheden',
                       ),
                     ],
                   ),
@@ -42,14 +40,8 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(
-                              title: 'Ga snel naar',
-                            ),
-                          ),
-                        ],
+                      const TitleText(
+                        title: 'Ga snel naar',
                       ),
                       const SizedBoxH(),
                       Column(
@@ -57,8 +49,7 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Basisinformatie',
-                            destination:
-                                'geplandewerkzaamhedenbasisachtergrond',
+                            destination: 'geplandewerkzaamhedenbasisachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
@@ -87,6 +78,7 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                     ],
                   ),
                 ),
@@ -97,20 +89,12 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            height: 200.0,
-                            child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzaamhedenBovenleiding.jpg',
-                            ),
-                          ),
-                        ],
+                    children: const [
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzaamhedenBovenleiding.jpg',
                       ),
+                      SizedBoxH(),
                     ],
                   ),
                 ),

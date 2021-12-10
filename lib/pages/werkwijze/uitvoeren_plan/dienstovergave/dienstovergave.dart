@@ -8,7 +8,9 @@ class Dienstovergave extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -23,41 +25,23 @@ class Dienstovergave extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(
-                              title: 'Dienstovergave',
-                            ),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'Dienstovergave',
                       ),
-                      const SizedBoxH(),
-                      const CardTitle(
+                      SizedBoxH(),
+                      CardTitle(
                         title: Strings.procedure,
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Om de dienst over te dragen/over te nemen maak je gebruik van het ‘dienstovergave formulier’. Door het invullen van dit formulier borg je een uniforme manier van dienstovergave of dienstovername.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Om de dienst over te dragen/over te nemen maak je gebruik van het ‘dienstovergave formulier’. Door het invullen van dit formulier borg je een uniforme manier van dienstovergave of dienstovername.',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Je draagt of neemt de dienst persoonlijk over na elke onderbreking van je reguliere dienst. Je spreekt samen de bijzonderheden door en tekent het formulier voor overgave of overname.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Je draagt of neemt de dienst persoonlijk over na elke onderbreking van je reguliere dienst. Je spreekt samen de bijzonderheden door en tekent het formulier voor overgave of overname.',
                       ),
                     ],
                   ),
@@ -69,20 +53,14 @@ class Dienstovergave extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      const CardTitle(
+                    children: const [
+                      CardTitle(
                         title: Strings.risico,
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Het rijden van bijzonderheden_trein op sporen waarop zij niet of met beperkingen mogen rijden.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Het rijden van bijzonderheden_trein op sporen waarop zij niet of met beperkingen mogen rijden.',
                       ),
                     ],
                   ),
@@ -94,20 +72,14 @@ class Dienstovergave extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      const CardTitle(
+                    children: const [
+                      CardTitle(
                         title: Strings.context,
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Een treindienstleider draagt de verantwoordelijkheid voor een bediengebied over aan een bevoegd treindienstleider, waarbij hij deze informeert over bijzonderheden die afwijken van het oorspronkelijke plan en waarvoor eventuele aanpassingen moeten worden gedaan.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Een treindienstleider draagt de verantwoordelijkheid voor een bediengebied over aan een bevoegd treindienstleider, waarbij hij deze informeert over bijzonderheden die afwijken van het oorspronkelijke plan en waarvoor eventuele aanpassingen moeten worden gedaan.',
                       ),
                     ],
                   ),

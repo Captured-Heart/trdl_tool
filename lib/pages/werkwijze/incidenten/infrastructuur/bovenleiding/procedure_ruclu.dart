@@ -8,7 +8,9 @@ class ProcedureRuClu extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -23,97 +25,48 @@ class ProcedureRuClu extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(title: 'Procedure RU/CLU'),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'Procedure RU/CLU',
                       ),
-                      const SizedBoxH(),
-                      const CardTitle(
+                      SizedBoxH(),
+                      CardTitle(
                         title: Strings.procedure,
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'De MKS/BO verzoekt je de procedure RU/CLU te starten:',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'De MKS/BO verzoekt je de procedure RU/CLU te starten:',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Bel het OBI;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Bel het OBI;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  '- Staak het treinverkeer in betrokken gebied en neem veiligheidsmaatregelen;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Staak het treinverkeer in betrokken gebied en neem veiligheidsmaatregelen;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text: '- Maak met het OBI een WECO op;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Maak met het OBI een WECO op;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  '- Geef aan de MKS/BO door welk gebied spanningsloos is en wat de beperkingen zijn;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Geef aan de MKS/BO door welk gebied spanningsloos is en wat de beperkingen zijn;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          SizedBoxW(),
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  '- Let er op dat de stroomafnemers van bijzonderheden_trein in het betrokken gebied neergelaten zijn voor de spanning weer ingeschakeld wordt;',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Let er op dat de stroomafnemers van bijzonderheden_trein in het betrokken gebied neergelaten zijn voor de spanning weer ingeschakeld wordt;',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'De AL zorgt voor communicatie tussen EV en brandweer en informeert jou over het verkleinen of inschakelen van het uitgeschakelde gebied.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'De AL zorgt voor communicatie tussen EV en brandweer en informeert jou over het verkleinen of inschakelen van het uitgeschakelde gebied.',
                       ),
                     ],
                   ),
@@ -125,20 +78,14 @@ class ProcedureRuClu extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      const CardTitle(
+                    children: const [
+                      CardTitle(
                         title: Strings.risico,
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -150,20 +97,14 @@ class ProcedureRuClu extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      const CardTitle(
+                    children: const [
+                      CardTitle(
                         title: Strings.context,
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'Om blus- of reddingswerkzaamheden uit te kunnen voeren aan en/of in de nabijheid van de bovenleiding, moet deze elektrisch veiliggesteld zijn.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Om blus- of reddingswerkzaamheden uit te kunnen voeren aan en/of in de nabijheid van de bovenleiding, moet deze elektrisch veiliggesteld zijn.',
                       ),
                     ],
                   ),

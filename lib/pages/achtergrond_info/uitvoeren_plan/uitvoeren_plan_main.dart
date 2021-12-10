@@ -8,7 +8,9 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -17,38 +19,29 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              /*TITLE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(title: 'Uitvoeren Plan'),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'Uitvoeren Plan',
                       ),
                     ],
                   ),
                 ),
               ),
-              //NAVIGATION CARD
+              /*NAVIGATION CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(
-                              title: 'Ga snel naar',
-                            ),
-                          ),
-                        ],
+                      const TitleText(
+                        title: 'Ga snel naar',
                       ),
                       const SizedBoxH(),
                       Column(
@@ -90,29 +83,21 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                     ],
                   ),
                 ),
               ),
-              //SPOORKAART CARD
+              /*IMAGE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            height: 400.0,
-                            child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/spoorKaart2020.jpg',
-                            ),
-                          ),
-                        ],
+                    children: const [
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/spoorKaart2020.jpg',
                       ),
                     ],
                   ),

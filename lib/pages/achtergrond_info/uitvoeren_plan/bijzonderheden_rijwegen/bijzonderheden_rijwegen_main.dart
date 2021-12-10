@@ -8,7 +8,9 @@ class BijzonderhedenRijwegenAchtergrond extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -23,13 +25,9 @@ class BijzonderhedenRijwegenAchtergrond extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(title: 'Bijzonderheden Rijwegen'),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'Bijzonderheden Rijwegen',
                       ),
                     ],
                   ),
@@ -42,14 +40,8 @@ class BijzonderhedenRijwegenAchtergrond extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(
-                              title: 'Ga snel naar',
-                            ),
-                          ),
-                        ],
+                      const TitleText(
+                        title: 'Ga snel naar',
                       ),
                       const SizedBoxH(),
                       Column(
@@ -91,6 +83,7 @@ class BijzonderhedenRijwegenAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                     ],
                   ),
                 ),
@@ -101,19 +94,10 @@ class BijzonderhedenRijwegenAchtergrond extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            height: 200.0,
-                            child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/icbVoertuig.jpg',
-                            ),
-                          ),
-                        ],
+                    children: const [
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/icbVoertuig.jpg',
                       ),
                     ],
                   ),

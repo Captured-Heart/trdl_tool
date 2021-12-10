@@ -8,7 +8,9 @@ class GevaarlijkeStoffen1 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -23,15 +25,9 @@ class GevaarlijkeStoffen1 extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(
-                              title: 'Gevaarlijke stoffen en milieu',
-                            ),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'Gevaarlijke stoffen en milieu',
                       ),
                     ],
                   ),
@@ -44,14 +40,8 @@ class GevaarlijkeStoffen1 extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(
-                              title: 'Ga snel naar',
-                            ),
-                          ),
-                        ],
+                      const TitleText(
+                        title: 'Ga snel naar',
                       ),
                       const SizedBoxH(),
                       Column(
@@ -68,6 +58,7 @@ class GevaarlijkeStoffen1 extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                     ],
                   ),
                 ),

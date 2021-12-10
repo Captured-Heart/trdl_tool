@@ -8,7 +8,9 @@ class CommunicatieAchtergrond extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(
+          title: 'TRDLtool',
+        ),
         actions: const [
           HomeButton(),
         ],
@@ -17,38 +19,29 @@ class CommunicatieAchtergrond extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              /*TITLE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(title: 'Communicatie'),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'Communicatie',
                       ),
                     ],
                   ),
                 ),
               ),
-              //NAVIGATION CARD
+              /*NAVIGATION CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
                     children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(
-                              title: 'Ga snel naar',
-                            ),
-                          ),
-                        ],
+                      const TitleText(
+                        title: 'Ga snel naar',
                       ),
                       const SizedBoxH(),
                       Column(
@@ -75,29 +68,23 @@ class CommunicatieAchtergrond extends StatelessWidget {
                           ),
                         ],
                       ),
+                      const SizedBoxH(),
                     ],
                   ),
                 ),
               ),
-              //SPOORKAART CARD
+              /*IMAGE CARD*/
               Card(
                 elevation: 6.0,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      const SizedBoxH(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.of(context).size.width * 0.75,
-                            child: Image.asset(
-                              'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_main.jpg',
-                            ),
-                          ),
-                        ],
+                    children: const [
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_main.jpg',
                       ),
+                      SizedBoxH(),
                     ],
                   ),
                 ),

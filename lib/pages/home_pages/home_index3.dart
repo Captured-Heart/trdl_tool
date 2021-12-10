@@ -17,32 +17,23 @@ class HomeIndex3 extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: TitleText(title: 'ProChat'),
-                          ),
-                        ],
+                    children: const [
+                      TitleText(
+                        title: 'ProChat',
                       ),
-                      const SizedBoxH(),
-                      Row(
-                        children: const [
-                          Expanded(
-                            child: BodyText(
-                              text:
-                                  'In een latere update zal hier de ProChat verschijnen. Zoek je iemand om tegenaan te kletsen of wil je wat kwijt over de app? Vertel het ons.',
-                            ),
-                          ),
-                        ],
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'In een latere update zal hier de ProChat verschijnen. Zoek je iemand om tegenaan te kletsen of wil je wat kwijt over de app? Vertel het ons.',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 24.0,
                       ),
-                      const NavButton(
+                      NavButton(
                         buttontext: 'Klik hier voor de testversie',
                         destination: 'prochatmain',
                       ),
+                      SizedBoxH(),
                     ],
                   ),
                 ),
