@@ -215,7 +215,7 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                         indents: 0,
                         text: 'Een pplg kan op meerdere manieren in alarm gezet worden. In het voorbeeld Eindhoven kan dat op 3 manieren:',
                       ),
-                     const  SizedBoxH(),
+                      const SizedBoxH(),
                       const BodyText(
                         indents: 1,
                         text: '- door het drukken van de knop Ehv-Hm;',
@@ -257,7 +257,7 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                       const InsertImage(
                         image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak1.png',
                       ),
-                     const  SizedBoxH(),
+                      const SizedBoxH(),
                       const BodyText(
                         indents: 0,
                         text: 'Als er een alarmoproep geplaatst wordt, gaat de cel van waaruit de oproep geplaatst wordt in alarm. Bovendien gaan, met in achtneming van voldoende remrijweg, de voor- en achterliggende cellen in alarm. De hoeveelheid cellen wordt bepaald door de snelheid van de trein en de benodigde remweg. De cellen bestrijken alle sporen die zich binnen het gebied bevinden. Het gebied dat door de MCN in alarm wordt gezet is dus kleiner dan het gebied dat in alarm wordt gezet door de TRDL.',
@@ -266,8 +266,8 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                       const InsertImage(
                         image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak2.png',
                       ),
-                     const  SizedBoxH(),
-                     const  CardTitle(
+                      const SizedBoxH(),
+                      const CardTitle(
                         title: 'Werken met grenscellen',
                       ),
                       const SizedBoxH(),
@@ -335,7 +335,7 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                         indents: 0,
                         text: 'Zolang het alarm \'staat\' kan de TRDL informatie geven aan de machinisten die in dit gebied rijden. Als het alarm op \'hold\' staat, doe je dit door het gesprek weer actief te maken. Hiervoor druk je op de lijnknop van het alarmgebied.',
                       ),
-                      SizedBoxH()
+                      SizedBoxH(),
                       CardTitle(
                         title: 'Workflow alarmeren',
                       ),
@@ -348,7 +348,7 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                       InsertImage(
                         image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RWorkflowAlarmeren.png',
                       ),
-                      SizedBoxH()
+                      SizedBoxH(),
                       CardTitle(
                         title: 'Proces alarmeren',
                       ),
@@ -420,7 +420,6 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                         indents: 1,
                         text: 'TRDL A neemt veiligheidsmaatregelen en vraagt of TRDL B dit ook heeft gedaan (8 in schema workflow). Pas wanneer beide TRDLs veiligheidsmaatregelen hebben genomen, heft TRDL A de alarmstatus op van het gebied door het drukken van de alarm-uit knop (9 in schema workflow).',
                       ),
-                      
                       SizedBoxH(),
                       InsertImage(
                         image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak4.png',
@@ -439,7 +438,9 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                         text: 'Houd er rekening mee dat een trein die later het alarmgebied binnenrijdt weliswaar de alarmtoon hoort, en conform de procedure op zicht gaat rijden, de informatie gegeven bij het opzetten van de oproep niet heeft gehoord.',
                       ),
                       SizedBoxH(),
-                      BoldText(boldtext: 'Belangrijk',),
+                      BoldText(
+                        boldtext: 'Belangrijk',
+                      ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
@@ -454,7 +455,7 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                         indents: 1,
                         text: 'Trein 2 plaatst een alarmoproep. Trein 5 is net vertrokken van station B en ontvangt geen alarmoproep. De TRDL herroept indien nodig toeleidende seinen, zet ARI uit en plaatst veiligheidsmaatregelen. Als de TRDL nu het alarm beëindigt, is MCN 5 niet op de hoogte van de gevaarlijke situatie.',
                       ),
-                      SizedBoxH()
+                      SizedBoxH(),
                       CardTitle(
                         title: 'Beëindigen alarm GSM-R',
                       ),
@@ -469,7 +470,9 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                         text: 'Als je ingeschakeld bent in een gesprek van een buurTRDL en je wilt er niet meer aan deelnemen, dan plaats je de oproep in \'hold\'. Als de buurtreindienstleider de oproep beëindigd heeft, verdwijnt de oproep van jouw console. Het is ongewenst dat jij het gesprek van de buurTRDLs beëindigt, omdat je hiermee de gehele alarmoproep beëindigt.',
                       ),
                       SizedBoxH(),
-                      BoldText(boldtext: 'Belangrijk om te weten',),
+                      BoldText(
+                        boldtext: 'Belangrijk om te weten',
+                      ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
@@ -494,7 +497,9 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                       InsertImage(
                         image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak8.png',
                       ),
-                       BoldText(boldtext: 'Belangrijk om te weten',),
+                      BoldText(
+                        boldtext: 'Belangrijk om te weten',
+                      ),
                     ],
                   ),
                 ),
