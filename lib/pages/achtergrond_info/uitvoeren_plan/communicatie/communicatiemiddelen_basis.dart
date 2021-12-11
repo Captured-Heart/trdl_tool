@@ -56,7 +56,7 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/communicatie/communicatie_middelen/intel_console_1.png',
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_middelen/intel_console_1.png',
                       ),
                       SizedBoxH(),
                       CardTitle(
@@ -102,10 +102,10 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/communicatie/communicatie_middelen/intel_console_2.png',
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_middelen/intel_console_2.png',
                       ),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/communicatie/communicatie_middelen/intel_console_3.png',
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_middelen/intel_console_3.png',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -455,7 +455,7 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                         text: 'Het telefoonboekje van de GSM-R bevat uitsluitend de nummers die noodzakelijk zijn om algemene- en alarmoproepen in voor de VL-post specifieke gebieden uit te zenden. Dat wil zeggen dat alle alarmgebieden en algemene oproepgebieden van de desbetreffende VL-post beschikbaar zijn op elke GSM-R handheld; GSM-R handhelds zijn dus niet specifiek voor een bepaald treindienstleidersgebied.',
                       ),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/communicatie/communicatie_middelen/gsm_r_handheld.png',
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_middelen/gsm_r_handheld.png',
                       ),
                     ],
                   ),
@@ -539,8 +539,9 @@ class CommunicatieMiddelenAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/communicatie/communicatie_middelen/portofoon_telefoon.png',
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_middelen/portofoon_telefoon.png',
                       ),
+                      SizedBoxH(),
                     ],
                   ),
                 ),
