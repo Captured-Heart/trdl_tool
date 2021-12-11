@@ -39,6 +39,7 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                         indents: 0,
                         text: '​​​​​​​ProRail is eigenaar van het GSM-R netwerk in Nederland. Dit netwerk is begin van deze eeuw gebouwd en op dit moment is het gehele Nederlandse spoorwegnet uitgerust met GSM-R. Concreet betekent dit dat er meer dan 300 basisstations zijn gebouwd, de werkplekken op de treindienstleidersposten zijn aangepast en alle spoortunnels van speciale GSM-R apparatuur zijn voorzien. Ook al het spoorwegmaterieel is op dit moment uitgerust met GSM-R apparatuur. ',
                       ),
+                      SizedBoxH(),
                       CardTitle(
                         title: 'Soorten veiligheidscommunicatie binnen GSM-R',
                       ),
@@ -70,6 +71,14 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text: '- Treindienstleiders kunnen meerdere oproepen tegelijkertijd binnenkrijgen of opzetten;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Iedere oproep van een machinist komt altijd aan bij een treindienstleider.',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RNederland.png',
                       ),
                     ],
                   ),
