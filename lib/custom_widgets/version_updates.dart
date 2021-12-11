@@ -16,7 +16,7 @@ showVersionUpdatePopup(context) {
                   children: const [
                     Expanded(
                       child: Text(
-                        'De huidige versie is 0.1.0',
+                        'De huidige versie is 0.1.1',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
@@ -29,7 +29,7 @@ showVersionUpdatePopup(context) {
                   children: const [
                     Expanded(
                       child: Text(
-                        '2021-12-02: 0.1.0\n - App geschikt gemaakt voor Android 12\n - Timer.cancel() in ProQuiz nullsafe gemaakt\n - Nieuw app-icon voor app en Google Play',
+                        '2021-12-11: 0.1.1\n - Grote refactor, 13.000 regels code verwijderd\n - Achtergrondinformatie verder uitgebreid (4)',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
