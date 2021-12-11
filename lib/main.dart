@@ -188,6 +188,7 @@ class MainEntry extends StatelessWidget {
         'communicatieachtergrond': (context) => const CommunicatieAchtergrond(),
         'mondelingeveiligheidscommunicatie': (context) => const MondelingeVeiligheidAchtergrond(),
         'communicatiemiddelenbasis': (context) => const CommunicatieMiddelenAchtergrond(),
+        'communicatiesysteembasis': (context) => const CommunicatieSysteemAchtergrond(),
 
         /*PROQUIZ ROUTES*/
         'proquizmain': (context) => const ProQuiz(),
