@@ -497,167 +497,96 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                       InsertImage(
                         image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak8.png',
                       ),
-                      BoldText(
-                        boldtext: 'Belangrijk om te weten',
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              /*CARD #6*/
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: const [
-                      CardTitle(
-                        title: 'Beëindigen alarmoproep',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Als je een alarmoproep beëindigt, druk je op \'Alarm Uit\' en daarna bevestig je dit door middel van het indrukken van toets (2). Staat de alarmoproep op \'Hold\' dan moet je eerst de \'Alarm\' lijntoets (1) weer activeren.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Wil je meer weten over de bedieningsmogelijkheden van de Inttel console lees dan de gebruiksaanwijzing.',
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              /*CARD #7*/
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: const [
-                      CardTitle(
-                        title: 'Voicelogger',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Elke VL-post heeft een voicelogger in de telecomruimte. Deze voicelogger neemt alle in- en uitgaande gesprekken op van de VL-post.',
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              /*CARD #8*/
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: const [
-                      CardTitle(
-                        title: 'GSM-R noodtelefoon (handheld)',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'De GSM-R handheld is in basis een gewoon GSM-toestel. Met deze GSM-R handhelds kunnen algemene- en alarmoproepen via GSM-R worden gedaan en ontvangen. De GSM-R handhelds mogen uitsluitend gebruikt worden bij landelijke/volledige onbeschikbaarheid van GSM-R en/of uitval VL-post lokale ARBI en bij een evacuatie van de VL-post.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Sinds april 2013 wordt gebruikt gemaakt van de Sagem Tigr 350R.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Het telefoonboekje van de GSM-R bevat uitsluitend de nummers die noodzakelijk zijn om algemene- en alarmoproepen in voor de VL-post specifieke gebieden uit te zenden. Dat wil zeggen dat alle alarmgebieden en algemene oproepgebieden van de desbetreffende VL-post beschikbaar zijn op elke GSM-R handheld; GSM-R handhelds zijn dus niet specifiek voor een bepaald treindienstleidersgebied.',
-                      ),
-                      InsertImage(
-                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_middelen/gsm_r_handheld.png',
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              /*CARD #9*/
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: const [
-                      CardTitle(
-                        title: 'GSM-R portofoon',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'De GSM-R portofoon maakt gebruik van het GSM-R netwerk van ProRail, dat deel uitmaakt van de spoorweginfrastructuur. De GSM-R portofoon stelt groepen medewerkers bij het spoor in staat op een veilige manier rechtstreeks met elkaar te communiceren. Daarnaast kan direct worden gesproken met treindienstleiders, met eigen bijstuurders en met machinisten van bijzonderheden_trein. Deze nieuwe portofoons staan ook ter beschikking aan de PCA\'s.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Een groep medewerkers van een vervoerder op een geografisch beperkt gebied (bijv. een rangeerterrein) communiceert met elkaar onderling. Een coördinator van de vervoerder (de zgn. bijstuurder) kan zo nodig worden opgeroepen voor bijvoorbeeld overleg en neemt dan ook deel aan de groepscommunicatie. Het is hierbij niet per sé noodzakelijk dat de bijstuurder beschikt over een GSM-R toestel.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Ook kan er gecommuniceerd worden met de treindienstleider.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Naast de (geografisch beperkte) groepscommunicatie is het mogelijk elkaar rechtstreeks aan te roepen, zonder dat de collega\'s meeluisteren.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Bij incidenten kan er zowel door de treindienstleider als door de medewerkers alarm worden geslagen.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Voor kritische toepassingen zoals rangeren, waarbij communicatie tussen rangeerder en machinist een must is, kan gebruik worden gemaakt van een bewaakte verbinding. De handhelds bewaken dan voortdurend dat ze beiden binnen bereik van het netwerk zijn en slaan zo nodig alarm als dat niet zo is.',
-                      ),
                       SizedBoxH(),
                       BoldText(
-                        boldtext: 'Doelgroep',
+                        boldtext: 'Wist je dat:',
                       ),
                       SizedBoxH(),
                       BodyText(
-                        indents: 0,
-                        text: 'GSM-R portofonie is bedoeld voor bedrijven die werkzaamheden verrichten op of in de onmiddellijke nabijheid van het spoor, bijvoorbeeld vervoerders en spoorbedrijven en voor wie het kunnen beschikken over veilige communicatiemiddelen van belang is.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Hoe herken ik deze portofoons op mijn Inttel?',
+                        indents: 1,
+                        text: '- Bij een alarmoproep de luidspreker van de treinradio automatisch wordt aangezet;',
                       ),
                       SizedBoxH(),
                       BodyText(
-                        indents: 0,
-                        text: 'We gebruiken 8 cijfers. De portofoonnummers beginnen altijd met 9999, de resterende 4 cijfers worden onder de verschillende vervoerders verdeeld. De nummers worden dus als volgt getoond: 9999xxxx.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Hoe ziet de TRDL welke groep actief is?',
+                        indents: 1,
+                        text: '- De MCNen in het alarmgebied zo alle gesprekken kunnen volgen;',
                       ),
                       SizedBoxH(),
                       BodyText(
-                        indents: 0,
-                        text: 'Als je een ingesprekstoon krijgt, is er niemand in de groep actief.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Hoe kan ik als TRDL spreken?',
+                        indents: 1,
+                        text: '- Om rondzingen te voorkomen de microfoons in de cabines uitgeschakeld zijn;',
                       ),
                       SizedBoxH(),
                       BodyText(
-                        indents: 0,
-                        text: 'het is een simplex verbinding, dus 1 spreker tegelijk, net als bij een alarmoproep moet je voor spreken de spreeksleutel gebruiken.',
+                        indents: 1,
+                        text: '- De MCN de spreeksleutel gebruikt om de luidspreker uit en zijn microfoon aan te zetten;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Er op de display van de treinradio staat dat de spreeksleutel gebruikt dient te worden;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Als de MCN geen antwoord geeft het kan zijn dat hij/zij de spreeksleutel niet gebruikt;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Een \'Meester, wilt u de spreeksleutel gebruiken\' van jou kan helpen om hem hieraan te herinneren;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Een point-to-point gesprek niet mogelijk is met MCNen die in het alarmgebied zitten;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Desondanks er wel een gesprek met deze MCNen mogelijk is, ook als je het alarm verlaten hebt;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Hiervoor je de alarmoproep weer moet bijschakelen;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Je hiervoor op de lijnknop van het alarmgebied moet drukken;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Je dan dezelfde mogelijkheden hebt als voor het verlaten van de alarmoproep, dus ook het toespreken van de MCNen;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Dit heel goed geoefend kan worden met de Flash instructie ITS Netrix console, die op de post aanwezig is;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Als er bij een alarmoproep twee posten betrokken zijn je dit kunt zien aan het label;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Er dan niet alleen het gebiedsnummer en eventueel het treinnummer staat maar ook de naam van de buurpost.',
                       ),
                       SizedBoxH(),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_middelen/portofoon_telefoon.png',
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RWistJeDat1.png',
+                      ),
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RWistJeDat2.png',
+                      ),
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RWistJeDat3.png',
                       ),
                       SizedBoxH(),
                     ],
