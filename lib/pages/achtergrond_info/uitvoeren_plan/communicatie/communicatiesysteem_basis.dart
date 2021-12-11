@@ -77,9 +77,11 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                         indents: 1,
                         text: '- Iedere oproep van een machinist komt altijd aan bij een treindienstleider.',
                       ),
+                      SizedBoxH(),
                       InsertImage(
                         image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RNederland.png',
                       ),
+                      SizedBoxH(),
                     ],
                   ),
                 ),
@@ -92,67 +94,35 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                   child: Column(
                     children: const [
                       CardTitle(
-                        title: 'Handboek Machinist',
+                        title: 'Opbouw GSM-R',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Tijdens het rijden van een trein in 40 km/h gebieden is het voor een machinist niet toegestaan gebruik te maken van communicatiemiddelen, behalve de GSM-R alarmoproep.',
+                        text: 'Het GSM-R netwerk in Nederland heeft momenteel de beschikking over ongeveer 360 BTS’n  en zendmasten. Een BTS is een zender die zich langs de spoorbaan bevindt en die via een zendmast draadloze spraak- en datacommunicatie mogelijk maakt over het GSM-R netwerk van ProRail.​​​​​​​ Het GSM-R netwerk bestaat uit cellen. Binnen de operatie spreken we van een Cel als we het hebben over een combinatie van deze twee techniekvelden.',
+                      ),
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RBasisstation.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Basisstation (BTS)',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Uitzonderingen zijn het gebruik van:',
+                        text: 'Zendmasten hebben maximaal 3 sectoren, elk met een bereik van 120 graden. Elke BTS heeft 1 tot 3 sectoren die zo optimaal mogelijk gericht worden zodat er +/- maximaal 7 km spoorbaan \'gevoed\' wordt door één cel.',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- de boordomroep om de stationsnaam om te roepen;',
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBereik.png',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- de alarmoproep bij de portofoon en GSM-R;',
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenVerdeling.png',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- de portofoon bij geduwd rangeren;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- de portofoon bij geduwd rangeren;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- een GSM of portofoon als deze dient als beschermingsmiddel voor \'alleenwerkenden\'.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Bij defecte of ontbrekende ATB-treinapparatuur is het gebruik van de GSM tijdens het rijden van een trein niet toegestaan.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: '40 km/u gebied',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Definitie:',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Daar waar door seingeving opgelegd wordt de snelheid te begrenzen tot 40 km/u of zoveel minder als nodig is om voor het eerstvolgende \'stop\' tonende sein te kunnen stoppen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Daar waar door seingeving of een aanwijzing opgelegd wordt de snelheid te beperken tot snelheid van maximaal 40 km/u.',
-                      ),
                     ],
                   ),
                 ),
@@ -163,70 +133,152 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Column(
-                    children: const [
-                      CardTitle(
-                        title: 'Ontvangen van een alarmoproep',
+                    children: [
+                      const CardTitle(
+                        title: 'Werking cel',
                       ),
-                      SizedBoxH(),
-                      BodyText(
+                      const SizedBoxH(),
+                      const BodyText(
+                        indents: 0,
+                        text: 'Een cel kan maar één taak tegelijk uitvoeren. Gelukkig zijn er wel prioriteiten, waarbij een alarmoproep de hoogste prioriteit heeft. Als een cel een taak uitvoert met een lagere prioriteit wordt deze taak automatisch beëindigd als er een taak met een hogere prioriteit komt. Een alarm drukt een point-to-point gesprek weg, een point-to-point van een treindienstleider naar een machinist drukt het onderling verkeer van machinisten weg.',
+                      ),
+                      const SizedBoxH(),
+                      Table(
+                        border: TableBorder.all(),
+                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        children: const [
+                          TableRow(
+                            children: [
+                              TableTextBold(text: 'Cel in alarm'),
+                              TableTextBold(text: 'Cel niet in alarm'),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              TableText(text: 'Geen point to point oproep mogelijk'),
+                              TableText(text: 'Wel point to point oproep mogelijk'),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              TableText(text: 'Geen algemene oproep mogelijk'),
+                              TableText(text: 'Algemene oproep mogelijk, deze wordt door een ieder die zich in het gebied bevindt gehoord'),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              TableText(text: 'Gesprek mogelijk via de alarmknop, het gesprek is voor een ieder die zich in het gebied bevindt te horen'),
+                              TableText(text: ''),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              TableText(text: 'De luide toon alarm wordt in de trein en/of op de post hoorbaar'),
+                              TableText(text: ''),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                      const CardTitle(
+                        title: 'Alarmgebieden',
+                      ),
+                      const SizedBoxH(),
+                      const BodyText(
+                        indents: 0,
+                        text: 'In samenspraak met de posten zijn de alarmgebieden op de volgende wijze geconfigureerd. Een alarmgebied is het gebied PPLG - vrije baan - PPLG. Het in het label genoemde gebied staat gegarandeerd in alarm (inclusief beide PPLG’s).',
+                      ),
+                      const SizedBoxH(),
+                      const InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RVoorbeeldAlarmgebied.png',
+                      ),
+                      const BodyText(
+                        indents: 0,
+                        text: 'Voorbeeld alarmgebied',
+                      ),
+                      const SizedBoxH(),
+                      const CardTitle(
+                        title: 'Uitgaande alarmoproep geplaatst door de TRDL',
+                      ),
+                      const SizedBoxH(),
+                      const BodyText(
+                        indents: 0,
+                        text: 'Bij het plaatsen van een alarmoproep door de treindienstleider worden het baanvak en de aangrenzende pplg’s in alarm gezet.',
+                      ),
+                      const SizedBoxH(),
+                      const BodyText(
+                        indents: 0,
+                        text: 'Voorbeeld: als de TRDL de knop Ehv-Hm indrukt, wordt de vrije baan tussen Eindhoven en Helmond in alarm gezet en de pplg’s Eindhoven en Helmond.',
+                      ),
+                      const SizedBoxH(),
+                      const BodyText(
+                        indents: 0,
+                        text: 'Een pplg kan op meerdere manieren in alarm gezet worden. In het voorbeeld Eindhoven kan dat op 3 manieren:',
+                      ),
+                     const  SizedBoxH(),
+                      const BodyText(
                         indents: 1,
-                        text: '1. Een alarm wordt door een machinist of een andere treindienstleider geïnitieerd.',
+                        text: '- door het drukken van de knop Ehv-Hm;',
                       ),
-                      BodyText(
-                        indents: 2,
-                        text: 'a. In een van de eerste twee kolommen knippert een \'Alarm\' lijntoets (1). In het label wordt de initiator getoond: \'MCN\' + treinnummer of VL-post indicatie, alsmede de alarmgebiedsindicatie (wit-op-rood);',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: 'b. Tevens is het alarmsignaal hoorbaar.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
+                      const SizedBoxH(),
+                      const BodyText(
                         indents: 1,
-                        text: '2. Druk op de desbetreffende \'Alarm\' lijntoets (1) om de alarmoproep aan te nemen',
+                        text: '- door het drukken van de knop Ehv-Wt;',
                       ),
-                      BodyText(
-                        indents: 2,
-                        text: 'a. Het alarmsignaal stopt;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: 'b. De desbetreffende \'Alarm\' lijntoets (1) brandt continu;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: 'c. Het label verandert van kleur, wordt rood-op-wit;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: 'd. Op het bij de gebruikte handset behorende functiedisplay wordt in dezelfde kleur de bij de \'Alarm\' lijntoets (1) behorende labelinformatie getoond;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: 'e. Eventuele andere staande verbindingen anders dan alarmen worden automatisch op \'Hold\' gezet;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: 'f. Het label van de \'Alarm Uit\' lijntoets (3) is niet langer wit-op-grijs, maar wordt rood-op-wit (ter indicatie dat deze toets bedienbaar is), het label krijgt dubbel formaat en toont \'Alarm Uit\' alsmede de gebiedsindicatie als in het label van de staande \'Alarm\' lijntoets (1).',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
+                      const SizedBoxH(),
+                      const BodyText(
                         indents: 1,
-                        text: '3. Er is nu gelegenheid om een alarmgesprek te voeren.',
+                        text: '- door het drukken van de knop Ehv-At.',
                       ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Bijzondere situaties:',
+                      const SizedBoxH(),
+                      const InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RAlarmKnoppen.png',
                       ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- De alarmtoon blijft hoorbaar totdat een (van de) ontvangende TRDL(\'s) het alarm heeft aangenomen, ongeacht op welke VL-post dat heeft plaatsgevonden;',
+                      const SizedBoxH(),
+                      const BodyText(
+                        indents: 0,
+                        text: 'De keus is aan de TRDL welke knop er ingedrukt wordt, rekening houdend met welk baanvak er mee gealarmeerd wordt.',
                       ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Als er door de initiërende MCN geen treinnummer is ingevoerd, wordt het mobiele nummer getoond.',
+                      const SizedBoxH(),
+                      const BodyText(
+                        indents: 0,
+                        text: 'Als een TRDL meerdere gebieden in alarm wil zetten, moeten deze ook geactiveerd worden.',
+                      ),
+                      const SizedBoxH(),
+                      const CardTitle(
+                        title: 'Inkomende alarmoproep geplaatst door de MCN',
+                      ),
+                      const SizedBoxH(),
+                      const BodyText(
+                        indents: 0,
+                        text: 'De gebieden buiten zijn geconfigureerd aan de hand van de GSM-R cellen. In samenspraak met de post en spoorwegveiligheid is vastgesteld welke cellen in alarm gezet worden in het geval dat een machinist een alarmoproep plaatst.',
+                      ),
+                      const SizedBoxH(),
+                      const InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak1.png',
+                      ),
+                     const  SizedBoxH(),
+                      const BodyText(
+                        indents: 0,
+                        text: 'Als er een alarmoproep geplaatst wordt, gaat de cel van waaruit de oproep geplaatst wordt in alarm. Bovendien gaan, met in achtneming van voldoende remrijweg, de voor- en achterliggende cellen in alarm. De hoeveelheid cellen wordt bepaald door de snelheid van de trein en de benodigde remweg. De cellen bestrijken alle sporen die zich binnen het gebied bevinden. Het gebied dat door de MCN in alarm wordt gezet is dus kleiner dan het gebied dat in alarm wordt gezet door de TRDL.',
+                      ),
+                      const SizedBoxH(),
+                      const InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak2.png',
+                      ),
+                     const  SizedBoxH(),
+                     const  CardTitle(
+                        title: 'Werken met grenscellen',
+                      ),
+                      const SizedBoxH(),
+                      const BodyText(
+                        indents: 0,
+                        text: 'Sommige GSM-R cellen vallen precies op de grens van twee treindienstleidersgebieden. Deze cellen worden grenscellen genoemd.',
+                      ),
+                      const SizedBoxH(),
+                      const BodyText(
+                        indents: 0,
+                        text: 'Het kan voorkomen dat een basisstation uitvalt of niet bereikbaar is vanwege verstorende elementen in de buurt van dit station. Wanneer dit gebeurt, zal het signaal op zoek gaan naar een basisstation dat sterk genoeg is om het signaal op te pakken en een verbinding kan opbouwen. De trein blijft als dat mogelijk is, contact houden met de voorgaande cel en blijft op zoek naar een GSM-R cel. Als in dit geval een machinist een alarmoproep plaatst, kan deze in een ander gebied terecht komen. Voor jou als treindienstleider kan dit betekenen dat je een alarmoproep van een machinist ontvangt die zich niet in jouw gebied bevindt. Als treindienstleider moet je dus bij elke alarmoproep vaststellen waar de trein zich bevindt die de alarmoproep plaatst.',
                       ),
                     ],
                   ),
@@ -240,24 +292,20 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                   child: Column(
                     children: const [
                       CardTitle(
-                        title: 'Verlaten van een alarmoproep',
+                        title: 'Werkwijze point to point oproep',
                       ),
                       SizedBoxH(),
                       BodyText(
+                        indents: 0,
+                        text: 'Een point-to-point oproep is een oproep waarbij de treindienstleider een bewuste keus maakt voor het oproepen van een specifieke trein. Dit doet hij door het intoetsen van het treinnummer. Andersom kan de machinist van een trein een point-to-point oproep opzetten om een treindienstleider te bereiken. Deze laatste oproep kan op 2 manieren naar de console van de treindienstleider worden gerouteerd.',
+                      ),
+                      BodyText(
                         indents: 1,
-                        text: '1. Druk op de \'Hold\' toets (6) van de desbetreffende handset, hierdoor wordt het gesprek verlaten. Het alarm \'buiten\' blijft gewoon actief. De \'Alarm\' lijntoets dooft.',
+                        text: '- LDA (Location Dependent Addressing). Als een machinist een oproep plaatst, dan zoekt het treinnummer via TROTS waar de trein zich bevindt. Deze locatie is aan een treindienstleider gekoppeld, zodat de oproep op de juiste plek binnenkomt;',
                       ),
                       BodyText(
-                        indents: 2,
-                        text: 'a. Het bij de desbetreffende \'Alarm\' lijntoets (1) behorende label geeft de indicatie dat het gesprek nog steeds actief is, maar in de wacht staat;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: 'b. Op het bij de gebruikte handset behorende functiedisplay wordt de bij het alarm behorende labelinformatie niet meer getoond;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: 'c. Het label van de \'Alarm Uit\' lijntoets (3) wordt rood-op-wit (ter indicatie dat deze toets bedienbaar is), krijgt weer enkel formaat en toont niet langer de gebiedsindicatie als in het label van de staande \'Alarm\' lijntoets (1).',
+                        indents: 1,
+                        text: '- CDA (Cell Depended Addressing). Bij CDA spelen de cellen waarin de trein zich bevindt een belangrijke rol. Als een oproep geplaatst wordt in een bepaalde cel en het treinnummer wordt niet herkend dan komt de oproep binnen bij de treindienstleider waaraan de cel gekoppeld is.',
                       ),
                     ],
                   ),
@@ -271,29 +319,182 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                   child: Column(
                     children: const [
                       CardTitle(
-                        title: 'Deelname aan of terugkeren naar een alarmoproep',
+                        title: 'Werking alarmoproepen binnen GSM-R',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Wanneer een gebied door een alarmoproep van een MCN of TRDL in een alarmstatus is gebracht, blijft deze \'staan\'. Dit betekent dat het alarm blijft alarmeren tot de TRDL deze status heeft afgebroken. Het grote voordeel hiervan is dat alle treinen die het gebied binnenrijden alsnog een alarmoproep ontvangen.',
+                      ),
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RAlarmAan.png',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Zolang het alarm \'staat\' kan de TRDL informatie geven aan de machinisten die in dit gebied rijden. Als het alarm op \'hold\' staat, doe je dit door het gesprek weer actief te maken. Hiervoor druk je op de lijnknop van het alarmgebied.',
+                      ),
+                      SizedBoxH()
+                      CardTitle(
+                        title: 'Workflow alarmeren',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'In het onderstaande schema is aangeven hoe de \'workflow\' bij een alarmoproep verloopt. In dit voorbeeld kan het alarm opgezet worden door zowel de MCN als de TRDL.',
+                      ),
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RWorkflowAlarmeren.png',
+                      ),
+                      SizedBoxH()
+                      CardTitle(
+                        title: 'Proces alarmeren',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'In dit voorbeeld is het baanvak A - B verdeeld tussen twee verschillende treindienstleidersgebieden. Het valt zowel in het gebied van treindienstleider A als van treindienstleider B. Op het baanvak bevinden zich de volgende GSM-R cellen: a, b, c, d, e en f. Deze cellen zijn als volgt verdeeld over de twee treindienstleidersgebieden:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '1. Druk op de \'Alarm\' lijntoets (1) van het desbetreffende alarm, hierdoor wordt de TRDL (weer) bij de alarmoproep betrokken.',
+                        text: '- TRDL A = a, b, c, d, e;',
                       ),
+                      SizedBoxH(),
                       BodyText(
-                        indents: 2,
-                        text: 'a. Het bij de desbetreffende \'Alarm\' lijntoets (1) behorende label blijft staan in rood-op-wit en geeft de indicatie dat het gesprek op de handset staat;',
+                        indents: 1,
+                        text: '- TRDL b = e, f, g.',
                       ),
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak3.png',
+                      ),
+                      SizedBoxH(),
                       BodyText(
-                        indents: 2,
-                        text: 'b. De \'Alarm\' lijntoets (1) brandt continu;',
+                        indents: 0,
+                        text: 'Dit betekent dat in principe alle oproepen vanuit de trein bij de juiste TRDL uitkomen.',
                       ),
+                      SizedBoxH(),
                       BodyText(
-                        indents: 2,
-                        text: 'c. Op het bij de gebruikte handset behorende functiedisplay wordt in dezelfde kleur de bij de \'Alarm\' lijntoets (1) behorende labelinformatie getoond;',
+                        indents: 0,
+                        text: 'Met betrekking tot cel e wordt de keuze per post gemaakt waar deze oproep uit dient te komen. Dit kan in treindienstleidersgebied A, B, of bij beide. Point-to-point gesprekken komen altijd uit bij de juiste trein. Algemene oproepen komen uit in die cellen die bij het treindienstleidersgebied horen.',
                       ),
+                      SizedBoxH(),
+                      CardTitle(
+                        title: 'Voorbeeld',
+                      ),
+                      SizedBoxH(),
                       BodyText(
-                        indents: 2,
-                        text: 'd. Het label van de \'Alarm Uit\' lijntoets (3) is niet langer wit-op-grijs, maar rood-op-wit (ter indicatie dat deze toets bedienbaar is) en krijgt dubbel formaat en toont \'Alarm Uit\', alsmede de gebiedsindicatie als in het label van de staande \'Alarm\' lijntoets (1).',
+                        indents: 1,
+                        text: 'Trein 4 krijgt een aanrijding in cel d en plaatst een alarmoproep (1 in schema workflow). De cellen die benodigd zijn om het gebied voldoende af te dekken komen in alarm.',
                       ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: 'Omdat cel e ook behoort tot het TRDL-gebied van de TRDL B zullen ook de cellen die horen bij dat deel van het baanvak in alarm gaan (2 in schema workflow). Dit betekent dat zowel TRDL A als TRDL B een alarmoproep binnen krijgen op hun Inttel-console (3 in schema workflow alarmeren).',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: 'Alle treinen binnen het alarmgebied krijgen een alarmoproep (4 in schema workflow). Zolang het alarm blijft \'staan\' zullen alle treinen die het gebied inrijden met de alarmstatus een alarmoproep ontvangen (5 in schema workflow en trein 10 op het baanvak).',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: 'Aan de hand van het treinnummer gaan TRDL A en B na binnen wiens gebied deze trein zich bevindt (6 in schema workflow). Beide TRDLs kunnen het gesprek aannemen en ze moeten op basis van het treinnummer of informatie van de MCN bepalen wie het gesprek verder voert. Als de andere TRDL het gesprek wil verlaten, moet hij dat doen door op de \'hold\' toets te drukken.',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: 'TRDL A neemt het alarm aan en vraagt uit. Gedurende de tijd dat een gebied in alarm staat, zijn de gevoerde gesprekken voor iedereen binnen het gebied te beluisteren. Dat geldt dus ook voor de buurTRDL.',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: 'De TRDL kan zolang het gebied in de alarmstatus is, binnen dit gebied alle MCN van informatie voorzien (7 in workflowschema). Dit doet hij door in te schakelen in het alarm.',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: 'TRDL A neemt veiligheidsmaatregelen en vraagt of TRDL B dit ook heeft gedaan (8 in schema workflow). Pas wanneer beide TRDLs veiligheidsmaatregelen hebben genomen, heft TRDL A de alarmstatus op van het gebied door het drukken van de alarm-uit knop (9 in schema workflow).',
+                      ),
+                      
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak4.png',
+                      ),
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak5.png',
+                      ),
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak6.png',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Houd er rekening mee dat een trein die later het alarmgebied binnenrijdt weliswaar de alarmtoon hoort, en conform de procedure op zicht gaat rijden, de informatie gegeven bij het opzetten van de oproep niet heeft gehoord.',
+                      ),
+                      SizedBoxH(),
+                      BoldText(boldtext: 'Belangrijk',),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Overtuig je ervan dat het veilig is om het alarm te beëindigen. Als een MCN een alarm plaatst, staan niet alle cellen op het baanvak in alarm. Als je nu het alarm beëindigt zonder dat je MCN hebt gesproken die op het baanvak rijden, maar die het alarmgebied nog niet bereikt hebben, kan een gevaarlijke situatie ontstaan.',
+                      ),
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak7.png',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: 'Trein 2 plaatst een alarmoproep. Trein 5 is net vertrokken van station B en ontvangt geen alarmoproep. De TRDL herroept indien nodig toeleidende seinen, zet ARI uit en plaatst veiligheidsmaatregelen. Als de TRDL nu het alarm beëindigt, is MCN 5 niet op de hoogte van de gevaarlijke situatie.',
+                      ),
+                      SizedBoxH()
+                      CardTitle(
+                        title: 'Beëindigen alarm GSM-R',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Je beëindigt de alarmstatus van een gebied dat in alarm staat, nadat je je ervan overtuigd hebt dat de veiligheidsmaatregelen door zowel jou als jouw eventuele buurTRDL(s) zijn genomen en de betreffend treinen van de baan zijn of voorzien van een aanwijzing.',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Als je ingeschakeld bent in een gesprek van een buurTRDL en je wilt er niet meer aan deelnemen, dan plaats je de oproep in \'hold\'. Als de buurtreindienstleider de oproep beëindigd heeft, verdwijnt de oproep van jouw console. Het is ongewenst dat jij het gesprek van de buurTRDLs beëindigt, omdat je hiermee de gehele alarmoproep beëindigt.',
+                      ),
+                      SizedBoxH(),
+                      BoldText(boldtext: 'Belangrijk om te weten',),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Als een alarm op \'hold\' wordt gezet, blijven de cellen in alarm staan. De verbinding wordt opnieuw opgebouwd als de TRDL opnieuw deel wil nemen aan het alarm;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Als de TRDL meerdere gebieden in alarm wil zetten, moeten deze gebieden één voor één geactiveerd worden. De boodschap moet dan ook per gebied ingesproken worden. Dit kan niet met één boodschap gebeuren;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Alleen de TRDL kan een alarmoproep beëindigen;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Als een MCN een alarmoproep plaatst, worden een aantal cellen in alarm gezet. Als je nu als TRDL de binnengekomen alarmoproep op \'hold\' zet en je besluit het gehele baanvak (PPLG – vrije baan – PPLG) in alarm te zetten, dan zal deze alarmoproep niet binnenkomen in het gebied dat al in alarm stond. Ook een boodschap die je inspreekt zal niet binnenkomen in dat gebied. Hier kan dus een gevaarlijke situatie ontstaan.',
+                      ),
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_systeem/GSM-RCellenBaanvak8.png',
+                      ),
+                       BoldText(boldtext: 'Belangrijk om te weten',),
                     ],
                   ),
                 ),
