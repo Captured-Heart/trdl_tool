@@ -152,6 +152,9 @@ export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/communicatie/mon
 export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/communicatie/communicatiemiddelen_basis.dart';
 export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/communicatie/communicatiesysteem_basis.dart';
 
+/*ACHTERGROND INFORMATIE NCBG PAGES*/
+export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/ncbg/ncbg_main.dart';
+
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/proquiz/proquizmain.dart';
 export 'package:trdl_tool/proquiz/screens/quiz_screen.dart';
