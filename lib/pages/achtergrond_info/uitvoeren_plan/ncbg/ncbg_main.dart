@@ -112,17 +112,17 @@ class NCBGAchtergrond extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: 'Ter voorkoming van gevaar;',
+                        text: '- Ter voorkoming van gevaar;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: 'Als de infra gebruiker hierom verzoekt en dit mogelijk is;',
+                        text: '- Als de infra gebruiker hierom verzoekt en dit mogelijk is;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: 'Voor bijsturing om het actuele plan uitvoerbaar te houden.',
+                        text: '- Voor bijsturing om het actuele plan uitvoerbaar te houden.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -134,13 +134,14 @@ class NCBGAchtergrond extends StatelessWidget {
                         text: 'Binnen een NCBG kent men in beginsel twee verschillende sturingsniveaus, te weten:',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Sturing op rijwegniveau;',
+                      BodyText(
+                        indents: 1,
+                        text: '- Sturing op rijwegniveau;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: 'Sturing op TijdRuimte-slotniveau.',
+                        text: '- Sturing op TijdRuimte-slotniveau.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -501,11 +502,9 @@ class NCBGAchtergrond extends StatelessWidget {
                       CardTitle(
                         title: 'Seinen specifiek voor NCBG',
                       ),
-                      SizedBoxH(),
                       InsertImage(
                         image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen1.png',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text: 'De door het getal aangegeven snelheid wordt niet overschreden, totdat:​​​​​​',
@@ -519,6 +518,272 @@ class NCBGAchtergrond extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text: '- De gehele trein de weegbrug is gepasseerd.',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen2.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Stoppen voor het bord en de opdracht, vermeld op het onderbord, uitvoeren. Indien geen opdracht wordt vermeld, mag na het stoppen verder worden gereden.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen3.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'De opdracht vermeld op het onderbord uitvoeren alvorens het bord voorbij te rijden. Dit bord wordt onder meer toegepast op locaties waarover wegverkeer plaatsvindt en de machinist een overweg moet bedienen.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen4.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Stoppen vóór het bord. Na contact met en toestemming van de op het onderbord vermelde functionaris mag verder worden gereden. Indien het onderbord meerdere opdrachten vermeldt deze uitvoeren alvorens het bord voorbij te rijden.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen5.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Stoppen voor het bord, tenzij de opdracht, vermeld op het onderbord, is uitgevoerd.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen6.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Aanduiding van de grens van het gebied waar gerangeerd wordt. Geldt alleen voor bestuurders van treinen waarmee gerangeerd wordt.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen7.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Stoppen voor het sein.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen8.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Voorbijrijden toegestaan met een zodanige snelheid, die niet hoger is dan 40 km/u, om op elke plaats achter dit sein te kunnen stoppen i.v.m. een mogelijke belemmering dan wel het ontbreken van de zekerheid dat de inrichtingen, gelegen tussen dit sein en het eerstvolgende lichtsein, goed functioneren.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen9.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Niet tegen het spoorvoertuig rangeren of afstoten.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen10.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Aanduiding van de stand van een wissel:',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Linksleidend, en;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Rechtsleidend.',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen11.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Berijden van de weegbrug toegestaan met de voor die weegbrug geldende snelheid (aangegeven door een bord).',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen12.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Berijden van de weegbrug toegestaan met de plaatselijke snelheid.',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/TRON_seinen13.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Aanduiding van het begin van een niet door seinen beveiligd gebied.',
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #5*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: const [
+                      SizedBoxH(),
+                      CardTitle(
+                        title: 'Kijfhoek',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/Kijfhoek_seinen1.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Rijden over de rangeerheuvel naar de verdeelsporen toegestaan.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/Kijfhoek_seinen2.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Opduwen van de te heuvelen spoorvoertuigen toegestaan. Niet toegestaan met de locomotief het sein voorbij te rijden.',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/Kijfhoek_seinen3.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Voorbijrijden van het sein alleen toegestaan na toestemming van de treindienstleider.',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/Kijfhoek_seinen4.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Rangeren toegestaan.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/Kijfhoek_seinen5.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Aanduiding van de afstand tussen het voorste spoorvoertuig en het einde van het spoor die minder dan 200m en meer dan 50m bedraagt.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/Kijfhoek_seinen6.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Aanduiding van de afstand tussen het voorste spoorvoertuig en het einde van het spoor die minder dan 50m bedraagt.​​​​​​',
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #6*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: const [
+                      SizedBoxH(),
+                      CardTitle(
+                        title: 'CTB baanvakken',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/CTB_seinen1.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Snelheid zodanig begrenzen om voor de aangegeven overweg(en) te kunnen stoppen.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/CTB_seinen2.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Berijden van de overweg(en) toegestaan.',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/CTB_seinen3.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Stoppen voor de overweg(en).',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/CTB_seinen4.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Stoppen voor het sein, tenzij de TRDL toestemming heeft gegeven om het sein voorbij te rijden.​​​​​​',
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #7*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: const [
+                      SizedBoxH(),
+                      CardTitle(
+                        title: 'Amersfoort',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/Amersfoort_seinen1.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Niet toegestaan spoorvoertuigen naar of over de heuvel te duwen.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/Amersfoort_seinen2.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Duwen van spoorvoertuigen naar of over de heuvel toegestaan.',
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #8*/
+              Card(
+                elevation: 6.0,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: const [
+                      SizedBoxH(),
+                      CardTitle(
+                        title: 'Rangeerseinen',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/Rangeer_seinen1.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Rangeren staken en de spoorvoertuigen vrij opstellen van de andere sporen. Geldt alleen voor de aangegeven sporen.​​​​​​',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/Rangeer_seinen2.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Rangeren toegestaan na ontvangst van de rangeeropdracht. Geldt alleen voor de aangegeven sporen.',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/Rangeer_seinen3.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Stoppen voor het sein. Geldt alleen voor het spoor waarnaar de pijl wijst of voor de sporen waarnaar de pijlen wijzen.',
+                      ),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/ncbg/Rangeer_seinen4.png',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Voorbijrijden toegestaan na ontvangst van de rangeeropdracht.',
                       ),
                     ],
                   ),
