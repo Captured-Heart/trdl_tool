@@ -444,7 +444,7 @@ class NCBGAchtergrond extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '6. Keuzelijst \'Bij einde TRS, omschr.'',
+                        text: '6. Keuzelijst \'Bij einde TRS, omschr.\'',
                       ),
                       BodyText(
                         indents: 2,
