@@ -172,32 +172,39 @@ class CommunicatieSysteemAchtergrond extends StatelessWidget {
                           TableRow(
                             children: [
                               TableText(
-                                  text: 'Geen point to point oproep mogelijk'),
+                                text: 'Geen point to point oproep mogelijk',
+                              ),
                               TableText(
-                                  text: 'Wel point to point oproep mogelijk'),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'Geen algemene oproep mogelijk'),
-                              TableText(
-                                  text:
-                                      'Algemene oproep mogelijk, deze wordt door een ieder die zich in het gebied bevindt gehoord'),
+                                text: 'Wel point to point oproep mogelijk',
+                              ),
                             ],
                           ),
                           TableRow(
                             children: [
                               TableText(
-                                  text:
-                                      'Gesprek mogelijk via de alarmknop, het gesprek is voor een ieder die zich in het gebied bevindt te horen'),
+                                text: 'Geen algemene oproep mogelijk',
+                              ),
+                              TableText(
+                                text:
+                                    'Algemene oproep mogelijk, deze wordt door een ieder die zich in het gebied bevindt gehoord',
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              TableText(
+                                text:
+                                    'Gesprek mogelijk via de alarmknop, het gesprek is voor een ieder die zich in het gebied bevindt te horen',
+                              ),
                               TableText(text: ''),
                             ],
                           ),
                           TableRow(
                             children: [
                               TableText(
-                                  text:
-                                      'De luide toon alarm wordt in de trein en/of op de post hoorbaar'),
+                                text:
+                                    'De luide toon alarm wordt in de trein en/of op de post hoorbaar',
+                              ),
                               TableText(text: ''),
                             ],
                           ),
