@@ -157,6 +157,7 @@ export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/ncbg/ncbg_main.d
 
 /*ACHTERGROND INFORMATIE AANPASSEN PLAN PAGES*/
 export 'package:trdl_tool/pages/achtergrond_info/aanpassen_plan/aanpassen_plan_main.dart';
+export 'package:trdl_tool/pages/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/aanpassen_plan_basis.dart';
 
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/proquiz/proquizmain.dart';
