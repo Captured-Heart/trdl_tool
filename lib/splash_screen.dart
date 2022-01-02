@@ -90,9 +90,8 @@ class _SplashScreenState extends State<SplashScreen> {
             SizedBox(
               height: 30.0,
               width: 100.0,
-              //TODO: Get someone to make a better logo!
               child: Image.asset(
-                'assets/logos/plotsklappsLogoBlack.png',
+                'assets/logos/plotsklappsLogoSmall.png',
               ),
             ),
             const Text(

@@ -79,7 +79,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
             SizedBox(
               height: 30.0,
               width: 100.0,
-              child: Image.asset('assets/logos/plotsklappsLogoBlack.png'),
+              child: Image.asset('assets/logos/plotsklappsLogoSmall.png'),
             ),
             const Text(
               Strings.and,
