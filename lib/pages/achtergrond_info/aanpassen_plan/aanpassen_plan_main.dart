@@ -89,6 +89,7 @@ class AanpassenPlanAchtergrond extends StatelessWidget {
                       InsertImage(
                         image: 'assets/images/achtergrond_info/aanpassen_plan/info_bord.png',
                       ),
+                      SizedBoxH(),
                     ],
                   ),
                 ),
