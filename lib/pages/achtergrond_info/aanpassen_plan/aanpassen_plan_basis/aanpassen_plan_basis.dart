@@ -508,7 +508,7 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                       Table(
                         border: TableBorder.all(),
                         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                        children: const [
+                        children: [
                           TableRow(
                             children: [
                               TableTextBold(text: 'Naam corridor'),
