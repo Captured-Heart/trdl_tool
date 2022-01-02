@@ -506,7 +506,7 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                         boldtext: 'Goederencorridors 2020',
                       ),
                       Table(
-                        border: const TableBorder.all(),
+                        border: TableBorder.all(),
                         defaultVerticalAlignment: TableCellVerticalAlignment.middle,
                         children: [
                           TableRow(
