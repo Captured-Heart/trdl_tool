@@ -165,7 +165,7 @@ class MainEntry extends StatelessWidget {
         'stilleggentreindienst': (context) => const StilleggenTreindienst(),
         'afhandelensysteemstoringen': (context) => const AfhandelenSysteemstoringen(),
 
-        /*ACHTERGRONDINFO ROUTES*/
+        /*ACHTERGRONDINFO UITVOEREN PLAN ROUTES*/
         'uitvoerenplanachtergrond': (context) => const UitvoerenPlanAchtergrond(),
         'uitvoerenplanbasisachtergrond': (context) => const UitvoerenPlanBasisAchtergrond(),
         'geplandewerkzaamhedenachtergrond': (context) => const GeplandeWerkzaamhedenAchtergrond(),
@@ -190,6 +190,9 @@ class MainEntry extends StatelessWidget {
         'communicatiemiddelenbasis': (context) => const CommunicatieMiddelenAchtergrond(),
         'communicatiesysteembasis': (context) => const CommunicatieSysteemAchtergrond(),
         'ncbgachtergrond': (context) => const NCBGAchtergrond(),
+
+        /*ACHTERGRONDINFO AANPASSEN PLAN ROUTES*/
+        'aanpassenplanachtergrond': (context) => const AanpassenPlanAchtergrond(),
 
         /*PROQUIZ ROUTES*/
         'proquizmain': (context) => const ProQuiz(),
