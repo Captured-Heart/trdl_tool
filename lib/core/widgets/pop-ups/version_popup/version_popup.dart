@@ -16,7 +16,20 @@ showVersionUpdatePopup(context) {
                   children: const [
                     Expanded(
                       child: Text(
-                        'De huidige versie is 0.1.2',
+                        'De huidige versie is 0.1.3',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2022-01-06: 0.1.3\n - Grote refactor, filetree aangepast\n - Achtergrondinformatie verder uitgebreid (6)',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
