@@ -84,12 +84,12 @@ class _SplashScreenState extends State<SplashScreen> {
             const Text(
               Strings.poweredBy,
               style: TextStyle(
-                fontSize: 8.0,
+                fontSize: 12.0,
               ),
             ),
             SizedBox(
-              height: 30.0,
-              width: 100.0,
+              height: 60.0,
+              width: 140.0,
               child: Image.asset(
                 'assets/logos/plotsklappsLogoSmall.png',
               ),
@@ -97,12 +97,12 @@ class _SplashScreenState extends State<SplashScreen> {
             const Text(
               Strings.and,
               style: TextStyle(
-                fontSize: 8.0,
+                fontSize: 12.0,
               ),
             ),
             const SizedBoxH(),
             const FlutterLogo(
-              size: 24.0,
+              size: 32.0,
             ),
           ],
         ),
