@@ -47,7 +47,8 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Aanrijdingen';                      ),
+                        text: '- Aanrijdingen;',
+                      ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
@@ -191,11 +192,11 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text: 'De DVL ontvangt een signaal van jou (alarmeer/informeerformulier).',
-                      ),   
+                      ),
                       SizedBoxH(),
                       BoldText(
                         boldtext: 'Eerste beeldvorming door TRDL en DVL',
-                      ),                   
+                      ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
@@ -204,7 +205,7 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       SizedBoxH(),
                       BoldText(
                         boldtext: 'Vrijmaken verstoord gebied',
-                      ), 
+                      ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
