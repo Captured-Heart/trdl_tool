@@ -3,7 +3,7 @@ description: TRDLtool
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
-version: 0.1.2+12
+version: 0.1.3+13
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
@@ -31,10 +31,10 @@ dev_dependencies:
   flutter_native_splash: ^1.3.1
 
 flutter_native_splash:
-  color: "#FFFFFF"
-  image: assets/icons/plotsklappsIcon400x400.png
+  color: "#dedede"
+  image: assets/icons/plotsklappsIconColorBorder.png
   color_dark: "#000000"
-  image_dark: assets/icons/plotsklappsIcon400x400.png
+  image_dark: assets/icons/plotsklappsIconBlackWhite_512x512.png
   android: true
   ios: true
   fullscreen: true
@@ -44,9 +44,7 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/fonts/
     - assets/icons/
-    - assets/logos/
     - assets/images/
     - assets/images/welcome_screen/
     - assets/images/achtergrond_info/
