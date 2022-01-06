@@ -21,6 +21,7 @@ export 'package:url_launcher/url_launcher.dart';
 export 'package:carousel_slider/carousel_slider.dart';
 
 /*MODULES AND SERVICES*/
+export 'package:trdl_tool/theme/app_theme.dart';
 export 'package:trdl_tool/item_lists/welcome_items.dart';
 export 'package:trdl_tool/item_lists/all_strings.dart';
 export 'package:trdl_tool/item_lists/all_questions.dart';
@@ -158,6 +159,7 @@ export 'package:trdl_tool/pages/achtergrond_info/uitvoeren_plan/ncbg/ncbg_main.d
 /*ACHTERGROND INFORMATIE AANPASSEN PLAN PAGES*/
 export 'package:trdl_tool/pages/achtergrond_info/aanpassen_plan/aanpassen_plan_main.dart';
 export 'package:trdl_tool/pages/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/aanpassen_plan_basis.dart';
+export 'package:trdl_tool/pages/achtergrond_info/aanpassen_plan/stappenplan_versperringen/stappenplan_versperringen_achtergrond.dart';
 
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/proquiz/proquizmain.dart';
