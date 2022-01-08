@@ -45,9 +45,13 @@ flutter:
 
   assets:
     - assets/icons/
+
     - assets/images/
+
     - assets/images/welcome_screen/
+
     - assets/images/achtergrond_info/
+    
     - assets/images/achtergrond_info/uitvoeren_plan/
     - assets/images/achtergrond_info/uitvoeren_plan/uitvoeren_plan_basis/
     - assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/
@@ -70,5 +74,7 @@ flutter:
     - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/rijtuigen/
     - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/onderhouds_machines/
     - assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/railweg_voertuigen/
+
     - assets/images/achtergrond_info/aanpassen_plan/
     - assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/
+    - assets/images/achtergrond_info/aanpassen_plan/orderacceptatie/
