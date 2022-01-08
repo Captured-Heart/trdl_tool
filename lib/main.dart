@@ -57,8 +57,7 @@ class MainEntry extends StatelessWidget {
 
         /*AANPASSEN PLAN ROUTES*/
         'aanpassenplan': (context) => const AanpassenPlan(),
-        'stappenplanversperringen': (context) =>
-            const StappenplanVersperringen(),
+        'stappenplanversperringen': (context) => const StappenplanVersperringen(),
         'ongeplandwerk': (context) => const OngeplandWerk(),
         'orderacceptatie': (context) => const Orderacceptatie(),
         'materieelongeplandwerk': (context) => const MaterieelOngeplandWerk(),
@@ -108,61 +107,39 @@ class MainEntry extends StatelessWidget {
         'wisselsvrijmaken': (context) => const WisselsVrijmaken(),
         'stspassage': (context) => const STSPassage(),
         'stilleggentreindienst': (context) => const StilleggenTreindienst(),
-        'afhandelensysteemstoringen': (context) =>
-            const AfhandelenSysteemstoringen(),
+        'afhandelensysteemstoringen': (context) => const AfhandelenSysteemstoringen(),
 
         /*ACHTERGRONDINFO UITVOEREN PLAN ROUTES*/
-        'uitvoerenplanachtergrond': (context) =>
-            const UitvoerenPlanAchtergrond(),
-        'uitvoerenplanbasisachtergrond': (context) =>
-            const UitvoerenPlanBasisAchtergrond(),
-        'geplandewerkzaamhedenachtergrond': (context) =>
-            const GeplandeWerkzaamhedenAchtergrond(),
-        'geplandewerkzaamhedenbasisachtergrond': (context) =>
-            const GeplandeWerkzaamhedenBasisAchtergrond(),
-        'controlerenwbiachtergrond': (context) =>
-            const ControlerenWBIAchtergrond(),
+        'uitvoerenplanachtergrond': (context) => const UitvoerenPlanAchtergrond(),
+        'uitvoerenplanbasisachtergrond': (context) => const UitvoerenPlanBasisAchtergrond(),
+        'geplandewerkzaamhedenachtergrond': (context) => const GeplandeWerkzaamhedenAchtergrond(),
+        'geplandewerkzaamhedenbasisachtergrond': (context) => const GeplandeWerkzaamhedenBasisAchtergrond(),
+        'controlerenwbiachtergrond': (context) => const ControlerenWBIAchtergrond(),
         'foutenindewbiachtergrond': (context) => const FoutenWBIAchtergrond(),
-        'aanvangwerkzaamhedenachtergrond': (context) =>
-            const AanvangWerkzaamhedenAchtergrond(),
-        'toelatenwerktreinenachtergrond': (context) =>
-            const ToelatenWerktreinenAchtergrond(),
+        'aanvangwerkzaamhedenachtergrond': (context) => const AanvangWerkzaamhedenAchtergrond(),
+        'toelatenwerktreinenachtergrond': (context) => const ToelatenWerktreinenAchtergrond(),
         'werkzonesachtergrond': (context) => const WerkzonesAchtergrond(),
-        'bijzonderhedentreinachtergrond': (context) =>
-            const BijzonderhedenTreinAchtergrond(),
-        'bijzonderhedentreinbasisachtergrond': (context) =>
-            const BijzonderhedenTreinBasisAchtergrond(),
-        'vervoersregelingachtergrond': (context) =>
-            const TreinenVervoersregelingAchtergrond(),
-        'onjuistedetectieachtergrond': (context) =>
-            const OnjuisteDetectieAchtergrond(),
-        'bijzondereaandachtachtergrond': (context) =>
-            const BijzondereAandachtAchtergrond(),
-        'bijzonderhedenrijwegenachtergrond': (context) =>
-            const BijzonderhedenRijwegenAchtergrond(),
-        'inzettenrailvoertuigachtergrond': (context) =>
-            const InzettenRailvoertuigAchtergrond(),
-        'rijwegenopbouwplanachtergrond': (context) =>
-            const OpbouwPlanBasisAchtergrond(),
-        'rijwegenwerkenmetplanachtergrond': (context) =>
-            const RijwegenPlanschermBasis(),
+        'bijzonderhedentreinachtergrond': (context) => const BijzonderhedenTreinAchtergrond(),
+        'bijzonderhedentreinbasisachtergrond': (context) => const BijzonderhedenTreinBasisAchtergrond(),
+        'vervoersregelingachtergrond': (context) => const TreinenVervoersregelingAchtergrond(),
+        'onjuistedetectieachtergrond': (context) => const OnjuisteDetectieAchtergrond(),
+        'bijzondereaandachtachtergrond': (context) => const BijzondereAandachtAchtergrond(),
+        'bijzonderhedenrijwegenachtergrond': (context) => const BijzonderhedenRijwegenAchtergrond(),
+        'inzettenrailvoertuigachtergrond': (context) => const InzettenRailvoertuigAchtergrond(),
+        'rijwegenopbouwplanachtergrond': (context) => const OpbouwPlanBasisAchtergrond(),
+        'rijwegenwerkenmetplanachtergrond': (context) => const RijwegenPlanschermBasis(),
         'rijwegenariachtergrond': (context) => const RijwegenARIAchtergrond(),
         'communicatieachtergrond': (context) => const CommunicatieAchtergrond(),
-        'mondelingeveiligheidscommunicatie': (context) =>
-            const MondelingeVeiligheidAchtergrond(),
-        'communicatiemiddelenbasis': (context) =>
-            const CommunicatieMiddelenAchtergrond(),
-        'communicatiesysteembasis': (context) =>
-            const CommunicatieSysteemAchtergrond(),
+        'mondelingeveiligheidscommunicatie': (context) => const MondelingeVeiligheidAchtergrond(),
+        'communicatiemiddelenbasis': (context) => const CommunicatieMiddelenAchtergrond(),
+        'communicatiesysteembasis': (context) => const CommunicatieSysteemAchtergrond(),
         'ncbgachtergrond': (context) => const NCBGAchtergrond(),
 
         /*ACHTERGRONDINFO AANPASSEN PLAN ROUTES*/
-        'aanpassenplanachtergrond': (context) =>
-            const AanpassenPlanAchtergrond(),
-        'aanpassenplanbasisachtergrond': (context) =>
-            const AanpassenPlanBasisAchtergrond(),
-        'stappenplanversperringenachtergrond': (context) =>
-            const StappenplanVersperringenAchtergrond(),
+        'aanpassenplanachtergrond': (context) => const AanpassenPlanAchtergrond(),
+        'aanpassenplanbasisachtergrond': (context) => const AanpassenPlanBasisAchtergrond(),
+        'stappenplanversperringenachtergrond': (context) => const StappenplanVersperringenAchtergrond(),
+        'orderacceptatieachtergrond': (context) => const OrderacceptatieAchtergrond(),
 
         /*PROQUIZ ROUTES*/
         'proquizmain': (context) => const ProQuiz(),
