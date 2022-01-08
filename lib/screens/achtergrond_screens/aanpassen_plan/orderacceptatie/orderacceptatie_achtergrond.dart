@@ -240,6 +240,7 @@ class OrderacceptatieAchtergrond extends StatelessWidget {
                       InsertImage(
                         image: 'assets/images/achtergrond_info/aanpassen_plan/orderacceptatie/loaOnline.png',
                       ),
+                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text: 'Indien je de aanvraag niet accepteert, geef je zo mogelijk een advies voor een alternatieve rijweg onder de optie \'opmerking\'. De aanvrager kan dan een nieuwe aanvraag indienen. Je verwerkt een goedgekeurde LOA via SBG++ in het Proces Plan Rijwegen (PPR). Een Bundel Lokale Orderaanvragen (BLOA) aangevraagd met LOA Online, verwerk je pas in het PPR als de gehele order is goedgekeurd.',
@@ -360,9 +361,11 @@ class OrderacceptatieAchtergrond extends StatelessWidget {
                       InsertImage(
                         image: 'assets/images/achtergrond_info/aanpassen_plan/orderacceptatie/planNormTabel1.png',
                       ),
+                      SizedBoxH(),
                       InsertImage(
                         image: 'assets/images/achtergrond_info/aanpassen_plan/orderacceptatie/planNormTabel2.png',
                       ),
+                      SizedBoxH(),
                       SizedBoxH(),
                       BoldText(
                         boldtext: 'Halteringstijden',
