@@ -175,6 +175,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/aanpassen_p
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/aanpassen_plan_basis/aanpassen_plan_achtergrond.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/stappenplan_versperringen/stappenplan_versperringen_achtergrond.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/orderacceptatie/orderacceptatie_achtergrond.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_main.dart';
 
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/screens/proquiz_screens/proquiz_main.dart';

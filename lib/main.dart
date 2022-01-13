@@ -140,6 +140,7 @@ class MainEntry extends StatelessWidget {
         'aanpassenplanbasisachtergrond': (context) => const AanpassenPlanBasisAchtergrond(),
         'stappenplanversperringenachtergrond': (context) => const StappenplanVersperringenAchtergrond(),
         'orderacceptatieachtergrond': (context) => const OrderacceptatieAchtergrond(),
+        'ongeplandwerkachtergrond': (context) => const OngeplandWerkAchtergrond(),
 
         /*PROQUIZ ROUTES*/
         'proquizmain': (context) => const ProQuiz(),
