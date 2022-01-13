@@ -29,11 +29,6 @@ class OngeplandWerkAchtergrond extends StatelessWidget {
                       TitleText(
                         title: 'Ongepland Werk',
                       ),
-                      const SizedBoxH(),
-                      InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/ongepland_werk_main.png',
-                      ),
-                      const SizedBoxH(),
                     ],
                   ),
                 ),
@@ -53,28 +48,28 @@ class OngeplandWerkAchtergrond extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           NavButton(
-                            buttontext: 'Aanpassen plan - basis',
-                            destination: 'aanpassenplanbasisachtergrond',
+                            buttontext: 'Ongepland werk - Infra',
+                            destination: 'ongeplandwerkinfraachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Stappenplan versperringen',
-                            destination: 'stappenplanversperringenachtergrond',
+                            buttontext: 'Ongepland werk - Materieel',
+                            destination: 'ongeplandwerkmaterieelachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Orderacceptatie',
-                            destination: 'orderacceptatieachtergrond',
+                            buttontext: 'Infra ter beschikking stellen',
+                            destination: 'infraterbeschikkingachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Ongepland werk',
-                            destination: 'ongeplandwerkachtergrond',
+                            buttontext: 'Toelaten werktreinen',
+                            destination: 'toelatenwerktreinenachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Vertragingen',
-                            destination: 'vertragingenachtergrond',
+                            buttontext: 'Inzetten railvoertuig (ICB)',
+                            destination: 'inzettenrailvoertuigachtergrond',
                           ),
                         ],
                       ),
@@ -92,7 +87,7 @@ class OngeplandWerkAchtergrond extends StatelessWidget {
                     children: const [
                       SizedBoxH(),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/info_bord.png',
+                        image: 'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/ongepland_werk_main.png',
                       ),
                       SizedBoxH(),
                     ],
