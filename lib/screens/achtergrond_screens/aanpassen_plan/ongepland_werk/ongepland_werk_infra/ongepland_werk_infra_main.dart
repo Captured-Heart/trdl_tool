@@ -90,7 +90,12 @@ class OngeplandWerkInfraAchtergrond extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Voor het bepalen van de langte van een (perron)spoor maakt je gebruik van de BVS.',
+                        text: 'Nadat de impact is bepaald overleg je met de DVL over het te nemen verdelingsbesluit. Bij urgent/urgent met tijdsafspraak bepaal je, bij voorkeur aan de hand van een storingsWBI, welk gebied buitendienst gaat tijdens het herstel en neem je samen met de DVL ook hierover een verdelingsbesluit.',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'N.B.: Bij ongeplande werkzaamheden aan de vrije baan beslist de DVL over het tijdstip waarop de werkzaamheden plaats zullen vinden.',
                       ),
                     ],
                   ),
@@ -104,53 +109,51 @@ class OngeplandWerkInfraAchtergrond extends StatelessWidget {
                   child: Column(
                     children: const [
                       CardTitle(
-                        title: 'Opdracht van een bevoegd functionaris',
+                        title: 'Storingsanalyse en een toets op veilige berijdbaarheid',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Bij evenementen kan er, op last van de overheidshulpdiensten in het kader van crowdcontrol of dreigende openbare ordeproblemen, de opdracht komen om een trein eerder, later of meteen te laten vertrekken. Je kunt hierbij denken aan bijv. treinen met voetbalsupporters of demonstranten die de politie gecontroleerd wil laten vertrekken om escalatie te voorkomen.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Wie kan een melding doen?',
+                        text: 'Als er sprake is van urgent herstel of een analyse dan wordt de LWB maximaal 1 uur na de melding door jou in de gelegenheid gesteld om de benodigde infracapaciteit te benutten voor analyse en herstel.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Je kan als TRDL gebeld worden door een medewerker van de MKS-BO in opdracht van de politie, of door de Algemeen Leider (AL).',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Afspraken',
+                        text: 'Voor het uitvoeren van een analyse betreft het een periode van 25 minuten. Dit is inclusief de tijd die nodig is voor het nemen van veiligheidsmaatregelen.  ',
                       ),
                       BodyText(
                         indents: 0,
-                        text: 'Als een trein meteen moet vertrekken geef je, zodra dat mogelijk is, de rijweg vrij en licht je de DVL in. Wanneer de trein eerder of later moet vertrekken bespreek je dat met de DVL en die zal door een voorwaardelijke vertraging of vervroeging (VW-VTG) de trein herplannen. Je verwerkt het bericht in procesleiding. De afspraak om wijzigingen minstens 15 minuten voor het uitvoeringsmoment aan te brengen, zal in dit geval niet altijd mogelijk zijn. Houdt daarmee rekening en informeer indien nodig betrokken ketenpartners telefonisch.',
+                        text: 'Als geen urgent herstel hoeft plaats te vinden en je de gestoorde infra wel laat berijden kan ook een analyse op de veilige berijdbaarheid nodig zijn. Dit hoor je van de MKS-BO. Dit valt dan onder \'Urgent met tijdsafspraak\'.',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Aandachtspunten',
+                      BodyText(
+                        indents: 0,
+                        text: 'Uitkomst van deze analyse kan zijn:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Houd de trein zoveel mogelijk rijdend;',
+                        text: '- Storingsgebied kan niet veilig bereden worden en herstel heeft een urgent karakter: direct herstel;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Zet de trein niet aan de kant;',
+                        text: '- Storingsgebied kan niet veilig bereden worden en herstel heeft geen urgent karakter: niet urgent storingsherstel (BUTA) en alsnog er omheen rijden;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Zorg dat gewenste aanpassingen m.b.t. voorbrengen materieel via het lokale orderproces worden aangevraagd;',
+                        text: '- Storingsgebied kan bereden worden en herstel heeft urgent karakter vanwege impact op veiligheid, logistiek en/of werkbelasting treindienstleider: storingsherstel met tijdsafspraak;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Zorg dat vertragings- en vervroegingsoorzaken worden verklaard in monitoring.',
+                        text: '- Storingsgebied kan bereden worden en herstel heeft geen urgent karakter: niet urgent storingsherstel (BUTA)/onderhoudsrooster;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Direct functieherstel bij uitvoeren van analyse (binnen 25 minuten).',
                       ),
                     ],
                   ),
@@ -164,40 +167,46 @@ class OngeplandWerkInfraAchtergrond extends StatelessWidget {
                   child: Column(
                     children: const [
                       CardTitle(
-                        title: 'Plannen, veilig en op welke manieren',
+                        title: 'Reden voor niet urgent herstel',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Men wil graag het aantal (ongeplande) rood-seinnaderingen reduceren en daarmee de kans op een trein-treinbotsing verkleinen. Hiervoor zijn maatregelen getroffen die zich richten op zowel de uitvoering van de trein- en rangeerdienst als de planning.',
+                        text: 'Reden voor niet urgent herstel (uitgesteld storingsherstel) is:',
                       ),
                       SizedBoxH(),
                       BodyText(
-                        indents: 0,
-                        text: 'Een aantal rood-seinnaderingen wordt veroorzaakt door conflicten in de planning. Een deel hiervan betreft trein- en rangeerbewegingen die in de fase van Verkeersleiding zijn gepland (<36u vantevoren). Denk hierbij aan (boven)lokale orderaanvragen. Verkeersleiding wil deze trein- en rangeerbewegingen volgens de plannormen plannen om zo de kans op rood-seinnaderingen te verkleinen (plannormen zijn opgenomen in de Netverklaring). Dit dient zowel de veiligheid als de punctualiteit op het spoor.',
+                        indents: 1,
+                        text: '- Storingsgebied wordt niet bereden;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Storingsgebied kan bereden worden en herstel heeft geen urgent karakter;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- De onttrekking heeft een grotere impact op de logistiek dan het niet oplossen van de storing.',
                       ),
                       SizedBoxH(),
                       BoldText(
-                        boldtext: 'Plannen versus bijsturen',
+                        boldtext: 'Planning aanvangstijd niet urgent storingsherstel',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Er wordt een onderscheid gemaakt tussen plannen en bijsturen in de fase van Verkeersleiding. Plannen behelst het toevoegen van nieuwe dienstregelingstreinen (bovenlokaal) en rangeerbewegingen (lokaal) aan het actuele plan.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Plannen in standaard paden en standaard rijwegen',
+                        text: 'Indien op basis van de analyse of prioritering wordt besloten tot uitstel van storingsherstel met tijdsafspraak, worden afspraken over logistieke impact en het moment van herstel gemaakt d.m.v. afstemming tussen DVL en Planner CMBO. De planner CMBO neemt de verdere uitwerking (BUTA) en systeemaanpassingen voor zijn rekening en de OvD-S bekrachtigt het toedelingsbesluit.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Voor het plannen van goederentreinen in de zogeheten \'ad-hoc fase\' zijn in de dienstregeling lege paden (BUP-paden) opgenomen. Dit zijn vooraf vastgelegde paden in de bestaande dienstregeling waarop treinen ingelegd kunnen worden. In feite een pad in de dienstregeling waar men nog een treinnummer aan moet koppelen. Door hier gebruik van te maken plannen verkeersleiders nieuwe treinen dus al voor een groot deel conflictvrij.',
+                        text: 'Het herstel mag niet conflicteren met reeds geplande werkzaamheden. Hiermee dient rekening gehouden te worden bij het bepalen van een geschikt tijdstip voor storingsherstel.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Dit principe kan ook toegepast worden voor het plannen van conflictvrije rangeerbewegingen op het emplacement door de TRDL. Zijn deze standaard rangeerrijwegen eenmaal bepaald, dan kunnen deze worden toegepast bij de afhandeling van lokale orders.',
+                        text: 'Verkeersleiding belegt de afhandeling van de BUTA bij het CMBO. Dit doen we om gestandaardiseerde en eenduidige BUTA’s te kunnen ontwikkelen. Dit past binnen het 24/7 WBI loket dat door AM op het CMBO is gesitueerd.',
                       ),
                     ],
                   ),
@@ -211,43 +220,87 @@ class OngeplandWerkInfraAchtergrond extends StatelessWidget {
                   child: Column(
                     children: const [
                       CardTitle(
-                        title: 'Plannen van treinen op netwerkniveau',
+                        title: 'Ongeplande werkzaamheden met of zonder WBI/WECO',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Niet alle werkzaamheden kun je plannen. Bij (dreigende) storingen die veel overlast veroorzaken moet direct gehandeld worden. Dit is direct storingsherstel. Je hebt dan te maken met de volgende 3 situaties:',
                       ),
                       SizedBoxH(),
                       BoldText(
-                        boldtext: 'Plannen in vooraf gedefinieerde paden',
+                        boldtext: 'Ongeplande werkzaamheden met storingsWBI/WECO',
                       ),
                       BodyText(
-                        indents: 0,
-                        text: 'Voor het plannen van goederentreinen maken verkeersleiders gebruik van lege patroonpaden (BUP-paden) in de dienstregeling. Deze paden zijn conflictvrij en exclusief gereserveerd voor orders van goederenvervoerders in de fase van Verkeersleiding. Ook wordt verkeersleiders de mogelijkheid geboden een bepaald BUP-pad te kopiëren en dit te verleggen naar een ander tijdstip van de dag. De bedoeling is om straks alle goederentreinen in zulke vooraf gedefinieerde paden te plannen.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Reizigerstreinen en ledig-materieelritten worden voorlopig nog in de \'witte ruimte\' (niet vooraf getoetste paden) gepland.',
+                        indents: 1,
+                        text: 'De storingsWBI\'s zijn vooraf ontworpen \'beveiligde\' werkplekken.  Zo is voor elk wissel een eigen storingsWBI/WECO gemaakt, waarbij ook rekening is gehouden met de aan- en aflooproute naar de werkplek. Dit type storingsWBI is niet bedoeld voor werkzaamheden aan de bovenleiding of inzet (rail)wegvoertuigen!',
                       ),
                       SizedBoxH(),
                       BoldText(
-                        boldtext: 'Inchecken door goederenvervoerders',
+                        boldtext: 'Ongeplande werkzaamheden met maatwerk storingsWBI/WECO',
                       ),
                       SizedBoxH(),
                       BodyText(
-                        indents: 0,
-                        text: 'Het logistieke proces van goederenvervoerders is dynamisch en soms ook grillig. Sommige geplande goederentreinen halen hun pad niet en Verkeersleiding wordt hierover niet altijd tijdig geïnformeerd. Hierdoor gaan die kostbare conflictvrije paden verloren.',
+                        indents: 1,
+                        text: 'In dit geval wordt op basis van een vastgesteld proces direct een passende storingsWBI gemaakt voor de storing door de medewerker 24/7 werkplekbeveiliging. Uitgangspunten hierbij zijn: er is altijd een WBI en een WOT nodig en soms ook een VTI (werktreinen).',
                       ),
                       SizedBoxH(),
                       BodyText(
-                        indents: 0,
-                        text: 'Om dit te voorkomen is er een proces ingericht waarbij goederentreinen ingecheckt moeten worden. Dit proces dwingt de goederenvervoerders om het daadwerkelijk gebruik van een eerder toegewezen pad vroegtijdig te bevestigen dan wel het gereserveerde pad te annuleren. Hierdoor komen niet gebruikte paden tijdig beschikbaar voor planning en herplanning.',
+                        indents: 1,
+                        text: 'De (maatwerk) storingsWBI\'s zijn ontwikkeld om een veilige route naar en van de werkplek te garanderen. Daarvoor moet gebruik gemaakt worden van een aan- en afvoerroute van en naar de werkplek die voor de duur van de herstelactiviteiten ongehinderd beschikbaar is.',
                       ),
                       SizedBoxH(),
                       BoldText(
-                        boldtext: 'Toetsen op beschikbaarheid',
+                        boldtext: 'Ongeplande werkzaamheden zonderWBI/WECO',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: 'Als er geen (maatwerk) storingsWBI/WECO is, maar wel een RVO-nummer (Rapport van Onregelmatigheid) dan kun je samen met de LWB samen een WECO opstellen. De werkzaamheden vinden dan plaatst onder een RVO-nummer. Dit mag alleen in een geval van een (dreigende) storing/onregelmatigheid.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Het plannen van een pad voor een goederen- of reizigerstrein gebeurt in een samenspel tussen de orderacceptant (de DVL die de order ontvangt), de eventueel op het traject van de trein verantwoordelijke DVL(n) en de betrokken treindienstleiders. Wanneer er een pad gecreëerd moet worden dient men dit pad eerst in concept te ontwerpen. Vervolgens moet dit pad getoetst worden op beschikbaarheid. En hoe meer functionarissen hierbij betrokken zijn hoe ingewikkelder deze toetsing is. Vandaar dat we gebruik willen maken van vooraf gedefinieerde paden of kopieën daarvan.',
+                        text: 'Je vraagt vooraf uit op welke sporen, of gedeelten van sporen de werkzaamheden plaatsvinden (gebruik specifieke benaming van infra-elementen) en hoe lang. Je bekijkt in je plan voor welke planregels dit consequenties heeft, en stemt probleem en gevolgen af met de DVL.',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Bij ongeplande werkzaamheden aan de vrije baan beslist de DVL na afstemming met eventuele buur-DVL en de VLC over het tijdstip waarop de werkzaamheden plaats zullen vinden.',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Je overlegt met de LWB over:',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Het niveau van de werkplekbeveiliging;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- De te nemen veiligheidsmaatregelen van LWB;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- De veiligheidsmaatregelen die jij moet nemen;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- De exacte aanduiding van de werkplek.',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Je maakt samen met de LWB het WECO op. Het WECO moet altijd voldoen aan de \'Toetscriteria WBI/WECO\'.',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'N.B.: Om een veilige route naar en van de werkplek te garanderen kan LWB je extra railinfracapaciteit vragen. Hiervoor mag gebruik gemaakt worden van een door jou en LWB - middels rijweginstelling en door de LWB beveiligd - spoor naar de beschikbaar gestelde railinfracapaciteit.',
                       ),
                     ],
                   ),
@@ -261,386 +314,51 @@ class OngeplandWerkInfraAchtergrond extends StatelessWidget {
                   child: Column(
                     children: const [
                       CardTitle(
-                        title: 'Plannen van rangeerbewegingen op het emplacement',
+                        title: 'Werkzaamheden aan de hand van een BUTA (Buiten Termijn Aanvraag)',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text: 'Als blijkt dat een storing geen urgent karakter heeft, dan kan er gebruik gemaakt worden van een BUTA. Dit is een late, maar noodzakelijke aanvraag om in een geplande buitendienststelling te mogen werken aan de infra. Deze WBI aanvraag wordt binnen de termijn van 6 dagen voor uitvoering ingeleverd met de kenmerken:',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- De aanvraag is akkoord bevonden door Tracémanagement;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Valt in de categorie \'Noodzaak\' of \'Spoed\'.',
                       ),
                       SizedBoxH(),
                       BoldText(
-                        boldtext: 'Plannen in vooraf gedefinieerde rangeerbewegingen',
-                      ),
-                      BodyText(
-                        indents: 0,
-                        text: 'Verkeersleiding wil ook graag zoveel mogelijk rangeerbewegingen plannen in vooraf gedefinieerde rangeerrijwegen. Om dit te bewerkstelligen heeft men per emplacement een zogenaamde \'rijwegencatalogus\' gemaakt. Hierin staan voor elke dag afzonderlijk voor alle 24 uren de beschikbare rangeerrijwegen aangegeven van spoor naar spoor. Al deze rijwegen zijn getoetst conform de plannormen. Wil een vervoerder een rangeerbeweging uitvoeren op het emplacement, dan zoekt deze een geschikte standaard rijweg uit de catalogus en vraagt deze via een LOA aan bij de treindienstleider. De treindienstleider toetst op zijn beurt of de aangevraagde rijweg beschikbaar is. Is dit het geval dan honoreert hij de aanvraag en verwerkt deze in het plan',
+                        boldtext: 'De Buiten Termijn Aanvraag (BUTA)',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Omdat het niet handig is om rijwegen aan te vragen uit een papieren catalogus heeft men de volgende hulpmiddelen ontwikkeld:',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: '- LOA Online',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: 'LOA Online is een digitaal ordersysteem waarmee de vervoerder via een LOA een rangeerrijweg of een bundel rangeerrijwegen kan aanvragen. Dit stelt de aanvrager in staat in LOA Online op zoek te gaan naar een geschikte rangeerrijweg in de catalogus, deze aan te klikken en vervolgens de order te versturen. Indien de aanvrager redenen heeft om buiten de catalogus om een rangeerrijweg aan te vragen, dan is dat ook nog wel mogelijk. Wel moet de aanvrager hiervoor de reden opgeven.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: '- Plannen in de \'witte ruimte\' met SBG Conflictsignalering',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: 'Niet alle rangeerbewegingen zullen uiteindelijk kunnen worden gepland in vooraf gedefinieerde rangeerrijwegen. Met name de unieke of incidentele rangeerrijwegen zullen in de “witte ruimte” van het plan gepland blijven worden. Om de treindienstleider in staat te stellen ook deze rijwegen volgens de plannormen te plannen wordt SBG++ voorzien van conflictsignalering. Zo kan de treindienstleider concept rangeerrijwegen aanmaken en deze laten toetsen op mogelijke conflicten.',
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              /*CARD #6*/
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: const [
-                      CardTitle(
-                        title: 'Bijsturings- en/of planningsnormen',
+                        text: 'Indien op basis van de analyse of prioritering wordt besloten tot uitstel van storingsherstel met tijdsafspraak, worden afspraken over logistieke impact en het moment van herstel gemaakt door middel van afstemming Dvl en planner CMBO. De planner CMBO neemt de verdere uitwerking en systeemaanpassingen voor zijn rekening en de Officier van Dienst Spoor (OvD-S) bekrachtigd het toedelingsbesluit.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Voor het inleggen van nieuwe treinbewegingen en verleggen van bestaande treinbewegingen zijn normen vastgelegd.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Opvolgtijden',
+                        text: 'Het herstel via een BUTA mag niet conflicteren met reeds geplande werkzaamheden. Hiermee dient rekening gehouden te worden bij het bepalen van een geschikt tijdstip voor storingsherstel.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Standaard opvolgtijden bij vertrek en aankomst tussen twee treinen:',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- 1e reizigerstrein - 2e reizigerstrein: 3 minuten',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- 1e reizigerstrein - 2e goederentrein: 3 minuten',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- 1e goederentrein - 2e reizigerstrein: 4 minuten',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- 1e goederentrein - 2e goederentrein: 4 minuten',
+                        text: 'De planner CMBO, DVL, medewerker 24/7 Werkplekbeveiliging (WPB) en medewerker OBI bepalen in overleg het tijdstip voor storingsherstel. Er worden afwegingen gemaakt tussen verschillende belangen op het vlak van beheer en de verdeling van capaciteit van het treinverkeer.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'De opvolgtijd tussen twee rijdende goederentreinen is 3 minuten. Standaard opvolgtijd bij inhalingen onderweg:',
+                        text: 'Mochten deze functionarissen hierover geen overeenstemming bereiken, dan wordt er geëscaleerd naar het CMBO. De OvD-A maakt de afwegingen tussen verschillende belangen op het vlak van beheer. De Verkeersleider CMBO (VLC) is verantwoordelijk voor de verdeling van capaciteit ten behoeve van beheer respectievelijk verkeer en het besluit hierover.',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- 1e trein aankomst - 2e trein door: 2 minuten',
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/buta_stroomschema.png',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- 1e trein door - 2e trein vertrek: 2 minuten',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'De opvolgtijd bij twee reizigerstreinen die een minimaal stationnement hebben op hetzelfde station; 4 minuten.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Halteringstijden',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'De technisch minimale norm voor halterende goederentreinen is 2 minuten. Voor reizigerstreinen geldt een minimale norm van < 1 minuut, in de planning is dat een korte stop (+). De vervoerder kan hiervan willen afwijken (verlengen van de haltering).',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Kopmaken en keren',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Voor het kopmaken en keren geldt een minimumnorm van 4 minuten. De vervoerder kan hiervan afwijken (verkorten).',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Combineren',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Minimumtijd voor het combineren is 3 minuten. De vervoerder kan hiervan afwijken (verkorten).',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        boldtext: 'Splitsen',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Minimumtijd voor het splitsen is 2 minuten. De vervoerder kan hiervan afwijken (verkorten).',
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              /*CARD #7*/
-              Card(
-                elevation: 6.0,
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      const CardTitle(
-                        title: 'Corridors',
-                      ),
-                      const SizedBoxH(),
-                      const BodyText(
-                        indents: 0,
-                        text: 'Treinen hebben een nummer en rijden in series (treinseries). Alle treinen hebben een uniek nummer dat maar 1 keer per dag mag voorkomen. Serienummers zijn niet uniek. Zij geven aan van waarnaar waar een trein rijdt.',
-                      ),
-                      const SizedBoxH(),
-                      const BodyText(
-                        indents: 0,
-                        text: 'We hebben ook verschillende soorten treinen. Denk aan intercity\'s, stoptreinen, goederentreinen, etc. Ook aan het treinnummer kan he zien tot welke soort een trein behoort.',
-                      ),
-                      const SizedBoxH(),
-                      const BodyText(
-                        indents: 0,
-                        text: 'Alle treinen rijden van een begin- naar een eindstation. Dit noemen we het traject waarop een bepaalde treinserie rijdt. Dit kunnen korte, middellange of lange trajecten zijn. En over het algemeen rijden intercity\'s over langere trajecten dan bijvoorbeeld stoptreinen.',
-                      ),
-                      const SizedBoxH(),
-                      const BodyText(
-                        indents: 0,
-                        text: 'In Nederland hebben we aantal intercity\'s die over een relatief lang traject rijden. Ze vormen een rechtstreekse verbinding tussen bijvoorbeeld Noord- en Zuid-Nederland en tussen de Randstad en het Noorden respectievelijk Zuiden van Nederland. Zij rijden over zogenaamde \'corridors\'. Op deze trajecten vindt zogenaamde \'corridorsturing\' plaats.',
-                      ),
-                      const SizedBoxH(),
-                      const BodyText(
-                        indents: 0,
-                        text: 'Omdat corridor treinen over lange afstanden rijden is het noodzakelijk dat deze treinen goed in de gaten gehouden worden. Wanneer er binnen jouw treindienstleidersgebied iets met een dergelijke trein gebeurt zal dat gevolgen (kunnen) hebben voor het verdere traject.',
-                      ),
-                      const SizedBoxH(),
-                      const BodyText(
-                        indents: 0,
-                        text: 'En omdat deze treinen altijd door het gebied van meerdere posten gaan zal er landelijk naar deze treinen gekeken worden. Vandaar dat de bijsturing van deze treinen ook niet door de DVL maar door de VLC (VerkeersLeider CMBO) wordt gedaan.',
-                      ),
-                      const SizedBoxH(),
-                      const BoldText(
-                        boldtext: 'Corridor:',
-                      ),
-                      const BodyText(
-                        indents: 1,
-                        text: 'Een belangrijke verbinding tussen drukke gebieden, waarover vervoer van goederen of personen plaatsvindt. Een spoorcorridor kan uit verschillende lijnen bestaan.',
-                      ),
-                      const SizedBoxH(),
-                      const BoldText(
-                        boldtext: 'Corridorsturing:',
-                      ),
-                      const BodyText(
-                        indents: 1,
-                        text: 'Het onderling onafhankelijk plannen van verkeer uit verschillende corridors. Hierbij wordt de infrastructuur zoveel mogelijk gescheiden naar corridor. Verkeer over infra die tussen corridors ligt, wordt zoveel mogelijk vermeden. Concreet houdt dit in dat men de corridors zoveel mogelijk vrijhoudt voor de corridortreinen en andere (extra) treinen over andere sporen inlegt. Ook mogen treinen die corridors kruisen deze niet negatief beïnvloeden.',
-                      ),
-                      const SizedBoxH(),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridor1.png',
-                      ),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridor2.png',
-                      ),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridor3.png',
-                      ),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridor4a.png',
-                      ),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridor4b.png',
-                      ),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridor5a.png',
-                      ),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridor5b.png',
-                      ),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridor6.png',
-                      ),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridor7.png',
-                      ),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridorINT1.png',
-                      ),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridorINT2.png',
-                      ),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridorINT3.png',
-                      ),
-                      const InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridorGoederen.png',
-                      ),
-                      const SizedBoxH(),
-                      const SizedBoxH(),
-                      const BoldText(
-                        boldtext: 'Goederencorridors 2020',
-                      ),
-                      const SizedBoxH(),
-                      Table(
-                        border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-                        children: const [
-                          TableRow(
-                            children: [
-                              TableTextBold(text: 'Naam corridor'),
-                              TableTextBold(text: 'Van - Naar'),
-                              TableTextBold(text: 'Bijzonderheden'),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G1'),
-                              TableText(text: 'Mvt - Vl grens'),
-                              TableText(text: 'via Ehv'),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G2'),
-                              TableText(text: 'Mvt - Zv grens'),
-                              TableText(text: 'via Betuweroute'),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G3'),
-                              TableText(text: 'Kfh - Odz grens'),
-                              TableText(text: 'via Dvd'),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G4'),
-                              TableText(text: 'Mvt - On'),
-                              TableText(text: 'via Dvd'),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G5'),
-                              TableText(text: 'Kfh - Lutdsm'),
-                              TableText(text: ''),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G6'),
-                              TableText(text: 'Bvhc - Edn grens'),
-                              TableText(text: 'via Ut'),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G7'),
-                              TableText(text: 'Kfh - Rsd grens/Sloe'),
-                              TableText(text: ''),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G8'),
-                              TableText(text: 'Bvhc - Kfh'),
-                              TableText(text: 'via Hlm - Ledn - Gv - Rtd'),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G9'),
-                              TableText(text: 'Sloe - Vl grens'),
-                              TableText(text: ''),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G10'),
-                              TableText(text: 'Vl grens - Lutdsm'),
-                              TableText(text: ''),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G11'),
-                              TableText(text: 'Awhv - Odz grens'),
-                              TableText(text: ''),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G12'),
-                              TableText(text: 'Bvhc - Zv grens'),
-                              TableText(text: 'via Betuweroute'),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G13'),
-                              TableText(text: 'Rsd grens - Odz grens'),
-                              TableText(text: 'via Ht - Ut - Amf'),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G14'),
-                              TableText(text: 'Esn - Zvgr'),
-                              TableText(text: ''),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G15'),
-                              TableText(text: 'Emn - Lutdsm'),
-                              TableText(
-                                text: 'Alleen geldig in de nachten ma/di t/m vrij/zat',
-                              ),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'G16'),
-                              TableText(text: 'Vdm - Edng'),
-                              TableText(text: ''),
-                            ],
-                          ),
-                          TableRow(
-                            children: [
-                              TableText(text: 'Overige routes'),
-                              TableText(
-                                text: 'Bh - Vdm / Co - Kfh / Lutdsm - Hz',
-                              ),
-                              TableText(text: 'via Dv / via Wp - Hmla'),
-                            ],
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
                     ],
                   ),
                 ),
