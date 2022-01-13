@@ -16,7 +16,33 @@ showVersionUpdatePopup(context) {
                   children: const [
                     Expanded(
                       child: Text(
-                        'De huidige versie is 0.1.3',
+                        'De huidige versie is 0.1.5',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2022-01-13: 0.1.5\n - UX aanpassingen\n - Achtergrondinformatie verder uitgebreid (8)',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2022-01-08: 0.1.4\n - Button aangepast naar \'VERDER\' ipv \'OVERSLAAN\' in welkomstscherm op laatste scherm (Bedankt, Gerrit!)\n - Achtergrondinformatie verder uitgebreid (7)',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),

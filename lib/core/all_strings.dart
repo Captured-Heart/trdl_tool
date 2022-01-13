@@ -7,7 +7,8 @@ class Strings {
   static const String and = 'with';
 
   /*WELCOME strings*/
-  static const String welcomeFAB = 'OVERSLAAN';
+  static const String overslaanFAB = 'OVERSLAAN';
+  static const String verderFAB = 'VERDER';
 
   /*LOGIN strings*/
   static const String loginEmail = 'Emailadres';

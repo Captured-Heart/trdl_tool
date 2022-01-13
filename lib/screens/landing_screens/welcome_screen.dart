@@ -7,6 +7,8 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreen extends State<WelcomeScreen> {
+  bool fabLabelOverslaan = true;
+
   List<Widget> slides = items
       .map(
         (item) => Container(
@@ -94,8 +96,8 @@ class _WelcomeScreen extends State<WelcomeScreen> {
             ),
           );
         },
-        label: const Text(
-          Strings.welcomeFAB,
+        label: Text(
+          fabLabelOverslaan ? 'OVERSLAAN' : 'VERDER',
         ),
       ),
       body: Stack(
@@ -108,6 +110,9 @@ class _WelcomeScreen extends State<WelcomeScreen> {
                 /*SWIPE THE WELCOME_SCREEN*/
                 setState(() {
                   currentPage = _pageViewController.page!;
+                  if (currentPage == 3) {
+                    fabLabelOverslaan = false;
+                  }
                 });
               });
               return slides[index];
