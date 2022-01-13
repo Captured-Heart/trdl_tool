@@ -175,7 +175,7 @@ class OngeplandWerkMaterieelAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       BodyText(
-                        indents: 0,
+                        indents: 1,
                         text: '- De exacte aanduiding van de werkplek.',
                       ),
                       SizedBoxH(),
