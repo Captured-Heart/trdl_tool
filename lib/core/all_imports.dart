@@ -178,6 +178,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/orderaccept
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_infra/ongepland_werk_infra_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_materieel/ongepland_werk_materieel_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/infra_ter_beschikking/infra_ter_beschikking_main.dart';
 
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/screens/proquiz_screens/proquiz_main.dart';

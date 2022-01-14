@@ -143,6 +143,7 @@ class MainEntry extends StatelessWidget {
         'ongeplandwerkachtergrond': (context) => const OngeplandWerkAchtergrond(),
         'ongeplandwerkinfraachtergrond': (context) => const OngeplandWerkInfraAchtergrond(),
         'ongeplandwerkmaterieelachtergrond': (context) => const OngeplandWerkMaterieelAchtergrond(),
+        'infraterbeschikkingachtergrond': (context) => const InfraTerBeschikkingAchtergrond(),
 
         /*PROQUIZ ROUTES*/
         'proquizmain': (context) => const ProQuiz(),
