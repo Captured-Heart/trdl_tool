@@ -112,6 +112,10 @@ class InfraTerBeschikkingAchtergrond extends StatelessWidget {
                         indents: 1,
                         text: '- VHR-E, verhindering rijweginstelling met extra bediening.',
                       ),
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/weco.png',
+                      ),
                     ],
                   ),
                 ),
