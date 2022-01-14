@@ -69,7 +69,7 @@ class OngeplandWerkAchtergrond extends StatelessWidget {
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Inzetten railvoertuig (ICB)',
-                            destination: 'inzettenrailvoertuigachtergrond',
+                            destination: 'inzettenicb',
                           ),
                         ],
                       ),

@@ -116,6 +116,7 @@ class InfraTerBeschikkingAchtergrond extends StatelessWidget {
                       InsertImage(
                         image: 'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/weco.png',
                       ),
+                      SizedBoxH(),
                     ],
                   ),
                 ),
