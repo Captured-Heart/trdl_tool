@@ -410,10 +410,12 @@ class VertragingenAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       BodyText(
+                        indents: 0,
                         text: 'Als twee treinen vertraagd zijn die normaliter aansluiting op elkaar overnemen, geldt de WRT niet.',
                       ),
                       SizedBoxH(),
                       BodyText(
+                        indents: 0,
                         text: 'De WRT bepaalt tevens de laatste aansluitingen van reizigerstreinen bij het einde van de reizigersdienst.',
                       ),
                       SizedBoxH(),
