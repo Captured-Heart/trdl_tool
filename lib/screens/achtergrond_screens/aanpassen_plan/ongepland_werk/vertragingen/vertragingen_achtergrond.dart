@@ -311,7 +311,7 @@ class VertragingenAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       BoldText(
-                        'De planregel blijft, totdat de voorrang krijgende planregel is ingesteld, in je plan staan en toont ‘zeegroen’. Indien om wat voor reden een planregel bovenin je plan staat met hetzelfde eindspoor (nader bericht of onverwerkte vertraging etc.)  zullen de nog in te stellen planregels, indien deze aan de ARI voorwaarden voldoen,  niet  (geheel)  worden  ingesteld.  Dit  betekent  dat  er  geen  rijwegen  worden  ingesteld  naar  het betrokken eindspoor van de bovenste planregel. Om dit te voorkomen is het belangrijk om je plan op orde te hebben. De stelregel is dat je moet zorgen dat de situatie in je plan overeenkomt met de situatie \'buiten\'. Om dit te realiseren is het belangrijk om regelmatig vertraging te verwerken en te plannen.',
+                        boldtext: 'De planregel blijft, totdat de voorrang krijgende planregel is ingesteld, in je plan staan en toont ‘zeegroen’. Indien om wat voor reden een planregel bovenin je plan staat met hetzelfde eindspoor (nader bericht of onverwerkte vertraging etc.)  zullen de nog in te stellen planregels, indien deze aan de ARI voorwaarden voldoen,  niet  (geheel)  worden  ingesteld.  Dit  betekent  dat  er  geen  rijwegen  worden  ingesteld  naar  het betrokken eindspoor van de bovenste planregel. Om dit te voorkomen is het belangrijk om je plan op orde te hebben. De stelregel is dat je moet zorgen dat de situatie in je plan overeenkomt met de situatie \'buiten\'. Om dit te realiseren is het belangrijk om regelmatig vertraging te verwerken en te plannen.',
                       ),
                     ],
                   ),
@@ -410,19 +410,19 @@ class VertragingenAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       BodyText(
-                        'Als twee treinen vertraagd zijn die normaliter aansluiting op elkaar overnemen, geldt de WRT niet.',
+                        boldtext: 'Als twee treinen vertraagd zijn die normaliter aansluiting op elkaar overnemen, geldt de WRT niet.',
                       ),
                       SizedBoxH(),
                       BodyText(
-                        'De WRT bepaalt tevens de laatste aansluitingen van reizigerstreinen bij het einde van de reizigersdienst.',
+                        text: 'De WRT bepaalt tevens de laatste aansluitingen van reizigerstreinen bij het einde van de reizigersdienst.',
                       ),
                       SizedBoxH(),
                       InsertImage(
-                        'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/wrt_lezen1.png',
+                        image: 'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/wrt_lezen1.png',
                       ),
                       SizedBoxH(),
                       InsertImage(
-                        'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/wrt_lezen2.png',
+                        image: 'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/wrt_lezen2.png',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -705,7 +705,7 @@ class VertragingenAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       InsertImage(
-                        'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/klaarmelding1.png',
+                        image: 'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/klaarmelding1.png',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -719,7 +719,7 @@ class VertragingenAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       InsertImage(
-                        'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/klaarmelding2.png',
+                        image: 'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/klaarmelding2.png',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -733,7 +733,7 @@ class VertragingenAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       InsertImage(
-                        'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/klaarmelding3.png',
+                        image: 'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/klaarmelding3.png',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -742,7 +742,7 @@ class VertragingenAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       InsertImage(
-                        'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/klaarmelding4.png',
+                        image: 'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/klaarmelding4.png',
                       ),
                       SizedBoxH(),
                       BoldText(
