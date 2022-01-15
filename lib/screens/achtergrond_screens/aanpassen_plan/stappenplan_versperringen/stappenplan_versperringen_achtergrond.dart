@@ -104,6 +104,7 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                         text:
                             '- Het gebied: Dit is het gebied waarover het verdeelbesluit wordt genomen;',
                       ),
+                      SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
@@ -204,7 +205,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Signaleren incident of verstoring',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -214,7 +214,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Eerste beeldvorming door TRDL en DVL',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -224,7 +223,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Vrijmaken verstoord gebied',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -255,7 +253,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Spoedmaatregelen',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -265,7 +262,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Nadere beeldvorming door TRDL en DVL',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -275,7 +271,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Nemen verdelingsbesluit',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -285,7 +280,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Ontluchten',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -295,7 +289,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Kiezen versperringsmaatregel',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -305,7 +298,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Vrijmaken van het verstoorde gebied',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
@@ -341,7 +333,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Toetsen versperringsmaatregel',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -351,16 +342,14 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Toedelen versperringsmaatregel',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text: 'De VLC deelt VSM toe.',
                       ),
                       SizedBoxH(),
                       BoldText(
-                        boldtext: 'Toedelen versperringsmaatregel',
+                        boldtext: 'Verwerken in de systemen',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -370,7 +359,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Monitoren nieuwe situatie - fase 2',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -380,7 +368,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Maken opstartplan - fase 3',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -429,7 +416,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Opstartplan uitvoeren',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -470,7 +456,6 @@ class StappenplanVersperringenAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Monitoren',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:

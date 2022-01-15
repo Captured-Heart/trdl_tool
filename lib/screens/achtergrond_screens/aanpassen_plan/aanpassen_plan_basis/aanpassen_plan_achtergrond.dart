@@ -115,7 +115,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Wie kan een melding doen?',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -134,7 +133,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Aandachtspunten',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text: '- Houd de trein zoveel mogelijk rijdend;',
@@ -186,7 +184,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Plannen versus bijsturen',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -197,7 +194,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                         boldtext:
                             'Plannen in standaard paden en standaard rijwegen',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -242,7 +238,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Inchecken door goederenvervoerders',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -258,7 +253,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Toetsen op beschikbaarheid',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -299,7 +293,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: '- LOA Online',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
@@ -310,7 +303,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                         boldtext:
                             '- Plannen in de \'witte ruimte\' met SBG Conflictsignalering',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
@@ -340,7 +332,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Opvolgtijden',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -396,7 +387,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Halteringstijden',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -406,7 +396,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Kopmaken en keren',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -416,7 +405,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Combineren',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -426,7 +414,6 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                       BoldText(
                         boldtext: 'Splitsen',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
@@ -549,6 +536,7 @@ class AanpassenPlanBasisAchtergrond extends StatelessWidget {
                         image:
                             'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridorINT3.png',
                       ),
+                      const SizedBoxH(),
                       const InsertImage(
                         image:
                             'assets/images/achtergrond_info/aanpassen_plan/aanpassen_plan_basis/corridorGoederen.png',
