@@ -50,6 +50,7 @@ class RijwegenPlanschermBasis extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       BoldText(
+                        indents: 0,
                         boldtext: '- Handmatig, in het planscherm',
                       ),
                       BodyText(

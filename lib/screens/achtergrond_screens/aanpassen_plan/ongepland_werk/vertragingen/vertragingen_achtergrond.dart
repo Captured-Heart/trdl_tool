@@ -526,7 +526,7 @@ class VertragingenAchtergrond extends StatelessWidget {
                   child: Column(
                     children: const [
                       SubTitleText(
-                        title: 'Bijsturings- en/of plannormen',
+                        subtitle: 'Bijsturings- en/of plannormen',
                       ),
                       SizedBoxH(),
                       BodyText(

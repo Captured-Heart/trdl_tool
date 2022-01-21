@@ -333,6 +333,7 @@ class OrderacceptatieAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       BoldText(
+                        indents: 0,
                         boldtext: 'Plannen in standaard paden en standaard rijwegen',
                       ),
                       BodyText(

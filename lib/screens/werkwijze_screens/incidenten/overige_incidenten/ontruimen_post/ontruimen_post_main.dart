@@ -23,7 +23,7 @@ class OntruimenPost extends StatelessWidget {
               Card(
                 elevation: kCardElevation,
                 child: Padding(
-                  padding: kCardElevation,
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(

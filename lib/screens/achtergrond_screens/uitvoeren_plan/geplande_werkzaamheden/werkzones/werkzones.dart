@@ -82,7 +82,7 @@ class WerkzonesAchtergrond extends StatelessWidget {
                   padding: kCardPadding,
                   child: Column(
                     children: const [
-                      SubtitleText(
+                      SubTitleText(
                         subtitle: 'Signalering voor LWB',
                       ),
                       SizedBoxH(),

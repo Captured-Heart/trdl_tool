@@ -127,6 +127,7 @@ class NCBGAchtergrond extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       BoldText(
+                        indents: 0,
                         boldtext: 'Sturingsniveau en uitzonderingen',
                       ),
                       SizedBoxH(),
