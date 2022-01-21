@@ -9,7 +9,7 @@ class HerroepenSein extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Herroepen sein',
         ),
         actions: const [
           HomeButton(),
@@ -21,29 +21,27 @@ class HerroepenSein extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Herroepen van een sein',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Voor bijsturing mag je een sein herroepen nadat de machinist is ingelicht of wanneer je zeker weet dat er geen machinist op of bij de trein aanwezig is.',
+                        text: 'Voor bijsturing mag je een sein herroepen nadat de machinist is ingelicht of wanneer je zeker weet dat er geen machinist op of bij de trein aanwezig is.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Benader de machinist via de bestaande communicatiemogelijkheden. Als je geen contact krijgt, herroep je het sein.',
+                        text: 'Benader de machinist via de bestaande communicatiemogelijkheden. Als je geen contact krijgt, herroep je het sein.',
                       ),
                     ],
                   ),
@@ -51,13 +49,13 @@ class HerroepenSein extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -70,19 +68,18 @@ class HerroepenSein extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Het herroepen van een sein kan noodzakelijk zijn om een verstoring van de treindienst te voorkomen of beperken. Bij het herroepen van een sein voor bijsturing is het inlichten van de machinist wenselijk, om hem niet te laten schrikken van een wisselend seinbeeld.',
+                        text: 'Het herroepen van een sein kan noodzakelijk zijn om een verstoring van de treindienst te voorkomen of beperken. Bij het herroepen van een sein voor bijsturing is het inlichten van de machinist wenselijk, om hem niet te laten schrikken van een wisselend seinbeeld.',
                       ),
                     ],
                   ),

@@ -9,7 +9,7 @@ class GevaarlijkeStoffen2 extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Gevaarlijke stoffen',
         ),
         actions: const [
           HomeButton(),
@@ -21,35 +21,32 @@ class GevaarlijkeStoffen2 extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Gevaarlijke stoffen',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Als je een onregelmatigheid met gevaarlijke stoffen gemeld krijgt, neem je de volgende maatregelen:',
+                        text: 'Als je een onregelmatigheid met gevaarlijke stoffen gemeld krijgt, neem je de volgende maatregelen:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Staak de trein- en rangeerdienst op het betrokken gebied;',
+                        text: '- Staak de trein- en rangeerdienst op het betrokken gebied;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Voorkom rijweginstelling naar het betrokken gebied;',
+                        text: '- Voorkom rijweginstelling naar het betrokken gebied;',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -112,19 +109,18 @@ class GevaarlijkeStoffen2 extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -132,19 +128,18 @@ class GevaarlijkeStoffen2 extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Een trein waarbij een incident met gevaarlijke stoffen optreedt mag niet verder rijden. Afhankelijk van de gevaarlijke stof moet de trein- en rangeerdienst gestaakt worden. De hulpdiensten bepalen op basis van windrichting, locatie, gevaarlijke stof en/of grootte van uitstroom hun inzet.',
+                        text: 'Een trein waarbij een incident met gevaarlijke stoffen optreedt mag niet verder rijden. Afhankelijk van de gevaarlijke stof moet de trein- en rangeerdienst gestaakt worden. De hulpdiensten bepalen op basis van windrichting, locatie, gevaarlijke stof en/of grootte van uitstroom hun inzet.',
                       ),
                     ],
                   ),

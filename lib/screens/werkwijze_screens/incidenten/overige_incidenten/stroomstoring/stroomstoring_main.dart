@@ -9,7 +9,7 @@ class Stroomstoring extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Stroomstoring',
         ),
         actions: const [
           HomeButton(),
@@ -21,23 +21,22 @@ class Stroomstoring extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Stroomstoring',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Wanneer na een grote stroomstoring de spanning weer terugkeert verschijnt de melding \'wissels vrijmaken\'. Je mag dit doen nadat aan de volgende voorwaarden is voldaan:',
+                        text: 'Wanneer na een grote stroomstoring de spanning weer terugkeert verschijnt de melding \'wissels vrijmaken\'. Je mag dit doen nadat aan de volgende voorwaarden is voldaan:',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -65,19 +64,18 @@ class Stroomstoring extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt en/of onbedoeld omlopen van wissels.',
+                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt en/of onbedoeld omlopen van wissels.',
                       ),
                     ],
                   ),
@@ -85,25 +83,23 @@ class Stroomstoring extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Bij een stroomstoring is de stroomvoorziening naar de beveiliging onderbroken. De beveiliging haalt de benodigde stroom uit accu’s, welke continue gevoed worden. Wanneer nu de stroomvoorziening naar de accu’s onderbroken wordt zal de beveiliging nog enige tijd gebruik kunnen maken van de aanwezige stroom in deze accu’s (kleine stroomstoring).',
+                        text: 'Bij een stroomstoring is de stroomvoorziening naar de beveiliging onderbroken. De beveiliging haalt de benodigde stroom uit accu’s, welke continue gevoed worden. Wanneer nu de stroomvoorziening naar de accu’s onderbroken wordt zal de beveiliging nog enige tijd gebruik kunnen maken van de aanwezige stroom in deze accu’s (kleine stroomstoring).',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Wanneer de stroomvoorziening vanuit de accu’s naar de beveiliging onderbroken wordt (grote stroomstoring) werkt in feite de beveiliging niet meer. Alle relais vallen af en zie je overal spoorbezettingen. Dit zelfde gebeurt bij het schakelen van de 3KV (de stroomvoorziening naar de beveiliging).',
+                        text: 'Wanneer de stroomvoorziening vanuit de accu’s naar de beveiliging onderbroken wordt (grote stroomstoring) werkt in feite de beveiliging niet meer. Alle relais vallen af en zie je overal spoorbezettingen. Dit zelfde gebeurt bij het schakelen van de 3KV (de stroomvoorziening naar de beveiliging).',
                       ),
                     ],
                   ),

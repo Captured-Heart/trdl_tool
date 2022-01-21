@@ -8,6 +8,10 @@ const kDarkGreen = 0xFF004E15;
 const kLightGreen = 0xFF738E7E;
 const kSecondaryGreen = 0xFF2F3E32;
 
+/*CARD CONSTANTS*/
+const double kCardElevation = 6.0;
+const EdgeInsets kCardPadding = EdgeInsets.all(8.0);
+
 /*ProChat constants*/
 late String hintText;
 

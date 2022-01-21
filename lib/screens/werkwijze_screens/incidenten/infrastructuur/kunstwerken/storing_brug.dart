@@ -9,7 +9,7 @@ class StoringBrug extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Storing brug',
         ),
         actions: const [
           HomeButton(),
@@ -21,23 +21,22 @@ class StoringBrug extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Storing beweegbare brug',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Je mag een gestoorde beweegbare brug alleen laten berijden na toestemming van de storingsdienst.',
+                        text: 'Je mag een gestoorde beweegbare brug alleen laten berijden na toestemming van de storingsdienst.',
                       ),
                     ],
                   ),
@@ -45,19 +44,18 @@ class StoringBrug extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -65,19 +63,18 @@ class StoringBrug extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Wanneer een beweegbare brug door een storing niet in de vergrendeling ligt, is het beweegbare gedeelte van de brug niet veilig berijdbaar. Een storingsmonteur kan ter plaatse beoordelen of en onder welke voorwaarden de brug bereden kan worden.',
+                        text: 'Wanneer een beweegbare brug door een storing niet in de vergrendeling ligt, is het beweegbare gedeelte van de brug niet veilig berijdbaar. Een storingsmonteur kan ter plaatse beoordelen of en onder welke voorwaarden de brug bereden kan worden.',
                       ),
                     ],
                   ),

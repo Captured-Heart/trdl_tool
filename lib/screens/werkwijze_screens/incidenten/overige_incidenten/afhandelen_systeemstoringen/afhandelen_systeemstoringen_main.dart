@@ -9,7 +9,7 @@ class AfhandelenSysteemstoringen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Systeemstoringen',
         ),
         actions: const [
           HomeButton(),
@@ -21,41 +21,37 @@ class AfhandelenSysteemstoringen extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Afhandelen systeemstoringen',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Bij alle computerstoringen en uitval van systemen wacht je 2 minuten op een automatische herstart. Als er niet automatisch wordt herstart, handel je als volgt:',
+                        text: 'Bij alle computerstoringen en uitval van systemen wacht je 2 minuten op een automatische herstart. Als er niet automatisch wordt herstart, handel je als volgt:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Controleer of de storing zich beperkt tot jouw werkplek;',
+                        text: '- Controleer of de storing zich beperkt tot jouw werkplek;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Controleer onder de knop ‘systeem’ in het planscherm de status van de verschillende systemen;',
+                        text: '- Controleer onder de knop ‘systeem’ in het planscherm de status van de verschillende systemen;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Bepaal of het nodig is de calamiteiten-werkplek op te starten. Zet dan ARI uit op de gestoorde werkplek en gebruik indien nodig ‘ARI Noodstop’ in PBH++.',
+                        text: '- Bepaal of het nodig is de calamiteiten-werkplek op te starten. Zet dan ARI uit op de gestoorde werkplek en gebruik indien nodig ‘ARI Noodstop’ in PBH++.',
                       ),
                     ],
                   ),
@@ -63,19 +59,18 @@ class AfhandelenSysteemstoringen extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Trein komt in infra gereserveerd voor een andere trein.',
+                        text: 'Trein komt in infra gereserveerd voor een andere trein.',
                       ),
                     ],
                   ),
@@ -83,19 +78,18 @@ class AfhandelenSysteemstoringen extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Alle bediensystemen van de treindienstleider zijn redundant uitgevoerd en proberen bij storingen/uitval om te schakelen.',
+                        text: 'Alle bediensystemen van de treindienstleider zijn redundant uitgevoerd en proberen bij storingen/uitval om te schakelen.',
                       ),
                     ],
                   ),

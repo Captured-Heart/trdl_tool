@@ -9,7 +9,7 @@ class Brand extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Brand',
         ),
         actions: const [
           HomeButton(),
@@ -21,23 +21,22 @@ class Brand extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Brand',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Bij de melding van brand in of nabij het spoor of brand in materieel vraag je het volgende uit:',
+                        text: 'Bij de melding van brand in of nabij het spoor of brand in materieel vraag je het volgende uit:',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -47,8 +46,7 @@ class Brand extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Station, baanvak, trein(nummer) en kilometrering;',
+                        text: '- Station, baanvak, trein(nummer) en kilometrering;',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -63,8 +61,7 @@ class Brand extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Een brand in een biels meld je altijd bij de MKS/BO.',
+                        text: 'Een brand in een biels meld je altijd bij de MKS/BO.',
                       ),
                     ],
                   ),
@@ -72,19 +69,18 @@ class Brand extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -92,19 +88,18 @@ class Brand extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Een brand in materieel, in of nabij de infra kan door weersomstandigheden, rijwind en locatie zich snel ontwikkelen. Ook een brand in de nabijheid van het spoor kan gevolgen hebben voor het treinverkeer. Hulpdiensten kunnen besluiten dat het treinverkeer beperkt moet worden.',
+                        text: 'Een brand in materieel, in of nabij de infra kan door weersomstandigheden, rijwind en locatie zich snel ontwikkelen. Ook een brand in de nabijheid van het spoor kan gevolgen hebben voor het treinverkeer. Hulpdiensten kunnen besluiten dat het treinverkeer beperkt moet worden.',
                       ),
                     ],
                   ),

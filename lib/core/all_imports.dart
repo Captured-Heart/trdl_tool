@@ -37,9 +37,8 @@ export 'package:trdl_tool/core/widgets/appbar_widgets/appbar_title/appbar_title.
 export 'package:trdl_tool/core/widgets/appbar_widgets/appbar_logout_button/appbar_logout_button.dart';
 export 'package:trdl_tool/core/widgets/appbar_widgets/appbar_home_button/appbar_home_button.dart';
 export 'package:trdl_tool/core/widgets/trdltool_logo/trdltool_logo.dart';
-export 'package:trdl_tool/core/widgets/text_widgets/card_title/card_title.dart';
-export 'package:trdl_tool/core/widgets/text_widgets/text_title/text_title.dart';
-export 'package:trdl_tool/core/widgets/text_widgets/sub_title/sub_title.dart';
+export 'package:trdl_tool/core/widgets/text_widgets/title_text/title_text.dart';
+export 'package:trdl_tool/core/widgets/text_widgets/subtitle_text/subtitle_text.dart';
 export 'package:trdl_tool/core/widgets/text_widgets/bold_text/bold_text.dart';
 export 'package:trdl_tool/core/widgets/text_widgets/body_text/body_text.dart';
 export 'package:trdl_tool/core/widgets/image_widgets/insert_image.dart';
@@ -180,6 +179,10 @@ export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_w
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_materieel/ongepland_werk_materieel_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/infra_ter_beschikking/infra_ter_beschikking_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/vertragingen/vertragingen_achtergrond.dart';
+
+/*ACHTERGROND INFORMATIE INCIDENTEN PAGES*/
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/incidenten_achtergrond_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/incidenten_basis/incidenten_achtergrond_basis.dart';
 
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/screens/proquiz_screens/proquiz_main.dart';

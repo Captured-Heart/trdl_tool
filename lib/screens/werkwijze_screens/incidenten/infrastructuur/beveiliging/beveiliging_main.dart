@@ -9,7 +9,7 @@ class Beveiliging extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Beveiliging',
         ),
         actions: const [
           HomeButton(),
@@ -21,9 +21,9 @@ class Beveiliging extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
@@ -35,9 +35,9 @@ class Beveiliging extends StatelessWidget {
               ),
               /*NAVIGATION CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: [
                       const TitleText(

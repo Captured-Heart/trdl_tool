@@ -146,6 +146,10 @@ class MainEntry extends StatelessWidget {
         'infraterbeschikkingachtergrond': (context) => const InfraTerBeschikkingAchtergrond(),
         'vertragingenachtergrond': (context) => const VertragingenAchtergrond(),
 
+        /*ACHTERGRONDINFO INCIDENTEN ROUTES*/
+        'incidentenachtergrond': (context) => const IncidentenAchtergrond(),
+        'incidentenachtergrondbasis': (context) => const IncidentenAchtergrondBasis(),
+
         /*PROQUIZ ROUTES*/
         'proquizmain': (context) => const ProQuiz(),
 

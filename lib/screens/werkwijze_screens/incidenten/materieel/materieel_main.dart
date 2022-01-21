@@ -9,7 +9,7 @@ class MaterieelIncidenten extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Materieel',
         ),
         actions: const [
           HomeButton(),
@@ -21,9 +21,9 @@ class MaterieelIncidenten extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
@@ -32,8 +32,7 @@ class MaterieelIncidenten extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Je kunt op drie manieren een melding krijgen over materieel:',
+                        text: 'Je kunt op drie manieren een melding krijgen over materieel:',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -53,8 +52,7 @@ class MaterieelIncidenten extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Als de melding niet van de machinist komt, licht je de machinist van de betrokken trein in.',
+                        text: 'Als de melding niet van de machinist komt, licht je de machinist van de betrokken trein in.',
                       ),
                     ],
                   ),
@@ -62,9 +60,9 @@ class MaterieelIncidenten extends StatelessWidget {
               ),
               /*NAVIGATION CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: [
                       const TitleText(

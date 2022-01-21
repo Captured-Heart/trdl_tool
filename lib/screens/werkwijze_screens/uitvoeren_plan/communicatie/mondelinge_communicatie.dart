@@ -9,7 +9,7 @@ class MondelingeCommunicatie extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Mondelinge Communicatie',
         ),
         actions: const [
           HomeButton(),
@@ -21,29 +21,27 @@ class MondelingeCommunicatie extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Mondelinge Communicatie',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Bij aanvang van ieder bericht geldt identificatieplicht;',
+                        text: '- Bij aanvang van ieder bericht geldt identificatieplicht;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Gebruik bij het voeren van een gesprek de dienstuitdrukkingen en de berichtenstructuur;',
+                        text: '- Gebruik bij het voeren van een gesprek de dienstuitdrukkingen en de berichtenstructuur;',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -56,19 +54,18 @@ class MondelingeCommunicatie extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt of bijzonderheden_trein komen onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
+                        text: 'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt of bijzonderheden_trein komen onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
                       ),
                     ],
                   ),
@@ -76,19 +73,18 @@ class MondelingeCommunicatie extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Om onveilige situaties te voorkomen zijn met de gesprekspartners van de treindienstleider uniforme uitgangspunten afgesproken voor het wisselen van mondelinge berichten. De treindienstleider heeft in deze afspraken een sturende rol.',
+                        text: 'Om onveilige situaties te voorkomen zijn met de gesprekspartners van de TRDL uniforme uitgangspunten afgesproken voor het wisselen van mondelinge berichten. De treindienstleider heeft in deze afspraken een sturende rol.',
                       ),
                     ],
                   ),

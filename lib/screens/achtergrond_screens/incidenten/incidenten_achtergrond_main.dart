@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class OngeplandWerkAchtergrond extends StatelessWidget {
-  const OngeplandWerkAchtergrond({Key? key}) : super(key: key);
+class IncidentenAchtergrond extends StatelessWidget {
+  const IncidentenAchtergrond({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class OngeplandWerkAchtergrond extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Ongepland werk',
+          title: 'Incidenten',
         ),
         actions: const [
           HomeButton(),
@@ -19,7 +19,7 @@ class OngeplandWerkAchtergrond extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              /*TITLE CARD*/
+              /*PROCEDURE CARD*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
@@ -27,8 +27,13 @@ class OngeplandWerkAchtergrond extends StatelessWidget {
                   child: Column(
                     children: const [
                       TitleText(
-                        title: 'Ongepland Werk',
+                        title: 'Incidenten',
                       ),
+                      SizedBoxH(),
+                      InsertImage(
+                        image: 'assets/images/achtergrond_info/aanpassen_plan/incidenten/incidenten_main.png',
+                      ),
+                      SizedBoxH(),
                     ],
                   ),
                 ),
@@ -48,48 +53,32 @@ class OngeplandWerkAchtergrond extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           NavButton(
-                            buttontext: 'Ongepland werk - Infra',
-                            destination: 'ongeplandwerkinfraachtergrond',
+                            buttontext: 'Incidenten - basisinformatie',
+                            destination: 'incidentenachtergrondbasis',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Ongepland werk - Materieel',
-                            destination: 'ongeplandwerkmaterieelachtergrond',
+                            buttontext: 'Infra',
+                            destination: 'infraincidentenachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Infra ter beschikking stellen',
-                            destination: 'infraterbeschikkingachtergrond',
+                            buttontext: 'Materieel',
+                            destination: 'materieelincidentenachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Toelaten werktreinen',
-                            destination: 'toelatenwerktreinenachtergrond',
+                            buttontext: 'Mensen, dieren en voorwerpen',
+                            destination: 'mensendierenvoorwerpenincidentenachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Inzetten railvoertuig (ICB)',
-                            destination: 'inzettenrailvoertuigachtergrond',
+                            buttontext: 'Overige incidenten',
+                            destination: 'overigeincidentenachtergrond',
                           ),
                         ],
                       ),
                       const SizedBoxH(),
-                    ],
-                  ),
-                ),
-              ),
-              /*IMAGE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SizedBoxH(),
-                      InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/ongepland_werk_main.png',
-                      ),
-                      SizedBoxH(),
                     ],
                   ),
                 ),

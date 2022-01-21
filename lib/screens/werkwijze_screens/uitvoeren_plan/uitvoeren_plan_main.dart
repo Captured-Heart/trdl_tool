@@ -9,7 +9,7 @@ class UitvoerenPlan extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Uitvoeren Plan',
         ),
         actions: const [
           HomeButton(),
@@ -21,9 +21,9 @@ class UitvoerenPlan extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
@@ -32,8 +32,7 @@ class UitvoerenPlan extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'De treindienstleider voert het actuele plan uit en stelt infra ter beschikking volgens vooraf gemaakte afspraken.',
+                        text: 'De TRDL voert het actuele plan uit en stelt infra ter beschikking volgens vooraf gemaakte afspraken.',
                       ),
                     ],
                   ),
@@ -41,9 +40,9 @@ class UitvoerenPlan extends StatelessWidget {
               ),
               /*NAVIGATION CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: [
                       const TitleText(

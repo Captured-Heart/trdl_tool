@@ -9,7 +9,7 @@ class BijzonderhedenTreinAchtergrond extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Bijzonderheden trein',
         ),
         actions: const [
           HomeButton(),
@@ -21,13 +21,13 @@ class BijzonderhedenTreinAchtergrond extends StatelessWidget {
             children: [
               //*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
-                        title: 'Bijzonderheden Trein',
+                        title: 'Bijzonderheden trein',
                       ),
                     ],
                   ),
@@ -35,9 +35,9 @@ class BijzonderhedenTreinAchtergrond extends StatelessWidget {
               ),
               /*NAVIGATION CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: [
                       const TitleText(
@@ -75,15 +75,14 @@ class BijzonderhedenTreinAchtergrond extends StatelessWidget {
               ),
               /*IMAGE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       SizedBoxH(),
                       InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/deKameel.jpg',
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/deKameel.jpg',
                       ),
                     ],
                   ),

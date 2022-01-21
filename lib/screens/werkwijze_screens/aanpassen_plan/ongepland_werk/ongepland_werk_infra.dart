@@ -9,7 +9,7 @@ class InfraOngeplandWerk extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Infra (ongepland werk)',
         ),
         actions: const [
           HomeButton(),
@@ -21,23 +21,22 @@ class InfraOngeplandWerk extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Infra (ongepland werk)',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Ongeplande werkzaamheden aan de railinfrastructuur met WBI/WECO:',
+                        text: 'Ongeplande werkzaamheden aan de railinfrastructuur met WBI/WECO:',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -47,8 +46,7 @@ class InfraOngeplandWerk extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Ongeplande werkzaamheden aan de railinfrastructuur zonder WBI/WECO:',
+                        text: 'Ongeplande werkzaamheden aan de railinfrastructuur zonder WBI/WECO:',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -58,14 +56,12 @@ class InfraOngeplandWerk extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Vraag welke infra betrokken is en hoe lang de werkzaamheden gaan duren;',
+                        text: '- Vraag welke infra betrokken is en hoe lang de werkzaamheden gaan duren;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- De DVL beslist bij werkzaamheden op de vrije baan over het aanvangstijdstip;',
+                        text: '- De DVL beslist bij werkzaamheden op de vrije baan over het aanvangstijdstip;',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -98,19 +94,18 @@ class InfraOngeplandWerk extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
+                        text: 'Trein komt onbedoeld in voor werkzaamheden beschikbaar gesteld gebied.',
                       ),
                     ],
                   ),
@@ -118,19 +113,18 @@ class InfraOngeplandWerk extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Voor het oplossen van (dreigende) storingen en/of calamiteiten kan het nodig zijn ongepland infracapaciteit beschikbaar te stellen voor werkzaamheden. Om deze werkzaamheden te beveiligen kan gebruik worden gemaakt van vooraf voorbereide storingsWBI’s of maatwerkWBI’s. Wanneer beide mogelijkheden niet beschikbaar zijn kan ook een unieke WECO met de LWB opgemaakt worden.',
+                        text: 'Voor het oplossen van (dreigende) storingen en/of calamiteiten kan het nodig zijn ongepland infracapaciteit beschikbaar te stellen voor werkzaamheden. Om deze werkzaamheden te beveiligen kan gebruik worden gemaakt van vooraf voorbereide storingsWBI’s of maatwerkWBI’s. Wanneer beide mogelijkheden niet beschikbaar zijn kan ook een unieke WECO met de LWB opgemaakt worden.',
                       ),
                     ],
                   ),

@@ -9,7 +9,7 @@ class ATBVeiligheid extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'ATB storing',
         ),
         actions: const [
           HomeButton(),
@@ -21,29 +21,27 @@ class ATBVeiligheid extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'ATB veiligheidsstoring',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Bij een ATB veiligheidsstoring aan de baan voorkom je rijweginstelling naar het betrokken spoor.',
+                        text: 'Bij een ATB veiligheidsstoring aan de baan voorkom je rijweginstelling naar het betrokken spoor.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Je stelt pas een rijweg in naar het betrokken spoor nadat je de machinist hebt ingelicht.',
+                        text: 'Je stelt pas een rijweg in naar het betrokken spoor nadat je de machinist hebt ingelicht.',
                       ),
                     ],
                   ),
@@ -51,19 +49,18 @@ class ATBVeiligheid extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Het opvolgen van het onjuiste seinbeeld door machinisten.',
+                        text: 'Het opvolgen van het onjuiste seinbeeld door machinisten.',
                       ),
                     ],
                   ),
@@ -71,19 +68,18 @@ class ATBVeiligheid extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Er is sprake van een ATB veiligheidsstoring wanneer de treinbeveiliging (ATB) een hogere snelheid aangeeft dan de blokbeveiliging (seinen). De machinist is mogelijk niet op de hoogte van de afwijking en wordt niet door de treinbeveiliging beschermd.',
+                        text: 'Er is sprake van een ATB veiligheidsstoring wanneer de treinbeveiliging (ATB) een hogere snelheid aangeeft dan de blokbeveiliging (seinen). De machinist is mogelijk niet op de hoogte van de afwijking en wordt niet door de treinbeveiliging beschermd.',
                       ),
                     ],
                   ),

@@ -9,7 +9,7 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Uitvoeren Plan',
         ),
         actions: const [
           HomeButton(),
@@ -21,9 +21,9 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
             children: [
               /*TITLE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
@@ -35,9 +35,9 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
               ),
               /*NAVIGATION CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: [
                       const TitleText(
@@ -90,15 +90,14 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
               ),
               /*IMAGE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       SizedBoxH(),
                       InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/uitvoeren_plan/spoorKaart2020.jpg',
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/spoorKaart2020.jpg',
                       ),
                     ],
                   ),
