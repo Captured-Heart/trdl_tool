@@ -9,7 +9,7 @@ class VasteRem extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Vaste rem',
         ),
         actions: const [
           HomeButton(),
@@ -21,41 +21,37 @@ class VasteRem extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Vaste rem',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Na een melding van een vaste rem/rook of vuur onder de trein:',
+                        text: 'Na een melding van een vaste rem/rook of vuur onder de trein:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Geef je de machinist opdracht de trein beheerst tot stilstand te brengen;',
+                        text: '- Geef je de machinist opdracht de trein beheerst tot stilstand te brengen;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Stel je de gevraagde infra ter beschikking aan de machinist (nevenspoor);',
+                        text: '- Stel je de gevraagde infra ter beschikking aan de machinist (nevenspoor);',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- De machinist geeft aan onder welke omstandigheden hij verder mag rijden.',
+                        text: '- De machinist geeft aan onder welke omstandigheden hij verder mag rijden.',
                       ),
                     ],
                   ),
@@ -63,19 +59,18 @@ class VasteRem extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Trein komt niet tijdig tot stilstand voor het gevaarpunt.',
+                        text: 'Trein komt niet tijdig tot stilstand voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -83,19 +78,18 @@ class VasteRem extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Een vaste rem verhit de wielband. Wanneer de temperatuur te hoog oploopt, kan de wielband van het wiel lopen. Het is van belang de trein zo recht mogelijk door wissels te laten rijden.',
+                        text: 'Een vaste rem verhit de wielband. Wanneer de temperatuur te hoog oploopt, kan de wielband van het wiel lopen. Het is van belang de trein zo recht mogelijk door wissels te laten rijden.',
                       ),
                     ],
                   ),

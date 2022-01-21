@@ -9,7 +9,7 @@ class AanpassenPlan extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Aanpassen Plan',
         ),
         actions: const [
           HomeButton(),
@@ -21,9 +21,9 @@ class AanpassenPlan extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
@@ -32,8 +32,7 @@ class AanpassenPlan extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Het actuele plan aanpassen als gevolg van een incident of extra capaciteitsaanvraag.',
+                        text: 'Het actuele plan aanpassen als gevolg van een incident of extra capaciteitsaanvraag.',
                       ),
                     ],
                   ),
@@ -41,9 +40,9 @@ class AanpassenPlan extends StatelessWidget {
               ),
               /*NAVIGATION CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: [
                       const TitleText(

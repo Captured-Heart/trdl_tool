@@ -9,7 +9,7 @@ class STSPassage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'STS passage',
         ),
         actions: const [
           HomeButton(),
@@ -21,29 +21,27 @@ class STSPassage extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'STS passage',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Als je vermoedt dat een machinist door een stoptonend sein is gereden, dan:',
+                        text: 'Als je vermoedt dat een machinist door een stoptonend sein is gereden, dan:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Laat je de trein direct tot stilstand brengen;',
+                        text: '- Laat je de trein direct tot stilstand brengen;',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -53,8 +51,7 @@ class STSPassage extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Vraag je uit of constateer je of er sprake is van gevaarzetting:',
+                        text: '- Vraag je uit of constateer je of er sprake is van gevaarzetting:',
                       ),
                       BodyText(
                         indents: 2,
@@ -74,11 +71,11 @@ class STSPassage extends StatelessWidget {
                       ),
                       BodyText(
                         indents: 2,
-                        text:
-                            '* Twee bijzonderheden_trein binnen 20 meter van elkaar in hetzelfde blok.',
+                        text: '* Twee bijzonderheden_trein binnen 20 meter van elkaar in hetzelfde blok.',
                       ),
                       SizedBoxH(),
                       BoldText(
+                        indents: 0,
                         boldtext: 'Bij gevaarzetting:',
                       ),
                       SizedBoxH(),
@@ -93,13 +90,13 @@ class STSPassage extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       BoldText(
+                        indents: 0,
                         boldtext: 'Bij GEEN gevaarzetting:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- In overleg met de machinist laat je de trein verplaatsen van de vrije baan of emplacement naar een perron of zijspoor;',
+                        text: '- In overleg met de machinist laat je de trein verplaatsen van de vrije baan of emplacement naar een perron of zijspoor;',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -109,8 +106,7 @@ class STSPassage extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'In alle gevallen laat je de machinist zijn rit pas vervolgen als de MKS/BO jou heeft gemeld dat de machinist toestemming heeft van zijn wachtdienst om de rit te vervolgen. Als je geen zekerheid hebt over de juiste werking van de seingeving informeer je de MKS/BO en de DVL.',
+                        text: 'In alle gevallen laat je de machinist zijn rit pas vervolgen als de MKS/BO jou heeft gemeld dat de machinist toestemming heeft van zijn wachtdienst om de rit te vervolgen. Als je geen zekerheid hebt over de juiste werking van de seingeving informeer je de MKS/BO en de DVL.',
                       ),
                     ],
                   ),
@@ -118,19 +114,18 @@ class STSPassage extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -138,19 +133,18 @@ class STSPassage extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Een trein die zonder toestemming een stoptonend sein passeert, komt op infra die niet voor hem gereserveerd is. Hierdoor kan gevaarzetting ontstaan met andere bijzonderheden_trein, overweggebruikers en/of werkzaamheden.',
+                        text: 'Een trein die zonder toestemming een stoptonend sein passeert, komt op infra die niet voor hem gereserveerd is. Hierdoor kan gevaarzetting ontstaan met andere bijzonderheden_trein, overweggebruikers en/of werkzaamheden.',
                       ),
                     ],
                   ),

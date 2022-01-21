@@ -9,7 +9,7 @@ class OntruimenPost extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Ontruimen',
         ),
         actions: const [
           HomeButton(),
@@ -21,35 +21,35 @@ class OntruimenPost extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardElevation,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Ontruimen post',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Zorg voor je persoonlijke veiligheid en neem een mobiele noodtelefoon mee.',
+                        text: 'Zorg voor je persoonlijke veiligheid en neem een mobiele noodtelefoon mee.',
                       ),
                       SizedBoxH(),
                       BoldText(
+                        indents: 0,
                         boldtext: '* Acuut ontruimen',
                       ),
                       BodyText(
                         indents: 1,
-                        text:
-                            'Je verlaat de post en plaatst een alarmoproep met de mobiele noodtelefoon.',
+                        text: 'Je verlaat de post en plaatst een alarmoproep met de mobiele noodtelefoon.',
                       ),
                       SizedBoxH(),
                       BoldText(
+                        indents: 0,
                         boldtext: '* Beheerst ontruimen',
                       ),
                       BodyText(
@@ -59,14 +59,12 @@ class OntruimenPost extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 2,
-                        text:
-                            '- \'Dit bericht is bestemd voor alle machinisten. In verband met een calamiteit op de verkeersleidingspost . . . (naam post) zal iedereen deze post op korte termijn verlaten.',
+                        text: '- \'Dit bericht is bestemd voor alle machinisten. In verband met een calamiteit op de verkeersleidingspost . . . (naam post) zal iedereen deze post op korte termijn verlaten.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 2,
-                        text:
-                            'Machinisten van reizigerstreinen moeten de reizigers op het eerstvolgende perron of anders een andere veilige plaats evacueren. Probeer het langdurig dicht liggen van overwegen te voorkomen. Indien aanvullende opdrachten nodig zijn wordt u hierover zo spoedig mogelijk geïnformeerd. Einde bericht. -\'',
+                        text: 'Machinisten van reizigerstreinen moeten de reizigers op het eerstvolgende perron of anders een andere veilige plaats evacueren. Probeer het langdurig dicht liggen van overwegen te voorkomen. Indien aanvullende opdrachten nodig zijn wordt u hierover zo spoedig mogelijk geïnformeerd. Einde bericht. -\'',
                       ),
                     ],
                   ),
@@ -74,19 +72,18 @@ class OntruimenPost extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text: 'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -94,13 +91,13 @@ class OntruimenPost extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(

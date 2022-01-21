@@ -9,7 +9,7 @@ class TegenRijrichting extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Tegen de rijrichting',
         ),
         actions: const [
           HomeButton(),
@@ -21,35 +21,32 @@ class TegenRijrichting extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Tegen de rijrichting rijden',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Links rijden tegen de rijrichting bij linkerspoor beveiliging:',
+                        text: 'Links rijden tegen de rijrichting bij linkerspoor beveiliging:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Geef een aanwijzing OVW af voor alle overwegen.',
+                        text: '- Geef een aanwijzing OVW af voor alle overwegen.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Rechts rijden tegen rijrichting bij linkerspoor beveiliging:',
+                        text: 'Rechts rijden tegen rijrichting bij linkerspoor beveiliging:',
                       ),
                       BodyText(
                         indents: 1,
@@ -57,8 +54,7 @@ class TegenRijrichting extends StatelessWidget {
                       ),
                       BodyText(
                         indents: 2,
-                        text:
-                            '1. De overwegen zijn voorzien van een extra aankonigingssectie plus aanwijzing OVW;',
+                        text: '1. De overwegen zijn voorzien van een extra aankonigingssectie plus aanwijzing OVW;',
                       ),
                       BodyText(
                         indents: 2,
@@ -71,14 +67,12 @@ class TegenRijrichting extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Keren op de vrije baan bij dubbel/enkelspoor beveiliging:',
+                        text: 'Keren op de vrije baan bij dubbel/enkelspoor beveiliging:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Geef een aanwijzing OVW af voor de overwegen waarvan de trein de aankondiging volledig gepasseerd is.',
+                        text: '- Geef een aanwijzing OVW af voor de overwegen waarvan de trein de aankondiging volledig gepasseerd is.',
                       ),
                     ],
                   ),
@@ -86,19 +80,18 @@ class TegenRijrichting extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -106,19 +99,18 @@ class TegenRijrichting extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'De blokbeveiliging controleert bij rijweginstelling de dynamische voorwaarden bij rijrichting naar de vrije baan. Bij het rijden tegen de rijrichting in wordt niet aan alle dynamische voorwaarden voldaan, waardoor de blokbeveiliging niet of niet volledig werkt.',
+                        text: 'De blokbeveiliging controleert bij rijweginstelling de dynamische voorwaarden bij rijrichting naar de vrije baan. Bij het rijden tegen de rijrichting in wordt niet aan alle dynamische voorwaarden voldaan, waardoor de blokbeveiliging niet of niet volledig werkt.',
                       ),
                     ],
                   ),

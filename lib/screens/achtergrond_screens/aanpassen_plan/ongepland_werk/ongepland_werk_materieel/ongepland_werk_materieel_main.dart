@@ -9,7 +9,7 @@ class OngeplandWerkMaterieelAchtergrond extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Ongepland werk materieel',
         ),
         actions: const [
           HomeButton(),
@@ -21,9 +21,9 @@ class OngeplandWerkMaterieelAchtergrond extends StatelessWidget {
             children: [
               /*CARD #1*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
@@ -39,13 +39,13 @@ class OngeplandWerkMaterieelAchtergrond extends StatelessWidget {
               ),
               /*CARD #2*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: 'Storing aan het materieel',
+                      SubTitleText(
+                        subtitle: 'Storing aan het materieel',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -87,13 +87,13 @@ class OngeplandWerkMaterieelAchtergrond extends StatelessWidget {
               ),
               /*CARD #3*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: 'Herstel',
+                      SubTitleText(
+                        subtitle: 'Herstel',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -111,13 +111,13 @@ class OngeplandWerkMaterieelAchtergrond extends StatelessWidget {
               ),
               /*CARD #4*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: 'Storingsmonteur',
+                      SubTitleText(
+                        subtitle: 'Storingsmonteur',
                       ),
                       SizedBoxH(),
                       BodyText(

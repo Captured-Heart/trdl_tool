@@ -9,7 +9,7 @@ class KopvanTrein extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Kop voorbij sein',
         ),
         actions: const [
           HomeButton(),
@@ -21,23 +21,22 @@ class KopvanTrein extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Kop van de trein/rangeerdeel voorbij het sein',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Je stelt een rijweg in en deelt de machinist mee dat het sein uit de stand stop is gebracht, of je neemt veiligheidsmaatregelen en geeft de machinist opdracht om te gaan rijden.',
+                        text: 'Je stelt een rijweg in en deelt de machinist mee dat het sein uit de stand stop is gebracht, of je neemt veiligheidsmaatregelen en geeft de machinist opdracht om te gaan rijden.',
                       ),
                     ],
                   ),
@@ -45,19 +44,18 @@ class KopvanTrein extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor een gevaarpunt.',
+                        text: 'Treinen komen niet tijdig tot stilstand voor een gevaarpunt.',
                       ),
                     ],
                   ),
@@ -65,19 +63,18 @@ class KopvanTrein extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Wanneer de kop van de trein of rangeerdeel bij vertrek voorbij het sein staat, kan de machinist niet waarnemen of het sein veilig staat voor vertrek en kan het vertrekproces niet gestart worden.',
+                        text: 'Wanneer de kop van de trein of rangeerdeel bij vertrek voorbij het sein staat, kan de machinist niet waarnemen of het sein veilig staat voor vertrek en kan het vertrekproces niet gestart worden.',
                       ),
                     ],
                   ),

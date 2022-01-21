@@ -9,7 +9,7 @@ class Ncbg extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'NCBG',
         ),
         actions: const [
           HomeButton(),
@@ -21,23 +21,22 @@ class Ncbg extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'NCBG',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: 'Sturingsniveau en uitzonderingen',
+                      SubTitleText(
+                        subtitle: 'Sturingsniveau en uitzonderingen',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Binnen een NCBG kent men in beginsel twee verschillende sturingsniveaus, namelijk:',
+                        text: 'Binnen een NCBG kent men in beginsel twee verschillende sturingsniveaus, namelijk:',
                       ),
                       SizedBoxH(),
                       BodyText(

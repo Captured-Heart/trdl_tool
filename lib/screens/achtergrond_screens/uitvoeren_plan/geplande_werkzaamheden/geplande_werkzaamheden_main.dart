@@ -9,7 +9,7 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Geplande werkzaamheden',
         ),
         actions: const [
           HomeButton(),
@@ -21,9 +21,9 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
             children: [
               //*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
@@ -35,9 +35,9 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
               ),
               /*NAVIGATION CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: [
                       const TitleText(
@@ -49,8 +49,7 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Basisinformatie',
-                            destination:
-                                'geplandewerkzaamhedenbasisachtergrond',
+                            destination: 'geplandewerkzaamhedenbasisachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
@@ -86,15 +85,14 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
               ),
               /*IMAGE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       SizedBoxH(),
                       InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzaamhedenBovenleiding.jpg',
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzaamhedenBovenleiding.jpg',
                       ),
                       SizedBoxH(),
                     ],

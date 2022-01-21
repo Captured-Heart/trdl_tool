@@ -9,7 +9,7 @@ class StilleggenTreindienst extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'TRDLtool',
+          title: 'Stilleggen treindienst',
         ),
         actions: const [
           HomeButton(),
@@ -21,41 +21,37 @@ class StilleggenTreindienst extends StatelessWidget {
             children: [
               /*PROCEDURE CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
                       TitleText(
                         title: 'Stilleggen treindienst',
                       ),
                       SizedBoxH(),
-                      CardTitle(
-                        title: Strings.procedure,
+                      SubTitleText(
+                        subtitle: Strings.procedure,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Wanneer je de opdracht ‘stilleggen treindienst’ krijgt, handel je als volgt:',
+                        text: 'Wanneer je de opdracht ‘stilleggen treindienst’ krijgt, handel je als volgt:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Informeer machinisten via algemene oproep dat de procedure ‘stilleggen treindienst’ wordt opgestart;',
+                        text: '- Informeer machinisten via algemene oproep dat de procedure ‘stilleggen treindienst’ wordt opgestart;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Laat reizigerstreinen stoppen langs het eerstvolgende perron, indien nodig laat je de trein afrangeren;',
+                        text: '- Laat reizigerstreinen stoppen langs het eerstvolgende perron, indien nodig laat je de trein afrangeren;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Laat goederentreinen bij voorkeur doorrijden tot het eerstvolgende stoptonende sein.',
+                        text: '- Laat goederentreinen bij voorkeur doorrijden tot het eerstvolgende stoptonende sein.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -65,8 +61,7 @@ class StilleggenTreindienst extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '\'Dit bericht is bestemd voor alle machinisten. Om veiligheidsredenen wordt nu de procedure ‘stilleggen treindienst’ gestart. Machinisten van reizigerstreinen wordt dringend verzocht de trein langs het eerstvolgende perron tot stilstand te brengen en de trein te ontruimen. Machinisten van goederentreinen kunnen doorrijden tot het eerstvolgende stoptonende sein. Indien aanvullende opdrachten nodig zijn, wordt u hierover zo spoedig mogelijk geïnformeerd’.\'',
+                        text: '\'Dit bericht is bestemd voor alle machinisten. Om veiligheidsredenen wordt nu de procedure ‘stilleggen treindienst’ gestart. Machinisten van reizigerstreinen wordt dringend verzocht de trein langs het eerstvolgende perron tot stilstand te brengen en de trein te ontruimen. Machinisten van goederentreinen kunnen doorrijden tot het eerstvolgende stoptonende sein. Indien aanvullende opdrachten nodig zijn, wordt u hierover zo spoedig mogelijk geïnformeerd’.\'',
                       ),
                     ],
                   ),
@@ -74,19 +69,18 @@ class StilleggenTreindienst extends StatelessWidget {
               ),
               /*RISICO CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.risico,
+                      SubTitleText(
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor een gevaarpunt.',
+                        text: 'Treinen komen niet tijdig tot stilstand voor een gevaarpunt.',
                       ),
                     ],
                   ),
@@ -94,19 +88,18 @@ class StilleggenTreindienst extends StatelessWidget {
               ),
               /*CONTEXT CARD*/
               Card(
-                elevation: 6.0,
+                elevation: kCardElevation,
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: kCardPadding,
                   child: Column(
                     children: const [
-                      CardTitle(
-                        title: Strings.context,
+                      SubTitleText(
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'De procedure \'stilleggen treindienst\' wordt geïnitieerd door de OvD-S wanneer er sprake is van een acuut dreigende situatie voor het treinverkeer. Het doel is om binnen 30 minuten beheerst alle bijzonderheden_trein stil te laten staan en alle reizigerstreinen en stationshallen beheerst te ontruimen.',
+                        text: 'De procedure \'stilleggen treindienst\' wordt geïnitieerd door de OvD-S wanneer er sprake is van een acuut dreigende situatie voor het treinverkeer. Het doel is om binnen 30 minuten beheerst alle bijzonderheden_trein stil te laten staan en alle reizigerstreinen en stationshallen beheerst te ontruimen.',
                       ),
                     ],
                   ),
