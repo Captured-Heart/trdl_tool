@@ -16,7 +16,20 @@ showVersionUpdatePopup(context) {
                   children: const [
                     Expanded(
                       child: Text(
-                        'De huidige versie is 0.1.6',
+                        'De huidige versie is 0.1.7',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBoxH(),
+                Row(
+                  children: const [
+                    Expanded(
+                      child: Text(
+                        '2022-01-21: 0.1.7\n - Grote refactor tbv snelheid\n- Betere leesbaarheid in donkere modus\n- Achtergrondinformatie verder uitgebreid (10)',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
