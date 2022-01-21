@@ -107,7 +107,7 @@ class InzettenICB extends StatelessWidget {
                   child: Column(
                     children: const [
                       SubTitleText(
-                        subtitle: Strings.procedure,
+                        subtitle: Strings.risico,
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -126,7 +126,7 @@ class InzettenICB extends StatelessWidget {
                   child: Column(
                     children: const [
                       SubTitleText(
-                        subtitle: Strings.procedure,
+                        subtitle: Strings.context,
                       ),
                       SizedBoxH(),
                       BodyText(

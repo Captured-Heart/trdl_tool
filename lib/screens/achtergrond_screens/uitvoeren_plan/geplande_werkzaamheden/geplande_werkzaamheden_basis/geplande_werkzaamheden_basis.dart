@@ -124,8 +124,9 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         text: 'Voor geplande werkzaamheden aan ProRail-sporen is zoals gezegd een WBI/WECO beschikbaar, aangeleverd door de afdeling Werkplekbeveiliging. Bij geplande werkzaamheden spreken we over een Standaard WBI/WECO.  Een Standaard WBI/WECO bestaat uit één of meerdere werkplekken, waarbij minimaal één van deze werkplekken een vaste werkplek is. Daarnaast kunnen er werkplekken in de WBI/WECO in overleg met (IOM) de treindienstleider zitten ten behoeve van het in- en uitzetten van voertuigen, aanbrengen veiligheidsmiddelen. Én er kunnen werkplekken in de WBI/WECO zitten IOM treindienstleider ten behoeve van het uitvoeren van werkzaamheden. Bij hoge uitzondering kan het voorkomen dat een WBI/WECO in zijn geheel bestaat uit werkplekken IOM ten behoeve van werkzaamheden.',
                       ),
                       SizedBoxH(),
-                      SubTitleText(
-                        subtitle: 'Vaste werkplek in een Standaard WBI/WECO',
+                      BoldText(
+                        indents: 0,
+                        boldtext: 'Vaste werkplek in een Standaard WBI/WECO',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -133,8 +134,9 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         text: 'Bij een vaste werkplek is er een treinvrije periode gecreëerd in het plan, de infracapaciteit behorend bij deze werkplek is altijd gegarandeerd voor de aannemer.',
                       ),
                       SizedBoxH(),
-                      SubTitleText(
-                        subtitle: 'IOM ten behoeve van in- en uitzetten voertuigen in een standaard WBI/WECO',
+                      BoldText(
+                        indents: 0,
+                        boldtext: 'IOM ten behoeve van in- en uitzetten voertuigen in een standaard WBI/WECO',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -142,8 +144,9 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         text: 'Deze werkplek wordt enkel toegevoegd op WBI/WECO’s met daarin óók een vaste werkplek en is met name bedoeld voor het in- en uitzetten van voertuigen en/of het plaatsen of verwijderen van safety fence. Dit soort werkzaamheden vindt over het algemeen plaats aan het begin en aan het einde van de buitendienststelling en is zodoende alleen gegarandeerd in eerste en laatste 30 minuten van de buitendienststelling. Buiten deze periodes kan de werkplek door de LWB worden aangevraagd, maar heeft de treinenloop voorrang op de werkzaamheden. De genoemde tijdsperiode op de WBI dient altijd onverkort gegeven te worden.',
                       ),
                       SizedBoxH(),
-                      SubTitleText(
-                        subtitle: 'IOM ten behoeve van werkzaamheden in een standaard WBI/WECO',
+                      BoldText(
+                        indents: 0,
+                        boldtext: 'IOM ten behoeve van werkzaamheden in een standaard WBI/WECO',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -151,8 +154,9 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         text: 'Deze werkplek is onderdeel van een WBI/WECO met daarin óók een vaste werkplek. Een dergelijke werkplek wordt door de aannemer vaak gebruikt om kleine werkzaamheden zonder prioriteit uit te voeren aan de railinfrastructuur. Er is géén treinvrije periode gecreëerd in het plan, de werkplek is dan ook niet gegarandeerd. Infracapaciteit wordt gegeven op basis van mogelijkheden in de treinenloop. De treinenloop heeft hierbij dus voorrang op de werkzaamheden. De benoemde tijdsperiode van 59 minuten staat fictief benoemd op de WBI/WECO. De tijdsperiode die gegeven wordt gebeurt in overleg tussen treindienstleider en LWB.​​​​​​​',
                       ),
                       SizedBoxH(),
-                      SubTitleText(
-                        subtitle: 'WBI/WECO volledig IOM ten behoeve van werkzaamheden',
+                      BoldText(
+                        indents: 0,
+                        boldtext: 'WBI/WECO volledig IOM ten behoeve van werkzaamheden',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -183,8 +187,9 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         text: 'Dit zijn werkzaamheden waarbij geen medewerking van de treindienstleider gevraagd wordt en/of noodzakelijk is. Denk hierbij aan werkzaamheden aan het perron, maar ook aan bijvoorbeeld het maaien van bermen.',
                       ),
                       SizedBoxH(),
-                      SubTitleText(
-                        subtitle: 'Kortdurende werkzaamheden aan de baan of apparatuur',
+                      BoldText(
+                        indents: 0,
+                        boldtext: 'Kortdurende werkzaamheden aan de baan of apparatuur',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -207,8 +212,9 @@ class GeplandeWerkzaamhedenBasisAchtergrond extends StatelessWidget {
                         text: '- door de postmanager, TM en/of OvD-V van de verkeersleidingspost aan de TRDL zijn gemeld.',
                       ),
                       SizedBoxH(),
-                      SubTitleText(
-                        subtitle: 'Uitvoering',
+                      BoldText(
+                        indents: 0,
+                        boldtext: 'Uitvoering',
                       ),
                       SizedBoxH(),
                       BodyText(
