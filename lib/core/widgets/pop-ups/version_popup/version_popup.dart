@@ -11,226 +11,132 @@ showVersionUpdatePopup(context) {
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        'De huidige versie is 0.1.7',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+              children: const [
+                CurrentVersion(
+                  versionNumber: '0.1.7',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2022-01-21: 0.1.7\n - Grote refactor tbv snelheid\n- Betere leesbaarheid in donkere modus\n- Achtergrondinformatie verder uitgebreid (10)',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-01-21: 0.1.7',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2022-01-15: 0.1.6\n - Achtergrondinformatie verder uitgebreid (9)',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                ChangesMade(
+                  changes:
+                      '- Grote refactor tbv snelheid\n- Betere leesbaarheid in donkere modus\n- Achtergrondinformatie verder uitgebreid (10)',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2022-01-13: 0.1.5\n - UX aanpassingen\n - Achtergrondinformatie verder uitgebreid (8)',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-01-15: 0.1.6',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2022-01-08: 0.1.4\n - Button aangepast naar \'VERDER\' ipv \'OVERSLAAN\' in welkomstscherm op laatste scherm (Bedankt, Gerrit!)\n - Achtergrondinformatie verder uitgebreid (7)',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                ChangesMade(
+                  changes: '- Achtergrondinformatie verder uitgebreid (9)',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2022-01-06: 0.1.3\n - Grote refactor, filetree aangepast\n - Achtergrondinformatie verder uitgebreid (6)',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-01-13: 0.1.5',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2021-12-11: 0.1.2\n - Logo\'s en iconen aangepast\n - Achtergrondinformatie verder uitgebreid (5)',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                ChangesMade(
+                  changes:
+                      '- UX aanpassingen\n - Achtergrondinformatie verder uitgebreid (8)',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2021-12-11: 0.1.1\n - Grote refactor, 13.000 regels code verwijderd\n - Achtergrondinformatie verder uitgebreid (4)',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-01-08: 0.1.4',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2021-11-25: 0.0.9\n - Material You design toegepast\n - Navigatie beginscherm aangepast naar swipe\n - UX/UI tweaks',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                ChangesMade(
+                  changes:
+                      '- Button aangepast naar \'VERDER\' ipv \'OVERSLAAN\' in welkomstscherm op laatste scherm (Bedankt, Gerrit!)\n - Achtergrondinformatie verder uitgebreid (7)',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2021-11-19: 0.0.8\n - Werkwijze nu compleet\n - Achtergrondinformatie verder uitgebreid (3)',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-01-06: 0.1.3',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2021-11-12: 0.0.7\n - Achtergrondinformatie verder uitgebreid (2)',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                ChangesMade(
+                  changes:
+                      '- Grote refactor, filetree aangepast\n - Achtergrondinformatie verder uitgebreid (6)',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2021-11-10: 0.0.6\n - Achtergrondinformatie verder uitgebreid (1)',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                SizedBoxH(),
+                DateChanged(
+                  date: '2021-12-11: 0.1.2',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2021-11-07: 0.0.5\n - Logout geeft nu ook een popup\n - Carousel_slider toegevoegd',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                ChangesMade(
+                  changes:
+                      '- Logo\'s en iconen aangepast\n - Achtergrondinformatie verder uitgebreid (5)',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2021-11-05: 0.0.4\n - Terugknop geeft nu een popup\n - Begin gemaakt met achtergrondinformatie',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                SizedBoxH(),
+                DateChanged(
+                  date: '2021-12-11: 0.1.1',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2021-11-04: 0.0.3\n - Terugknop verlaat app niet meer\n - Grote aanpassing UI/UX ProQuiz',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                ChangesMade(
+                  changes:
+                      '- Grote refactor, 13.000 regels code verwijderd\n - Achtergrondinformatie verder uitgebreid (4)',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2021-10-30: 0.0.2\n - Navigatieknoppen consistentie aangepakt',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                SizedBoxH(),
+                DateChanged(
+                  date: '2021-11-25: 0.0.9',
                 ),
-                const SizedBoxH(),
-                Row(
-                  children: const [
-                    Expanded(
-                      child: Text(
-                        '2021-10-27: 0.0.1\n - Cherry popped',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                ChangesMade(
+                  changes:
+                      '- Material You design toegepast\n - Navigatie beginscherm aangepast naar swipe\n - UX/UI tweaks',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2021-11-19: 0.0.8',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Werkwijze nu compleet\n - Achtergrondinformatie verder uitgebreid (3)',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2021-11-12: 0.0.7',
+                ),
+                ChangesMade(
+                  changes: '- Achtergrondinformatie verder uitgebreid (2)',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2021-11-10: 0.0.6',
+                ),
+                ChangesMade(
+                  changes: '- Achtergrondinformatie verder uitgebreid (1)',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2021-11-07: 0.0.5',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Logout geeft nu ook een popup\n - Carousel_slider toegevoegd',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2021-11-05: 0.0.4',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Terugknop geeft nu een popup\n - Begin gemaakt met achtergrondinformatie',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2021-11-04: 0.0.3',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Terugknop verlaat app niet meer\n - Grote aanpassing UI/UX ProQuiz',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2021-10-30: 0.0.2',
+                ),
+                ChangesMade(
+                  changes: '- Navigatieknoppen consistentie aangepakt',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2021-10-27: 0.0.1',
+                ),
+                ChangesMade(
+                  changes: '- Cherry popped!',
                 ),
               ],
             ),
@@ -239,4 +145,81 @@ showVersionUpdatePopup(context) {
       );
     },
   );
+}
+
+class ChangesMade extends StatelessWidget {
+  const ChangesMade({
+    required this.changes,
+    Key? key,
+  }) : super(key: key);
+
+  final String changes;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(
+          child: Text(
+            changes,
+            // style: const TextStyle(
+            //   fontSize: 16.0,
+            // ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class DateChanged extends StatelessWidget {
+  const DateChanged({
+    required this.date,
+    Key? key,
+  }) : super(key: key);
+
+  final String date;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(
+          child: Text(
+            date,
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18.0,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class CurrentVersion extends StatelessWidget {
+  const CurrentVersion({
+    required this.versionNumber,
+    Key? key,
+  }) : super(key: key);
+
+  final String versionNumber;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Expanded(
+          child: Text(
+            'De huidige versie is $versionNumber',
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 20.0,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 }
