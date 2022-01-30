@@ -31,7 +31,8 @@ class HomeIndex0 extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               indents: 0,
-                              text: 'Als treindienstleider ben je verantwoordelijk voor het verdelen van de infracapaciteit in een aan jou toegewezen geografisch gebied. Dit doe je door het uitvoeren van een vooraf aangeleverd plan.',
+                              text:
+                                  'Als treindienstleider ben je verantwoordelijk voor het verdelen van de infracapaciteit in een aan jou toegewezen geografisch gebied. Dit doe je door het uitvoeren van een vooraf aangeleverd plan.',
                             ),
                           ),
                         ],
@@ -42,7 +43,8 @@ class HomeIndex0 extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               indents: 0,
-                              text: 'Wanneer er zich situaties voordoen die een aanpassing op dat plan noodzakelijk maken, doe je dit door gebruik te maken van vooraf bepaalde procedures in deze werkwijze.',
+                              text:
+                                  'Wanneer er zich situaties voordoen die een aanpassing op dat plan noodzakelijk maken, doe je dit door gebruik te maken van vooraf bepaalde procedures in deze werkwijze.',
                             ),
                           ),
                         ],
@@ -53,7 +55,8 @@ class HomeIndex0 extends StatelessWidget {
                           Expanded(
                             child: BodyText(
                               indents: 0,
-                              text: 'Op momenten dat oplossingen ter plekke moeten worden bedacht, kan besloten worden een procedure niet geheel of anders uit te voeren. Het is het vakmanschap van de treindienstleider om te bepalen welke VKA\'s nodig zijn om de risico\'s te beheersen.',
+                              text:
+                                  'Op momenten dat oplossingen ter plekke moeten worden bedacht, kan besloten worden een procedure niet geheel of anders uit te voeren. Het is het vakmanschap van de treindienstleider om te bepalen welke VKA\'s nodig zijn om de risico\'s te beheersen.',
                             ),
                           ),
                         ],
@@ -105,7 +108,6 @@ class HomeIndex0 extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBoxH(),
             ],
           ),
         ),

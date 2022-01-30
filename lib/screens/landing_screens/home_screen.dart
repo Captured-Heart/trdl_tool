@@ -75,6 +75,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           ),
           title: const AppBarText(title: 'TRDLtool'),
           actions: const [
+            SearchButton(),
             LogOutButton(),
           ],
         ),
