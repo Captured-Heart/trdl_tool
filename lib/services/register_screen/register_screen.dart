@@ -9,10 +9,10 @@ class Register extends StatefulWidget {
 
 class _RegisterState extends State<Register> {
   final _auth = FirebaseAuth.instance;
-  late String email;
-  late String password;
-  late String password1;
-  late String password2;
+
+  final TextEditingController _emailCtrl = TextEditingController();
+  final TextEditingController _password1Ctrl = TextEditingController();
+  final TextEditingController _password2Ctrl = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -53,11 +53,9 @@ class _RegisterState extends State<Register> {
                             Expanded(
                               /*EMAIL TEXTFIELD*/
                               child: TextField(
+                                controller: _emailCtrl,
                                 keyboardType: TextInputType.emailAddress,
                                 textAlign: TextAlign.center,
-                                onChanged: (value) {
-                                  email = value;
-                                },
                                 decoration: const InputDecoration(
                                   labelText: Strings.registerEmail,
                                   hintText: Strings.registerEmailHint,
@@ -72,10 +70,8 @@ class _RegisterState extends State<Register> {
                             Expanded(
                               /*PASSWORD TEXTFIELD*/
                               child: TextField(
+                                controller: _password1Ctrl,
                                 textAlign: TextAlign.center,
-                                onChanged: (value) {
-                                  password1 = value;
-                                },
                                 obscureText: true,
                                 decoration: const InputDecoration(
                                   labelText: Strings.registerPassword,
@@ -91,10 +87,8 @@ class _RegisterState extends State<Register> {
                             Expanded(
                               /*CHECK PASSWORD TEXTFIELD*/
                               child: TextField(
+                                controller: _password2Ctrl,
                                 textAlign: TextAlign.center,
-                                onChanged: (value) {
-                                  password2 = value;
-                                },
                                 obscureText: true,
                                 decoration: const InputDecoration(
                                   labelText: Strings.registerPasswordCheck,
@@ -111,10 +105,11 @@ class _RegisterState extends State<Register> {
                             ElevatedButton(
                               onPressed: () async {
                                 /*SUPERUSER ACCOUNT*/
-                                if (email.contains('plotsklapps@gmail.com')) {
+                                if (_emailCtrl.text
+                                    .contains('plotsklapps@gmail.com')) {
                                   await _auth.createUserWithEmailAndPassword(
-                                    email: email,
-                                    password: password1,
+                                    email: _emailCtrl.text,
+                                    password: _password1Ctrl.text,
                                   );
                                   Navigator.pushReplacementNamed(
                                     context,
@@ -122,20 +117,21 @@ class _RegisterState extends State<Register> {
                                   );
                                 }
                                 /*CHECK IF EMAIL IS EMPTY OR NOT PRORAIL*/
-                                else if (email.isEmpty ||
-                                    !email.contains('@prorail.nl')) {
+                                else if (_emailCtrl.text.isEmpty ||
+                                    !_emailCtrl.text.contains('@prorail.nl')) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarRegisterEmailWrong,
                                   );
                                 }
                                 /*CHECK PASSWORD LENGTH > 6 FOR FIREBASE*/
-                                else if (password1.length < 6) {
+                                else if (_password1Ctrl.text.length < 6) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarRegisterPasswordShort,
                                   );
                                 }
                                 /*CHECK PASSWORD ARE THE SAME*/
-                                else if (password1 != password2) {
+                                else if (_password1Ctrl.text !=
+                                    _password2Ctrl.text) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarRegisterPasswordNotEqual,
                                   );
@@ -143,8 +139,8 @@ class _RegisterState extends State<Register> {
                                   try {
                                     /*CREATE USER AND GO TO VERIFY_SCREEN*/
                                     await _auth.createUserWithEmailAndPassword(
-                                      email: email,
-                                      password: password1,
+                                      email: _emailCtrl.text,
+                                      password: _password1Ctrl.text,
                                     );
                                     Navigator.pushReplacementNamed(
                                       context,

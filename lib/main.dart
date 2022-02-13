@@ -28,9 +28,9 @@ class MainEntry extends StatelessWidget {
         'welcomescreen': (context) => const WelcomeScreen(),
         'login': (context) => const Login(),
         'register': (context) => const Register(),
-        'homescreen': (context) => const HomeScreen(),
-        'verifyscreen': (context) => const VerifyScreen(),
         'wachtwoordscreen': (context) => const Wachtwoord(),
+        'verifyscreen': (context) => const VerifyScreen(),
+        'homescreen': (context) => const HomeScreen(),
 
         /*HOMEPAGES ROUTES*/
         'homeindex0': (context) => const HomeIndex0(),

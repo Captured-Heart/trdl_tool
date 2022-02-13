@@ -9,8 +9,9 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   final _auth = FirebaseAuth.instance;
-  late String email;
-  late String password;
+
+  final TextEditingController _emailCtrl = TextEditingController();
+  final TextEditingController _passwordCtrl = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -51,11 +52,9 @@ class _LoginState extends State<Login> {
                             Expanded(
                               /*EMAIL TEXTFIELD*/
                               child: TextField(
+                                controller: _emailCtrl,
                                 keyboardType: TextInputType.emailAddress,
                                 textAlign: TextAlign.center,
-                                onChanged: (value) {
-                                  email = value;
-                                },
                                 decoration: const InputDecoration(
                                   labelText: Strings.loginEmail,
                                   hintText: Strings.loginEmailHint,
@@ -70,10 +69,8 @@ class _LoginState extends State<Login> {
                             Expanded(
                               /*PASSWORD TEXTFIELD*/
                               child: TextField(
+                                controller: _passwordCtrl,
                                 textAlign: TextAlign.center,
-                                onChanged: (value) {
-                                  password = value;
-                                },
                                 obscureText: true,
                                 decoration: const InputDecoration(
                                   labelText: Strings.loginPassword,
@@ -92,8 +89,8 @@ class _LoginState extends State<Login> {
                                 try {
                                   /*SING IN METHOD*/
                                   await _auth.signInWithEmailAndPassword(
-                                    email: email,
-                                    password: password,
+                                    email: _emailCtrl.text,
+                                    password: _passwordCtrl.text,
                                   );
                                   /*IF USER CLICKED VERIFICATION EMAIL*/
                                   if (_auth.currentUser!.emailVerified) {

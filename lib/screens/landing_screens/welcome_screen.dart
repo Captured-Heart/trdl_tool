@@ -89,11 +89,9 @@ class _WelcomeScreen extends State<WelcomeScreen> {
         onPressed: () {
           Logger().wtf('User skips welcome_screen to login_screen.');
           /*SKIP AND GO TO WELCOME_SCREEN*/
-          Navigator.push(
+          Navigator.pushNamed(
             context,
-            MaterialPageRoute(
-              builder: (context) => const Login(),
-            ),
+            'login',
           );
         },
         label: Text(

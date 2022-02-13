@@ -14,11 +14,11 @@ class _VerifyScreenState extends State<VerifyScreen> {
 
   @override
   void initState() {
-    _asyncMethod();
+    _waitForEmailVerification();
     super.initState();
   }
 
-  _asyncMethod() async {
+  _waitForEmailVerification() async {
     if (user != null && !user!.emailVerified) {
       await user!.sendEmailVerification();
     }

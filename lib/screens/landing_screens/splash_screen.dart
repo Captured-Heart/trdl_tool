@@ -22,11 +22,9 @@ class _SplashScreenState extends State<SplashScreen> {
       timer = Timer(
         /*SET TIMER TO ... SECONDS*/
         const Duration(seconds: 3),
-        () => Navigator.pushReplacement(
+        () => Navigator.pushReplacementNamed(
           context,
-          MaterialPageRoute(
-            builder: (BuildContext context) => const HomeScreen(),
-          ),
+          'homescreen',
         ),
       );
     }
@@ -37,11 +35,9 @@ class _SplashScreenState extends State<SplashScreen> {
       );
       timer = Timer(
         const Duration(seconds: 3),
-        () => Navigator.pushReplacement(
+        () => Navigator.pushReplacementNamed(
           context,
-          MaterialPageRoute(
-            builder: (BuildContext context) => const WelcomeScreen(),
-          ),
+          'welcomescreen',
         ),
       );
     }
@@ -88,8 +84,8 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             SizedBox(
-              height: 60.0,
-              width: 140.0,
+              height: 75.0,
+              width: 150.0,
               child: Image.asset(
                 'assets/icons/plotsklappsLogoSmall.png',
               ),
