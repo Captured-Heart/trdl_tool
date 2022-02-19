@@ -10,9 +10,25 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   final _auth = FirebaseAuth.instance;
 
-  final TextEditingController _emailCtrl = TextEditingController();
-  final TextEditingController _password1Ctrl = TextEditingController();
-  final TextEditingController _password2Ctrl = TextEditingController();
+  late final TextEditingController _emailCtrl;
+  late final TextEditingController _password1Ctrl;
+  late final TextEditingController _password2Ctrl;
+
+  @override
+  void initState() {
+    _emailCtrl = TextEditingController();
+    _password1Ctrl = TextEditingController();
+    _password2Ctrl = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _emailCtrl.dispose();
+    _password1Ctrl.dispose();
+    _password2Ctrl.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -9,7 +9,19 @@ class Wachtwoord extends StatefulWidget {
 
 class _WachtwoordState extends State<Wachtwoord> {
   final _auth = FirebaseAuth.instance;
-  late String email;
+  late final TextEditingController _emailCtrl;
+
+  @override
+  void initState() {
+    _emailCtrl = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _emailCtrl.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -53,11 +65,9 @@ class _WachtwoordState extends State<Wachtwoord> {
                             Expanded(
                               /*EMAIL TEXTFIELD*/
                               child: TextField(
+                                controller: _emailCtrl,
                                 keyboardType: TextInputType.emailAddress,
                                 textAlign: TextAlign.center,
-                                onChanged: (value) {
-                                  email = value;
-                                },
                                 decoration: const InputDecoration(
                                   labelText: 'Emailadres',
                                   hintText:
@@ -76,9 +86,11 @@ class _WachtwoordState extends State<Wachtwoord> {
                                 try {
                                   /*SEND PASSWORD RESETLINK*/
                                   Logger().wtf(
-                                    'Password reset mail sent to $email',
+                                    'Password reset mail sent to $_emailCtrl.text',
                                   );
-                                  _auth.sendPasswordResetEmail(email: email);
+                                  _auth.sendPasswordResetEmail(
+                                    email: _emailCtrl.text,
+                                  );
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarWachtwoordEmailVerzonden,
                                   );
