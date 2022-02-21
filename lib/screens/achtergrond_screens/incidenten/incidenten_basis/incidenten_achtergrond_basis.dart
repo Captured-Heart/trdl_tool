@@ -19,7 +19,7 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              /*PROCEDURE CARD*/
+              /*CARD #1*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
@@ -68,48 +68,122 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                   ),
                 ),
               ),
-              /*RISICO CARD*/
+              /*CARD #2*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
                     children: const [
-                      SubTitleText(
-                        subtitle: Strings.risico,
+                      TitleText(title: 'Alarmeren'),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Bij onveilige situaties is het belangrijk dat er snel gehandeld wordt. Nadat een onveilige situatie is gemeld, handel je als volgt:',
+                      ),
+                      SizedBoxH(),
+                      BodyText(indents: 1, text: '- Neem maatregelen om uitbreiding te voorkomen. Dit zijn:'),
+                      BodyText(indents: 2, text: '* Alarmoproep GSM-R uitzenden;'),
+                      BodyText(indents: 2, text: '* Herroepen van seinen (indien noodzakelijk);'),
+                      BodyText(indents: 2, text: '* ARI uitzetten voor betreffende planregels (indien noodzakelijk);'),
+                      BodyText(indents: 2, text: '* Buurtreindienstleider informeren (indien noodzakelijk);'),
+                      BodyText(indents: 2, text: '* Veiligheidsmaatregelen nemen, verhinderen van rijweginstelling;'),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Bepaal of het om een incident gaat;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Alarmeer hulpdiensten en direct noodzakelijke ketenpartners. Doe dit binnen 5 minuten na melding van het incident;',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Informeer, indiend belanghebbend, de Medewerker Rangeren.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van bijzonderheden_trein wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text: 'Je zet de alarmoproep GSM-R van het gealarmeerde gebied pas uit nadat je jezelf ervan hebt overtuigd dat de veiligheidsmaatregelen van jou - en indien van toepassing jouw buurTRDL - de gevaarlijke situatie afdekken.',
                       ),
+                      SizedBoxH(),
+                      SubTitleText(subtitle: 'Inhoud alarmering'),
+                      SizedBoxH(),
+                      BodyText(indents: 0, text: 'Een alarmering meot zoveel mogelijk antwoord geven op de volgende vragen:'),
+                      SizedBoxH(),
+                      BodyText(indents: 1, text: '- Wat is er gebeurd?'),
+                      SizedBoxH(),
+                      BodyText(indents: 1, text: '- Waar is het gebeurd?'),
+                      SizedBoxH(),
+                      BodyText(indents: 1, text: '- Wanneer is het gebeurd?'),
+                      SizedBoxH(),
+                      BodyText(indents: 1, text: '- Wie is er bij betrokken?'),
+                      SizedBoxH(),
+                      BodyText(indents: 1, text: '- Wat is de ernst?'),
+                      SizedBoxH(),
+                      BodyText(indents: 0, text: 'Bij het uitvagen en alarmeren maak je gebruik van het alarmeer-/informeerformulier.'),
+                       SizedBoxH(),
+                      BodyText(indents: 0, text: 'N.B.: Bij afwijkingen op de 1e alarmering en gemaakte afspraken met de MKS-BO informeer je de MKS-BO opnieuw.'),
                     ],
                   ),
                 ),
               ),
-              /*CONTEXT CARD*/
+              /*NAVIGATION CARD*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.context,
+                    children: [
+                      const TitleText(
+                        title: 'Ga snel naar',
                       ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Het spoor is afgesloten voor onbevoegden en/of dieren. Betreden van het spoor door onbevoegden en/of dieren kan een gevaarlijke situatie opleveren voor betrokkenen en/of de treindienst. Een machinist kan ter plaatse het risico op een gevaarlijke situatie beoordelen.',
+                      const SizedBoxH(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          NavButton(
+                            buttontext: 'Incidenten - werkwijze',
+                            destination: 'incidenten',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Infra',
+                            destination: 'infraincidentenachtergrond',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Materieel',
+                            destination: 'materieelincidentenachtergrond',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Mensen, dieren en voorwerpen',
+                            destination: 'mensendierenvoorwerpenincidentenachtergrond',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Overige incidenten',
+                            destination: 'overigeincidentenachtergrond',
+                          ),
+                        ],
                       ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'De treindienstleider meldt onbevoegden en/of dieren langs het spoor zodat deze verwijderd kunnen worden en/of de afscheiding van het spoor hersteld kan worden.',
-                      ),
+                      const SizedBoxH(),
                     ],
                   ),
                 ),
+              ),
+              /*CARD #4*/
+              Card(
+                elevation: kCardElevation,
+                child: Padding(padding: kCardPadding,child: Column(children: [
+
+                ],
+                ),
+                ),
+
               ),
             ],
           ),
