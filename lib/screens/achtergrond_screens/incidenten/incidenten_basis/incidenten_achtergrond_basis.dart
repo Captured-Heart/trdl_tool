@@ -496,20 +496,80 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(indents: 0, text: 'Elke hoofdgroep is onderverdeeld in 4 subgroepen, oplopend van de kleinste omvang (1) naar de meest complexe situatie (4).'),
                       SizedBoxH(),
-                      Card(
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Card(
                         child: Padding(
                           padding: EdgeInsets.only(
                             top: 36.0, left: 6.0, right: 6.0, bottom: 6.0),
                             child: ExpansionTile(
-                              title: Text('Birth of Universe'),
-                              children: <Widget>[
-                                Text('Big Bang'),
-                                Text('Birth of the Sun'),
-                                Text('Earth is Born'),
-                                ],
-                                ),
-                                ),
-                                ),                      
+                              title: Text('TIS 1.1'),
+                              children: [
+                                SubTitleText(subtitle: 'Verstoring treindienst'),
+                                BodyText(indents: 0, text: '(Door bijv. ontsporing zonder slachtoffers, defect materieel (gestrande trein), stroomuitval, uitval infra, slechte weersomstandigheden, dringende ongeplande werkzaamheden, stilleggen treindienst op bevel OHD.\n\nDe incidenttypen OHD bij trein, hinder buitenland, gestrande trein langs perron, storing in 1 wissel, zijn toegevoegd aan TIS1.1 ondanks dat deze niet altijd tot een verstoring van de treindienst leiden. De eerste coördinatie vindt plaats bij de MKS).')
+                                SizedBoxH(),
+                                SubTitleText(subtitle: 'Ernst'),
+                                BodyText(indents: 0, text: 'Zeer beperkt'),
+                                SizedBoxH(),
+                                SubTitleText(subtitle: 'Kenmerk'),
+                                BodyText(indents: 0, text: '- Ondanks de verstoring kan de treindienst nagenoeg volgens plan worden uitgevoerd. Wel structurele vertraging van 5 minuten of meer, gedurende 30 minuten of langer;'),
+                                BodyText(indents: 0, text: '- 1 of meerdere treinen kunnen worden opgeheven. Bij uitval van complete treinserie(s) volgt opschaling naar TIS 1.2;'),
+                                BodyText(indents: 0, text: '- Ontsporing kan plaatsvinden door reizigers- of goederentrein zonder gevaarlijke stoffen;'),
+                                BodyText(indents: 0, text: '- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.;'),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),  
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Card(
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                            top: 36.0, left: 6.0, right: 6.0, bottom: 6.0),
+                            child: ExpansionTile(
+                              title: Text('TIS 1.2'),
+                              children: [
+                                SubTitleText(subtitle: 'Verstoring treindienst'),
+                                BodyText(indents: 0, text: '(Door bijv. ontsporing zonder slachtoffers, defect materieel, stroomuitval, uitval infra, slechte weersomstandigheden, dringende ongeplande werkzaamheden, stilleggen treindienst op bevel OHD).'),
+                                SizedBoxH(),
+                                SubTitleText(subtitle: 'Ernst'),
+                                BodyText(indents: 0, text: 'Beperkt'),
+                                SizedBoxH(),
+                                SubTitleText(subtitle: 'Kenmerk'),
+                                BodyText(indents: 0, text: '- Door de verstoring kan de treindienst niet meer volgens plan worden uitgevoerd. Wel structurele vertraging van 5 minuten of meer gedurende 30 minuten of langer. Een of meerdere treinseries vallen uit;'),
+                                BodyText(indents: 0, text: '- Ontsporing kan plaatsvinden door reizigers- of goederentrein zonder gevaarlijke stoffen;'),
+                                BodyText(indents: 0, text: '- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.'),                              
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Card(
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                            top: 36.0, left: 6.0, right: 6.0, bottom: 6.0),
+                            child: ExpansionTile(
+                              title: Text('TIS 1.3'),
+                              children: [
+                                SubTitleText(subtitle: 'Totale versperring. Treindienst niet meer uitvoerbaar'),
+                                BodyText(indents: 0, text: '(Door bijv. ontsporing zonder slachtoffers, defect materieel (gestrande trein), stroomuitval, uitval infra, slechte weersomstandigheden, dringende ongeplande werkzaamheden, stilleggen treindienst op bevel OHD.\n\nDe incidenttypen OHD bij trein, hinder buitenland, gestrande trein langs perron, storing in 1 wissel, zijn toegevoegd aan TIS1.1 ondanks dat deze niet altijd tot een verstoring van de treindienst leiden. De eerste coördinatie vindt plaats bij de MKS).')
+                                SizedBoxH(),
+                                SubTitleText(subtitle: 'Ernst'),
+                                BodyText(indents: 0, text: 'Zeer beperkt'),
+                                SizedBoxH(),
+                                SubTitleText(subtitle: 'Kenmerk'),
+                                BodyText(indents: 0, text: '- Ondanks de verstoring kan de treindienst nagenoeg volgens plan worden uitgevoerd. Wel structurele vertraging van 5 minuten of meer, gedurende 30 minuten of langer;'),
+                                BodyText(indents: 0, text: '- 1 of meerdere treinen kunnen worden opgeheven. Bij uitval van complete treinserie(s) volgt opschaling naar TIS 1.2;'),
+                                BodyText(indents: 0, text: '- Ontsporing kan plaatsvinden door reizigers- of goederentrein zonder gevaarlijke stoffen;'),
+                                BodyText(indents: 0, text: '- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.;'),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),                                               
                     ],
                   ),
                 ),
