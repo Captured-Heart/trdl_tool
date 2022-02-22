@@ -447,7 +447,56 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(indents: 0, text: 'Een aanwijzing OVW wordt afgegeven als er een storing is aan een overweg of overpad. Dit kan zijn omdat de overweg \'gestoord\' is gemeld op de overwegmelder, omdat hij langer dan vijf minuten een trein aankondigt of als de installatie beschadigd is of niet goed functioneert.\n\nEen MCN zal de betrokken overweg behoedzaam naderen met maximaal 10 km/u, zal een herhaald fluitsein geven en stoppen als de veiligheid van het wegverkeer dat vordert. Hij herneemt de snelheid als de eerste as van de trein de overweg is gepasseerd.'),
                       SizedBoxH(),
-                      BodyText
+                      SubTitleText(subtitle: 'Invullen aanwijzing'),
+                      SizedBoxH(),
+                      BodyText(indents: 0, text: 'Zoals je op de afbeelding ziet, zijn er maar acht vakjes beschikbaar op de aanwijzing om de overwegen in te vullen. Bij meer dan acht overwegen is het niet verboden deze op dezelfde aanwijzing te schrijven, de werkwijze geeft hierover geen uitsluitsel. Het is ook mogelijk een tweede formulier te gebruiken, maar daar zit een gevaar in. Je moet dan werken met twee formulieren en je loopt dan risico dat je een formulier overslaat.');
+                      SizedBoxH(),
+                      InsertImage(image: 'assets/images/achtergrond_info/incidenten/aanwijzingFormulier.png'),
+                      SizedBoxH(),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #9*/
+              Card(
+                elevation: kCardElevation,
+                padding: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: [
+                      TitleText(title: 'Spoorweb'),
+                      SizedBoxH(),
+                      BodyText(indents: 0, text: 'Na de melding van een calamiteit alarmeer je de MKS-Backoffice. De medewerker BO vult alle gegevens in Spoorweb en met een druk op de knop alarmeert en informeert hij alle belanghebbenden. Met SpoorWeb zijn ProRail en haar ketenpartners in staat om doorlopend een gedeeld beeld van de operationele situatie met betrekking tot afwijkingen in de treindienst en beschikbaarheid van het spoor te bewaken. Bij afwijkingen zullen vooraf gedefinieerde afhandelscenario\'s ingezet worden waarbij betrokkenen ondersteund kunnen worden in hun rolvastheid en taakuitvoering. Doordat voor alle betrokkenen de voortgang en prognose van deelprocessen te volgen is, zullen afwijkingen op de dienstregeling voorspelbaarder en efficiënter afgehandeld worden.\n\nDoor de gestructureerde vastlegging van de afhandeling is het mogelijk om alle relevante gebeurtenissen en de afhandeling hiervan te evalueren en verbeterpunten direct door te voeren in de vastgelegde scenario\'s.\n\nSpoorWeb versnelt dankzij haar inzet het herstel van een stabiele treindienst en vergroot zodoende de punctualiteit en veiligheid van het Nederlandse spoor.'),
+                      SizedBoxH(),
+                      InsertImage(image: 'assets/images/achtergrond_info/incidenten/spoorwebKaart.png'),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD #10*/
+              Card(
+                elevation: kCardElevation,
+                padding: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: [
+                      TitleText(title: 'Treinincidentscenario'),
+                      SizedBoxH(),
+                      BodyText(indents: 0, text: 'Een Treinincidentscenario of TIS is een gestandaardiseerde typering voor een incident op of rond een spoorweg in Nederland. Het is in feite de spoorwegvariant van de Gecoordineerde Regionale Incidentbestrijdings Procedure. Een TIS regelt de benodigde opschaling, zowel van de hulpdiensten als van de spoorwegmaatschappij en spoorbeheerder (ProRail). De opschaling van de hulpdiensten kan per regio of locatie verschillen.\n\nDe scenario’s zijn verdeeld in 5 groepen:'),
+                      SizedBoxH(),
+                      BodyText(indents: 1, text: '- TIS 1: Verstoorde treindienst;'),
+                      SizedBoxH(),
+                      BodyText(indents: 1, text: '- TIS 2: Brand;'),
+                      SizedBoxH(),
+                      BodyText(indents: 1, text: '- TIS 3: Aanrijding of ontsporing;'),
+                      SizedBoxH(),
+                      BodyText(indents: 1, text: '- TIS 4: Gevaarlijke stoffen;'),
+                      SizedBoxH(),
+                      BodyText(indents: 1, text: '- TIS 5: Bommelding;'),
+                      SizedBoxH(),
+                      BodyText(indents: 0, text: 'Elke hoofdgroep is onderverdeeld in 4 subgroepen, oplopend van de kleinste omvang (1) naar de meest complexe situatie (4).'),
+                      SizedBoxH(),
+                      
                     ],
                   ),
                 ),
