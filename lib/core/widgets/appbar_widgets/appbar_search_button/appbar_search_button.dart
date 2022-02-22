@@ -25,7 +25,7 @@ class MySearchDelegate extends SearchDelegate {
   String get searchFieldLabel => 'Zoek op trefwoord';
 
   @override
-  Widget? buildLeading(BuildContext context) {
+  Widget buildLeading(BuildContext context) {
     return IconButton(
       icon: const Icon(Icons.arrow_back),
       onPressed: () => close(context, null),
@@ -33,7 +33,7 @@ class MySearchDelegate extends SearchDelegate {
   }
 
   @override
-  List<Widget>? buildActions(BuildContext context) {
+  List<Widget> buildActions(BuildContext context) {
     return [
       IconButton(
         icon: const Icon(Icons.clear),
