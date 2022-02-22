@@ -496,6 +496,19 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(indents: 0, text: 'Elke hoofdgroep is onderverdeeld in 4 subgroepen, oplopend van de kleinste omvang (1) naar de meest complexe situatie (4).'),
                       SizedBoxH(),
+                      Card(
+                        child: Padding(
+                          padding: EdgeInsets.only(
+                            top: 36.0, left: 6.0, right: 6.0, bottom: 6.0),
+                            child: ExpansionTile(
+                              title: Text('Birth of Universe'),
+                              children: <Widget>[
+                                Text('Big Bang'),
+                                Text('Birth of the Sun'),
+                                Text('Earth is Born'),
+                                ],
+                                ),
+                                ),),
                       
                     ],
                   ),
