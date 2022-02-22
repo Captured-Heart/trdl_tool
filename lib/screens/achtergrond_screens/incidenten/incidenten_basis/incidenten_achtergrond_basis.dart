@@ -508,8 +508,8 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                                 Text('Earth is Born'),
                                 ],
                                 ),
-                                ),),
-                      
+                                ),
+                                ),                      
                     ],
                   ),
                 ),
