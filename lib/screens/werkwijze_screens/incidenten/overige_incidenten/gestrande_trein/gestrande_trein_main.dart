@@ -41,12 +41,7 @@ class GestrandeTrein extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- De locatie van de gestrande trein;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- De kant waar de hulptrein vandaan komt.',
+                        text: '- De locatie van de gestrande trein;\n\n- De kant waar de hulptrein vandaan komt.',
                       ),
                     ],
                   ),

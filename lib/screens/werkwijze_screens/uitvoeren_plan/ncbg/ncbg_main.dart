@@ -41,12 +41,7 @@ class Ncbg extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Rijwegniveau;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- TijdRuimte-slotniveau.',
+                        text: '- Rijwegniveau;\n\n- TijdRuimte-slotniveau.',
                       ),
                     ],
                   ),

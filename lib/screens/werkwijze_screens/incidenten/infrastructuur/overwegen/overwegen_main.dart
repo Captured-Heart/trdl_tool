@@ -41,33 +41,11 @@ class Overwegen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- De installatie niet goed functioneert;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- De storingsmelder aangeeft dat de overweg gestoord is;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- De installatie is beschadigd. Beschouw de installatie als beschadigd, wanneer:',
+                        text: '- De installatie niet goed functioneert;\n\n- De storingsmelder aangeeft dat de overweg gestoord is;\n\n- De installatie is beschadigd. Beschouw de installatie als beschadigd, wanneer:',
                       ),
                       BodyText(
                         indents: 2,
-                        text: "1. Een AHOB boom geheel of gedeeltelijk is 'afgebroken´;",
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '2. De knipperende rode lichten van meer dan één paal niet branden of niet zichtbaar zijn;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '3. Geen van de overwegbellen werken;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '4. Aan tenminste één zijde van de overweg geen herkenbaar Andreaskruis meer aanwezig is.',
+                        text: '1. Een AHOB boom geheel of gedeeltelijk is \'afgebroken\';\n2. De knipperende rode lichten van meer dan één paal niet branden of niet zichtbaar zijn;\n3. Geen van de overwegbellen werken;\n4. Aan tenminste één zijde van de overweg geen herkenbaar Andreaskruis meer aanwezig is.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -77,27 +55,7 @@ class Overwegen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: "- Bij de melding 'meerdere overwegen gestoord' geef je een aanwijzing OVW af voor de overwegen op de desbetreffende melder;",
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Voor een storing aan overige overwegen die niet op een storingsmelder zitten, bekijk je de plaatselijke regelgeving;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Wanneer je een veiligheidsstoring aan een overweg gemeld krijgt, laat je de werking controleren in beide rijrichtingen met een aanwijzing OVW. Bij een daadwerkelijke veiligheidsstoring staak je het treinverkeer over deze overweg;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Als je een melding \'storingsmelder overwegen defect\' of een systeemfoutmelding overwegen (DOSS) krijgt, meld je dit aan de MKS/BO. Geef pas aanwijzingen OVW af nadat je de melding krijgt dat een overweg daadwerkelijk gestoord is.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: 'Als er een storing gemeld wordt aan een overweg op CBG die niet op de storingsmelder is aangesloten, geef je een aanwijzing VR met een snelheid van max. 10 km/u, met vermelding van reden, aan de betrokken machinisten.',
+                        text: '- Bij de melding \'meerdere overwegen gestoord\' geef je een aanwijzing OVW af voor de overwegen op de desbetreffende melder;\n\n- Voor een storing aan overige overwegen die niet op een storingsmelder zitten, bekijk je de plaatselijke regelgeving;\n\n- Wanneer je een veiligheidsstoring aan een overweg gemeld krijgt, laat je de werking controleren in beide rijrichtingen met een aanwijzing OVW. Bij een daadwerkelijke veiligheidsstoring staak je het treinverkeer over deze overweg;\n\n- Als je een melding \'storingsmelder overwegen defect\' of een systeemfoutmelding overwegen (DOSS) krijgt, meld je dit aan de MKS/BO. Geef pas aanwijzingen OVW af nadat je de melding krijgt dat een overweg daadwerkelijk gestoord is.\n\nAls er een storing gemeld wordt aan een overweg op CBG die niet op de storingsmelder is aangesloten, geef je een aanwijzing VR met een snelheid van max. 10 km/u, met vermelding van reden, aan de betrokken MCN.',
                       ),
                       SizedBoxH(),
                       BodyText(

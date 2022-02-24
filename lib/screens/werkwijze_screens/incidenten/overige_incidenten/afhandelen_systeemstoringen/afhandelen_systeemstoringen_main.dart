@@ -41,17 +41,7 @@ class AfhandelenSysteemstoringen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Controleer of de storing zich beperkt tot jouw werkplek;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Controleer onder de knop ‘systeem’ in het planscherm de status van de verschillende systemen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Bepaal of het nodig is de calamiteiten-werkplek op te starten. Zet dan ARI uit op de gestoorde werkplek en gebruik indien nodig ‘ARI Noodstop’ in PBH++.',
+                        text: '- Controleer of de storing zich beperkt tot jouw werkplek;\n\n- Controleer onder de knop \'systeem\' in het planscherm de status van de verschillende systemen;\n\n- Bepaal of het nodig is de calamiteiten-werkplek op te starten. Zet dan ARI uit op de gestoorde werkplek en gebruik indien nodig \'ARI Noodstop\' in PBH++.',
                       ),
                     ],
                   ),

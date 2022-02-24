@@ -41,12 +41,7 @@ class AanrijdingViaduct extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Staak je het verkeer over de betrokken railinfra;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- De MKS/BO geeft aan of de betrokken railinfra bereden mag worden, inclusief de eventuele beperkingen.',
+                        text: '- Staak je het verkeer over de betrokken railinfra;\n\n- De MKS/BO geeft aan of de betrokken railinfra bereden mag worden, inclusief de eventuele beperkingen.',
                       ),
                     ],
                   ),
@@ -84,13 +79,7 @@ class AanrijdingViaduct extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Na een aanvaring of aanrijding van een brug of viaduct kan de TRDL er niet meer vanuit gaan dat deze infra nog veilig bereden kan worden.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'De MKS/BO beschikt over informatie van iedere brug of viaduct en kan aangeven onder welke voorwaarden de infra wel of niet bereden mag worden. Een storingsmonteur kan de situatie ter plaatse beoordelen.',
-                      ),
+                        text: 'Na een aanvaring of aanrijding van een brug of viaduct kan de TRDL er niet meer vanuit gaan dat deze infra nog veilig bereden kan worden.\n\nDe MKS/BO beschikt over informatie van iedere brug of viaduct en kan aangeven onder welke voorwaarden de infra wel of niet bereden mag worden. Een storingsmonteur kan de situatie ter plaatse beoordelen.'),
                     ],
                   ),
                 ),

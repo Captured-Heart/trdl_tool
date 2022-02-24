@@ -36,42 +36,16 @@ class STSPassage extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Als je vermoedt dat een machinist door een stoptonend sein is gereden, dan:',
+                        text: 'Als je vermoedt dat een MCN door een stoptonend sein is gereden, dan:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Laat je de trein direct tot stilstand brengen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Vraag je de machinist waar hij exact staat;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Vraag je uit of constateer je of er sprake is van gevaarzetting:',
+                        text: '- Laat je de trein direct tot stilstand brengen;\n\n- Vraag je de MCN waar hij exact staat;\n\n- Vraag je uit of constateer je of er sprake is van gevaarzetting:',
                       ),
                       BodyText(
                         indents: 2,
-                        text: '* Botsing, aanrijding;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '* Ontsporing;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '* Door een open overweg gereden;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '* Bijna aanrijding met persoon;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '* Twee bijzonderheden_trein binnen 20 meter van elkaar in hetzelfde blok.',
+                        text: '* Botsing, aanrijding;\n* Ontsporing;\n* Door een open overweg gereden;\n* Bijna aanrijding met persoon;\n* Twee treinen binnen 20 meter van elkaar in hetzelfde blok.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -81,12 +55,7 @@ class STSPassage extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Laat je de trein staan;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Alarmeer je de MKS/BO.',
+                        text: '- Laat je de trein staan;\n\n- Alarmeer je de MKS/BO.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -96,17 +65,12 @@ class STSPassage extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- In overleg met de machinist laat je de trein verplaatsen van de vrije baan of emplacement naar een perron of zijspoor;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Informeer je de MKS/BO.',
+                        text: '- In overleg met de MCN laat je de trein verplaatsen van de vrije baan of emplacement naar een perron of zijspoor;\n\n- Informeer je de MKS/BO.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'In alle gevallen laat je de machinist zijn rit pas vervolgen als de MKS/BO jou heeft gemeld dat de machinist toestemming heeft van zijn wachtdienst om de rit te vervolgen. Als je geen zekerheid hebt over de juiste werking van de seingeving informeer je de MKS/BO en de DVL.',
+                        text: 'In alle gevallen laat je de MCN zijn rit pas vervolgen als de MKS/BO jou heeft gemeld dat de MCN toestemming heeft van zijn wachtdienst om de rit te vervolgen. Als je geen zekerheid hebt over de juiste werking van de seingeving informeer je de MKS/BO en de DVL.',
                       ),
                     ],
                   ),

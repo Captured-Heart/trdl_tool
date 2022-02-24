@@ -36,7 +36,7 @@ class ATBVeiligheid extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Bij een ATB veiligheidsstoring aan de baan voorkom je rijweginstelling naar het betrokken spoor.\n\nJe stelt pas een rijweg in naar het betrokken spoor nadat je de machinist hebt ingelicht.',
+                        text: 'Bij een ATB veiligheidsstoring aan de baan voorkom je rijweginstelling naar het betrokken spoor.\n\nJe stelt pas een rijweg in naar het betrokken spoor nadat je de MCN hebt ingelicht.',
                       ),
                     ],
                   ),
@@ -55,7 +55,7 @@ class ATBVeiligheid extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Het opvolgen van het onjuiste seinbeeld door machinisten.',
+                        text: 'Het opvolgen van het onjuiste seinbeeld door MCN.',
                       ),
                     ],
                   ),
@@ -74,7 +74,7 @@ class ATBVeiligheid extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Er is sprake van een ATB veiligheidsstoring wanneer de treinbeveiliging (ATB) een hogere snelheid aangeeft dan de blokbeveiliging (seinen). De machinist is mogelijk niet op de hoogte van de afwijking en wordt niet door de treinbeveiliging beschermd.',
+                        text: 'Er is sprake van een ATB veiligheidsstoring wanneer de treinbeveiliging (ATB) een hogere snelheid aangeeft dan de blokbeveiliging (seinen). De MCN is mogelijk niet op de hoogte van de afwijking en wordt niet door de treinbeveiliging beschermd.',
                       ),
                     ],
                   ),

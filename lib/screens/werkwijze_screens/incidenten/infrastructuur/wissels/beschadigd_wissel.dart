@@ -41,12 +41,7 @@ class BeschadigdWissel extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Het bij een ontsporing betrokken is geweest, of;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Als het een breuk of andere uiterlijke afwijking vertoont.',
+                        text: '- Het bij een ontsporing betrokken is geweest, of;\n\n- Als het een breuk of andere uiterlijke afwijking vertoont.',
                       ),
                     ],
                   ),

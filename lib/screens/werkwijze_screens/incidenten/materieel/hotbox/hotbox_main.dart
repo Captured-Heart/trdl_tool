@@ -36,27 +36,12 @@ class HotBox extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Geef de gegevens van de melding (type alarm, asnummer, zijde van de trein) door aan de machinist;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Laat de trein bij een Hotbox melding beheerst tot stilstand brengen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Neem de trein bij een Quo Vadis melding bij de eerstvolgende mogelijkheid aan de kant voor onderzoek;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Alarmeer als gestrande trein.',
+                        text: '- Geef de gegevens van de melding (type alarm, asnummer, zijde van de trein) door aan de MCN;\n\n- Laat de trein bij een Hotbox melding beheerst tot stilstand brengen;\n\n- Neem de trein bij een Quo Vadis melding bij de eerstvolgende mogelijkheid aan de kant voor onderzoek;\n\n- Alarmeer als gestrande trein.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Je hoort van de machinist wanneer en onder welke voorwaarden de trein weer kan rijden.',
+                        text: 'Je hoort van de MCN wanneer en onder welke voorwaarden de trein weer kan rijden.',
                       ),
                     ],
                   ),

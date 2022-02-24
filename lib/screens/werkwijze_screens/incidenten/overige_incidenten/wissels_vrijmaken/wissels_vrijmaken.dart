@@ -41,22 +41,7 @@ class WisselsVrijmaken extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- ARI uitstaat;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Alle bijzonderheden_trein stilstaan;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Seinen niet meer in de automaat staan;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Wissels niet worden gekrukt.',
+                        text: '- ARI uitstaat;\n\n- Alle treinen stilstaan;\n\n- Seinen niet meer in de automaat staan;\n\n- Wissels niet worden gekrukt.',
                       ),
                     ],
                   ),

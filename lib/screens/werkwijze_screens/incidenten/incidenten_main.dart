@@ -41,27 +41,7 @@ class Incidenten extends StatelessWidget {
                       SizedBoxH(),
                       BoldText(
                         indents: 1,
-                        boldtext: '- Alarmoproep GSM-R uitzenden;',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        indents: 1,
-                        boldtext: '- Herroepen van seinen;',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        indents: 1,
-                        boldtext: '- ARI uitzetten;',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        indents: 1,
-                        boldtext: '- Buurtreindienstleider informeren;',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        indents: 1,
-                        boldtext: '- Veiligheidsmaatregelen nemen.',
+                        boldtext: '- Alarmoproep GSM-R uitzenden;\n\n- Herroepen van seinen;\n\n- ARI uitzetten;\n\n- BuurTRDL informeren;\n\n- Veiligheidsmaatregelen nemen.',
                       ),
                       SizedBoxH(),
                       BodyText(

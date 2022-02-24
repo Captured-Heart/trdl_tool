@@ -74,7 +74,7 @@ class OnregelmatighedenBaan extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Als TRDL heb je na een melding van een onregelmatigheid aan de baan geen zicht op de exacte toestand van het spoor. Daarom moet een machinist met aangepaste snelheid (maximaal 40 km/h) rijden tot de storingsdienst ter plaatse is. De machinist kan dan op tijd stoppen voor het gevaarpunt De storingsmonteur kan de exacte toestand van de baan bepalen en geeft aan of de railinfra veilig bereden kan worden en onder welke voorwaarden.',
+                        text: 'Als TRDL heb je na een melding van een onregelmatigheid aan de baan geen zicht op de exacte toestand van het spoor. Daarom moet een MCN met aangepaste snelheid (maximaal 40 km/h) rijden tot de storingsdienst ter plaatse is. De MCN kan dan op tijd stoppen voor het gevaarpunt De storingsmonteur kan de exacte toestand van de baan bepalen en geeft aan of de railinfra veilig bereden kan worden en onder welke voorwaarden.',
                       ),
                     ],
                   ),

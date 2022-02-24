@@ -36,7 +36,7 @@ class VeiligheidsstoringSein extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Bij een veiligheidsstoring voorkom je rijweginstelling naar het betrokken sein. Bij overige storingen licht je de machinist in voordat je een rijweg instelt naar het betrokken sein.',
+                        text: 'Bij een veiligheidsstoring voorkom je rijweginstelling naar het betrokken sein. Bij overige storingen licht je de MCN in voordat je een rijweg instelt naar het betrokken sein.',
                       ),
                     ],
                   ),

@@ -41,17 +41,7 @@ class GevaarlijkeStoffen2 extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Staak de trein- en rangeerdienst op het betrokken gebied;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Voorkom rijweginstelling naar het betrokken gebied;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Laat de MKS/BO de wisselverwarming doven;',
+                        text: '- Staak de trein- en rangeerdienst op het betrokken gebied;\n\n- Voorkom rijweginstelling naar het betrokken gebied;\n\n- Laat de MKS/BO de wisselverwarming doven.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -61,17 +51,7 @@ class GevaarlijkeStoffen2 extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- De plaats van de onregelmatigheid;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- De betrokken trein;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- De aard van de onregelmatigheid.',
+                        text: '- De plaats van de onregelmatigheid;\n\n- De betrokken trein;\n\n- De aard van de onregelmatigheid.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -81,27 +61,7 @@ class GevaarlijkeStoffen2 extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- GEVI-nummer;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- UN-nummer;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Gevaaretiket;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Plaats van de wagen in de trein;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Wagennummer.',
+                        text: '- GEVI-nummer;\n\n- UN-nummer;\n\n- Gevaaretiket;\n\n- Plaats van de wagen in de trein;\n\n- Wagennummer.',
                       ),
                     ],
                   ),

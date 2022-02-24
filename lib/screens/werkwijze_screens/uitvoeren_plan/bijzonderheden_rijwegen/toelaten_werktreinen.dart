@@ -36,12 +36,12 @@ class ToelatenWerktreinen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Overleg met de LWB;',
+                        text: '- Overleg met de LWB;\n\n- Hef éénmalig de daarvoor noodzakelijke veiligheidsmaatregelen op;',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Hef éénmalig de daarvoor noodzakelijke veiligheidsmaatregelen op;',
+                        text: '',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -89,12 +89,7 @@ class ToelatenWerktreinen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Op de werkplek zijn de werkenden door middel van veiligheidsmaatregelen beschermd tegen aanrijdgevaar. Op het moment dat een trein noodzakelijk voor de werkzaamheden toegelaten moet worden, geeft de LWB toestemming als de werkenden adequaat beschermd zijn.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Voorafgaand aan de werkzaamheden stellen treindienstleider en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
+                        text: 'Op de werkplek zijn de werkenden door middel van veiligheidsmaatregelen beschermd tegen aanrijdgevaar. Op het moment dat een trein noodzakelijk voor de werkzaamheden toegelaten moet worden, geeft de LWB toestemming als de werkenden adequaat beschermd zijn.\n\nVoorafgaand aan de werkzaamheden stellen treindienstleider en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
                       ),
                     ],
                   ),

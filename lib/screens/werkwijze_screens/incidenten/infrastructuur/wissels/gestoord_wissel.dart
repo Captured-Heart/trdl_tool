@@ -41,12 +41,7 @@ class GestoordWissel extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Eendelig: laat het wissel met de punt mee berijden, met een controle opdracht en een aanwijzing STS, in de laatst gestuurde stand. Doe dit door middel van de procedure SSCV*. In alle overige situaties laat je het wissel niet berijden, tenzij de plaatselijke regelgeving anders aangeeft;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Meerdelig: laat het wissel niet berijden tot na toestemming van de storingsdienst.',
+                        text: '- Eendelig: laat het wissel met de punt mee berijden, met een controle opdracht en een aanwijzing STS, in de laatst gestuurde stand. Doe dit door middel van de procedure SSCV*. In alle overige situaties laat je het wissel niet berijden, tenzij de plaatselijke regelgeving anders aangeeft;\n\n- Meerdelig: laat het wissel niet berijden tot na toestemming van de storingsdienst.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -55,19 +50,7 @@ class GestoordWissel extends StatelessWidget {
                       ),
                       BodyText(
                         indents: 1,
-                        text: 'S = Stoppen voor het wissel;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: 'S = Stand van het wissel controleren;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: 'C = Controleren of de wisseltongen aansluiten en er geen uiterlijke beschadigingen zijn;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: 'V = voorzichtig berijden met max 10 km/h.',
+                        text: 'S = Stoppen voor het wissel;\nS = Stand van het wissel controleren;\nC = Controleren of de wisseltongen aansluiten en er geen uiterlijke beschadigingen zijn;\nV = voorzichtig berijden met max 10 km/h.',
                       ),
                     ],
                   ),

@@ -51,42 +51,11 @@ class InfraOngeplandWerk extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Je werkt op RVO nummer en handelt als volgt:',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Vraag welke infra betrokken is en hoe lang de werkzaamheden gaan duren;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- De DVL beslist bij werkzaamheden op de vrije baan over het aanvangstijdstip;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Overleg met de LWB over:',
+                        text: '- Je werkt op RVO nummer en handelt als volgt:\n\n- Vraag welke infra betrokken is en hoe lang de werkzaamheden gaan duren;\n\n- De DVL beslist bij werkzaamheden op de vrije baan over het aanvangstijdstip;\n\n- Overleg met de LWB over:',
                       ),
                       BodyText(
                         indents: 2,
-                        text: '* Niveau van de werkplekbeveiliging;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '* Veiligheidsmaatregelen LWB;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '* Veiligheidsmaatregelen treindienstleider;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '* Exacte aanduiding werkplek;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '* Maak met de LWB een WECO op.',
+                        text: '* Niveau van de werkplekbeveiliging;\n\n* Veiligheidsmaatregelen LWB;\n\n* Veiligheidsmaatregelen treindienstleider;\n\n* Exacte aanduiding werkplek;\n\n* Maak met de LWB een WECO op.',
                       ),
                     ],
                   ),

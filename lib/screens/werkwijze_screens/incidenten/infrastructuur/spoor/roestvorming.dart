@@ -41,32 +41,7 @@ class Roestvorming extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Leg de wissels in de rijweg vast;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Stel tegengestelde rijwegen uit;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Geef voor de overweg(en) in de rijweg een aanwijzing OVW af;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Stel een rijweg in over het betreffende spoor met geel knipper;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Volg de trein op het scherm;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Laat de machinist zich binnen melden.',
+                        text: '- Leg de wissels in de rijweg vast;\n\n- Stel tegengestelde rijwegen uit;\n\n- Geef voor de overweg(en) in de rijweg een aanwijzing OVW af;\n\n- Stel een rijweg in over het betreffende spoor met geel knipper;\n\n- Volg de trein op het scherm;\n\n- Laat de MCN zich binnen melden.',
                       ),
                     ],
                   ),

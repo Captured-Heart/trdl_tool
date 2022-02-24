@@ -41,27 +41,12 @@ class GladSpoor extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Voeg je opgedeelde rijwegen met \'D\' of \'K\' activiteit samen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Verander je het \'naar\'-spoor van de aankomstregel in het \'naar\'-spoor van de vertrekregel;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Hef je de vertrekregel op;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Voeg je doorbediening toe aan de aankomstregel.',
+                        text: '- Voeg je opgedeelde rijwegen met \'D\' of \'K\' activiteit samen;\n\n- Verander je het \'naar\'-spoor van de aankomstregel in het \'naar\'-spoor van de vertrekregel;\n\n- Hef je de vertrekregel op;\n\n- Voeg je doorbediening toe aan de aankomstregel.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Twee uur na de laatste melding vraag je de machinisten van de twee eerstvolgende bijzonderheden_trein naar de toestand van de baan. Wanneer het spoor niet meer glad is, staak je bovenstaande maatregelen. Wanneer het spoor nog wel glad is, handhaaf je de maatregelen voor de komende twee uur.​​​',
+                        text: 'Twee uur na de laatste melding vraag je de MCN van de twee eerstvolgende treinen naar de toestand van de baan. Wanneer het spoor niet meer glad is, staak je bovenstaande maatregelen. Wanneer het spoor nog wel glad is, handhaaf je de maatregelen voor de komende twee uur.',
                       ),
                     ],
                   ),
@@ -99,7 +84,7 @@ class GladSpoor extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Door verminderd contact tussen wiel en spoorstaaf, kunnen treinen moeite hebben met optrekken en remmen. De machinist kan zijn rijgedrag aanpassen wanneer hij hiervan op de hoogte is.',
+                        text: 'Door verminderd contact tussen wiel en spoorstaaf, kunnen treinen moeite hebben met optrekken en remmen. De MCN kan zijn rijgedrag aanpassen wanneer hij hiervan op de hoogte is.',
                       ),
                     ],
                   ),

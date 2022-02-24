@@ -54,15 +54,7 @@ class TegenRijrichting extends StatelessWidget {
                       ),
                       BodyText(
                         indents: 2,
-                        text: '1. De overwegen zijn voorzien van een extra aankonigingssectie plus aanwijzing OVW;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '2. Het baanvak is uitgerust met ULS, óf;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '3. Er geen overwegen zijn.',
+                        text: '1. De overwegen zijn voorzien van een extra aankonigingssectie plus aanwijzing OVW;\n2. Het baanvak is uitgerust met ULS, óf;\n3. Er geen overwegen zijn.',
                       ),
                       SizedBoxH(),
                       BodyText(

@@ -46,17 +46,7 @@ class ResetAssenteller extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Zorg je dat een veegtrein klaarstaat om de betreffende sporen en/of wissels te berijden;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Laat je de veegtrein na toestemming van de monteur vertrekken en laat je de machinist zich melden wanneer hij de betreffende sporen en/of wissels in zijn geheel heeft bereden;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Meld je monteur wanneer de veegtrein de betreffende sporen en/of wissels in zijn geheel heeft bereden.',
+                        text: '- Zorg je dat een veegtrein klaarstaat om de betreffende sporen en/of wissels te berijden;\n\n- Laat je de veegtrein na toestemming van de monteur vertrekken en laat je de MCN zich melden wanneer hij de betreffende sporen en/of wissels in zijn geheel heeft bereden;\n\n- Meld je monteur wanneer de veegtrein de betreffende sporen en/of wissels in zijn geheel heeft bereden.',
                       ),
                       SizedBoxH(),
                       BoldText(

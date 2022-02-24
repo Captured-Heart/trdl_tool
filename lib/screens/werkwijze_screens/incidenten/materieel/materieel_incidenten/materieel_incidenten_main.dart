@@ -37,22 +37,12 @@ class MaterieelIncidenten extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Door de machinist;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Door derden;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Door systemen.',
+                        text: '- Door de MCN;\n\n- Door derden;\n\n- Door systemen.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Als de melding niet van de machinist komt, licht je de machinist van de betrokken trein in.',
+                        text: 'Als de melding niet van de MCN komt, licht je de MCN van de betrokken trein in.',
                       ),
                     ],
                   ),

@@ -41,17 +41,7 @@ class VasteRem extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Geef je de machinist opdracht de trein beheerst tot stilstand te brengen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Stel je de gevraagde infra ter beschikking aan de machinist (nevenspoor);',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- De machinist geeft aan onder welke omstandigheden hij verder mag rijden.',
+                        text: '- Geef je de MCN opdracht de trein beheerst tot stilstand te brengen;\n\n- Stel je de gevraagde infra ter beschikking aan de MCN (nevenspoor);\n\n- De MCN geeft aan onder welke omstandigheden hij verder mag rijden.',
                       ),
                     ],
                   ),

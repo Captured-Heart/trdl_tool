@@ -36,7 +36,7 @@ class KopvanTrein extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Je stelt een rijweg in en deelt de machinist mee dat het sein uit de stand stop is gebracht, of je neemt veiligheidsmaatregelen en geeft de machinist opdracht om te gaan rijden.',
+                        text: 'Je stelt een rijweg in en deelt de MCN mee dat het sein uit de stand stop is gebracht, of je neemt veiligheidsmaatregelen en geeft de MCN opdracht om te gaan rijden.',
                       ),
                     ],
                   ),
@@ -74,7 +74,7 @@ class KopvanTrein extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Wanneer de kop van de trein of rangeerdeel bij vertrek voorbij het sein staat, kan de machinist niet waarnemen of het sein veilig staat voor vertrek en kan het vertrekproces niet gestart worden.',
+                        text: 'Wanneer de kop van de trein of rangeerdeel bij vertrek voorbij het sein staat, kan de MCN niet waarnemen of het sein veilig staat voor vertrek en kan het vertrekproces niet gestart worden.',
                       ),
                     ],
                   ),

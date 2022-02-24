@@ -36,7 +36,7 @@ class SectieStoring extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Geef de machinist opdracht om het betrokken spoor te schouwen.\n\nAls er na het schouwen geen zichtbare gebreken aan het spoor zijn geconstateerd, ga je uit van een sectiestoring.',
+                        text: 'Geef de MCN opdracht om het betrokken spoor te schouwen.\n\nAls er na het schouwen geen zichtbare gebreken aan het spoor zijn geconstateerd, ga je uit van een sectiestoring.',
                       ),
                     ],
                   ),

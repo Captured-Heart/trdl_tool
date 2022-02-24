@@ -39,12 +39,7 @@ class Vertragingen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Infragerelateerd, of;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Treingerelateerd.',
+                        text: '- Infragerelateerd, of;\n\n- Treingerelateerd.',
                       ),
                     ],
                   ),

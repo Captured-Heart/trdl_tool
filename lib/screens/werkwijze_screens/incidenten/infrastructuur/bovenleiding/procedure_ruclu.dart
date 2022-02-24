@@ -41,27 +41,7 @@ class ProcedureRuClu extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Bel het OBI;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Staak het treinverkeer in betrokken gebied en neem veiligheidsmaatregelen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Maak met het OBI een WECO op;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Geef aan de MKS/BO door welk gebied spanningsloos is en wat de beperkingen zijn;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Let er op dat de stroomafnemers van bijzonderheden_trein in het betrokken gebied neergelaten zijn voor de spanning weer ingeschakeld wordt;',
+                        text: '- Bel het OBI;\n\n- Staak het treinverkeer in betrokken gebied en neem veiligheidsmaatregelen;\n\n- Maak met het OBI een WECO op;\n\n- Geef aan de MKS/BO door welk gebied spanningsloos is en wat de beperkingen zijn;\n\n- Let er op dat de stroomafnemers van treinen in het betrokken gebied neergelaten zijn voor de spanning weer ingeschakeld wordt;',
                       ),
                       SizedBoxH(),
                       BodyText(
