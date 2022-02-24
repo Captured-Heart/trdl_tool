@@ -727,6 +727,7 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                           indents: 0,
                           text:
                               'Elke hoofdgroep is onderverdeeld in 4 subgroepen, oplopend van de kleinste omvang (1) naar de meest complexe situatie (4).'),
+                              SubTitleText(subtitle: 'Verstoring Treindienst'),
                       Card(
                         child: Padding(
                           padding: EdgeInsets.all(8.0),
@@ -809,14 +810,14 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                             children: [
                               SubTitleText(
                                   subtitle:
-                                      'Totale versperring. Treindienst niet meer uitvoerbaar'),
+                                      'Verstoring treindienst'),
                               BodyText(
                                   indents: 0,
                                   text:
-                                      '(Door bijv. ontsporing zonder slachtoffers, defect materieel (gestrande trein), stroomuitval, uitval infra, slechte weersomstandigheden, dringende ongeplande werkzaamheden, stilleggen treindienst op bevel OHD.\n\nDe incidenttypen OHD bij trein, hinder buitenland, gestrande trein langs perron, storing in 1 wissel, zijn toegevoegd aan TIS1.1 ondanks dat deze niet altijd tot een verstoring van de treindienst leiden. De eerste coördinatie vindt plaats bij de MKS).'),
+                                      'Totale versperring. Treindienst niet meer uitvoerbaar\n\n(Door bijv. ontsporing zonder slachtoffers, defect materieel (gestrande trein), stroomuitval, uitval infra, slechte weersomstandigheden, dringende ongeplande werkzaamheden, stilleggen treindienst op bevel OHD.\n\nDe incidenttypen OHD bij trein, hinder buitenland, gestrande trein langs perron, storing in 1 wissel, zijn toegevoegd aan TIS1.1 ondanks dat deze niet altijd tot een verstoring van de treindienst leiden. De eerste coördinatie vindt plaats bij de MKS.)'),
                               SizedBoxH(),
                               SubTitleText(subtitle: 'Ernst'),
-                              BodyText(indents: 0, text: 'Zeer beperkt'),
+                              BodyText(indents: 0, text: 'Ernstig'),
                               SizedBoxH(),
                               SubTitleText(subtitle: 'Kenmerk'),
                               BodyText(
@@ -839,7 +840,74 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                           ),
                         ),
                       ),
-                    ],
+                      Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ExpansionTile(
+                            initiallyExpanded: false,
+                            childrenPadding: EdgeInsets.all(8.0),
+                            title: Text('TIS 1.4'),
+                            children: [
+                              SubTitleText(
+                                  subtitle:
+                                      'Verstoring treindienst'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      'Totale versperring. Treindienst niet meer mogelijk in minimaal één post of druk knooppunt.\n\n(Door bijv. uitval centraal infrabediensysteem of stilleggen treindienst op bevel OHD.)'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Ernst'),
+                              BodyText(indents: 0, text: 'Zeer ernstig'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Kenmerk'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Door de verstoring kan de treindienst binnen het hele bediengebied van een post niet meer worden uitgevoerd;'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Mogelijk evacuatiescenario\s reizigers uit gestrande treinen uitvoeren.'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SubTitleText(subtitle: 'Brand'),
+                      Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ExpansionTile(
+                            initiallyExpanded: false,
+                            childrenPadding: EdgeInsets.all(8.0),
+                            title: Text('TIS 2.1'),
+                            children: [
+                              SubTitleText(subtitle: 'Brand'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Automatische brandmelding (op station) in tunnel, zonder stilstaande trein;\n\n- Rookontwikkeling en/of vuurverschijnselen bij en/of onder trein op vrije baan of emplacement;\n\n- Brand in station(sgebouw) niet uitslaand;\n\n- Brand nabij of in het spoor met mogelijke invloed op het treinverkeer (bijv. bielzen- of bermbrand).'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Ernst'),
+                              BodyText(indents: 0, text: 'Zeer beperkt'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Kenmerk'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Afhankelijk van de benaderingswijze van de brandweer een kortdurende verstoring van de treindienst;'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Mogelijk hulpverleners in het spoor, waardoor buitengebruik nemen en mogelijk buitendienststelling van het spoor;'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- LET OP: Het stilleggen op last van de brandweer, naar aanleiding van een brand buiten het spoorterrein is een treinincident uit de categorie 1.'),
+                            ],
+                          ),
+                        ),
+                      ),              
+                      ],
                   ),
                 ),
               ),
