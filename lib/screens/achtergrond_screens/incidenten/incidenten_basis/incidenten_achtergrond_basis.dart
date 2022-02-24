@@ -1090,6 +1090,21 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                             ],
                           ),
                         ),
+                      ),
+                      Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ExpansionTile(
+                            initiallyExpanded: false, 
+                            childrenPadding: EdgeInsets.all(8.0), 
+                            title: Text('TEXT'),
+                            children: [
+                              SubTitleText(
+                                subtitle: Text('TEXT'),
+                                ),
+                                ],
+                                ),
+                        ),
                       ),            
                     ],
                   ),
