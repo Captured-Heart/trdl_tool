@@ -749,19 +749,7 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                               BodyText(
                                   indents: 0,
                                   text:
-                                      '- Ondanks de verstoring kan de treindienst nagenoeg volgens plan worden uitgevoerd. Wel structurele vertraging van 5 minuten of meer, gedurende 30 minuten of langer;'),
-                              BodyText(
-                                  indents: 0,
-                                  text:
-                                      '- 1 of meerdere treinen kunnen worden opgeheven. Bij uitval van complete treinserie(s) volgt opschaling naar TIS 1.2;'),
-                              BodyText(
-                                  indents: 0,
-                                  text:
-                                      '- Ontsporing kan plaatsvinden door reizigers- of goederentrein zonder gevaarlijke stoffen;'),
-                              BodyText(
-                                  indents: 0,
-                                  text:
-                                      '- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.;'),
+                                      '- Ondanks de verstoring kan de treindienst nagenoeg volgens plan worden uitgevoerd. Wel structurele vertraging van 5 minuten of meer, gedurende 30 minuten of langer;\n\n- 1 of meerdere treinen kunnen worden opgeheven. Bij uitval van complete treinserie(s) volgt opschaling naar TIS 1.2;\n\n- Ontsporing kan plaatsvinden door reizigers- of goederentrein zonder gevaarlijke stoffen;\n\n- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.'),
                             ],
                           ),
                         ),
@@ -787,15 +775,7 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                               BodyText(
                                   indents: 0,
                                   text:
-                                      '- Door de verstoring kan de treindienst niet meer volgens plan worden uitgevoerd. Wel structurele vertraging van 5 minuten of meer gedurende 30 minuten of langer. Een of meerdere treinseries vallen uit;'),
-                              BodyText(
-                                  indents: 0,
-                                  text:
-                                      '- Ontsporing kan plaatsvinden door reizigers- of goederentrein zonder gevaarlijke stoffen;'),
-                              BodyText(
-                                  indents: 0,
-                                  text:
-                                      '- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.'),
+                                      '- Door de verstoring kan de treindienst niet meer volgens plan worden uitgevoerd. Wel structurele vertraging van 5 minuten of meer gedurende 30 minuten of langer. Een of meerdere treinseries vallen uit;\n\n- Ontsporing kan plaatsvinden door reizigers- of goederentrein zonder gevaarlijke stoffen;\n\n- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.'),
                             ],
                           ),
                         ),
@@ -823,19 +803,7 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                               BodyText(
                                   indents: 0,
                                   text:
-                                      '- Ondanks de verstoring kan de treindienst nagenoeg volgens plan worden uitgevoerd. Wel structurele vertraging van 5 minuten of meer, gedurende 30 minuten of langer;'),
-                              BodyText(
-                                  indents: 0,
-                                  text:
-                                      '- 1 of meerdere treinen kunnen worden opgeheven. Bij uitval van complete treinserie(s) volgt opschaling naar TIS 1.2;'),
-                              BodyText(
-                                  indents: 0,
-                                  text:
-                                      '- Ontsporing kan plaatsvinden door reizigers- of goederentrein zonder gevaarlijke stoffen;'),
-                              BodyText(
-                                  indents: 0,
-                                  text:
-                                      '- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.;'),
+                                      '- Ondanks de verstoring kan de treindienst nagenoeg volgens plan worden uitgevoerd. Wel structurele vertraging van 5 minuten of meer, gedurende 30 minuten of langer;\n\n- 1 of meerdere treinen kunnen worden opgeheven. Bij uitval van complete treinserie(s) volgt opschaling naar TIS 1.2;\n\n- Ontsporing kan plaatsvinden door reizigers- of goederentrein zonder gevaarlijke stoffen;\n\n- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.'),
                             ],
                           ),
                         ),
@@ -863,11 +831,7 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                               BodyText(
                                   indents: 0,
                                   text:
-                                      '- Door de verstoring kan de treindienst binnen het hele bediengebied van een post niet meer worden uitgevoerd;'),
-                              BodyText(
-                                  indents: 0,
-                                  text:
-                                      '- Mogelijk evacuatiescenario\s reizigers uit gestrande treinen uitvoeren.'),
+                                      '- Door de verstoring kan de treindienst binnen het hele bediengebied van een post niet meer worden uitgevoerd;\n\n- Mogelijk evacuatiescenario\s reizigers uit gestrande treinen uitvoeren.'),
                             ],
                           ),
                         ),
@@ -894,20 +858,240 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                               BodyText(
                                   indents: 0,
                                   text:
-                                      '- Afhankelijk van de benaderingswijze van de brandweer een kortdurende verstoring van de treindienst;'),
-                              BodyText(
-                                  indents: 0,
-                                  text:
-                                      '- Mogelijk hulpverleners in het spoor, waardoor buitengebruik nemen en mogelijk buitendienststelling van het spoor;'),
-                              BodyText(
-                                  indents: 0,
-                                  text:
-                                      '- LET OP: Het stilleggen op last van de brandweer, naar aanleiding van een brand buiten het spoorterrein is een treinincident uit de categorie 1.'),
+                                      '- Afhankelijk van de benaderingswijze van de brandweer een kortdurende verstoring van de treindienst;\n\n- Mogelijk hulpverleners in het spoor, waardoor buitengebruik nemen en mogelijk buitendienststelling van het spoor;\n\n- LET OP: Het stilleggen op last van de brandweer, naar aanleiding van een brand buiten het spoorterrein is een treinincident uit de categorie 1.'),
                             ],
                           ),
                         ),
-                      ),              
-                      ],
+                      ),
+                      Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ExpansionTile(
+                            initiallyExpanded: false,
+                            childrenPadding: EdgeInsets.all(8.0),
+                            title: Text('TIS 2.2'),
+                            children: [
+                              SubTitleText(subtitle: 'Brand'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Brand (op station) in tunnel, zonder stilstaande trein;'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Ernst'),
+                              BodyText(indents: 0, text: 'Beperkt'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Kenmerk'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Mogelijk hulpverleners in het spoor, waardoor buitengebruik nemen en mogelijk buitendienststelling van het spoor;\n\n- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ExpansionTile(
+                            initiallyExpanded: false,
+                            childrenPadding: EdgeInsets.all(8.0),
+                            title: Text('TIS 2.3'),
+                            children: [
+                              SubTitleText(subtitle: 'Brand'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      'Brand in trein, uitslaand op vrije baan of emplacement.'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Ernst'),
+                              BodyText(indents: 0, text: 'Ernstig'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Kenmerk'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Brand, waardoor geen of beperkt treinverkeer mogelijk is op een of meerdere sporen;\n\n- Hulpverleners in het spoor, waardoor buitengebruik nemen en mogelijk buitendienststelling van het spoor;\n\n- Elektrocutieveilige werkplek kan in opdracht hulpdiensten of ICB opgestart worden, complete lijnuitschakelijk (CLU) wordt automatisch opgestart;\n\n- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.'),
+                            ],
+                          ),
+                        ),
+                      ), 
+                      Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ExpansionTile(
+                            initiallyExpanded: false,
+                            childrenPadding: EdgeInsets.all(8.0),
+                            title: Text('TIS 2.4'),
+                            children: [
+                              SubTitleText(subtitle: 'Brand'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- (Automatische) brand(melding) in tunnel, met stilstaande trein;\n\n- Brand in trein uitslaand op station of in tunnel;\n\n- Treinstilstand in tunnel, zonder spraakverbinding met het treinpersoneel.'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Ernst'),
+                              BodyText(indents: 0, text: 'Zeer ernstig'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Kenmerk'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Brand, waardoor geen of beperkt treinverkeer mogelijk is op een of meerdere sporen;\n\n- Hulpverleners in het spoor, waardoor buitengebruik nemen en mogelijk buitendienststelling van het spoor;\n\n- Elektrocutieveilige werkplek kan in opdracht hulpdiensten of ICB opgestart worden, complete lijnuitschakelijk (CLU) wordt automatisch opgestart;\n\n- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SubTitleText(subtitle: 'Aanrijding, botsing en ontsporing met slachtoffers'),
+                      Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ExpansionTile(
+                            initiallyExpanded: false,
+                            childrenPadding: EdgeInsets.all(8.0),
+                            title: Text('TIS 3.1'),
+                            children: [
+                              SubTitleText(subtitle: 'Aanrijding, botsing en ontsporing met slachtoffers'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      'Aanrijding trein of rangeerdeel met:'),
+                                      BodyText(
+                                  indents: 1,
+                                  text:
+                                      '- persoon of groot vee;'),
+                                      BodyText(
+                                  indents: 1,
+                                  text:
+                                      '- (brom-)fietser;'),
+                                      BodyText(
+                                  indents: 1,
+                                  text:
+                                      '- infra-element of object;'),
+                                      BodyText(
+                                  indents: 1,
+                                  text:
+                                      '- klein wegvoertuig, zoals auto, motor, bestelbus of tractor (aantoonbaar zonder slachtoffers).'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Ernst'),
+                              BodyText(indents: 0, text: 'Zeer beperkt'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Kenmerk'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Kans op enkele slachtoffers en emotioneel getroffen personen;\n\n- Hulpverleners in het spoor, waardoor buitengebruik nemen en mogelijk buitendienststelling van het spoor;\n\n- Overwegen in storing, mogelijk licht beschadigde infra en materieel;\n\n- Mogelijk gestrande treinen met evacuatiescenario\'s en impact op dienstregeling.'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ExpansionTile(
+                            initiallyExpanded: false,
+                            childrenPadding: EdgeInsets.all(8.0),
+                            title: Text('TIS 3.2'),
+                            children: [
+                              SubTitleText(subtitle: 'Aanrijding, botsing en ontsporing met slachtoffers'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Aanrijding rangeerdelen onderling;\n\n- Hard koppelen (trein met trein of rangeerdeel);\n\n- Aanrijding trein of rangeerdeel met klein wegvoertuig (met slachtoffers of slachtoffers onbekend);\n\n- Aanrijding met groot wegvoertuig, zoals een bus of vrachtauto (zonder slachtoffers).'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Ernst'),
+                              BodyText(indents: 0, text: 'Beperkt'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Kenmerk'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Kans op enkele slachtoffers en emotioneel getroffen personen;\n\n- Hulpverleners in het spoor, waardoor buitengebruik nemen en mogelijk buitendienststelling van het spoor;\n\n- Mogelijk licht beschadigde infra en materieel (op eigen kracht weg na hersporing);\n\n- Mogelijk gestrande treinen met evacuatiescenario\'s en impact op dienstregeling;\n\n- Geringe belangstelling media.'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ExpansionTile(
+                            initiallyExpanded: false,
+                            childrenPadding: EdgeInsets.all(8.0),
+                            title: Text('TIS 3.3'),
+                            children: [
+                              SubTitleText(subtitle: 'Aanrijding, botsing en ontsporing met slachtoffers'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      'Ontsporing met slachtoffers in trein, of aanrijding trein met:'),
+                                      BodyText(indents: 1, text: '- Trein of rangeerdeel;\n\n- Groot wegvoertuig (met slachtoffers of slachtoffers onbekend);\n\nwaardoor wagenstellen niet vervormd, gekanteld of gestapeld zijn en de bovenleidinggroep niet uitgevallen is.'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Ernst'),
+                              BodyText(indents: 0, text: 'Ernstig'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Kenmerk'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Kans op meerdere slachtoffers en emotioneel getroffen personen;\n\n- Hulpverleners in het spoor, waardoor buitengebruik nemen en mogelijk buitendienststelling van het spoor;\n\n- Zwaar beschadigde infra en materieel;\n\n- Mogelijk gestrande treinen met evacuatiescenario\'s en grote impact op dienstregeling;\n\n- Grote belangstelling media.'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ExpansionTile(
+                            initiallyExpanded: false,
+                            childrenPadding: EdgeInsets.all(8.0),
+                            title: Text('TIS 3.4'),
+                            children: [
+                              SubTitleText(subtitle: 'Aanrijding, botsing en ontsporing met slachtoffers'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      'Ontsporing met slachtoffers in trein, of aanrijding trein met:'),
+                                      BodyText(indents: 1, text: '- Trein of rangeerdeel;\n\n- (Groot) wegvoertuig;\n\nwaardoor wagenstellen vervormd, gekanteld of gestapeld zijn of de bovenleidinggroep uitgevallen is.'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Ernst'),
+                              BodyText(indents: 0, text: 'Zeer ernstig'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Kenmerk'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Kans op vele slachtoffers en emotioneel getroffen personen;\n\n- Hulpverleners in het spoor, waardoor buitengebruik nemen en mogelijk buitendienststelling van het spoor;\n\n- Zwaar beschadigde infra en materieel;\n\n- Mogelijk gestrande treinen met evacuatiescenario\'s en grote impact op dienstregeling;\n\n- Grote belangstelling media;\n\n- Elektrocutieve werkplek kan in opdracht hulpdienstn of ICB opgestart worden, complete lijnuitschakeling (CLU) wordt automatisch opgestart.'),
+                            ],
+                          ),
+                        ),
+                      ),
+                      SubTitleText(subtitle: 'Gevaarlijke stoffen'),
+                      Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: ExpansionTile(
+                            initiallyExpanded: false,
+                            childrenPadding: EdgeInsets.all(8.0),
+                            title: Text('TIS 3.4'),
+                            children: [
+                              SubTitleText(subtitle: 'Gevaarlijke stoffen'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      'Kleine uitstroom van gevaarlijke stof.\n\nUitstroom van onbekende stof.\n\nGEVI-code begint met 7.\n\nAanrijding/ontsporing goederentrein met gevaar op uitstroom gevaarlijke stoffen'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Ernst'),
+                              BodyText(indents: 0, text: 'Zeer beperkt'),
+                              SizedBoxH(),
+                              SubTitleText(subtitle: 'Kenmerk'),
+                              BodyText(
+                                  indents: 0,
+                                  text:
+                                      '- Uitingsvorm: druppelen, sissen, stinken, geringe lekkage afsluiter;\n\n- Impact: brongebied, de directe omgeving van het incident. Bijv. het gebied direct rondom de incidentwagen;\n\n- Mogelijk milieuschade;\n\n- Hulpverleners in het spoor, waardoor buitengebruik nemen en mogelijk buitendienststelling van het spoor.'),
+                            ],
+                          ),
+                        ),
+                      ),            
+                    ],
                   ),
                 ),
               ),
