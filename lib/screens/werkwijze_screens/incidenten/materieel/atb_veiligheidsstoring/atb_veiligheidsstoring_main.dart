@@ -36,12 +36,7 @@ class ATBVeiligheid extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Bij een ATB veiligheidsstoring aan de baan voorkom je rijweginstelling naar het betrokken spoor.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Je stelt pas een rijweg in naar het betrokken spoor nadat je de machinist hebt ingelicht.',
+                        text: 'Bij een ATB veiligheidsstoring aan de baan voorkom je rijweginstelling naar het betrokken spoor.\n\nJe stelt pas een rijweg in naar het betrokken spoor nadat je de machinist hebt ingelicht.',
                       ),
                     ],
                   ),

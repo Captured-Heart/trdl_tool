@@ -36,12 +36,7 @@ class Weersomstandigheden extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Na een melding van ijzel- of rijpafzetting geef je dit met plaatsaanduiding door aan de DVL en MKS/BO.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'De TRDL tool is nog volop in ontwikkeling. In de nabije toekomst volgen hier externe links naar ICDOC.',
+                        text: 'Na een melding van ijzel- of rijpafzetting geef je dit met plaatsaanduiding door aan de DVL en MKS/BO.\n\nDe TRDL tool is nog volop in ontwikkeling. In de nabije toekomst volgen hier externe links naar ICDOC.',
                       ),
                     ],
                   ),

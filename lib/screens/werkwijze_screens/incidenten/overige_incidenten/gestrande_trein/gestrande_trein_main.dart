@@ -36,7 +36,7 @@ class GestrandeTrein extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Als je te maken krijgt met een hulp- of evacuatietrein, bespreek je met de machinist:',
+                        text: 'Als je te maken krijgt met een hulp- of evacuatietrein, bespreek je met de MCN:',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -84,13 +84,9 @@ class GestrandeTrein extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Een trein is gestrand wanneer deze niet verder vervoerd kan of mag worden. Het doel is om de reizigers zo snel mogelijk handelingsvrij te maken en/of de gestrande trein zo snel mogelijk weg te krijgen.',
+                        text: 'Een trein is gestrand wanneer deze niet verder vervoerd kan of mag worden. Het doel is om de reizigers zo snel mogelijk handelingsvrij te maken en/of de gestrande trein zo snel mogelijk weg te krijgen.\n\nAls de gestrande trein verplaatst moet worden, of als de hulp- of evacuatietrein toegelaten moet worden, gaat dit altijd na toestemming van de Algemeen Leider. De Algemeen Leider kan eventuele beperkingen opgeven.',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Als de gestrande trein verplaatst moet worden, of als de hulp- of evacuatietrein toegelaten moet worden, gaat dit altijd na toestemming van de Algemeen Leider. De Algemeen Leider kan eventuele beperkingen opgeven.',
-                      ),
                     ],
                   ),
                 ),

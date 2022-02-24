@@ -36,12 +36,7 @@ class BeschadigdWissel extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Bij een beschadigd wissel staak je het treinverkeer over het betrokken wissel.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Een wissel moet als beschadigd worden beschouwd als:',
+                        text: 'Bij een beschadigd wissel staak je het treinverkeer over het betrokken wissel.\n\nEen wissel moet als beschadigd worden beschouwd als:',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -89,12 +84,7 @@ class BeschadigdWissel extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Bij een beschadigd wissel is de veilige berijdbaarheid van het wissel niet meer gegarandeerd. Dat is niet altijd zichtbaar in Procesleiding.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'De storingsmonteur kan de veilige berijdbaarheid ter plaatse vaststellen. De storingsmonteur bepaalt of en hoe je het betrokken wissel weer mag laten berijden.',
+                        text: 'Bij een beschadigd wissel is de veilige berijdbaarheid van het wissel niet meer gegarandeerd. Dat is niet altijd zichtbaar in Procesleiding.\n\nDe storingsmonteur kan de veilige berijdbaarheid ter plaatse vaststellen. De storingsmonteur bepaalt of en hoe je het betrokken wissel weer mag laten berijden.',
                       ),
                     ],
                   ),

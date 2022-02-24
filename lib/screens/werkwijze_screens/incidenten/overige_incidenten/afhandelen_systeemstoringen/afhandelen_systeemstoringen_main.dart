@@ -89,7 +89,7 @@ class AfhandelenSysteemstoringen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Alle bediensystemen van de treindienstleider zijn redundant uitgevoerd en proberen bij storingen/uitval om te schakelen.',
+                        text: 'Alle bediensystemen van de TRDL zijn redundant uitgevoerd en proberen bij storingen/uitval om te schakelen.',
                       ),
                     ],
                   ),
