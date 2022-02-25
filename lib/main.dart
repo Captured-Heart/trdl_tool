@@ -17,7 +17,7 @@ class MainEntry extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Strings.mainTitle,
-      /*APPTHEME FROM FLEXCOLORSCHEME*/
+      /*CAN BE FOUND IN LIB/THEME/APP_THEME.DART*/
       theme: themeLight,
       darkTheme: themeDark,
       themeMode: ThemeMode.system,
