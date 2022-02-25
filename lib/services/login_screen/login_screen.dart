@@ -101,8 +101,8 @@ class _LoginState extends State<Login> {
                             ElevatedButton(
                               onPressed: () async {
                                 try {
-                                  /*SING IN METHOD*/
-                                  await _auth.signInWithEmailAndPassword(
+                                  /*SIGN IN METHOD*/
+                                  await AuthService().signIn(
                                     email: _emailCtrl.text,
                                     password: _passwordCtrl.text,
                                   );

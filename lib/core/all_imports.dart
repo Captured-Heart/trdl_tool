@@ -11,6 +11,7 @@ export 'dart:io';
 export 'package:firebase_core/firebase_core.dart';
 export 'package:cloud_firestore/cloud_firestore.dart';
 export 'package:firebase_auth/firebase_auth.dart';
+export 'package:trdl_tool/services/auth_service.dart';
 
 /*EXTERNAL PACKAGES (THIRD PARTY)*/
 export 'package:google_fonts/google_fonts.dart';

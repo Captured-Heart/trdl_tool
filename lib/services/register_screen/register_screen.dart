@@ -8,8 +8,6 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
-  final _auth = FirebaseAuth.instance;
-
   late final TextEditingController _emailCtrl;
   late final TextEditingController _password1Ctrl;
   late final TextEditingController _password2Ctrl;
@@ -123,7 +121,7 @@ class _RegisterState extends State<Register> {
                                 /*SUPERUSER ACCOUNT*/
                                 if (_emailCtrl.text
                                     .contains('plotsklapps@gmail.com')) {
-                                  await _auth.createUserWithEmailAndPassword(
+                                  await AuthService().signUp(
                                     email: _emailCtrl.text,
                                     password: _password1Ctrl.text,
                                   );
@@ -154,7 +152,7 @@ class _RegisterState extends State<Register> {
                                 } else {
                                   try {
                                     /*CREATE USER AND GO TO VERIFY_SCREEN*/
-                                    await _auth.createUserWithEmailAndPassword(
+                                    await AuthService().signUp(
                                       email: _emailCtrl.text,
                                       password: _password1Ctrl.text,
                                     );

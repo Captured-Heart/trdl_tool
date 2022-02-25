@@ -8,7 +8,6 @@ class Wachtwoord extends StatefulWidget {
 }
 
 class _WachtwoordState extends State<Wachtwoord> {
-  final _auth = FirebaseAuth.instance;
   late final TextEditingController _emailCtrl;
 
   @override
@@ -82,13 +81,13 @@ class _WachtwoordState extends State<Wachtwoord> {
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             ElevatedButton(
-                              onPressed: () {
+                              onPressed: () async {
                                 try {
                                   /*SEND PASSWORD RESETLINK*/
                                   Logger().wtf(
                                     'Password reset mail sent to $_emailCtrl.text',
                                   );
-                                  _auth.sendPasswordResetEmail(
+                                  await AuthService().resetPassword(
                                     email: _emailCtrl.text,
                                   );
                                   ScaffoldMessenger.of(context).showSnackBar(
