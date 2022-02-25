@@ -1096,16 +1096,14 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                           padding: EdgeInsets.all(8.0),
                           child: ExpansionTile(
                             initiallyExpanded: false, 
-                            childrenPadding: EdgeInsets.all(8.0), 
-                            title: Text('TEXT'),
+                            childrenPadding: EdgeInsets.all(8.0),
+                            title: Text('TIS 3.4'),
                             children: [
-                              SubTitleText(
-                                subtitle: Text('TEXT'),
-                                ),
-                                ],
-                                ),
-                        ),
-                      ),            
+                              SubTitleText(subtitle: 'Gevaarlijke stoffen'),
+                              ],
+                              ),
+                              ),
+                              ),          
                     ],
                   ),
                 ),
