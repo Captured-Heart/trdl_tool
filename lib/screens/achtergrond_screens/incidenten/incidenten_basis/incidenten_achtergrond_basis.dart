@@ -810,7 +810,7 @@ class IncidentenAchtergrondBasis extends StatelessWidget {
                           BodyText(
                               indents: 0,
                               text:
-                                  '- Door de verstoring kan de treindienst binnen het hele bediengebied van een post niet meer worden uitgevoerd;\n\n- Mogelijk evacuatiescenario\s reizigers uit gestrande treinen uitvoeren.'),
+                                  '- Door de verstoring kan de treindienst binnen het hele bediengebied van een post niet meer worden uitgevoerd;\n\n- Mogelijk evacuatiescenario\'s reizigers uit gestrande treinen uitvoeren.'),
                         ],
                       ),
                       SubTitleText(subtitle: 'Brand'),
