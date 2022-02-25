@@ -36,17 +36,7 @@ class MondelingeCommunicatie extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Bij aanvang van ieder bericht geldt identificatieplicht;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Gebruik bij het voeren van een gesprek de dienstuitdrukkingen en de berichtenstructuur;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Houd je aan de gespreksdiscipline.',
+                        text: '- Bij aanvang van ieder bericht geldt identificatieplicht;\n\n- Gebruik bij het voeren van een gesprek de dienstuitdrukkingen en de berichtenstructuur;\n\n- Houd je aan de gespreksdiscipline.',
                       ),
                     ],
                   ),
@@ -84,7 +74,7 @@ class MondelingeCommunicatie extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Om onveilige situaties te voorkomen zijn met de gesprekspartners van de TRDL uniforme uitgangspunten afgesproken voor het wisselen van mondelinge berichten. De treindienstleider heeft in deze afspraken een sturende rol.',
+                        text: 'Om onveilige situaties te voorkomen zijn met de gesprekspartners van de TRDL uniforme uitgangspunten afgesproken voor het wisselen van mondelinge berichten. De TRDL heeft in deze afspraken een sturende rol.',
                       ),
                     ],
                   ),
