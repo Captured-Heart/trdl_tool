@@ -49,27 +49,27 @@ class AchtergrondBijzonderhedenRijwegen extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Inzetten railvoertuig (ICB)',
-                            destination: 'inzettenrailvoertuigachtergrond',
+                            destination: 'ai_inzetten_railvoertuig',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Toelaten werktreinen',
-                            destination: 'toelatenwerktreinenachtergrond',
+                            destination: 'ai_toelaten_werktreinen',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Opbouw Plan - basis',
-                            destination: 'rijwegenopbouwplanachtergrond',
+                            destination: 'ai_rijwegen_planopbouw',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Werken Met Plan - basis',
-                            destination: 'rijwegenwerkenmetplanachtergrond',
+                            destination: 'ai_rijwegen_planscherm',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'ARI - basis',
-                            destination: 'rijwegenariachtergrond',
+                            destination: 'ai_rijwegen_ari',
                           ),
                           SizedBoxH(),
                           NavButton(

@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class OpbouwPlanBasisAchtergrond extends StatelessWidget {
-  const OpbouwPlanBasisAchtergrond({Key? key}) : super(key: key);
+class AchtergrondRijwegenPlanopbouw extends StatelessWidget {
+  const AchtergrondRijwegenPlanopbouw({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

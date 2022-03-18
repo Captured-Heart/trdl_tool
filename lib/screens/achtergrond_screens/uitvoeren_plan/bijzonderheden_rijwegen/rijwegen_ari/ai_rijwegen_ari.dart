@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class RijwegenARIAchtergrond extends StatelessWidget {
-  const RijwegenARIAchtergrond({Key? key}) : super(key: key);
+class AchtergrondRijwegenARI extends StatelessWidget {
+  const AchtergrondRijwegenARI({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

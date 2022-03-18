@@ -122,6 +122,17 @@ class MainEntry extends StatelessWidget {
             const AchtergrondUitvoerenPlan(),
         'ai_bijzonderheden_rijwegen_main': (context) =>
             const AchtergrondBijzonderhedenRijwegen(),
+        'ai_inzetten_railvoertuig': (context) =>
+            const AchtergrondInzettenRailvoertuig(),
+        'ai_rijwegen_ari': (context) => const AchtergrondRijwegenARI(),
+        'ai_rijwegen_planopbouw': (context) =>
+            const AchtergrondRijwegenPlanopbouw(),
+        'ai_rijwegen_planscherm': (context) =>
+            const AchtergrondRijwegenPlanscherm(),
+
+            //TODO: Hier verder!
+        'ai_toelaten_werktreinen': (context) =>
+            const AchtergrondToelatenWerktreinen(),
 
 
         'uitvoerenplanbasisachtergrond': (context) =>
@@ -135,8 +146,7 @@ class MainEntry extends StatelessWidget {
         'foutenindewbiachtergrond': (context) => const FoutenWBIAchtergrond(),
         'aanvangwerkzaamhedenachtergrond': (context) =>
             const AanvangWerkzaamhedenAchtergrond(),
-        'toelatenwerktreinenachtergrond': (context) =>
-            const ToelatenWerktreinenAchtergrond(),
+        
         'werkzonesachtergrond': (context) => const WerkzonesAchtergrond(),
         'bijzonderhedentreinachtergrond': (context) =>
             const BijzonderhedenTreinAchtergrond(),
@@ -149,13 +159,10 @@ class MainEntry extends StatelessWidget {
         'bijzondereaandachtachtergrond': (context) =>
             const BijzondereAandachtAchtergrond(),
         
-        'inzettenrailvoertuigachtergrond': (context) =>
-            const InzettenRailvoertuigAchtergrond(),
-        'rijwegenopbouwplanachtergrond': (context) =>
-            const OpbouwPlanBasisAchtergrond(),
-        'rijwegenwerkenmetplanachtergrond': (context) =>
-            const RijwegenPlanschermBasis(),
-        'rijwegenariachtergrond': (context) => const RijwegenARIAchtergrond(),
+        
+        
+        
+        
         'communicatieachtergrond': (context) => const CommunicatieAchtergrond(),
         'mondelingeveiligheidscommunicatie': (context) =>
             const MondelingeVeiligheidAchtergrond(),

@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class ToelatenWerktreinenAchtergrond extends StatelessWidget {
-  const ToelatenWerktreinenAchtergrond({Key? key}) : super(key: key);
+class AchtergrondToelatenWerktreinen extends StatelessWidget {
+  const AchtergrondToelatenWerktreinen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
