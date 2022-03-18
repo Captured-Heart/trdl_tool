@@ -118,8 +118,12 @@ class MainEntry extends StatelessWidget {
         'ww_wissels_vrijmaken': (context) => const WerkwijzeWisselsVrijmaken(),       
 
         /*ACHTERGRONDINFO UITVOEREN PLAN ROUTES*/
-        'uitvoerenplanachtergrond': (context) =>
-            const UitvoerenPlanAchtergrond(),
+        'ai_uitvoeren_plan_main': (context) =>
+            const AchtergrondUitvoerenPlan(),
+        'ai_bijzonderheden_rijwegen_main': (context) =>
+            const AchtergrondBijzonderhedenRijwegen(),
+
+
         'uitvoerenplanbasisachtergrond': (context) =>
             const UitvoerenPlanBasisAchtergrond(),
         'geplandewerkzaamhedenachtergrond': (context) =>
@@ -144,8 +148,7 @@ class MainEntry extends StatelessWidget {
             const OnjuisteDetectieAchtergrond(),
         'bijzondereaandachtachtergrond': (context) =>
             const BijzondereAandachtAchtergrond(),
-        'bijzonderhedenrijwegenachtergrond': (context) =>
-            const BijzonderhedenRijwegenAchtergrond(),
+        
         'inzettenrailvoertuigachtergrond': (context) =>
             const InzettenRailvoertuigAchtergrond(),
         'rijwegenopbouwplanachtergrond': (context) =>

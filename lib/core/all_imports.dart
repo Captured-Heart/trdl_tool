@@ -142,9 +142,17 @@ export 'package:trdl_tool/screens/werkwijze_screens/incidenten/overige_incidente
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/overige_incidenten/weersomstandigheden/ww_weersomstandigheden.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/overige_incidenten/wissels_vrijmaken/ww_wissels_vrijmaken.dart';
 
-//TODO: Hier verder!
 /*ACHTERGROND INFORMATIE UITVOEREN PLAN PAGES*/
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/uitvoeren_plan_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/ai_uitvoeren_plan_main.dart';
+/*ACHTERGROND INFORMATIE BIJZONDERHEDEN RIJWEGEN PAGES*/
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/ai_bijzonderheden_rijwegen_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig/inzetten_railvoertuig.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planopbouw/rijwegen_planopbouw_basis.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planscherm/rijwegen_planscherm_basis.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_ari/rijwegen_ari_basis.dart';
+
+
+
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/uitvoeren_plan_basis/uitvoeren_plan_basis.dart';
 
 /*ACHTERGROND INFORMATIE GEPLANDE WERKZAAMHEDEN PAGES*/
@@ -163,12 +171,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderhe
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/onjuiste_detectie/onjuiste_detectie.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/bijzondere_aandacht/bijzondere_aandacht.dart';
 
-/*ACHTERGROND INFORMATIE BIJZONDERHEDEN RIJWEGEN PAGES*/
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/bijzonderheden_rijwegen_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig/inzetten_railvoertuig.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planopbouw/rijwegen_planopbouw_basis.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planscherm/rijwegen_planscherm_basis.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_ari/rijwegen_ari_basis.dart';
+
 
 /*ACHTERGROND INFORMATIE COMMUNICATIE PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatie_main.dart';

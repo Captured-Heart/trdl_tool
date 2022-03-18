@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class UitvoerenPlanAchtergrond extends StatelessWidget {
-  const UitvoerenPlanAchtergrond({Key? key}) : super(key: key);
+class AchtergrondBijzonderhedenRijwegen extends StatelessWidget {
+  const AchtergrondBijzonderhedenRijwegen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Uitvoeren Plan',
+          title: 'Rijwegen',
         ),
         actions: const [
           HomeButton(),
@@ -19,15 +19,15 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              /*TITLE CARD*/
+              //*PROCEDURE CARD*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
                     children: const [
-                      TitleText(
-                        title: 'Uitvoeren Plan',
+                      SubTitleText(
+                        subtitle: 'Bijzonderheden Rijwegen',
                       ),
                     ],
                   ),
@@ -48,38 +48,38 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           NavButton(
-                            buttontext: 'Uitvoeren plan - basis',
-                            destination: 'uitvoerenplanbasisachtergrond',
+                            buttontext: 'Inzetten railvoertuig (ICB)',
+                            destination: 'inzettenrailvoertuigachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Geplande werkzaamheden',
-                            destination: 'geplandewerkzaamhedenachtergrond',
+                            buttontext: 'Toelaten werktreinen',
+                            destination: 'toelatenwerktreinenachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Bijzonderheden trein',
-                            destination: 'bijzonderhedentreinachtergrond',
+                            buttontext: 'Opbouw Plan - basis',
+                            destination: 'rijwegenopbouwplanachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Bijzonderheden rijwegen',
-                            destination: 'bijzonderhedenrijwegenachtergrond',
+                            buttontext: 'Werken Met Plan - basis',
+                            destination: 'rijwegenwerkenmetplanachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Communicatie',
-                            destination: 'communicatieachtergrond',
+                            buttontext: 'ARI - basis',
+                            destination: 'rijwegenariachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'NCBG',
-                            destination: 'ncbgachtergrond',
+                            buttontext: 'TROTS en ABT - basis',
+                            destination: 'rijwegentrotsabtachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Dienstovergave',
-                            destination: 'dienstovergaveachtergrond',
+                            buttontext: 'Rijweg in bedienscherm',
+                            destination: 'rijwegenbedienschermachtergrond',
                           ),
                         ],
                       ),
@@ -97,7 +97,7 @@ class UitvoerenPlanAchtergrond extends StatelessWidget {
                     children: const [
                       SizedBoxH(),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/uitvoeren_plan/spoorKaart2020.jpg',
+                        image: 'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/icbVoertuig.jpg',
                       ),
                     ],
                   ),
