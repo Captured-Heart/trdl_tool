@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeMaterieelIncidenten extends StatelessWidget {
-  const WerkwijzeMaterieelIncidenten({Key? key}) : super(key: key);
+class WWMaterieelMain extends StatelessWidget {
+  const WWMaterieelMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,17 +32,20 @@ class WerkwijzeMaterieelIncidenten extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Je kunt op drie manieren een melding krijgen over materieel:',
+                        text:
+                            'Je kunt op drie manieren een melding krijgen over materieel:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Door de MCN;\n\n- Door derden;\n\n- Door systemen.',
+                        text:
+                            '- Door de MCN;\n\n- Door derden;\n\n- Door systemen.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Als de melding niet van de MCN komt, licht je de MCN van de betrokken trein in.',
+                        text:
+                            'Als de melding niet van de MCN komt, licht je de MCN van de betrokken trein in.',
                       ),
                     ],
                   ),

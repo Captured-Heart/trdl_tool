@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeVasteRem extends StatelessWidget {
-  const WerkwijzeVasteRem({Key? key}) : super(key: key);
+class WWVasteRem extends StatelessWidget {
+  const WWVasteRem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +36,14 @@ class WerkwijzeVasteRem extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Na een melding van een vaste rem/rook of vuur onder de trein:',
+                        text:
+                            'Na een melding van een vaste rem/rook of vuur onder de trein:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Geef je de MCN opdracht de trein beheerst tot stilstand te brengen;\n\n- Stel je de gevraagde infra ter beschikking aan de MCN (nevenspoor);\n\n- De MCN geeft aan onder welke omstandigheden hij verder mag rijden.',
+                        text:
+                            '- Geef je de MCN opdracht de trein beheerst tot stilstand te brengen;\n\n- Stel je de gevraagde infra ter beschikking aan de MCN (nevenspoor);\n\n- De MCN geeft aan onder welke omstandigheden hij verder mag rijden.',
                       ),
                     ],
                   ),
@@ -60,7 +62,8 @@ class WerkwijzeVasteRem extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Trein komt niet tijdig tot stilstand voor het gevaarpunt.',
+                        text:
+                            'Trein komt niet tijdig tot stilstand voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -79,7 +82,8 @@ class WerkwijzeVasteRem extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Een vaste rem verhit de wielband. Wanneer de temperatuur te hoog oploopt, kan de wielband van het wiel lopen. Het is van belang de trein zo recht mogelijk door wissels te laten rijden.',
+                        text:
+                            'Een vaste rem verhit de wielband. Wanneer de temperatuur te hoog oploopt, kan de wielband van het wiel lopen. Het is van belang de trein zo recht mogelijk door wissels te laten rijden.',
                       ),
                     ],
                   ),

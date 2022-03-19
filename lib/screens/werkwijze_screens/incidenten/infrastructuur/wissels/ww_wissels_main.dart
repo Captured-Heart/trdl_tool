@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeWissels extends StatelessWidget {
-  const WerkwijzeWissels({Key? key}) : super(key: key);
+class WWWisselsMain extends StatelessWidget {
+  const WWWisselsMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

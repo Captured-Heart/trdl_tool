@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeAfhandelenSysteemstoringen extends StatelessWidget {
-  const WerkwijzeAfhandelenSysteemstoringen({Key? key}) : super(key: key);
+class WWAfhandelenSysteemstoringen extends StatelessWidget {
+  const WWAfhandelenSysteemstoringen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +36,14 @@ class WerkwijzeAfhandelenSysteemstoringen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Bij alle computerstoringen en uitval van systemen wacht je 2 minuten op een automatische herstart. Als er niet automatisch wordt herstart, handel je als volgt:',
+                        text:
+                            'Bij alle computerstoringen en uitval van systemen wacht je 2 minuten op een automatische herstart. Als er niet automatisch wordt herstart, handel je als volgt:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Controleer of de storing zich beperkt tot jouw werkplek;\n\n- Controleer onder de knop \'systeem\' in het planscherm de status van de verschillende systemen;\n\n- Bepaal of het nodig is de calamiteiten-werkplek op te starten. Zet dan ARI uit op de gestoorde werkplek en gebruik indien nodig \'ARI Noodstop\' in PBH++.',
+                        text:
+                            '- Controleer of de storing zich beperkt tot jouw werkplek;\n\n- Controleer onder de knop \'systeem\' in het planscherm de status van de verschillende systemen;\n\n- Bepaal of het nodig is de calamiteiten-werkplek op te starten. Zet dan ARI uit op de gestoorde werkplek en gebruik indien nodig \'ARI Noodstop\' in PBH++.',
                       ),
                     ],
                   ),
@@ -60,7 +62,8 @@ class WerkwijzeAfhandelenSysteemstoringen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Trein komt in infra gereserveerd voor een andere trein.',
+                        text:
+                            'Trein komt in infra gereserveerd voor een andere trein.',
                       ),
                     ],
                   ),
@@ -79,7 +82,8 @@ class WerkwijzeAfhandelenSysteemstoringen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Alle bediensystemen van de TRDL zijn redundant uitgevoerd en proberen bij storingen/uitval om te schakelen.',
+                        text:
+                            'Alle bediensystemen van de TRDL zijn redundant uitgevoerd en proberen bij storingen/uitval om te schakelen.',
                       ),
                     ],
                   ),

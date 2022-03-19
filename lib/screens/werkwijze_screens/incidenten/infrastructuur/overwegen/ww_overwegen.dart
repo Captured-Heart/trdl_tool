@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeOverwegen extends StatelessWidget {
-  const WerkwijzeOverwegen({Key? key}) : super(key: key);
+class WWOverwegen extends StatelessWidget {
+  const WWOverwegen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

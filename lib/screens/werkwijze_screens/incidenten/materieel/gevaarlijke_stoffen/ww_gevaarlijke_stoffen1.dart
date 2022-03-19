@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeGevaarlijkeStoffen1 extends StatelessWidget {
-  const WerkwijzeGevaarlijkeStoffen1({Key? key}) : super(key: key);
+class WWGevaarlijkeStoffen1 extends StatelessWidget {
+  const WWGevaarlijkeStoffen1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

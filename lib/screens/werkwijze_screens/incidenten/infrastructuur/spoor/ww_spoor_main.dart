@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeSpoor extends StatelessWidget {
-  const WerkwijzeSpoor({Key? key}) : super(key: key);
+class WWSpoorMain extends StatelessWidget {
+  const WWSpoorMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

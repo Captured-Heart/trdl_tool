@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeKunstwerken extends StatelessWidget {
-  const WerkwijzeKunstwerken({Key? key}) : super(key: key);
+class WWKunstwerkenMain extends StatelessWidget {
+  const WWKunstwerkenMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

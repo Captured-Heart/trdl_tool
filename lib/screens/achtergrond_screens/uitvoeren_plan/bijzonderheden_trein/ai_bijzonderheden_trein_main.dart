@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class CommunicatieAchtergrond extends StatelessWidget {
-  const CommunicatieAchtergrond({Key? key}) : super(key: key);
+class AIBijzonderhedenTreinMain extends StatelessWidget {
+  const AIBijzonderhedenTreinMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class CommunicatieAchtergrond extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Communicatie',
+          title: 'Bijzonderheden trein',
         ),
         actions: const [
           HomeButton(),
@@ -19,7 +19,7 @@ class CommunicatieAchtergrond extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              /*TITLE CARD*/
+              //*PROCEDURE CARD*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
@@ -27,7 +27,7 @@ class CommunicatieAchtergrond extends StatelessWidget {
                   child: Column(
                     children: const [
                       TitleText(
-                        title: 'Communicatie',
+                        title: 'Bijzonderheden trein',
                       ),
                     ],
                   ),
@@ -48,23 +48,23 @@ class CommunicatieAchtergrond extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           NavButton(
-                            buttontext: 'Communicatie - Werkwijze',
-                            destination: 'mondelingecommunicatie',
+                            buttontext: 'Basisinformatie',
+                            destination: 'bijzonderhedentreinbasisachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Mondelinge (veiligheids)communicatie',
-                            destination: 'mondelingeveiligheidscommunicatie',
+                            buttontext: 'Vervoersregeling',
+                            destination: 'vervoersregelingachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Communicatiemiddelen - Basis',
-                            destination: 'communicatiemiddelenbasis',
+                            buttontext: 'Onjuiste detectie',
+                            destination: 'onjuistedetectieachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Communicatiesysteem GSM-R - Basis',
-                            destination: 'communicatiesysteembasis',
+                            buttontext: 'Bijzondere aandacht',
+                            destination: 'bijzondereaandachtachtergrond',
                           ),
                         ],
                       ),
@@ -82,9 +82,9 @@ class CommunicatieAchtergrond extends StatelessWidget {
                     children: const [
                       SizedBoxH(),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_main.jpg',
+                        image:
+                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/deKameel.jpg',
                       ),
-                      SizedBoxH(),
                     ],
                   ),
                 ),

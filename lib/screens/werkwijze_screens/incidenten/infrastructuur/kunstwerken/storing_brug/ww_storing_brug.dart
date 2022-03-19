@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeStoringBrug extends StatelessWidget {
-  const WerkwijzeStoringBrug({Key? key}) : super(key: key);
+class WWStoringBrug extends StatelessWidget {
+  const WWStoringBrug({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,8 @@ class WerkwijzeStoringBrug extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Je mag een gestoorde beweegbare brug alleen laten berijden na toestemming van de storingsdienst.',
+                        text:
+                            'Je mag een gestoorde beweegbare brug alleen laten berijden na toestemming van de storingsdienst.',
                       ),
                     ],
                   ),
@@ -55,7 +56,8 @@ class WerkwijzeStoringBrug extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text:
+                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -74,7 +76,8 @@ class WerkwijzeStoringBrug extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Wanneer een beweegbare brug door een storing niet in de vergrendeling ligt, is het beweegbare gedeelte van de brug niet veilig berijdbaar. Een storingsmonteur kan ter plaatse beoordelen of en onder welke voorwaarden de brug bereden kan worden.',
+                        text:
+                            'Wanneer een beweegbare brug door een storing niet in de vergrendeling ligt, is het beweegbare gedeelte van de brug niet veilig berijdbaar. Een storingsmonteur kan ter plaatse beoordelen of en onder welke voorwaarden de brug bereden kan worden.',
                       ),
                     ],
                   ),

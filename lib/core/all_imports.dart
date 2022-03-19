@@ -95,7 +95,7 @@ export 'package:trdl_tool/screens/werkwijze_screens/aanpassen_plan/ongepland_wer
 export 'package:trdl_tool/screens/werkwijze_screens/aanpassen_plan/ongepland_werk/ongepland_werk_materieel/ww_ongepland_werk_materieel.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/aanpassen_plan/orderacceptatie/ww_orderacceptatie.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/aanpassen_plan/stappenplan_versperringen/ww_stappenplan_versperringen.dart';
-export 'package:trdl_tool/screens/werkwijze_screens/aanpassen_plan/vertragingen/ww_vertragingen_main.dart';
+export 'package:trdl_tool/screens/werkwijze_screens/aanpassen_plan/vertragingen/ww_vertragingen.dart';
 
 /*WERKWIJZE INCIDENTEN PAGES*/
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/ww_incidenten_main.dart';
@@ -115,13 +115,13 @@ export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/ku
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/kunstwerken/storing_brug/ww_storing_brug.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/overwegen/ww_overwegen.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/sectiestoring/ww_sectiestoring.dart';
-export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/spoor/spoor_main.dart';
+export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/spoor/ww_spoor_main.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/spoor/glad_spoor/ww_glad_spoor.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/spoor/onregelmatigheden_baan/ww_onregelmatigheden_baan.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/spoor/roestvorming/ww_roestvorming.dart';
-export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/wissels_main.dart';
+export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/ww_wissels_main.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/wissel_eindstand/ww_wissel_eindstand.dart';
-export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/opengereden_wissel/ww_opengereden_wissel.dart';
+export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/opgereden_wissel/ww_opengereden_wissel.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/gestoord_wissel/ww_gestoord_wissel.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/beschadigd_wissel/ww_beschadigd_wissel.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/materieel/ww_materieel_main.dart';
@@ -151,38 +151,32 @@ export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderhe
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_ari/ai_rijwegen_ari.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planopbouw/ai_rijwegen_planopbouw.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planscherm/ai_rijwegen_planscherm.dart';
-
-
-
-
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/uitvoeren_plan_basis/uitvoeren_plan_basis.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/uitvoeren_plan_basis/ai_uitvoeren_plan.dart';
 
 /*ACHTERGROND INFORMATIE GEPLANDE WERKZAAMHEDEN PAGES*/
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden_basis/geplande_werkzaamheden_basis.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/controleren_wbi/controleren_wbi.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/fouten_wbi/fouten_wbi.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/aanvang_werkzaamheden/aanvang_werkzaamheden.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/ai_geplande_werkzaamheden_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/geplande_werkzaamheden_basis/ai_geplande_werkzaamheden.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/controleren_wbi/ai_controleren_wbi.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/fouten_wbi/ai_fouten_wbi.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/aanvang_werkzaamheden/ai_aanvang_werkzaamheden.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/toelaten_werktreinen/toelaten_werktreinen.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/werkzones/werkzones.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/werkzones/ai_werkzones.dart';
 
 /*ACHTERGROND INFORMATIE BIJZONDERHEDEN TREIN PAGES*/
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/bijzonderheden_trein_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/bijzonderheden_trein_basis/bijzonderheden_trein_basis.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/ai_bijzonderheden_trein_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/bijzonderheden_trein_basis/ai_bijzonderheden_trein.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/vervoersregeling/vervoersregeling.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/onjuiste_detectie/onjuiste_detectie.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/bijzondere_aandacht/bijzondere_aandacht.dart';
-
-
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/onjuiste_detectie/ai_onjuiste_detectie.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/bijzondere_aandacht/ai_bijzondere_aandacht.dart';
 
 /*ACHTERGROND INFORMATIE COMMUNICATIE PAGES*/
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatie_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/mondelinge_veiligheid/mondelinge_veiligheidscommunicatie.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatiemiddelen/communicatiemiddelen_basis.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatiesysteem/communicatiesysteem_basis.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/ai_communicatie_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/mondelinge_veiligheid/ai_mondelinge_veiligheidscommunicatie.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatiemiddelen/ai_communicatiemiddelen.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatiesysteem/ai_communicatiesysteem.dart';
 
 /*ACHTERGROND INFORMATIE NCBG PAGES*/
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/ncbg/ncbg_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/ncbg/ai_ncbg.dart';
 
 /*ACHTERGROND INFORMATIE AANPASSEN PLAN PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/aanpassen_plan_main.dart';

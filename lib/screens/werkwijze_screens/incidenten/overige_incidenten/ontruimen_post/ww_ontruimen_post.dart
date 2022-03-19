@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeOntruimenPost extends StatelessWidget {
-  const WerkwijzeOntruimenPost({Key? key}) : super(key: key);
+class WWOntruimenPost extends StatelessWidget {
+  const WWOntruimenPost({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,8 @@ class WerkwijzeOntruimenPost extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Zorg voor je persoonlijke veiligheid en neem een mobiele noodtelefoon mee.',
+                        text:
+                            'Zorg voor je persoonlijke veiligheid en neem een mobiele noodtelefoon mee.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -45,7 +46,8 @@ class WerkwijzeOntruimenPost extends StatelessWidget {
                       ),
                       BodyText(
                         indents: 1,
-                        text: 'Je verlaat de post en plaatst een alarmoproep met de mobiele noodtelefoon.',
+                        text:
+                            'Je verlaat de post en plaatst een alarmoproep met de mobiele noodtelefoon.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -59,7 +61,8 @@ class WerkwijzeOntruimenPost extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 2,
-                        text: '- \'- Dit bericht is bestemd voor alle machinisten. In verband met een calamiteit op de verkeersleidingspost . . . (naam post) zal iedereen deze post op korte termijn verlaten.\n\nMachinisten van reizigerstreinen moeten de reizigers op het eerstvolgende perron of anders een andere veilige plaats evacueren. Probeer het langdurig dicht liggen van overwegen te voorkomen. Indien aanvullende opdrachten nodig zijn wordt u hierover zo spoedig mogelijk geïnformeerd. Einde bericht. -\'',
+                        text:
+                            '- \'- Dit bericht is bestemd voor alle machinisten. In verband met een calamiteit op de verkeersleidingspost . . . (naam post) zal iedereen deze post op korte termijn verlaten.\n\nMachinisten van reizigerstreinen moeten de reizigers op het eerstvolgende perron of anders een andere veilige plaats evacueren. Probeer het langdurig dicht liggen van overwegen te voorkomen. Indien aanvullende opdrachten nodig zijn wordt u hierover zo spoedig mogelijk geïnformeerd. Einde bericht. -\'',
                       ),
                     ],
                   ),
@@ -78,7 +81,8 @@ class WerkwijzeOntruimenPost extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text:
+                            'Treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),

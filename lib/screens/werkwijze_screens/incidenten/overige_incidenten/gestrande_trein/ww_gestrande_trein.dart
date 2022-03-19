@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeGestrandeTrein extends StatelessWidget {
-  const WerkwijzeGestrandeTrein({Key? key}) : super(key: key);
+class WWGestrandeTrein extends StatelessWidget {
+  const WWGestrandeTrein({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,12 +36,14 @@ class WerkwijzeGestrandeTrein extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Als je te maken krijgt met een hulp- of evacuatietrein, bespreek je met de MCN:',
+                        text:
+                            'Als je te maken krijgt met een hulp- of evacuatietrein, bespreek je met de MCN:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- De locatie van de gestrande trein;\n\n- De kant waar de hulptrein vandaan komt.',
+                        text:
+                            '- De locatie van de gestrande trein;\n\n- De kant waar de hulptrein vandaan komt.',
                       ),
                     ],
                   ),
@@ -60,7 +62,8 @@ class WerkwijzeGestrandeTrein extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Conflicterend spoorgebruik en/of treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text:
+                            'Conflicterend spoorgebruik en/of treinen komen niet tijdig tot stilstand voor een gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -79,7 +82,8 @@ class WerkwijzeGestrandeTrein extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Een trein is gestrand wanneer deze niet verder vervoerd kan of mag worden. Het doel is om de reizigers zo snel mogelijk handelingsvrij te maken en/of de gestrande trein zo snel mogelijk weg te krijgen.\n\nAls de gestrande trein verplaatst moet worden, of als de hulp- of evacuatietrein toegelaten moet worden, gaat dit altijd na toestemming van de Algemeen Leider. De Algemeen Leider kan eventuele beperkingen opgeven.',
+                        text:
+                            'Een trein is gestrand wanneer deze niet verder vervoerd kan of mag worden. Het doel is om de reizigers zo snel mogelijk handelingsvrij te maken en/of de gestrande trein zo snel mogelijk weg te krijgen.\n\nAls de gestrande trein verplaatst moet worden, of als de hulp- of evacuatietrein toegelaten moet worden, gaat dit altijd na toestemming van de Algemeen Leider. De Algemeen Leider kan eventuele beperkingen opgeven.',
                       ),
                       SizedBoxH(),
                     ],

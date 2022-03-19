@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeGladSpoor extends StatelessWidget {
-  const WerkwijzeGladSpoor({Key? key}) : super(key: key);
+class WWGladSpoor extends StatelessWidget {
+  const WWGladSpoor({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -36,17 +36,20 @@ class WerkwijzeGladSpoor extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Wanneer je een melding krijgt van een glad spoor licht je de DVL.\n\nBij haltes op de vrije baan verander je de \'Stops\' in \'Doors\'.\n\nBij een stop-/doorschakeling in bediend gebied (uitgezonderd kruisingsstations op enkelsporige baanvakken):',
+                        text:
+                            'Wanneer je een melding krijgt van een glad spoor licht je de DVL.\n\nBij haltes op de vrije baan verander je de \'Stops\' in \'Doors\'.\n\nBij een stop-/doorschakeling in bediend gebied (uitgezonderd kruisingsstations op enkelsporige baanvakken):',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Voeg je opgedeelde rijwegen met \'D\' of \'K\' activiteit samen;\n\n- Verander je het \'naar\'-spoor van de aankomstregel in het \'naar\'-spoor van de vertrekregel;\n\n- Hef je de vertrekregel op;\n\n- Voeg je doorbediening toe aan de aankomstregel.',
+                        text:
+                            '- Voeg je opgedeelde rijwegen met \'D\' of \'K\' activiteit samen;\n\n- Verander je het \'naar\'-spoor van de aankomstregel in het \'naar\'-spoor van de vertrekregel;\n\n- Hef je de vertrekregel op;\n\n- Voeg je doorbediening toe aan de aankomstregel.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Twee uur na de laatste melding vraag je de MCN van de twee eerstvolgende treinen naar de toestand van de baan. Wanneer het spoor niet meer glad is, staak je bovenstaande maatregelen. Wanneer het spoor nog wel glad is, handhaaf je de maatregelen voor de komende twee uur.',
+                        text:
+                            'Twee uur na de laatste melding vraag je de MCN van de twee eerstvolgende treinen naar de toestand van de baan. Wanneer het spoor niet meer glad is, staak je bovenstaande maatregelen. Wanneer het spoor nog wel glad is, handhaaf je de maatregelen voor de komende twee uur.',
                       ),
                     ],
                   ),
@@ -65,7 +68,8 @@ class WerkwijzeGladSpoor extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text:
+                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -84,7 +88,8 @@ class WerkwijzeGladSpoor extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Door verminderd contact tussen wiel en spoorstaaf, kunnen treinen moeite hebben met optrekken en remmen. De MCN kan zijn rijgedrag aanpassen wanneer hij hiervan op de hoogte is.',
+                        text:
+                            'Door verminderd contact tussen wiel en spoorstaaf, kunnen treinen moeite hebben met optrekken en remmen. De MCN kan zijn rijgedrag aanpassen wanneer hij hiervan op de hoogte is.',
                       ),
                     ],
                   ),

@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class AchtergrondBijzonderhedenRijwegen extends StatelessWidget {
-  const AchtergrondBijzonderhedenRijwegen({Key? key}) : super(key: key);
+class AIBijzonderhedenRijwegenMain extends StatelessWidget {
+  const AIBijzonderhedenRijwegenMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +97,8 @@ class AchtergrondBijzonderhedenRijwegen extends StatelessWidget {
                     children: const [
                       SizedBoxH(),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/icbVoertuig.jpg',
+                        image:
+                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/icbVoertuig.jpg',
                       ),
                     ],
                   ),

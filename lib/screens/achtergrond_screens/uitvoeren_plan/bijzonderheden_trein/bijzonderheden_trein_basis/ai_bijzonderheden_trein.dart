@@ -1,7 +1,8 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
 const String treinenVanNS = 'https://ns.nl/over-ns/bijzonderheden_trein-van-ns';
-const String nlSpoorwegMaterieel = 'https://nl.wikipedia.org/wiki/Nederlands_spoorwegmaterieel';
+const String nlSpoorwegMaterieel =
+    'https://nl.wikipedia.org/wiki/Nederlands_spoorwegmaterieel';
 const String goederenWagon = 'https://nl.wikipedia.org/wiki/Goederenwagon';
 
 final List<Image> elektrLocsList = [
@@ -16,8 +17,8 @@ final List<Image> elektrLocsList = [
   ),
 ];
 
-class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
-  const BijzonderhedenTreinBasisAchtergrond({Key? key}) : super(key: key);
+class AIBijzonderhedenTrein extends StatelessWidget {
+  const AIBijzonderhedenTrein({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -48,12 +49,14 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                       const SizedBoxH(),
                       const BodyText(
                         indents: 0,
-                        text: 'In Nederland is er heel wat rijdend materieel onderweg op het spoor. Dit materieel komt in vele soorten en maten, aangepast voor specifieke trajecten, reizigers of goederen. In dit deel van de achtergrondinformatievind je een overzicht van deze materieelsoorten.',
+                        text:
+                            'In Nederland is er heel wat rijdend materieel onderweg op het spoor. Dit materieel komt in vele soorten en maten, aangepast voor specifieke trajecten, reizigers of goederen. In dit deel van de achtergrondinformatievind je een overzicht van deze materieelsoorten.',
                       ),
                       const SizedBoxH(),
                       const BodyText(
                         indents: 0,
-                        text: 'Handig zijn ook de volgende webpagina\'s (werkende links worden nog toegevoegd):',
+                        text:
+                            'Handig zijn ook de volgende webpagina\'s (werkende links worden nog toegevoegd):',
                       ),
                       const SizedBoxH(),
                       const SizedBoxH(),
@@ -118,7 +121,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                       const SizedBoxH(),
                       const SizedBoxH(),
                       const InsertImage(
-                        image: 'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/goederenTrein.png',
+                        image:
+                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_trein/basis_informatie/goederenTrein.png',
                       ),
                     ],
                   ),
@@ -143,18 +147,14 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                             autoPlayCurve: Curves.easeInOutBack,
                             enlargeCenterPage: true,
                           ),
-                          items: [
-                            1,
-                            2,
-                            3,
-                            4
-                          ].map((i) {
+                          items: [1, 2, 3, 4].map((i) {
                             return Builder(
                               builder: (BuildContext context) {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -174,7 +174,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                       ),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
                         children: const [
                           TableRow(
                             children: [
@@ -257,7 +258,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -277,7 +279,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                       ),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
                         children: const [
                           TableRow(
                             children: [
@@ -318,7 +321,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                           TableRow(
                             children: [
                               TableText(text: '600'),
-                              TableText(text: 'Railion, NedTrain, RRF, Strukton'),
+                              TableText(
+                                  text: 'Railion, NedTrain, RRF, Strukton'),
                               TableText(text: '9,1m'),
                               TableText(text: '47 ton'),
                               TableText(text: '32 km/u'),
@@ -363,7 +367,9 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                           TableRow(
                             children: [
                               TableText(text: 'JT42CWR (class66)'),
-                              TableText(text: 'Captrain, CRB, ERS, HGK, HTRS, Rurtalbahn'),
+                              TableText(
+                                  text:
+                                      'Captrain, CRB, ERS, HGK, HTRS, Rurtalbahn'),
                               TableText(text: '20,1m'),
                               TableText(text: '129,6 ton'),
                               TableText(text: '120 km/u'),
@@ -372,7 +378,9 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                           TableRow(
                             children: [
                               TableText(text: 'G1206'),
-                              TableText(text: 'Captrain, ERS, HTRS, Rurtalbahn, Strukton'),
+                              TableText(
+                                  text:
+                                      'Captrain, ERS, HTRS, Rurtalbahn, Strukton'),
                               TableText(text: '14,7m'),
                               TableText(text: '90 ton'),
                               TableText(text: '100 km/u'),
@@ -381,7 +389,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                           TableRow(
                             children: [
                               TableText(text: 'G2000'),
-                              TableText(text: 'Captrain, HGK, HTRS, Rurtalbahn'),
+                              TableText(
+                                  text: 'Captrain, HGK, HTRS, Rurtalbahn'),
                               TableText(text: '17,4m'),
                               TableText(text: '90 ton'),
                               TableText(text: '140 km/u'),
@@ -423,7 +432,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -443,7 +453,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                       ),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
                         children: const [
                           TableRow(
                             children: [
@@ -486,7 +497,9 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                               TableText(text: 'VIRM'),
                               TableText(text: 'NSR'),
                               TableText(text: '81m\n107,5m\n108,5m\n162m'),
-                              TableText(text: '183,4 ton\n234 ton\n236,8 ton\n352,3 ton'),
+                              TableText(
+                                  text:
+                                      '183,4 ton\n234 ton\n236,8 ton\n352,3 ton'),
                               TableText(text: '160 km/u'),
                             ],
                           ),
@@ -570,7 +583,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -590,7 +604,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                       ),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
                         children: const [
                           TableRow(
                             children: [
@@ -663,7 +678,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -683,7 +699,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                       ),
                       Table(
                         border: TableBorder.all(),
-                        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+                        defaultVerticalAlignment:
+                            TableCellVerticalAlignment.middle,
                         children: const [
                           TableRow(
                             children: [
@@ -755,7 +772,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(
@@ -805,7 +823,8 @@ class BijzonderhedenTreinBasisAchtergrond extends StatelessWidget {
                                 return SizedBox(
                                   width: double.infinity,
                                   child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceAround,
                                     children: [
                                       Expanded(
                                         child: Padding(

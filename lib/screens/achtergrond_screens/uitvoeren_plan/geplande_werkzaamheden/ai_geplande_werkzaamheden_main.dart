@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
-  const GeplandeWerkzaamhedenAchtergrond({Key? key}) : super(key: key);
+class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
+  const AIGeplandeWerkzaamhedenMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +49,8 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Basisinformatie',
-                            destination: 'geplandewerkzaamhedenbasisachtergrond',
+                            destination:
+                                'geplandewerkzaamhedenbasisachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
@@ -92,7 +93,8 @@ class GeplandeWerkzaamhedenAchtergrond extends StatelessWidget {
                     children: const [
                       SizedBoxH(),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzaamhedenBovenleiding.jpg',
+                        image:
+                            'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzaamhedenBovenleiding.jpg',
                       ),
                       SizedBoxH(),
                     ],

@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class AchtergrondUitvoerenPlan extends StatelessWidget {
-  const AchtergrondUitvoerenPlan({Key? key}) : super(key: key);
+class AIUitvoerenPlanMain extends StatelessWidget {
+  const AIUitvoerenPlanMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +97,8 @@ class AchtergrondUitvoerenPlan extends StatelessWidget {
                     children: const [
                       SizedBoxH(),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/uitvoeren_plan/spoorKaart2020.jpg',
+                        image:
+                            'assets/images/achtergrond_info/uitvoeren_plan/spoorKaart2020.jpg',
                       ),
                     ],
                   ),
