@@ -49,27 +49,27 @@ class AIOngeplandWerkMain extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Ongepland werk - Infra',
-                            destination: 'ongeplandwerkinfraachtergrond',
+                            destination: 'ai_infra_ter_beschikking',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Ongepland werk - Materieel',
-                            destination: 'ongeplandwerkmaterieelachtergrond',
+                            destination: 'ai_ongepland_werk_materieel',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Infra ter beschikking stellen',
-                            destination: 'infraterbeschikkingachtergrond',
+                            destination: 'ai_infra_ter_beschikking',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Toelaten werktreinen',
-                            destination: 'toelatenwerktreinenachtergrond',
+                            destination: 'ai_toelaten_werktreinen',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Inzetten railvoertuig (ICB)',
-                            destination: 'inzettenrailvoertuigachtergrond',
+                            destination: 'ai_inzetten_railvoertuig',
                           ),
                         ],
                       ),

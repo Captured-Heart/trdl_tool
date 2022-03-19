@@ -107,7 +107,7 @@ class _VerifyScreenState extends State<VerifyScreen> {
       timer.cancel();
       Navigator.pushReplacementNamed(
         context,
-        'login',
+        'login_screen',
       );
     }
   }

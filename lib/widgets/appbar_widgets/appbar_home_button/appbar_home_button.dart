@@ -6,7 +6,7 @@ class HomeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: () {
-        Navigator.pushReplacementNamed(context, 'homescreen');
+        Navigator.pushReplacementNamed(context, 'home_screen');
       },
       icon: const Icon(
         Icons.home,

@@ -55,42 +55,42 @@ class AIIncidentenInfraMain extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Werkwijze - Infra',
-                            destination: 'infra',
+                            destination: 'ww_infrastructuur_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Wissels',
-                            destination: 'wisselsincidentenachtergrond',
+                            destination: 'ai_incidenten_wissels_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Overwegen',
-                            destination: 'overwegenincidentenachtergrond',
+                            destination: 'ai_incidenten_overwegen_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Beveiliging',
-                            destination: 'beveiligingincidentenachtergrond',
+                            destination: 'ai_incidenten_beveilig_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Bovenleiding',
-                            destination: 'bovenleidingincidentenachtergrond',
+                            destination: 'ai_incidenten_bovenleiding_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Spoor',
-                            destination: 'spoorincidentenachtergrond',
+                            destination: 'ai_incidenten_spoor_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Kunstwerken',
-                            destination: 'kunstwerkenincidentenachtergrond',
+                            destination: 'ai_incidenten_kunstwerken_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Sectie',
-                            destination: 'sectieincidentenachtergrond',
+                            destination: 'ai_incidenten_sectie_main',
                           ),
                         ],
                       ),

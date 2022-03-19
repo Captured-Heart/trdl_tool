@@ -91,7 +91,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
           /*SKIP AND GO TO WELCOME_SCREEN*/
           Navigator.pushNamed(
             context,
-            'login',
+            'login_screen',
           );
         },
         label: Text(

@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class AIIncidentenMain extends StatelessWidget {
-  const AIIncidentenMain({Key? key}) : super(key: key);
+class AIIncidentenSectieMain extends StatelessWidget {
+  const AIIncidentenSectieMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class AIIncidentenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Incidenten',
+          title: 'Overwegen',
         ),
         actions: const [
           HomeButton(),
@@ -27,12 +27,12 @@ class AIIncidentenMain extends StatelessWidget {
                   child: Column(
                     children: const [
                       TitleText(
-                        title: 'Incidenten',
+                        title: 'Sectie',
                       ),
                       SizedBoxH(),
                       InsertImage(
                         image:
-                            'assets/images/achtergrond_info/aanpassen_plan/incidenten/incidenten_main.png',
+                            'assets/images/achtergrond_info/incidenten/overwegen_achtergrond_main.jpg',
                       ),
                       SizedBoxH(),
                     ],
@@ -54,32 +54,8 @@ class AIIncidentenMain extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           NavButton(
-                            buttontext: 'Incidenten - basisinformatie',
-                            destination: 'ai_incidenten',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Infra',
-                            destination: 'ai_incidenten_infra_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            //TODO: Add page
-                            buttontext: 'Materieel',
-                            destination: 'materieelincidentenachtergrond',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            //TODO: Add page
-                            buttontext: 'Mensen, dieren en voorwerpen',
-                            destination:
-                                'mensendierenvoorwerpenincidentenachtergrond',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            //TODO: Add page
-                            buttontext: 'Overige incidenten',
-                            destination: 'overigeincidentenachtergrond',
+                            buttontext: 'Werkwijze - Overwegen',
+                            destination: 'overwegen',
                           ),
                         ],
                       ),

@@ -24,7 +24,6 @@ export 'package:carousel_slider/carousel_slider.dart';
 /*MODULES AND SERVICES*/
 export 'package:trdl_tool/theme/app_theme.dart';
 export 'package:trdl_tool/core/welcome_items.dart';
-export 'package:trdl_tool/core/all_navigation.dart';
 export 'package:trdl_tool/core/all_strings.dart';
 export 'package:trdl_tool/core/all_questions.dart';
 export 'package:trdl_tool/core/all_constants.dart';
@@ -159,13 +158,13 @@ export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_we
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/controleren_wbi/ai_controleren_wbi.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/fouten_wbi/ai_fouten_wbi.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/aanvang_werkzaamheden/ai_aanvang_werkzaamheden.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/toelaten_werktreinen/toelaten_werktreinen.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/toelaten_werktreinen/ai_toelaten_werktreinen.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/geplande_werkzaamheden/werkzones/ai_werkzones.dart';
 
 /*ACHTERGROND INFORMATIE BIJZONDERHEDEN TREIN PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/ai_bijzonderheden_trein_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/bijzonderheden_trein_basis/ai_bijzonderheden_trein.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/vervoersregeling/vervoersregeling.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/vervoersregeling/ai_vervoersregeling.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/onjuiste_detectie/ai_onjuiste_detectie.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/bijzondere_aandacht/ai_bijzondere_aandacht.dart';
 
@@ -199,6 +198,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/kunstwerk
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/overwegen/ai_incidenten_overwegen_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/spoor/ai_incidenten_spoor_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/ai_incidenten_wissels_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/sectie/ai_incidenten_sectie_main.dart';
 
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/screens/proquiz_screens/proquiz_main.dart';

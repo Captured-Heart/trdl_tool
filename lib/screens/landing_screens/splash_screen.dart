@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
         const Duration(seconds: 3),
         () => Navigator.pushReplacementNamed(
           context,
-          'homescreen',
+          'home_screen',
         ),
       );
     }
@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
         const Duration(seconds: 3),
         () => Navigator.pushReplacementNamed(
           context,
-          'welcomescreen',
+          'welcome_screen',
         ),
       );
     }

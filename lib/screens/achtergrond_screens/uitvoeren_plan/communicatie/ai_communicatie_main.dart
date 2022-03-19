@@ -49,22 +49,23 @@ class AICommunicatieMain extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Communicatie - Werkwijze',
-                            destination: 'mondelingecommunicatie',
+                            destination: 'ww_communicatie_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Mondelinge (veiligheids)communicatie',
-                            destination: 'mondelingeveiligheidscommunicatie',
+                            destination:
+                                'ai_mondelinge_veiligheidscommunicatie',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Communicatiemiddelen - Basis',
-                            destination: 'communicatiemiddelenbasis',
+                            destination: 'ai_communicatiemiddelen',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Communicatiesysteem GSM-R - Basis',
-                            destination: 'communicatiesysteembasis',
+                            destination: 'ai_communicatiesysteem',
                           ),
                         ],
                       ),

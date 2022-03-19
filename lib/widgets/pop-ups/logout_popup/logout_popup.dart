@@ -31,7 +31,7 @@ showLogOutPopup(context) {
                         _auth.signOut();
                         Navigator.pushReplacementNamed(
                           context,
-                          'login',
+                          'login_screen',
                         );
                       },
                       child: const Text(

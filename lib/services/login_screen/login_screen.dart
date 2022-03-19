@@ -113,7 +113,7 @@ class _LoginState extends State<Login> {
                                     );
                                     Navigator.pushReplacementNamed(
                                       context,
-                                      'homescreen',
+                                      'home_screen',
                                     );
                                   }
                                   /*IF USER DID NOT CLICK VERIFICATION EMAIL*/
@@ -153,7 +153,7 @@ class _LoginState extends State<Login> {
                       /*GO TO REGISTER_SCREEN*/
                       Navigator.pushNamed(
                         context,
-                        'register',
+                        'register_screen',
                       );
                     },
                     child: const Text(
@@ -173,7 +173,7 @@ class _LoginState extends State<Login> {
                       /*GO TO WACHTWOORD_SCREEN*/
                       Navigator.pushNamed(
                         context,
-                        'wachtwoordscreen',
+                        'wachtwoord_screen',
                       );
                     },
                     child: const Text(

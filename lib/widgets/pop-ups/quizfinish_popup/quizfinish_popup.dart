@@ -68,7 +68,7 @@ finishQuizPopup(context) {
                         accumulatedPoints = 0;
                         doubleScorePercentage = 0.0;
                         Navigator.of(context).pushReplacementNamed(
-                          'proquizmain',
+                          'proquiz_main',
                         );
                       },
                       child: const Text(
@@ -88,7 +88,7 @@ finishQuizPopup(context) {
                         /*USER SELECTED NO*/
                         Navigator.pushReplacementNamed(
                           context,
-                          'homescreen',
+                          'home_screen',
                         );
                       },
                       child: const Text(

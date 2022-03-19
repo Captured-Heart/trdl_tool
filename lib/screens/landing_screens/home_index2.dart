@@ -22,14 +22,15 @@ class HomeIndex2 extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'In een latere update zal hier de ProQuiz verschijnen. Wil je je kennis testen in een zenuwslopende quiz? Ga je gang!',
+                        text:
+                            'In een latere update zal hier de ProQuiz verschijnen. Wil je je kennis testen in een zenuwslopende quiz? Ga je gang!',
                       ),
                       SizedBox(
                         height: 24.0,
                       ),
                       NavButton(
                         buttontext: 'Klik hier voor de testversie',
-                        destination: 'proquizmain',
+                        destination: 'proquiz_main',
                       ),
                       SizedBoxH(),
                     ],

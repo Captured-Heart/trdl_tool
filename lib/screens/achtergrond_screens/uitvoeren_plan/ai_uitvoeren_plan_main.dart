@@ -49,17 +49,17 @@ class AIUitvoerenPlanMain extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Uitvoeren plan - basis',
-                            destination: 'uitvoerenplanbasisachtergrond',
+                            destination: 'ai_uitvoeren_plan',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Geplande werkzaamheden',
-                            destination: 'geplandewerkzaamhedenachtergrond',
+                            destination: 'ai_geplande_werkzaamheden_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Bijzonderheden trein',
-                            destination: 'bijzonderhedentreinachtergrond',
+                            destination: 'ai_bijzonderheden_trein_main',
                           ),
                           SizedBoxH(),
                           NavButton(
@@ -69,15 +69,16 @@ class AIUitvoerenPlanMain extends StatelessWidget {
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Communicatie',
-                            destination: 'communicatieachtergrond',
+                            destination: 'ai_communicatie_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'NCBG',
-                            destination: 'ncbgachtergrond',
+                            destination: 'ai_ncbg',
                           ),
                           SizedBoxH(),
                           NavButton(
+                            //TODO: Add page!
                             buttontext: 'Dienstovergave',
                             destination: 'dienstovergaveachtergrond',
                           ),

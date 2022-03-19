@@ -64,12 +64,12 @@ class HomeIndex1 extends StatelessWidget {
                             SizedBoxW(),
                             NavButton(
                               buttontext: 'Aanpassen',
-                              destination: 'aanpassenplanachtergrond',
+                              destination: 'ai_aanpassen_plan_main',
                             ),
                             SizedBoxW(),
                             NavButton(
                               buttontext: 'Incidenten',
-                              destination: 'incidentenachtergrond',
+                              destination: 'ai_incidenten_main',
                             ),
                           ],
                         ),

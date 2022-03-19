@@ -49,12 +49,12 @@ class WWOngeplandWerkMain extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Materieel',
-                            destination: 'ww_materieel_ongepland_werk',
+                            destination: 'ww_ongepland_werk_materieel',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Infrastructuur',
-                            destination: 'ww_infra_ongepland_werk',
+                            destination: 'ww_ongepland_werk_infra',
                           ),
                         ],
                       ),

@@ -49,27 +49,27 @@ class AIAanpassenPlanMain extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Aanpassen plan - basis',
-                            destination: 'aanpassenplanbasisachtergrond',
+                            destination: 'ai_aanpassen_plan',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Stappenplan versperringen',
-                            destination: 'stappenplanversperringenachtergrond',
+                            destination: 'ai_stappenplan_versperringen',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Orderacceptatie',
-                            destination: 'orderacceptatieachtergrond',
+                            destination: 'ai_orderacceptatie',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Ongepland werk',
-                            destination: 'ongeplandwerkachtergrond',
+                            destination: 'ai_ongepland_werk_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Vertragingen',
-                            destination: 'vertragingenachtergrond',
+                            destination: 'ai_vertragingen',
                           ),
                         ],
                       ),

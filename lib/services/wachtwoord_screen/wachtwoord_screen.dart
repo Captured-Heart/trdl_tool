@@ -95,7 +95,7 @@ class _WachtwoordState extends State<Wachtwoord> {
                                   );
                                   Navigator.pushNamed(
                                     context,
-                                    'login',
+                                    'login_screen',
                                   );
                                 }
                                 /*CATCH ALL OTHER ERRORS*/
@@ -125,7 +125,7 @@ class _WachtwoordState extends State<Wachtwoord> {
                   TextButton(
                     onPressed: () {
                       /*BACK TO LOGIN_SCREEN*/
-                      Navigator.pushReplacementNamed(context, 'login');
+                      Navigator.pushReplacementNamed(context, 'login_screen');
                     },
                     child: const Text(
                       'Terug naar login',

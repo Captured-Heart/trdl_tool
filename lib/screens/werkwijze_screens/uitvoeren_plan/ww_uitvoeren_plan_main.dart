@@ -32,7 +32,8 @@ class WWUitvoerenPlanMain extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'De TRDL voert het actuele plan uit en stelt infra ter beschikking volgens vooraf gemaakte afspraken.',
+                        text:
+                            'De TRDL voert het actuele plan uit en stelt infra ter beschikking volgens vooraf gemaakte afspraken.',
                       ),
                     ],
                   ),
@@ -79,7 +80,7 @@ class WWUitvoerenPlanMain extends StatelessWidget {
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Dienstovergave',
-                            destination: 'dienstovergave',
+                            destination: 'ww_dienstovergave',
                           ),
                         ],
                       ),

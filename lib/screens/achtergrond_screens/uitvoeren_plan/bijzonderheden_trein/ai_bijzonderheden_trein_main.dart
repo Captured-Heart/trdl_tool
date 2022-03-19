@@ -49,22 +49,22 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Basisinformatie',
-                            destination: 'bijzonderhedentreinbasisachtergrond',
+                            destination: 'ai_bijzonderheden_trein',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Vervoersregeling',
-                            destination: 'vervoersregelingachtergrond',
+                            destination: 'ai_vervoersregeling',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Onjuiste detectie',
-                            destination: 'onjuistedetectieachtergrond',
+                            destination: 'ai_juiste_detectie',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Bijzondere aandacht',
-                            destination: 'bijzondereaandachtachtergrond',
+                            destination: 'ai_bijzondere_aandacht',
                           ),
                         ],
                       ),

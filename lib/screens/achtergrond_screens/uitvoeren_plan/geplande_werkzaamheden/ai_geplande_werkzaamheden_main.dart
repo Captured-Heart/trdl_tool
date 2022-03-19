@@ -49,33 +49,32 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Basisinformatie',
-                            destination:
-                                'geplandewerkzaamhedenbasisachtergrond',
+                            destination: 'ai_geplande_werkzaamheden',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Controleren WBI',
-                            destination: 'controlerenwbiachtergrond',
+                            destination: 'ai_controleren_wbi',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Fouten in de WBI',
-                            destination: 'foutenindewbiachtergrond',
+                            destination: 'ai_fouten_wbi',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Aanvang werkzaamheden',
-                            destination: 'aanvangwerkzaamhedenachtergrond',
+                            destination: 'ai_aanvang_werkzaamheden',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Toelaten werktreinen',
-                            destination: 'toelatenwerktreinenachtergrond',
+                            destination: 'ai_toelaten_werktreinen',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Werkzones',
-                            destination: 'werkzonesachtergrond',
+                            destination: 'ai_werkzones',
                           ),
                         ],
                       ),

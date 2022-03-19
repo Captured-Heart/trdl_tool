@@ -127,7 +127,7 @@ class _RegisterState extends State<Register> {
                                   );
                                   Navigator.pushReplacementNamed(
                                     context,
-                                    'verifyscreen',
+                                    'verify_screen',
                                   );
                                 }
                                 /*CHECK IF EMAIL IS EMPTY OR NOT PRORAIL*/
@@ -158,7 +158,7 @@ class _RegisterState extends State<Register> {
                                     );
                                     Navigator.pushReplacementNamed(
                                       context,
-                                      'verifyscreen',
+                                      'verify_screen',
                                     );
                                   }
                                   /*CATCH ALL OTHER ERRORS*/
@@ -202,7 +202,7 @@ class _RegisterState extends State<Register> {
                   TextButton(
                     onPressed: () {
                       /*BACK TO LOGIN_SCREEN*/
-                      Navigator.pushNamed(context, 'login');
+                      Navigator.pushNamed(context, 'login_screen');
                     },
                     child: const Text(
                       Strings.registerAlEenAccount,
