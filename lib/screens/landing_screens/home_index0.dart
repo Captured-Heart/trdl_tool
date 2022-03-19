@@ -89,17 +89,17 @@ class HomeIndex0 extends StatelessWidget {
                           children: const [
                             NavButton(
                               buttontext: 'Uitvoeren',
-                              destination: 'uitvoerenplan',
+                              destination: 'ww_uitvoeren_plan_main',
                             ),
                             SizedBoxW(),
                             NavButton(
                               buttontext: 'Aanpassen',
-                              destination: 'aanpassenplan',
+                              destination: 'ww_aanpassen_plan_main',
                             ),
                             SizedBoxW(),
                             NavButton(
                               buttontext: 'Incidenten',
-                              destination: 'incidenten',
+                              destination: 'ww_incidenten_main',
                             ),
                           ],
                         ),

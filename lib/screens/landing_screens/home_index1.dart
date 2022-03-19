@@ -59,7 +59,7 @@ class HomeIndex1 extends StatelessWidget {
                           children: const [
                             NavButton(
                               buttontext: 'Uitvoeren',
-                              destination: 'uitvoerenplanachtergrond',
+                              destination: 'ai_uitvoeren_plan_main',
                             ),
                             SizedBoxW(),
                             NavButton(
