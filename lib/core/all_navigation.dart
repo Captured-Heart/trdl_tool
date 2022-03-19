@@ -2,152 +2,151 @@ import 'package:trdl_tool/core/all_imports.dart';
 
 final Map<String, WidgetBuilder> customRoutes = {
   /*LANDING PAGES ROUTES*/
-  'welcomescreen': (context) => const WelcomeScreen(),
-  'login': (context) => const Login(),
-  'register': (context) => const Register(),
-  'wachtwoordscreen': (context) => const Wachtwoord(),
-  'verifyscreen': (context) => const VerifyScreen(),
-  'homescreen': (context) => const HomeScreen(),
+  'welcome_screen': (context) => const WelcomeScreen(),
+  'login_screen': (context) => const Login(),
+  'register_screen': (context) => const Register(),
+  'wachtwoord_screen': (context) => const Wachtwoord(),
+  'verify_screen': (context) => const VerifyScreen(),
+  'home_screen': (context) => const HomeScreen(),
 
   /*HOMEPAGES ROUTES*/
-  'homeindex0': (context) => const HomeIndex0(),
-  'homeindex1': (context) => const HomeIndex1(),
-  'homeindex2': (context) => const HomeIndex2(),
-  'homeindex3': (context) => const HomeIndex3(),
+  'home_index0': (context) => const HomeIndex0(),
+  'home_index1': (context) => const HomeIndex1(),
+  'home_index2': (context) => const HomeIndex2(),
+  'home_index3': (context) => const HomeIndex3(),
 
   /*UITVOEREN PLAN ROUTES*/
-  'uitvoerenplan': (context) => const UitvoerenPlan(),
-  'geplandewerkzaamheden': (context) => const GeplandeWerkzaamheden(),
-  'aanvangwerkzaamheden': (context) => const AanvangWerkzaamheden(),
-  'controlerenwbi': (context) => const ControlerenWbi(),
-  'foutenindewbi': (context) => const FoutenWBI(),
-  'bijzonderhedenrijwegen': (context) => const BijzonderhedenRijwegen(),
-  'rijwegenexploitatie': (context) => const RijwegenExploitatie(),
-  'kopvantrein': (context) => const KopvanTrein(),
-  'inzettenicb': (context) => const InzettenICB(),
-  'toelatenwerktreinen': (context) => const ToelatenWerktreinen(),
-  'bijzonderhedentrein': (context) => const BijzonderhedenTrein(),
-  'communicatie': (context) => const Communicatie(),
-  'mondelingecommunicatie': (context) => const MondelingeCommunicatie(),
-  'ncbg': (context) => const Ncbg(),
-  'dienstovergave': (context) => const Dienstovergave(),
+  'ww_uitvoeren_plan_main': (context) => const WWUitvoerenPlanMain(),
+  'ww_geplande_werkzaamheden_main': (context) =>
+      const WWGeplandeWerkzaamhedenMain(),
+  'ww_aanvang_werkzaamheden': (context) => const WWAanvangWerkzaamheden(),
+  'ww_controleren_wbi': (context) => const WWControlerenWBI(),
+  'ww_fouten_in_de_wbi': (context) => const WWFoutenWBI(),
+  'ww_bijzonderheden_rijwegen_main': (context) =>
+      const WWBijzonderhedenRijwegenMain(),
+  'ww_rijwegen_exploitatie': (context) => const WWRijwegenExploitatie(),
+  'ww_kop_van_trein_voorbij_sein': (context) =>
+      const WWKopVanTreinVoorbijSein(),
+  'ww_inzetten_icb': (context) => const WWInzettenICB(),
+  'ww_toelaten_werktreinen': (context) => const WWToelatenWerktreinen(),
+  'ww_bijzonderheden_trein': (context) => const WWBijzonderhedenTrein(),
+  'ww_communicatie_main': (context) => const WWCommunicatieMain(),
+  'ww_mondelinge_communicatie': (context) => const WWMondelingeCommunicatie(),
+  'ww_ncbg': (context) => const WWNcbg(),
+  'ww_dienstovergave': (context) => const WWDienstovergave(),
 
   /*AANPASSEN PLAN ROUTES*/
-  'aanpassenplan': (context) => const AanpassenPlan(),
-  'stappenplanversperringen': (context) => const StappenplanVersperringen(),
-  'ongeplandwerk': (context) => const OngeplandWerk(),
-  'orderacceptatie': (context) => const Orderacceptatie(),
-  'materieelongeplandwerk': (context) => const MaterieelOngeplandWerk(),
-  'infraongeplandwerk': (context) => const InfraOngeplandWerk(),
-  'vertragingen': (context) => const Vertragingen(),
+  'ww_aanpassenplan_main': (context) => const WWAanpassenPlanMain(),
+  'ww_ongepland_werk_main': (context) => const WWOngeplandWerkMain(),
+  'ww_ongepland_werk_infra': (context) => const WWOngeplandWerkInfra(),
+  'ww_ongepland_werk_materieel': (context) => const WWOngeplandWerkMaterieel(),
+  'ww_orderacceptatie': (context) => const WWOrderAcceptatie(),
+  'ww_stappenplan_versperringen': (context) =>
+      const WWStappenplanVersperringen(),
+  'ww_vertragingen': (context) => const WWVertragingen(),
 
   /*INCIDENTEN ROUTES*/
-  'incidenten': (context) => const Incidenten(),
-  'herroepensein': (context) => const HerroepenSein(),
-  'infra': (context) => const Infra(),
-  'derdendieren': (context) => const DerdenDieren(),
-  'materieelincidenten': (context) => const MaterieelIncidenten(),
-  'overigeincidenten': (context) => const OverigeIncidenten(),
-  'wissels': (context) => const Wissels(),
-  'wisseleindstand': (context) => const WisselEindstand(),
-  'opengeredenwissel': (context) => const OpengeredenWissel(),
-  'gestoordwissel': (context) => const GestoordWissel(),
-  'beschadigdwissel': (context) => const BeschadigdWissel(),
-  'overwegen': (context) => const Overwegen(),
-  'beveiliging': (context) => const Beveiliging(),
-  'tegenrijrichting': (context) => const TegenRijrichting(),
-  'veiligheidsstoringsein': (context) => const VeiligheidsstoringSein(),
-  'resetassenteller': (context) => const ResetAssenteller(),
-  'bovenleiding': (context) => const Bovenleiding(),
-  'procedureruclu': (context) => const ProcedureRuClu(),
-  'schakelenbovenleiding': (context) => const SchakelenBovenleiding(),
-  'schouwenbovenleiding': (context) => const SchouwenBovenleiding(),
-  'spoor': (context) => const Spoor(),
-  'gladspoor': (context) => const GladSpoor(),
-  'onregelmatighedenbaan': (context) => const OnregelmatighedenBaan(),
-  'roestvorming': (context) => const Roestvorming(),
-  'kunstwerken': (context) => const Kunstwerken(),
-  'aanrijdingviaduct': (context) => const AanrijdingViaduct(),
-  'storingbrug': (context) => const StoringBrug(),
-  'sectiestoring': (context) => const SectieStoring(),
-  'atbveiligheidsstoring': (context) => const ATBVeiligheid(),
-  'hotbox': (context) => const HotBox(),
-  'gevaarlijkestoffen1': (context) => const GevaarlijkeStoffen1(),
-  'gevaarlijkestoffen2': (context) => const GevaarlijkeStoffen2(),
-  'milieumeldingen': (context) => const MilieuMeldingen(),
-  'vasterem': (context) => const VasteRem(),
-  'gestrandetrein': (context) => const GestrandeTrein(),
-  'brand': (context) => const Brand(),
-  'weersomstandigheden': (context) => const Weersomstandigheden(),
-  'ontruimenpost': (context) => const OntruimenPost(),
-  'stroomstoring': (context) => const Stroomstoring(),
-  'wisselsvrijmaken': (context) => const WisselsVrijmaken(),
-  'stspassage': (context) => const STSPassage(),
-  'stilleggentreindienst': (context) => const StilleggenTreindienst(),
-  'afhandelensysteemstoringen': (context) => const AfhandelenSysteemstoringen(),
+  'ww_incidenten_main': (context) => const WWIncidentenMain(),
+  'ww_derden_dieren': (context) => const WWDerdenDieren(),
+  'ww_herroepen_sein': (context) => const WWHerroepenSein(),
+  'ww_infrastructuur_main': (context) => const WWInfraMain(),
+  'ww_beveiliging_main': (context) => const WWBeveiligingMain(),
+  'ww_reset_assenteller': (context) => const WWResetAssenteller(),
+  'ww_tegen_rijrichting': (context) => const WWTegenRijrichting(),
+  'ww_veiligheidsstoring_sein': (context) => const WWVeiligheidsstoringSein(),
+  'ww_bovenleiding_main': (context) => const WWBovenleidingMain(),
+  'ww_procedure_ruclu': (context) => const WWProcedureRuClu(),
+  'ww_schakelen_bovenleiding': (context) => const WWSchakelenBovenleiding(),
+  'ww_schouwen_bovenleiding': (context) => const WWSchouwenBovenleiding(),
+  'ww_kunstwerken_main': (context) => const WWKunstwerkenMain(),
+  'ww_aanrijding_viaduct': (context) => const WWAanrijdingViaduct(),
+  'ww_storing_brug': (context) => const WWStoringBrug(),
+  'ww_overwegen': (context) => const WWOverwegen(),
+  'ww_sectiestoring': (context) => const WWSectieStoring(),
+  'ww_spoor_main': (context) => const WWSpoorMain(),
+  'ww_glad_spoor': (context) => const WWGladSpoor(),
+  'ww_onregelmatigheden_baan': (context) => const WWOnregelmatighedenBaan(),
+  'ww_roestvorming': (context) => const WWRoestvorming(),
+  'ww_wissels_main': (context) => const WWWisselsMain(),
+  'ww_wissel_eindstand': (context) => const WWWisselEindstand(),
+  'ww_opengereden_wissel': (context) => const WWOpengeredenWissel(),
+  'ww_gestoord_wissel': (context) => const WWGestoordWissel(),
+  'ww_beschadigd_wissel': (context) => const WWBeschadigdWissel(),
+  'ww_materieel_main': (context) => const WWMaterieelMain(),
+  'ww_atb_veiligheidsstoring': (context) => const WWAtbVeiligheidsstoring(),
+  'ww_gevaarlijke_stoffen1': (context) => const WWGevaarlijkeStoffen1(),
+  'ww_gevaarlijke_stoffen2': (context) => const WWGevaarlijkeStoffen2(),
+  'ww_milieumeldingen': (context) => const WWMilieuMeldingen(),
+  'ww_hotbox': (context) => const WWHotBox(),
+  'ww_vaste_rem': (context) => const WWVasteRem(),
+  'ww_overige_incidenten_main': (context) => const WWOverigeIncidentenMain(),
+  'ww_afhandelen_systeemstoringen': (context) =>
+      const WWAfhandelenSysteemstoringen(),
+  'ww_brand': (context) => const WWBrand(),
+  'ww_gestrande_trein': (context) => const WWGestrandeTrein(),
+  'ww_ontruimen_post': (context) => const WWOntruimenPost(),
+  'ww_stilleggen_treindienst': (context) => const WWStilleggenTreindienst(),
+  'ww_stroomstoring': (context) => const WWStroomstoring(),
+  'ww_sts_passage': (context) => const WWStsPassage(),
+  'ww_weersomstandigheden': (context) => const WWWeersomstandigheden(),
+  'ww_wissels_vrijmaken': (context) => const WWWisselsVrijmaken(),
 
   /*ACHTERGRONDINFO UITVOEREN PLAN ROUTES*/
-  'uitvoerenplanachtergrond': (context) => const UitvoerenPlanAchtergrond(),
-  'uitvoerenplanbasisachtergrond': (context) =>
-      const UitvoerenPlanBasisAchtergrond(),
-  'geplandewerkzaamhedenachtergrond': (context) =>
-      const GeplandeWerkzaamhedenAchtergrond(),
-  'geplandewerkzaamhedenbasisachtergrond': (context) =>
-      const GeplandeWerkzaamhedenBasisAchtergrond(),
-  'controlerenwbiachtergrond': (context) => const ControlerenWBIAchtergrond(),
-  'foutenindewbiachtergrond': (context) => const FoutenWBIAchtergrond(),
-  'aanvangwerkzaamhedenachtergrond': (context) =>
-      const AanvangWerkzaamhedenAchtergrond(),
-  'toelatenwerktreinenachtergrond': (context) =>
-      const ToelatenWerktreinenAchtergrond(),
-  'werkzonesachtergrond': (context) => const WerkzonesAchtergrond(),
-  'bijzonderhedentreinachtergrond': (context) =>
-      const BijzonderhedenTreinAchtergrond(),
-  'bijzonderhedentreinbasisachtergrond': (context) =>
-      const BijzonderhedenTreinBasisAchtergrond(),
-  'vervoersregelingachtergrond': (context) =>
-      const TreinenVervoersregelingAchtergrond(),
-  'onjuistedetectieachtergrond': (context) =>
-      const OnjuisteDetectieAchtergrond(),
-  'bijzondereaandachtachtergrond': (context) =>
-      const BijzondereAandachtAchtergrond(),
-  'bijzonderhedenrijwegenachtergrond': (context) =>
-      const BijzonderhedenRijwegenAchtergrond(),
-  'inzettenrailvoertuigachtergrond': (context) =>
-      const InzettenRailvoertuigAchtergrond(),
-  'rijwegenopbouwplanachtergrond': (context) =>
-      const OpbouwPlanBasisAchtergrond(),
-  'rijwegenwerkenmetplanachtergrond': (context) =>
-      const RijwegenPlanschermBasis(),
-  'rijwegenariachtergrond': (context) => const RijwegenARIAchtergrond(),
-  'communicatieachtergrond': (context) => const CommunicatieAchtergrond(),
-  'mondelingeveiligheidscommunicatie': (context) =>
-      const MondelingeVeiligheidAchtergrond(),
-  'communicatiemiddelenbasis': (context) =>
-      const CommunicatieMiddelenAchtergrond(),
-  'communicatiesysteembasis': (context) =>
-      const CommunicatieSysteemAchtergrond(),
-  'ncbgachtergrond': (context) => const NCBGAchtergrond(),
+  'ai_uitvoeren_plan_main': (context) => const AIUitvoerenPlanMain(),
+  'ai_bijzonderheden_rijwegen_main': (context) =>
+      const AIBijzonderhedenRijwegenMain(),
+  'ai_inzetten_railvoertuig': (context) => const AIInzettenRailvoertuig(),
+  'ai_rijwegen_ari': (context) => const AIRijwegenARI(),
+  'ai_rijwegen_planopbouw': (context) => const AIRijwegenPlanopbouw(),
+  'ai_rijwegen_planscherm': (context) => const AIRijwegenPlanscherm(),
+  'ai_bijzonderheden_trein_main': (context) =>
+      const AIBijzonderhedenTreinMain(),
+  'ai_bijzondere_aandacht': (context) => const AIBijzondereAandacht(),
+  'ai_bijzonderheden_trein': (context) => const AIBijzonderhedenTrein(),
+  'ai_onjuiste_detectie': (context) => const AIOnjuisteDetectie(),
+  'ai_vervoersregeling': (context) => const AIVervoersregeling(),
+  'ai_communicatie_main': (context) => const AICommunicatieMain(),
+  'ai_communicatiemiddelen': (context) => const AICommmunicatieMiddelen(),
+  'ai_communicatiesysteem': (context) => const AICommunicatieSysteem(),
+  'ai_mondelinge_veiligheidscommunicatie': (context) =>
+      const AIMondelingeVeiligheidsCommunicatie(),
+  'ai_geplande_werkzaamheden_main': (context) =>
+      const AIGeplandeWerkzaamhedenMain(),
+  'ai_aanvang_werkzaamheden': (context) => const AIAanvangWerkzaamheden(),
+  'ai_controleren_wbi': (context) => const AIControlerenWBI(),
+  'ai_fouten_wbi': (context) => const AIFoutenWBI(),
+  'ai_geplande_werkzaamheden': (context) => const AIGeplandeWerkzaamheden(),
+  'ai_toelaten_werktreinen': (context) => const AIToelatenWerktreinen(),
+  'ai_werkzones': (context) => const AIWerkzones(),
+  'ai_ncbg': (context) => const AINcbg(),
+  'ai_uitvoeren_plan': (context) => const AIUitvoerenPlan(),
 
   /*ACHTERGRONDINFO AANPASSEN PLAN ROUTES*/
-  'aanpassenplanachtergrond': (context) => const AanpassenPlanAchtergrond(),
-  'aanpassenplanbasisachtergrond': (context) =>
-      const AanpassenPlanBasisAchtergrond(),
-  'stappenplanversperringenachtergrond': (context) =>
-      const StappenplanVersperringenAchtergrond(),
-  'orderacceptatieachtergrond': (context) => const OrderacceptatieAchtergrond(),
-  'ongeplandwerkachtergrond': (context) => const OngeplandWerkAchtergrond(),
-  'ongeplandwerkinfraachtergrond': (context) =>
-      const OngeplandWerkInfraAchtergrond(),
-  'ongeplandwerkmaterieelachtergrond': (context) =>
-      const OngeplandWerkMaterieelAchtergrond(),
-  'infraterbeschikkingachtergrond': (context) =>
-      const InfraTerBeschikkingAchtergrond(),
-  'vertragingenachtergrond': (context) => const VertragingenAchtergrond(),
+  'ai_aanpassen_plan_main': (context) => const AIAanpassenPlanMain(),
+  'ai_aanpassen_plan': (context) => const AIAanpassenPlan(),
+  'ai_ongepland_werk_main': (context) => const AIOngeplandWerkMain(),
+  'ai_infra_ter_beschikking': (context) => const AIInfraTerBeschikking(),
+  'ai_ongepland_werk_infra': (context) => const AIOngeplandWerkInfra(),
+  'ai_ongepland_werk_materieel': (context) => const AIOngeplandWerkMaterieel(),
+  'ai_vertragingen': (context) => const AIVertragingen(),
+  'ai_orderacceptatie': (context) => const AIOrderacceptatie(),
+  'ai_stappenplan_versperringen': (context) =>
+      const AIStappenplanVersperringen(),
 
   /*ACHTERGRONDINFO INCIDENTEN ROUTES*/
-  'incidentenachtergrond': (context) => const IncidentenAchtergrond(),
-  'incidentenachtergrondbasis': (context) => const IncidentenAchtergrondBasis(),
+  'ai_incidenten_main': (context) => const AIIncidentenMain(),
+  'ai_incidenten': (context) => const AIIncidenten(),
+  'ai_incidenten_infra_main': (context) => const AIIncidentenInfraMain(),
+  'ai_incidenten_beveiliging_main': (context) =>
+      const AIIncidentenBeveiligingMain(),
+  'ai_incidenten_bovenleiding_main': (context) =>
+      const AIIncidentenBovenleidingMain(),
+  'ai_incidenten_kunstwerken_main': (context) =>
+      const AIIncidentenKunstwerkenMain(),
+  'ai_incidenten_overwegen_main': (context) =>
+      const AIIncidentenOverwegenMain(),
+  'ai_incidenten_spoor_main': (context) => const AIIncidentenSpoorMain(),
+  'ai_incidenten_wissels_main': (context) => const AIIncidentenWisselsMain(),
 
   /*PROQUIZ ROUTES*/
   'proquizmain': (context) => const ProQuiz(),

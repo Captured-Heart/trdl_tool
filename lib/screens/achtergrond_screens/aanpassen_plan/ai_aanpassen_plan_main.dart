@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class AanpassenPlanAchtergrond extends StatelessWidget {
-  const AanpassenPlanAchtergrond({Key? key}) : super(key: key);
+class AIAanpassenPlanMain extends StatelessWidget {
+  const AIAanpassenPlanMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +87,8 @@ class AanpassenPlanAchtergrond extends StatelessWidget {
                     children: const [
                       SizedBoxH(),
                       InsertImage(
-                        image: 'assets/images/achtergrond_info/aanpassen_plan/info_bord.png',
+                        image:
+                            'assets/images/achtergrond_info/aanpassen_plan/info_bord.png',
                       ),
                       SizedBoxH(),
                     ],

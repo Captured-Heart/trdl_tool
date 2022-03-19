@@ -179,19 +179,26 @@ export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicati
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/ncbg/ai_ncbg.dart';
 
 /*ACHTERGROND INFORMATIE AANPASSEN PLAN PAGES*/
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/aanpassen_plan_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/aanpassen_plan_basis/aanpassen_plan_achtergrond.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/stappenplan_versperringen/stappenplan_versperringen_achtergrond.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/orderacceptatie/orderacceptatie_achtergrond.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_infra/ongepland_werk_infra_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_materieel/ongepland_werk_materieel_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/infra_ter_beschikking/infra_ter_beschikking_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/vertragingen/vertragingen_achtergrond.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ai_aanpassen_plan_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/aanpassen_plan_basis/ai_aanpassen_plan.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/stappenplan_versperringen/ai_stappenplan_versperringen.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/orderacceptatie/ai_orderacceptatie.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ai_ongepland_werk_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_infra/ai_ongepland_werk_infra.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_materieel/ai_ongepland_werk_materieel.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/infra_ter_beschikking/ai_infra_ter_beschikking.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/vertragingen/ai_vertragingen.dart';
 
 /*ACHTERGROND INFORMATIE INCIDENTEN PAGES*/
-export 'package:trdl_tool/screens/achtergrond_screens/incidenten/incidenten_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/incidenten/incidenten_basis/incidenten_achtergrond_basis.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/ai_incidenten_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/incidenten_basis/ai_incidenten.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/ai_incidenten_infra_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/beveiliging/ai_incidenten_beveiliging_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/bovenleiding/ai_incidenten_bovenleiding_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/kunstwerken/ai_incidenten_kunstwerken_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/overwegen/ai_incidenten_overwegen_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/spoor/ai_incidenten_spoor_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/ai_incidenten_wissels_main.dart';
 
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/screens/proquiz_screens/proquiz_main.dart';
