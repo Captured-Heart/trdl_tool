@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeControlerenWbi extends StatelessWidget {
-  const WerkwijzeControlerenWbi({Key? key}) : super(key: key);
+class WWControlerenWBI extends StatelessWidget {
+  const WWControlerenWBI({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

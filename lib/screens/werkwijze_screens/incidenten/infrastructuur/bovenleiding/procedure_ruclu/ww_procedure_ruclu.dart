@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeProcedureRuClu extends StatelessWidget {
-  const WerkwijzeProcedureRuClu({Key? key}) : super(key: key);
+class WWProcedureRuClu extends StatelessWidget {
+  const WWProcedureRuClu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

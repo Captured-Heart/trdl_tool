@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeInfra extends StatelessWidget {
-  const WerkwijzeInfra({Key? key}) : super(key: key);
+class WWInfraMain extends StatelessWidget {
+  const WWInfraMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

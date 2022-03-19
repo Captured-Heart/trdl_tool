@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeAanpassenPlan extends StatelessWidget {
-  const WerkwijzeAanpassenPlan({Key? key}) : super(key: key);
+class WWAanpassenPlanMain extends StatelessWidget {
+  const WWAanpassenPlanMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

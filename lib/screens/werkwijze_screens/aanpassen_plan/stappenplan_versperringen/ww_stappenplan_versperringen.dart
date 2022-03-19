@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeStappenplanVersperringen extends StatelessWidget {
-  const WerkwijzeStappenplanVersperringen({Key? key}) : super(key: key);
+class WWStappenplanVersperringen extends StatelessWidget {
+  const WWStappenplanVersperringen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

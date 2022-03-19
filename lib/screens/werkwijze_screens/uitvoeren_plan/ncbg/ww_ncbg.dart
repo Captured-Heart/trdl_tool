@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeNcbg extends StatelessWidget {
-  const WerkwijzeNcbg({Key? key}) : super(key: key);
+class WWNcbg extends StatelessWidget {
+  const WWNcbg({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

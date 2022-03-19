@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeResetAssenteller extends StatelessWidget {
-  const WerkwijzeResetAssenteller({Key? key}) : super(key: key);
+class WWResetAssenteller extends StatelessWidget {
+  const WWResetAssenteller({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

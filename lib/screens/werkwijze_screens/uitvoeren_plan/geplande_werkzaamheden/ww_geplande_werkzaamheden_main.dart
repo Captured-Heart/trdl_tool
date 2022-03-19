@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeGeplandeWerkzaamheden extends StatelessWidget {
-  const WerkwijzeGeplandeWerkzaamheden({Key? key}) : super(key: key);
+class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
+  const WWGeplandeWerkzaamhedenMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

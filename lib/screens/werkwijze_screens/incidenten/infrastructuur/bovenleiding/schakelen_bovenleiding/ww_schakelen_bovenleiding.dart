@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeSchakelenBovenleiding extends StatelessWidget {
-  const WerkwijzeSchakelenBovenleiding({Key? key}) : super(key: key);
+class WWSchakelenBovenleiding extends StatelessWidget {
+  const WWSchakelenBovenleiding({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

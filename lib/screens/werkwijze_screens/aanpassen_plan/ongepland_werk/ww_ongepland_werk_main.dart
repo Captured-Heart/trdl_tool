@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeOngeplandWerk extends StatelessWidget {
-  const WerkwijzeOngeplandWerk({Key? key}) : super(key: key);
+class WWOngeplandWerkMain extends StatelessWidget {
+  const WWOngeplandWerkMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

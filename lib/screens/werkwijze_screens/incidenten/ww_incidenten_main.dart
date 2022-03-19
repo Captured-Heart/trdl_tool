@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeIncidenten extends StatelessWidget {
-  const WerkwijzeIncidenten({Key? key}) : super(key: key);
+class WWIncidentenMain extends StatelessWidget {
+  const WWIncidentenMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

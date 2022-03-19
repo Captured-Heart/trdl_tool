@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeTegenRijrichting extends StatelessWidget {
-  const WerkwijzeTegenRijrichting({Key? key}) : super(key: key);
+class WWTegenRijrichting extends StatelessWidget {
+  const WWTegenRijrichting({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeVeiligheidsstoringSein extends StatelessWidget {
-  const WerkwijzeVeiligheidsstoringSein({Key? key}) : super(key: key);
+class WWVeiligheidsstoringSein extends StatelessWidget {
+  const WWVeiligheidsstoringSein({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

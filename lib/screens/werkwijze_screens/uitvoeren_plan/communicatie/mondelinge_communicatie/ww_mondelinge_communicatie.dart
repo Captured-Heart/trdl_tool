@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeMondelingeCommunicatie extends StatelessWidget {
-  const WerkwijzeMondelingeCommunicatie({Key? key}) : super(key: key);
+class WWMondelingeCommunicatie extends StatelessWidget {
+  const WWMondelingeCommunicatie({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

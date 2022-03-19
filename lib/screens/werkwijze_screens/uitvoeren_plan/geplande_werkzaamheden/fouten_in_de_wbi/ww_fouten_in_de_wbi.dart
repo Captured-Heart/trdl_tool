@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeFoutenWBI extends StatelessWidget {
-  const WerkwijzeFoutenWBI({Key? key}) : super(key: key);
+class WWFoutenWBI extends StatelessWidget {
+  const WWFoutenWBI({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

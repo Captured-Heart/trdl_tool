@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeDerdenDieren extends StatelessWidget {
-  const WerkwijzeDerdenDieren({Key? key}) : super(key: key);
+class WWDerdenDieren extends StatelessWidget {
+  const WWDerdenDieren({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

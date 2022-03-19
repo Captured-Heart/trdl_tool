@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeKopvanTrein extends StatelessWidget {
-  const WerkwijzeKopvanTrein({Key? key}) : super(key: key);
+class WWKopVanTreinVoorbijSein extends StatelessWidget {
+  const WWKopVanTreinVoorbijSein({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

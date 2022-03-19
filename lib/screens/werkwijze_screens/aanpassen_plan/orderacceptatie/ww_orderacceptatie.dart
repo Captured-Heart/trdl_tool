@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeOrderacceptatie extends StatelessWidget {
-  const WerkwijzeOrderacceptatie({Key? key}) : super(key: key);
+class WWOrderAcceptatie extends StatelessWidget {
+  const WWOrderAcceptatie({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

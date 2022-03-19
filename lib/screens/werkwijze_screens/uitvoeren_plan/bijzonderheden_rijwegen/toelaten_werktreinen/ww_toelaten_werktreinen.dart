@@ -1,7 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-class WerkwijzeToelatenWerktreinen extends StatelessWidget {
-  const WerkwijzeToelatenWerktreinen({Key? key}) : super(key: key);
+class WWToelatenWerktreinen extends StatelessWidget {
+  const WWToelatenWerktreinen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
