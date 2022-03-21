@@ -34,13 +34,7 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Procesleiding kent een mogelijkheid om rijwegen automatisch in te stellen: automatische rijweg instelling of de afkorting ARI. ARI is software dat op iedere treindienstleider werkplek draait. Je kunt ervoor kiezen om ARI aan of uit te zetten. Als de software \'vastloopt\' kun je die vanaf een andere computer, de PBH++ (Post Beheer Systeem), uitzetten. Om de software daarna opnieuw op te starten, heb je hulp van buitenaf nodig.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'In dit deel van de achtergrondinformatie vind je onder andere  hoe ARI werkt, welke voorwaarden ARI nodig heeft om rijwegen in te stellen en welke triggers ARI gebruikt.',
+                            'Procesleiding kent een mogelijkheid om rijwegen automatisch in te stellen: automatische rijweg instelling of de afkorting ARI. ARI is software dat op iedere TRDL werkplek draait. Je kunt ervoor kiezen om ARI aan of uit te zetten. Als de software \'vastloopt\' kun je die vanaf een andere computer, de PBH++ (Post Beheer Systeem), uitzetten. Om de software daarna opnieuw op te starten, heb je hulp van buitenaf nodig.\n\nIn dit deel van de achtergrondinformatie vind je onder andere  hoe ARI werkt, welke voorwaarden ARI nodig heeft om rijwegen in te stellen en welke triggers ARI gebruikt.',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -66,13 +60,7 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Voordat procesleiding werd geïntroduceerd werden rijwegen handmatig door de treindienstleider ingesteld. Bij grotere werkplekken was er vaak een assistent treindienstleider die hielp met het instellen van de rijwegen en soms ook de omroep verzorgde.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Toen procesleiding begin jaren \'90 werd geïntroduceerd, werkte ARI nog niet perfect, maar in de loop van de jaren is ARI steeds slimmer geworden.',
+                            'Voordat procesleiding werd geïntroduceerd werden rijwegen handmatig door de TRDL ingesteld. Bij grotere werkplekken was er vaak een assistent TRDL die hielp met het instellen van de rijwegen en soms ook de omroep verzorgde.\n\nToen procesleiding begin jaren \'90 werd geïntroduceerd, werkte ARI nog niet perfect, maar in de loop van de jaren is ARI steeds slimmer geworden.',
                       ),
                     ],
                   ),
@@ -92,12 +80,11 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'ARI is een programma dat draait op iedere treindienstleiders werkplek. Het geeft opdrachten aan de beveiliging om rijwegen in te stellen, net zoals treindienstleiders en assistent treindienstleiders vroeger handmatig deden.',
+                            'ARI is een programma dat draait op iedere TRDL werkplek. Het geeft opdrachten aan de beveiliging om rijwegen in te stellen, net zoals TRDL en assistent TRDL vroeger handmatig deden.',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Voorwaarden',
+                      SubTitleText(
+                        subtitletext: 'Voorwaarden',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -108,18 +95,7 @@ class AIRijwegenARI extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- De rijweg moet beschikbaarheid zijn;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Het juiste treinnummer moet aanwezig zijn;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- De insteltijd moet binnen het tijd- of wachtvenster liggen;',
+                        text: '- De rijweg moet beschikbaarheid zijn;\n\n- Het juiste treinnummer moet aanwezig zijn;\n\n- De insteltijd moet binnen het tijd- of wachtvenster liggen;',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -128,9 +104,8 @@ class AIRijwegenARI extends StatelessWidget {
                             'Als aan een van deze voorwaarden niet voldaan wordt, zal ARI geen opdracht geven om de rijweg in te stellen.',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Beschikbaarheid',
+                      SubTitleText(
+                        subtitle: 'Beschikbaarheid',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -146,12 +121,7 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 2,
                         text:
-                            '* Tijdelijke onbeschikbaarheid kan worden veroorzaakt door een ingestelde kruisende rijweg of een spoorbezetting. ARI ziet daarin geen onderscheid tussen een trein of sectiestoring.',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text:
-                            '* Bij tijdelijke onbeschikbaarheid van de rijweg zal ARI  de rijweg oneindig in behandeling houden. De planregel blijft zeegroen.',
+                            '* Tijdelijke onbeschikbaarheid kan worden veroorzaakt door een ingestelde kruisende rijweg of een spoorbezetting. ARI ziet daarin geen onderscheid tussen een trein of sectiestoring.\n\n* Bij tijdelijke onbeschikbaarheid van de rijweg zal ARI  de rijweg oneindig in behandeling houden. De planregel blijft zeegroen.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -181,35 +151,23 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'In procesleiding zal ARI bij het aanbreken van de insteltijd 1 minuut actief blijven zoeken op een bepaalde plaats (trigger) of een treinnummer aanwezig is. De kleur van de planregel is dan groen. Indien ARI het treinnummer niet vindt, wordt ARI uitgezet.  De planregel is niet meer groen. Om de zoekperiode van ARI te verlengen zijn er ‘vensters’ ontwikkeld. Deze vensters worden wacht- en tijdvenster genoemd. Hieronder volgt de specifieke werking van deze vensters.',
+                            'In procesleiding zal ARI bij het aanbreken van de insteltijd 1 minuut actief blijven zoeken op een bepaalde plaats (trigger) of een treinnummer aanwezig is. De kleur van de planregel is dan groen. Indien ARI het treinnummer niet vindt, wordt ARI uitgezet.  De planregel is niet meer groen. Om de zoekperiode van ARI te verlengen zijn er \'vensters\' ontwikkeld. Deze vensters worden wacht- en tijdvenster genoemd. Hieronder volgt de specifieke werking van deze vensters.',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Tijdvenster',
+                      SubTitleText(
+                        subtitle: 'Tijdvenster',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Het ARI-tijdvenster kan door jou per PPLG ingesteld worden tot een maximum van 15 minuten. Deze 15 minuten gelden zowel plus als min rondom de insteltijd van een planregel. Dit houdt in dat ARI als het tijdvenster is ingesteld op 15, 15 minuten voor en 15 minuten na insteltijd blijft zoeken naar het juiste treinnummer.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Het tijdvenster heeft twee functies:',
+                            'Het ARI-tijdvenster kan door jou per PPLG ingesteld worden tot een maximum van 15 minuten. Deze 15 minuten gelden zowel plus als min rondom de insteltijd van een planregel. Dit houdt in dat ARI als het tijdvenster is ingesteld op 15, 15 minuten voor en 15 minuten na insteltijd blijft zoeken naar het juiste treinnummer.\n\nHet tijdvenster heeft twee functies:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
-                            '- Zorgen dat ARI het ingesteld aantal minuten plus/min de insteltijd aan blijft voor die planregel;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Op aankondigingssecties of TROTS posities het aantal minuten rondom de insteltijd zoekt naar de trein op TROTSnummer.',
+                            '- Zorgen dat ARI het ingesteld aantal minuten plus/min de insteltijd aan blijft voor die planregel;\n\n- Op aankondigingssecties of TROTS posities het aantal minuten rondom de insteltijd zoekt naar de trein op TROTSnummer.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -218,9 +176,8 @@ class AIRijwegenARI extends StatelessWidget {
                             'Het tijdvenster geldt voor rijwegen vanaf de vrije baan met een D-, K- of A-activiteit.',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Wachtvenster',
+                      SubTitleText(
+                        subtitle: 'Wachtvenster',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -234,9 +191,8 @@ class AIRijwegenARI extends StatelessWidget {
                             'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/wachtvenster.png',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Waarom een wachtvenster',
+                      SubTitleText(
+                        subtitle: 'Waarom een wachtvenster',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -265,9 +221,8 @@ class AIRijwegenARI extends StatelessWidget {
                             'Er zijn meerder manieren om ARI te activeren, de zogenaamde triggers. Er is een onderscheid tussen triggers op de vrije baan en het emplacement.',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Vrije baan',
+                      SubTitleText(
+                        subtitle: 'Vrije baan',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -305,9 +260,8 @@ class AIRijwegenARI extends StatelessWidget {
                             'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/eindseinReservering.png',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext:
+                      SubTitleText(
+                        subtitle:
                             'ARI aanzetten voor treinen die hun trigger zijn gepasseerd',
                       ),
                       SizedBoxH(),
@@ -342,9 +296,8 @@ class AIRijwegenARI extends StatelessWidget {
                             'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/kleurenPlanregels.png',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Instelminuut',
+                      SubTitleText(
+                        subtitle: 'Instelminuut',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -355,24 +308,11 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Als een planregel uitstaat voor ARI en de insteltijd is nog niet aangebroken, dan is de planregel wit;',
+                            '- Als een planregel uitstaat voor ARI en de insteltijd is nog niet aangebroken, dan is de planregel wit;\n\n- Als de insteltijd is aangebroken wordt de planregel geel gedurende de instelminuut;\n\n- De planregel wordt rood nadat de instelminuut verstreken is.',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Als de insteltijd is aangebroken wordt de planregel geel gedurende de instelminuut;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- De planregel wordt rood nadat de instelminuut verstreken is.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Oranje planregel',
+                      SubTitleText(
+                        subtitle: 'Oranje planregel',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -388,31 +328,13 @@ class AIRijwegenARI extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- De TRDL zelf (bijv. door herroepen);',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Procesleiding (bijv. een categorie A-melding);',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Een storing in procesleiding (bijv. uitval ARI)',
+                        text: '- De TRDL zelf (bijv. door herroepen);\n\n- Procesleiding (bijv. een categorie A-melding);\n\n- Een storing in procesleiding (bijv. uitval ARI)',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'De planregel is oranje gekleurd met het originele \'VAN\' en \'NAAR\' spoor. Je zult deze planregel dus altijd moeten aanpassen.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Het is niet mogelijk om een oranje planregel in te stellen vanuit je planscherm zonder deze eerst te muteren. Als je het toch doet, krijg je een foutmelding:',
+                            'De planregel is oranje gekleurd met het originele \'VAN\' en \'NAAR\' spoor. Je zult deze planregel dus altijd moeten aanpassen.\n\nHet is niet mogelijk om een oranje planregel in te stellen vanuit je planscherm zonder deze eerst te muteren. Als je het toch doet, krijg je een foutmelding:',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -434,17 +356,7 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 2,
                         text:
-                            '* Afhankelijk van de insteltijd is het mogelijk de planregel weer aan ARI aan te bieden. Voordeel van deze werkwijze is dat de volgorde vanuit het plan wordt bewaakt. M.a.w. zolang deze planregel bovenaan in het plan staat zal ARI geen andere rijwegen instellen naar hetzelfde eindspoor.',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text:
-                            '* Wordt een oranje planregel na ophogen van de insteltijd in het mutatievenster teruggeplaatst in het plan dan zullen alleen de zeegroene planregels naar hetzelfde eindspoor door ARI worden uitgezet waarvan nog geen enkele seinstap is ingesteld. Dit om ongewenste volgordewisselingen te voorkomen.',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text:
-                            '* De planregels waarvan minimaal een seinstap is ingesteld naar hetzelfde eindspoor worden door ARI afgebroken en worden oranje getoond.',
+                            '* Afhankelijk van de insteltijd is het mogelijk de planregel weer aan ARI aan te bieden. Voordeel van deze werkwijze is dat de volgorde vanuit het plan wordt bewaakt. M.a.w. zolang deze planregel bovenaan in het plan staat zal ARI geen andere rijwegen instellen naar hetzelfde eindspoor.\n\n* Wordt een oranje planregel na ophogen van de insteltijd in het mutatievenster teruggeplaatst in het plan dan zullen alleen de zeegroene planregels naar hetzelfde eindspoor door ARI worden uitgezet waarvan nog geen enkele seinstap is ingesteld. Dit om ongewenste volgordewisselingen te voorkomen.\n\n* De planregels waarvan minimaal een seinstap is ingesteld naar hetzelfde eindspoor worden door ARI afgebroken en worden oranje getoond.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -458,27 +370,14 @@ class AIRijwegenARI extends StatelessWidget {
                             '* Nadeel van deze werkwijze is dat de planregel uit het plan verdwijnt en naar het bedienvenster wordt verplaatst en ARI andere rijwegen kan instellen naar een gezamenlijke eindspoor. Om dit te voorkomen is het uitzetten van ARI voor opvolgende planregels verstandig.',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Voordelen oranje planregel',
+                      SubTitleText(
+                        subtitle: 'Voordelen oranje planregel',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
-                            '- Je wordt erop gewezen dat van een planregel de rijweginstelling is afgebroken;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Je houdt overzicht in zijn plan, omdat er geen planregels uit het plan verdwijnen en spontaan naar het bedienscherm worden verplaatst;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- De oranje planregels worden omdat zij in het plan blijven staan nog steeds meegenomen bij de bepaling van de volgorde naar een spoor, dus er vindt geen onbedoelde volgordewisseling plaats.',
+                            '- Je wordt erop gewezen dat van een planregel de rijweginstelling is afgebroken;\n\n- Je houdt overzicht in zijn plan, omdat er geen planregels uit het plan verdwijnen en spontaan naar het bedienscherm worden verplaatst;\n\n- De oranje planregels worden omdat zij in het plan blijven staan nog steeds meegenomen bij de bepaling van de volgorde naar een spoor, dus er vindt geen onbedoelde volgordewisseling plaats.',
                       ),
                     ],
                   ),
@@ -501,9 +400,8 @@ class AIRijwegenARI extends StatelessWidget {
                             'ARI kan ook rijden op zicht (ROZ) rijwegen automatisch instellen. Omdat hier risico’s aan zitten, zijn daar een aantal voorwaarden aan verbonden. Deze zijn vastgelegd in de PBH++.',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext:
+                      SubTitleText(
+                        subtitle:
                             'Voorwaarden voor het aanzetten van ROZ in ARI',
                       ),
                       SizedBoxH(),
@@ -515,112 +413,30 @@ class AIRijwegenARI extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- De planregel moet aangezet zijn voor ARI;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Er zijn geen openstaande klaarmeldingen, tijdelijke niet-beschikbaarheid (m.u.v. de laatste seinstap), enz.;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Het ROZ-tijdvenster is nog niet verstreken;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Bij oprijden naar ongecontroleerd gebied mag er geen sectie bezetting zijn tussen het rangeerdeel en daar waar de rijweg naar ongecontroleerd spoor leidt;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Bij combineren moet het NAAR-spoor bezet zijn door de trein(en) waarmee gecombineerd moet worden, en deze moeten voldoende lang stilstaan. Dit wordt gecontroleerd door te kijken of de sectiebezetting op het ROZ-spoor en vlak ervoor, ongewijzigd blijft gedurende de tijd die de functioneel beheerder heeft ingesteld. Indien nodig wacht ARI tot hieraan voldaan is.',
+                        text: '- De planregel moet aangezet zijn voor ARI;\n\n- Er zijn geen openstaande klaarmeldingen, tijdelijke niet-beschikbaarheid (m.u.v. de laatste seinstap), enz.;\n\n- Het ROZ-tijdvenster is nog niet verstreken;\n\n- Bij oprijden naar ongecontroleerd gebied mag er geen sectie bezetting zijn tussen het rangeerdeel en daar waar de rijweg naar ongecontroleerd spoor leidt;\n\n- Bij combineren moet het NAAR-spoor bezet zijn door de trein(en) waarmee gecombineerd moet worden, en deze moeten voldoende lang stilstaan. Dit wordt gecontroleerd door te kijken of de sectiebezetting op het ROZ-spoor en vlak ervoor, ongewijzigd blijft gedurende de tijd die de functioneel beheerder heeft ingesteld. Indien nodig wacht ARI tot hieraan voldaan is.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'De treinnummers die al aanwezig zijn moeten overeenkomen met de materieelrelatie uit het procesplanrijwegen.',
+                            'De treinnummers die al aanwezig zijn moeten overeenkomen met de materieelrelatie uit het procesplanrijwegen.\n\nEen ROZ-planregel kan worden aangezet voor ARI als:',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text:
+                            '- Het NAAR-spoor een spoor is dat door de functioneel beheerder als ROZ-spoor is opgegeven;\n\n- Het een planregel voor een A- of R-activiteit is;\n\n- De rijweg is bedoeld om naar ongecontroleerd gebied te rijden of om te combineren;\n\n- Bij combineren moeten alle aanvoerende bijzonderheden_trein (rangeerbewegingen) in dezelfde richting aankomen en mag iedere trein (rangeerbeweging) slechts één keer voorkomen als aanvoerende activiteit in de materieelrelaties die voor de in te stellen planregel gelden.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Een ROZ-planregel kan worden aangezet voor ARI als:',
+                            'Als niet aan alle voorwaarden is voldaan stelt ARI een ROZ-rijweg niet in. Er verschijnt dan een pop-up venster met de volgende tekst:\n\nWaarschuwing - Instellen rijwegen - ARI stelt ROZ-planregel: ...1 niet in, omdat ...2.\n\nBij ...1 wordt de betreffende planregel vermeld, en bij ...2 de reden:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text:
-                            '- Het NAAR-spoor een spoor is dat door de functioneel beheerder als ROZ-spoor is opgegeven;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Het een planregel voor een A- of R-activiteit is;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- De rijweg is bedoeld om naar ongecontroleerd gebied te rijden of om te combineren;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Bij combineren moeten alle aanvoerende bijzonderheden_trein (rangeerbewegingen) in dezelfde richting aankomen en mag iedere trein (rangeerbeweging) slechts één keer voorkomen als aanvoerende activiteit in de materieelrelaties die voor de in te stellen planregel gelden.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Als niet aan alle voorwaarden is voldaan stelt ARI een ROZ-rijweg niet in. Er verschijnt dan een pop-up venster met de volgende tekst:',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Waarschuwing - Instellen rijwegen - ARI stelt ROZ-planregel: ...1 niet in, omdat ...2.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Bij ...1 wordt de betreffende planregel vermeld, en bij ...2 de reden:',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Het ROZ-tijdvenster verstreken is;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Er zich een bezetting voordoet in de rijweg;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Er zich geen bezetting voordoet op het ROZ-spoor;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Er een verkeerd treinnummer op het ROZ-spoor aanwezig is;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- De bijbehorende materieelrelatie en/of daarmee gerelateerde planregels gewijzigd zijn.',
+                        text: '- Het ROZ-tijdvenster verstreken is;\n\n- Er zich een bezetting voordoet in de rijweg;\n\n- Er zich geen bezetting voordoet op het ROZ-spoor;\n\n- Er een verkeerd treinnummer op het ROZ-spoor aanwezig is;\n\n- De bijbehorende materieelrelatie en/of daarmee gerelateerde planregels gewijzigd zijn.',
                       ),
                     ],
                   ),
@@ -676,13 +492,7 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Een deadlock is een situatie waarbij twee bijzonderheden_trein tegenover elkaar staan en hinderen in de vervolgrijweg of elkaar opsluiten en hinderen in de vervolgrijweg. Een ongewenste situatie, waarbij één van de bijzonderheden_trein altijd moet keren.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'De situatie kan ontstaan, omdat ARI samengestelde rijwegen gefaseerd instelt. Om dit te voorkomen, zijn enkele controles ingebracht.',
+                            'Een deadlock is een situatie waarbij twee treinen tegenover elkaar staan en hinderen in de vervolgrijweg of elkaar opsluiten en hinderen in de vervolgrijweg. Een ongewenste situatie, waarbij één van de treinen altijd moet keren.\n\nDe situatie kan ontstaan, omdat ARI samengestelde rijwegen gefaseerd instelt. Om dit te voorkomen, zijn enkele controles ingebracht.',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -693,30 +503,17 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Deadlock: Door de lengte van de bijzonderheden_trein worden zij als het ware \'opgesloten\'.',
+                            'Deadlock: Door de lengte van de treinen worden zij als het ware \'opgesloten\'.',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Deadlock preventie',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'In procesleiding is de beschikbaarheidscontrole geoptimaliseerd om te voorkomen dat er door ARI een rijweg wordt ingesteld naar een bedienbare baan waar al een trein in de tegengestelde richting onderweg is.',
+                      SubTitleText(
+                        subtitle: 'Deadlock preventie',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Wanneer ARI een planregel in behandeling neemt, controleert ARI alle reeds in behandeling zijnde planregels op route en via sporen. Als ARI een deadlocksituatie signaleert, zet hij deze nieuw in behandeling te nemen planregel uit ARI. De planregel wordt rood en er wordt een categorie B melding weergegeven in het bedienscherm. De seinsymbolen in tegengestelde richting zullen oranje tonen.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'De beschikbaarheidscontrole voorkomt dat ARI een rijweg instelt naar een bedienbare baan waar al een trein in tegengestelde richting onderweg is. Dit speelt met name over de PPLG-grenzen heen. Bij gedeelde planregels kan deadlockpreventie ook werken.',
+                            'In procesleiding is de beschikbaarheidscontrole geoptimaliseerd om te voorkomen dat er door ARI een rijweg wordt ingesteld naar een bedienbare baan waar al een trein in de tegengestelde richting onderweg is.\n\nWanneer ARI een planregel in behandeling neemt, controleert ARI alle reeds in behandeling zijnde planregels op route en via sporen. Als ARI een deadlocksituatie signaleert, zet hij deze nieuw in behandeling te nemen planregel uit ARI. De planregel wordt rood en er wordt een categorie B melding weergegeven in het bedienscherm. De seinsymbolen in tegengestelde richting zullen oranje tonen.\n\nDe beschikbaarheidscontrole voorkomt dat ARI een rijweg instelt naar een bedienbare baan waar al een trein in tegengestelde richting onderweg is. Dit speelt met name over de PPLG-grenzen heen. Bij gedeelde planregels kan deadlockpreventie ook werken.',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -730,9 +527,8 @@ class AIRijwegenARI extends StatelessWidget {
                             'De rijweg voor trein 1 is ingesteld naar spoor 750. Trein 2 moet vertrekken naar spoor BA via spoor 750. ARI zal in verband met de dealock preventie de planregel voor trein 2 uitzetten en een deadlock melding genereren.',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Deadlocks en handmatige rijweginstelling',
+                      SubTitleText(
+                        subtitle: 'Deadlocks en handmatige rijweginstelling',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -746,9 +542,8 @@ class AIRijwegenARI extends StatelessWidget {
                             'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/ari_basis/deadLock3.png',
                       ),
                       SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Deadlockpreventie en verhinderingen',
+                      SubTitleText(
+                        subtitle: 'Deadlockpreventie en verhinderingen',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -784,18 +579,11 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Sommige bijzonderheden_trein hebben een dusdanige lengte, dat keren op een spoor betekent dat ze zowel de A als de B zijde van dat betreffende spoor bezetten. Het systeem TROTS is hier niet op gebouwd. TROTS kan namelijk geen treinnummers omnummeren als een treinnummer op spoor A binnenkomt en op spoor B vertrekt. Om dit op te lossen is de functie \'Lange kerende bijzonderheden_trein\' toegepast in procesleiding.',
+                            'Sommige bijzonderheden_trein hebben een dusdanige lengte, dat keren op een spoor betekent dat ze zowel de A als de B zijde van dat betreffende spoor bezetten. Het systeem TROTS is hier niet op gebouwd. TROTS kan namelijk geen treinnummers omnummeren als een treinnummer op spoor A binnenkomt en op spoor B vertrekt. Om dit op te lossen is de functie \'Lange kerende bijzonderheden_trein\' toegepast in procesleiding.\n\nVoor het instellen van een rijweg zoekt ARI naar het TROTS-nummer op het vertrekspoor. LKT is een functionaliteit in Procesleiding die het mogelijk maakt voor ARI om het treinnummer te \'vinden\' op een ander spoor dan het vertrekspoor aangegeven in het plan. Met deze functionaliteit kijkt ARI ook naar andere TROTS vensters binnen een spoorgroep. Voorwaarde is dat deze spoorgroep moet zijn aangemaakt in de PBH++.',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Voor het instellen van een rijweg zoekt ARI naar het TROTS-nummer op het vertrekspoor. LKT is een functionaliteit in Procesleiding die het mogelijk maakt voor ARI om het treinnummer te \'vinden\' op een ander spoor dan het vertrekspoor aangegeven in het plan. Met deze functionaliteit kijkt ARI ook naar andere TROTS vensters binnen een spoorgroep. Voorwaarde is dat deze spoorgroep moet zijn aangemaakt in de PBH++.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'LKT-controles',
+                      SubTitleText(
+                        subtitle: 'LKT-controles',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -807,25 +595,7 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Tussen de kop van de trein en het vertreksein zijn in de vertrekrichting geen seinen (met dezelfde richting);',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Tussen de kop van de trein en het vertreksein zijn er geen wissels;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- De kop van de trein bevindt zich op een sectie zonder wissels;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Er geldt een stilstand criterium (15-999 sec).',
+                            '- Tussen de kop van de trein en het vertreksein zijn in de vertrekrichting geen seinen (met dezelfde richting)\n\n- Tussen de kop van de trein en het vertreksein zijn er geen wissels;\n\n- De kop van de trein bevindt zich op een sectie zonder wissels;\n\n- Er geldt een stilstand criterium (15-999 sec).',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -838,9 +608,9 @@ class AIRijwegenARI extends StatelessWidget {
                             'Een voorbeeld: trein 4419 komt binnen op spoor 704B en vertrekt van spoor 704A als 4420, dit in verband met de lengte van de trein. ARI zou in dit geval geen rijweg instellen, omdat op spoor 704A geen treinnummer gevonden wordt. Als in de PBH++ spoor 704A en 704B geconfigureerd is als spoorgroep vindt ARI het treinnummer wel.',
                       ),
                       SizedBoxH(),
-                      BoldText(
+                      SubTitleText(
                         indents: 0,
-                        boldtext: 'Spoorbezettingsgrafiek',
+                        subtitle: 'Spoorbezettingsgrafiek',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -870,9 +640,9 @@ class AIRijwegenARI extends StatelessWidget {
                             'Een trein die gedeeltelijk, ten onrechte of opnieuw langs een perron tot stilstand komt, levert risico’s op voor persoonlijke ongevallen. Een trein die stil komt te staan in een wisselstraat kost veel infracapaciteit. Daarnaast stelt ILT ook eisen ter voorkoming van het doorschieten van tot stilstand komende bijzonderheden_trein voor kruisende en \'intakkende\' sporen. Beide situaties worden voorkomen door het configureren van lokaal specifieke instelvoorschriften. Deze instelvoorschriften worden in de PBH++ door de functioneel beheerder in ARI vastgelegd.',
                       ),
                       SizedBoxH(),
-                      BoldText(
+                      SubTitleText(
                         indents: 0,
-                        boldtext: 'Wat is een instelvoorschrift',
+                        subtitle: 'Wat is een instelvoorschrift',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -881,57 +651,26 @@ class AIRijwegenARI extends StatelessWidget {
                             'Een instelvoorschrift is een voorschrift waaraan ARI moet voldoen om een rijweg in te stellen. Met een instelvoorschrift wordt aangegeven dat een verzameling opeenvolgende seinstappen (enkelvoudige rijwegen) binnen een samengestelde rijweg integraal (in zijn geheel) moet worden ingesteld.',
                       ),
                       SizedBoxH(),
-                      BoldText(
+                      SubTitleText(
                         indents: 0,
-                        boldtext:
+                        subtitle:
                             'Hoe worden instelvoorschriften geconfigureerd',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
-                            '- Een instelvoorschrift wordt gedefinieerd voor een bepaalde rijrichting. Het geldt alleen als de volgorde van sporen in het instelvoorschrift overeenkomt met de afrijdvolgorde van de sporen van de samengestelde rijweg;',
+                            '- Een instelvoorschrift wordt gedefinieerd voor een bepaalde rijrichting. Het geldt alleen als de volgorde van sporen in het instelvoorschrift overeenkomt met de afrijdvolgorde van de sporen van de samengestelde rijweg;\n\n- Een instelvoorschrift geldt alleen als het gehele instelvoorschrift binnen de samengestelde rijweg ligt;\n\n- Alle instelvoorschriften die binnen de samengestelde rijweg liggen dienen gerespecteerd te worden;\n\n- Als er overlappende instelvoorschriften binnen de samengestelde rijweg liggen, dienen die behandeld te worden alsof het één instelvoorschrift betreft dat het hele gebied afdekt (er mag ten gevolge van het gefaseerd instellen dus nergens gestopt worden binnen dit gebied).\n\n- Als er instelvoorschriften zijn die aan elkaar grenzen, dienen die als afzonderlijke instelvoorschriften behandeld te worden (er mag ten gevolge van het gefaseerd instellen dus gestopt worden op de grens).',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Een instelvoorschrift geldt alleen als het gehele instelvoorschrift binnen de samengestelde rijweg ligt;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Alle instelvoorschriften die binnen de samengestelde rijweg liggen dienen gerespecteerd te worden;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Als er overlappende instelvoorschriften binnen de samengestelde rijweg liggen, dienen die behandeld te worden alsof het één instelvoorschrift betreft dat het hele gebied afdekt (er mag ten gevolge van het gefaseerd instellen dus nergens gestopt worden binnen dit gebied).',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Als er instelvoorschriften zijn die aan elkaar grenzen, dienen die als afzonderlijke instelvoorschriften behandeld te worden (er mag ten gevolge van het gefaseerd instellen dus gestopt worden op de grens).',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Voorbeelden:',
+                      SubTitleText(
+                        subtitle: 'Voorbeelden:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Planregel voor trein 1 van spoor 1A naar spoor DA.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Trein 2 staat stil op spoor 22. Zonder instelvoorschrift zou rijweg uit de stand stop komen tot spoor 2b. Trein 1 komt dan tot stilstand langs perron spoor 2b. Dit is ongewenst! Om dat te voorkomen, moet er een instelvoorschrift komen van spoor 2b naar spoor 22.',
+                            'Planregel voor trein 1 van spoor 1A naar spoor DA.\n\nTrein 2 staat stil op spoor 22. Zonder instelvoorschrift zou rijweg uit de stand stop komen tot spoor 2b. Trein 1 komt dan tot stilstand langs perron spoor 2b. Dit is ongewenst! Om dat te voorkomen, moet er een instelvoorschrift komen van spoor 2b naar spoor 22.',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -942,7 +681,7 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Planregel voor trein 1 van spoor 1A naar spoor DA. Instelvoorschrift: 2b – 22.​​​​​​​ De planregel is in behandeling (zeegroen) echter de rijweg wordt niet ingesteld.',
+                            'Planregel voor trein 1 van spoor 1A naar spoor DA. Instelvoorschrift: 2b - DA. De planregel is in behandeling (zeegroen) echter de rijweg wordt niet ingesteld.',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -979,42 +718,13 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Een treindienstleider kan een aantal instellingen voor ARI op zijn werkplek wijzigen, bijvoorbeeld het aantal in te stellen seinstappen per planregel en het tijdvenster.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'De overige instellingen worden door de functioneel beheerder van de post gedaan in PBH++ (post beheersysteem). Hier kunnen triggers, tijdvenster, seinstappen per PPLG, Lange Kerende Trein, instelvoorschriften en instellingen voor ABT worden aangepast.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'De PBH++ kent meerdere inlogniveaus met bijbehorende autorisaties (van \'laag\' naar \'hoog\'):',
+                            'Een TRDL kan een aantal instellingen voor ARI op zijn werkplek wijzigen, bijvoorbeeld het aantal in te stellen seinstappen per planregel en het tijdvenster.\n\nDe overige instellingen worden door de functioneel beheerder van de post gedaan in PBH++ (post beheersysteem). Hier kunnen triggers, tijdvenster, seinstappen per PPLG, Lange Kerende Trein, instelvoorschriften en instellingen voor ABT worden aangepast.\n\nDe PBH++ kent meerdere inlogniveaus met bijbehorende autorisaties (van \'laag\' naar \'hoog\'):',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
-                            '- Treindienstleider - kan alle instellingen zien, maar niet muteren. Alleen ARI noodstop kan bediend worden op dit niveau;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- OvD-V - kan alle instellingen zien, kan alleen WBI beheer en Planbeheer bedienen (én ARI noodstop);',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- FUB - kan alle instellingen zien én muteren;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Technisch beheer (CSD) - kan alle instellingen zien én muteren.',
+                            '- Treindienstleider - kan alle instellingen zien, maar niet muteren. Alleen ARI noodstop kan bediend worden op dit niveau;\n\n- OvD-V - kan alle instellingen zien, kan alleen WBI beheer en Planbeheer bedienen (én ARI noodstop);\n\n- FUB - kan alle instellingen zien én muteren;\n\n- Technisch beheer (CSD) - kan alle instellingen zien én muteren.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -1024,13 +734,7 @@ class AIRijwegenARI extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Locatie PBH++;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Inlog en wachtwoord voor TRDL - deze zijn bekend bij de OvD-V en beschikbaar nabij de PBH++.',
+                        text: '- Locatie PBH++;\n\n- Inlog en wachtwoord voor TRDL - deze zijn bekend bij de OvD-V en beschikbaar nabij de PBH++.',
                       ),
                     ],
                   ),
@@ -1050,29 +754,17 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'ARI is software die draait op iedere treindienstleiders werkplek. Zoals iedere software kan ook ARI-software vastlopen, maar er kunnen ook situaties ontstaan waarbij het noodzakelijk wordt om ARI te stoppen. Denk hierbij aan uitval van de muis, uitval van het planscherm etc. In deze gevallen kun je in de PBH++ ARI-noodstop toepassen. ARI-noodstop pas je alleen toe in situaties waarbij je ARI niet om de \'normale\' manier kunt uitzetten.',
+                            'ARI is software die draait op iedere TRDL werkplek. Zoals iedere software kan ook ARI-software vastlopen, maar er kunnen ook situaties ontstaan waarbij het noodzakelijk wordt om ARI te stoppen. Denk hierbij aan uitval van de muis, uitval van het planscherm etc. In deze gevallen kun je in de PBH++ ARI-noodstop toepassen. ARI-noodstop pas je alleen toe in situaties waarbij je ARI niet om de \'normale\' manier kunt uitzetten.\n\nAls ARI-noodstop wordt toegepast, wordt het programma gestopt en automatisch herstart. De planregels worden dan weer wit (ARI moet weer per PPLG worden aangezet) Er verschijnt een categorie B-melding.',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Als ARI-noodstop wordt toegepast, wordt het programma gestopt en automatisch herstart. De planregels worden dan weer wit (ARI moet weer per PPLG worden aangezet) Er verschijnt een categorie B-melding.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: 'Handelingen in de PBH++',
+                      SubTitleText(
+                        subtitle: 'Handelingen in de PBH++',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
-                            '- Log in met gebruikersnaam en wachtwoord voor de TRDL – zijn bekend bij de OvD-V;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Selecteer ARI Noodstop (bovenin rechts).',
+                            '- Log in met gebruikersnaam en wachtwoord voor de TRDL - zijn bekend bij de OvD-V;\n\n- Selecteer ARI Noodstop (bovenin rechts).',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -1083,29 +775,13 @@ class AIRijwegenARI extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Klik op het juiste werkpleknummer – het nummer van de werkplek vind je rechtsachter op het bureaublad van de te stoppen werkplek;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Klik op \'Stop ARI op werkplek\'.',
+                            '- Klik op het juiste werkpleknummer - het nummer van de werkplek vind je rechtsachter op het bureaublad van de te stoppen werkplek;\n\n- Klik op \'Stop ARI op werkplek\'.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Je hebt nu ARI uitgezet voor de betreffende werkplek.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Je kan nu zelf het moment kiezen om ARI weer aan te zetten op deze werkplek.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Meld de storing aan bij het OBI.',
+                            'Je hebt nu ARI uitgezet voor de betreffende werkplek.\n\nJe kan nu zelf het moment kiezen om ARI weer aan te zetten op deze werkplek.\n\nMeld de storing aan bij het OBI.',
                       ),
                     ],
                   ),
