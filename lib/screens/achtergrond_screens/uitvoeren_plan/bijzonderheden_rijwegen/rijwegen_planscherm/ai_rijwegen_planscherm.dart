@@ -95,6 +95,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                             'Een enkelvoudige rijweg bestaat uit een enkele seinstap. Een seinstap is een rijweginstelling van sein tot het eerstvolgende sein in dezelfde rijrichting.',
                       ),
                       SizedBoxH(),
+                      SubTitleText(
                         subtitle: '- Samengestelde rijwegen',
                       ),
                       BodyText(
@@ -527,47 +528,13 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Je krijgt een melding dat een spoor is ingekort met een rode vlag/rode lamp of een afsluitbord;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Het spoor is bezet;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Het spoor is bezet met een voertuig, zonder dat er zekerheid is van een juiste treindetectie;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Het spoor is gedurende langere tijd niet bereden;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Er is sprake van ongecontroleerd spoor.',
+                            '- Je krijgt een melding dat een spoor is ingekort met een rode vlag/rode lamp of een afsluitbord;\n\n- Het spoor is bezet;\n\n- Het spoor is bezet met een voertuig, zonder dat er zekerheid is van een juiste treindetectie;\n\n- Het spoor is gedurende langere tijd niet bereden;\n\n- Er is sprake van ongecontroleerd spoor.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Stel een rijweg met ROZ pas in nadat je de zekerheid hebt dat er geen andere beweging op het spoor in uitvoering is.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Heb je een samengestelde RijdenOpZicht-rijweg in het Procesplan en stel je deze in zijn geheel in 1x in, dan wordt alleen de laatste seinstap met ROZ ingesteld. Wordt een samengestelde ROZ-rijweg stapsgewijs ingesteld, dan wordt eveneens alleen de laatste seinstap met ROZ ingesteld.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'N.B.: Wordt een samengestelde ROZ-rijweg via het bedienscherm ingegeven, dan zijn alle seinstappen ROZ.',
+                            'Stel een rijweg met ROZ pas in nadat je de zekerheid hebt dat er geen andere beweging op het spoor in uitvoering is.\n\nHeb je een samengestelde RijdenOpZicht-rijweg in het Procesplan en stel je deze in zijn geheel in 1x in, dan wordt alleen de laatste seinstap met ROZ ingesteld. Wordt een samengestelde ROZ-rijweg stapsgewijs ingesteld, dan wordt eveneens alleen de laatste seinstap met ROZ ingesteld.\n\nN.B.: Wordt een samengestelde ROZ-rijweg via het bedienscherm ingegeven, dan zijn alle seinstappen ROZ.',
                       ),
                     ],
                   ),

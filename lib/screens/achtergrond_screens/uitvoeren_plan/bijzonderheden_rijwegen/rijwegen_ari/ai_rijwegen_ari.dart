@@ -84,7 +84,7 @@ class AIRijwegenARI extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       SubTitleText(
-                        subtitletext: 'Voorwaarden',
+                        subtitle: 'Voorwaarden',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -95,7 +95,8 @@ class AIRijwegenARI extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- De rijweg moet beschikbaarheid zijn;\n\n- Het juiste treinnummer moet aanwezig zijn;\n\n- De insteltijd moet binnen het tijd- of wachtvenster liggen;',
+                        text:
+                            '- De rijweg moet beschikbaarheid zijn;\n\n- Het juiste treinnummer moet aanwezig zijn;\n\n- De insteltijd moet binnen het tijd- of wachtvenster liggen;',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -328,7 +329,8 @@ class AIRijwegenARI extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- De TRDL zelf (bijv. door herroepen);\n\n- Procesleiding (bijv. een categorie A-melding);\n\n- Een storing in procesleiding (bijv. uitval ARI)',
+                        text:
+                            '- De TRDL zelf (bijv. door herroepen);\n\n- Procesleiding (bijv. een categorie A-melding);\n\n- Een storing in procesleiding (bijv. uitval ARI)',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -413,7 +415,8 @@ class AIRijwegenARI extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- De planregel moet aangezet zijn voor ARI;\n\n- Er zijn geen openstaande klaarmeldingen, tijdelijke niet-beschikbaarheid (m.u.v. de laatste seinstap), enz.;\n\n- Het ROZ-tijdvenster is nog niet verstreken;\n\n- Bij oprijden naar ongecontroleerd gebied mag er geen sectie bezetting zijn tussen het rangeerdeel en daar waar de rijweg naar ongecontroleerd spoor leidt;\n\n- Bij combineren moet het NAAR-spoor bezet zijn door de trein(en) waarmee gecombineerd moet worden, en deze moeten voldoende lang stilstaan. Dit wordt gecontroleerd door te kijken of de sectiebezetting op het ROZ-spoor en vlak ervoor, ongewijzigd blijft gedurende de tijd die de functioneel beheerder heeft ingesteld. Indien nodig wacht ARI tot hieraan voldaan is.',
+                        text:
+                            '- De planregel moet aangezet zijn voor ARI;\n\n- Er zijn geen openstaande klaarmeldingen, tijdelijke niet-beschikbaarheid (m.u.v. de laatste seinstap), enz.;\n\n- Het ROZ-tijdvenster is nog niet verstreken;\n\n- Bij oprijden naar ongecontroleerd gebied mag er geen sectie bezetting zijn tussen het rangeerdeel en daar waar de rijweg naar ongecontroleerd spoor leidt;\n\n- Bij combineren moet het NAAR-spoor bezet zijn door de trein(en) waarmee gecombineerd moet worden, en deze moeten voldoende lang stilstaan. Dit wordt gecontroleerd door te kijken of de sectiebezetting op het ROZ-spoor en vlak ervoor, ongewijzigd blijft gedurende de tijd die de functioneel beheerder heeft ingesteld. Indien nodig wacht ARI tot hieraan voldaan is.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -436,7 +439,8 @@ class AIRijwegenARI extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Het ROZ-tijdvenster verstreken is;\n\n- Er zich een bezetting voordoet in de rijweg;\n\n- Er zich geen bezetting voordoet op het ROZ-spoor;\n\n- Er een verkeerd treinnummer op het ROZ-spoor aanwezig is;\n\n- De bijbehorende materieelrelatie en/of daarmee gerelateerde planregels gewijzigd zijn.',
+                        text:
+                            '- Het ROZ-tijdvenster verstreken is;\n\n- Er zich een bezetting voordoet in de rijweg;\n\n- Er zich geen bezetting voordoet op het ROZ-spoor;\n\n- Er een verkeerd treinnummer op het ROZ-spoor aanwezig is;\n\n- De bijbehorende materieelrelatie en/of daarmee gerelateerde planregels gewijzigd zijn.',
                       ),
                     ],
                   ),
@@ -609,7 +613,6 @@ class AIRijwegenARI extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       SubTitleText(
-                        indents: 0,
                         subtitle: 'Spoorbezettingsgrafiek',
                       ),
                       SizedBoxH(),
@@ -641,7 +644,6 @@ class AIRijwegenARI extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       SubTitleText(
-                        indents: 0,
                         subtitle: 'Wat is een instelvoorschrift',
                       ),
                       SizedBoxH(),
@@ -652,7 +654,6 @@ class AIRijwegenARI extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       SubTitleText(
-                        indents: 0,
                         subtitle:
                             'Hoe worden instelvoorschriften geconfigureerd',
                       ),
@@ -734,7 +735,8 @@ class AIRijwegenARI extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Locatie PBH++;\n\n- Inlog en wachtwoord voor TRDL - deze zijn bekend bij de OvD-V en beschikbaar nabij de PBH++.',
+                        text:
+                            '- Locatie PBH++;\n\n- Inlog en wachtwoord voor TRDL - deze zijn bekend bij de OvD-V en beschikbaar nabij de PBH++.',
                       ),
                     ],
                   ),

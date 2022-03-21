@@ -158,7 +158,8 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                       ),
                       BodyText(
                         indents: 1,
-                        text: '! = Er is een nog niet afgehandelde vertraging;\n\n+ = Plan is gewijzigd door een treindienstleider;\n\n? = Er is voor deze trein een \'uitblijven seinpassage\' opgetreden.',
+                        text:
+                            '! = Er is een nog niet afgehandelde vertraging;\n\n+ = Plan is gewijzigd door een treindienstleider;\n\n? = Er is voor deze trein een \'uitblijven seinpassage\' opgetreden.',
                       ),
                       SizedBoxH(),
                       SubTitleText(
@@ -175,7 +176,8 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                       ),
                       BodyText(
                         indents: 1,
-                        text: '- D = Doorkomst;\n\n- A = Aankomst;\n\n- V = Vertrek;\n\n- K = Korte stop;\n\n- R = Rangeerbeweging (eventueel gevolgd door een rijwegvolgnummer).',
+                        text:
+                            '- D = Doorkomst;\n\n- A = Aankomst;\n\n- V = Vertrek;\n\n- K = Korte stop;\n\n- R = Rangeerbeweging (eventueel gevolgd door een rijwegvolgnummer).',
                       ),
                       SizedBoxH(),
                       SubTitleText(
@@ -201,7 +203,8 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                       ),
                       BodyText(
                         indents: 1,
-                        text: '- *Leeg* = Exact;\n\n- V = Voorwaardelijke vertraging;\n\n- N = Nader bericht.',
+                        text:
+                            '- *Leeg* = Exact;\n\n- V = Voorwaardelijke vertraging;\n\n- N = Nader bericht.',
                       ),
                       SizedBoxH(),
                       SubTitleText(
@@ -290,7 +293,6 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       SubTitleText(
-                        indents: 0,
                         subtitle: 'P: Bijzonderheden',
                       ),
                       BodyText(
@@ -300,7 +302,8 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                       ),
                       BodyText(
                         indents: 2,
-                        text: '- BP = Buiten Profiel;\n\n- BV = Bijzonder Vervoer;\n\n- LSP = LinkerSPoor.',
+                        text:
+                            '- BP = Buiten Profiel;\n\n- BV = Bijzonder Vervoer;\n\n- LSP = LinkerSPoor.',
                       ),
                     ],
                   ),
@@ -343,7 +346,6 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       SubTitleText(
-                        
                         subtitle: '- Treinnr:',
                       ),
                       BodyText(
@@ -403,7 +405,8 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                       ),
                       BodyText(
                         indents: 2,
-                        text: '- I = Integraal;\n\n- H = Hoog groen met het voor dat PPLG geconfigureerde aantal seinstappen;\n\n- F = Gefaseerd met het voor dat PPLG geconfigureerde aantal seinstappen;\n\n- 1 t/m 9 = Gefaseerd met het aantal seinstappen aangegeven door het cijfer;\n\n- Als de instelwijze integraal is, zal het VAN-spoor oranje worden getoond in het plan- en historievenster;\n\n- Als de instelwijze \'Hoog groen\' is, zal het VAN-spoor in een heldere groene kleur worden getoond in het plan- en historievenster.',
+                        text:
+                            '- I = Integraal;\n\n- H = Hoog groen met het voor dat PPLG geconfigureerde aantal seinstappen;\n\n- F = Gefaseerd met het voor dat PPLG geconfigureerde aantal seinstappen;\n\n- 1 t/m 9 = Gefaseerd met het aantal seinstappen aangegeven door het cijfer;\n\n- Als de instelwijze integraal is, zal het VAN-spoor oranje worden getoond in het plan- en historievenster;\n\n- Als de instelwijze \'Hoog groen\' is, zal het VAN-spoor in een heldere groene kleur worden getoond in het plan- en historievenster.',
                       ),
                       SizedBoxH(),
                       SubTitleText(
@@ -472,7 +475,8 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                       ),
                       BodyText(
                         indents: 1,
-                        text: 'Status activiteit:\n\n- Norm = Normaal;\n\n- NB = Nader bericht trein;\n\n- Fac = Facultatieve trein;\n\n- Opgh = Opgeheven trein;',
+                        text:
+                            'Status activiteit:\n\n- Norm = Normaal;\n\n- NB = Nader bericht trein;\n\n- Fac = Facultatieve trein;\n\n- Opgh = Opgeheven trein;',
                       ),
                       SizedBoxH(),
                       SubTitleText(
