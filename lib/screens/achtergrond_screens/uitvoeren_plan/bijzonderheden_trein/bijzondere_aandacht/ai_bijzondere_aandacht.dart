@@ -33,14 +33,9 @@ class AIBijzondereAandacht extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Het kan voorkomen dat er in de dienst bijzonderheden_trein verwacht worden die bijzondere aandacht van de Trdl en DVL eisen. Denk hierbij aan de koninklijke trein of een supporterstrein. Deze bijzonderheden_trein worden aan het begin van de dienst via de OvD-S aangekondigd bij de OvD-V.',
+                            'Het kan voorkomen dat er in de dienst bijzonderheden_trein verwacht worden die bijzondere aandacht van de TRDL en DVL eisen. Denk hierbij aan de koninklijke trein of een supporterstrein. Deze treinen worden aan het begin van de dienst via de OvD-S aangekondigd bij de OvD-V.\n\nDe OvD-V bespreekt deze bijzonderheden_trein met de TRDL en DVL. Wanneer de treinen niet via de OvD-S op de post aangekondigd kunnen worden, zal de VLC de betreffende trein(en) aankondigen bij de DVL. Die geeft dan eventuele bijzonderheden weer aan je door.',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'De OvD-V bespreekt deze bijzonderheden_trein met de Trdl en DVL. Wanneer de bijzonderheden_trein niet via de OvD-S op de post aangekondigd kunnen worden, zal de VLC de betreffende trein(en) aankondigen bij de DVL. Die geeft dan eventuele bijzonderheden weer aan je door.',
-                      ),
                       SizedBoxH(),
                       SubTitleText(
                         subtitle: 'Opdracht van bevoegd functionaris',
@@ -49,7 +44,7 @@ class AIBijzondereAandacht extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Bij evenementen kan er, op last van de overheidshulpdiensten in het kader van crowd control of dreigende openbare ordeproblemen, de opdracht komen om een trein eerder, later of meteen te laten vertrekken. Je kunt hierbij denken aan bijvoorbeeld bijzonderheden_trein met voetbalsupporters of demonstranten die de politie gecontroleerd wil laten vertrekken om escalatie te voorkomen.',
+                            'Bij evenementen kan er, op last van de overheidshulpdiensten in het kader van crowd control of dreigende openbare ordeproblemen, de opdracht komen om een trein eerder, later of meteen te laten vertrekken. Je kunt hierbij denken aan bijvoorbeeld treinen met voetbalsupporters of demonstranten die de politie gecontroleerd wil laten vertrekken om escalatie te voorkomen.',
                       ),
                     ],
                   ),
@@ -69,7 +64,7 @@ class AIBijzondereAandacht extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Je kan als treindienstleider gebeld worden door een medewerker van de MKS-BO in opdracht van de politie, of door de Algemeen Leider (AL).',
+                            'Je kan als TRDL gebeld worden door een medewerker van de MKS-BO in opdracht van de politie, of door de Algemeen Leider (AL).',
                       ),
                       SizedBoxH(),
                       SubTitleText(
@@ -79,7 +74,7 @@ class AIBijzondereAandacht extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Als een trein meteen moet vertrekken geef je, zodra dat mogelijk is, de rijweg vrij en licht je de decentrale verkeersleider in. Wanneer de trein eerder of later moet vertrekken bespreek je dat met de decentrale verkeersleider en die zal door een voorwaardelijke vertraging of vervroeging (VW-vertraging) de trein herplannen. Je verwerkt het bericht in procesleiding.',
+                            'Als een trein meteen moet vertrekken geef je, zodra dat mogelijk is, de rijweg vrij en licht je de DVL in. Wanneer de trein eerder of later moet vertrekken bespreek je dat met de DVL en die zal door een voorwaardelijke vertraging of vervroeging (VW-vertraging) de trein herplannen. Je verwerkt het bericht in procesleiding.',
                       ),
                       SizedBoxH(),
                       SubTitleText(
@@ -88,24 +83,8 @@ class AIBijzondereAandacht extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Houd de trein zoveel rijdend;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Zet de trein niet aan de kant;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
                         text:
-                            '- Zorg dat gewenste aanpassingen m.b.t. voorbrengen materieel via het lokale orderproces worden aangevraagd;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Zorg dat vertragings- en vervroegingsoorzaken worden verklaard in monitoring.',
+                            '- Houd de trein zoveel rijdend;\n\n- Zet de trein niet aan de kant;\n\n- Zorg dat gewenste aanpassingen m.b.t. voorbrengen materieel via het lokale orderproces worden aangevraagd;\n\n- Zorg dat vertragings- en vervroegingsoorzaken worden verklaard in monitoring.',
                       ),
                     ],
                   ),

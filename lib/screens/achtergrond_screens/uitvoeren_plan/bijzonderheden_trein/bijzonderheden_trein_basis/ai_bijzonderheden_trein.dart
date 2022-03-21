@@ -17,6 +17,8 @@ final List<Image> elektrLocsList = [
   ),
 ];
 
+//TODO: Hier verder!!!
+
 class AIBijzonderhedenTrein extends StatelessWidget {
   const AIBijzonderhedenTrein({Key? key}) : super(key: key);
 

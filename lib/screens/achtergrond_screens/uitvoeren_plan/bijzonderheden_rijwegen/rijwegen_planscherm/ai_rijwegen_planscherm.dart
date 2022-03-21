@@ -37,8 +37,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                             'Een rijweg is een spoorgedeelte dat ter beschikking wordt gesteld om verplaatsing van (meestal) een trein van A naar B mogelijk te maken.\n\nEr zijn drie manieren om een rijweg in te stellen:',
                       ),
                       SizedBoxH(),
-                      SubTitleText(
-                        subtitle: '- Automatisch vanuit het plan d.m.v. ARI',
+                      BoldText(
+                        indents: 0,
+                        boldtext: '- Automatisch vanuit het plan d.m.v. ARI',
                       ),
                       BodyText(
                         indents: 1,
@@ -46,8 +47,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                             '(ARI = Automatische Rijweg Instelling) - ARI maakt gebruik van een wacht- en een tijdvenster. Instellingen van ARI vind je in de PBH++.',
                       ),
                       SizedBoxH(),
-                      SubTitleText(
-                        subtitle: '- Handmatig, in het planscherm',
+                      BoldText(
+                        indents: 0,
+                        boldtext: '- Handmatig, in het planscherm',
                       ),
                       BodyText(
                         indents: 1,
@@ -86,8 +88,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                         text: 'Er zijn 2 verschillende soorten rijwegen:',
                       ),
                       SizedBoxH(),
-                      SubTitleText(
-                        subtitle: '- Enkelvoudige rijwegen',
+                      BoldText(
+                        indents: 0,
+                        boldtext: '- Enkelvoudige rijwegen',
                       ),
                       BodyText(
                         indents: 1,
@@ -95,8 +98,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                             'Een enkelvoudige rijweg bestaat uit een enkele seinstap. Een seinstap is een rijweginstelling van sein tot het eerstvolgende sein in dezelfde rijrichting.',
                       ),
                       SizedBoxH(),
-                      SubTitleText(
-                        subtitle: '- Samengestelde rijwegen',
+                      BoldText(
+                        indents: 0,
+                        boldtext: '- Samengestelde rijwegen',
                       ),
                       BodyText(
                         indents: 1,
@@ -155,7 +159,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Als treindienstleider werk je via het planscherm in procesleiding met het aangeleverde dagplan. Dit wordt vertaald als honderden planregels, waarin alle informatie is opgenomen die nodig is om de dienstregeling uit te voeren.\n\nHoe een planregel is opgebouwd, vind je hier: planregelopbouw (link volgt).',
+                            'Als TRDL werk je via het planscherm in procesleiding met het aangeleverde dagplan. Dit wordt vertaald als honderden planregels, waarin alle informatie is opgenomen die nodig is om de dienstregeling uit te voeren.\n\nHoe een planregel is opgebouwd, vind je hier: planregelopbouw (link volgt).',
                       ),
                     ],
                   ),
@@ -554,29 +558,13 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Een klaarmelding heeft als doel, dat een rijweg pas wordt ingesteld als een bevoegde functionaris te kennen heeft gegeven dat de trein \'klaar\' is.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Je handelt als volgt:',
+                            'Een klaarmelding heeft als doel, dat een rijweg pas wordt ingesteld als een bevoegde functionaris te kennen heeft gegeven dat de trein \'klaar\' is.\n\nJe handelt als volgt:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
-                            '- Informeer of de klaarmelding vertraging op gaat leveren en zo ja, hoeveel;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Verwerk de verwachte vertraging in het plan;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Voorzie de planregel van de betreffende rijweg van een K.',
+                            '- Informeer of de klaarmelding vertraging op gaat leveren en zo ja, hoeveel;\n\n- Verwerk de verwachte vertraging in het plan;\n\n- Voorzie de planregel van de betreffende rijweg van een K.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -607,19 +595,8 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Herstel de fout;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
                         text:
-                            '- Controleer de eerstvolgende planregel van dezelfde treinserie;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Treedt hierbij dezelfde fout op, waarschuw dan de Ovd-V. Die zorgt ervoor dat fouten aan de planningsafdeling worden gemeld, zodat de planning voor de volgende dagen kan worden aangepast.',
+                            '- Herstel de fout;\n\n- Controleer de eerstvolgende planregel van dezelfde treinserie;\n\n- Treedt hierbij dezelfde fout op, waarschuw dan de Ovd-V. Die zorgt ervoor dat fouten aan de planningsafdeling worden gemeld, zodat de planning voor de volgende dagen kan worden aangepast.',
                       ),
                       SizedBoxH(),
                       SubTitleText(
@@ -644,17 +621,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- VHR-E;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- VHR;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- VHB.',
+                        text: '- VHR-E;\n\n- VHR;\n\n- VHB.',
                       ),
                       SizedBoxH(),
                       BodyText(
