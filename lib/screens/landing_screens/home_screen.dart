@@ -1,5 +1,7 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
+import '../../core/all_imports.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -123,9 +125,6 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           ],
           currentIndex: _selectedIndex,
           onTap: _onItemTapped,
-          selectedIconTheme: const IconThemeData(
-            size: 32.0,
-          ),
         ),
       ),
     );
