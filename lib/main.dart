@@ -187,6 +187,8 @@ class MainEntry extends StatelessWidget {
 
         /*PROCHAT ROUTES*/
         'prochat_main': (context) => const ProChat(),
+
+        /*ADDING MORE ROUTES? ADD TO CORE/ALL_SEARCH_STRING.DART AS WELL*/
       },
     );
   }
