@@ -70,7 +70,7 @@ class AIIncidentenInfraMain extends StatelessWidget {
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Beveiliging',
-                            destination: 'ai_incidenten_beveilig_main',
+                            destination: 'ai_incidenten_beveiliging_main',
                           ),
                           SizedBoxH(),
                           NavButton(
