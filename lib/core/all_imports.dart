@@ -21,13 +21,16 @@ export 'package:logger/logger.dart';
 export 'package:url_launcher/url_launcher.dart';
 export 'package:carousel_slider/carousel_slider.dart';
 
-/*MODULES AND SERVICES*/
-export 'package:trdl_tool/theme/app_theme.dart';
+/*STRINGS / LISTS / CONSTANTS / ETC*/
 export 'package:trdl_tool/core/welcome_items.dart';
 export 'package:trdl_tool/core/all_strings.dart';
 export 'package:trdl_tool/core/all_questions.dart';
 export 'package:trdl_tool/core/all_constants.dart';
 export 'package:trdl_tool/core/all_search_strings.dart';
+
+/*THEMING*/
+export 'package:trdl_tool/theme/flex_color_scheme.dart';
+export 'package:trdl_tool/theme/colors.dart';
 
 /*CUSTOM WIDGETS*/
 export 'package:trdl_tool/widgets/pop-ups/exit-popup/exit_popup.dart';
@@ -58,17 +61,15 @@ export 'package:trdl_tool/widgets/sizedbox_widgets/sizedbox_width_8/sizedbox_wid
 /*MAIN PAGES*/
 export 'package:trdl_tool/screens/landing_screens/splash_screen.dart';
 export 'package:trdl_tool/screens/landing_screens/home_screen.dart';
-export 'package:trdl_tool/screens/landing_screens/welcome_screen.dart';
-export 'package:trdl_tool/services/login_screen/login_screen.dart';
-export 'package:trdl_tool/services/register_screen/register_screen.dart';
-export 'package:trdl_tool/services/verify_screen/verify_screen.dart';
-export 'package:trdl_tool/services/wachtwoord_screen/wachtwoord_screen.dart';
-
-/*HOME_SCREEN PAGES*/
 export 'package:trdl_tool/screens/landing_screens/home_index0.dart';
 export 'package:trdl_tool/screens/landing_screens/home_index1.dart';
 export 'package:trdl_tool/screens/landing_screens/home_index2.dart';
 export 'package:trdl_tool/screens/landing_screens/home_index3.dart';
+export 'package:trdl_tool/screens/landing_screens/welcome_screen.dart';
+export 'package:trdl_tool/screens/auth_screens/login_screen.dart';
+export 'package:trdl_tool/screens/auth_screens/register_screen.dart';
+export 'package:trdl_tool/screens/auth_screens/verify_screen.dart';
+export 'package:trdl_tool/screens/auth_screens/wachtwoord_screen.dart';
 
 /*WERKWIJZE UITVOEREN PLAN PAGES*/
 export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/ww_uitvoeren_plan_main.dart';
@@ -144,6 +145,7 @@ export 'package:trdl_tool/screens/werkwijze_screens/incidenten/overige_incidente
 
 /*ACHTERGROND INFORMATIE UITVOEREN PLAN PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/ai_uitvoeren_plan_main.dart';
+
 /*ACHTERGROND INFORMATIE BIJZONDERHEDEN RIJWEGEN PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/ai_bijzonderheden_rijwegen_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig/ai_inzetten_railvoertuig.dart';

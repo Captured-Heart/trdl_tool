@@ -19,7 +19,7 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              //*PROCEDURE CARD*/
+              /*PROCEDURE CARD*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
@@ -59,7 +59,7 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Onjuiste detectie',
-                            destination: 'ai_juiste_detectie',
+                            destination: 'ai_onjuiste_detectie',
                           ),
                           SizedBoxH(),
                           NavButton(

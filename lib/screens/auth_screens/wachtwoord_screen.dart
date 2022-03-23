@@ -38,7 +38,6 @@ class _WachtwoordState extends State<Wachtwoord> {
                 child: TRDLtoolLogo(),
               ),
               const SizedBoxH(),
-              const SizedBoxH(),
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: 300,
@@ -72,6 +71,8 @@ class _WachtwoordState extends State<Wachtwoord> {
                                   hintText:
                                       'Vul een geldig @prorail.nl emailadres in',
                                 ),
+                                autocorrect: false,
+                                enableSuggestions: false,
                               ),
                             ),
                           ],

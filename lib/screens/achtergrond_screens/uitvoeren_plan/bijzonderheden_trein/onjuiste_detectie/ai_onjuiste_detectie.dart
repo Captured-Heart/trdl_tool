@@ -33,23 +33,11 @@ class AIOnjuisteDetectie extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Lichte bijzonderheden_trein en/of materieel met schijfremmen worden slechter gedetecteerd omdat de spoorstaven door het slechtere contact tussen de wielen de rails niet goed worden kortgesloten. De bijzonderheden_trein worden niet altijd goed gedetecteerd en de ATB EG werkt bij deze bijzonderheden_trein ook minder goed omdat dat eveneens via de spoorstroomloop gaat. Het grootste gevaar treedt op bij overwegen, omdat de spoorbomen te laat kunnen sluiten.',
+                            'Lichte treinen en/of materieel met schijfremmen worden slechter gedetecteerd omdat de spoorstaven door het slechtere contact tussen de wielen de rails niet goed worden kortgesloten. De treinen worden niet altijd goed gedetecteerd en de ATB EG werkt bij deze treinen ook minder goed omdat dat eveneens via de spoorstroomloop gaat. Het grootste gevaar treedt op bij overwegen, omdat de spoorbomen te laat kunnen sluiten.\n\nDaarom wordt op spoorlijnen met dit materieel vaak een andere detectie geïnstalleerd. Officieel spreekt men bij dit soort materieel van voertuigen zonder de zekerheid van juiste spoordetectie.\n\nIn Nederland zijn bijvoorbeeld de volgende materieeltypen slecht detecteerbaar:',
                       ),
                       SizedBoxH(),
                       BodyText(
-                        indents: 0,
-                        text:
-                            'Daarom wordt op spoorlijnen met dit materieel vaak een andere detectie geïnstalleerd. Officieel spreekt men bij dit soort materieel van voertuigen zonder de zekerheid van juiste spoordetectie.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'In Nederland zijn bijvoorbeeld de volgende materieeltypen slecht detecteerbaar:',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
+                        indents: 1,
                         text: '- Lighttrains als de Stadler/GTW en LINT;',
                       ),
                       SizedBoxH(),
@@ -80,7 +68,7 @@ class AIOnjuisteDetectie extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Al het materieel wat op het spoor rijdt is in bezit van een inzetcertificaat. Op het inzetcertificaat staat of er beperkingen zijn voor de inzetbaarheid van het materieel op het gecontroleerde spoor. Voor bijzonderheden_trein die niet juist detecteren, zoals hierboven beschreven, worden aanvullende maatregelen voorgeschreven om de veiligheid te waarborgen. De vervoerder is verplicht om jou te informeren m.b.t. de juiste detectie op het spoor. Dit kan via een (lokale) orderaanvraag (Medewerker rangeren, DVL) waarbij aangegeven wordt dat het materieel niet (juist) detecteert of een veiligheidsbericht van je buurtreindienstleider.',
+                            'Al het materieel wat op het spoor rijdt is in bezit van een inzetcertificaat. Op het inzetcertificaat staat of er beperkingen zijn voor de inzetbaarheid van het materieel op het gecontroleerde spoor. Voor treinen die niet juist detecteren, zoals hierboven beschreven, worden aanvullende maatregelen voorgeschreven om de veiligheid te waarborgen.\n\nDe vervoerder is verplicht om jou te informeren m.b.t. de juiste detectie op het spoor. Dit kan via een (lokale) orderaanvraag (Medewerker rangeren, DVL) waarbij aangegeven wordt dat het materieel niet (juist) detecteert of een veiligheidsbericht van je buurTRDL.',
                       ),
                     ],
                   ),
@@ -121,7 +109,7 @@ class AIOnjuisteDetectie extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Voor het veilig berijden van overwegen hoef je als treindienstleider niets te doen, dit is aan de begeleider van het voertuig zonder juiste detectie: aanwijzingen OVW zijn dus niet nodig; dit in tegenstelling tot het berijden van gedurende langere tijd niet bereden sporen.',
+                            'Voor het veilig berijden van overwegen hoef je als TRDL niets te doen, dit is aan de begeleider van het voertuig zonder juiste detectie: aanwijzingen OVW zijn dus niet nodig; dit in tegenstelling tot het berijden van gedurende langere tijd niet bereden sporen.',
                       ),
                       SizedBoxH(),
                       BodyText(
