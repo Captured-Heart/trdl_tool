@@ -55,28 +55,28 @@ class AIIncidentenBeveiligingMain extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Werkwijze - Beveiliging',
-                            destination: 'beveiliging',
+                            destination: 'ww_beveiliging_main',
                           ),
-                          //   SizedBoxH(),
-                          //   NavButton(
-                          //     buttontext: 'Wissels - basisinformatie',
-                          //     destination: 'wisselsbasisinformatie',
-                          //   ),
-                          //   SizedBoxH(),
-                          //   NavButton(
-                          //     buttontext: 'Wissel niet in eindstand',
-                          //     destination: 'wisselnietineindstandincidentenachtergrond',
-                          //   ),
-                          //   SizedBoxH(),
-                          //   NavButton(
-                          //     buttontext: 'Gestoord wissel',
-                          //     destination: 'gestoordwisselincidentenachtergrond',
-                          //   ),
-                          //   SizedBoxH(),
-                          //   NavButton(
-                          //     buttontext: 'Opengereden wissel',
-                          //     destination: 'opengeredenwisselincidentenachtergrond',
-                          //   ),
+                            SizedBoxH(),
+                            NavButton(
+                              buttontext: 'Seinen - basisinformatie',
+                              destination: 'wisselsbasisinformatie',
+                            ),
+                            SizedBoxH(),
+                            NavButton(
+                              buttontext: 'Wissel niet in eindstand',
+                              destination: 'wisselnietineindstandincidentenachtergrond',
+                            ),
+                            SizedBoxH(),
+                            NavButton(
+                              buttontext: 'Gestoord wissel',
+                              destination: 'gestoordwisselincidentenachtergrond',
+                            ),
+                            SizedBoxH(),
+                            NavButton(
+                              buttontext: 'Opengereden wissel',
+                              destination: 'opengeredenwisselincidentenachtergrond',
+                            ),
                         ],
                       ),
                       const SizedBoxH(),

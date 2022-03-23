@@ -53,6 +53,8 @@ class AIIncidentenMain extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
+                          NavButton(buttontext: 'Incidenten - werkwijze', destination: 'ww_incidenten_main',),
+                          SizedBoxH(),
                           NavButton(
                             buttontext: 'Incidenten - basisinformatie',
                             destination: 'ai_incidenten',
