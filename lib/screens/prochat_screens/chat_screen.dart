@@ -39,50 +39,48 @@ class _ChatScreenState extends State<ChatScreen> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const AppBarText(title: 'TRDLtool'),
+        title: const AppBarText(title: 'TRDLtool Chat'),
       ),
-      body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            const MessagesStream(),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      left: 8.0,
-                      bottom: 8.0,
-                    ),
-                    child: TextField(
-                      controller: messageTextController,
-                      onChanged: (value) {
-                        messageText = value;
-                      },
-                      decoration: kMessageTextFieldDecoration,
-                    ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          const MessagesStream(),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    left: 8.0,
+                    bottom: 8.0,
+                  ),
+                  child: TextField(
+                    controller: messageTextController,
+                    onChanged: (value) {
+                      messageText = value;
+                    },
+                    decoration: kMessageTextFieldDecoration,
                   ),
                 ),
-                TextButton(
-                  onPressed: () async {
-                    messageTextController.clear();
-                    await _firestore.collection('messages').add({
-                      'sender': loggedInUser.email,
-                      'text': messageText,
-                      'timestamp': FieldValue.serverTimestamp(),
-                    });
-                  },
-                  child: const Text(
-                    '✅',
-                    style: kSendButtonTextStyle,
-                  ),
+              ),
+              TextButton(
+                onPressed: () async {
+                  messageTextController.clear();
+                  await _firestore.collection('messages').add({
+                    'sender': loggedInUser.email,
+                    'text': messageText,
+                    'timestamp': FieldValue.serverTimestamp(),
+                  });
+                },
+                child: const Text(
+                  '✅',
+                  style: kSendButtonTextStyle,
                 ),
-              ],
-            ),
-          ],
-        ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -98,9 +96,9 @@ class MessagesStream extends StatelessWidget {
           _firestore.collection('messages').orderBy('timestamp').snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
-          return const Center(
+          return Center(
             child: CircularProgressIndicator(
-              backgroundColor: Color(0xFF0D4F18),
+              backgroundColor: flexSchemeLight.primary,
             ),
           );
         }
@@ -159,7 +157,7 @@ class MessageBubble extends StatelessWidget {
             ),
           ),
           Material(
-            shadowColor: const Color(kSecondaryGreen),
+            shadowColor: flexSchemeLight.secondary,
             elevation: 6.0,
             borderRadius: BorderRadius.only(
               topLeft: isMe
@@ -171,7 +169,8 @@ class MessageBubble extends StatelessWidget {
               bottomLeft: const Radius.circular(12.0),
               bottomRight: const Radius.circular(12.0),
             ),
-            color: isMe ? const Color(kDarkGreen) : const Color(kLightGreen),
+            color:
+                isMe ? flexSchemeLight.primary : flexSchemeLight.inversePrimary,
             child: Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 12.0,
@@ -181,7 +180,9 @@ class MessageBubble extends StatelessWidget {
                 message,
                 style: TextStyle(
                   fontSize: 16.0,
-                  color: isMe ? Colors.white : Colors.black,
+                  color: isMe
+                      ? flexSchemeLight.surface
+                      : flexSchemeLight.onSurface,
                 ),
               ),
             ),

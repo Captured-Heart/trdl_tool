@@ -58,6 +58,12 @@ export 'package:trdl_tool/widgets/table_widgets/tablecell/tablecell.dart';
 export 'package:trdl_tool/widgets/sizedbox_widgets/sizedbox_height_8/sizedbox_height_8.dart';
 export 'package:trdl_tool/widgets/sizedbox_widgets/sizedbox_width_8/sizedbox_width_8.dart';
 
+export 'package:trdl_tool/widgets/snackbars/snackbar_login_email_verification.dart';
+export 'package:trdl_tool/widgets/snackbars/snackbar_login_erisietsmis.dart';
+export 'package:trdl_tool/widgets/snackbars/snackbar_wachtwoord_emailverzonden.dart';
+export 'package:trdl_tool/widgets/snackbars/snackbar_wachtwoord_erisietsmis.dart';
+//HIER VERDER!
+
 /*MAIN PAGES*/
 export 'package:trdl_tool/screens/landing_screens/splash_screen.dart';
 export 'package:trdl_tool/screens/landing_screens/home_screen.dart';

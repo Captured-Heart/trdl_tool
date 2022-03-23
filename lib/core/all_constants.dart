@@ -12,7 +12,7 @@ const kSecondaryGreen = 0xFF2F3E32;
 const double kCardElevation = 6.0;
 const EdgeInsets kCardPadding = EdgeInsets.all(8.0);
 
-/*ProChat constants*/
+/*PROCHAT CONSTANTS*/
 late String hintText;
 
 const kSendButtonTextStyle = TextStyle(
@@ -30,69 +30,8 @@ const kTextFieldDecoration = InputDecoration(
 );
 
 /*SnackBar constants*/
-final snackBarLoginEmailVerificatie = SnackBar(
-  content: const Text(
-    'Je emailadres is nog niet geverifieerd. Nog niks ontvangen? Controleer ook je SPAM folder.',
-    style: TextStyle(
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-  duration: const Duration(
-    seconds: 5,
-  ),
-  action: SnackBarAction(
-    label: 'OK',
-    onPressed: () {},
-  ),
-);
 
-final snackBarLoginErIsIetsMis = SnackBar(
-  content: const Text(
-    'Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?',
-    style: TextStyle(
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-  duration: const Duration(
-    seconds: 5,
-  ),
-  action: SnackBarAction(
-    label: 'OK',
-    onPressed: () {},
-  ),
-);
-
-final snackBarWachtwoordEmailVerzonden = SnackBar(
-  content: const Text(
-    'Als het emailadres bekend is, zal er een resetlink om het wachtwoord te wijzigen verzonden worden. Controleer ook de SPAM folder.',
-    style: TextStyle(
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-  duration: const Duration(
-    seconds: 5,
-  ),
-  action: SnackBarAction(
-    label: 'OK',
-    onPressed: () {},
-  ),
-);
-
-final snackBarWachtwoordErIsIetsMis = SnackBar(
-  content: const Text(
-    'Er is iets mis!\nBen je al geregistreerd?',
-    style: TextStyle(
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-  duration: const Duration(
-    seconds: 5,
-  ),
-  action: SnackBarAction(
-    label: 'OK',
-    onPressed: () {},
-  ),
-);
+//TODO: HIER VERDER!
 
 final snackBarRegisterEmailWrong = SnackBar(
   content: const Text(

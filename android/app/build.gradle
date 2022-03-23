@@ -51,7 +51,7 @@ android {
     defaultConfig {
         applicationId "nl.plotsklapps.trdl_tool"
         minSdkVersion 24
-        targetSdkVersion 31
+        targetSdkVersion 32
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
