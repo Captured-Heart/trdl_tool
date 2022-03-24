@@ -38,6 +38,41 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                   ),
                 ),
               ),
+              /*NAVIGATION CARD*/
+              Card(
+                elevation: kCardElevation,
+                child: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: [
+                      const TitleText(
+                        title: 'Ga snel naar',
+                      ),
+                      const SizedBoxH(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          NavButton(
+                            buttontext: 'Materieel (ongepland werk) - werkwijze',
+                            destination: 'ww_ongepland_werk_main',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Ongepland werk',
+                            destination: 'ai_ongepland_werk_main',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Infracapaciteit ter beschikking stellen',
+                            destination: 'ai_infra_ter_beschikking',
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                    ],
+                  ),
+                ),
+              ),
               /*CARD #2*/
               Card(
                 elevation: kCardElevation,
@@ -110,7 +145,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Een veilig sein naar een spoor waar aan materieel gewerkt wordt;\n\n- Aanrijdgevaar op het nevenspoor.',
+                            '- Een veilig sein naar een spoor waar aan materieel gewerkt wordt;\n\n- Aanrijdgevaar op het spoor waarop de werkzaamheden moeten plaatsvinden;\n\n- Aanrijdgevaar op het nevenspoor.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -122,7 +157,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Controle aan de hand van een werkbeschrijving per materieel serie;\n\n- Herstellingen aan materieel.\n\n- De exacte aanduiding van de werkplek.',
+                            '- Controle aan de hand van een werkbeschrijving per materieel serie;\n\n- Herstellingen aan materieel.',
                       ),
                       SizedBoxH(),
                       BodyText(

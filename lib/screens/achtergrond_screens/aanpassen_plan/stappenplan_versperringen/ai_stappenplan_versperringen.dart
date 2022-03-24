@@ -38,22 +38,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Defect infra-element;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Gestrande trein;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Aanrijdingen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Weersomstandigheden.',
+                        text: '- Defect infra-element;\n\n- Gestrande trein;\n\n- Aanrijdingen;\n\n- Weersomstandigheden.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -64,20 +49,38 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- 1e Fase: Overgang van oorspronkelijk plan naar een nieuw, actueel plan;',
+                            '- 1e Fase: Overgang van oorspronkelijk plan naar een nieuw, actueel plan;\n\n- 2e Fase: Het rijden volgens het nieuwe, actuele plan;\n\n- 3e Fase: De terugkeer naar het oorspronkelijke plan.',
                       ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- 2e Fase: Het rijden volgens het nieuwe, actuele plan;',
+                    ],
+                  ),
+                ),
+              ),
+              /*NAVIGATION CARD*/
+              Card(
+                elevation: kCardElevation,
+                child: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: [
+                      const TitleText(
+                        title: 'Ga snel naar',
                       ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- 3e Fase: De terugkeer naar het oorspronkelijke plan.',
+                      const SizedBoxH(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          NavButton(
+                            buttontext: 'Stappenplan versperringen -werkwijze',
+                            destination: 'ww_stappenplan_versperringen',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Aanpassen plan',
+                            destination: 'ai_aanpassen_plan_main',
+                          ),
+                        ],
                       ),
+                      const SizedBoxH(),
                     ],
                   ),
                 ),
@@ -102,18 +105,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Het gebied: Dit is het gebied waarover het verdeelbesluit wordt genomen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Het aantal treinpaden dat per uur aan de vervoerders kan worden aangeboden. Verdeling in IC-, sprinter- en goederenpaden;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Tijdstip van ingaan.',
+                            '- Het gebied: Dit is het gebied waarover het verdeelbesluit wordt genomen;\n\n- Het aantal treinpaden dat per uur aan de vervoerders kan worden aangeboden. Verdeling in IC-, sprinter- en goederenpaden;\n\n- Tijdstip van ingaan.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -125,42 +117,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Volledig isoleren van het gebied (ontkoppelen baanvak);',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Deels isoleren van het gebied; een of meerdere sporen (deel van het baanvak) niet berijdbaar;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Minder treinen omdat de capaciteit voor een reguliere treindienst niet meer te realiseren is;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Het baanvak is niet meer berijdbaar voor alle (voor minder) materieeltypen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Milieubeperkingen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Afgekondigde stremming voor bepaalde bestemming(en) in het buitenland;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Afgekondigde stremming voor bepaalde ontvangststation(s) in het binnenland.',
+                            '- Volledig isoleren van het gebied (ontkoppelen baanvak);\n\n- Deels isoleren van het gebied; een of meerdere sporen (deel van het baanvak) niet berijdbaar;\n\n- Minder treinen omdat de capaciteit voor een reguliere treindienst niet meer te realiseren is;\n\n- Het baanvak is niet meer berijdbaar voor alle (voor minder) materieeltypen;\n\n- Milieubeperkingen;\n\n- Afgekondigde stremming voor bepaalde bestemming(en) in het buitenland;\n\n- Afgekondigde stremming voor bepaalde ontvangststation(s) in het binnenland.',
                       ),
                     ],
                   ),
@@ -230,28 +187,13 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Je maakt het getroffen gebied vrij door (eventueel) gestrande treinen terug te halen (denk aan nieuw treinnummer).',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Binnen het gebied kunnen treinen:',
+                            'Je maakt het getroffen gebied vrij door (eventueel) gestrande treinen terug te halen (denk aan nieuw treinnummer).\n\nBinnen het gebied kunnen treinen:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
-                            '- Onder voorwaarden doorgevoerd (langs het incident);',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Daadwerkelijk gestrand zijn;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Keren of teruggehaald worden.',
+                            '- Onder voorwaarden doorgevoerd (langs het incident);\n\n- Daadwerkelijk gestrand zijn;\n\n- Keren of teruggehaald worden.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -261,7 +203,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'De DVL neemt in overleg met de buur-DVL en de VLC maatregelen om (verder) vollopen van de pplg’s te voorkomen. De VLC kan aanvullende ontluchtingsmaatregelen nemen en buffert goederentreinen die onderweg zijn of leidt deze om.',
+                            'De DVL neemt in overleg met de buurDVL en de VLC maatregelen om (verder) vollopen van de pplg\'s te voorkomen. De VLC kan aanvullende ontluchtingsmaatregelen nemen en buffert goederentreinen die onderweg zijn of leidt deze om.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -311,27 +253,12 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Je maakt i.o.m. de vervoerder het getroffen gebied vrij door gestrande treinen uit het getroffen gebied te halen. Gestrande treinen krijgen een nieuw nummer.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Je hebt de gestrande reizigerstreinen geïnventariseerd en aangegeven op het alarmeer/informeerformulier. Je geeft hierbij aan of de treinen:',
+                            '- Je maakt i.o.m. de vervoerder het getroffen gebied vrij door gestrande treinen uit het getroffen gebied te halen. Gestrande treinen krijgen een nieuw nummer.\n\n- Je hebt de gestrande reizigerstreinen geïnventariseerd en aangegeven op het alarmeer/informeerformulier. Je geeft hierbij aan of de treinen:',
                       ),
                       BodyText(
                         indents: 2,
                         text:
-                            '* Doorgevoerd kunnen worden (langs de incident locatie)',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text:
-                            '* Daadwerkelijk gestrand zijn (geen keermogelijkheid of bijv. een getrokken trein);',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: '* Gekeerd of teruggehaald kunnen worden.',
+                            '* Doorgevoerd kunnen worden (langs de incident locatie)\n\n* Daadwerkelijk gestrand zijn (geen keermogelijkheid of bijv. een getrokken trein);\n\n* Gekeerd of teruggehaald kunnen worden.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -397,35 +324,13 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Treindienstleiding;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Calamiteitenorganisatie;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Spoorwegondernemingen.',
+                        text: '- Treindienstleiding;\n\n- Calamiteitenorganisatie;\n\n- Spoorwegondernemingen.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'De verkeersleiders toetsen een dergelijke trigger via MKS-BO bij de Algemeen Leider (AL). Nadat de Algemeen leider de eindtijd bevestigd heeft, vraagt Verkeersleiding aan de spoorwegondernemingen om een opstartplan te maken.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Als de prognose eindtijd wordt bijgesteld, wordt een nieuw opstartplan gemaakt.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'De VLC analyseert mogelijke doorrijdvolgorde van de opgehouden treinen en meldt dit aan de DVL. De DVL licht je in over de afhandeling van de opgehouden treinen. De VLC geeft het opstartkader op treinserieniveau, de DVL maakt het opstartplan op treinnummerniveau en toetst het opstartplan bij de vervoerder(s). Bij akkoord wordt de VLC geïnformeerd, zodat deze het opstartplan kan toedelen.',
+                            'De verkeersleiders toetsen een dergelijke trigger via MKS-BO bij de Algemeen Leider (AL). Nadat de AL de eindtijd bevestigd heeft, vraagt Verkeersleiding aan de spoorwegondernemingen om een opstartplan te maken.\n\nAls de prognose eindtijd wordt bijgesteld, wordt een nieuw opstartplan gemaakt.\n\nDe VLC analyseert mogelijke doorrijdvolgorde van de opgehouden treinen en meldt dit aan de DVL. De DVL licht je in over de afhandeling van de opgehouden treinen. De VLC geeft het opstartkader op treinserieniveau, de DVL maakt het opstartplan op treinnummerniveau en toetst het opstartplan bij de vervoerder(s). Bij akkoord wordt de VLC geïnformeerd, zodat deze het opstartplan kan toedelen.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -440,33 +345,18 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Infra moet beschikbaar zijn (einde ICB);',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Opstartbeperkingen zijn weggewerkt;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Opstartplan is toegedeeld.',
+                        text: '- Infra moet beschikbaar zijn (einde ICB);\n\n- Opstartbeperkingen zijn weggewerkt;\n\n- Opstartplan is toegedeeld.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Voor het opstartplan uitgevoerd kan worden, moet aan drie voorwaarden zijn voldaan:',
+                            'Nadat aan deze 3 voorwaarden is voldaan:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- VLC logt \'opstarten mogelijk\';',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- VLC en DVL maken werkafspraken.',
+                        text: '- VLC logt \'opstarten mogelijk\';\n\n- VLC en DVL maken werkafspraken.',
                       ),
                       SizedBoxH(),
                       BoldText(

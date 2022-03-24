@@ -182,13 +182,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Je vraagt vooraf uit op welke sporen, of gedeelten van sporen de werkzaamheden plaatsvinden (gebruik specifieke benaming van infra-elementen) en hoe lang. Je bekijkt in je plan voor welke planregels dit consequenties heeft, en stemt probleem en gevolgen af met de DVL.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Bij ongeplande werkzaamheden aan de vrije baan beslist de DVL na afstemming met eventuele buur-DVL en de VLC over het tijdstip waarop de werkzaamheden plaats zullen vinden.\n\nJe overlegt met de LWB over:',
+                            'Je vraagt vooraf uit op welke sporen, of gedeelten van sporen de werkzaamheden plaatsvinden (gebruik specifieke benaming van infra-elementen) en hoe lang. Je bekijkt in je plan voor welke planregels dit consequenties heeft, en stemt probleem en gevolgen af met de DVL.\n\nBij ongeplande werkzaamheden aan de vrije baan beslist de DVL na afstemming met eventuele buur-DVL en de VLC over het tijdstip waarop de werkzaamheden plaats zullen vinden.\n\nJe overlegt met de LWB over:',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -200,13 +194,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Je maakt samen met de LWB het WECO op. Het WECO moet altijd voldoen aan de \'Toetscriteria WBI/WECO\'.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'N.B.: Om een veilige route naar en van de werkplek te garanderen kan LWB je extra railinfracapaciteit vragen. Hiervoor mag gebruik gemaakt worden van een door jou en LWB - middels rijweginstelling en door de LWB beveiligd - spoor naar de beschikbaar gestelde railinfracapaciteit.',
+                            'Je maakt samen met de LWB het WECO op. Het WECO moet altijd voldoen aan de \'Toetscriteria WBI/WECO\'.\n\nN.B.: Om een veilige route naar en van de werkplek te garanderen kan LWB je extra railinfracapaciteit vragen. Hiervoor mag gebruik gemaakt worden van een door jou en LWB - middels rijweginstelling en door de LWB beveiligd - spoor naar de beschikbaar gestelde railinfracapaciteit.',
                       ),
                     ],
                   ),
@@ -243,7 +231,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Indien op basis van de analyse of prioritering wordt besloten tot uitstel van storingsherstel met tijdsafspraak, worden afspraken over logistieke impact en het moment van herstel gemaakt door middel van afstemming Dvl en planner CMBO. De planner CMBO neemt de verdere uitwerking en systeemaanpassingen voor zijn rekening en de Officier van Dienst Spoor (OvD-S) bekrachtigt het toedelingsbesluit.\n\nHet herstel via een BUTA mag niet conflicteren met reeds geplande werkzaamheden. Hiermee dient rekening gehouden te worden bij het bepalen van een geschikt tijdstip voor storingsherstel.\n\nDe planner CMBO, DVL, medewerker 24/7 Werkplekbeveiliging (WPB) en medewerker OBI bepalen in overleg het tijdstip voor storingsherstel. Er worden afwegingen gemaakt tussen verschillende belangen op het vlak van beheer en de verdeling van capaciteit van het treinverkeer.\n\nMochten deze functionarissen hierover geen overeenstemming bereiken, dan wordt er geëscaleerd naar het CMBO. De OvD-A maakt de afwegingen tussen verschillende belangen op het vlak van beheer. De Verkeersleider CMBO (VLC) is verantwoordelijk voor de verdeling van capaciteit ten behoeve van beheer respectievelijk verkeer en het besluit hierover.',
+                            'Indien op basis van de analyse of prioritering wordt besloten tot uitstel van storingsherstel met tijdsafspraak, worden afspraken over logistieke impact en het moment van herstel gemaakt door middel van afstemming DVL en planner CMBO. De planner CMBO neemt de verdere uitwerking en systeemaanpassingen voor zijn rekening en de Officier van Dienst Spoor (OvD-S) bekrachtigt het toedelingsbesluit.\n\nHet herstel via een BUTA mag niet conflicteren met reeds geplande werkzaamheden. Hiermee dient rekening gehouden te worden bij het bepalen van een geschikt tijdstip voor storingsherstel.\n\nDe planner CMBO, DVL, medewerker 24/7 Werkplekbeveiliging (WPB) en medewerker OBI bepalen in overleg het tijdstip voor storingsherstel. Er worden afwegingen gemaakt tussen verschillende belangen op het vlak van beheer en de verdeling van capaciteit van het treinverkeer.\n\nMochten deze functionarissen hierover geen overeenstemming bereiken, dan wordt er geëscaleerd naar het CMBO. De OvD-A maakt de afwegingen tussen verschillende belangen op het vlak van beheer. De Verkeersleider CMBO (VLC) is verantwoordelijk voor de verdeling van capaciteit ten behoeve van beheer respectievelijk verkeer en het besluit hierover.',
                       ),
                       SizedBoxH(),
                       InsertImage(

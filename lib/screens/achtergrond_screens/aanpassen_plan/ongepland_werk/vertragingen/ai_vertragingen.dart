@@ -71,7 +71,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Wanneer je kan inschatten wanneer een trein gaat vertrekken, voer je een voorwaardelijke vertraging in.\n\nDe vertragingssoort Voorwaardelijke Vertraging kan op 3 manieren tot stand komen:',
+                            'Wanneer je kan inschatten wanneer een trein gaat vertrekken, voer je een voorwaardelijke vertraging in.\n\nDe vertragingssoort \'Voorwaardelijke Vertraging\' kan op 3 manieren tot stand komen:',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -89,6 +89,48 @@ class AIVertragingen extends StatelessWidget {
                         text:
                             '\'Exact\' wordt door het systeem gemeten en derhalve niet gebruikt. Als je deze wel gebruikt, meet het systeem niet meer op het betreffende meetpunt.',
                       ),
+                    ],
+                  ),
+                ),
+              ),
+              /*NAVIGATION CARD*/
+              Card(
+                elevation: kCardElevation,
+                child: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: [
+                      const TitleText(
+                        title: 'Ga snel naar',
+                      ),
+                      const SizedBoxH(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          NavButton(
+                            buttontext: 'Vertragingen - werkwijze',
+                            destination: 'ww_vertragingen',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Aanpassen plan',
+                            destination: 'ww_aanpassenplan_main',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            //TODO: Pagina toevoegen!
+                            buttontext: 'Vertragingen & Monitoring',
+                            destination: 'ww_vertragingen',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            //TODO: Pagina toevoegen!
+                            buttontext: 'Klanthinder',
+                            destination: 'ww_vertragingen',
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
                     ],
                   ),
                 ),
@@ -124,68 +166,16 @@ class AIVertragingen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Verwerk vertraging;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text: 'Verwerk de vertraging in het plan.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Aansluitingen en gevolgen (TAD);',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text:
-                            'Check of er aansluitingen zijn met andere treinen.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Stationnement;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text:
-                            'Check of er een stationnement is dat ingekort kan worden.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Spoorgebruik (afwijken/treinlengte);',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text:
-                            'Check of het aankomstspoor vrij is of dat je moet afwijken (spoorgebruik).',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Volgorde vrije baan;',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text:
-                            'Check of de trein nog in dezelfde volgorde vertrekt naar de vrije baan.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Invoer voorwaardelijke vertraging.',
-                      ),
-                      BodyText(
-                        indents: 2,
-                        text:
-                            'Check of er treinen zijn die een aansluiting overnemen, of die keren onder een ander nummer en daardoor ook vertraging krijgen. Als dat het geval is dan moet je voorwaardelijke vertraging invoeren.',
+                        text: '- Verwerk vertraging;\n\n- Aansluitingen en gevolgen (TAD);\n\n- Stationnement;\n\n- Spoorgebruik (afwijken/treinlengte);\n\n- Volgorde vrije baan;\n\n- Invoer voorwaardelijke vertraging.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Door deze stappen te doorlopen, ga je bewust om met de gevolgen van vertraging.',
+                            'Door deze stappen te doorlopen, ga je bewust om met de gevolgen van vertraging.\n\nWat houdt dit nu in:',
                       ),
+                      SizedBoxH(),
+                      BodyText(indents: 1, text: '- Allereerst Verwerk je de vertraging in het plan;\n\n- Check of er Aansluitingen zijn met andere treinen;\n\n- Check of er een Stationnement is dat ingekort kan worden;\n\n- Check of het aankomstspoor vrij is of dat je moet afwijken (Spoorgebruik;\n\n- Check of de trein(en) nog in dezelfde Volgorde vertrek(ken) naar de vrije baan;\n\n- Check of er treinen zijn die een aansluiting overnemen, of die keren onder een ander nummer en daardoor ook vertraging krijgen. Als dat het geval is moet je voorwaardelijke vertraging Invoeren.',),
                     ],
                   ),
                 ),
@@ -209,7 +199,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'ARI zal zoveel mogelijk zelf volgordewisselingen voorkomen door gebruik te maken van voorrangsrelaties (met planregels die al of niet aanstaan voor ARI). Dit houdt in dat ARI rekening houdt met de volgorde in het plan. Planregels met een eerdere insteltijd naar een bepaald eindspoor moeten eerst zijn uitgevoerd voordat planregels met een latere insteltijd worden uitgevoerd.  Hierdoor zal het aantal meldingen van een volgordewisseling sterk verminderd worden. Als volgordewisseling onvermijdelijk is zal ARI de planregels waarvoor dit geconstateerd wordt uitzetten voor ARI.\n\nBij het in behandeling nemen van een in te stellen rijweg controleert ARI of er andere planregels zijn met rijwegen die aan de volgende voorwaarden voldoen:',
+                            'ARI zal zoveel mogelijk zelf volgordewisselingen voorkomen door gebruik te maken van voorrangsrelaties (met planregels die al of niet aanstaan voor ARI). Dit houdt in dat ARI rekening houdt met de volgorde in het plan. Planregels met een eerdere insteltijd naar een bepaald eindspoor moeten eerst zijn uitgevoerd voordat planregels met een latere insteltijd worden uitgevoerd. Hierdoor zal het aantal meldingen van een volgordewisseling sterk verminderd worden. Als volgordewisseling onvermijdelijk is zal ARI de planregels waarvoor dit geconstateerd wordt uitzetten voor ARI.\n\nBij het in behandeling nemen van een in te stellen rijweg controleert ARI of er andere planregels zijn met rijwegen die aan de volgende voorwaarden voldoen:',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -236,7 +226,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'De planregel blijft, totdat de voorrang krijgende planregel is ingesteld, in je plan staan en toont \'zeegroen\'. Indien om wat voor reden een planregel bovenin je plan staat met hetzelfde eindspoor (nader bericht of onverwerkte vertraging etc.)  zullen de nog in te stellen planregels, indien deze aan de ARI voorwaarden voldoen, niet (geheel) worden ingesteld. Dit  betekent dat er geen rijwegen worden ingesteld naar het betrokken eindspoor van de bovenste planregel. Om dit te voorkomen is het belangrijk om je plan op orde te hebben. De stelregel is dat je moet zorgen dat de situatie in je plan overeenkomt met de situatie \'buiten\'. Om dit te realiseren is het belangrijk om regelmatig vertraging te verwerken en te plannen.',
+                            'De planregel blijft, totdat de voorrang krijgende planregel is ingesteld, in je plan staan en toont \'zeegroen\'. Indien om wat voor reden een planregel bovenin je plan staat met hetzelfde eindspoor (nader bericht of onverwerkte vertraging etc.) zullen de nog in te stellen planregels, indien deze aan de ARI voorwaarden voldoen, niet (geheel) worden ingesteld. Dit  betekent dat er geen rijwegen worden ingesteld naar het betrokken eindspoor van de bovenste planregel. Om dit te voorkomen is het belangrijk om je plan op orde te hebben. De stelregel is dat je moet zorgen dat de situatie in je plan overeenkomt met de situatie \'buiten\'. Om dit te realiseren is het belangrijk om regelmatig vertraging te verwerken en te plannen.',
                       ),
                     ],
                   ),
@@ -293,13 +283,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Om niet bij elke vertraging contact te doen plaatsvinden tussen TRDL, DVL en vervoerder zijn er van tevoren al afspraken gemaakt hoe te handelen bij bepaalde vertragingen. Deze afspraken zijn vastgelegd in het TAD.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Als de vertraging van een trein binnen de grenzen van het TAD valt, voert de TRDL de hierbij genoemde afhandeling uit. Staat de afhandeling niet in de TAD dan is het aan de expertise van de TRDL en DVL hoe deze situatie op te lossen. Vaak zal er geen aansluiting overgenomen worden.\n\nIn een TAD zijn de WRT (wachtijden reizgerstreinen) en If/Then scenario\'s samengevoegd. Als de uitvoering van het TAD een volgordewisseling tot gevolg heeft, geef je dit door aan je buurTRDL. Als er geen goede oplossing voorhanden is overleg je met de DVL.',
+                            'Om niet bij elke vertraging contact te doen plaatsvinden tussen TRDL, DVL en vervoerder zijn er van tevoren al afspraken gemaakt hoe te handelen bij bepaalde vertragingen. Deze afspraken zijn vastgelegd in het TAD.\n\nAls de vertraging van een trein binnen de grenzen van het TAD valt, voert de TRDL de hierbij genoemde afhandeling uit. Staat de afhandeling niet in de TAD dan is het aan de expertise van de TRDL en DVL hoe deze situatie op te lossen. Vaak zal er geen aansluiting overgenomen worden.\n\nIn een TAD zijn de WRT (wachtijden reizgerstreinen) en If/Then scenario\'s samengevoegd. Als de uitvoering van het TAD een volgordewisseling tot gevolg heeft, geef je dit door aan je buurTRDL. Als er geen goede oplossing voorhanden is overleg je met de DVL.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -309,13 +293,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- De WRT geeft voor elk knooppunt aan hoe lang treinen mogen wachten op een aansluiting bij vertraagd aankomende treinen. En geeft weer wat de uiterlijke vertrektijd is van de wachtende trein.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Als twee treinen vertraagd zijn die normaliter aansluiting op elkaar overnemen, geldt de WRT niet.\n\nDe WRT bepaalt tevens de laatste aansluitingen van reizigerstreinen bij het einde van de reizigersdienst.',
+                            '- De WRT geeft voor elk knooppunt aan hoe lang treinen mogen wachten op een aansluiting bij vertraagd aankomende treinen. En geeft weer wat de uiterlijke vertrektijd is van de wachtende trein.\n\n- Als twee treinen vertraagd zijn die normaliter aansluiting op elkaar overnemen, geldt de WRT niet;\n\n- De WRT bepaalt tevens de laatste aansluitingen van reizigerstreinen bij het einde van de reizigersdienst.',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -335,7 +313,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            'In de afhandelingsstrategie is per station aangegeven wat er moet gebeuren met een oplopende vertraging;\n\nVoorkomt het ontstaan van een domino-effect bij vertragingen;\n\nZorgt ervoor dat er geen verdringing plaatsvindt van andere spoorwegondernemingen.',
+                            '- In de afhandelingsstrategie is per station aangegeven wat er moet gebeuren met een oplopende vertraging;\n\n- Voorkomt het ontstaan van een domino-effect bij vertragingen;\n\n- Zorgt ervoor dat er geen verdringing plaatsvindt van andere spoorwegondernemingen.',
                       ),
                       SizedBoxH(),
                       BoldText(
