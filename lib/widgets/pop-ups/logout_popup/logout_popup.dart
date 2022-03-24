@@ -1,7 +1,5 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
-final _auth = FirebaseAuth.instance;
-
 showLogOutPopup(context) {
   return showDialog(
     context: context,
@@ -27,7 +25,7 @@ showLogOutPopup(context) {
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        /*User selected YES*/
+                        /*USER SELECTED YES. GO TO LOGINSCREEN*/
                         _auth.signOut();
                         Navigator.pushReplacementNamed(
                           context,
@@ -42,13 +40,11 @@ showLogOutPopup(context) {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
+                  const SizedBoxW(),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        /*User selected NO*/
+                        /*USER SELECTED NO. CLOSE ALERTDIALOG.*/
                         Navigator.of(context).pop();
                       },
                       child: const Text(

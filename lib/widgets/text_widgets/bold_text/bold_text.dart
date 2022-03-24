@@ -19,7 +19,7 @@ class BoldText extends StatelessWidget {
             child: Text(
               boldtext,
               style: const TextStyle(
-                fontSize: 18.0,
+                fontSize: 17.0,
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -34,7 +34,7 @@ class BoldText extends StatelessWidget {
             child: Text(
               boldtext,
               style: const TextStyle(
-                fontSize: 18.0,
+                fontSize: 17.0,
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -50,7 +50,7 @@ class BoldText extends StatelessWidget {
             child: Text(
               boldtext,
               style: const TextStyle(
-                fontSize: 18.0,
+                fontSize: 17.0,
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -67,7 +67,7 @@ class BoldText extends StatelessWidget {
             child: Text(
               boldtext,
               style: const TextStyle(
-                fontSize: 18.0,
+                fontSize: 17.0,
                 fontWeight: FontWeight.w700,
               ),
             ),
@@ -81,7 +81,7 @@ class BoldText extends StatelessWidget {
             child: Text(
               boldtext,
               style: const TextStyle(
-                fontSize: 18.0,
+                fontSize: 17.0,
                 fontWeight: FontWeight.w700,
               ),
             ),

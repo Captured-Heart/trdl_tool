@@ -1,12 +1,13 @@
 import 'package:trdl_tool/core/all_imports.dart';
 
+/*FIREBASE CONSTANTS*/
 final _auth = FirebaseAuth.instance;
 String? emailCurrentUser = _auth.currentUser!.email;
 
-/*Jungle Green color constant*/
-const kDarkGreen = 0xFF004E15;
-const kLightGreen = 0xFF738E7E;
-const kSecondaryGreen = 0xFF2F3E32;
+/*JUNGLE GREEN CONSTANTS*/
+const kDarkGreen = 0xFF004E15; //flexSchemeLight.primary
+const kLightGreen = 0xFF8FB99B; //flexSchemeLight.primaryContainer
+const kSecondaryGreen = 0xFF83BCAD; //flexSchemeLight.secondaryContainer
 
 /*CARD CONSTANTS*/
 const double kCardElevation = 6.0;
@@ -21,62 +22,10 @@ const kSendButtonTextStyle = TextStyle(
 );
 
 const kMessageTextFieldDecoration = InputDecoration(
-  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0,),
   hintText: 'Typ hier je bericht...',
 );
 
 const kTextFieldDecoration = InputDecoration(
-  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
-);
-
-/*SnackBar constants*/
-
-//TODO: HIER VERDER!
-
-final snackBarRegisterEmailWrong = SnackBar(
-  content: const Text(
-    'Controleer het emailadres. LET OP: Het emailadres moet eindingen op @prorail.nl',
-    style: TextStyle(
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-  duration: const Duration(
-    seconds: 5,
-  ),
-  action: SnackBarAction(
-    label: 'OK',
-    onPressed: () {},
-  ),
-);
-
-final snackBarRegisterPasswordShort = SnackBar(
-  content: const Text(
-    'Kies een wachtwoord van minimaal 6 tekens',
-    style: TextStyle(
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-  duration: const Duration(
-    seconds: 5,
-  ),
-  action: SnackBarAction(
-    label: 'OK',
-    onPressed: () {},
-  ),
-);
-
-final snackBarRegisterPasswordNotEqual = SnackBar(
-  content: const Text(
-    'De ingevulde wachtwoorden komen niet overeen',
-    style: TextStyle(
-      fontWeight: FontWeight.bold,
-    ),
-  ),
-  duration: const Duration(
-    seconds: 5,
-  ),
-  action: SnackBarAction(
-    label: 'OK',
-    onPressed: () {},
-  ),
+  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0,),
 );

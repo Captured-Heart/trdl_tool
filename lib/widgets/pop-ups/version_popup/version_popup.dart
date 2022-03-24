@@ -13,8 +13,11 @@ showVersionUpdatePopup(context) {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CurrentVersion(
-                  versionNumber: '0.1.9',
+                  versionNumber: '0.2.0',
                 ),
+                SizedBoxH(),
+                DateChanged(date: '2022-03-24: 0.2.0',),
+                ChangesMade(changes: '- Refactor, filetree aangepast, achtergrondinformatie verder uitgebreid (12) en Material You design toegepast op alle onderdelen app.',),
                 SizedBoxH(),
                 DateChanged(
                   date: '2022-02-25: 0.1.9',
@@ -161,81 +164,4 @@ showVersionUpdatePopup(context) {
       );
     },
   );
-}
-
-class ChangesMade extends StatelessWidget {
-  const ChangesMade({
-    required this.changes,
-    Key? key,
-  }) : super(key: key);
-
-  final String changes;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: Text(
-            changes,
-            // style: const TextStyle(
-            //   fontSize: 16.0,
-            // ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class DateChanged extends StatelessWidget {
-  const DateChanged({
-    required this.date,
-    Key? key,
-  }) : super(key: key);
-
-  final String date;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: Text(
-            date,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 18.0,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-class CurrentVersion extends StatelessWidget {
-  const CurrentVersion({
-    required this.versionNumber,
-    Key? key,
-  }) : super(key: key);
-
-  final String versionNumber;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: Text(
-            'De huidige versie is $versionNumber',
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 20.0,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
 }

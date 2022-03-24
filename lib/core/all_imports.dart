@@ -38,20 +38,28 @@ export 'package:trdl_tool/widgets/pop-ups/logout_popup/logout_popup.dart';
 export 'package:trdl_tool/widgets/pop-ups/avatar-popup/avatar_popup.dart';
 export 'package:trdl_tool/widgets/pop-ups/quizfinish_popup/quizfinish_popup.dart';
 export 'package:trdl_tool/widgets/pop-ups/version_popup/version_popup.dart';
+
 export 'package:trdl_tool/widgets/buttons/nav_button.dart';
 export 'package:trdl_tool/widgets/buttons/rounded_button.dart';
+
 export 'package:trdl_tool/widgets/appbar_widgets/appbar_title/appbar_title.dart';
 export 'package:trdl_tool/widgets/appbar_widgets/appbar_logout_button/appbar_logout_button.dart';
 export 'package:trdl_tool/widgets/appbar_widgets/appbar_home_button/appbar_home_button.dart';
 export 'package:trdl_tool/widgets/appbar_widgets/appbar_search_button/appbar_search_button.dart';
 
+export 'package:trdl_tool/widgets/version_widgets/version_changesmade.dart';
+export 'package:trdl_tool/widgets/version_widgets/version_currentversion.dart';
+export 'package:trdl_tool/widgets/version_widgets/version_datechanged.dart';
+
 export 'package:trdl_tool/widgets/trdltool_logo/trdltool_logo.dart';
+
 export 'package:trdl_tool/widgets/text_widgets/title_text/title_text.dart';
 export 'package:trdl_tool/widgets/text_widgets/subtitle_text/subtitle_text.dart';
 export 'package:trdl_tool/widgets/text_widgets/bold_text/bold_text.dart';
 export 'package:trdl_tool/widgets/text_widgets/body_text/body_text.dart';
 
 export 'package:trdl_tool/widgets/image_widgets/insert_image.dart';
+
 export 'package:trdl_tool/widgets/table_widgets/tablecell_bold/tablecell_bold.dart';
 export 'package:trdl_tool/widgets/table_widgets/tablecell/tablecell.dart';
 
@@ -62,7 +70,9 @@ export 'package:trdl_tool/widgets/snackbars/snackbar_login_email_verification.da
 export 'package:trdl_tool/widgets/snackbars/snackbar_login_erisietsmis.dart';
 export 'package:trdl_tool/widgets/snackbars/snackbar_wachtwoord_emailverzonden.dart';
 export 'package:trdl_tool/widgets/snackbars/snackbar_wachtwoord_erisietsmis.dart';
-//HIER VERDER!
+export 'package:trdl_tool/widgets/snackbars/snackbar_register_emailwrong.dart';
+export 'package:trdl_tool/widgets/snackbars/snackbar_register_passwordshort.dart';
+export 'package:trdl_tool/widgets/snackbars/snackbar_register_passwordnotequal.dart';
 
 /*MAIN PAGES*/
 export 'package:trdl_tool/screens/landing_screens/splash_screen.dart';

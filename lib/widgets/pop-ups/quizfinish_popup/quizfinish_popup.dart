@@ -62,7 +62,7 @@ finishQuizPopup(context) {
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        /*USER SELECTED YES*/
+                        /*USER SELECTED YES. RESET VARIABLES FOR NEW TRY.*/
                         correctAmount = 0;
                         wrongAmount = 0;
                         accumulatedPoints = 0;
@@ -79,13 +79,11 @@ finishQuizPopup(context) {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
+                  const SizedBoxW(),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        /*USER SELECTED NO*/
+                        /*USER SELECTED NO. GO BACK TO HOMESCREEN.*/
                         Navigator.pushReplacementNamed(
                           context,
                           'home_screen',

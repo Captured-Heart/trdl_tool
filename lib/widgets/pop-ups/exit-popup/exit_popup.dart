@@ -25,8 +25,8 @@ Future<bool> showExitPopup(context) async {
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        /*User selected YES*/
-                        SystemNavigator.pop();
+                        /*USER SELECTED YES. OFFICAL ANDROID CLOSEDOWN*/
+                        SystemNavigator.pop(animated: true,);
                       },
                       child: const Text(
                         'Ja',
@@ -36,13 +36,11 @@ Future<bool> showExitPopup(context) async {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    width: 15,
-                  ),
+                  const SizedBoxW(),
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        /*User selected NO*/
+                        /*USER SELECTED NO. STAY IN APP.*/
                         Navigator.of(context).pop();
                       },
                       child: const Text(
