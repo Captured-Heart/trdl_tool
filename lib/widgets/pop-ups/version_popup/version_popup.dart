@@ -16,8 +16,13 @@ showVersionUpdatePopup(context) {
                   versionNumber: '0.2.0',
                 ),
                 SizedBoxH(),
-                DateChanged(date: '2022-03-24: 0.2.0',),
-                ChangesMade(changes: '- Refactor, filetree aangepast, achtergrondinformatie verder uitgebreid (12) en Material You design toegepast op alle onderdelen app.',),
+                DateChanged(
+                  date: '2022-03-25: 0.2.0',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Refactor, filetree aangepast, achtergrondinformatie verder uitgebreid (12), Material You design toegepast op alle onderdelen van de app en icon beter zichtbaar gemaakt',
+                ),
                 SizedBoxH(),
                 DateChanged(
                   date: '2022-02-25: 0.1.9',
