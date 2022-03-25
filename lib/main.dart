@@ -152,6 +152,8 @@ class MainEntry extends StatelessWidget {
         'ai_werkzones': (context) => const AIWerkzones(),
         'ai_ncbg': (context) => const AINcbg(),
         'ai_uitvoeren_plan': (context) => const AIUitvoerenPlan(),
+        'ai_dienstovergave': (context) => const AIDienstovergave(),
+        //TODO: Toevoegen Dienstovergave AI
 
         /*ACHTERGRONDINFO AANPASSEN PLAN ROUTES*/
         'ai_aanpassen_plan_main': (context) => const AIAanpassenPlanMain(),

@@ -62,7 +62,8 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
 
   /*CHECK THE ANSWER, FILL THE SCOREKEEPER AND GO TO NEXQUESTION*/
   void checkAnswer(bool userPickedAnswer) {
-    bool correctAnswer = QuestionBank().questionBank[questionNumber].questionAnswer;
+    bool correctAnswer =
+        QuestionBank().questionBank[questionNumber].questionAnswer;
     setState(() {
       if (userPickedAnswer == correctAnswer) {
         correctAmount++;
@@ -90,7 +91,8 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
   /*NEXT QUESTION IS FROM SHUFFLED QUESTIONBANK LIST, THEN ADDS +1*/
   void nextQuestion() {
     Random randomNumber = Random();
-    questionNumber = randomNumber.nextInt(QuestionBank().questionBank.length - 1) + 1;
+    questionNumber =
+        randomNumber.nextInt(QuestionBank().questionBank.length - 1) + 1;
   }
 
   /*RESETS QUIZ, CANCELS TIMER, CREATES POPUP, RESETS VARIABLES TO STARTING POSITION*/
@@ -115,7 +117,8 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
     if (accumulatedPoints <= 0 && accumulatedPoints <= 10) {
       return scorePercentage = 'Waardeloos';
     } else {
-      doubleScorePercentage = (100 * correctAmount) / accumulatedPoints.toDouble();
+      doubleScorePercentage =
+          (100 * correctAmount) / accumulatedPoints.toDouble();
       scorePercentage = doubleScorePercentage.toStringAsFixed(2);
       return scorePercentage;
     }
@@ -150,7 +153,9 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
                         height: 125.0,
                         width: 125.0,
                         /*DEFINES THE LOOK OF THE TIMER*/
-                        child: timerRunning ? countDownTimerRunning() : countDownTimerStopped(),
+                        child: timerRunning
+                            ? countDownTimerRunning()
+                            : countDownTimerStopped(),
                       ),
                     ],
                   ),
@@ -264,8 +269,8 @@ Widget countDownTimerRunning() {
               color: Colors.red,
               size: 125.0,
             )
-          : const SpinKitDoubleBounce(
-              color: Color(kDarkGreen),
+          : SpinKitDoubleBounce(
+              color: flexSchemeLight.primary,
               size: 125.0,
             ),
       CircularProgressIndicator(

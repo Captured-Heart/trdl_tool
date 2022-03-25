@@ -89,6 +89,31 @@ class WWUitvoerenPlanMain extends StatelessWidget {
                   ),
                 ),
               ),
+              /*ACHTERGROND CARD*/
+              Card(
+                elevation: kCardElevation,
+                child: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: [
+                      const TitleText(
+                        title: 'Achtergrondinfo',
+                      ),
+                      const SizedBoxH(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          NavButton(
+                            buttontext: 'Uitvoeren Plan - Achtergrond',
+                            destination: 'ai_uitvoeren_plan_main',
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),

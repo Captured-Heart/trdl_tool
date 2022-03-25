@@ -73,6 +73,31 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
                   ),
                 ),
               ),
+              /*ACHTERGROND CARD*/
+              Card(
+                elevation: kCardElevation,
+                child: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: [
+                      const TitleText(
+                        title: 'Achtergrondinfo',
+                      ),
+                      const SizedBoxH(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          NavButton(
+                            buttontext: 'Bijzonderheden Rijwegen - Achtergrond',
+                            destination: 'ai_bijzonderheden_rijwegen_main',
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),

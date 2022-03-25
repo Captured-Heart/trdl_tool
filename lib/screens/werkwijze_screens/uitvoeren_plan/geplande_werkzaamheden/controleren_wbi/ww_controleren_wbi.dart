@@ -36,12 +36,14 @@ class WWControlerenWBI extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Voor aanvang van de werkzaamheden controleer je of:',
+                        text:
+                            'Voor aanvang van de werkzaamheden controleer je of:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Niet onbedoeld een rijweg instelbaar is naar de buitendienststelling;\n\n- De veiligheidsmaatregelen van de LWB invloed hebben op je eigen veiligheidsmaatregelen;\n\n- Voldaan is aan de toetscriteria WBI/WECO die beschreven zijn in de werkinstructie WBI/WECO.',
+                        text:
+                            '- Niet onbedoeld een rijweg instelbaar is naar de buitendienststelling;\n\n- De veiligheidsmaatregelen van de LWB invloed hebben op je eigen veiligheidsmaatregelen;\n\n- Voldaan is aan de toetscriteria WBI/WECO die beschreven zijn in de werkinstructie WBI/WECO.',
                       ),
                     ],
                   ),
@@ -60,7 +62,8 @@ class WWControlerenWBI extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
+                        text:
+                            'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
                       ),
                     ],
                   ),
@@ -79,8 +82,39 @@ class WWControlerenWBI extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'In de voorbereiding is de treindienst aangepast aan de werkzaamheden. Fouten in de WBI/WECO kunnen ervoor zorgen dat werkplekbeveiligingsmaatregelen van de TRDL en/of de LWB niet of niet juist getroffen kunnen worden.\n\nFouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging.',
+                        text:
+                            'In de voorbereiding is de treindienst aangepast aan de werkzaamheden. Fouten in de WBI/WECO kunnen ervoor zorgen dat werkplekbeveiligingsmaatregelen van de TRDL en/of de LWB niet of niet juist getroffen kunnen worden.\n\nFouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging.',
                       ),
+                    ],
+                  ),
+                ),
+              ),
+              /*ACHTERGROND CARD*/
+              Card(
+                elevation: kCardElevation,
+                child: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: [
+                      const TitleText(
+                        title: 'Achtergrondinfo',
+                      ),
+                      const SizedBoxH(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          NavButton(
+                            buttontext: 'Controleren WBI - Achtergrond',
+                            destination: 'ai_controleren_wbi',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Fouten in de WBI - Achtergrond',
+                            destination: 'ai_fouten_wbi',
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
                     ],
                   ),
                 ),

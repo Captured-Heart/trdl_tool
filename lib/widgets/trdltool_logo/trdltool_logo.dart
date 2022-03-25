@@ -8,13 +8,13 @@ class TRDLtoolLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: const [
+      children: [
         Icon(
           Icons.railway_alert,
           size: 64.0,
           color: flexSchemeLight.primary,
         ),
-        SizedBoxW(),
+        const SizedBoxW(),
         Expanded(
           child: FittedBox(
             fit: BoxFit.fitWidth,

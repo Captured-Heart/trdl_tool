@@ -32,7 +32,8 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Dit zijn vooraf geplande werkzaamheden die zijn vastgelegd in een Werkplek Beveiligings Instructie (WBI/WECO).',
+                        text:
+                            'Dit zijn vooraf geplande werkzaamheden die zijn vastgelegd in een Werkplek Beveiligings Instructie (WBI/WECO).',
                       ),
                     ],
                   ),
@@ -65,6 +66,31 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
                           NavButton(
                             buttontext: 'Fouten in de WBI',
                             destination: 'ww_fouten_in_de_wbi',
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                    ],
+                  ),
+                ),
+              ),
+              /*ACHTERGROND CARD*/
+              Card(
+                elevation: kCardElevation,
+                child: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: [
+                      const TitleText(
+                        title: 'Achtergrondinfo',
+                      ),
+                      const SizedBoxH(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          NavButton(
+                            buttontext: 'Geplande Werkzaamheden - Achtergrond',
+                            destination: 'ai_geplande_werkzaamheden_main',
                           ),
                         ],
                       ),

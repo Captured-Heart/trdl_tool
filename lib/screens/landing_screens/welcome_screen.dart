@@ -36,9 +36,9 @@ class _WelcomeScreen extends State<WelcomeScreen> {
                       Text(
                         /*HEADER FROM WELCOME_ITEMS*/
                         item['header'],
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 50.0,
-                          color: Color(kDarkGreen),
+                          color: flexSchemeLight.primary,
                         ),
                       ),
                       Text(

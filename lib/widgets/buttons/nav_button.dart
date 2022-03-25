@@ -15,13 +15,6 @@ class NavButton extends StatelessWidget {
       onPressed: () {
         Navigator.pushNamed(context, destination);
       },
-      // style: ElevatedButton.styleFrom(
-      //   shape: RoundedRectangleBorder(
-      //     borderRadius: BorderRadius.circular(
-      //       12.0,
-      //     ),
-      //   ),
-      // ),
       child: Text(
         buttontext,
         style: const TextStyle(

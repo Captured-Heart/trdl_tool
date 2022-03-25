@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports';
+import 'package:trdl_tool/core/all_imports.dart';
 
 final snackBarRegisterEmailWrong = SnackBar(
   content: const Text(

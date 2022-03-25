@@ -94,7 +94,7 @@ class HomeIndex0 extends StatelessWidget {
                             SizedBoxW(),
                             NavButton(
                               buttontext: 'Aanpassen',
-                              destination: 'ww_aanpassen_plan_main',
+                              destination: 'ww_aanpassenplan_main',
                             ),
                             SizedBoxW(),
                             NavButton(

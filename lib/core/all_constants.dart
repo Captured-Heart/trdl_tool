@@ -5,8 +5,6 @@ final _auth = FirebaseAuth.instance;
 String? emailCurrentUser = _auth.currentUser!.email;
 
 /*JUNGLE GREEN CONSTANTS*/
-const kDarkGreen = 0xFF004E15; //flexSchemeLight.primary
-const kLightGreen = 0xFF8FB99B; //flexSchemeLight.primaryContainer
 const kSecondaryGreen = 0xFF83BCAD; //flexSchemeLight.secondaryContainer
 
 /*CARD CONSTANTS*/
@@ -22,10 +20,16 @@ const kSendButtonTextStyle = TextStyle(
 );
 
 const kMessageTextFieldDecoration = InputDecoration(
-  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0,),
+  contentPadding: EdgeInsets.symmetric(
+    vertical: 10.0,
+    horizontal: 20.0,
+  ),
   hintText: 'Typ hier je bericht...',
 );
 
 const kTextFieldDecoration = InputDecoration(
-  contentPadding: EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0,),
+  contentPadding: EdgeInsets.symmetric(
+    vertical: 10.0,
+    horizontal: 20.0,
+  ),
 );

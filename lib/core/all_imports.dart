@@ -15,7 +15,7 @@ export 'package:trdl_tool/services/auth_service.dart';
 
 /*EXTERNAL PACKAGES (THIRD PARTY)*/
 export 'package:google_fonts/google_fonts.dart';
-export 'package:flex_color_scheme/flexcolorscheme.dart';
+export 'package:flex_color_scheme/flex_color_scheme.dart';
 export 'package:flutter_spinkit/flutter_spinkit.dart';
 export 'package:logger/logger.dart';
 export 'package:url_launcher/url_launcher.dart';
@@ -29,7 +29,7 @@ export 'package:trdl_tool/core/all_constants.dart';
 export 'package:trdl_tool/core/all_search_strings.dart';
 
 /*THEMING*/
-export 'package:trdl_tool/theme/flex_color_scheme.dart';
+export 'package:trdl_tool/theme/flexcolorscheme.dart';
 export 'package:trdl_tool/theme/colors.dart';
 
 /*CUSTOM WIDGETS*/
@@ -66,13 +66,13 @@ export 'package:trdl_tool/widgets/table_widgets/tablecell/tablecell.dart';
 export 'package:trdl_tool/widgets/sizedbox_widgets/sizedbox_height_8/sizedbox_height_8.dart';
 export 'package:trdl_tool/widgets/sizedbox_widgets/sizedbox_width_8/sizedbox_width_8.dart';
 
-export 'package:trdl_tool/widgets/snackbars/snackbar_login_email_verification.dart';
-export 'package:trdl_tool/widgets/snackbars/snackbar_login_erisietsmis.dart';
-export 'package:trdl_tool/widgets/snackbars/snackbar_wachtwoord_emailverzonden.dart';
-export 'package:trdl_tool/widgets/snackbars/snackbar_wachtwoord_erisietsmis.dart';
-export 'package:trdl_tool/widgets/snackbars/snackbar_register_emailwrong.dart';
-export 'package:trdl_tool/widgets/snackbars/snackbar_register_passwordshort.dart';
-export 'package:trdl_tool/widgets/snackbars/snackbar_register_passwordnotequal.dart';
+export 'package:trdl_tool/widgets/snackbars/snackbars_login/snackbar_login_email_verification.dart';
+export 'package:trdl_tool/widgets/snackbars/snackbars_login/snackbar_login_erisietsmis.dart';
+export 'package:trdl_tool/widgets/snackbars/snackbars_wachtwoord/snackbar_wachtwoord_emailverzonden.dart';
+export 'package:trdl_tool/widgets/snackbars/snackbars_wachtwoord/snackbar_wachtwoord_erisietsmis.dart';
+export 'package:trdl_tool/widgets/snackbars/snackbars_register/snackbar_register_emailwrong.dart';
+export 'package:trdl_tool/widgets/snackbars/snackbars_register/snackbar_register_passwordshort.dart';
+export 'package:trdl_tool/widgets/snackbars/snackbars_register/snackbar_register_passwordnotequal.dart';
 
 /*MAIN PAGES*/
 export 'package:trdl_tool/screens/landing_screens/splash_screen.dart';
@@ -194,6 +194,9 @@ export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicati
 
 /*ACHTERGROND INFORMATIE NCBG PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/ncbg/ai_ncbg.dart';
+
+/*ACHTERGROND INFORMATIE DIENSTOVERGAVE PAGES*/
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/dienstovergave/ai_dienstovergave.dart';
 
 /*ACHTERGROND INFORMATIE AANPASSEN PLAN PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ai_aanpassen_plan_main.dart';
