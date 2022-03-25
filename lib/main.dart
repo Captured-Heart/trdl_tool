@@ -153,7 +153,6 @@ class MainEntry extends StatelessWidget {
         'ai_ncbg': (context) => const AINcbg(),
         'ai_uitvoeren_plan': (context) => const AIUitvoerenPlan(),
         'ai_dienstovergave': (context) => const AIDienstovergave(),
-        //TODO: Toevoegen Dienstovergave AI
 
         /*ACHTERGRONDINFO AANPASSEN PLAN ROUTES*/
         'ai_aanpassen_plan_main': (context) => const AIAanpassenPlanMain(),
@@ -171,6 +170,7 @@ class MainEntry extends StatelessWidget {
         /*ACHTERGRONDINFO INCIDENTEN ROUTES*/
         'ai_incidenten_main': (context) => const AIIncidentenMain(),
         'ai_incidenten': (context) => const AIIncidenten(),
+        'ai_incidenten_derdendieren': (context) => AIIncidentenDerdenDieren(),
         'ai_incidenten_infra_main': (context) => const AIIncidentenInfraMain(),
         'ai_incidenten_beveiliging_main': (context) =>
             const AIIncidentenBeveiligingMain(),

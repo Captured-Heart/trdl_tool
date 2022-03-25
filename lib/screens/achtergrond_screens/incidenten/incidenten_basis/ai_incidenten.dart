@@ -37,8 +37,56 @@ class AIIncidenten extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Alarmeren;\n\n- Alarmoproep GSM-R;\n\n- Herroepen van een sein;\n\n- Alarmeer- en informeer formulier;\n\n- Aanwijzingen;\n\n- Spoorweb.',
+                        text:
+                            '- Alarmeren;\n\n- Alarmoproep GSM-R;\n\n- Herroepen van een sein;\n\n- Alarmeer- en informeer formulier;\n\n- Aanwijzingen;\n\n- Spoorweb.',
                       ),
+                    ],
+                  ),
+                ),
+              ),
+              /*NAVIGATION CARD*/
+              Card(
+                elevation: kCardElevation,
+                child: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: [
+                      const TitleText(
+                        title: 'Ga snel naar',
+                      ),
+                      const SizedBoxH(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          NavButton(
+                            buttontext: 'Incidenten - werkwijze',
+                            destination: 'ww_incidenten_main',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Infra - achtergrond',
+                            destination: 'ai_incidenten_infra_main',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext:
+                                'Mensen, dieren, voorwerpen - achtergrond',
+                            destination:
+                                'ai_incidenten_mensendierenvoorwerpen_main',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Materieel',
+                            destination: 'ai_incidenten_materieel_main',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Overige incidenten',
+                            destination: 'ai_incidenten_overige_main',
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
                     ],
                   ),
                 ),
@@ -63,11 +111,14 @@ class AIIncidenten extends StatelessWidget {
                           text:
                               '- Neem maatregelen om uitbreiding te voorkomen. Dit zijn:'),
                       BodyText(
-                          indents: 2, text: '* Alarmoproep GSM-R uitzenden;\n\n* Herroepen van seinen (indien noodzakelijk);\n\n* ARI uitzetten voor betreffende planregels (indien noodzakelijk);\n\n* Buurtreindienstleider informeren (indien noodzakelijk);\n\n* Veiligheidsmaatregelen nemen, verhinderen van rijweginstelling.'),
+                          indents: 2,
+                          text:
+                              '* Alarmoproep GSM-R uitzenden;\n\n* Herroepen van seinen (indien noodzakelijk);\n\n* ARI uitzetten voor betreffende planregels (indien noodzakelijk);\n\n* Buurtreindienstleider informeren (indien noodzakelijk);\n\n* Veiligheidsmaatregelen nemen, verhinderen van rijweginstelling.'),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Bepaal of het om een incident gaat;\n\n- Alarmeer hulpdiensten en direct noodzakelijke ketenpartners. Doe dit binnen 5 minuten na melding van het incident;\n\n- Informeer, indiend belanghebbend, de Medewerker Rangeren.',
+                        text:
+                            '- Bepaal of het om een incident gaat;\n\n- Alarmeer hulpdiensten en direct noodzakelijke ketenpartners. Doe dit binnen 5 minuten na melding van het incident;\n\n- Informeer, indiend belanghebbend, de Medewerker Rangeren.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -76,66 +127,26 @@ class AIIncidenten extends StatelessWidget {
                             'Je zet de alarmoproep GSM-R van het gealarmeerde gebied pas uit nadat je jezelf ervan hebt overtuigd dat de veiligheidsmaatregelen van jou - en indien van toepassing jouw buurTRDL - de gevaarlijke situatie afdekken.',
                       ),
                       SizedBoxH(),
-                      SubTitleText(subtitle: 'Inhoud alarmering'),
+                      BoldText(
+                        indents: 0,
+                        boldtext: 'Inhoud alarmering',
+                      ),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
                               'Een alarmering moet zoveel mogelijk antwoord geven op de volgende vragen:'),
                       SizedBoxH(),
-                      BodyText(indents: 1, text: '- Wat is er gebeurd?\n\n- Waar is het gebeurd?\n\n- Wanneer is het gebeurd?\n\n- Wie is er bij betrokken?\n\n- Wat is de ernst?'),
+                      BodyText(
+                          indents: 1,
+                          text:
+                              '- Wat is er gebeurd?\n\n- Waar is het gebeurd?\n\n- Wanneer is het gebeurd?\n\n- Wie is er bij betrokken?\n\n- Wat is de ernst?'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
                               'Bij het uitvagen en alarmeren maak je gebruik van het alarmeer-/informeerformulier.\n\nN.B.: Bij afwijkingen op de 1e alarmering en gemaakte afspraken met de MKS-BO informeer je de MKS-BO opnieuw.'),
                       SizedBoxH(),
-                    ],
-                  ),
-                ),
-              ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Incidenten - werkwijze',
-                            destination: 'ww_incidenten',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Infra',
-                            destination: 'ai_infra_incidenten_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Materieel',
-                            destination: 'materieelincidentenachtergrond',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Mensen, dieren en voorwerpen',
-                            destination:
-                                'mensendierenvoorwerpenincidentenachtergrond',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Overige incidenten',
-                            destination: 'overigeincidentenachtergrond',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
                     ],
                   ),
                 ),
@@ -147,7 +158,9 @@ class AIIncidenten extends StatelessWidget {
                   padding: kCardPadding,
                   child: Column(
                     children: const [
-                      TitleText(title: 'Alarmoproep GSM-R'),
+                      SubTitleText(
+                        subtitle: 'Alarmoproep GSM-R',
+                      ),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
@@ -156,29 +169,31 @@ class AIIncidenten extends StatelessWidget {
                       BodyText(
                           indents: 1,
                           text:
-                              '- Automatisch gegenereerde alarmoproep (AGA);\n\n- Machinist plaatst alarmoproep;\n\n- TRDL plaatst alarmoproep.'),
+                              '- Automatisch gegenereerde alarmoproep (AGA);\n\n- MCN plaatst alarmoproep;\n\n- TRDL plaatst alarmoproep.'),
                       SizedBoxH(),
-                      SubTitleText(
-                          subtitle: 'Automatisch gegenereerde alarmoproep'),
-                      SizedBoxH(),
-                      BodyText(
-                          indents: 0,
-                          text:
-                              'Als een trein door stoptonend sein rijdt én in de rijweg van een andere trein kan komen, signaleert Procesleiding dat: \'botsgevaar\'. Je krijgt een categorie A melding in PRL en GSM-R genereert automatisch een alarmoproep.'),
-                      SizedBoxH(),
-                      BodyText(
-                          indents: 0, text: 'Kenmerken van deze situatie:'),
-                      SizedBoxH(),
-                      BodyText(indents: 1, text: '- Spreken is niet mogelijk;\n\n- Alleen de TRDL kan de alarmoproep beëindigen.'),
-                      SizedBoxH(),
-                      SubTitleText(
-                          subtitle:
-                              'Machinist plaatst alarmoproep (klein gebied)'),
+                      BoldText(
+                        indents: 0,
+                        boldtext: 'Automatisch gegenereerde alarmoproep',
+                      ),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
-                              'Wanneer een machinist een alarmoproep plaatst, dan gaat dat via het 3 cellen principe: de cel waarin de trein zich bevindt en de 2 aangrenzende cellen gaan in alarm. Indien er sprake is van een kleine cel dan wordt er, op basis van de remweg, een extra cel in alarm gezet.\n\nWanneer een machinist een alarmoproep plaatst, dan gaat dat via het 3 cellen principe: de cel waarin de trein zich bevindt en de 2 aangrenzende cellen gaan in alarm. Indien er sprake is van een kleine cel dan wordt er, op basis van de remweg, een extra cel in alarm gezet.\n\nKenmerken van deze situatie:'),
+                              'Als een trein door stoptonend sein rijdt én in de rijweg van een andere trein kan komen, signaleert Procesleiding dat: \'botsgevaar\'. Je krijgt een categorie A melding in PRL en GSM-R genereert automatisch een alarmoproep.\n\nKenmerken van deze situatie:'),
+                      SizedBoxH(),
+                      BodyText(
+                          indents: 1,
+                          text:
+                              '- Spreken is niet mogelijk;\n\n- Alleen de TRDL kan de alarmoproep beëindigen.'),
+                      SizedBoxH(),
+                      BoldText(
+                          indents: 0,
+                          boldtext: 'MCN plaatst alarmoproep (klein gebied)'),
+                      SizedBoxH(),
+                      BodyText(
+                          indents: 0,
+                          text:
+                              'Wanneer een MCN een alarmoproep plaatst, dan gaat dat via het 3 cellen principe: de cel waarin de trein zich bevindt en de 2 aangrenzende cellen gaan in alarm. Indien er sprake is van een kleine cel dan wordt er, op basis van de remweg, een extra cel in alarm gezet.\n\nWanneer een MCN een alarmoproep plaatst, dan gaat dat via het 3 cellen principe: de cel waarin de trein zich bevindt en de 2 aangrenzende cellen gaan in alarm. Indien er sprake is van een kleine cel dan wordt er, op basis van de remweg, een extra cel in alarm gezet.\n\nKenmerken van deze situatie:'),
                       SizedBoxH(),
                       BodyText(
                           indents: 1,
@@ -205,8 +220,9 @@ class AIIncidenten extends StatelessWidget {
                           text:
                               '- Bij een binnenkomend alarm op meer dan één post, kan iedere ontvangende TRDL het alarm aannemen ongeacht zijn/haar locatie. Het akoestische signaal wordt dan bij alle andere ontvangende TRDL uitgeschakeld. Als één van de betrokken TRDL op de \'clear\' toets drukt, wordt het alarm beëindigd.\n\n- Je ziet altijd het treinnummer dat door de MCN in zijn GSM-R is ingevoerd. Is er geen treinnummer ingevoerd, dan zie je wel in welk gebied de alarmoproep wordt uitgezonden.\n\n- Het volume van het alarmsignaal bij de TRDL kan door de postbeheerder worden ingesteld. Advies: niet lager dan stand 7.'),
                       SizedBoxH(),
-                      SubTitleText(
-                          subtitle: 'TRDL plaatst alarmoproep (groot gebied)'),
+                      BoldText(
+                          indents: 0,
+                          boldtext: 'TRDL plaatst alarmoproep (groot gebied)'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0, text: 'Kenmerken van deze situatie:'),
@@ -214,13 +230,13 @@ class AIIncidenten extends StatelessWidget {
                       BodyText(
                           indents: 1,
                           text:
-                              '- Alle cellen in het gebied gaan in alarm, waardoor alle MCN in het gebied een alarmoproep binnenkrijgen. Als een andere trein de cellen in alarm binnenrijdt, ontvangt de MCN een alarmmelding. De alarmmelding stopt als de trein de cellen in alarm verlaat, of na beëindigen van het alarm door de TRDL;\n\n- De alarmoproep en het gesprek zijn alleen hoorbaar voor MCN die zich binnen de cellen in alarm bevinden;\n\n- Na het uitzenden van de alarmoproep klinken er een aantal piepjes, waarna de TRDL een boodschap kan uitzenden;\n\n- Het alarmsignaal heeft prioriteit, waardoor de kwaliteit van de spreekverbinding minder is. Het is niet vanzelfsprekend dat de mcn de boodschap correct verstaat.'),
+                              '- Alle cellen in het gebied gaan in alarm, waardoor alle MCN in het gebied een alarmoproep binnenkrijgen. Als een andere trein de cellen in alarm binnenrijdt, ontvangt de MCN een alarmmelding. De alarmmelding stopt als de trein de cellen in alarm verlaat, of na beëindigen van het alarm door de TRDL;\n\n- De alarmoproep en het gesprek zijn alleen hoorbaar voor MCN die zich binnen de cellen in alarm bevinden;\n\n- Na het uitzenden van de alarmoproep klinken er een aantal piepjes, waarna de TRDL een boodschap kan uitzenden;\n\n- Het alarmsignaal heeft prioriteit, waardoor de kwaliteit van de spreekverbinding minder is. Het is niet vanzelfsprekend dat de MCN de boodschap correct verstaat.'),
                       SizedBoxH(),
                       InsertImage(
                           image:
                               'assets/images/achtergrond_info/incidenten/alarmoproepCellen3.png'),
                       SizedBoxH(),
-                      SubTitleText(subtitle: 'Opzetten alarmoproep'),
+                      BoldText(indents: 0, boldtext: 'Opzetten alarmoproep'),
                       SizedBoxH(),
                       BodyText(indents: 0, text: 'Door de MCN:'),
                       SizedBoxH(),
@@ -229,24 +245,37 @@ class AIIncidenten extends StatelessWidget {
                           text:
                               '- De MCN plaatst een alarmoproep zodra hij/zij een gevaarlijke situatie waarneemt.'),
                       SizedBoxH(),
-                      BodyText(indents: 0, text: 'Toelichting:\n\nWanneer zich een gevaarlijke situatie voordoet, is het belangrijk dat er snel gealarmeerd wordt, want:'),
+                      BodyText(
+                          indents: 0,
+                          text:
+                              'Toelichting:\n\nWanneer zich een gevaarlijke situatie voordoet, is het belangrijk dat er snel gealarmeerd wordt, want:'),
                       SizedBoxH(),
                       BodyText(
                           indents: 1,
                           text:
                               '- Zodra de MCN heeft gealarmeerd, is er sprake van een min of meer beheerste situatie; het gevaarpunt is direct afgedekt en de TRDL kan direct uitvragen en door-alarmeren;\n\n- Als de MCN eerst de TRDL belt, zet de TRDL toch eerst een alarmoproep op. Hierdoor gaat tijd verloren, omdat de TRDL niet direct kan uitvragen en door-alarmeren. Bovendien beslaat de alarmoproep dan een veel groter gebied.'),
                       SizedBoxH(),
-                      BodyText(indents: 0, text: 'Door de TRDL:\n\nJe plaatst een alarmoproep zodra je kennis hebt van een gevaarlijke situatie.'),
+                      BodyText(
+                          indents: 0,
+                          text:
+                              'Door de TRDL:\n\nJe plaatst een alarmoproep zodra je kennis hebt van een gevaarlijke situatie.'),
                       SizedBoxH(),
-                      SubTitleText(subtitle: 'Beëindigen alarmoproep'),
+                      BoldText(indents: 0, boldtext: 'Beëindigen alarmoproep'),
                       SizedBoxH(),
-                      BodyText(indents: 0, text: 'Door de MCN:\n\nHandboek machinist (1-11-2019): \'De machinist beëindigt \'rijden op zicht\' als de alarmoproep op de GSM-R is beëindigd én hij een bericht heeft ontvangen van de treindienstleider dat de alarmoproep beëindigd is.\n\nOntvangt de machinist de oproep niet, dan belt de machinist zelf met de treindienstleider.\''),
+                      BodyText(
+                          indents: 0,
+                          text:
+                              'Door de MCN:\n\nHandboek machinist (1-11-2019): \'De machinist beëindigt \'rijden op zicht\' als de alarmoproep op de GSM-R is beëindigd én hij een bericht heeft ontvangen van de treindienstleider dat de alarmoproep beëindigd is.\n\nOntvangt de machinist de oproep niet, dan belt de machinist zelf met de treindienstleider.\''),
                       SizedBoxH(),
-                      BodyText(indents: 0, text: 'Door de TRDL:\n\nJe beëindigt het alarm als er een veilige situatie is gecreëerd. Alleen de TRDL mag een alarm beëindigen:'),
+                      BodyText(
+                          indents: 0,
+                          text:
+                              'Door de TRDL:\n\nJe beëindigt het alarm als er een veilige situatie is gecreëerd. Alleen de TRDL mag een alarm beëindigen:'),
                       SizedBoxH(),
                       BodyText(
                           indents: 1,
-                          text: '- Zet het alarm op de console uit;\n\n- Informeert de MCN indien mogelijk dat de alarmoproep is beëindigd.'),
+                          text:
+                              '- Zet het alarm op de console uit;\n\n- Informeert de MCN indien mogelijk dat de alarmoproep is beëindigd.'),
                     ],
                   ),
                 ),
@@ -259,7 +288,7 @@ class AIIncidenten extends StatelessWidget {
                   child: Column(
                     children: [
                       const TitleText(
-                        title: 'Ga snel naar',
+                        title: 'Meer info',
                       ),
                       const SizedBoxH(),
                       Column(
@@ -277,9 +306,7 @@ class AIIncidenten extends StatelessWidget {
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Systeemstoring GSM-R',
-                            //TODO: Add this page!
-                            destination:
-                                'materieelincidentenachtergrond', //TODO: Toevoegen!
+                            destination: 'ai_incidenten_systeemstoring_gsmr',
                           ),
                         ],
                       ),
@@ -295,23 +322,25 @@ class AIIncidenten extends StatelessWidget {
                   padding: kCardPadding,
                   child: Column(
                     children: const [
-                      TitleText(title: 'Herroepen van een sein'),
+                      SubTitleText(subtitle: 'Herroepen van een sein'),
                       SizedBoxH(),
-                      SubTitleText(subtitle: 'Gevaar'),
+                      BoldText(indents: 0, boldtext: 'Gevaar'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
                               'Je moet een sein herroepen ter voorkoming van onmiddelijk gevaar.'),
                       SizedBoxH(),
-                      SubTitleText(subtitle: 'Bijsturing'),
+                      BoldText(indents: 0, boldtext: 'Bijsturing'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text: 'Je mag een sein herroepen voor bijsturing:'),
                       SizedBoxH(),
                       BodyText(
-                          indents: 1, text: '- Nadat de MCN is ingelicht, of;\n\n- Als je de zekerheid hebt dat er geen MCN op of bij de trein aanwezig is.'),
+                          indents: 1,
+                          text:
+                              '- Nadat de MCN is ingelicht, of;\n\n- Als je de zekerheid hebt dat er geen MCN op of bij de trein aanwezig is.'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
@@ -321,7 +350,8 @@ class AIIncidenten extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                           indents: 2,
-                          text: '* via een point to point oproep per GSM-R;\n\n* indien geen contact volgt, dan plaats je een Algemene Oproep (benoem hierin trein-, sein- en spoornummer);\n\n* indien contact met de MCN via portofoons verloopt, een oproep per portofoon.'),
+                          text:
+                              '* via een point to point oproep per GSM-R;\n\n* indien geen contact volgt, dan plaats je een Algemene Oproep (benoem hierin trein-, sein- en spoornummer);\n\n* indien contact met de MCN via portofoons verloopt, een oproep per portofoon.'),
                       SizedBoxH(),
                       BodyText(
                           indents: 1,
@@ -337,16 +367,17 @@ class AIIncidenten extends StatelessWidget {
                   padding: kCardPadding,
                   child: Column(
                     children: const [
-                      TitleText(title: 'Alarmeer- en informeerformulier'),
+                      SubTitleText(subtitle: 'Alarmeer- en informeerformulier'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
-                              'Meldingen over verschillende infraonttrekkingen komen uit verschillende delen van het land op het CMBO samen. De meldingen worden getoond in Spoorweb in een lijst met dossiers.\n\nOm te voorkomen dat er onduidelijkheid ontstaat over de exacte infra onttrekking en logistieke consequentie bij verstoringen, storingen en calamiteiten maak je als treindienstleider gebruik van het alarmeer- informeerformulier. Het formulier gebruik je bij het uitvragen en het alarmeren en informeren conform de beslisboom. De antwoorden noteer je direct op het formulier.\n\nNadat je de gegevens op het formulier hebt ingevuld en noodzakelijke ketenpartners gealarmeerd hebt, informeer je de DVL en CRA.\n\nHet doel van het alarmeer- informeer formulier is:'),
+                              'Meldingen over verschillende infraonttrekkingen komen uit verschillende delen van het land op het CMBO samen. De meldingen worden getoond in Spoorweb in een lijst met dossiers.\n\nOm te voorkomen dat er onduidelijkheid ontstaat over de exacte infra onttrekking en logistieke consequentie bij verstoringen, storingen en calamiteiten maak je als TRDL gebruik van het alarmeer- informeerformulier. Het formulier gebruik je bij het uitvragen en het alarmeren en informeren conform de beslisboom. De antwoorden noteer je direct op het formulier.\n\nNadat je de gegevens op het formulier hebt ingevuld en noodzakelijke ketenpartners gealarmeerd hebt, informeer je de DVL en CRA.\n\nHet doel van het alarmeer- informeer formulier is:'),
                       SizedBoxH(),
                       BodyText(
                           indents: 1,
-                          text: '- Borging van de kwaliteit van informatie;\n\n- Borging van goed alarmeren/informeren naar MKS-BO, OBI, DVL en CRA;\n\n- Eenduidige communicatie over incident;\n\n- Geen overbodige communicatie omdat er onduidelijkheden zijn bij het alarmeren.'),
+                          text:
+                              '- Borging van de kwaliteit van informatie;\n\n- Borging van goed alarmeren/informeren naar MKS-BO, OBI, DVL en CRA;\n\n- Eenduidige communicatie over incident;\n\n- Geen overbodige communicatie omdat er onduidelijkheden zijn bij het alarmeren.'),
                       SizedBoxH(),
                       InsertImage(
                           image:
@@ -363,14 +394,14 @@ class AIIncidenten extends StatelessWidget {
                   padding: kCardPadding,
                   child: Column(
                     children: const [
-                      TitleText(title: 'Aanwijzingen'),
+                      SubTitleText(subtitle: 'Aanwijzingen'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
                               'Een aanwijzing is een schriftelijk of mondeling gegeven opdracht aan de MCN aangaande veiligheidsmaatregelen. Deze gaat altijd boven alle andere opdrachten. Communicatie tussen TRDL en MCN over de aanwijzingen richt zich op de zgn. variabele tekstblokken, die op de formulieren genoteerd moeten worden.\n\nJe noteert de desbetreffende gegevens op het eigen formulier en leest ze voor aan de MCN. Daarnaast is er op de formulieren sprake van de zgn. vaste gegevens. Dit betreft specifieke gegevens over de wijze waarop de MCN de aanwijzing moet toepassen. Ze zijn als geheugensteun op de formulieren vermeld. Over deze vaste gegevens hoeft onderling niet gecommuniceerd te worden (dit geldt ook voor de beeldinstructie op de aanwijzing VS).\n\nHet formulier mag maar voor één soort aanwijzing tegelijkertijd worden gebruikt. Dit houdt in dat bij twee of meer tegelijkertijd af te geven soorten aanwijzingen, twee of meer formulieren gebruikt moeten worden.\n\nStel de rijweg pas in als je de zekerheid hebt dat de MCN de aanwijzing heeft ontvangen. De buurTRDL mag namens jou een aanwijzing SB, VR of OVW afgeven. Als je aanwijzingen afgeeft namens jouw buurTRDL moet je de treinen die een aanwijzing hebben afseinen.'),
                       SizedBoxH(),
-                      SubTitleText(subtitle: 'Schriftelijk'),
+                      BoldText(indents: 0, boldtext: 'Schriftelijk'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
@@ -382,21 +413,26 @@ class AIIncidenten extends StatelessWidget {
                           text:
                               '- Vul de aanwijzing in en overhandig deze aan de btrokken MCN;\n\n- Laat de MCN het duplicaat voor ontvangst tekenen.'),
                       SizedBoxH(),
-                      SubTitleText(subtitle: 'Via een spreekverbinding'),
+                      BoldText(
+                          indents: 0, boldtext: 'Via een spreekverbinding'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
                               'Als TRDL kun je onder andere gebruik maken van de volgende aanwijzingen:'),
                       SizedBoxH(),
-                      BodyText(indents: 1, text: '- STS (stop tonend sein);\n\n- STS (met normale snelheid);\n\n- VR (voorzichtig rijden);\n\n- SB (snelheid begrenzen);\n\n- OVW (Overweg);'),
+                      BodyText(
+                          indents: 1,
+                          text:
+                              '- STS (stop tonend sein);\n\n- STS (met normale snelheid);\n\n- VR (voorzichtig rijden);\n\n- SB (snelheid begrenzen);\n\n- OVW (overweg);'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
                               'Er bestaan nog meer aanwijzingen, bijvoorbeeld aanwijzing Verkeerd Spoor, maar deze worden vermeld in de lokale regelgeving.\n\nHet is belangrijk om aanwijzingen nauwkeurig in te vullen en te ondertekenen. Het is immers een veiligheidsdocument. Als je een aanwijzing afgeeft, is dat voor een MCN een dwingende opdracht. Hij moet de aanwijzing opvolgen.\n\nAanwijzingen VR, SB en OVW mogen door de buurTRDL namens jou worden afgegeven. Als hij dit gedaan heeft, moet hij de treinen die een aanwijzing hebben, afseinen aan jou.\n\nN.B.: Een aanwijzing STS mag nooit namens jou worden afgegeven.  Je moet de zekerheid hebben dat de betrokken MCN  van de trein stilstaat voor het sein waar je de aanwijzing STS voor moet afgeven.'),
                       SizedBoxH(),
-                      SubTitleText(subtitle: 'Aanwijzing STS'),
+                      BoldText(indents: 0, boldtext: 'Aanwijzing STS'),
+                      SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
@@ -404,7 +440,8 @@ class AIIncidenten extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                           indents: 1,
-                          text: '- Sluit de tegengestelde rijweg uit;\n\n- Stuur infra en/of wissels en leg infra en/of wissels vast. Denk ook aan brug, grendel, vrijgave, beweegbaar kruis.;\n\n- Vul de aanwijzing STS in;\n\n- Overtuig je ervan dat de betrokken MCN van de trein stilstaat voor het betrokken sein. Dit doe je door middel van de drie U\'s: U bent..., U staat... en U gaat... Twee vragen en één mededeling. Bij de laatste \'U\' vertel je de MCN naar welk spoor je hem leidt en hoe hij daar gaat komen;\n\n- Afhankelijk van de reden van het afgeven van de aanwijzing STS kun je de MCN ook nog een schouwopdracht (sectiestoring) of controleopdracht (wisselstoring) geven;\n\n- Infomeer de MCN over de rijweg en eventuele bijzonderheden hierin.'),
+                          text:
+                              '- Sluit de tegengestelde rijweg uit;\n\n- Stuur infra en/of wissels en leg infra en/of wissels vast. Denk ook aan brug, grendel, vrijgave, beweegbaar kruis.;\n\n- Vul de aanwijzing STS in;\n\n- Overtuig je ervan dat de betrokken MCN van de trein stilstaat voor het betrokken sein. Dit doe je door middel van de drie U\'s: U bent..., U staat... en U gaat... Twee vragen en één mededeling. Bij de laatste \'U\' vertel je de MCN naar welk spoor je hem leidt en hoe hij daar gaat komen;\n\n- Afhankelijk van de reden van het afgeven van de aanwijzing STS kun je de MCN ook nog een schouwopdracht (sectiestoring) of controleopdracht (wisselstoring) geven;\n\n- Infomeer de MCN over de rijweg en eventuele bijzonderheden hierin.'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
@@ -415,35 +452,38 @@ class AIIncidenten extends StatelessWidget {
                           image:
                               'assets/images/achtergrond_info/incidenten/aanwijzingSTS.png'),
                       SizedBoxH(),
-                      SubTitleText(subtitle: 'Aanwijzing VR'),
+                      BoldText(indents: 0, boldtext: 'Aanwijzing VR'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
                               'Een aanwijzing VR wordt afgegeven om de MCN de opdracht te geven om voorzichtig te rijden met een snelheid van ten hoogste 40 km/u, dan wel met een door jou aangegeven lagere snelheid. De MCN rijdt niet harder dan 40 km/u, maar ook met zo\'n snelheid dat hij deze tot stilstand kan brengen, als de veiligheid dit vordert. Mogelijke redenen voor het afgeven van deze aanwijzing kunnen zijn:'),
                       SizedBoxH(),
-                      BodyText(indents: 1, text: '- Toestand van de baan;\n\n- Onbevoegden of dieren langs de baan.'),
+                      BodyText(
+                          indents: 1,
+                          text:
+                              '- Toestand van de baan;\n\n- Onbevoegden of dieren langs de baan.'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
                               'Bij de aanwijzing VR heb je de keuze om \'van km... tot km...\' in te vullen en \'bij nadering van km...\'. De laatste optie gebruik je vaak als de reden waarom je de aanwijzing afgeeft, zich beweegt. Denk aan personen of dieren.'),
                       SizedBoxH(),
-                      SubTitleText(subtitle: 'Aanwijzing SB'),
+                      BoldText(indents: 0, boldtext: 'Aanwijzing SB'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
                               'Een aanwijzing snelheid begrenzen wordt afgegeven als er een onregelmatigheid is aan de spoorbaan. In eerste instantie zal je na een melding van een onregelmatigheid aan de baan een aanwijzing VR afgeven. Pas nadat de door het MKS-BO opgeroepen storingsdienst jou een snelheid doorgeeft, mag je overgaan op het afgeven van een aanwijzing SB. Er is geen maximumsnelheid verbonden aan een aanwijzing SB, zoals bij een aanwijzing VR wel het geval is.\n\nHet kan zijn dat je eerst met een aanwijzing VR 40 km/u rijdt en nadat de storingsdienst ter plaatse is geweest overgaat op een aanwijzing SB met dezelfde snelheid. Wat is dan het verschil, zal je je afvragen? Men zegt weleens dat de MCN bij een aanwijzing SB met zijn ogen dicht mag rijden als hij zeker weet dat hij de gevraagde snelheid rijdt. Bij een aanwijzing VR kan dat niet, omdat hij altijd voor ieder gevaarpunt moet kunnen stoppen.'),
                       SizedBoxH(),
-                      SubTitleText(subtitle: 'Aanwijzing OVW'),
+                      BoldText(indents: 0, boldtext: 'Aanwijzing OVW'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
                           text:
                               'Een aanwijzing OVW wordt afgegeven als er een storing is aan een overweg of overpad. Dit kan zijn omdat de overweg \'gestoord\' is gemeld op de overwegmelder, omdat hij langer dan vijf minuten een trein aankondigt of als de installatie beschadigd is of niet goed functioneert.\n\nEen MCN zal de betrokken overweg behoedzaam naderen met maximaal 10 km/u, zal een herhaald fluitsein geven en stoppen als de veiligheid van het wegverkeer dat vordert. Hij herneemt de snelheid als de eerste as van de trein de overweg is gepasseerd.'),
                       SizedBoxH(),
-                      SubTitleText(subtitle: 'Invullen aanwijzing'),
+                      BoldText(indents: 0, boldtext: 'Invullen aanwijzing'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
@@ -465,7 +505,7 @@ class AIIncidenten extends StatelessWidget {
                   padding: kCardPadding,
                   child: Column(
                     children: const [
-                      TitleText(title: 'Spoorweb'),
+                      SubTitleText(subtitle: 'Spoorweb'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
@@ -491,10 +531,12 @@ class AIIncidenten extends StatelessWidget {
                       BodyText(
                           indents: 0,
                           text:
-                              'Een Treinincidentscenario of TIS is een gestandaardiseerde typering voor een incident op of rond een spoorweg in Nederland. Het is in feite de spoorwegvariant van de Gecoordineerde Regionale Incidentbestrijdings Procedure. Een TIS regelt de benodigde opschaling, zowel van de hulpdiensten als van de spoorwegmaatschappij en spoorbeheerder (ProRail). De opschaling van de hulpdiensten kan per regio of locatie verschillen.\n\nDe scenario\'s zijn verdeeld in 5 groepen:'),
+                              'Een Treinincidentscenario of TIS is een gestandaardiseerde typering voor een incident op of rond een spoorweg in Nederland. Het is in feite de spoorwegvariant van de Gecoördineerde Regionale Incidentbestrijdings Procedure. Een TIS regelt de benodigde opschaling, zowel van de hulpdiensten als van de spoorwegmaatschappij en spoorbeheerder (ProRail). De opschaling van de hulpdiensten kan per regio of locatie verschillen.\n\nDe scenario\'s zijn verdeeld in 5 groepen:'),
                       SizedBoxH(),
                       BodyText(
-                          indents: 1, text: '- TIS 1: Verstoorde treindienst;\n\n- TIS 2: Brand;\n\n- TIS 3: Aanrijding of ontsporing;\n\n- TIS 4: Gevaarlijke stoffen;\n\n- TIS 5: Bommelding;'),
+                          indents: 1,
+                          text:
+                              '- TIS 1: Verstoorde treindienst;\n\n- TIS 2: Brand;\n\n- TIS 3: Aanrijding of ontsporing;\n\n- TIS 4: Gevaarlijke stoffen;\n\n- TIS 5: Bommelding;'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,
@@ -507,16 +549,17 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 1.1'),
                         children: [
-                          SubTitleText(subtitle: 'Verstoring treindienst'),
+                          BoldText(
+                              indents: 0, boldtext: 'Verstoring treindienst'),
                           BodyText(
                               indents: 0,
                               text:
                                   '(Door bijv. ontsporing zonder slachtoffers, defect materieel (gestrande trein), stroomuitval, uitval infra, slechte weersomstandigheden, dringende ongeplande werkzaamheden, stilleggen treindienst op bevel OHD.\n\nDe incidenttypen OHD bij trein, hinder buitenland, gestrande trein langs perron, storing in 1 wissel, zijn toegevoegd aan TIS1.1 ondanks dat deze niet altijd tot een verstoring van de treindienst leiden. De eerste coördinatie vindt plaats bij de MKS).'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Zeer beperkt'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -528,16 +571,17 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 1.2'),
                         children: [
-                          SubTitleText(subtitle: 'Verstoring treindienst'),
+                          BoldText(
+                              indents: 0, boldtext: 'Verstoring treindienst'),
                           BodyText(
                               indents: 0,
                               text:
                                   '(Door bijv. ontsporing zonder slachtoffers, defect materieel, stroomuitval, uitval infra, slechte weersomstandigheden, dringende ongeplande werkzaamheden, stilleggen treindienst op bevel OHD).'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Beperkt'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -549,16 +593,17 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 1.3'),
                         children: [
-                          SubTitleText(subtitle: 'Verstoring treindienst'),
+                          BoldText(
+                              indents: 0, boldtext: 'Verstoring treindienst'),
                           BodyText(
                               indents: 0,
                               text:
                                   'Totale versperring. Treindienst niet meer uitvoerbaar\n\n(Door bijv. ontsporing zonder slachtoffers, defect materieel (gestrande trein), stroomuitval, uitval infra, slechte weersomstandigheden, dringende ongeplande werkzaamheden, stilleggen treindienst op bevel OHD.\n\nDe incidenttypen OHD bij trein, hinder buitenland, gestrande trein langs perron, storing in 1 wissel, zijn toegevoegd aan TIS1.1 ondanks dat deze niet altijd tot een verstoring van de treindienst leiden. De eerste coördinatie vindt plaats bij de MKS.)'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Ernstig'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -570,16 +615,17 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 1.4'),
                         children: [
-                          SubTitleText(subtitle: 'Verstoring treindienst'),
+                          BoldText(
+                              indents: 0, boldtext: 'Verstoring treindienst'),
                           BodyText(
                               indents: 0,
                               text:
                                   'Totale versperring. Treindienst niet meer mogelijk in minimaal één post of druk knooppunt.\n\n(Door bijv. uitval centraal infrabediensysteem of stilleggen treindienst op bevel OHD.)'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Zeer ernstig'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -592,16 +638,16 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 2.1'),
                         children: [
-                          SubTitleText(subtitle: 'Brand'),
+                          BoldText(indents: 0, boldtext: 'Brand'),
                           BodyText(
                               indents: 0,
                               text:
                                   '- Automatische brandmelding (op station) in tunnel, zonder stilstaande trein;\n\n- Rookontwikkeling en/of vuurverschijnselen bij en/of onder trein op vrije baan of emplacement;\n\n- Brand in station(sgebouw) niet uitslaand;\n\n- Brand nabij of in het spoor met mogelijke invloed op het treinverkeer (bijv. bielzen- of bermbrand).'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Zeer beperkt'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -613,16 +659,16 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 2.2'),
                         children: [
-                          SubTitleText(subtitle: 'Brand'),
+                          BoldText(indents: 0, boldtext: 'Brand'),
                           BodyText(
                               indents: 0,
                               text:
                                   '- Brand (op station) in tunnel, zonder stilstaande trein;'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Beperkt'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -634,16 +680,16 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 2.3'),
                         children: [
-                          SubTitleText(subtitle: 'Brand'),
+                          BoldText(indents: 0, boldtext: 'Brand'),
                           BodyText(
                               indents: 0,
                               text:
                                   'Brand in trein, uitslaand op vrije baan of emplacement.'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Ernstig'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -655,16 +701,16 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 2.4'),
                         children: [
-                          SubTitleText(subtitle: 'Brand'),
+                          BoldText(indents: 0, boldtext: 'Brand'),
                           BodyText(
                               indents: 0,
                               text:
                                   '- (Automatische) brand(melding) in tunnel, met stilstaande trein;\n\n- Brand in trein uitslaand op station of in tunnel;\n\n- Treinstilstand in tunnel, zonder spraakverbinding met het treinpersoneel.'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Zeer ernstig'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -679,8 +725,9 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 3.1'),
                         children: [
-                          SubTitleText(
-                              subtitle:
+                          BoldText(
+                              indents: 0,
+                              boldtext:
                                   'Aanrijding, botsing en ontsporing met slachtoffers'),
                           BodyText(
                               indents: 0,
@@ -694,10 +741,10 @@ class AIIncidenten extends StatelessWidget {
                               text:
                                   '- klein wegvoertuig, zoals auto, motor, bestelbus of tractor (aantoonbaar zonder slachtoffers).'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Zeer beperkt'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -709,18 +756,19 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 3.2'),
                         children: [
-                          SubTitleText(
-                              subtitle:
+                          BoldText(
+                              indents: 0,
+                              boldtext:
                                   'Aanrijding, botsing en ontsporing met slachtoffers'),
                           BodyText(
                               indents: 0,
                               text:
                                   '- Aanrijding rangeerdelen onderling;\n\n- Hard koppelen (trein met trein of rangeerdeel);\n\n- Aanrijding trein of rangeerdeel met klein wegvoertuig (met slachtoffers of slachtoffers onbekend);\n\n- Aanrijding met groot wegvoertuig, zoals een bus of vrachtauto (zonder slachtoffers).'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Beperkt'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -732,8 +780,9 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 3.3'),
                         children: [
-                          SubTitleText(
-                              subtitle:
+                          BoldText(
+                              indents: 0,
+                              boldtext:
                                   'Aanrijding, botsing en ontsporing met slachtoffers'),
                           BodyText(
                               indents: 0,
@@ -744,10 +793,10 @@ class AIIncidenten extends StatelessWidget {
                               text:
                                   '- Trein of rangeerdeel;\n\n- Groot wegvoertuig (met slachtoffers of slachtoffers onbekend);\n\nwaardoor wagenstellen niet vervormd, gekanteld of gestapeld zijn en de bovenleidinggroep niet uitgevallen is.'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Ernstig'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -759,8 +808,9 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 3.4'),
                         children: [
-                          SubTitleText(
-                              subtitle:
+                          BoldText(
+                              indents: 0,
+                              boldtext:
                                   'Aanrijding, botsing en ontsporing met slachtoffers'),
                           BodyText(
                               indents: 0,
@@ -771,10 +821,10 @@ class AIIncidenten extends StatelessWidget {
                               text:
                                   '- Trein of rangeerdeel;\n\n- (Groot) wegvoertuig;\n\nwaardoor wagenstellen vervormd, gekanteld of gestapeld zijn of de bovenleidinggroep uitgevallen is.'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Zeer ernstig'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -787,16 +837,16 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 4.1'),
                         children: [
-                          SubTitleText(subtitle: 'Gevaarlijke stoffen'),
+                          BoldText(indents: 0, boldtext: 'Gevaarlijke stoffen'),
                           BodyText(
                               indents: 0,
                               text:
                                   'Kleine uitstroom van gevaarlijke stof.\n\nUitstroom van onbekende stof.\n\nGEVI-code begint met 7.\n\nAanrijding/ontsporing goederentrein met gevaar op uitstroom gevaarlijke stoffen'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Zeer beperkt'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -808,16 +858,16 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 4.2'),
                         children: [
-                          SubTitleText(subtitle: 'Gevaarlijke stoffen'),
+                          BoldText(indents: 0, boldtext: 'Gevaarlijke stoffen'),
                           BodyText(
                               indents: 0,
                               text:
                                   'Brand in goederentrein waarbij gevaarlijke stoffen betrokken zijn'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Beperkt'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -829,16 +879,16 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 4.3'),
                         children: [
-                          SubTitleText(subtitle: 'Gevaarlijke stoffen'),
+                          BoldText(indents: 0, boldtext: 'Gevaarlijke stoffen'),
                           BodyText(
                               indents: 0,
                               text:
                                   'Grote uitstroom van gevaarlijke stof waarvan GEVI-code begint met 3, 4, 5, 6, 8 of 9'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Ernstig'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -850,16 +900,16 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 4.4'),
                         children: [
-                          SubTitleText(subtitle: 'Gevaarlijke stoffen'),
+                          BoldText(indents: 0, boldtext: 'Gevaarlijke stoffen'),
                           BodyText(
                               indents: 0,
                               text:
                                   'Grote uitstroom van gevaarlijke stof waarvan GEVI-code begint met 2'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Zeer ernstig'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -872,16 +922,18 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 5.1'),
                         children: [
-                          SubTitleText(subtitle: 'Verdacht object/gedrag, bom'),
+                          BoldText(
+                              indents: 0,
+                              boldtext: 'Verdacht object/gedrag, bom'),
                           BodyText(
                               indents: 0,
                               text:
                                   '- Bommelding;\n\n- Verdacht gedrag;\n\n- Verdacht voorwerp langs de vrije baan;\n\n- Vondst niet gesprongen conventionele explosieven op spoorterrein.'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Zeer beperkt'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -893,16 +945,18 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 5.2'),
                         children: [
-                          SubTitleText(subtitle: 'Verdacht object/gedrag, bom'),
+                          BoldText(
+                              indents: 0,
+                              boldtext: 'Verdacht object/gedrag, bom'),
                           BodyText(
                               indents: 0,
                               text:
                                   '- Bomvinding of verdacht voorwerp in trein op de vrije baan'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Beperkt'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -914,16 +968,18 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 5.3'),
                         children: [
-                          SubTitleText(subtitle: 'Verdacht object/gedrag, bom'),
+                          BoldText(
+                              indents: 0,
+                              boldtext: 'Verdacht object/gedrag, bom'),
                           BodyText(
                               indents: 0,
                               text:
                                   '- Bomvinding of verdacht voorwerp: ernstig\n\n- In trein op station;\n\n- In tunnel of station.'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Ernstig'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -935,16 +991,18 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 5.4'),
                         children: [
-                          SubTitleText(subtitle: 'Verdacht object/gedrag, bom'),
+                          BoldText(
+                              indents: 0,
+                              boldtext: 'Verdacht object/gedrag, bom'),
                           BodyText(
                               indents: 0,
                               text:
                                   'Bomexplosie:\n\n- In trein, station of tunnel;\n\n- In een trein op station of in een tunnel.'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Ernst'),
+                          BoldText(indents: 0, boldtext: 'Ernst'),
                           BodyText(indents: 0, text: 'Zeer ernstig'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -957,13 +1015,14 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('BHV'),
                         children: [
-                          SubTitleText(subtitle: 'Bijzondere situaties'),
+                          BoldText(
+                              indents: 0, boldtext: 'Bijzondere situaties'),
                           BodyText(
                               indents: 0,
                               text:
                                   'Extern incident met impact op spoorsector\n\n- Brand, gevaarlijke stoffen of terreurincident, waarbij een station, vrije baan, emplacement of andere spoorlocatie in het effectgebied ligt.'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -975,10 +1034,11 @@ class AIIncidenten extends StatelessWidget {
                         childrenPadding: EdgeInsets.all(8.0),
                         title: Text('TIS 1.0'),
                         children: [
-                          SubTitleText(subtitle: 'Bijzondere situaties'),
+                          BoldText(
+                              indents: 0, boldtext: 'Bijzondere situaties'),
                           BodyText(indents: 0, text: 'Diverse situaties'),
                           SizedBoxH(),
-                          SubTitleText(subtitle: 'Kenmerk'),
+                          BoldText(indents: 0, boldtext: 'Kenmerk'),
                           BodyText(
                               indents: 0,
                               text:
@@ -986,8 +1046,9 @@ class AIIncidenten extends StatelessWidget {
                         ],
                       ),
                       SizedBoxH(),
-                      SubTitleText(
-                          subtitle: 'Incidentenonderzoek bij Verkeersleiding'),
+                      BoldText(
+                          indents: 0,
+                          boldtext: 'Incidentenonderzoek bij Verkeersleiding'),
                       SizedBoxH(),
                       BodyText(
                           indents: 0,

@@ -212,6 +212,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_w
 /*ACHTERGROND INFORMATIE INCIDENTEN PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/ai_incidenten_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/incidenten_basis/ai_incidenten.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/mensen_dieren_voorwerpen/ai_incidenten_derdendieren.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/ai_incidenten_infra_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/beveiliging/ai_incidenten_beveiliging_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/bovenleiding/ai_incidenten_bovenleiding_main.dart';
