@@ -49,7 +49,7 @@ class AIOngeplandWerkMain extends StatelessWidget {
                         children: const [
                           NavButton(
                             buttontext: 'Ongepland werk - Infra',
-                            destination: 'ai_infra_ter_beschikking',
+                            destination: 'ai_ongepland_werk_infra',
                           ),
                           SizedBoxH(),
                           NavButton(

@@ -170,7 +170,8 @@ class MainEntry extends StatelessWidget {
         /*ACHTERGRONDINFO INCIDENTEN ROUTES*/
         'ai_incidenten_main': (context) => const AIIncidentenMain(),
         'ai_incidenten': (context) => const AIIncidenten(),
-        'ai_incidenten_derdendieren': (context) => AIIncidentenDerdenDieren(),
+        'ai_incidenten_derdendieren': (context) =>
+            const AIIncidentenDerdenDieren(),
         'ai_incidenten_infra_main': (context) => const AIIncidentenInfraMain(),
         'ai_incidenten_beveiliging_main': (context) =>
             const AIIncidentenBeveiligingMain(),

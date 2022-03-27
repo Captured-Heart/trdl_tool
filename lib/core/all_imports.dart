@@ -207,7 +207,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_w
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_infra/ai_ongepland_werk_infra.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_materieel/ai_ongepland_werk_materieel.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/infra_ter_beschikking/ai_infra_ter_beschikking.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/vertragingen/ai_vertragingen.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_vertragingen.dart';
 
 /*ACHTERGROND INFORMATIE INCIDENTEN PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/ai_incidenten_main.dart';

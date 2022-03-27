@@ -136,6 +136,7 @@ class AIAanpassenPlan extends StatelessWidget {
                       indents: 0,
                       boldtext: 'Aandachtspunten',
                     ),
+                    SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
