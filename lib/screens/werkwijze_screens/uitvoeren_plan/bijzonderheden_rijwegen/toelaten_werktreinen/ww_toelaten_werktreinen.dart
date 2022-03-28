@@ -97,6 +97,11 @@ class WWToelatenWerktreinen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         NavButton(
+                          buttontext: 'Geplande Werkzaamheden - Werkwijze',
+                          destination: 'ww_geplande_werkzaamheden_main',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
                           buttontext: 'Toelaten Werktreinen - Achtergrond',
                           destination: 'ai_toelaten_werktreinen',
                         ),
