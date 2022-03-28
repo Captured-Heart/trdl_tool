@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class WWVeiligheidsstoringSein extends StatelessWidget {
   const WWVeiligheidsstoringSein({Key? key}) : super(key: key);
@@ -36,7 +36,8 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Bij een veiligheidsstoring voorkom je rijweginstelling naar het betrokken sein. Bij overige storingen licht je de MCN in voordat je een rijweg instelt naar het betrokken sein.',
+                        text:
+                            'Bij een veiligheidsstoring voorkom je rijweginstelling naar het betrokken sein. Bij overige storingen licht je de MCN in voordat je een rijweg instelt naar het betrokken sein.',
                       ),
                     ],
                   ),
@@ -55,7 +56,8 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text:
+                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -74,7 +76,8 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Wanneer een sein een beter seinbeeld toont dan op grond van de rijweginstelling mag worden verwacht, is er sprake van een veiligheidsstoring.',
+                        text:
+                            'Wanneer een sein een beter seinbeeld toont dan op grond van de rijweginstelling mag worden verwacht, is er sprake van een veiligheidsstoring.',
                       ),
                     ],
                   ),

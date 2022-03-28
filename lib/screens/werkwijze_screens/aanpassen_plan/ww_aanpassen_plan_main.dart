@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class WWAanpassenPlanMain extends StatelessWidget {
   const WWAanpassenPlanMain({Key? key}) : super(key: key);
@@ -32,7 +32,8 @@ class WWAanpassenPlanMain extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Het actuele plan aanpassen als gevolg van een incident of extra capaciteitsaanvraag.',
+                        text:
+                            'Het actuele plan aanpassen als gevolg van een incident of extra capaciteitsaanvraag.',
                       ),
                     ],
                   ),

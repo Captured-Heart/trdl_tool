@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class WWStroomstoring extends StatelessWidget {
   const WWStroomstoring({Key? key}) : super(key: key);

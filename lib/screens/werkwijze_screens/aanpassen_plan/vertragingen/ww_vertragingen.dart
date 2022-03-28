@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class WWVertragingen extends StatelessWidget {
   const WWVertragingen({Key? key}) : super(key: key);
@@ -34,7 +34,8 @@ class WWVertragingen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Bij vertragingen is het belangrijk de treinenloop zo goed mogelijk volgens plan te laten verlopen. Daar waar het plan aangepast moet worden, gebeurt dat zoveel mogelijk volgens vooraf afgesproken afhandelingsafspraken. Deze afhandelingsafspraken zijn:',
+                        text:
+                            'Bij vertragingen is het belangrijk de treinenloop zo goed mogelijk volgens plan te laten verlopen. Daar waar het plan aangepast moet worden, gebeurt dat zoveel mogelijk volgens vooraf afgesproken afhandelingsafspraken. Deze afhandelingsafspraken zijn:',
                       ),
                       SizedBoxH(),
                       BodyText(

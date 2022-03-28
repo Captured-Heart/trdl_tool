@@ -22,11 +22,11 @@ export 'package:url_launcher/url_launcher.dart';
 export 'package:carousel_slider/carousel_slider.dart';
 
 /*STRINGS / LISTS / CONSTANTS / ETC*/
-export 'package:trdl_tool/core/welcome_items.dart';
-export 'package:trdl_tool/core/all_strings.dart';
-export 'package:trdl_tool/core/all_questions.dart';
-export 'package:trdl_tool/core/all_constants.dart';
-export 'package:trdl_tool/core/all_search_strings.dart';
+export 'package:trdl_tool/constants/welcome_items.dart';
+export 'package:trdl_tool/constants/all_strings.dart';
+export 'package:trdl_tool/constants/all_questions.dart';
+export 'package:trdl_tool/constants/all_constants.dart';
+export 'package:trdl_tool/constants/all_search_strings.dart';
 
 /*THEMING*/
 export 'package:trdl_tool/theme/flexcolorscheme.dart';

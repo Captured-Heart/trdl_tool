@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 const String treinenVanNS = 'https://ns.nl/over-ns/bijzonderheden_trein-van-ns';
 const String nlSpoorwegMaterieel =

@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class AIVertragingen extends StatelessWidget {
   const AIVertragingen({Key? key}) : super(key: key);
@@ -166,7 +166,8 @@ class AIVertragingen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Verwerk vertraging;\n\n- Aansluitingen en gevolgen (TAD);\n\n- Stationnement;\n\n- Spoorgebruik (afwijken/treinlengte);\n\n- Volgorde vrije baan;\n\n- Invoer voorwaardelijke vertraging.',
+                        text:
+                            '- Verwerk vertraging;\n\n- Aansluitingen en gevolgen (TAD);\n\n- Stationnement;\n\n- Spoorgebruik (afwijken/treinlengte);\n\n- Volgorde vrije baan;\n\n- Invoer voorwaardelijke vertraging.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -175,7 +176,11 @@ class AIVertragingen extends StatelessWidget {
                             'Door deze stappen te doorlopen, ga je bewust om met de gevolgen van vertraging.\n\nWat houdt dit nu in:',
                       ),
                       SizedBoxH(),
-                      BodyText(indents: 1, text: '- Allereerst Verwerk je de vertraging in het plan;\n\n- Check of er Aansluitingen zijn met andere treinen;\n\n- Check of er een Stationnement is dat ingekort kan worden;\n\n- Check of het aankomstspoor vrij is of dat je moet afwijken (Spoorgebruik;\n\n- Check of de trein(en) nog in dezelfde Volgorde vertrek(ken) naar de vrije baan;\n\n- Check of er treinen zijn die een aansluiting overnemen, of die keren onder een ander nummer en daardoor ook vertraging krijgen. Als dat het geval is moet je voorwaardelijke vertraging Invoeren.',),
+                      BodyText(
+                        indents: 1,
+                        text:
+                            '- Allereerst Verwerk je de vertraging in het plan;\n\n- Check of er Aansluitingen zijn met andere treinen;\n\n- Check of er een Stationnement is dat ingekort kan worden;\n\n- Check of het aankomstspoor vrij is of dat je moet afwijken (Spoorgebruik;\n\n- Check of de trein(en) nog in dezelfde Volgorde vertrek(ken) naar de vrije baan;\n\n- Check of er treinen zijn die een aansluiting overnemen, of die keren onder een ander nummer en daardoor ook vertraging krijgen. Als dat het geval is moet je voorwaardelijke vertraging Invoeren.',
+                      ),
                     ],
                   ),
                 ),

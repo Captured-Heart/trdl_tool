@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class WWSchakelenBovenleiding extends StatelessWidget {
   const WWSchakelenBovenleiding({Key? key}) : super(key: key);
@@ -36,7 +36,8 @@ class WWSchakelenBovenleiding extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Het OBI meldt welke groepen geschakeld zijn/gaan worden. Je maakt een WECO op.',
+                        text:
+                            'Het OBI meldt welke groepen geschakeld zijn/gaan worden. Je maakt een WECO op.',
                       ),
                     ],
                   ),
@@ -55,7 +56,8 @@ class WWSchakelenBovenleiding extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
+                        text:
+                            'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
                       ),
                     ],
                   ),
@@ -74,7 +76,8 @@ class WWSchakelenBovenleiding extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'De bedieningsdeskundige van het OBI is installatieverantwoordelijke voor de bovenleiding. Wanneer de bovenleiding ongepland geschakeld wordt heeft dit gevolgen voor het kunnen rijden met elektrische tractie. De treinen in het betrokken gebied moeten de stroomafnemers laten zakken, omdat er problemen kunnen ontstaan wanneer het OBI de groepen weer onder spanning brengt.',
+                        text:
+                            'De bedieningsdeskundige van het OBI is installatieverantwoordelijke voor de bovenleiding. Wanneer de bovenleiding ongepland geschakeld wordt heeft dit gevolgen voor het kunnen rijden met elektrische tractie. De treinen in het betrokken gebied moeten de stroomafnemers laten zakken, omdat er problemen kunnen ontstaan wanneer het OBI de groepen weer onder spanning brengt.',
                       ),
                     ],
                   ),

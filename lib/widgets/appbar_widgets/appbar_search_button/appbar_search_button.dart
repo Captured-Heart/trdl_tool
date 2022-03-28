@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class SearchButton extends StatelessWidget {
   const SearchButton({Key? key}) : super(key: key);

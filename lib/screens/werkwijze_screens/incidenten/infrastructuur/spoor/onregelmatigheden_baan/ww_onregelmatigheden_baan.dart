@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class WWOnregelmatighedenBaan extends StatelessWidget {
   const WWOnregelmatighedenBaan({Key? key}) : super(key: key);

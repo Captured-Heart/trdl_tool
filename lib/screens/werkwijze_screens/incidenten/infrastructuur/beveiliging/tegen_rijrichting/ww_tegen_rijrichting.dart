@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class WWTegenRijrichting extends StatelessWidget {
   const WWTegenRijrichting({Key? key}) : super(key: key);
@@ -36,17 +36,20 @@ class WWTegenRijrichting extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Links rijden tegen de rijrichting bij linkerspoor beveiliging:',
+                        text:
+                            'Links rijden tegen de rijrichting bij linkerspoor beveiliging:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Geef een aanwijzing OVW af voor alle overwegen.',
+                        text:
+                            '- Geef een aanwijzing OVW af voor alle overwegen.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Rechts rijden tegen rijrichting bij linkerspoor beveiliging:',
+                        text:
+                            'Rechts rijden tegen rijrichting bij linkerspoor beveiliging:',
                       ),
                       BodyText(
                         indents: 1,
@@ -54,17 +57,20 @@ class WWTegenRijrichting extends StatelessWidget {
                       ),
                       BodyText(
                         indents: 2,
-                        text: '1. De overwegen zijn voorzien van een extra aankonigingssectie plus aanwijzing OVW;\n2. Het baanvak is uitgerust met ULS, óf;\n3. Er geen overwegen zijn.',
+                        text:
+                            '1. De overwegen zijn voorzien van een extra aankonigingssectie plus aanwijzing OVW;\n2. Het baanvak is uitgerust met ULS, óf;\n3. Er geen overwegen zijn.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Keren op de vrije baan bij dubbel/enkelspoor beveiliging:',
+                        text:
+                            'Keren op de vrije baan bij dubbel/enkelspoor beveiliging:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Geef een aanwijzing OVW af voor de overwegen waarvan de trein de aankondiging volledig gepasseerd is.',
+                        text:
+                            '- Geef een aanwijzing OVW af voor de overwegen waarvan de trein de aankondiging volledig gepasseerd is.',
                       ),
                     ],
                   ),
@@ -83,7 +89,8 @@ class WWTegenRijrichting extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                        text:
+                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                       ),
                     ],
                   ),
@@ -102,7 +109,8 @@ class WWTegenRijrichting extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text: 'De blokbeveiliging controleert bij rijweginstelling de dynamische voorwaarden bij rijrichting naar de vrije baan. Bij het rijden tegen de rijrichting in wordt niet aan alle dynamische voorwaarden voldaan, waardoor de blokbeveiliging niet of niet volledig werkt.',
+                        text:
+                            'De blokbeveiliging controleert bij rijweginstelling de dynamische voorwaarden bij rijrichting naar de vrije baan. Bij het rijden tegen de rijrichting in wordt niet aan alle dynamische voorwaarden voldaan, waardoor de blokbeveiliging niet of niet volledig werkt.',
                       ),
                     ],
                   ),

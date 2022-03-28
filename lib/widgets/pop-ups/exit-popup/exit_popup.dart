@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 Future<bool> showExitPopup(context) async {
   return await showDialog(
@@ -26,7 +26,9 @@ Future<bool> showExitPopup(context) async {
                     child: ElevatedButton(
                       onPressed: () {
                         /*USER SELECTED YES. OFFICAL ANDROID CLOSEDOWN*/
-                        SystemNavigator.pop(animated: true,);
+                        SystemNavigator.pop(
+                          animated: true,
+                        );
                       },
                       child: const Text(
                         'Ja',

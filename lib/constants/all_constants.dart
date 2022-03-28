@@ -1,11 +1,8 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 /*FIREBASE CONSTANTS*/
-final _auth = FirebaseAuth.instance;
+final FirebaseAuth _auth = FirebaseAuth.instance;
 String? emailCurrentUser = _auth.currentUser!.email;
-
-/*JUNGLE GREEN CONSTANTS*/
-const kSecondaryGreen = 0xFF83BCAD; //flexSchemeLight.secondaryContainer
 
 /*CARD CONSTANTS*/
 const double kCardElevation = 6.0;

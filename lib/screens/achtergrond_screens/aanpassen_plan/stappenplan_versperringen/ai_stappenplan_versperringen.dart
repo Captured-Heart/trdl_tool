@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class AIStappenplanVersperringen extends StatelessWidget {
   const AIStappenplanVersperringen({Key? key}) : super(key: key);
@@ -38,7 +38,8 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Defect infra-element;\n\n- Gestrande trein;\n\n- Aanrijdingen;\n\n- Weersomstandigheden.',
+                        text:
+                            '- Defect infra-element;\n\n- Gestrande trein;\n\n- Aanrijdingen;\n\n- Weersomstandigheden.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -324,7 +325,8 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Treindienstleiding;\n\n- Calamiteitenorganisatie;\n\n- Spoorwegondernemingen.',
+                        text:
+                            '- Treindienstleiding;\n\n- Calamiteitenorganisatie;\n\n- Spoorwegondernemingen.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -345,18 +347,19 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Infra moet beschikbaar zijn (einde ICB);\n\n- Opstartbeperkingen zijn weggewerkt;\n\n- Opstartplan is toegedeeld.',
+                        text:
+                            '- Infra moet beschikbaar zijn (einde ICB);\n\n- Opstartbeperkingen zijn weggewerkt;\n\n- Opstartplan is toegedeeld.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
-                        text:
-                            'Nadat aan deze 3 voorwaarden is voldaan:',
+                        text: 'Nadat aan deze 3 voorwaarden is voldaan:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- VLC logt \'opstarten mogelijk\';\n\n- VLC en DVL maken werkafspraken.',
+                        text:
+                            '- VLC logt \'opstarten mogelijk\';\n\n- VLC en DVL maken werkafspraken.',
                       ),
                       SizedBoxH(),
                       BoldText(

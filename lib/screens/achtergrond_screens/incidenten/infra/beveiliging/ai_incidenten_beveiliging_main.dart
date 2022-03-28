@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class AIIncidentenBeveiligingMain extends StatelessWidget {
   const AIIncidentenBeveiligingMain({Key? key}) : super(key: key);
@@ -57,26 +57,28 @@ class AIIncidentenBeveiligingMain extends StatelessWidget {
                             buttontext: 'Werkwijze - Beveiliging',
                             destination: 'ww_beveiliging_main',
                           ),
-                            SizedBoxH(),
-                            NavButton(
-                              buttontext: 'Seinen - basisinformatie',
-                              destination: 'wisselsbasisinformatie',
-                            ),
-                            SizedBoxH(),
-                            NavButton(
-                              buttontext: 'Wissel niet in eindstand',
-                              destination: 'wisselnietineindstandincidentenachtergrond',
-                            ),
-                            SizedBoxH(),
-                            NavButton(
-                              buttontext: 'Gestoord wissel',
-                              destination: 'gestoordwisselincidentenachtergrond',
-                            ),
-                            SizedBoxH(),
-                            NavButton(
-                              buttontext: 'Opengereden wissel',
-                              destination: 'opengeredenwisselincidentenachtergrond',
-                            ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Seinen - basisinformatie',
+                            destination: 'wisselsbasisinformatie',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Wissel niet in eindstand',
+                            destination:
+                                'wisselnietineindstandincidentenachtergrond',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Gestoord wissel',
+                            destination: 'gestoordwisselincidentenachtergrond',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Opengereden wissel',
+                            destination:
+                                'opengeredenwisselincidentenachtergrond',
+                          ),
                         ],
                       ),
                       const SizedBoxH(),

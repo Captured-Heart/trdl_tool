@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class WWDerdenDieren extends StatelessWidget {
   const WWDerdenDieren({Key? key}) : super(key: key);

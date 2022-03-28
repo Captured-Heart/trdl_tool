@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class AIOngeplandWerkMaterieel extends StatelessWidget {
   const AIOngeplandWerkMaterieel({Key? key}) : super(key: key);
@@ -53,7 +53,8 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           NavButton(
-                            buttontext: 'Materieel (ongepland werk) - werkwijze',
+                            buttontext:
+                                'Materieel (ongepland werk) - werkwijze',
                             destination: 'ww_ongepland_werk_main',
                           ),
                           SizedBoxH(),
@@ -63,7 +64,8 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Infracapaciteit ter beschikking stellen',
+                            buttontext:
+                                'Infracapaciteit ter beschikking stellen',
                             destination: 'ai_infra_ter_beschikking',
                           ),
                         ],

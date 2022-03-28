@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class AIOrderacceptatie extends StatelessWidget {
   const AIOrderacceptatie({Key? key}) : super(key: key);
@@ -105,7 +105,8 @@ class AIOrderacceptatie extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Trein-/rangeernummer;\n\n- Plan-/vertrektijd;\n\n- \'Van\' spoor;\n\n- \'Via\' sporen (indien van toepassing);\n\n- \'Naar\' spoor;\n\n- Materieelrelatie;\n\n- Materieel- of tractiesoort;\n\n- Wel/Geen afwijken/beperkingen aan materieel gerelateerd aan infragebruik.',
+                        text:
+                            '- Trein-/rangeernummer;\n\n- Plan-/vertrektijd;\n\n- \'Van\' spoor;\n\n- \'Via\' sporen (indien van toepassing);\n\n- \'Naar\' spoor;\n\n- Materieelrelatie;\n\n- Materieel- of tractiesoort;\n\n- Wel/Geen afwijken/beperkingen aan materieel gerelateerd aan infragebruik.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -219,7 +220,8 @@ class AIOrderacceptatie extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Treinnummer;\n\n- Begin- en eindpunt;\n\n- De te volgen route (volgens welke dienstregelingspunten);\n\n- Tijden (aankomst/vertrek of doorrijden);\n\n- Treinlengte;\n\n- Materieel of tractiesoort;\n\n- Eventuele bijzonderheden infra-gebruik.',
+                        text:
+                            '- Treinnummer;\n\n- Begin- en eindpunt;\n\n- De te volgen route (volgens welke dienstregelingspunten);\n\n- Tijden (aankomst/vertrek of doorrijden);\n\n- Treinlengte;\n\n- Materieel of tractiesoort;\n\n- Eventuele bijzonderheden infra-gebruik.',
                       ),
                       SizedBoxH(),
                       BodyText(

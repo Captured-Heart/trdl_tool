@@ -1,4 +1,4 @@
-import 'package:trdl_tool/core/all_imports.dart';
+import 'package:trdl_tool/all_imports.dart';
 
 class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
   const AIGeplandeWerkzaamhedenMain({Key? key}) : super(key: key);
