@@ -29,10 +29,10 @@ class WWNcbg extends StatelessWidget {
                       title: 'NCBG',
                     ),
                     SizedBoxH(),
-                    SubTitleText(
-                      subtitle: 'Sturingsniveau en uitzonderingen',
+                    BoldText(
+                      indents: 0,
+                      boldtext: 'Sturingsniveau en uitzonderingen',
                     ),
-                    SizedBoxH(),
                     BodyText(
                       indents: 0,
                       text:

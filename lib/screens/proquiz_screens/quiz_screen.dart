@@ -139,119 +139,117 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
           centerTitle: true,
           title: const AppBarText(title: 'TRDLtool'),
         ),
-        body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 10.0),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 24.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        height: 125.0,
-                        width: 125.0,
-                        /*DEFINES THE LOOK OF THE TIMER*/
-                        child: timerRunning
-                            ? countDownTimerRunning()
-                            : countDownTimerStopped(),
-                      ),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: Center(
-                    child: Text(
-                      QuestionBank().questionBank[questionNumber].questionText,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(fontSize: 25.0),
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 10.0,
-                ),
-                Row(
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 24.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(
-                          16.0,
-                          0.0,
-                          16.0,
-                          48.0,
-                        ),
-                        child: SizedBox(
-                          width: double.infinity,
-                          height: 80.0,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              setState(() {
-                                /*ONLY THE FIRST PRESS STARTS TIMER*/
-                                if (firstPressToStartTimer == 0) {
-                                  timerRunning = true;
-                                  startTimer();
-                                  firstPressToStartTimer++;
-                                  nextQuestion();
-                                } else {
-                                  /*NEW PRESSES ONLY CHECK ANSWER*/
-                                  checkAnswer(true);
-                                }
-                              });
-                            },
-                            child: const Icon(
-                              Icons.check,
-                              size: 48.0,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(
-                          16.0,
-                          0.0,
-                          16.0,
-                          48.0,
-                        ),
-                        child: SizedBox(
-                          width: double.infinity,
-                          height: 80.0,
-                          child: ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.red,
-                            ),
-                            onPressed: () {
-                              setState(() {
-                                /*FIRST PRESS QUITS QUIZ*/
-                                if (firstPressToStartTimer == 0) {
-                                  finishQuizPopup(context);
-                                } else {
-                                  /*NEW PRESSES ONLY CHECK ANSWER*/
-                                  checkAnswer(false);
-                                }
-                              });
-                            },
-                            child: const Icon(
-                              Icons.close,
-                              size: 48.0,
-                            ),
-                          ),
-                        ),
-                      ),
+                    SizedBox(
+                      height: 125.0,
+                      width: 125.0,
+                      /*DEFINES THE LOOK OF THE TIMER*/
+                      child: timerRunning
+                          ? countDownTimerRunning()
+                          : countDownTimerStopped(),
                     ),
                   ],
                 ),
-                FittedBox(
-                  fit: BoxFit.fitWidth,
-                  child: Row(
-                    children: scoreKeeper,
+              ),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    QuestionBank().questionBank[questionNumber].questionText,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 25.0),
                   ),
                 ),
-              ],
-            ),
+              ),
+              const SizedBox(
+                height: 10.0,
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(
+                        16.0,
+                        0.0,
+                        16.0,
+                        48.0,
+                      ),
+                      child: SizedBox(
+                        width: double.infinity,
+                        height: 80.0,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            setState(() {
+                              /*ONLY THE FIRST PRESS STARTS TIMER*/
+                              if (firstPressToStartTimer == 0) {
+                                timerRunning = true;
+                                startTimer();
+                                firstPressToStartTimer++;
+                                nextQuestion();
+                              } else {
+                                /*NEW PRESSES ONLY CHECK ANSWER*/
+                                checkAnswer(true);
+                              }
+                            });
+                          },
+                          child: const Icon(
+                            Icons.check,
+                            size: 48.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(
+                        16.0,
+                        0.0,
+                        16.0,
+                        48.0,
+                      ),
+                      child: SizedBox(
+                        width: double.infinity,
+                        height: 80.0,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.red,
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              /*FIRST PRESS QUITS QUIZ*/
+                              if (firstPressToStartTimer == 0) {
+                                finishQuizPopup(context);
+                              } else {
+                                /*NEW PRESSES ONLY CHECK ANSWER*/
+                                checkAnswer(false);
+                              }
+                            });
+                          },
+                          child: const Icon(
+                            Icons.close,
+                            size: 48.0,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              FittedBox(
+                fit: BoxFit.fitWidth,
+                child: Row(
+                  children: scoreKeeper,
+                ),
+              ),
+            ],
           ),
         ),
       ),
