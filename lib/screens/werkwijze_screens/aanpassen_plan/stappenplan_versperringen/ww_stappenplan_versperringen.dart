@@ -15,8 +15,7 @@ class WWStappenplanVersperringen extends StatelessWidget {
           HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Column(
             children: [
               /*PROCEDURE CARD*/
@@ -80,10 +79,34 @@ class WWStappenplanVersperringen extends StatelessWidget {
                   ),
                 ),
               ),
+              /*ACHTERGROND CARD*/
+              Card(
+                elevation: kCardElevation,
+                child: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: [
+                      const TitleText(
+                        title: 'Achtergrondinfo',
+                      ),
+                      const SizedBoxH(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          NavButton(
+                            buttontext: 'Stappenplan versperringen - Achtergrond',
+                            destination: 'ai_stappenplan_versperringen',
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
-      ),
-    );
+      );
   }
 }

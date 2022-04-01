@@ -58,8 +58,9 @@ class WWOngeplandWerkInfra extends StatelessWidget {
                     BodyText(
                       indents: 2,
                       text:
-                          '* Niveau van de werkplekbeveiliging;\n\n* Veiligheidsmaatregelen LWB;\n\n* Veiligheidsmaatregelen treindienstleider;\n\n* Exacte aanduiding werkplek;\n\n* Maak met de LWB een WECO op.',
+                          '* Niveau van de werkplekbeveiliging;\n\n* Veiligheidsmaatregelen LWB;\n\n* Veiligheidsmaatregelen treindienstleider;\n\n* Exacte aanduiding werkplek.',
                     ),
+                    BodyText(indents: 1, text: '- Maak met de LWB een WECO op.',),
                   ],
                 ),
               ),
@@ -104,6 +105,36 @@ class WWOngeplandWerkInfra extends StatelessWidget {
                 ),
               ),
             ),
+            /*ACHTERGROND CARD*/
+              Card(
+                elevation: kCardElevation,
+                child: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: [
+                      const TitleText(
+                        title: 'Achtergrondinfo',
+                      ),
+                      const SizedBoxH(),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const [
+                          NavButton(
+                            buttontext: 'Ongepland werk infra - Achtergrond',
+                            destination: 'ai_ongepland_werk_infra',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Infra ter beschikking stellen - Achtergrond',
+                            destination: 'ai_infra_ter_beschikking',
+                          ),
+                        ],
+                      ),
+                      const SizedBoxH(),
+                    ],
+                  ),
+                ),
+              ),
           ],
         ),
       ),
