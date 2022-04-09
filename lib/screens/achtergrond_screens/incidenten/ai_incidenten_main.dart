@@ -59,7 +59,7 @@ class AIIncidentenMain extends StatelessWidget {
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Incidenten - basisinformatie',
-                          destination: 'ai_incidenten',
+                          destination: 'ai_incidenten_basis',
                         ),
                         SizedBoxH(),
                         NavButton(
