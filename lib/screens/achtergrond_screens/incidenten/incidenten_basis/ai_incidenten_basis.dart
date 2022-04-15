@@ -145,7 +145,7 @@ class AIIncidenten extends StatelessWidget {
                       BodyText(
                           indents: 0,
                           text:
-                              'Bij het uitvagen en alarmeren maak je gebruik van het alarmeer-/informeerformulier.\n\nN.B.: Bij afwijkingen op de 1e alarmering en gemaakte afspraken met de MKS-BO informeer je de MKS-BO opnieuw.'),
+                              'Bij het uitvragen en alarmeren maak je gebruik van het alarmeer-/informeerformulier.\n\nN.B.: Bij afwijkingen op de 1e alarmering en gemaakte afspraken met de MKS-BO informeer je de MKS-BO opnieuw.'),
                       SizedBoxH(),
                     ],
                   ),
@@ -356,6 +356,28 @@ class AIIncidenten extends StatelessWidget {
                       BodyText(
                           indents: 1,
                           text: '- Bij geen contact herroep je het sein.'),
+                    ],
+                  ),
+                ),
+              ),
+              /*CARD INSERTED*/
+              Card(
+                elevation: kCardElevation,
+                child: Padding(
+                  padding: kCardPadding,
+                  child: Column(
+                    children: const [
+                      SubTitleText(subtitle: 'Alarmeer- en informeerformulier'),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 0,
+                        text: 'Na een melding van een incident zal de Algemeen Leider doorgaans ter plaatse gaan. Deze treedt coördinerend op tussen functionarissen van betrokken deelaspecten, zoals bijv. overheidshulpdiensten, vervoerder(s), storingsploeg, ICB en de TRDL.\n\nVoordat de treindienst - al dan niet beperkt - wordt hervat, zorg je dat er altijd toestemming is van:'
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- MKS/BO -> als er geen AL is ingezet;\n\n- AL -> Als een AL is ingezet en de infracapaciteit van betreffende spoor/sporen is weggegeven aan de AL;\n\n- LWB -> Als AL en LWB zijn ingezet en spoor/sporen zijn Buiten Dienst.'
+                      ),
                     ],
                   ),
                 ),

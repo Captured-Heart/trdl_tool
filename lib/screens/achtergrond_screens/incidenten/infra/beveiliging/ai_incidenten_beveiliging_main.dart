@@ -60,8 +60,9 @@ class AIIncidentenBeveiligingMain extends StatelessWidget {
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Seinen - basisinformatie',
-                            destination: 'wisselsbasisinformatie',
+                            destination: 'ai_seinen_basis',
                           ),
+                          //TODO: aanpassen en toevoegen vanaf hier!
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Wissel niet in eindstand',
