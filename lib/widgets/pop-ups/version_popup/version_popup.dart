@@ -13,7 +13,15 @@ showVersionUpdatePopup(context) {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CurrentVersion(
-                  versionNumber: '0.2.0',
+                  versionNumber: '0.2.1',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-04-15: 0.2.1',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Android Gradle upgrade naar 7.1.3, achtergrondinformatie verder uitgebreid (13), M3 UI aangepast na bug',
                 ),
                 SizedBoxH(),
                 DateChanged(
