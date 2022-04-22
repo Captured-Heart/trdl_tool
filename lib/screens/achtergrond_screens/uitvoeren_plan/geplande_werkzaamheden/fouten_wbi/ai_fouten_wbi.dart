@@ -9,7 +9,7 @@ class AIFoutenWBI extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Fouten WBI',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),

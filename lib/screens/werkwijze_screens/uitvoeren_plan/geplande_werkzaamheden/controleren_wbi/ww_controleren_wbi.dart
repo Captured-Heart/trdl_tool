@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWControlerenWBI { home, aiControlerenWBI, aiFoutenInDeWBI }
+
 class WWControlerenWBI extends StatelessWidget {
   const WWControlerenWBI({Key? key}) : super(key: key);
 
@@ -9,10 +11,41 @@ class WWControlerenWBI extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Controleren WBI',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWControlerenWBI>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWControlerenWBI result) {
+              if (result == WhereToGoFromWWControlerenWBI.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWControlerenWBI.aiControlerenWBI) {
+                Navigator.pushNamed(context, 'ai_controleren_wbi');
+              } else if (result ==
+                  WhereToGoFromWWControlerenWBI.aiFoutenInDeWBI) {
+                Navigator.pushNamed(context, 'ai_fouten_wbi');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWControlerenWBI>>[
+              const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
+                value: WhereToGoFromWWControlerenWBI.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
+                value: WhereToGoFromWWControlerenWBI.aiControlerenWBI,
+                child: Text('AI Controleren WBI'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
+                value: WhereToGoFromWWControlerenWBI.aiFoutenInDeWBI,
+                child: Text('AI Fouten in de WBI'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -84,36 +117,6 @@ class WWControlerenWBI extends StatelessWidget {
                       text:
                           'In de voorbereiding is de treindienst aangepast aan de werkzaamheden. Fouten in de WBI/WECO kunnen ervoor zorgen dat werkplekbeveiligingsmaatregelen van de TRDL en/of de LWB niet of niet juist getroffen kunnen worden.\n\nFouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Controleren WBI - Achtergrond',
-                          destination: 'ai_controleren_wbi',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Fouten in de WBI - Achtergrond',
-                          destination: 'ai_fouten_wbi',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),

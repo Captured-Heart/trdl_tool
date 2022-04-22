@@ -9,7 +9,7 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Geplande werkzaamheden',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),

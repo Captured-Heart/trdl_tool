@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWGeplandeWerkzaamhedenMain { home, aiGeplandeWerkzaamheden }
+
 class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
   const WWGeplandeWerkzaamhedenMain({Key? key}) : super(key: key);
 
@@ -9,10 +11,36 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Geplande werkzaamheden',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWGeplandeWerkzaamhedenMain result) {
+              if (result == WhereToGoFromWWGeplandeWerkzaamhedenMain.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWGeplandeWerkzaamhedenMain
+                      .aiGeplandeWerkzaamheden) {
+                Navigator.pushNamed(context, 'ai_geplande_werkzaamheden_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWGeplandeWerkzaamhedenMain>>[
+              const PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
+                value: WhereToGoFromWWGeplandeWerkzaamhedenMain.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
+                value: WhereToGoFromWWGeplandeWerkzaamhedenMain
+                    .aiGeplandeWerkzaamheden,
+                child: Text('AI Geplande Werkzaamheden'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -65,31 +93,6 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
                         NavButton(
                           buttontext: 'Fouten in de WBI',
                           destination: 'ww_fouten_in_de_wbi',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Geplande Werkzaamheden - Achtergrond',
-                          destination: 'ai_geplande_werkzaamheden_main',
                         ),
                       ],
                     ),

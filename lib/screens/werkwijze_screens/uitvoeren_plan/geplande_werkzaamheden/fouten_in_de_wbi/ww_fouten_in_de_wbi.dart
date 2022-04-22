@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWFoutenWBI { home, aiFoutenWBI }
+
 class WWFoutenWBI extends StatelessWidget {
   const WWFoutenWBI({Key? key}) : super(key: key);
 
@@ -9,10 +11,33 @@ class WWFoutenWBI extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Fouten WBI',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWFoutenWBI>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWFoutenWBI result) {
+              if (result == WhereToGoFromWWFoutenWBI.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromWWFoutenWBI.aiFoutenWBI) {
+                Navigator.pushNamed(context, 'ai_fouten_wbi');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWFoutenWBI>>[
+              const PopupMenuItem<WhereToGoFromWWFoutenWBI>(
+                value: WhereToGoFromWWFoutenWBI.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWFoutenWBI>(
+                value: WhereToGoFromWWFoutenWBI.aiFoutenWBI,
+                child: Text('AI Fouten in de WBI'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -78,31 +103,6 @@ class WWFoutenWBI extends StatelessWidget {
                       text:
                           'Fouten in de WBI/WECO kunnen ervoor zorgen dat werkplekbeveiligingsmaatregelen van de TRDL en/of de LWB niet of niet juist getroffen kunnen worden.\n\nFouten kunnen gecorrigeerd worden in overleg met de afdeling Werkplekbeveiliging. Zij bepalen of er een nieuwe versie van de WBI/WECO wordt uitgebracht of een penwijziging wordt doorgevoerd.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Fouten in de WBI - Achtergrond',
-                          destination: 'ai_fouten_wbi',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),

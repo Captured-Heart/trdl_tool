@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWAanvangWerkzaamheden { home, aiAanvangWerkzaamheden }
+
 class WWAanvangWerkzaamheden extends StatelessWidget {
   const WWAanvangWerkzaamheden({Key? key}) : super(key: key);
 
@@ -9,10 +11,35 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Aanvang werkzaamheden',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWAanvangWerkzaamheden>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWAanvangWerkzaamheden result) {
+              if (result == WhereToGoFromWWAanvangWerkzaamheden.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWAanvangWerkzaamheden.aiAanvangWerkzaamheden) {
+                Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWAanvangWerkzaamheden>>[
+              const PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
+                value: WhereToGoFromWWAanvangWerkzaamheden.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
+                value:
+                    WhereToGoFromWWAanvangWerkzaamheden.aiAanvangWerkzaamheden,
+                child: Text('AI Aanvang Werkzaamheden'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -78,31 +105,6 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
                       text:
                           'Bij geplande werkzaamheden wordt in de voorbereiding op de werkzaamheden een werkplekbeveiligingsinstructie (WBI) gemaakt. In de WBI/WECO worden de gemaakte afspraken voor de werkplekbeveiliging vastgelegd.\n\nVoorafgaand aan de werkzaamheden stellen TRDL en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Aanvang Werkzaamheden - Achtergrond',
-                          destination: 'ai_aanvang_werkzaamheden',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),
