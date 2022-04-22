@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWGestoordWissel { home_screen }
+
 class WWGestoordWissel extends StatelessWidget {
   const WWGestoordWissel({Key? key}) : super(key: key);
 
@@ -9,10 +11,27 @@ class WWGestoordWissel extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Gestoord wissel',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWUitvoerenPlanMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWUitvoerenPlanMain result) {
+              if (result == WhereToGoFromWWUitvoerenPlanMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWUitvoerenPlanMain>>[
+              const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
+                value: WhereToGoFromWWUitvoerenPlanMain.home_screen,
+                child: Text('Home'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

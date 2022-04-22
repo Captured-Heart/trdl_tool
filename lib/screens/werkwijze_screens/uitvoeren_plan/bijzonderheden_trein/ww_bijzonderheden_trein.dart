@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWBijzonderhedenTrein { home, ai_vervoersregeling }
+
 class WWBijzonderhedenTrein extends StatelessWidget {
   const WWBijzonderhedenTrein({Key? key}) : super(key: key);
 
@@ -9,10 +11,34 @@ class WWBijzonderhedenTrein extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Vervoersregeling',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWBijzonderhedenTrein>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWBijzonderhedenTrein result) {
+              if (result == WhereToGoFromWWBijzonderhedenTrein.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWBijzonderhedenTrein.ai_vervoersregeling) {
+                Navigator.pushNamed(context, 'ai_vervoersregeling');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWBijzonderhedenTrein>>[
+              const PopupMenuItem<WhereToGoFromWWBijzonderhedenTrein>(
+                value: WhereToGoFromWWBijzonderhedenTrein.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWBijzonderhedenTrein>(
+                value: WhereToGoFromWWBijzonderhedenTrein.ai_vervoersregeling,
+                child: Text('AI Treinen met Vervoersregeling'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -78,32 +104,6 @@ class WWBijzonderhedenTrein extends StatelessWidget {
                       text:
                           'Voor vervoer waarbij afmetingen, gewicht, aard van de lading of het materieeltype maatregelen vergen, wordt een vervoersregeling gemaakt. De betrokken trein wordt dan of een BV trein of een BP trein. Voor een BP trein gelden de standaard voorwaarden BP 1-2-3.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext:
-                              'Treinen met Vervoersregeling - Achtergrond',
-                          destination: 'ai_vervoersregeling',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),

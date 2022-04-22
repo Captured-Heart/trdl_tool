@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWInfraMain { home_screen }
+
 class WWInfraMain extends StatelessWidget {
   const WWInfraMain({Key? key}) : super(key: key);
 
@@ -9,10 +11,27 @@ class WWInfraMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Infrastructuur',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWInfraMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWInfraMain result) {
+              if (result == WhereToGoFromWWInfraMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWInfraMain>>[
+              const PopupMenuItem<WhereToGoFromWWInfraMain>(
+                value: WhereToGoFromWWInfraMain.home_screen,
+                child: Text('Home'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

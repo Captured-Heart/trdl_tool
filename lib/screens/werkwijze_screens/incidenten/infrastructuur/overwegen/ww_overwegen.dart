@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+//TODO: Hier verder de appbar aanpassen aan de nieuwe navigatie!
+
 class WWOverwegen extends StatelessWidget {
   const WWOverwegen({Key? key}) : super(key: key);
 

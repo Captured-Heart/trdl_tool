@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-//TODO: Hier verder!
+enum WhereToGoFromWWBijzonderhedenRijwegenMain {
+  home,
+  aiBijzonderhedenRijwegen
+}
 
 class WWBijzonderhedenRijwegenMain extends StatelessWidget {
   const WWBijzonderhedenRijwegenMain({Key? key}) : super(key: key);
@@ -11,10 +14,36 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Bijzonderheden Rijwegen',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWBijzonderhedenRijwegenMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWBijzonderhedenRijwegenMain result) {
+              if (result == WhereToGoFromWWBijzonderhedenRijwegenMain.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWBijzonderhedenRijwegenMain
+                      .aiBijzonderhedenRijwegen) {
+                Navigator.pushNamed(context, 'ai_bijzonderheden_rijwegen_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWBijzonderhedenRijwegenMain>>[
+              const PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
+                value: WhereToGoFromWWBijzonderhedenRijwegenMain.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
+                value: WhereToGoFromWWBijzonderhedenRijwegenMain
+                    .aiBijzonderhedenRijwegen,
+                child: Text('AI Bijzonderheden Rijwegen'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(
@@ -67,31 +96,6 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
                           NavButton(
                             buttontext: 'Toelaten werktreinen',
                             destination: 'ww_toelaten_werktreinen',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                    ],
-                  ),
-                ),
-              ),
-              /*ACHTERGROND CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Achtergrondinfo',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Bijzonderheden Rijwegen - Achtergrond',
-                            destination: 'ai_bijzonderheden_rijwegen_main',
                           ),
                         ],
                       ),

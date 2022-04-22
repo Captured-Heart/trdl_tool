@@ -137,7 +137,7 @@ export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/sp
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/spoor/roestvorming/ww_roestvorming.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/ww_wissels_main.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/wissel_eindstand/ww_wissel_eindstand.dart';
-export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/opgereden_wissel/ww_opengereden_wissel.dart';
+export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/opengereden_wissel/ww_opengereden_wissel.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/gestoord_wissel/ww_gestoord_wissel.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/infrastructuur/wissels/beschadigd_wissel/ww_beschadigd_wissel.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/materieel/ww_materieel_main.dart';

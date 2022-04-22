@@ -9,7 +9,7 @@ class AIIncidentenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Incidenten',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),

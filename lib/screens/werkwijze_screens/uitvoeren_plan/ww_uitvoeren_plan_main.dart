@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWUitvoerenPlanMain { home, aiUitvoerenPlan }
+enum WhereToGoFromWWUitvoerenPlanMain { home_screen, aiUitvoerenPlan }
 
 class WWUitvoerenPlanMain extends StatelessWidget {
   const WWUitvoerenPlanMain({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class WWUitvoerenPlanMain extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWUitvoerenPlanMain result) {
-              if (result == WhereToGoFromWWUitvoerenPlanMain.home) {
+              if (result == WhereToGoFromWWUitvoerenPlanMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWUitvoerenPlanMain.aiUitvoerenPlan) {
@@ -30,7 +30,7 @@ class WWUitvoerenPlanMain extends StatelessWidget {
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWUitvoerenPlanMain>>[
               const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
-                value: WhereToGoFromWWUitvoerenPlanMain.home,
+                value: WhereToGoFromWWUitvoerenPlanMain.home_screen,
                 child: Text('Home'),
               ),
               const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(

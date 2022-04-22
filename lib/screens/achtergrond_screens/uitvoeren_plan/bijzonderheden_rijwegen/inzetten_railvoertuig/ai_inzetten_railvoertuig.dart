@@ -9,7 +9,7 @@ class AIInzettenRailvoertuig extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Inzetten ICB',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),

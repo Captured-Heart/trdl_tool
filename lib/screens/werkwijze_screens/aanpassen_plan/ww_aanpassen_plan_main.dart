@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWAanpassenPlanMain { home }
+
 class WWAanpassenPlanMain extends StatelessWidget {
   const WWAanpassenPlanMain({Key? key}) : super(key: key);
 
@@ -9,10 +11,27 @@ class WWAanpassenPlanMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Aanpassen Plan',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWAanpassenPlanMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWAanpassenPlanMain result) {
+              if (result == WhereToGoFromWWAanpassenPlanMain.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWAanpassenPlanMain>>[
+              const PopupMenuItem<WhereToGoFromWWAanpassenPlanMain>(
+                value: WhereToGoFromWWAanpassenPlanMain.home,
+                child: Text('Home'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(
@@ -60,7 +79,7 @@ class WWAanpassenPlanMain extends StatelessWidget {
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Incidenten',
-                            destination: 'ww_incidenten',
+                            destination: 'ww_incidenten_main',
                           ),
                           SizedBoxH(),
                           NavButton(

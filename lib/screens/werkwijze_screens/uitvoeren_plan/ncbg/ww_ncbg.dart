@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWNcbg { home, ai_ncbg }
+
 class WWNcbg extends StatelessWidget {
   const WWNcbg({Key? key}) : super(key: key);
 
@@ -9,10 +11,33 @@ class WWNcbg extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'NCBG',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWNcbg>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWNcbg result) {
+              if (result == WhereToGoFromWWNcbg.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromWWNcbg.ai_ncbg) {
+                Navigator.pushNamed(context, 'ai_ncbg');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWNcbg>>[
+              const PopupMenuItem<WhereToGoFromWWNcbg>(
+                value: WhereToGoFromWWNcbg.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWNcbg>(
+                value: WhereToGoFromWWNcbg.ai_ncbg,
+                child: Text('AI NCBG'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -43,31 +68,6 @@ class WWNcbg extends StatelessWidget {
                       indents: 1,
                       text: '- Rijwegniveau;\n\n- TijdRuimte-slotniveau.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'NCBG - Achtergrond',
-                          destination: 'ai_ncbg',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),

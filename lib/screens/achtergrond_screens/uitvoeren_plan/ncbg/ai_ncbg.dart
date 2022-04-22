@@ -9,7 +9,7 @@ class AINcbg extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'NCBG',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),

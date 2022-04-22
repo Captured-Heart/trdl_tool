@@ -9,7 +9,7 @@ class AIDienstovergave extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Dienstovergave',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),

@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWWisselsMain { home_screen }
+
 class WWWisselsMain extends StatelessWidget {
   const WWWisselsMain({Key? key}) : super(key: key);
 
@@ -9,10 +11,27 @@ class WWWisselsMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Wissels',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWWisselsMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWWisselsMain result) {
+              if (result == WhereToGoFromWWWisselsMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWWisselsMain>>[
+              const PopupMenuItem<WhereToGoFromWWWisselsMain>(
+                value: WhereToGoFromWWWisselsMain.home_screen,
+                child: Text('Home'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

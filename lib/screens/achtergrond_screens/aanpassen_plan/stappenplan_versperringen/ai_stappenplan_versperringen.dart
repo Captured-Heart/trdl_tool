@@ -9,7 +9,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Versperringen',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),

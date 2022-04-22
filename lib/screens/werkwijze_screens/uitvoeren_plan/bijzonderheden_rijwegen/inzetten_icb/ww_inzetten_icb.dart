@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWInzettenICB { home, aiInzettenICB }
+
 class WWInzettenICB extends StatelessWidget {
   const WWInzettenICB({Key? key}) : super(key: key);
 
@@ -9,10 +11,33 @@ class WWInzettenICB extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Inzet ICB',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWInzettenICB>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWInzettenICB result) {
+              if (result == WhereToGoFromWWInzettenICB.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromWWInzettenICB.aiInzettenICB) {
+                Navigator.pushNamed(context, 'ai_inzetten_railvoertuig');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWInzettenICB>>[
+              const PopupMenuItem<WhereToGoFromWWInzettenICB>(
+                value: WhereToGoFromWWInzettenICB.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWInzettenICB>(
+                value: WhereToGoFromWWInzettenICB.aiInzettenICB,
+                child: Text('AI Inzetten Railvoertuig ICB'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -101,31 +126,6 @@ class WWInzettenICB extends StatelessWidget {
                       text:
                           'Om materieel ten behoeve van afhandeling incidenten snel en zo dicht mogelijk bij de incidentlocatie te krijgen zijn railvoertuigen Incidentenbestrijding beschikbaar. Deze worden op inzetlocaties in het spoor geplaatst en via het spoor verplaatst naar de incidentlocatie. De MCN van het railvoertuig heeft meestal geen plaatselijke wegbekendheid.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Inzetten Railvoertuig ICB - Achtergrond',
-                          destination: 'ai_inzetten_railvoertuig',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),

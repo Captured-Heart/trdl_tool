@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWDienstovergave { home, ai_dienstovergave }
+
 class WWDienstovergave extends StatelessWidget {
   const WWDienstovergave({Key? key}) : super(key: key);
 
@@ -9,10 +11,34 @@ class WWDienstovergave extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Dienstovergave',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWDienstovergave>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWDienstovergave result) {
+              if (result == WhereToGoFromWWDienstovergave.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWDienstovergave.ai_dienstovergave) {
+                Navigator.pushNamed(context, 'ai_dienstovergave');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWDienstovergave>>[
+              const PopupMenuItem<WhereToGoFromWWDienstovergave>(
+                value: WhereToGoFromWWDienstovergave.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWDienstovergave>(
+                value: WhereToGoFromWWDienstovergave.ai_dienstovergave,
+                child: Text('AI Dienstovergave'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -78,31 +104,6 @@ class WWDienstovergave extends StatelessWidget {
                       text:
                           'Een TRDL draagt de verantwoordelijkheid voor een bediengebied over aan een bevoegd TRDL, waarbij hij deze informeert over bijzonderheden die afwijken van het oorspronkelijke plan en waarvoor eventuele aanpassingen moeten worden gedaan.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Dienstovergave - Achtergrond',
-                          destination: 'ai_dienstovergave',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),

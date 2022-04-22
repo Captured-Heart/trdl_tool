@@ -1,5 +1,12 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWToelatenWerktreinen {
+  home,
+  wwGeplandeWerkzaamheden,
+  aiToelatenWerktreinen,
+  aiGeplandeWerkzaamheden
+}
+
 class WWToelatenWerktreinen extends StatelessWidget {
   const WWToelatenWerktreinen({Key? key}) : super(key: key);
 
@@ -9,10 +16,50 @@ class WWToelatenWerktreinen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Toelaten werktreinen',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWToelatenWerktreinen>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWToelatenWerktreinen result) {
+              if (result == WhereToGoFromWWToelatenWerktreinen.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWToelatenWerktreinen.wwGeplandeWerkzaamheden) {
+                Navigator.pushNamed(context, 'ww_geplande_werkzaamheden_main');
+              } else if (result ==
+                  WhereToGoFromWWToelatenWerktreinen.aiToelatenWerktreinen) {
+                Navigator.pushNamed(context, 'ai_toelaten_werktreinen');
+              } else if (result ==
+                  WhereToGoFromWWToelatenWerktreinen.aiGeplandeWerkzaamheden) {
+                Navigator.pushNamed(context, 'ai_geplande_werkzaamheden_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWToelatenWerktreinen>>[
+              const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
+                value: WhereToGoFromWWToelatenWerktreinen.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
+                value:
+                    WhereToGoFromWWToelatenWerktreinen.wwGeplandeWerkzaamheden,
+                child: Text('WW Geplande Werkzaamheden'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
+                value: WhereToGoFromWWToelatenWerktreinen.aiToelatenWerktreinen,
+                child: Text('AI Toelaten Werktreinen'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
+                value:
+                    WhereToGoFromWWToelatenWerktreinen.aiGeplandeWerkzaamheden,
+                child: Text('AI Geplande Werkzaamheden'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -78,41 +125,6 @@ class WWToelatenWerktreinen extends StatelessWidget {
                       text:
                           'Op de werkplek zijn de werkenden door middel van veiligheidsmaatregelen beschermd tegen aanrijdgevaar. Op het moment dat een trein noodzakelijk voor de werkzaamheden toegelaten moet worden, geeft de LWB toestemming als de werkenden adequaat beschermd zijn.\n\nVoorafgaand aan de werkzaamheden stellen TRDL en LWB samen vast of ze over dezelfde WBI/WECO beschikken.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Geplande Werkzaamheden - Werkwijze',
-                          destination: 'ww_geplande_werkzaamheden_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Toelaten Werktreinen - Achtergrond',
-                          destination: 'ai_toelaten_werktreinen',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Geplande Werkzaamheden - Achtergrond',
-                          destination: 'ai_geplande_werkzaamheden',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),

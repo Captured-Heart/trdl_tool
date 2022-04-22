@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWMondelingeCommunicatie {
+  home,
+  ai_mondelinge_veiligheidscommunicatie
+}
+
 class WWMondelingeCommunicatie extends StatelessWidget {
   const WWMondelingeCommunicatie({Key? key}) : super(key: key);
 
@@ -9,10 +14,37 @@ class WWMondelingeCommunicatie extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Mondelinge Communicatie',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWMondelingeCommunicatie>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWMondelingeCommunicatie result) {
+              if (result == WhereToGoFromWWMondelingeCommunicatie.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWMondelingeCommunicatie
+                      .ai_mondelinge_veiligheidscommunicatie) {
+                Navigator.pushNamed(
+                    context, 'ai_mondelinge_veiligheidscommunicatie');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWMondelingeCommunicatie>>[
+              const PopupMenuItem<WhereToGoFromWWMondelingeCommunicatie>(
+                value: WhereToGoFromWWMondelingeCommunicatie.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWMondelingeCommunicatie>(
+                value: WhereToGoFromWWMondelingeCommunicatie
+                    .ai_mondelinge_veiligheidscommunicatie,
+                child: Text('AI Mondelinge Veiligheidscommunicatie'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -78,31 +110,6 @@ class WWMondelingeCommunicatie extends StatelessWidget {
                       text:
                           'Om onveilige situaties te voorkomen zijn met de gesprekspartners van de TRDL uniforme uitgangspunten afgesproken voor het wisselen van mondelinge berichten. De TRDL heeft in deze afspraken een sturende rol.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Mondelinge Communicatie - Achtergrond',
-                          destination: 'ai_mondelinge_veiligheidscommunicatie',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),

@@ -9,7 +9,7 @@ class AIMondelingeVeiligheidsCommunicatie extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Communicatie',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),

@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWCommunicatieMain { home, ai_communicatie_main }
+
 class WWCommunicatieMain extends StatelessWidget {
   const WWCommunicatieMain({Key? key}) : super(key: key);
 
@@ -9,10 +11,34 @@ class WWCommunicatieMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Communicatie',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWCommunicatieMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWCommunicatieMain result) {
+              if (result == WhereToGoFromWWCommunicatieMain.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWCommunicatieMain.ai_communicatie_main) {
+                Navigator.pushNamed(context, 'ai_communicatie_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWCommunicatieMain>>[
+              const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
+                value: WhereToGoFromWWCommunicatieMain.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
+                value: WhereToGoFromWWCommunicatieMain.ai_communicatie_main,
+                child: Text('AI Communicatie'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -49,31 +75,6 @@ class WWCommunicatieMain extends StatelessWidget {
                         NavButton(
                           buttontext: 'Mondelinge Communicatie',
                           destination: 'ww_mondelinge_communicatie',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Communicatie - Achtergrond',
-                          destination: 'ai_communicatie_main',
                         ),
                       ],
                     ),

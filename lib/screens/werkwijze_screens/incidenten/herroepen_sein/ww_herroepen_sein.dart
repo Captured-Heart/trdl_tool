@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWHerroepenSein { home_screen, ai_incidenten_main }
+
 class WWHerroepenSein extends StatelessWidget {
   const WWHerroepenSein({Key? key}) : super(key: key);
 
@@ -9,10 +11,34 @@ class WWHerroepenSein extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Herroepen sein',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWHerroepenSein>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWHerroepenSein result) {
+              if (result == WhereToGoFromWWHerroepenSein.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWHerroepenSein.ai_incidenten_main) {
+                Navigator.pushNamed(context, 'ai_incidenten_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWHerroepenSein>>[
+              const PopupMenuItem<WhereToGoFromWWHerroepenSein>(
+                value: WhereToGoFromWWHerroepenSein.home_screen,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWHerroepenSein>(
+                value: WhereToGoFromWWHerroepenSein.ai_incidenten_main,
+                child: Text('AI Incidenten'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -77,31 +103,6 @@ class WWHerroepenSein extends StatelessWidget {
                       text:
                           'Het herroepen van een sein kan noodzakelijk zijn om een verstoring van de treindienst te voorkomen of beperken. Bij het herroepen van een sein voor bijsturing is het inlichten van de MCN wenselijk, om hem niet te laten schrikken van een wisselend seinbeeld.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Incidenten - Achtergrond',
-                          destination: 'ai_incidenten',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),

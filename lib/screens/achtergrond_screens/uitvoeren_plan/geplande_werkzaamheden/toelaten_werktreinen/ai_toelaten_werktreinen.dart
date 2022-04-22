@@ -9,7 +9,7 @@ class AIToelatenWerktreinen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Toelaten werktreinen',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),

@@ -1,9 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWKopVanTreinVoorbijSein { home }
+enum WhereToGoFromWWOpengeredenWissel { home_screen }
 
-class WWKopVanTreinVoorbijSein extends StatelessWidget {
-  const WWKopVanTreinVoorbijSein({Key? key}) : super(key: key);
+class WWOpengeredenWissel extends StatelessWidget {
+  const WWOpengeredenWissel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,20 +14,20 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
           title: 'Werkwijze',
         ),
         actions: [
-          PopupMenuButton<WhereToGoFromWWKopVanTreinVoorbijSein>(
+          PopupMenuButton<WhereToGoFromWWOpengeredenWissel>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWKopVanTreinVoorbijSein result) {
-              if (result == WhereToGoFromWWKopVanTreinVoorbijSein.home) {
+            onSelected: (WhereToGoFromWWOpengeredenWissel result) {
+              if (result == WhereToGoFromWWOpengeredenWissel.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else {
                 Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromWWKopVanTreinVoorbijSein>>[
-              const PopupMenuItem<WhereToGoFromWWKopVanTreinVoorbijSein>(
-                value: WhereToGoFromWWKopVanTreinVoorbijSein.home,
+                <PopupMenuEntry<WhereToGoFromWWOpengeredenWissel>>[
+              const PopupMenuItem<WhereToGoFromWWOpengeredenWissel>(
+                value: WhereToGoFromWWOpengeredenWissel.home_screen,
                 child: Text('Home'),
               ),
             ],
@@ -45,7 +45,7 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
                 child: Column(
                   children: const [
                     TitleText(
-                      title: 'Kop van de trein/rangeerdeel voorbij het sein',
+                      title: 'Opengereden wissel',
                     ),
                     SizedBoxH(),
                     SubTitleText(
@@ -55,7 +55,13 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Je stelt een rijweg in en deelt de MCN mee dat het sein uit de stand stop is gebracht, of je neemt veiligheidsmaatregelen en geeft de MCN opdracht om te gaan rijden.',
+                          'Stel vast of het wissel eendelig, meerdelig of EBI-switch is.',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 1,
+                      text:
+                          '- Eendelig: laat het wissel alleen met de punt mee vrijmaken wanneer er geen uiterlijke beschadigingen zijn. Je mag het wissel weer laten berijden na de constatering dat de tongen in de juiste stand liggen en aansluiten. Dit laat je doen met maximaal 10 km/h, tenzij anders wordt aangegeven door de storingsdienst;\n\n- Meerdelig: laat het wissel alleen met de punt mee vrijmaken met maximaal 10 km/h na toestemming van de storingsdienst;\n\n- EBI-switch: laat het wissel alleen met de punt mee vrijmaken met maximaal 10 km/h en behandel het als een beschadigd wissel.',
                     ),
                   ],
                 ),
@@ -75,7 +81,7 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Treinen komen niet tijdig tot stilstand voor een gevaarpunt.',
+                          'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
                     ),
                   ],
                 ),
@@ -95,7 +101,7 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Wanneer de kop van de trein of rangeerdeel bij vertrek voorbij het sein staat, kan de MCN niet waarnemen of het sein veilig staat voor vertrek en kan het vertrekproces niet gestart worden.',
+                          'Een trein kan een wissel met de punt mee in de verkeerde stand berijden. De wisseltongen worden dan open gereden en het wissel is daardoor niet meer veilig berijdbaar. Van een open gereden wissel moet de afstelling gecontroleerd worden.',
                     ),
                   ],
                 ),
