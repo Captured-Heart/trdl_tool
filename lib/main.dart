@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   /*START FIREBASE BACKEND*/
   await Firebase.initializeApp();
@@ -169,7 +169,7 @@ class MainEntry extends StatelessWidget {
 
         /*ACHTERGRONDINFO INCIDENTEN ROUTES*/
         'ai_incidenten_main': (context) => const AIIncidentenMain(),
-        'ai_incidenten': (context) => const AIIncidenten(),
+        'ai_incidenten_basis': (context) => const AIIncidenten(),
         'ai_incidenten_derdendieren': (context) =>
             const AIIncidentenDerdenDieren(),
         'ai_incidenten_infra_main': (context) => const AIIncidentenInfraMain(),

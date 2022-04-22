@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWUitvoerenPlanMain { home, aiUitvoerenPlan }
+
 class WWUitvoerenPlanMain extends StatelessWidget {
   const WWUitvoerenPlanMain({Key? key}) : super(key: key);
 
@@ -9,10 +11,34 @@ class WWUitvoerenPlanMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Uitvoeren Plan',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWUitvoerenPlanMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWUitvoerenPlanMain result) {
+              if (result == WhereToGoFromWWUitvoerenPlanMain.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWUitvoerenPlanMain.aiUitvoerenPlan) {
+                Navigator.pushNamed(context, 'ai_uitvoeren_plan_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWUitvoerenPlanMain>>[
+              const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
+                value: WhereToGoFromWWUitvoerenPlanMain.home,
+                child: Text('Home'),
+              ),
+              const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
+                value: WhereToGoFromWWUitvoerenPlanMain.aiUitvoerenPlan,
+                child: Text('AI Uitvoeren Plan'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -80,31 +106,6 @@ class WWUitvoerenPlanMain extends StatelessWidget {
                         NavButton(
                           buttontext: 'Dienstovergave',
                           destination: 'ww_dienstovergave',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Achtergrondinfo',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Uitvoeren Plan - Achtergrond',
-                          destination: 'ai_uitvoeren_plan_main',
                         ),
                       ],
                     ),

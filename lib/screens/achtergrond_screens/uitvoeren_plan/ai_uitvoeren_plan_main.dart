@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIUitvoerenPlanMain { home }
+
 class AIUitvoerenPlanMain extends StatelessWidget {
   const AIUitvoerenPlanMain({Key? key}) : super(key: key);
 
@@ -9,10 +11,27 @@ class AIUitvoerenPlanMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Uitvoeren Plan',
+          title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIUitvoerenPlanMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIUitvoerenPlanMain result) {
+              if (result == WhereToGoFromAIUitvoerenPlanMain.home) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIUitvoerenPlanMain>>[
+              const PopupMenuItem<WhereToGoFromAIUitvoerenPlanMain>(
+                value: WhereToGoFromAIUitvoerenPlanMain.home,
+                child: Text('Home'),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(
