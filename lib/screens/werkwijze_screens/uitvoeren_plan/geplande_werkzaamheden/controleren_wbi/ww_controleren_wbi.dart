@@ -1,6 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWControlerenWBI { home, aiControlerenWBI, aiFoutenInDeWBI }
+enum WhereToGoFromWWControlerenWBI {
+  home_screen,
+  ai_controleren_wbi,
+  ai_fouten_wbi
+}
 
 class WWControlerenWBI extends StatelessWidget {
   const WWControlerenWBI({Key? key}) : super(key: key);
@@ -18,13 +22,13 @@ class WWControlerenWBI extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWControlerenWBI result) {
-              if (result == WhereToGoFromWWControlerenWBI.home) {
+              if (result == WhereToGoFromWWControlerenWBI.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromWWControlerenWBI.aiControlerenWBI) {
+                  WhereToGoFromWWControlerenWBI.ai_controleren_wbi) {
                 Navigator.pushNamed(context, 'ai_controleren_wbi');
               } else if (result ==
-                  WhereToGoFromWWControlerenWBI.aiFoutenInDeWBI) {
+                  WhereToGoFromWWControlerenWBI.ai_fouten_wbi) {
                 Navigator.pushNamed(context, 'ai_fouten_wbi');
               } else {
                 Navigator.pop(context);
@@ -32,17 +36,44 @@ class WWControlerenWBI extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWControlerenWBI>>[
-              const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
-                value: WhereToGoFromWWControlerenWBI.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWControlerenWBI>(
+                value: WhereToGoFromWWControlerenWBI.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
-                value: WhereToGoFromWWControlerenWBI.aiControlerenWBI,
-                child: Text('AI Controleren WBI'),
+              PopupMenuItem<WhereToGoFromWWControlerenWBI>(
+                value: WhereToGoFromWWControlerenWBI.ai_controleren_wbi,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Controleren WBI'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
-                value: WhereToGoFromWWControlerenWBI.aiFoutenInDeWBI,
-                child: Text('AI Fouten in de WBI'),
+              PopupMenuItem<WhereToGoFromWWControlerenWBI>(
+                value: WhereToGoFromWWControlerenWBI.ai_fouten_wbi,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Fouten in de WBI'),
+                  ],
+                ),
               ),
             ],
           ),

@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWKopVanTreinVoorbijSein { home }
+enum WhereToGoFromWWKopVanTreinVoorbijSein { home_screen }
 
 class WWKopVanTreinVoorbijSein extends StatelessWidget {
   const WWKopVanTreinVoorbijSein({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWKopVanTreinVoorbijSein result) {
-              if (result == WhereToGoFromWWKopVanTreinVoorbijSein.home) {
+              if (result == WhereToGoFromWWKopVanTreinVoorbijSein.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else {
                 Navigator.pop(context);
@@ -26,9 +26,18 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWKopVanTreinVoorbijSein>>[
-              const PopupMenuItem<WhereToGoFromWWKopVanTreinVoorbijSein>(
-                value: WhereToGoFromWWKopVanTreinVoorbijSein.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWKopVanTreinVoorbijSein>(
+                value: WhereToGoFromWWKopVanTreinVoorbijSein.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
             ],
           ),

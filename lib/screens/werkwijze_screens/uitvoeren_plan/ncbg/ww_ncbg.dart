@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWNcbg { home, ai_ncbg }
+enum WhereToGoFromWWNcbg { home_screen, ai_ncbg }
 
 class WWNcbg extends StatelessWidget {
   const WWNcbg({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class WWNcbg extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWNcbg result) {
-              if (result == WhereToGoFromWWNcbg.home) {
+              if (result == WhereToGoFromWWNcbg.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWNcbg.ai_ncbg) {
                 Navigator.pushNamed(context, 'ai_ncbg');
@@ -28,13 +28,31 @@ class WWNcbg extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWNcbg>>[
-              const PopupMenuItem<WhereToGoFromWWNcbg>(
-                value: WhereToGoFromWWNcbg.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWNcbg>(
+                value: WhereToGoFromWWNcbg.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWNcbg>(
+              PopupMenuItem<WhereToGoFromWWNcbg>(
                 value: WhereToGoFromWWNcbg.ai_ncbg,
-                child: Text('AI NCBG'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    Text('NCBG'),
+                  ],
+                ),
               ),
             ],
           ),

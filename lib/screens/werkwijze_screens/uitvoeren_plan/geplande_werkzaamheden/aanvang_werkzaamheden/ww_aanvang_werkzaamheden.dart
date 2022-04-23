@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWAanvangWerkzaamheden { home, aiAanvangWerkzaamheden }
+enum WhereToGoFromWWAanvangWerkzaamheden {
+  home_screen,
+  ai_aanvang_werkzaamheden
+}
 
 class WWAanvangWerkzaamheden extends StatelessWidget {
   const WWAanvangWerkzaamheden({Key? key}) : super(key: key);
@@ -18,10 +21,11 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWAanvangWerkzaamheden result) {
-              if (result == WhereToGoFromWWAanvangWerkzaamheden.home) {
+              if (result == WhereToGoFromWWAanvangWerkzaamheden.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromWWAanvangWerkzaamheden.aiAanvangWerkzaamheden) {
+                  WhereToGoFromWWAanvangWerkzaamheden
+                      .ai_aanvang_werkzaamheden) {
                 Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
               } else {
                 Navigator.pop(context);
@@ -29,14 +33,32 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWAanvangWerkzaamheden>>[
-              const PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
-                value: WhereToGoFromWWAanvangWerkzaamheden.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
+                value: WhereToGoFromWWAanvangWerkzaamheden.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
-                value:
-                    WhereToGoFromWWAanvangWerkzaamheden.aiAanvangWerkzaamheden,
-                child: Text('AI Aanvang Werkzaamheden'),
+              PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
+                value: WhereToGoFromWWAanvangWerkzaamheden
+                    .ai_aanvang_werkzaamheden,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Aanvang Werkzaamheden'),
+                  ],
+                ),
               ),
             ],
           ),

@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWGeplandeWerkzaamhedenMain { home, aiGeplandeWerkzaamheden }
+enum WhereToGoFromWWGeplandeWerkzaamhedenMain {
+  home_screen,
+  ai_geplande_werkzaamheden_main
+}
 
 class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
   const WWGeplandeWerkzaamhedenMain({Key? key}) : super(key: key);
@@ -18,11 +21,12 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWGeplandeWerkzaamhedenMain result) {
-              if (result == WhereToGoFromWWGeplandeWerkzaamhedenMain.home) {
+              if (result ==
+                  WhereToGoFromWWGeplandeWerkzaamhedenMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWGeplandeWerkzaamhedenMain
-                      .aiGeplandeWerkzaamheden) {
+                      .ai_geplande_werkzaamheden_main) {
                 Navigator.pushNamed(context, 'ai_geplande_werkzaamheden_main');
               } else {
                 Navigator.pop(context);
@@ -30,14 +34,32 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWGeplandeWerkzaamhedenMain>>[
-              const PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
-                value: WhereToGoFromWWGeplandeWerkzaamhedenMain.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
+                value: WhereToGoFromWWGeplandeWerkzaamhedenMain.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
+              PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
                 value: WhereToGoFromWWGeplandeWerkzaamhedenMain
-                    .aiGeplandeWerkzaamheden,
-                child: Text('AI Geplande Werkzaamheden'),
+                    .ai_geplande_werkzaamheden_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Geplande Werkzaamheden'),
+                  ],
+                ),
               ),
             ],
           ),

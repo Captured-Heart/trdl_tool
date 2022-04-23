@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWCommunicatieMain { home, ai_communicatie_main }
+enum WhereToGoFromWWCommunicatieMain { home_screen, ai_communicatie_main }
 
 class WWCommunicatieMain extends StatelessWidget {
   const WWCommunicatieMain({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class WWCommunicatieMain extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWCommunicatieMain result) {
-              if (result == WhereToGoFromWWCommunicatieMain.home) {
+              if (result == WhereToGoFromWWCommunicatieMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWCommunicatieMain.ai_communicatie_main) {
@@ -29,13 +29,31 @@ class WWCommunicatieMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWCommunicatieMain>>[
-              const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
-                value: WhereToGoFromWWCommunicatieMain.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
+                value: WhereToGoFromWWCommunicatieMain.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
+              PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
                 value: WhereToGoFromWWCommunicatieMain.ai_communicatie_main,
-                child: Text('AI Communicatie'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Communicatie'),
+                  ],
+                ),
               ),
             ],
           ),

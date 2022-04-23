@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWFoutenWBI { home, aiFoutenWBI }
+enum WhereToGoFromWWFoutenWBI { home_screen, ai_fouten_wbi }
 
 class WWFoutenWBI extends StatelessWidget {
   const WWFoutenWBI({Key? key}) : super(key: key);
@@ -18,9 +18,9 @@ class WWFoutenWBI extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWFoutenWBI result) {
-              if (result == WhereToGoFromWWFoutenWBI.home) {
+              if (result == WhereToGoFromWWFoutenWBI.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
-              } else if (result == WhereToGoFromWWFoutenWBI.aiFoutenWBI) {
+              } else if (result == WhereToGoFromWWFoutenWBI.ai_fouten_wbi) {
                 Navigator.pushNamed(context, 'ai_fouten_wbi');
               } else {
                 Navigator.pop(context);
@@ -28,13 +28,31 @@ class WWFoutenWBI extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWFoutenWBI>>[
-              const PopupMenuItem<WhereToGoFromWWFoutenWBI>(
-                value: WhereToGoFromWWFoutenWBI.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWFoutenWBI>(
+                value: WhereToGoFromWWFoutenWBI.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWFoutenWBI>(
-                value: WhereToGoFromWWFoutenWBI.aiFoutenWBI,
-                child: Text('AI Fouten in de WBI'),
+              PopupMenuItem<WhereToGoFromWWFoutenWBI>(
+                value: WhereToGoFromWWFoutenWBI.ai_fouten_wbi,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Fouten in de WBI'),
+                  ],
+                ),
               ),
             ],
           ),

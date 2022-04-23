@@ -1,8 +1,8 @@
 import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWBijzonderhedenRijwegenMain {
-  home,
-  aiBijzonderhedenRijwegen
+  home_screen,
+  ai_bijzonderheden_rijwegen_main
 }
 
 class WWBijzonderhedenRijwegenMain extends StatelessWidget {
@@ -21,11 +21,12 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWBijzonderhedenRijwegenMain result) {
-              if (result == WhereToGoFromWWBijzonderhedenRijwegenMain.home) {
+              if (result ==
+                  WhereToGoFromWWBijzonderhedenRijwegenMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWBijzonderhedenRijwegenMain
-                      .aiBijzonderhedenRijwegen) {
+                      .ai_bijzonderheden_rijwegen_main) {
                 Navigator.pushNamed(context, 'ai_bijzonderheden_rijwegen_main');
               } else {
                 Navigator.pop(context);
@@ -33,14 +34,32 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWBijzonderhedenRijwegenMain>>[
-              const PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
-                value: WhereToGoFromWWBijzonderhedenRijwegenMain.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
+                value: WhereToGoFromWWBijzonderhedenRijwegenMain.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
+              PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
                 value: WhereToGoFromWWBijzonderhedenRijwegenMain
-                    .aiBijzonderhedenRijwegen,
-                child: Text('AI Bijzonderheden Rijwegen'),
+                    .ai_bijzonderheden_rijwegen_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Bijzonderheden Rijwegen'),
+                  ],
+                ),
               ),
             ],
           ),

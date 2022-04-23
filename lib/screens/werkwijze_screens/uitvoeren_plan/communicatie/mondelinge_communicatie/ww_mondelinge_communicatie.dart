@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWMondelingeCommunicatie {
-  home,
+  home_screen,
   ai_mondelinge_veiligheidscommunicatie
 }
 
@@ -21,7 +21,7 @@ class WWMondelingeCommunicatie extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWMondelingeCommunicatie result) {
-              if (result == WhereToGoFromWWMondelingeCommunicatie.home) {
+              if (result == WhereToGoFromWWMondelingeCommunicatie.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWMondelingeCommunicatie
@@ -34,14 +34,35 @@ class WWMondelingeCommunicatie extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWMondelingeCommunicatie>>[
-              const PopupMenuItem<WhereToGoFromWWMondelingeCommunicatie>(
-                value: WhereToGoFromWWMondelingeCommunicatie.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWMondelingeCommunicatie>(
+                value: WhereToGoFromWWMondelingeCommunicatie.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWMondelingeCommunicatie>(
+              PopupMenuItem<WhereToGoFromWWMondelingeCommunicatie>(
                 value: WhereToGoFromWWMondelingeCommunicatie
                     .ai_mondelinge_veiligheidscommunicatie,
-                child: Text('AI Mondelinge Veiligheidscommunicatie'),
+                child: FittedBox(
+                  fit: BoxFit.fitWidth,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(
+                        Icons.menu_book,
+                        color: flexSchemeLight.primary,
+                      ),
+                      const Text('Mondelinge Veiligheidscommunicatie'),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),

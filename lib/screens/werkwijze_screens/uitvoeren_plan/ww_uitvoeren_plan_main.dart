@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWUitvoerenPlanMain { home_screen, aiUitvoerenPlan }
+enum WhereToGoFromWWUitvoerenPlanMain { home_screen, ai_uitvoeren_plan_main }
 
 class WWUitvoerenPlanMain extends StatelessWidget {
   const WWUitvoerenPlanMain({Key? key}) : super(key: key);
@@ -21,7 +21,7 @@ class WWUitvoerenPlanMain extends StatelessWidget {
               if (result == WhereToGoFromWWUitvoerenPlanMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromWWUitvoerenPlanMain.aiUitvoerenPlan) {
+                  WhereToGoFromWWUitvoerenPlanMain.ai_uitvoeren_plan_main) {
                 Navigator.pushNamed(context, 'ai_uitvoeren_plan_main');
               } else {
                 Navigator.pop(context);
@@ -29,13 +29,31 @@ class WWUitvoerenPlanMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWUitvoerenPlanMain>>[
-              const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
+              PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
                 value: WhereToGoFromWWUitvoerenPlanMain.home_screen,
-                child: Text('Home'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
-                value: WhereToGoFromWWUitvoerenPlanMain.aiUitvoerenPlan,
-                child: Text('AI Uitvoeren Plan'),
+              PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
+                value: WhereToGoFromWWUitvoerenPlanMain.ai_uitvoeren_plan_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Uitvoeren Plan'),
+                  ],
+                ),
               ),
             ],
           ),

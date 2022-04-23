@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWDienstovergave { home, ai_dienstovergave }
+enum WhereToGoFromWWDienstovergave { home_screen, ai_dienstovergave }
 
 class WWDienstovergave extends StatelessWidget {
   const WWDienstovergave({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class WWDienstovergave extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWDienstovergave result) {
-              if (result == WhereToGoFromWWDienstovergave.home) {
+              if (result == WhereToGoFromWWDienstovergave.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWDienstovergave.ai_dienstovergave) {
@@ -29,13 +29,31 @@ class WWDienstovergave extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWDienstovergave>>[
-              const PopupMenuItem<WhereToGoFromWWDienstovergave>(
-                value: WhereToGoFromWWDienstovergave.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWDienstovergave>(
+                value: WhereToGoFromWWDienstovergave.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWDienstovergave>(
+              PopupMenuItem<WhereToGoFromWWDienstovergave>(
                 value: WhereToGoFromWWDienstovergave.ai_dienstovergave,
-                child: Text('AI Dienstovergave'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Dienstovergave'),
+                  ],
+                ),
               ),
             ],
           ),

@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWBijzonderhedenTrein { home, ai_vervoersregeling }
+enum WhereToGoFromWWBijzonderhedenTrein { home_screen, ai_vervoersregeling }
 
 class WWBijzonderhedenTrein extends StatelessWidget {
   const WWBijzonderhedenTrein({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class WWBijzonderhedenTrein extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWBijzonderhedenTrein result) {
-              if (result == WhereToGoFromWWBijzonderhedenTrein.home) {
+              if (result == WhereToGoFromWWBijzonderhedenTrein.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWBijzonderhedenTrein.ai_vervoersregeling) {
@@ -29,13 +29,31 @@ class WWBijzonderhedenTrein extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWBijzonderhedenTrein>>[
-              const PopupMenuItem<WhereToGoFromWWBijzonderhedenTrein>(
-                value: WhereToGoFromWWBijzonderhedenTrein.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWBijzonderhedenTrein>(
+                value: WhereToGoFromWWBijzonderhedenTrein.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWBijzonderhedenTrein>(
+              PopupMenuItem<WhereToGoFromWWBijzonderhedenTrein>(
                 value: WhereToGoFromWWBijzonderhedenTrein.ai_vervoersregeling,
-                child: Text('AI Treinen met Vervoersregeling'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Treinen met Vervoersregeling'),
+                  ],
+                ),
               ),
             ],
           ),

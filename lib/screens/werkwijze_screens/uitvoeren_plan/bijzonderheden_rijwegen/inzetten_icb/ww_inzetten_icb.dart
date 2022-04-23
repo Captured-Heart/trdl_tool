@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWInzettenICB { home, aiInzettenICB }
+enum WhereToGoFromWWInzettenICB { home_screen, ai_inzetten_railvoertuig }
 
 class WWInzettenICB extends StatelessWidget {
   const WWInzettenICB({Key? key}) : super(key: key);
@@ -18,9 +18,10 @@ class WWInzettenICB extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWInzettenICB result) {
-              if (result == WhereToGoFromWWInzettenICB.home) {
+              if (result == WhereToGoFromWWInzettenICB.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
-              } else if (result == WhereToGoFromWWInzettenICB.aiInzettenICB) {
+              } else if (result ==
+                  WhereToGoFromWWInzettenICB.ai_inzetten_railvoertuig) {
                 Navigator.pushNamed(context, 'ai_inzetten_railvoertuig');
               } else {
                 Navigator.pop(context);
@@ -28,13 +29,31 @@ class WWInzettenICB extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWInzettenICB>>[
-              const PopupMenuItem<WhereToGoFromWWInzettenICB>(
-                value: WhereToGoFromWWInzettenICB.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWInzettenICB>(
+                value: WhereToGoFromWWInzettenICB.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWInzettenICB>(
-                value: WhereToGoFromWWInzettenICB.aiInzettenICB,
-                child: Text('AI Inzetten Railvoertuig ICB'),
+              PopupMenuItem<WhereToGoFromWWInzettenICB>(
+                value: WhereToGoFromWWInzettenICB.ai_inzetten_railvoertuig,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Inzetten Railvoertuig ICB'),
+                  ],
+                ),
               ),
             ],
           ),
