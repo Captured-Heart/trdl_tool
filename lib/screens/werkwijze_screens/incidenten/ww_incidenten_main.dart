@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWIncidentenMain { home }
+enum WhereToGoFromWWIncidentenMain { home_screen }
 
 class WWIncidentenMain extends StatelessWidget {
   const WWIncidentenMain({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class WWIncidentenMain extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWIncidentenMain result) {
-              if (result == WhereToGoFromWWIncidentenMain.home) {
+              if (result == WhereToGoFromWWIncidentenMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else {
                 Navigator.pop(context);
@@ -26,9 +26,18 @@ class WWIncidentenMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWIncidentenMain>>[
-              const PopupMenuItem<WhereToGoFromWWIncidentenMain>(
-                value: WhereToGoFromWWIncidentenMain.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWIncidentenMain>(
+                value: WhereToGoFromWWIncidentenMain.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
             ],
           ),

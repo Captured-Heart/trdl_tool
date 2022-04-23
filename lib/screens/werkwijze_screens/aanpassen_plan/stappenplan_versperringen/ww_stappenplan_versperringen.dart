@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWStappenplanVersperringen {
-  home,
+  home_screen,
   ai_stappenplan_versperringen
 }
 
@@ -21,7 +21,8 @@ class WWStappenplanVersperringen extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWStappenplanVersperringen result) {
-              if (result == WhereToGoFromWWStappenplanVersperringen.home) {
+              if (result ==
+                  WhereToGoFromWWStappenplanVersperringen.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWStappenplanVersperringen
@@ -33,14 +34,32 @@ class WWStappenplanVersperringen extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWStappenplanVersperringen>>[
-              const PopupMenuItem<WhereToGoFromWWStappenplanVersperringen>(
-                value: WhereToGoFromWWStappenplanVersperringen.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromWWStappenplanVersperringen>(
+                value: WhereToGoFromWWStappenplanVersperringen.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWStappenplanVersperringen>(
+              PopupMenuItem<WhereToGoFromWWStappenplanVersperringen>(
                 value: WhereToGoFromWWStappenplanVersperringen
                     .ai_stappenplan_versperringen,
-                child: Text('AI Stappenplan Versperringen'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Stappenplan Versperringen'),
+                  ],
+                ),
               ),
             ],
           ),

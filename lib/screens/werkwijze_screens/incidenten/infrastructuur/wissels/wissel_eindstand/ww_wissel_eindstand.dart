@@ -26,9 +26,18 @@ class WWWisselEindstand extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWWisselEindstand>>[
-              const PopupMenuItem<WhereToGoFromWWWisselEindstand>(
+              PopupMenuItem<WhereToGoFromWWWisselEindstand>(
                 value: WhereToGoFromWWWisselEindstand.home_screen,
-                child: Text('Home'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
             ],
           ),

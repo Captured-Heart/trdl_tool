@@ -26,9 +26,18 @@ class WWOpengeredenWissel extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWOpengeredenWissel>>[
-              const PopupMenuItem<WhereToGoFromWWOpengeredenWissel>(
+              PopupMenuItem<WhereToGoFromWWOpengeredenWissel>(
                 value: WhereToGoFromWWOpengeredenWissel.home_screen,
-                child: Text('Home'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
             ],
           ),

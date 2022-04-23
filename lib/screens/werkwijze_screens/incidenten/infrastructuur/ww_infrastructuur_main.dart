@@ -26,9 +26,18 @@ class WWInfraMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWInfraMain>>[
-              const PopupMenuItem<WhereToGoFromWWInfraMain>(
+              PopupMenuItem<WhereToGoFromWWInfraMain>(
                 value: WhereToGoFromWWInfraMain.home_screen,
-                child: Text('Home'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
             ],
           ),

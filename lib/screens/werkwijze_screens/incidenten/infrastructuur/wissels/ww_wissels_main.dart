@@ -26,9 +26,18 @@ class WWWisselsMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWWisselsMain>>[
-              const PopupMenuItem<WhereToGoFromWWWisselsMain>(
+              PopupMenuItem<WhereToGoFromWWWisselsMain>(
                 value: WhereToGoFromWWWisselsMain.home_screen,
-                child: Text('Home'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
             ],
           ),

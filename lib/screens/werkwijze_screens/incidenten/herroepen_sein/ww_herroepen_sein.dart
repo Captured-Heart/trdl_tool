@@ -29,13 +29,31 @@ class WWHerroepenSein extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWHerroepenSein>>[
-              const PopupMenuItem<WhereToGoFromWWHerroepenSein>(
+              PopupMenuItem<WhereToGoFromWWHerroepenSein>(
                 value: WhereToGoFromWWHerroepenSein.home_screen,
-                child: Text('Home'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
-              const PopupMenuItem<WhereToGoFromWWHerroepenSein>(
+              PopupMenuItem<WhereToGoFromWWHerroepenSein>(
                 value: WhereToGoFromWWHerroepenSein.ai_incidenten_main,
-                child: Text('AI Incidenten'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Incidenten'),
+                  ],
+                ),
               ),
             ],
           ),

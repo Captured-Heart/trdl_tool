@@ -26,9 +26,18 @@ class WWBeschadigdWissel extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWBeschadigdWissel>>[
-              const PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
+              PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
                 value: WhereToGoFromWWBeschadigdWissel.home_screen,
-                child: Text('Home'),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
               ),
             ],
           ),

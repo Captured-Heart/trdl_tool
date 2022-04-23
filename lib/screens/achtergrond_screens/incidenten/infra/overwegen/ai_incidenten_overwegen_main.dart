@@ -31,7 +31,7 @@ class AIIncidentenOverwegenMain extends StatelessWidget {
                     SizedBoxH(),
                     InsertImage(
                       image:
-                          'assets/images/achtergrond_info/incidenten/overwegen_achtergrond_main.jpg',
+                          'assets/images/achtergrond_info/incidenten/overwegen_achtergrond_main.png',
                     ),
                     SizedBoxH(),
                   ],
