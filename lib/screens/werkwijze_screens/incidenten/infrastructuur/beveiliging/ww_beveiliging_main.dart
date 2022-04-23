@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-//TODO: Hier verder de appbar aanpassen aan de nieuwe navigatiestructuur!
+enum WhereToGoFromWWBeveiligingMain { home_screen, ai_incidenten_infra_main, ai_incidenten_beveiliging_main, }
 
 class WWBeveiligingMain extends StatelessWidget {
   const WWBeveiligingMain({Key? key}) : super(key: key);
@@ -11,10 +11,66 @@ class WWBeveiligingMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Beveiliging',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWBeveiligingMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWBeveiligingMain result) {
+              if (result == WhereToGoFromWWBeveiligingMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromWWBeveiligingMain.ai_incidenten_infra_main) {
+                Navigator.pushNamed(context, 'ai_incidenten_infra_main');
+              } else if (result == WhereToGoFromWWBeveiligingMain.ai_incidenten_beveiliging_main) {
+                Navigator.pushNamed(context, 'ai_incidenten_beveiliging_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWBeveiligingMain>>[
+              PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
+                value: WhereToGoFromWWBeveiligingMain.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
+                value: WhereToGoFromWWBeveiligingMain.ai_incidenten_infra_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Infra'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
+                value: WhereToGoFromWWBeveiligingMain.ai_incidenten_beveiliging_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Beveiliging'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWTegenRijrichting { home_screen, ai_incidenten_tegenrijrichting }
+
 class WWTegenRijrichting extends StatelessWidget {
   const WWTegenRijrichting({Key? key}) : super(key: key);
 
@@ -9,10 +11,52 @@ class WWTegenRijrichting extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Tegen de rijrichting',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWTegenRijrichting>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWTegenRijrichting result) {
+              if (result == WhereToGoFromWWTegenRijrichting.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWTegenRijrichting.ai_incidenten_tegenrijrichting) {
+                Navigator.pushNamed(context, 'ai_incidenten_tegenrijrichting');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWTegenRijrichting>>[
+              PopupMenuItem<WhereToGoFromWWTegenRijrichting>(
+                value: WhereToGoFromWWTegenRijrichting.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWTegenRijrichting>(
+                value: WhereToGoFromWWTegenRijrichting.ai_incidenten_tegenrijrichting,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Tegen de Rijrichting'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

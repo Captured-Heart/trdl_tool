@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWResetAssenteller { home_screen, ai_assenteller }
+
 class WWResetAssenteller extends StatelessWidget {
   const WWResetAssenteller({Key? key}) : super(key: key);
 
@@ -9,10 +11,52 @@ class WWResetAssenteller extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Reset Assenteller',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWResetAssenteller>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWResetAssenteller result) {
+              if (result == WhereToGoFromWWResetAssenteller.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWResetAssenteller.ai_assenteller) {
+                Navigator.pushNamed(context, 'ai_assenteller');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWResetAssenteller>>[
+              PopupMenuItem<WhereToGoFromWWResetAssenteller>(
+                value: WhereToGoFromWWResetAssenteller.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWResetAssenteller>(
+                value: WhereToGoFromWWResetAssenteller.ai_assenteller,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Reset Assenteller'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

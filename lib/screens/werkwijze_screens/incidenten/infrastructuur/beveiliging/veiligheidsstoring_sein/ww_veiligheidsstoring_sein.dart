@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWVeiligheidsstoringSein { home_screen, ai_incidenten_veiligheidsstoringsein, }
+
 class WWVeiligheidsstoringSein extends StatelessWidget {
   const WWVeiligheidsstoringSein({Key? key}) : super(key: key);
 
@@ -9,10 +11,52 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Veiligheidsstoring sein',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWVeiligheidsstoringSein>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWVeiligheidsstoringSein result) {
+              if (result == WhereToGoFromWWVeiligheidsstoringSein.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWVeiligheidsstoringSein.ai_incidenten_veiligheidsstoringsein) {
+                Navigator.pushNamed(context, 'ai_incidenten_veiligheidsstoringsein');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWVeiligheidsstoringSein>>[
+              PopupMenuItem<WhereToGoFromWWVeiligheidsstoringSein>(
+                value: WhereToGoFromWWVeiligheidsstoringSein.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWVeiligheidsstoringSein>(
+                value: WhereToGoFromWWVeiligheidsstoringSein.ai_incidenten_veiligheidsstoringsein,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Veiligheidsstoring Sein'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(
