@@ -1,6 +1,8 @@
 import 'package:trdl_tool/all_imports.dart';
 
-//TODO: Hier verder met aanpassen navigatie via appbar!
+//TODO: Hier verder met enum en PopupMenuButton();
+
+enum WhereToGoFromWWBovenleidingMain { home_screen, }
 
 class WWBovenleidingMain extends StatelessWidget {
   const WWBovenleidingMain({Key? key}) : super(key: key);
@@ -11,9 +13,9 @@ class WWBovenleidingMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Bovenleiding',
+          title: 'Werkwijze',
         ),
-        actions: const [
+        actions: [
           HomeButton(),
         ],
       ),
