@@ -1,8 +1,11 @@
 import 'package:trdl_tool/all_imports.dart';
 
-//TODO: Hier verder met enum en PopupMenuButton();
-
-enum WhereToGoFromWWBovenleidingMain { home_screen, }
+enum WhereToGoFromWWBovenleidingMain {
+  home_screen,
+  ai_incidenten_basis,
+  ai_incidenten_infra_main,
+  ai_incidenten_bovenleiding_main,
+}
 
 class WWBovenleidingMain extends StatelessWidget {
   const WWBovenleidingMain({Key? key}) : super(key: key);
@@ -16,7 +19,83 @@ class WWBovenleidingMain extends StatelessWidget {
           title: 'Werkwijze',
         ),
         actions: [
-          HomeButton(),
+          PopupMenuButton<WhereToGoFromWWBovenleidingMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWBovenleidingMain result) {
+              if (result == WhereToGoFromWWBovenleidingMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWBovenleidingMain.ai_incidenten_basis) {
+                Navigator.pushNamed(context, 'ai_incidenten_basis');
+              } else if (result ==
+                  WhereToGoFromWWBovenleidingMain.ai_incidenten_infra_main) {
+                Navigator.pushNamed(context, 'ai_incidenten_infra_main');
+              } else if (result ==
+                  WhereToGoFromWWBovenleidingMain
+                      .ai_incidenten_bovenleiding_main) {
+                Navigator.pushNamed(context, 'ai_incidenten_bovenleiding_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWBovenleidingMain>>[
+              PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
+                value: WhereToGoFromWWBovenleidingMain.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
+                value: WhereToGoFromWWBovenleidingMain.ai_incidenten_basis,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Incidenten Basis'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
+                value: WhereToGoFromWWBovenleidingMain.ai_incidenten_infra_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Infra'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
+                value: WhereToGoFromWWBovenleidingMain
+                    .ai_incidenten_bovenleiding_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Bovenleiding'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

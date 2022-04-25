@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+//TODO: Hier verder met aanpassen navigatie met enum en PopupMenuButton();
+
 class WWKunstwerkenMain extends StatelessWidget {
   const WWKunstwerkenMain({Key? key}) : super(key: key);
 

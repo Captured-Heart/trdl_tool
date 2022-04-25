@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWSchouwenBovenleiding {
+  home_screen,
+  ai_incidenten_schouwenbovenleiding,
+}
+
 class WWSchouwenBovenleiding extends StatelessWidget {
   const WWSchouwenBovenleiding({Key? key}) : super(key: key);
 
@@ -9,10 +14,55 @@ class WWSchouwenBovenleiding extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Schouwen bovenleiding',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWSchouwenBovenleiding>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWSchouwenBovenleiding result) {
+              if (result == WhereToGoFromWWSchouwenBovenleiding.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWSchouwenBovenleiding
+                      .ai_incidenten_schouwenbovenleiding) {
+                Navigator.pushNamed(
+                    context, 'ai_incidenten_schouwenbovenleiding');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWSchouwenBovenleiding>>[
+              PopupMenuItem<WhereToGoFromWWSchouwenBovenleiding>(
+                value: WhereToGoFromWWSchouwenBovenleiding.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWSchouwenBovenleiding>(
+                value: WhereToGoFromWWSchouwenBovenleiding
+                    .ai_incidenten_schouwenbovenleiding,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Schouwen Bovenleiding'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

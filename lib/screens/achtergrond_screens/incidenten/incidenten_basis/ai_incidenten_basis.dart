@@ -9,7 +9,7 @@ class AIIncidenten extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Incidenten basis',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),
@@ -370,14 +370,14 @@ class AIIncidenten extends StatelessWidget {
                       SubTitleText(subtitle: 'Alarmeer- en informeerformulier'),
                       SizedBoxH(),
                       BodyText(
-                        indents: 0,
-                        text: 'Na een melding van een incident zal de Algemeen Leider doorgaans ter plaatse gaan. Deze treedt coördinerend op tussen functionarissen van betrokken deelaspecten, zoals bijv. overheidshulpdiensten, vervoerder(s), storingsploeg, ICB en de TRDL.\n\nVoordat de treindienst - al dan niet beperkt - wordt hervat, zorg je dat er altijd toestemming is van:'
-                      ),
+                          indents: 0,
+                          text:
+                              'Na een melding van een incident zal de Algemeen Leider doorgaans ter plaatse gaan. Deze treedt coördinerend op tussen functionarissen van betrokken deelaspecten, zoals bijv. overheidshulpdiensten, vervoerder(s), storingsploeg, ICB en de TRDL.\n\nVoordat de treindienst - al dan niet beperkt - wordt hervat, zorg je dat er altijd toestemming is van:'),
                       SizedBoxH(),
                       BodyText(
-                        indents: 1,
-                        text: '- MKS/BO -> als er geen AL is ingezet;\n\n- AL -> Als een AL is ingezet en de infracapaciteit van betreffende spoor/sporen is weggegeven aan de AL;\n\n- LWB -> Als AL en LWB zijn ingezet en spoor/sporen zijn Buiten Dienst.'
-                      ),
+                          indents: 1,
+                          text:
+                              '- MKS/BO -> als er geen AL is ingezet;\n\n- AL -> Als een AL is ingezet en de infracapaciteit van betreffende spoor/sporen is weggegeven aan de AL;\n\n- LWB -> Als AL en LWB zijn ingezet en spoor/sporen zijn Buiten Dienst.'),
                     ],
                   ),
                 ),

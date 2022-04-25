@@ -9,7 +9,7 @@ class AIIncidentenBovenleidingMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Bovenleiding',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),

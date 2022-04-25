@@ -175,6 +175,7 @@ class MainEntry extends StatelessWidget {
         'ai_incidenten_infra_main': (context) => const AIIncidentenInfraMain(),
         'ai_incidenten_beveiliging_main': (context) =>
             const AIIncidentenBeveiligingMain(),
+        'ai_beveiliging_basis1': (context) => const AIBeveiligingBasis1(),
         'ai_incidenten_bovenleiding_main': (context) =>
             const AIIncidentenBovenleidingMain(),
         'ai_incidenten_kunstwerken_main': (context) =>
@@ -191,7 +192,7 @@ class MainEntry extends StatelessWidget {
         /*PROCHAT ROUTES*/
         'prochat_main': (context) => const ProChat(),
 
-        /*ADDING MORE ROUTES? ADD TO CORE/ALL_SEARCH_STRING.DART AS WELL*/
+        /*ADDING MORE ROUTES? ADD TO CONSTANTS/ALL_SEARCH_STRING.DART AS WELL*/
       },
     );
   }

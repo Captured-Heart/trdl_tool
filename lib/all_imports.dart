@@ -215,6 +215,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/incidenten/incidenten_basi
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/mensen_dieren_voorwerpen/ai_incidenten_derdendieren.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/ai_incidenten_infra_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/beveiliging/ai_incidenten_beveiliging_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/beveiliging/beveiliging_basis/ai_beveiliging_basis1.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/bovenleiding/ai_incidenten_bovenleiding_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/kunstwerken/ai_incidenten_kunstwerken_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/overwegen/ai_incidenten_overwegen_main.dart';
