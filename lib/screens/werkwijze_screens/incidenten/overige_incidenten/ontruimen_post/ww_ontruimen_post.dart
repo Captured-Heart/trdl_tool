@@ -1,5 +1,12 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWOntruimenPost {
+  home_screen,
+  ai_ontruimenpost,
+  ai_stilleggentreindienst,
+  ai_overigeincidenten,
+}
+
 class WWOntruimenPost extends StatelessWidget {
   const WWOntruimenPost({Key? key}) : super(key: key);
 
@@ -9,10 +16,85 @@ class WWOntruimenPost extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Ontruimen',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWOntruimenPost>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWOntruimenPost result) {
+              if (result == WhereToGoFromWWOntruimenPost.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWOntruimenPost.ai_ontruimenpost) {
+                Navigator.pushNamed(context, 'ai_ontruimenpost');
+              } else if (result ==
+                  WhereToGoFromWWOntruimenPost.ai_stilleggentreindienst) {
+                Navigator.pushNamed(context, 'ai_stilleggentreindienst');
+              } else if (result ==
+                  WhereToGoFromWWOntruimenPost.ai_overigeincidenten) {
+                Navigator.pushNamed(context, 'ai_overigeincidenten');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWOntruimenPost>>[
+              PopupMenuItem<WhereToGoFromWWOntruimenPost>(
+                value: WhereToGoFromWWOntruimenPost.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWOntruimenPost>(
+                value: WhereToGoFromWWOntruimenPost.ai_ontruimenpost,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Ontruimen Post'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWOntruimenPost>(
+                value: WhereToGoFromWWOntruimenPost.ai_stilleggentreindienst,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Stilleggen Treindienst'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWOntruimenPost>(
+                value: WhereToGoFromWWOntruimenPost.ai_overigeincidenten,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Overige Incidenten'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SafeArea(

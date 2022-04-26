@@ -1,5 +1,13 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWAfhandelenSysteemstoringen {
+  home_screen,
+  ai_systeemstoringen,
+  ai_systemen,
+  ai_systeemstoring_gsmr,
+  ai_overigeincidenten,
+}
+
 class WWAfhandelenSysteemstoringen extends StatelessWidget {
   const WWAfhandelenSysteemstoringen({Key? key}) : super(key: key);
 
@@ -9,88 +17,184 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Systeemstoringen',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
-        ],
-      ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Afhandelen systeemstoringen',
-                      ),
-                      SizedBoxH(),
-                      SubTitleText(
-                        subtitle: Strings.procedure,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Bij alle computerstoringen en uitval van systemen wacht je 2 minuten op een automatische herstart. Als er niet automatisch wordt herstart, handel je als volgt:',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Controleer of de storing zich beperkt tot jouw werkplek;\n\n- Controleer onder de knop \'systeem\' in het planscherm de status van de verschillende systemen;\n\n- Bepaal of het nodig is de calamiteiten-werkplek op te starten. Zet dan ARI uit op de gestoorde werkplek en gebruik indien nodig \'ARI Noodstop\' in PBH++.',
-                      ),
-                    ],
-                  ),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWAfhandelenSysteemstoringen>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWAfhandelenSysteemstoringen result) {
+              if (result ==
+                  WhereToGoFromWWAfhandelenSysteemstoringen.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWAfhandelenSysteemstoringen
+                      .ai_systeemstoringen) {
+                Navigator.pushNamed(context, 'ai_systeemstoringen');
+              } else if (result ==
+                  WhereToGoFromWWAfhandelenSysteemstoringen.ai_systemen) {
+                Navigator.pushNamed(context, 'ai_systemen');
+              } else if (result ==
+                  WhereToGoFromWWAfhandelenSysteemstoringen
+                      .ai_systeemstoring_gsmr) {
+                Navigator.pushNamed(context, 'ai_systeemstoring_gsmr');
+              } else if (result ==
+                  WhereToGoFromWWAfhandelenSysteemstoringen
+                      .ai_overigeincidenten) {
+                Navigator.pushNamed(context, 'ai_overigeincidenten');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWAfhandelenSysteemstoringen>>[
+              PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
+                value: WhereToGoFromWWAfhandelenSysteemstoringen.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
                 ),
               ),
-              /*RISICO CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.risico,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Trein komt in infra gereserveerd voor een andere trein.',
-                      ),
-                    ],
-                  ),
+              PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
+                value: WhereToGoFromWWAfhandelenSysteemstoringen
+                    .ai_systeemstoringen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Systeemstoringen'),
+                  ],
                 ),
               ),
-              /*CONTEXT CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.context,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Alle bediensystemen van de TRDL zijn redundant uitgevoerd en proberen bij storingen/uitval om te schakelen.',
-                      ),
-                    ],
-                  ),
+              PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
+                value: WhereToGoFromWWAfhandelenSysteemstoringen.ai_systemen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Systemen'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
+                value: WhereToGoFromWWAfhandelenSysteemstoringen
+                    .ai_systeemstoring_gsmr,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Systeemstoring GSM-R/INTel'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
+                value: WhereToGoFromWWAfhandelenSysteemstoringen
+                    .ai_overigeincidenten,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Overige Incidenten'),
+                  ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /*PROCEDURE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Afhandelen systeemstoringen',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle: Strings.procedure,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Bij alle computerstoringen en uitval van systemen wacht je 2 minuten op een automatische herstart. Als er niet automatisch wordt herstart, handel je als volgt:',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 1,
+                      text:
+                          '- Controleer of de storing zich beperkt tot jouw werkplek;\n\n- Controleer onder de knop \'systeem\' in het planscherm de status van de verschillende systemen;\n\n- Bepaal of het nodig is de calamiteiten-werkplek op te starten. Zet dan ARI uit op de gestoorde werkplek en gebruik indien nodig \'ARI Noodstop\' in PBH++.',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            /*RISICO CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.risico,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Trein komt in infra gereserveerd voor een andere trein.',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            /*CONTEXT CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.context,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Alle bediensystemen van de TRDL zijn redundant uitgevoerd en proberen bij storingen/uitval om te schakelen.',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

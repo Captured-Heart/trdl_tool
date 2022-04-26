@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWAtbVeiligheidsstoring {
+  home_screen,
+  ai_atb,
+}
+
 class WWAtbVeiligheidsstoring extends StatelessWidget {
   const WWAtbVeiligheidsstoring({Key? key}) : super(key: key);
 
@@ -9,10 +14,52 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'ATB storing',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWAtbVeiligheidsstoring>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWAtbVeiligheidsstoring result) {
+              if (result == WhereToGoFromWWAtbVeiligheidsstoring.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWAtbVeiligheidsstoring.ai_atb) {
+                Navigator.pushNamed(context, 'ai_atb');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWAtbVeiligheidsstoring>>[
+              PopupMenuItem<WhereToGoFromWWAtbVeiligheidsstoring>(
+                value: WhereToGoFromWWAtbVeiligheidsstoring.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWAtbVeiligheidsstoring>(
+                value: WhereToGoFromWWAtbVeiligheidsstoring.ai_atb,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('ATB'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

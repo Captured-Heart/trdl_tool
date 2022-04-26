@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWAanrijdingViaduct {
+  home_screen,
+  ai_aanrijdingviaduct,
+}
+
 class WWAanrijdingViaduct extends StatelessWidget {
   const WWAanrijdingViaduct({Key? key}) : super(key: key);
 
@@ -9,10 +14,52 @@ class WWAanrijdingViaduct extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Aanrijding viaduct',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWAanrijdingViaduct>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWAanrijdingViaduct result) {
+              if (result == WhereToGoFromWWAanrijdingViaduct.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWAanrijdingViaduct.ai_aanrijdingviaduct) {
+                Navigator.pushNamed(context, 'ai_aanrijdingviaduct');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWAanrijdingViaduct>>[
+              PopupMenuItem<WhereToGoFromWWAanrijdingViaduct>(
+                value: WhereToGoFromWWAanrijdingViaduct.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWAanrijdingViaduct>(
+                value: WhereToGoFromWWAanrijdingViaduct.ai_aanrijdingviaduct,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Aanrijding Viaduct'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

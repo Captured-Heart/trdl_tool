@@ -1,5 +1,11 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWGestrandeTrein {
+  home_screen,
+  ai_gestrandetrein,
+  ai_overigeincidenten,
+}
+
 class WWGestrandeTrein extends StatelessWidget {
   const WWGestrandeTrein({Key? key}) : super(key: key);
 
@@ -9,10 +15,69 @@ class WWGestrandeTrein extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Gestrande trein',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWGestrandeTrein>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWGestrandeTrein result) {
+              if (result == WhereToGoFromWWGestrandeTrein.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWGestrandeTrein.ai_gestrandetrein) {
+                Navigator.pushNamed(context, 'ai_gestrandetrein');
+              } else if (result ==
+                  WhereToGoFromWWGestrandeTrein.ai_overigeincidenten) {
+                Navigator.pushNamed(context, 'ai_overigeincidenten');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWGestrandeTrein>>[
+              PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
+                value: WhereToGoFromWWGestrandeTrein.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
+                value: WhereToGoFromWWGestrandeTrein.ai_gestrandetrein,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Gestrande Trein'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
+                value: WhereToGoFromWWGestrandeTrein.ai_overigeincidenten,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Overige Incidenten'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SafeArea(

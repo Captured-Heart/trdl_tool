@@ -1,5 +1,11 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWVasteRem {
+  home_screen,
+  ai_materieel,
+  ai_vasterem,
+}
+
 class WWVasteRem extends StatelessWidget {
   const WWVasteRem({Key? key}) : super(key: key);
 
@@ -9,10 +15,66 @@ class WWVasteRem extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Vaste rem',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWVasteRem>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWVasteRem result) {
+              if (result == WhereToGoFromWWVasteRem.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromWWVasteRem.ai_materieel) {
+                Navigator.pushNamed(context, 'ai_materieel');
+              } else if (result == WhereToGoFromWWVasteRem.ai_vasterem) {
+                Navigator.pushNamed(context, 'ai_vasterem');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWVasteRem>>[
+              PopupMenuItem<WhereToGoFromWWVasteRem>(
+                value: WhereToGoFromWWVasteRem.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWVasteRem>(
+                value: WhereToGoFromWWVasteRem.ai_materieel,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Materieel'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWVasteRem>(
+                value: WhereToGoFromWWVasteRem.ai_vasterem,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Vaste Rem'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

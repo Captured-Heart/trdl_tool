@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWOverigeIncidentenMain {
+  home_screen,
+  ai_overigeincidenten,
+}
+
 class WWOverigeIncidentenMain extends StatelessWidget {
   const WWOverigeIncidentenMain({Key? key}) : super(key: key);
 
@@ -9,10 +14,54 @@ class WWOverigeIncidentenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Overige incidenten',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWOverigeIncidentenMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWOverigeIncidentenMain result) {
+              if (result == WhereToGoFromWWOverigeIncidentenMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWOverigeIncidentenMain.ai_overigeincidenten) {
+                Navigator.pushNamed(context, 'ai_overigeincidenten');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWOverigeIncidentenMain>>[
+              PopupMenuItem<WhereToGoFromWWOverigeIncidentenMain>(
+                value: WhereToGoFromWWOverigeIncidentenMain.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWOverigeIncidentenMain>(
+                value:
+                    WhereToGoFromWWOverigeIncidentenMain.ai_overigeincidenten,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Overige Incidenten'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SafeArea(

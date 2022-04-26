@@ -1,5 +1,11 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWSectieStoring {
+  home_screen,
+  ai_incidenten_infra_main,
+  ai_sectie,
+}
+
 class WWSectieStoring extends StatelessWidget {
   const WWSectieStoring({Key? key}) : super(key: key);
 
@@ -9,10 +15,67 @@ class WWSectieStoring extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Sectiestoring',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWSectieStoring>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWSectieStoring result) {
+              if (result == WhereToGoFromWWSectieStoring.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWSectieStoring.ai_incidenten_infra_main) {
+                Navigator.pushNamed(context, 'ai_incidenten_infra_main');
+              } else if (result == WhereToGoFromWWSectieStoring.ai_sectie) {
+                Navigator.pushNamed(context, 'ai_sectie');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWSectieStoring>>[
+              PopupMenuItem<WhereToGoFromWWSectieStoring>(
+                value: WhereToGoFromWWSectieStoring.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWSectieStoring>(
+                value: WhereToGoFromWWSectieStoring.ai_incidenten_infra_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Infra'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWSectieStoring>(
+                value: WhereToGoFromWWSectieStoring.ai_sectie,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Sectie'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

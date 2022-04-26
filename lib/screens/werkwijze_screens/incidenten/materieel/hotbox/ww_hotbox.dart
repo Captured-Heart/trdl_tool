@@ -1,5 +1,11 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWHotBox {
+  home_screen,
+  ai_hotbox,
+  ai_materieel,
+}
+
 class WWHotBox extends StatelessWidget {
   const WWHotBox({Key? key}) : super(key: key);
 
@@ -9,10 +15,67 @@ class WWHotBox extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Hotbox',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWHotBox>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWHotBox result) {
+              if (result == WhereToGoFromWWHotBox.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromWWHotBox.ai_hotbox) {
+                Navigator.pushNamed(context, 'ai_hotbox');
+              } else if (result == WhereToGoFromWWHotBox.ai_materieel) {
+                Navigator.pushNamed(context, 'ai_materieel');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWHotBox>>[
+              PopupMenuItem<WhereToGoFromWWHotBox>(
+                value: WhereToGoFromWWHotBox.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWHotBox>(
+                value: WhereToGoFromWWHotBox.ai_hotbox,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Hotbox & Quo Vadis'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWHotBox>(
+                value: WhereToGoFromWWHotBox.ai_materieel,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Materieel'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SafeArea(

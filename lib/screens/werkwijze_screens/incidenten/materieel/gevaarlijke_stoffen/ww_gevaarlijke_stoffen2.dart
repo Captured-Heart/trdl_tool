@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWGevaarlijkeStoffen2 {
+  home_screen,
+  ai_gevaarlijkestoffen,
+}
+
 class WWGevaarlijkeStoffen2 extends StatelessWidget {
   const WWGevaarlijkeStoffen2({Key? key}) : super(key: key);
 
@@ -9,10 +14,53 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Gevaarlijke stoffen',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWGevaarlijkeStoffen2>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWGevaarlijkeStoffen2 result) {
+              if (result == WhereToGoFromWWGevaarlijkeStoffen2.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWGevaarlijkeStoffen2.ai_gevaarlijkestoffen) {
+                Navigator.pushNamed(context, 'ai_gevaarlijkestoffen');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWGevaarlijkeStoffen2>>[
+              PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen2>(
+                value: WhereToGoFromWWGevaarlijkeStoffen2.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen2>(
+                value: WhereToGoFromWWGevaarlijkeStoffen2.ai_gevaarlijkestoffen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Gevaarlijke Stoffen'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SafeArea(

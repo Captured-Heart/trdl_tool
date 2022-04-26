@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWStoringBrug {
+  home_screen,
+  ai_storingbeweegbarebrug,
+}
+
 class WWStoringBrug extends StatelessWidget {
   const WWStoringBrug({Key? key}) : super(key: key);
 
@@ -9,10 +14,52 @@ class WWStoringBrug extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Storing brug',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWStoringBrug>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWStoringBrug result) {
+              if (result == WhereToGoFromWWStoringBrug.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWStoringBrug.ai_storingbeweegbarebrug) {
+                Navigator.pushNamed(context, 'ai_storingbeweegbarebrug');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWStoringBrug>>[
+              PopupMenuItem<WhereToGoFromWWStoringBrug>(
+                value: WhereToGoFromWWStoringBrug.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWStoringBrug>(
+                value: WhereToGoFromWWStoringBrug.ai_storingbeweegbarebrug,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Storing Beweegbare Brug'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(

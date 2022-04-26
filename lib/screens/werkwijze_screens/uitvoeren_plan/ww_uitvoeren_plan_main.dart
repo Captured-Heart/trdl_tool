@@ -57,6 +57,7 @@ class WWUitvoerenPlanMain extends StatelessWidget {
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

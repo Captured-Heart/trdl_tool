@@ -1,5 +1,13 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWBrand {
+  home_screen,
+  ai_brand,
+  ai_ruclu,
+  ai_schakelenbovenleiding,
+  ai_overigeincidenten,
+}
+
 class WWBrand extends StatelessWidget {
   const WWBrand({Key? key}) : super(key: key);
 
@@ -9,10 +17,98 @@ class WWBrand extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Brand',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWBrand>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWBrand result) {
+              if (result == WhereToGoFromWWBrand.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromWWBrand.ai_brand) {
+                Navigator.pushNamed(context, 'ai_brand');
+              } else if (result == WhereToGoFromWWBrand.ai_ruclu) {
+                Navigator.pushNamed(context, 'ai_ruclu');
+              } else if (result ==
+                  WhereToGoFromWWBrand.ai_schakelenbovenleiding) {
+                Navigator.pushNamed(context, 'ai_schakelenbovenleiding');
+              } else if (result == WhereToGoFromWWBrand.ai_overigeincidenten) {
+                Navigator.pushNamed(context, 'ai_overigeincidenten');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWBrand>>[
+              PopupMenuItem<WhereToGoFromWWBrand>(
+                value: WhereToGoFromWWBrand.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWBrand>(
+                value: WhereToGoFromWWBrand.ai_brand,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Brand'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWBrand>(
+                value: WhereToGoFromWWBrand.ai_ruclu,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('RU/CLU'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWBrand>(
+                value: WhereToGoFromWWBrand.ai_schakelenbovenleiding,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Schakelen Bovenleiding'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWBrand>(
+                value: WhereToGoFromWWBrand.ai_overigeincidenten,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Overige Incidenten'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SafeArea(

@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWMaterieelMain {
+  home_screen,
+  ai_materieel,
+}
+
 class WWMaterieelMain extends StatelessWidget {
   const WWMaterieelMain({Key? key}) : super(key: key);
 
@@ -9,10 +14,51 @@ class WWMaterieelMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Materieel',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWMaterieelMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWMaterieelMain result) {
+              if (result == WhereToGoFromWWMaterieelMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromWWMaterieelMain.ai_materieel) {
+                Navigator.pushNamed(context, 'ai_materieel');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWMaterieelMain>>[
+              PopupMenuItem<WhereToGoFromWWMaterieelMain>(
+                value: WhereToGoFromWWMaterieelMain.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWMaterieelMain>(
+                value: WhereToGoFromWWMaterieelMain.ai_materieel,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Materieel'),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SafeArea(
