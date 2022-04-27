@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWOngeplandWerkMaterieel {
+  home_screen,
+  ai_ongepland_werk_materieel,
+}
+
 class WWOngeplandWerkMaterieel extends StatelessWidget {
   const WWOngeplandWerkMaterieel({Key? key}) : super(key: key);
 
@@ -11,8 +16,53 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
         title: const AppBarText(
           title: 'Materieel (ongepland werk)',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWOngeplandWerkMaterieel>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWOngeplandWerkMaterieel result) {
+              if (result == WhereToGoFromWWOngeplandWerkMaterieel.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWOngeplandWerkMaterieel
+                      .ai_ongepland_werk_materieel) {
+                Navigator.pushNamed(context, 'ai_ongepland_werk_materieel');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWOngeplandWerkMaterieel>>[
+              PopupMenuItem<WhereToGoFromWWOngeplandWerkMaterieel>(
+                value: WhereToGoFromWWOngeplandWerkMaterieel.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWOngeplandWerkMaterieel>(
+                value: WhereToGoFromWWOngeplandWerkMaterieel
+                    .ai_ongepland_werk_materieel,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Ongepland Werk Materieel'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
@@ -82,31 +132,6 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
                 ),
               ),
             ),
-             /*ACHTERGROND CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Achtergrondinfo',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Ongepland werk materieel - Achtergrond',
-                            destination: 'ai_ongepland_werk_materieel',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                    ],
-                  ),
-                ),
-              ),
           ],
         ),
       ),

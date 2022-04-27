@@ -1,5 +1,11 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromWWOngeplandWerkInfra {
+  home_screen,
+  ai_ongepland_werk_infra,
+  ai_infra_ter_beschikking,
+}
+
 class WWOngeplandWerkInfra extends StatelessWidget {
   const WWOngeplandWerkInfra({Key? key}) : super(key: key);
 
@@ -9,10 +15,71 @@ class WWOngeplandWerkInfra extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Infra (ongepland werk)',
+          title: 'Werkwijze',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWOngeplandWerkInfra>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWOngeplandWerkInfra result) {
+              if (result == WhereToGoFromWWOngeplandWerkInfra.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWOngeplandWerkInfra.ai_ongepland_werk_infra) {
+                Navigator.pushNamed(context, 'ai_ongepland_werk_infra');
+              } else if (result ==
+                  WhereToGoFromWWOngeplandWerkInfra.ai_infra_ter_beschikking) {
+                Navigator.pushNamed(context, 'ai_infra_ter_beschikking');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWOngeplandWerkInfra>>[
+              PopupMenuItem<WhereToGoFromWWOngeplandWerkInfra>(
+                value: WhereToGoFromWWOngeplandWerkInfra.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWOngeplandWerkInfra>(
+                value:
+                    WhereToGoFromWWOngeplandWerkInfra.ai_ongepland_werk_infra,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Ongepland Werk Infra'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWOngeplandWerkInfra>(
+                value:
+                    WhereToGoFromWWOngeplandWerkInfra.ai_infra_ter_beschikking,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Infra ter Beschikking'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
@@ -60,7 +127,10 @@ class WWOngeplandWerkInfra extends StatelessWidget {
                       text:
                           '* Niveau van de werkplekbeveiliging;\n\n* Veiligheidsmaatregelen LWB;\n\n* Veiligheidsmaatregelen treindienstleider;\n\n* Exacte aanduiding werkplek.',
                     ),
-                    BodyText(indents: 1, text: '- Maak met de LWB een WECO op.',),
+                    BodyText(
+                      indents: 1,
+                      text: '- Maak met de LWB een WECO op.',
+                    ),
                   ],
                 ),
               ),
@@ -105,36 +175,6 @@ class WWOngeplandWerkInfra extends StatelessWidget {
                 ),
               ),
             ),
-            /*ACHTERGROND CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Achtergrondinfo',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Ongepland werk infra - Achtergrond',
-                            destination: 'ai_ongepland_werk_infra',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Infra ter beschikking stellen - Achtergrond',
-                            destination: 'ai_infra_ter_beschikking',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                    ],
-                  ),
-                ),
-              ),
           ],
         ),
       ),

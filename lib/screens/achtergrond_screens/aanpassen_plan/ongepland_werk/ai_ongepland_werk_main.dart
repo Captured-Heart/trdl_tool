@@ -9,7 +9,7 @@ class AIOngeplandWerkMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Ongepland werk',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),

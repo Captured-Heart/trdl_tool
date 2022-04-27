@@ -9,7 +9,7 @@ class AIVertragingen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Vertragingen',
+          title: 'Achtergrondinformatie',
         ),
         actions: const [
           HomeButton(),
