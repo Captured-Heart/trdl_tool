@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIIncidentenMain { home_screen, ai_inzetten_railvoertuig, }
+
 class AIIncidentenMain extends StatelessWidget {
   const AIIncidentenMain({Key? key}) : super(key: key);
 
@@ -11,8 +13,51 @@ class AIIncidentenMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIIncidentenMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIIncidentenMain result) {
+              if (result == WhereToGoFromAIIncidentenMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIIncidentenMain.ai_uitvoeren_plan_main) {
+                Navigator.pushNamed(context, 'ai_inzetten_railvoertuig');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIIncidentenMain>>[
+              PopupMenuItem<WhereToGoFromAIIncidentenMain>(
+                value: WhereToGoFromAIIncidentenMain.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIIncidentenMain>(
+                value: WhereToGoFromAIIncidentenMain.ai_inzetten_railvoertuig,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Inzetten railvoertuig ICB'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

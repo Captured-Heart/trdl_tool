@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWAanpassenPlanMain { home_screen }
+enum WhereToGoFromWWAanpassenPlanMain { home_screen, ai_aanpassen_plan, }
 
 class WWAanpassenPlanMain extends StatelessWidget {
   const WWAanpassenPlanMain({Key? key}) : super(key: key);
@@ -20,6 +20,8 @@ class WWAanpassenPlanMain extends StatelessWidget {
             onSelected: (WhereToGoFromWWAanpassenPlanMain result) {
               if (result == WhereToGoFromWWAanpassenPlanMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromWWAanpassenPlanMain.ai_aanpassen_plan) {
+                Navigator.pushNamed(context, 'ai_aanpassen_plan');
               } else {
                 Navigator.pop(context);
               }
@@ -27,7 +29,7 @@ class WWAanpassenPlanMain extends StatelessWidget {
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWAanpassenPlanMain>>[
               PopupMenuItem<WhereToGoFromWWAanpassenPlanMain>(
-                value: WhereToGoFromWWAanpassenPlanMain.home_screen,
+                value: WhereToGoFromWWAanpassenPlanMain.ai_aanpassen_plan,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -35,16 +37,16 @@ class WWAanpassenPlanMain extends StatelessWidget {
                       Icons.home,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Home'),
+                    const Text('Aanpassen Plan'),
                   ],
                 ),
               ),
+              const HomeButton(),
             ],
           ),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Column(
             children: [
               /*PROCEDURE CARD*/
@@ -115,7 +117,7 @@ class WWAanpassenPlanMain extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }

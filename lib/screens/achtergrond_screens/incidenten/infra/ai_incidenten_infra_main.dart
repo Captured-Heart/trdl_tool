@@ -1,7 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class AIIncidentenInfraMain extends StatelessWidget {
-  const AIIncidentenInfraMain({Key? key}) : super(key: key);
+//TODO: Continue adding pages and navigation here!
+
+class AIInfraMain extends StatelessWidget {
+  const AIInfraMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -60,37 +62,37 @@ class AIIncidentenInfraMain extends StatelessWidget {
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Wissels',
-                            destination: 'ai_incidenten_wissels_main',
+                            destination: 'ai_wissels_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Overwegen',
-                            destination: 'ai_incidenten_overwegen_main',
+                            destination: 'ai_overwegen_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Beveiliging',
-                            destination: 'ai_incidenten_beveiliging_main',
+                            destination: 'ai_beveiliging_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Bovenleiding',
-                            destination: 'ai_incidenten_bovenleiding_main',
+                            destination: 'ai_bovenleiding_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Spoor',
-                            destination: 'ai_incidenten_spoor_main',
+                            destination: 'ai_spoor_main',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Kunstwerken',
-                            destination: 'ai_incidenten_kunstwerken_main',
+                            destination: 'ai_kunstwerken',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Sectie',
-                            destination: 'ai_incidenten_sectie_main',
+                            destination: 'ai_sectie_main',
                           ),
                         ],
                       ),

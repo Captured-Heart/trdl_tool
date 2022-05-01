@@ -1,7 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class AIIncidenten extends StatelessWidget {
-  const AIIncidenten({Key? key}) : super(key: key);
+enum WhereToGoFromAIIncidentenBasis { home_screen, ai_communicatiemiddelen_basis, ai_communicatiesysteem_gsmr_basis, ai_systeemstoring_gsmr, }
+
+class AIIncidentenBasis extends StatelessWidget {
+  const AIIncidentenBasis({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,12 +13,86 @@ class AIIncidenten extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIIncidentenBasis>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIIncidentenBasis result) {
+              if (result == WhereToGoFromAIIncidentenBasis.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIIncidentenBasis.ai_communicatiemiddelen_basis) {
+                Navigator.pushNamed(context, 'ai_communicatiemiddelen_basis');
+              } else if (result ==
+                  WhereToGoFromAIIncidentenBasis.ai_communicatiesysteem_gsmr_basis) {
+                Navigator.pushNamed(context, 'ai_communicatiesysteem_gsmr_basis');
+              } else if (result ==
+                  WhereToGoFromAIIncidentenBasis.ai_systeemstoring_gsmr) {
+                Navigator.pushNamed(context, 'ai_systeemstoring_gsmr');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIIncidentenBasis>>[
+              PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
+                value: WhereToGoFromAIIncidentenBasis.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
+                value: WhereToGoFromAIIncidentenBasis.ai_communicatiemiddelen_basis,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Communicatiemiddelen Basis'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
+                value: WhereToGoFromAIIncidentenBasis.ai_communicatiesysteem_gsmr_basis,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Communicatiesysteem GSM-R'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
+                value: WhereToGoFromAIIncidentenBasis.ai_systeemstoring_gsmr,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Systeemstoring GSM-R'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Column(
             children: [
               /*CARD #1*/
@@ -1103,7 +1179,7 @@ class AIIncidenten extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }

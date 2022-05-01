@@ -169,22 +169,22 @@ class MainEntry extends StatelessWidget {
 
         /*ACHTERGRONDINFO INCIDENTEN ROUTES*/
         'ai_incidenten_main': (context) => const AIIncidentenMain(),
-        'ai_incidenten_basis': (context) => const AIIncidenten(),
+        'ai_incidenten_basis': (context) => const AIIncidentenBasis(),
         'ai_incidenten_derdendieren': (context) =>
-            const AIIncidentenDerdenDieren(),
-        'ai_incidenten_infra_main': (context) => const AIIncidentenInfraMain(),
-        'ai_incidenten_beveiliging_main': (context) =>
-            const AIIncidentenBeveiligingMain(),
+            const AIIDerdenDieren(),
+        'ai_infra_main': (context) => const AIInfraMain(),
+        'ai_beveiliging_main': (context) =>
+            const AIBeveiligingMain(),
         'ai_beveiliging_basis1': (context) => const AIBeveiligingBasis1(),
-        'ai_incidenten_bovenleiding_main': (context) =>
-            const AIIncidentenBovenleidingMain(),
-        'ai_incidenten_kunstwerken_main': (context) =>
-            const AIIncidentenKunstwerkenMain(),
-        'ai_incidenten_overwegen_main': (context) =>
-            const AIIncidentenOverwegenMain(),
-        'ai_incidenten_spoor_main': (context) => const AIIncidentenSpoorMain(),
-        'ai_incidenten_wissels_main': (context) =>
-            const AIIncidentenWisselsMain(),
+        'ai_bovenleiding_main': (context) =>
+            const AIBovenleidingMain(),
+        'ai_kunstwerken_main': (context) =>
+            const AIKunstwerkenMain(),
+        'ai_overwegen_main': (context) =>
+            const AIOverwegenMain(),
+        'ai_spoor_main': (context) => const AISpoorMain(),
+        'ai_wissels_main': (context) =>
+            const AIWisselsMain(),
 
         /*PROQUIZ ROUTES*/
         'proquiz_main': (context) => const ProQuiz(),
