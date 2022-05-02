@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-//TODO: Continue adding pages and navigation here!
+enum WhereToGoFromAIInfraMain { home_screen, ww_infrastructuur_main, }
 
 class AIInfraMain extends StatelessWidget {
   const AIInfraMain({Key? key}) : super(key: key);
@@ -13,12 +13,54 @@ class AIInfraMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromWWUitvoerenPlanMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromWWUitvoerenPlanMain result) {
+              if (result == WhereToGoFromWWUitvoerenPlanMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWUitvoerenPlanMain.ww_infrastructuur_main) {
+                Navigator.pushNamed(context, 'ww_infrastructuur_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromWWUitvoerenPlanMain>>[
+              PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
+                value: WhereToGoFromWWUitvoerenPlanMain.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
+                value: WhereToGoFromWWUitvoerenPlanMain.ww_infrastructuur_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('WW Infra'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Column(
             children: [
               /*PROCEDURE CARD*/
@@ -55,11 +97,6 @@ class AIInfraMain extends StatelessWidget {
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
-                          NavButton(
-                            buttontext: 'Werkwijze - Infra',
-                            destination: 'ww_infrastructuur_main',
-                          ),
-                          SizedBoxH(),
                           NavButton(
                             buttontext: 'Wissels',
                             destination: 'ai_wissels_main',
@@ -104,7 +141,7 @@ class AIInfraMain extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }
