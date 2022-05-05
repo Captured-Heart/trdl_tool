@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class AIIncidentenBovenleidingMain extends StatelessWidget {
-  const AIIncidentenBovenleidingMain({Key? key}) : super(key: key);
+class AIBovenleidingMain extends StatelessWidget {
+  const AIBovenleidingMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

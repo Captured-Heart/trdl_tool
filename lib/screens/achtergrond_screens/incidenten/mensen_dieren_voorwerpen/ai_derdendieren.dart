@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class AIIncidentenDerdenDieren extends StatelessWidget {
-  const AIIncidentenDerdenDieren({Key? key}) : super(key: key);
+class AIDerdenDieren extends StatelessWidget {
+  const AIDerdenDieren({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

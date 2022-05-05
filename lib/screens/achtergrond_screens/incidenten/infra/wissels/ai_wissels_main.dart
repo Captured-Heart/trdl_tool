@@ -5,8 +5,8 @@ enum WhereToGoFromAIIncidentenWisselsMain {
   ai_overige_infra_elementen,
 }
 
-class AIIncidentenWisselsMain extends StatelessWidget {
-  const AIIncidentenWisselsMain({Key? key}) : super(key: key);
+class AIWisselsMain extends StatelessWidget {
+  const AIWisselsMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

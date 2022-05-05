@@ -1,12 +1,12 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromAIIncidentenMain {
+enum WhereToGoFromAIInfraMain {
   home_screen,
-  ai_inzetten_railvoertuig,
+  ww_infrastructuur_main,
 }
 
-class AIIncidentenMain extends StatelessWidget {
-  const AIIncidentenMain({Key? key}) : super(key: key);
+class AIInfraMain extends StatelessWidget {
+  const AIInfraMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,23 +17,23 @@ class AIIncidentenMain extends StatelessWidget {
           title: 'Achtergrondinformatie',
         ),
         actions: [
-          PopupMenuButton<WhereToGoFromAIIncidentenMain>(
+          PopupMenuButton<WhereToGoFromAIInfraMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIIncidentenMain result) {
-              if (result == WhereToGoFromAIIncidentenMain.home_screen) {
+            onSelected: (WhereToGoFromAIInfraMain result) {
+              if (result == WhereToGoFromAIInfraMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromAIIncidentenMain.ai_inzetten_railvoertuig) {
-                Navigator.pushNamed(context, 'ai_inzetten_railvoertuig');
+                  WhereToGoFromAIInfraMain.ww_infrastructuur_main) {
+                Navigator.pushNamed(context, 'ww_infrastructuur_main');
               } else {
                 Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIIncidentenMain>>[
-              PopupMenuItem<WhereToGoFromAIIncidentenMain>(
-                value: WhereToGoFromAIIncidentenMain.home_screen,
+                <PopupMenuEntry<WhereToGoFromAIInfraMain>>[
+              PopupMenuItem<WhereToGoFromAIInfraMain>(
+                value: WhereToGoFromAIInfraMain.home_screen,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -45,8 +45,8 @@ class AIIncidentenMain extends StatelessWidget {
                   ],
                 ),
               ),
-              PopupMenuItem<WhereToGoFromAIIncidentenMain>(
-                value: WhereToGoFromAIIncidentenMain.ai_inzetten_railvoertuig,
+              PopupMenuItem<WhereToGoFromAIInfraMain>(
+                value: WhereToGoFromAIInfraMain.ww_infrastructuur_main,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -54,7 +54,7 @@ class AIIncidentenMain extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Inzetten railvoertuig ICB'),
+                    const Text('WW Infra'),
                   ],
                 ),
               ),
@@ -74,12 +74,12 @@ class AIIncidentenMain extends StatelessWidget {
                 child: Column(
                   children: const [
                     TitleText(
-                      title: 'Incidenten',
+                      title: 'Infra',
                     ),
                     SizedBoxH(),
                     InsertImage(
                       image:
-                          'assets/images/achtergrond_info/aanpassen_plan/incidenten/incidenten_main.png',
+                          'assets/images/achtergrond_info/incidenten/infra_incidenten_main.jpg',
                     ),
                     SizedBoxH(),
                   ],
@@ -101,33 +101,38 @@ class AIIncidentenMain extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         NavButton(
-                          buttontext: 'Incidenten - werkwijze',
-                          destination: 'ww_incidenten_main',
+                          buttontext: 'Wissels',
+                          destination: 'ai_wissels_main',
                         ),
                         SizedBoxH(),
                         NavButton(
-                          buttontext: 'Incidenten - basisinformatie',
-                          destination: 'ai_incidenten_basis',
+                          buttontext: 'Overwegen',
+                          destination: 'ai_overwegen_main',
                         ),
                         SizedBoxH(),
                         NavButton(
-                          buttontext: 'Infra',
-                          destination: 'ai_incidenten_infra_main',
+                          buttontext: 'Beveiliging',
+                          destination: 'ai_beveiliging_main',
                         ),
                         SizedBoxH(),
                         NavButton(
-                          buttontext: 'Materieel',
-                          destination: 'ai_incidenten_materieel_main',
+                          buttontext: 'Bovenleiding',
+                          destination: 'ai_bovenleiding_main',
                         ),
                         SizedBoxH(),
                         NavButton(
-                          buttontext: 'Mensen, dieren en voorwerpen',
-                          destination: 'ai_incidenten_mensendierenvoorwerpen',
+                          buttontext: 'Spoor',
+                          destination: 'ai_spoor_main',
                         ),
                         SizedBoxH(),
                         NavButton(
-                          buttontext: 'Overige incidenten',
-                          destination: 'ai_incidenten_overige_main',
+                          buttontext: 'Kunstwerken',
+                          destination: 'ai_kunstwerken',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Sectie',
+                          destination: 'ai_sectie_main',
                         ),
                       ],
                     ),

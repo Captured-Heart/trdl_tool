@@ -170,21 +170,15 @@ class MainEntry extends StatelessWidget {
         /*ACHTERGRONDINFO INCIDENTEN ROUTES*/
         'ai_incidenten_main': (context) => const AIIncidentenMain(),
         'ai_incidenten_basis': (context) => const AIIncidentenBasis(),
-        'ai_incidenten_derdendieren': (context) =>
-            const AIIDerdenDieren(),
+        'ai_incidenten_derdendieren': (context) => const AIDerdenDieren(),
         'ai_infra_main': (context) => const AIInfraMain(),
-        'ai_beveiliging_main': (context) =>
-            const AIBeveiligingMain(),
+        'ai_beveiliging_main': (context) => const AIBeveiligingMain(),
         'ai_beveiliging_basis1': (context) => const AIBeveiligingBasis1(),
-        'ai_bovenleiding_main': (context) =>
-            const AIBovenleidingMain(),
-        'ai_kunstwerken_main': (context) =>
-            const AIKunstwerkenMain(),
-        'ai_overwegen_main': (context) =>
-            const AIOverwegenMain(),
+        'ai_bovenleiding_main': (context) => const AIBovenleidingMain(),
+        'ai_kunstwerken_main': (context) => const AIKunstwerkenMain(),
+        'ai_overwegen_main': (context) => const AIOverwegenMain(),
         'ai_spoor_main': (context) => const AISpoorMain(),
-        'ai_wissels_main': (context) =>
-            const AIWisselsMain(),
+        'ai_wissels_main': (context) => const AIWisselsMain(),
 
         /*PROQUIZ ROUTES*/
         'proquiz_main': (context) => const ProQuiz(),

@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class AIIncidentenKunstwerkenMain extends StatelessWidget {
-  const AIIncidentenKunstwerkenMain({Key? key}) : super(key: key);
+class AIKunstwerkenMain extends StatelessWidget {
+  const AIKunstwerkenMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -212,7 +212,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertraginge
 /*ACHTERGROND INFORMATIE INCIDENTEN PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/ai_incidenten_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/incidenten_basis/ai_incidenten_basis.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/incidenten/mensen_dieren_voorwerpen/ai_incidenten_derdendieren.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/mensen_dieren_voorwerpen/ai_derdendieren.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/ai_infra_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/beveiliging/ai_beveiliging_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/beveiliging/beveiliging_basis/ai_beveiliging_basis1.dart';
