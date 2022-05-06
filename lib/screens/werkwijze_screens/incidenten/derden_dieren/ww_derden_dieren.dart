@@ -2,7 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWDerdenDieren {
   home_screen,
-  ai_derdendieren,
+  ai_derden_dieren,
 }
 
 class WWDerdenDieren extends StatelessWidget {
@@ -24,8 +24,8 @@ class WWDerdenDieren extends StatelessWidget {
               if (result == WhereToGoFromWWDerdenDieren.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromWWDerdenDieren.ai_derdendieren) {
-                Navigator.pushNamed(context, 'ai_derdendieren');
+                  WhereToGoFromWWDerdenDieren.ai_derden_dieren) {
+                Navigator.pushNamed(context, 'ai_derden_dieren');
               } else {
                 Navigator.pop(context);
               }
@@ -46,7 +46,7 @@ class WWDerdenDieren extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWDerdenDieren>(
-                value: WhereToGoFromWWDerdenDieren.ai_derdendieren,
+                value: WhereToGoFromWWDerdenDieren.ai_derden_dieren,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -54,12 +54,13 @@ class WWDerdenDieren extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Derden en/of Dieren'),
+                    const Text('AI Derden en/of Dieren'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

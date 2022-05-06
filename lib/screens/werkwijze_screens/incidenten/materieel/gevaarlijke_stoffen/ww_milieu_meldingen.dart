@@ -2,7 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWMilieuMeldingen {
   home_screen,
-  ai_gevaarlijkestoffen,
+  ai_gevaarlijke_stoffen,
 }
 
 class WWMilieuMeldingen extends StatelessWidget {
@@ -24,8 +24,8 @@ class WWMilieuMeldingen extends StatelessWidget {
               if (result == WhereToGoFromWWMilieuMeldingen.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromWWMilieuMeldingen.ai_gevaarlijkestoffen) {
-                Navigator.pushNamed(context, 'ai_gevaarlijkestoffen');
+                  WhereToGoFromWWMilieuMeldingen.ai_gevaarlijke_stoffen) {
+                Navigator.pushNamed(context, 'ai_gevaarlijke_stoffen');
               } else {
                 Navigator.pop(context);
               }
@@ -46,7 +46,7 @@ class WWMilieuMeldingen extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWMilieuMeldingen>(
-                value: WhereToGoFromWWMilieuMeldingen.ai_gevaarlijkestoffen,
+                value: WhereToGoFromWWMilieuMeldingen.ai_gevaarlijke_stoffen,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -54,7 +54,7 @@ class WWMilieuMeldingen extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Gevaarlijke Stoffen'),
+                    const Text('AI Gevaarlijke Stoffen'),
                   ],
                 ),
               ),
@@ -63,75 +63,73 @@ class WWMilieuMeldingen extends StatelessWidget {
           const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Meldingen met betrekking tot het milieu',
-                      ),
-                      SizedBoxH(),
-                      SubTitleText(
-                        subtitle: Strings.procedure,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Meldingen die je krijgt m.b.t. het milieu in of nabij de infra (zoals bodemvervuiling of geluidsoverlast) geef je door aan de MKS/BO.',
-                      ),
-                    ],
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /*PROCEDURE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Meldingen met betrekking tot het milieu',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle: Strings.procedure,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Meldingen die je krijgt m.b.t. het milieu in of nabij de infra (zoals bodemvervuiling of geluidsoverlast) geef je door aan de MKS/BO.',
+                    ),
+                  ],
                 ),
               ),
-              /*RISICO CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.risico,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Overtreden van de omgevingsvergunning.',
-                      ),
-                    ],
-                  ),
+            ),
+            /*RISICO CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.risico,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text: 'Overtreden van de omgevingsvergunning.',
+                    ),
+                  ],
                 ),
               ),
-              /*CONTEXT CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.context,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Alle activiteiten op emplacementen vallen onder omgevingsvergunningen. De MKS/BO meldt overtredingen van deze vergunningen aan de milieudienst.',
-                      ),
-                    ],
-                  ),
+            ),
+            /*CONTEXT CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.context,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Alle activiteiten op emplacementen vallen onder omgevingsvergunningen. De MKS/BO meldt overtredingen van deze vergunningen aan de milieudienst.',
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

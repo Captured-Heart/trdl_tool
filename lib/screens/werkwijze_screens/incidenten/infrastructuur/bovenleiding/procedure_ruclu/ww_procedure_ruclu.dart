@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWProcedureRuClu { home_screen, ai_incidenten_ruclu }
+enum WhereToGoFromWWProcedureRuClu {
+  home_screen,
+  ai_procedure_ruclu,
+}
 
 class WWProcedureRuClu extends StatelessWidget {
   const WWProcedureRuClu({Key? key}) : super(key: key);
@@ -21,8 +24,8 @@ class WWProcedureRuClu extends StatelessWidget {
               if (result == WhereToGoFromWWProcedureRuClu.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromWWProcedureRuClu.ai_incidenten_ruclu) {
-                Navigator.pushNamed(context, 'ai_incidenten_ruclu');
+                  WhereToGoFromWWProcedureRuClu.ai_procedure_ruclu) {
+                Navigator.pushNamed(context, 'ai_procedure_ruclu');
               } else {
                 Navigator.pop(context);
               }
@@ -43,7 +46,7 @@ class WWProcedureRuClu extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWProcedureRuClu>(
-                value: WhereToGoFromWWProcedureRuClu.ai_incidenten_ruclu,
+                value: WhereToGoFromWWProcedureRuClu.ai_procedure_ruclu,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -51,12 +54,13 @@ class WWProcedureRuClu extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('RU/CLU'),
+                    const Text('AI RU/CLU'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

@@ -3,7 +3,7 @@ import 'package:trdl_tool/all_imports.dart';
 enum WhereToGoFromWWWeersomstandigheden {
   home_screen,
   ai_weersomstandigheden,
-  ai_overigeincidenten,
+  ai_overige_incidenten,
 }
 
 class WWWeersomstandigheden extends StatelessWidget {
@@ -28,8 +28,8 @@ class WWWeersomstandigheden extends StatelessWidget {
                   WhereToGoFromWWWeersomstandigheden.ai_weersomstandigheden) {
                 Navigator.pushNamed(context, 'ai_weersomstandigheden');
               } else if (result ==
-                  WhereToGoFromWWWeersomstandigheden.ai_overigeincidenten) {
-                Navigator.pushNamed(context, 'ai_overigeincidenten');
+                  WhereToGoFromWWWeersomstandigheden.ai_overige_incidenten) {
+                Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -59,12 +59,12 @@ class WWWeersomstandigheden extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Weersomstandigheden'),
+                    const Text('AI Weersomstandigheden'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
-                value: WhereToGoFromWWWeersomstandigheden.ai_overigeincidenten,
+                value: WhereToGoFromWWWeersomstandigheden.ai_overige_incidenten,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -72,7 +72,7 @@ class WWWeersomstandigheden extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Overige Incidenten'),
+                    const Text('AI Overige Incidenten'),
                   ],
                 ),
               ),

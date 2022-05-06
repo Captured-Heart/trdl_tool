@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWVeiligheidsstoringSein { home_screen, ai_incidenten_veiligheidsstoringsein, }
+enum WhereToGoFromWWVeiligheidsstoringSein {
+  home_screen,
+  ai_veiligheidsstoring_sein,
+}
 
 class WWVeiligheidsstoringSein extends StatelessWidget {
   const WWVeiligheidsstoringSein({Key? key}) : super(key: key);
@@ -21,8 +24,9 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
               if (result == WhereToGoFromWWVeiligheidsstoringSein.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromWWVeiligheidsstoringSein.ai_incidenten_veiligheidsstoringsein) {
-                Navigator.pushNamed(context, 'ai_incidenten_veiligheidsstoringsein');
+                  WhereToGoFromWWVeiligheidsstoringSein
+                      .ai_veiligheidsstoring_sein) {
+                Navigator.pushNamed(context, 'ai_veiligheidsstoring_sein');
               } else {
                 Navigator.pop(context);
               }
@@ -43,7 +47,8 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWVeiligheidsstoringSein>(
-                value: WhereToGoFromWWVeiligheidsstoringSein.ai_incidenten_veiligheidsstoringsein,
+                value: WhereToGoFromWWVeiligheidsstoringSein
+                    .ai_veiligheidsstoring_sein,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -51,84 +56,83 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Veiligheidsstoring Sein'),
+                    const Text('AI Veiligheidsstoring Sein'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Veiligheidsstoring aan een sein',
-                      ),
-                      SizedBoxH(),
-                      SubTitleText(
-                        subtitle: Strings.procedure,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Bij een veiligheidsstoring voorkom je rijweginstelling naar het betrokken sein. Bij overige storingen licht je de MCN in voordat je een rijweg instelt naar het betrokken sein.',
-                      ),
-                    ],
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /*PROCEDURE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Veiligheidsstoring aan een sein',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle: Strings.procedure,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Bij een veiligheidsstoring voorkom je rijweginstelling naar het betrokken sein. Bij overige storingen licht je de MCN in voordat je een rijweg instelt naar het betrokken sein.',
+                    ),
+                  ],
                 ),
               ),
-              /*RISICO CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.risico,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
-                      ),
-                    ],
-                  ),
+            ),
+            /*RISICO CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.risico,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                    ),
+                  ],
                 ),
               ),
-              /*CONTEXT CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.context,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Wanneer een sein een beter seinbeeld toont dan op grond van de rijweginstelling mag worden verwacht, is er sprake van een veiligheidsstoring.',
-                      ),
-                    ],
-                  ),
+            ),
+            /*CONTEXT CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.context,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Wanneer een sein een beter seinbeeld toont dan op grond van de rijweginstelling mag worden verwacht, is er sprake van een veiligheidsstoring.',
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

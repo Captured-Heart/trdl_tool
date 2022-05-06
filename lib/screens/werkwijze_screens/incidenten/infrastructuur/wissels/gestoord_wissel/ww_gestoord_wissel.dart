@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWGestoordWissel { home_screen }
+enum WhereToGoFromWWGestoordWissel {
+  home_screen,
+  ai_gestoord_wissel,
+}
 
 class WWGestoordWissel extends StatelessWidget {
   const WWGestoordWissel({Key? key}) : super(key: key);
@@ -14,20 +17,23 @@ class WWGestoordWissel extends StatelessWidget {
           title: 'Werkwijze',
         ),
         actions: [
-          PopupMenuButton<WhereToGoFromWWUitvoerenPlanMain>(
+          PopupMenuButton<WhereToGoFromWWGestoordWissel>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWUitvoerenPlanMain result) {
-              if (result == WhereToGoFromWWUitvoerenPlanMain.home_screen) {
+            onSelected: (WhereToGoFromWWGestoordWissel result) {
+              if (result == WhereToGoFromWWGestoordWissel.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWGestoordWissel.ai_gestoord_wissel) {
+                Navigator.pushNamed(context, 'ai_gestoord_wissel');
               } else {
                 Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromWWUitvoerenPlanMain>>[
-              PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
-                value: WhereToGoFromWWUitvoerenPlanMain.home_screen,
+                <PopupMenuEntry<WhereToGoFromWWGestoordWissel>>[
+              PopupMenuItem<WhereToGoFromWWGestoordWissel>(
+                value: WhereToGoFromWWGestoordWissel.home_screen,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -39,8 +45,22 @@ class WWGestoordWissel extends StatelessWidget {
                   ],
                 ),
               ),
+              PopupMenuItem<WhereToGoFromWWGestoordWissel>(
+                value: WhereToGoFromWWGestoordWissel.ai_gestoord_wissel,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Gestoord Wissel'),
+                  ],
+                ),
+              ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

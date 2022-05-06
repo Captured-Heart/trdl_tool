@@ -51,7 +51,7 @@ class WWUitvoerenPlanMain extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Uitvoeren Plan'),
+                    const Text('AI Uitvoeren Plan'),
                   ],
                 ),
               ),

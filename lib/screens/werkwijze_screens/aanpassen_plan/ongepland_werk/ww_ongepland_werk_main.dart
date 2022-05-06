@@ -54,7 +54,7 @@ class WWOngeplandWerkMain extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Ongepland Werk'),
+                    const Text('AI Ongepland Werk'),
                   ],
                 ),
               ),

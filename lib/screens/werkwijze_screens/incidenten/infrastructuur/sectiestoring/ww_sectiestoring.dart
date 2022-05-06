@@ -2,7 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWSectieStoring {
   home_screen,
-  ai_incidenten_infra_main,
+  ai_infra_main,
   ai_sectie,
 }
 
@@ -24,9 +24,8 @@ class WWSectieStoring extends StatelessWidget {
             onSelected: (WhereToGoFromWWSectieStoring result) {
               if (result == WhereToGoFromWWSectieStoring.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromWWSectieStoring.ai_incidenten_infra_main) {
-                Navigator.pushNamed(context, 'ai_incidenten_infra_main');
+              } else if (result == WhereToGoFromWWSectieStoring.ai_infra_main) {
+                Navigator.pushNamed(context, 'ai_infra_main');
               } else if (result == WhereToGoFromWWSectieStoring.ai_sectie) {
                 Navigator.pushNamed(context, 'ai_sectie');
               } else {
@@ -49,7 +48,7 @@ class WWSectieStoring extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWSectieStoring>(
-                value: WhereToGoFromWWSectieStoring.ai_incidenten_infra_main,
+                value: WhereToGoFromWWSectieStoring.ai_infra_main,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -57,7 +56,7 @@ class WWSectieStoring extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Infra'),
+                    const Text('AI Infra'),
                   ],
                 ),
               ),
@@ -70,84 +69,83 @@ class WWSectieStoring extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Sectie'),
+                    const Text('AI Sectie'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Sectiestoring',
-                      ),
-                      SizedBoxH(),
-                      SubTitleText(
-                        subtitle: Strings.procedure,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Geef de MCN opdracht om het betrokken spoor te schouwen.\n\nAls er na het schouwen geen zichtbare gebreken aan het spoor zijn geconstateerd, ga je uit van een sectiestoring.',
-                      ),
-                    ],
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /*PROCEDURE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Sectiestoring',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle: Strings.procedure,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Geef de MCN opdracht om het betrokken spoor te schouwen.\n\nAls er na het schouwen geen zichtbare gebreken aan het spoor zijn geconstateerd, ga je uit van een sectiestoring.',
+                    ),
+                  ],
                 ),
               ),
-              /*RISICO CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.risico,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
-                      ),
-                    ],
-                  ),
+            ),
+            /*RISICO CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.risico,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                    ),
+                  ],
                 ),
               ),
-              /*CONTEXT CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.context,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Bij een onverwachte spoorbezetting is de spoorstroomloop om onbekende reden onderbroken. De beveiliging geeft hiervan een signalering in de vorm van een spoorbezetting. Omdat niet precies duidelijk is wat er aan de hand is, moet ter plaatse bekeken worden of het spoor nog veilig te berijden is.',
-                      ),
-                    ],
-                  ),
+            ),
+            /*CONTEXT CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.context,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Bij een onverwachte spoorbezetting is de spoorstroomloop om onbekende reden onderbroken. De beveiliging geeft hiervan een signalering in de vorm van een spoorbezetting. Omdat niet precies duidelijk is wat er aan de hand is, moet ter plaatse bekeken worden of het spoor nog veilig te berijden is.',
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

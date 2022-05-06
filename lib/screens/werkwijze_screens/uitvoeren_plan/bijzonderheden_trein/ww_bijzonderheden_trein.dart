@@ -44,19 +44,23 @@ class WWBijzonderhedenTrein extends StatelessWidget {
               ),
               PopupMenuItem<WhereToGoFromWWBijzonderhedenTrein>(
                 value: WhereToGoFromWWBijzonderhedenTrein.ai_vervoersregeling,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Treinen met Vervoersregeling'),
-                  ],
+                child: FittedBox(
+                  fit: BoxFit.fitWidth,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(
+                        Icons.menu_book,
+                        color: flexSchemeLight.primary,
+                      ),
+                      const Text('AI Treinen met Vervoersregeling'),
+                    ],
+                  ),
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

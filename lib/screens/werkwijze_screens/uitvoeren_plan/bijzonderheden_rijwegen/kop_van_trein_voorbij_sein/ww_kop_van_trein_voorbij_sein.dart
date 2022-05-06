@@ -41,6 +41,7 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

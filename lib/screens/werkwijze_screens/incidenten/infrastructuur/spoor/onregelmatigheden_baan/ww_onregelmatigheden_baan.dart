@@ -2,7 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWOnregelmatighedenBaan {
   home_screen,
-  ai_onregelmatighedenbaan,
+  ai_onregelmatigheden_baan,
 }
 
 class WWOnregelmatighedenBaan extends StatelessWidget {
@@ -25,8 +25,8 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWOnregelmatighedenBaan
-                      .ai_onregelmatighedenbaan) {
-                Navigator.pushNamed(context, 'ai_onregelmatighedenbaan');
+                      .ai_onregelmatigheden_baan) {
+                Navigator.pushNamed(context, 'ai_onregelmatigheden_baan');
               } else {
                 Navigator.pop(context);
               }
@@ -48,7 +48,7 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
               ),
               PopupMenuItem<WhereToGoFromWWOnregelmatighedenBaan>(
                 value: WhereToGoFromWWOnregelmatighedenBaan
-                    .ai_onregelmatighedenbaan,
+                    .ai_onregelmatigheden_baan,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -56,12 +56,13 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Onregelmatigheden Baan'),
+                    const Text('AI Onregelmatigheden Baan'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

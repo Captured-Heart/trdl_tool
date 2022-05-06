@@ -2,8 +2,8 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWKunstwerkenMain {
   home_screen,
-  ai_kunstwerken,
-  ai_incidenten_infra_main
+  ai_kunstwerken_main,
+  ai_infra_main,
 }
 
 class WWKunstwerkenMain extends StatelessWidget {
@@ -25,11 +25,11 @@ class WWKunstwerkenMain extends StatelessWidget {
               if (result == WhereToGoFromWWKunstwerkenMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromWWKunstwerkenMain.ai_kunstwerken) {
-                Navigator.pushNamed(context, 'ai_kunstwerken');
+                  WhereToGoFromWWKunstwerkenMain.ai_kunstwerken_main) {
+                Navigator.pushNamed(context, 'ai_kunstwerken_main');
               } else if (result ==
-                  WhereToGoFromWWKunstwerkenMain.ai_incidenten_infra_main) {
-                Navigator.pushNamed(context, 'ai_incidenten_infra_main');
+                  WhereToGoFromWWKunstwerkenMain.ai_infra_main) {
+                Navigator.pushNamed(context, 'ai_infra_main');
               } else {
                 Navigator.pop(context);
               }
@@ -50,7 +50,7 @@ class WWKunstwerkenMain extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
-                value: WhereToGoFromWWKunstwerkenMain.ai_kunstwerken,
+                value: WhereToGoFromWWKunstwerkenMain.ai_kunstwerken_main,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -58,12 +58,12 @@ class WWKunstwerkenMain extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Kunstwerken'),
+                    const Text('AI Kunstwerken'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
-                value: WhereToGoFromWWKunstwerkenMain.ai_incidenten_infra_main,
+                value: WhereToGoFromWWKunstwerkenMain.ai_infra_main,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -71,64 +71,63 @@ class WWKunstwerkenMain extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Infra'),
+                    const Text('AI Infra'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Kunstwerken',
-                      ),
-                    ],
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /*PROCEDURE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Kunstwerken',
+                    ),
+                  ],
                 ),
               ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Aanrijding viaduct',
-                            destination: 'ww_aanrijding_viaduct',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Storing brug',
-                            destination: 'ww_storing_brug',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                    ],
-                  ),
+            ),
+            /*NAVIGATION CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: [
+                    const TitleText(
+                      title: 'Ga snel naar',
+                    ),
+                    const SizedBoxH(),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        NavButton(
+                          buttontext: 'Aanrijding viaduct',
+                          destination: 'ww_aanrijding_viaduct',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Storing brug',
+                          destination: 'ww_storing_brug',
+                        ),
+                      ],
+                    ),
+                    const SizedBoxH(),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -13,7 +13,15 @@ showVersionUpdatePopup(context) {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CurrentVersion(
-                  versionNumber: '0.2.2',
+                  versionNumber: '0.2.3',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-06-05: 0.2.3',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Werkwijze navigatie naar Achtergrondinfo is nu consistent (vice versa wordt nog aan gewerkt);\n- Zoekfunctie uitgebreid;\n- Routing aangepast naar nieuwe navigatiestijl.',
                 ),
                 SizedBoxH(),
                 DateChanged(
@@ -21,7 +29,7 @@ showVersionUpdatePopup(context) {
                 ),
                 ChangesMade(
                   changes:
-                      '- Navigatie aangepast, nog niet alle pagina\'s klaar;\nKleuren minder groen, rustiger UI',
+                      '- Navigatie aangepast, nog niet alle pagina\'s klaar;\n- Kleuren minder groen, rustiger UI',
                 ),
                 SizedBoxH(),
                 DateChanged(

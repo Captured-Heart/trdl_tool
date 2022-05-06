@@ -2,7 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWAanrijdingViaduct {
   home_screen,
-  ai_aanrijdingviaduct,
+  ai_aanrijding_viaduct,
 }
 
 class WWAanrijdingViaduct extends StatelessWidget {
@@ -24,8 +24,8 @@ class WWAanrijdingViaduct extends StatelessWidget {
               if (result == WhereToGoFromWWAanrijdingViaduct.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromWWAanrijdingViaduct.ai_aanrijdingviaduct) {
-                Navigator.pushNamed(context, 'ai_aanrijdingviaduct');
+                  WhereToGoFromWWAanrijdingViaduct.ai_aanrijding_viaduct) {
+                Navigator.pushNamed(context, 'ai_aanrijding_viaduct');
               } else {
                 Navigator.pop(context);
               }
@@ -46,7 +46,7 @@ class WWAanrijdingViaduct extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWAanrijdingViaduct>(
-                value: WhereToGoFromWWAanrijdingViaduct.ai_aanrijdingviaduct,
+                value: WhereToGoFromWWAanrijdingViaduct.ai_aanrijding_viaduct,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -54,89 +54,88 @@ class WWAanrijdingViaduct extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Aanrijding Viaduct'),
+                    const Text('AI Aanrijding Viaduct'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Aanrijding/aanvaring brug/viaduct',
-                      ),
-                      SizedBoxH(),
-                      SubTitleText(
-                        subtitle: Strings.procedure,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /*PROCEDURE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Aanrijding/aanvaring brug/viaduct',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle: Strings.procedure,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Na een melding van een aanrijding viaduct of aanvaring brug:',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 1,
+                      text:
+                          '- Staak je het verkeer over de betrokken railinfra;\n\n- De MKS/BO geeft aan of de betrokken railinfra bereden mag worden, inclusief de eventuele beperkingen.',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            /*RISICO CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.risico,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            /*CONTEXT CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.context,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
                         indents: 0,
                         text:
-                            'Na een melding van een aanrijding viaduct of aanvaring brug:',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Staak je het verkeer over de betrokken railinfra;\n\n- De MKS/BO geeft aan of de betrokken railinfra bereden mag worden, inclusief de eventuele beperkingen.',
-                      ),
-                    ],
-                  ),
+                            'Na een aanvaring of aanrijding van een brug of viaduct kan de TRDL er niet meer vanuit gaan dat deze infra nog veilig bereden kan worden.\n\nDe MKS/BO beschikt over informatie van iedere brug of viaduct en kan aangeven onder welke voorwaarden de infra wel of niet bereden mag worden. Een storingsmonteur kan de situatie ter plaatse beoordelen.'),
+                  ],
                 ),
               ),
-              /*RISICO CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.risico,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              /*CONTEXT CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.context,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                          indents: 0,
-                          text:
-                              'Na een aanvaring of aanrijding van een brug of viaduct kan de TRDL er niet meer vanuit gaan dat deze infra nog veilig bereden kan worden.\n\nDe MKS/BO beschikt over informatie van iedere brug of viaduct en kan aangeven onder welke voorwaarden de infra wel of niet bereden mag worden. Een storingsmonteur kan de situatie ter plaatse beoordelen.'),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

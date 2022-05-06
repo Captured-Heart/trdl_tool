@@ -25,7 +25,7 @@ class WWAanpassenPlanMain extends StatelessWidget {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWAanpassenPlanMain.ai_aanpassen_plan) {
-                Navigator.pushNamed(context, 'ai_aanpassen_plan');
+                Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
               } else {
                 Navigator.pop(context);
               }
@@ -33,7 +33,7 @@ class WWAanpassenPlanMain extends StatelessWidget {
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWAanpassenPlanMain>>[
               PopupMenuItem<WhereToGoFromWWAanpassenPlanMain>(
-                value: WhereToGoFromWWAanpassenPlanMain.ai_aanpassen_plan,
+                value: WhereToGoFromWWAanpassenPlanMain.home_screen,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -41,7 +41,20 @@ class WWAanpassenPlanMain extends StatelessWidget {
                       Icons.home,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Aanpassen Plan'),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromWWAanpassenPlanMain>(
+                value: WhereToGoFromWWAanpassenPlanMain.ai_aanpassen_plan,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Aanpassen Plan'),
                   ],
                 ),
               ),

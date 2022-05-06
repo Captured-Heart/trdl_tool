@@ -2,8 +2,8 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWStilleggenTreindienst {
   home_screen,
-  ai_stilleggentreindienst,
-  ai_overigeincidenten,
+  ai_stilleggen_treindienst,
+  ai_overige_incidenten,
 }
 
 class WWStilleggenTreindienst extends StatelessWidget {
@@ -26,11 +26,11 @@ class WWStilleggenTreindienst extends StatelessWidget {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWStilleggenTreindienst
-                      .ai_stilleggentreindienst) {
-                Navigator.pushNamed(context, 'ai_stilleggentreindienst');
+                      .ai_stilleggen_treindienst) {
+                Navigator.pushNamed(context, 'ai_stilleggen_treindienst');
               } else if (result ==
-                  WhereToGoFromWWStilleggenTreindienst.ai_overigeincidenten) {
-                Navigator.pushNamed(context, 'ai_overigeincidenten');
+                  WhereToGoFromWWStilleggenTreindienst.ai_overige_incidenten) {
+                Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -52,7 +52,7 @@ class WWStilleggenTreindienst extends StatelessWidget {
               ),
               PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
                 value: WhereToGoFromWWStilleggenTreindienst
-                    .ai_stilleggentreindienst,
+                    .ai_stilleggen_treindienst,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -60,13 +60,13 @@ class WWStilleggenTreindienst extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Stilleggen Treindienst'),
+                    const Text('AI Stilleggen Treindienst'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
                 value:
-                    WhereToGoFromWWStilleggenTreindienst.ai_overigeincidenten,
+                    WhereToGoFromWWStilleggenTreindienst.ai_overige_incidenten,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -74,7 +74,7 @@ class WWStilleggenTreindienst extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Overige Incidenten'),
+                    const Text('AI Overige Incidenten'),
                   ],
                 ),
               ),

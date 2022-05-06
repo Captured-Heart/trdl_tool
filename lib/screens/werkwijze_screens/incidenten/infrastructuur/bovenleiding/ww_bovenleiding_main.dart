@@ -2,9 +2,9 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWBovenleidingMain {
   home_screen,
-  ai_incidenten_basis,
-  ai_incidenten_infra_main,
-  ai_incidenten_bovenleiding_main,
+  ai_incidenten_main,
+  ai_infra_main,
+  ai_bovenleiding_main,
 }
 
 class WWBovenleidingMain extends StatelessWidget {
@@ -26,15 +26,14 @@ class WWBovenleidingMain extends StatelessWidget {
               if (result == WhereToGoFromWWBovenleidingMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromWWBovenleidingMain.ai_incidenten_basis) {
-                Navigator.pushNamed(context, 'ai_incidenten_basis');
+                  WhereToGoFromWWBovenleidingMain.ai_incidenten_main) {
+                Navigator.pushNamed(context, 'ai_incidenten_main');
               } else if (result ==
-                  WhereToGoFromWWBovenleidingMain.ai_incidenten_infra_main) {
-                Navigator.pushNamed(context, 'ai_incidenten_infra_main');
+                  WhereToGoFromWWBovenleidingMain.ai_infra_main) {
+                Navigator.pushNamed(context, 'ai_infra_main');
               } else if (result ==
-                  WhereToGoFromWWBovenleidingMain
-                      .ai_incidenten_bovenleiding_main) {
-                Navigator.pushNamed(context, 'ai_incidenten_bovenleiding_main');
+                  WhereToGoFromWWBovenleidingMain.ai_bovenleiding_main) {
+                Navigator.pushNamed(context, 'ai_bovenleiding_main');
               } else {
                 Navigator.pop(context);
               }
@@ -55,7 +54,7 @@ class WWBovenleidingMain extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
-                value: WhereToGoFromWWBovenleidingMain.ai_incidenten_basis,
+                value: WhereToGoFromWWBovenleidingMain.ai_incidenten_main,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -63,12 +62,12 @@ class WWBovenleidingMain extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Incidenten Basis'),
+                    const Text('AI Incidenten'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
-                value: WhereToGoFromWWBovenleidingMain.ai_incidenten_infra_main,
+                value: WhereToGoFromWWBovenleidingMain.ai_infra_main,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -76,13 +75,12 @@ class WWBovenleidingMain extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Infra'),
+                    const Text('AI Infra'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
-                value: WhereToGoFromWWBovenleidingMain
-                    .ai_incidenten_bovenleiding_main,
+                value: WhereToGoFromWWBovenleidingMain.ai_bovenleiding_main,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -90,69 +88,68 @@ class WWBovenleidingMain extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Bovenleiding'),
+                    const Text('AI Bovenleiding'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Bovenleiding',
-                      ),
-                    ],
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /*PROCEDURE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Bovenleiding',
+                    ),
+                  ],
                 ),
               ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Schouwen bovenleiding',
-                            destination: 'ww_schouwen_bovenleiding',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Schakelen bovenleiding',
-                            destination: 'ww_schakelen_bovenleiding',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Procedure RU/CLU',
-                            destination: 'ww_procedure_ruclu',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                    ],
-                  ),
+            ),
+            /*NAVIGATION CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: [
+                    const TitleText(
+                      title: 'Ga snel naar',
+                    ),
+                    const SizedBoxH(),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        NavButton(
+                          buttontext: 'Schouwen bovenleiding',
+                          destination: 'ww_schouwen_bovenleiding',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Schakelen bovenleiding',
+                          destination: 'ww_schakelen_bovenleiding',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Procedure RU/CLU',
+                          destination: 'ww_procedure_ruclu',
+                        ),
+                      ],
+                    ),
+                    const SizedBoxH(),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

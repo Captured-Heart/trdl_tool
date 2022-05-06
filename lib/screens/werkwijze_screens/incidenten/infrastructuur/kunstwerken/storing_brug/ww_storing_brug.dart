@@ -2,7 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWStoringBrug {
   home_screen,
-  ai_storingbeweegbarebrug,
+  ai_storing_brug,
 }
 
 class WWStoringBrug extends StatelessWidget {
@@ -23,9 +23,8 @@ class WWStoringBrug extends StatelessWidget {
             onSelected: (WhereToGoFromWWStoringBrug result) {
               if (result == WhereToGoFromWWStoringBrug.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromWWStoringBrug.ai_storingbeweegbarebrug) {
-                Navigator.pushNamed(context, 'ai_storingbeweegbarebrug');
+              } else if (result == WhereToGoFromWWStoringBrug.ai_storing_brug) {
+                Navigator.pushNamed(context, 'ai_storing_brug');
               } else {
                 Navigator.pop(context);
               }
@@ -46,7 +45,7 @@ class WWStoringBrug extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWStoringBrug>(
-                value: WhereToGoFromWWStoringBrug.ai_storingbeweegbarebrug,
+                value: WhereToGoFromWWStoringBrug.ai_storing_brug,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -54,84 +53,83 @@ class WWStoringBrug extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Storing Beweegbare Brug'),
+                    const Text('AI Storing Beweegbare Brug'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Storing beweegbare brug',
-                      ),
-                      SizedBoxH(),
-                      SubTitleText(
-                        subtitle: Strings.procedure,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Je mag een gestoorde beweegbare brug alleen laten berijden na toestemming van de storingsdienst.',
-                      ),
-                    ],
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /*PROCEDURE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Storing beweegbare brug',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle: Strings.procedure,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Je mag een gestoorde beweegbare brug alleen laten berijden na toestemming van de storingsdienst.',
+                    ),
+                  ],
                 ),
               ),
-              /*RISICO CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.risico,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
-                      ),
-                    ],
-                  ),
+            ),
+            /*RISICO CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.risico,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                    ),
+                  ],
                 ),
               ),
-              /*CONTEXT CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.context,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Wanneer een beweegbare brug door een storing niet in de vergrendeling ligt, is het beweegbare gedeelte van de brug niet veilig berijdbaar. Een storingsmonteur kan ter plaatse beoordelen of en onder welke voorwaarden de brug bereden kan worden.',
-                      ),
-                    ],
-                  ),
+            ),
+            /*CONTEXT CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.context,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Wanneer een beweegbare brug door een storing niet in de vergrendeling ligt, is het beweegbare gedeelte van de brug niet veilig berijdbaar. Een storingsmonteur kan ter plaatse beoordelen of en onder welke voorwaarden de brug bereden kan worden.',
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

@@ -2,9 +2,9 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWOverwegen {
   home_screen,
-  ai_incidenten_overwegen_main,
-  ai_incidenten_overwegen_storing,
-  ai_incidenten_basis,
+  ai_overwegen_main,
+  ai_overwegen_storing,
+  ai_incidenten_main,
 }
 
 class WWOverwegen extends StatelessWidget {
@@ -25,16 +25,15 @@ class WWOverwegen extends StatelessWidget {
             onSelected: (WhereToGoFromWWOverwegen result) {
               if (result == WhereToGoFromWWOverwegen.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromWWOverwegen.ai_overwegen_main) {
+                Navigator.pushNamed(context, 'ai_overwegen_main');
               } else if (result ==
-                  WhereToGoFromWWOverwegen.ai_incidenten_overwegen_main) {
-                Navigator.pushNamed(context, 'ai_incidenten_overwegen_main');
+                  WhereToGoFromWWOverwegen.ai_overwegen_storing) {
+                Navigator.pushNamed(context, 'ai_overwegen_storing');
               } else if (result ==
-                  WhereToGoFromWWOverwegen.ai_incidenten_overwegen_storing) {
-                Navigator.pushNamed(context, 'ai_incidenten_overwegen_storing');
-              } else if (result ==
-                  WhereToGoFromWWOverwegen.ai_incidenten_basis) {
+                  WhereToGoFromWWOverwegen.ai_incidenten_main) {
                 //TODO: Pagina aanmaken!
-                Navigator.pushNamed(context, 'ai_incidenten_basis');
+                Navigator.pushNamed(context, 'ai_incidenten_main');
               } else {
                 Navigator.pop(context);
               }
@@ -55,7 +54,7 @@ class WWOverwegen extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWOverwegen>(
-                value: WhereToGoFromWWOverwegen.ai_incidenten_overwegen_main,
+                value: WhereToGoFromWWOverwegen.ai_overwegen_main,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -63,12 +62,12 @@ class WWOverwegen extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Overwegen'),
+                    const Text('AI Overwegen'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWOverwegen>(
-                value: WhereToGoFromWWOverwegen.ai_incidenten_overwegen_storing,
+                value: WhereToGoFromWWOverwegen.ai_overwegen_storing,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -76,12 +75,12 @@ class WWOverwegen extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Overwegstoring'),
+                    const Text('AI Overwegstoring'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWOverwegen>(
-                value: WhereToGoFromWWOverwegen.ai_incidenten_basis,
+                value: WhereToGoFromWWOverwegen.ai_incidenten_main,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -89,12 +88,13 @@ class WWOverwegen extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Incidenten Basis'),
+                    const Text('AI Incidenten'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

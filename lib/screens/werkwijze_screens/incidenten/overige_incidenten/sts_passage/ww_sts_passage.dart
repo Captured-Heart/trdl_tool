@@ -2,8 +2,8 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWStsPassage {
   home_screen,
-  ai_stspassage,
-  ai_overigeincidenten,
+  ai_sts_passage,
+  ai_overige_incidenten,
 }
 
 class WWStsPassage extends StatelessWidget {
@@ -24,11 +24,11 @@ class WWStsPassage extends StatelessWidget {
             onSelected: (WhereToGoFromWWStsPassage result) {
               if (result == WhereToGoFromWWStsPassage.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
-              } else if (result == WhereToGoFromWWStsPassage.ai_stspassage) {
-                Navigator.pushNamed(context, 'ai_stspassage');
+              } else if (result == WhereToGoFromWWStsPassage.ai_sts_passage) {
+                Navigator.pushNamed(context, 'ai_sts_passage');
               } else if (result ==
-                  WhereToGoFromWWStsPassage.ai_overigeincidenten) {
-                Navigator.pushNamed(context, 'ai_incidenten');
+                  WhereToGoFromWWStsPassage.ai_overige_incidenten) {
+                Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -49,7 +49,7 @@ class WWStsPassage extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWStsPassage>(
-                value: WhereToGoFromWWStsPassage.ai_stspassage,
+                value: WhereToGoFromWWStsPassage.ai_sts_passage,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -57,12 +57,12 @@ class WWStsPassage extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('STS Passage'),
+                    const Text('AI STS Passage'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWStsPassage>(
-                value: WhereToGoFromWWStsPassage.ai_overigeincidenten,
+                value: WhereToGoFromWWStsPassage.ai_overige_incidenten,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -70,7 +70,7 @@ class WWStsPassage extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Overige Incidenten'),
+                    const Text('AI Overige Incidenten'),
                   ],
                 ),
               ),

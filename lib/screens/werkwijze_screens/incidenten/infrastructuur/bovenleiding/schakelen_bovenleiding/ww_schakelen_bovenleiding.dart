@@ -2,7 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWSchakelenBovenleiding {
   home_screen,
-  ai_incidenten_schakelenbovenleiding
+  ai_schakelen_bovenleiding,
 }
 
 class WWSchakelenBovenleiding extends StatelessWidget {
@@ -25,9 +25,8 @@ class WWSchakelenBovenleiding extends StatelessWidget {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWSchakelenBovenleiding
-                      .ai_incidenten_schakelenbovenleiding) {
-                Navigator.pushNamed(
-                    context, 'ai_incidenten_schakelenbovenleiding');
+                      .ai_schakelen_bovenleiding) {
+                Navigator.pushNamed(context, 'ai_schakelen_bovenleiding');
               } else {
                 Navigator.pop(context);
               }
@@ -49,7 +48,7 @@ class WWSchakelenBovenleiding extends StatelessWidget {
               ),
               PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
                 value: WhereToGoFromWWSchakelenBovenleiding
-                    .ai_incidenten_schakelenbovenleiding,
+                    .ai_schakelen_bovenleiding,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -57,84 +56,83 @@ class WWSchakelenBovenleiding extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Schakelen Bovenleiding'),
+                    const Text('AI Schakelen Bovenleiding'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Schakelen bovenleiding',
-                      ),
-                      SizedBoxH(),
-                      SubTitleText(
-                        subtitle: Strings.procedure,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Het OBI meldt welke groepen geschakeld zijn/gaan worden. Je maakt een WECO op.',
-                      ),
-                    ],
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /*PROCEDURE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Schakelen bovenleiding',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle: Strings.procedure,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Het OBI meldt welke groepen geschakeld zijn/gaan worden. Je maakt een WECO op.',
+                    ),
+                  ],
                 ),
               ),
-              /*RISICO CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.risico,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
-                      ),
-                    ],
-                  ),
+            ),
+            /*RISICO CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.risico,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
+                    ),
+                  ],
                 ),
               ),
-              /*CONTEXT CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SubTitleText(
-                        subtitle: Strings.context,
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'De bedieningsdeskundige van het OBI is installatieverantwoordelijke voor de bovenleiding. Wanneer de bovenleiding ongepland geschakeld wordt heeft dit gevolgen voor het kunnen rijden met elektrische tractie. De treinen in het betrokken gebied moeten de stroomafnemers laten zakken, omdat er problemen kunnen ontstaan wanneer het OBI de groepen weer onder spanning brengt.',
-                      ),
-                    ],
-                  ),
+            ),
+            /*CONTEXT CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: Strings.context,
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'De bedieningsdeskundige van het OBI is installatieverantwoordelijke voor de bovenleiding. Wanneer de bovenleiding ongepland geschakeld wordt heeft dit gevolgen voor het kunnen rijden met elektrische tractie. De treinen in het betrokken gebied moeten de stroomafnemers laten zakken, omdat er problemen kunnen ontstaan wanneer het OBI de groepen weer onder spanning brengt.',
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

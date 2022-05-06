@@ -3,7 +3,7 @@ import 'package:trdl_tool/all_imports.dart';
 enum WhereToGoFromWWGevaarlijkeStoffen1 {
   home_screen,
   ai_ruclu,
-  ai_gevaarlijkestoffen,
+  ai_gevaarlijke_stoffen,
 }
 
 class WWGevaarlijkeStoffen1 extends StatelessWidget {
@@ -28,8 +28,8 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
                   WhereToGoFromWWGevaarlijkeStoffen1.ai_ruclu) {
                 Navigator.pushNamed(context, 'ai_ruclu');
               } else if (result ==
-                  WhereToGoFromWWGevaarlijkeStoffen1.ai_gevaarlijkestoffen) {
-                Navigator.pushNamed(context, 'ai_gevaarlijkestoffen');
+                  WhereToGoFromWWGevaarlijkeStoffen1.ai_gevaarlijke_stoffen) {
+                Navigator.pushNamed(context, 'ai_gevaarlijke_stoffen');
               } else {
                 Navigator.pop(context);
               }
@@ -58,12 +58,13 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('RU/CLU'),
+                    const Text('AI RU/CLU'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen1>(
-                value: WhereToGoFromWWGevaarlijkeStoffen1.ai_gevaarlijkestoffen,
+                value:
+                    WhereToGoFromWWGevaarlijkeStoffen1.ai_gevaarlijke_stoffen,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -71,7 +72,7 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Gevaarlijke Stoffen'),
+                    const Text('AI Gevaarlijke Stoffen'),
                   ],
                 ),
               ),
@@ -80,56 +81,54 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
           const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Gevaarlijke stoffen en milieu',
-                      ),
-                    ],
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /*PROCEDURE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Gevaarlijke stoffen en milieu',
+                    ),
+                  ],
                 ),
               ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Gevaarlijke stoffen',
-                            destination: 'ww_gevaarlijke_stoffen2',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Meldingen omtrent milieu',
-                            destination: 'ww_milieumeldingen',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                    ],
-                  ),
+            ),
+            /*NAVIGATION CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: [
+                    const TitleText(
+                      title: 'Ga snel naar',
+                    ),
+                    const SizedBoxH(),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        NavButton(
+                          buttontext: 'Gevaarlijke stoffen',
+                          destination: 'ww_gevaarlijke_stoffen2',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Meldingen omtrent milieu',
+                          destination: 'ww_milieumeldingen',
+                        ),
+                      ],
+                    ),
+                    const SizedBoxH(),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

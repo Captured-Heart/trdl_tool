@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWBeschadigdWissel { home_screen }
+enum WhereToGoFromWWBeschadigdWissel {
+  home_screen,
+  ai_beschadigd_wissel,
+}
 
 class WWBeschadigdWissel extends StatelessWidget {
   const WWBeschadigdWissel({Key? key}) : super(key: key);
@@ -20,6 +23,9 @@ class WWBeschadigdWissel extends StatelessWidget {
             onSelected: (WhereToGoFromWWBeschadigdWissel result) {
               if (result == WhereToGoFromWWBeschadigdWissel.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWBeschadigdWissel.ai_beschadigd_wissel) {
+                Navigator.pushNamed(context, 'ai_beschadigd_wissel');
               } else {
                 Navigator.pop(context);
               }
@@ -39,8 +45,22 @@ class WWBeschadigdWissel extends StatelessWidget {
                   ],
                 ),
               ),
+              PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
+                value: WhereToGoFromWWBeschadigdWissel.ai_beschadigd_wissel,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Beschadigd Wissel'),
+                  ],
+                ),
+              ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

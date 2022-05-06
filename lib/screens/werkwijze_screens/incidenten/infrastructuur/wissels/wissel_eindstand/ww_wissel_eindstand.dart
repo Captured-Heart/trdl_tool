@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWWisselEindstand { home_screen }
+enum WhereToGoFromWWWisselEindstand {
+  home_screen,
+  ai_wissel_eindstand,
+}
 
 class WWWisselEindstand extends StatelessWidget {
   const WWWisselEindstand({Key? key}) : super(key: key);
@@ -20,6 +23,9 @@ class WWWisselEindstand extends StatelessWidget {
             onSelected: (WhereToGoFromWWWisselEindstand result) {
               if (result == WhereToGoFromWWWisselEindstand.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWWisselEindstand.ai_wissel_eindstand) {
+                Navigator.pushNamed(context, 'ai_wissel_eindstand');
               } else {
                 Navigator.pop(context);
               }
@@ -39,8 +45,22 @@ class WWWisselEindstand extends StatelessWidget {
                   ],
                 ),
               ),
+              PopupMenuItem<WhereToGoFromWWWisselEindstand>(
+                value: WhereToGoFromWWWisselEindstand.ai_wissel_eindstand,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Wissel niet in eindstand'),
+                  ],
+                ),
+              ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

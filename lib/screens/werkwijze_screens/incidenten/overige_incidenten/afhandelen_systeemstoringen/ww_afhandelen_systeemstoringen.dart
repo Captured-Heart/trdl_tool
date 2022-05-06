@@ -5,7 +5,7 @@ enum WhereToGoFromWWAfhandelenSysteemstoringen {
   ai_systeemstoringen,
   ai_systemen,
   ai_systeemstoring_gsmr,
-  ai_overigeincidenten,
+  ai_overige_incidenten,
 }
 
 class WWAfhandelenSysteemstoringen extends StatelessWidget {
@@ -40,8 +40,8 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
                 Navigator.pushNamed(context, 'ai_systeemstoring_gsmr');
               } else if (result ==
                   WhereToGoFromWWAfhandelenSysteemstoringen
-                      .ai_overigeincidenten) {
-                Navigator.pushNamed(context, 'ai_overigeincidenten');
+                      .ai_overige_incidenten) {
+                Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -71,7 +71,7 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Systeemstoringen'),
+                    const Text('AI Systeemstoringen'),
                   ],
                 ),
               ),
@@ -84,7 +84,7 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Systemen'),
+                    const Text('AI Systemen'),
                   ],
                 ),
               ),
@@ -98,13 +98,13 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Systeemstoring GSM-R/INTel'),
+                    const Text('AI Systeemstoring GSM-R/INTel'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
                 value: WhereToGoFromWWAfhandelenSysteemstoringen
-                    .ai_overigeincidenten,
+                    .ai_overige_incidenten,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -112,7 +112,7 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Overige Incidenten'),
+                    const Text('AI Overige Incidenten'),
                   ],
                 ),
               ),

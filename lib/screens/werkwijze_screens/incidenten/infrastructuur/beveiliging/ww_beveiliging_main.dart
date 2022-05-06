@@ -1,6 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWBeveiligingMain { home_screen, ai_incidenten_infra_main, ai_incidenten_beveiliging_main, }
+enum WhereToGoFromWWBeveiligingMain {
+  home_screen,
+  ai_infra_main,
+  ai_beveiliging_main,
+}
 
 class WWBeveiligingMain extends StatelessWidget {
   const WWBeveiligingMain({Key? key}) : super(key: key);
@@ -20,10 +24,12 @@ class WWBeveiligingMain extends StatelessWidget {
             onSelected: (WhereToGoFromWWBeveiligingMain result) {
               if (result == WhereToGoFromWWBeveiligingMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
-              } else if (result == WhereToGoFromWWBeveiligingMain.ai_incidenten_infra_main) {
-                Navigator.pushNamed(context, 'ai_incidenten_infra_main');
-              } else if (result == WhereToGoFromWWBeveiligingMain.ai_incidenten_beveiliging_main) {
-                Navigator.pushNamed(context, 'ai_incidenten_beveiliging_main');
+              } else if (result ==
+                  WhereToGoFromWWBeveiligingMain.ai_infra_main) {
+                Navigator.pushNamed(context, 'ai_infra_main');
+              } else if (result ==
+                  WhereToGoFromWWBeveiligingMain.ai_beveiliging_main) {
+                Navigator.pushNamed(context, 'ai_beveiliging_main');
               } else {
                 Navigator.pop(context);
               }
@@ -44,7 +50,7 @@ class WWBeveiligingMain extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
-                value: WhereToGoFromWWBeveiligingMain.ai_incidenten_infra_main,
+                value: WhereToGoFromWWBeveiligingMain.ai_infra_main,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -52,12 +58,12 @@ class WWBeveiligingMain extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Infra'),
+                    const Text('AI Infra'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
-                value: WhereToGoFromWWBeveiligingMain.ai_incidenten_beveiliging_main,
+                value: WhereToGoFromWWBeveiligingMain.ai_beveiliging_main,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -65,69 +71,68 @@ class WWBeveiligingMain extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Beveiliging'),
+                    const Text('AI Beveiliging'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Beveiliging',
-                      ),
-                    ],
-                  ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            /*PROCEDURE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Beveiliging',
+                    ),
+                  ],
                 ),
               ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Tegen de rijrichting',
-                            destination: 'ww_tegen_rijrichting',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Veiligheidsstoring sein',
-                            destination: 'ww_veiligheidsstoring_sein',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Reset assenteller AzLM',
-                            destination: 'ww_reset_assenteller',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                    ],
-                  ),
+            ),
+            /*NAVIGATION CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: [
+                    const TitleText(
+                      title: 'Ga snel naar',
+                    ),
+                    const SizedBoxH(),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        NavButton(
+                          buttontext: 'Tegen de rijrichting',
+                          destination: 'ww_tegen_rijrichting',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Veiligheidsstoring sein',
+                          destination: 'ww_veiligheidsstoring_sein',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Reset assenteller AzLM',
+                          destination: 'ww_reset_assenteller',
+                        ),
+                      ],
+                    ),
+                    const SizedBoxH(),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

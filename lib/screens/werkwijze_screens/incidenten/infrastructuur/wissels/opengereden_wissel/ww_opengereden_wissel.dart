@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWOpengeredenWissel { home_screen }
+enum WhereToGoFromWWOpengeredenWissel {
+  home_screen,
+  ai_opengereden_wissel,
+}
 
 class WWOpengeredenWissel extends StatelessWidget {
   const WWOpengeredenWissel({Key? key}) : super(key: key);
@@ -20,6 +23,9 @@ class WWOpengeredenWissel extends StatelessWidget {
             onSelected: (WhereToGoFromWWOpengeredenWissel result) {
               if (result == WhereToGoFromWWOpengeredenWissel.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWOpengeredenWissel.ai_opengereden_wissel) {
+                Navigator.pushNamed(context, 'ai_opengereden_wissel');
               } else {
                 Navigator.pop(context);
               }
@@ -39,8 +45,22 @@ class WWOpengeredenWissel extends StatelessWidget {
                   ],
                 ),
               ),
+              PopupMenuItem<WhereToGoFromWWOpengeredenWissel>(
+                value: WhereToGoFromWWOpengeredenWissel.ai_opengereden_wissel,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Opengereden Wissel'),
+                  ],
+                ),
+              ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

@@ -2,7 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWGladSpoor {
   home_screen,
-  ai_gladspoor,
+  ai_glad_spoor,
 }
 
 class WWGladSpoor extends StatelessWidget {
@@ -23,8 +23,8 @@ class WWGladSpoor extends StatelessWidget {
             onSelected: (WhereToGoFromWWGladSpoor result) {
               if (result == WhereToGoFromWWGladSpoor.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
-              } else if (result == WhereToGoFromWWGladSpoor.ai_gladspoor) {
-                Navigator.pushNamed(context, 'ai_gladspoor');
+              } else if (result == WhereToGoFromWWGladSpoor.ai_glad_spoor) {
+                Navigator.pushNamed(context, 'ai_glad_spoor');
               } else {
                 Navigator.pop(context);
               }
@@ -45,7 +45,7 @@ class WWGladSpoor extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWGladSpoor>(
-                value: WhereToGoFromWWGladSpoor.ai_gladspoor,
+                value: WhereToGoFromWWGladSpoor.ai_glad_spoor,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -53,12 +53,13 @@ class WWGladSpoor extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Glad Spoor'),
+                    const Text('AI Glad Spoor'),
                   ],
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

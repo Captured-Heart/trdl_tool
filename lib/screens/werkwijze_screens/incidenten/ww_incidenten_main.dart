@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWIncidentenMain { home_screen }
+enum WhereToGoFromWWIncidentenMain {
+  home_screen,
+  ai_incidenten_main,
+}
 
 class WWIncidentenMain extends StatelessWidget {
   const WWIncidentenMain({Key? key}) : super(key: key);
@@ -20,6 +23,9 @@ class WWIncidentenMain extends StatelessWidget {
             onSelected: (WhereToGoFromWWIncidentenMain result) {
               if (result == WhereToGoFromWWIncidentenMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromWWIncidentenMain.ai_incidenten_main) {
+                Navigator.pushNamed(context, 'ai_incidenten_main');
               } else {
                 Navigator.pop(context);
               }
@@ -39,8 +45,22 @@ class WWIncidentenMain extends StatelessWidget {
                   ],
                 ),
               ),
+              PopupMenuItem<WhereToGoFromWWIncidentenMain>(
+                value: WhereToGoFromWWIncidentenMain.ai_incidenten_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Incidenten'),
+                  ],
+                ),
+              ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

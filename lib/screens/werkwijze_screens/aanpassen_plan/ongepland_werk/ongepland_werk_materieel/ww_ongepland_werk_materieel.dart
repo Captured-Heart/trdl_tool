@@ -14,7 +14,7 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Materieel (ongepland werk)',
+          title: 'Werkwijze',
         ),
         actions: [
           PopupMenuButton<WhereToGoFromWWOngeplandWerkMaterieel>(
@@ -56,7 +56,7 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Ongepland Werk Materieel'),
+                    const Text('AI Ongepland Werk Materieel'),
                   ],
                 ),
               ),

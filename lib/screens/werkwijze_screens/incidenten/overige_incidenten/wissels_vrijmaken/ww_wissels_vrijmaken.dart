@@ -54,7 +54,7 @@ class WWWisselsVrijmaken extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Stroomstoring'),
+                    const Text('AI Stroomstoring'),
                   ],
                 ),
               ),

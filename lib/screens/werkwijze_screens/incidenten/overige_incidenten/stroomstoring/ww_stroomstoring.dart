@@ -3,7 +3,7 @@ import 'package:trdl_tool/all_imports.dart';
 enum WhereToGoFromWWStroomstoring {
   home_screen,
   ai_stroomstoring,
-  ai_overigeincidenten,
+  ai_overige_incidenten,
 }
 
 class WWStroomstoring extends StatelessWidget {
@@ -28,8 +28,8 @@ class WWStroomstoring extends StatelessWidget {
                   WhereToGoFromWWStroomstoring.ai_stroomstoring) {
                 Navigator.pushNamed(context, 'ai_stroomstoring');
               } else if (result ==
-                  WhereToGoFromWWStroomstoring.ai_overigeincidenten) {
-                Navigator.pushNamed(context, 'ai_overigeincidenten');
+                  WhereToGoFromWWStroomstoring.ai_overige_incidenten) {
+                Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -58,12 +58,12 @@ class WWStroomstoring extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Stroomstoring'),
+                    const Text('AI Stroomstoring'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromWWStroomstoring>(
-                value: WhereToGoFromWWStroomstoring.ai_overigeincidenten,
+                value: WhereToGoFromWWStroomstoring.ai_overige_incidenten,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -71,7 +71,7 @@ class WWStroomstoring extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('Overige Incidenten'),
+                    const Text('AI Overige Incidenten'),
                   ],
                 ),
               ),
