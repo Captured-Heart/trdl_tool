@@ -93,13 +93,11 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                         ),
                         SizedBoxH(),
                         NavButton(
-                          //TODO: Add page!
                           buttontext: 'Rijwegen TROTS en ABT',
                           destination: 'ai_bijzonderheden_rijwegen_main',
                         ),
                         SizedBoxH(),
                         NavButton(
-                          //TODO: Add page!
                           buttontext: 'Rijwegen bedienscherm - basis',
                           destination: 'ai_bijzonderheden_rijwegen_main',
                         ),
@@ -209,7 +207,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Als TRDL werk je via het planscherm in procesleiding met het aangeleverde dagplan. Dit wordt vertaald als honderden planregels, waarin alle informatie is opgenomen die nodig is om de dienstregeling uit te voeren.\n\nHoe een planregel is opgebouwd, vind je hier: planregelopbouw (link volgt).', //TODO: Link maken!
+                          'Als TRDL werk je via het planscherm in procesleiding met het aangeleverde dagplan. Dit wordt vertaald als honderden planregels, waarin alle informatie is opgenomen die nodig is om de dienstregeling uit te voeren.\n\nHoe een planregel is opgebouwd, vind je hier: planregelopbouw (link volgt).',
                     ),
                   ],
                 ),

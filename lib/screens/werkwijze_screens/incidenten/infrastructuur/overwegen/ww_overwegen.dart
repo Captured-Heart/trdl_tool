@@ -32,7 +32,6 @@ class WWOverwegen extends StatelessWidget {
                 Navigator.pushNamed(context, 'ai_overwegen_storing');
               } else if (result ==
                   WhereToGoFromWWOverwegen.ai_incidenten_main) {
-                //TODO: Pagina aanmaken!
                 Navigator.pushNamed(context, 'ai_incidenten_main');
               } else {
                 Navigator.pop(context);

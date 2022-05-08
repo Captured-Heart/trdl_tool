@@ -135,12 +135,10 @@ class AISeinenBasis extends StatelessWidget {
                           buttontext: 'Beveiliging',
                           destination: 'ai_incidenten_beveiliging_main',
                         ),
-                        //TODO: Toevoegen!
                         NavButton(
                           buttontext: 'Beveiliging - Basis 1',
                           destination: 'ai_incidenten_beveiliging_basis1',
                         ),
-                        //TODO: Toevoegen!
                         NavButton(
                           buttontext: 'Beveiliging - Basis 2',
                           destination: 'ai_incidenten_beveiliging_basis2',

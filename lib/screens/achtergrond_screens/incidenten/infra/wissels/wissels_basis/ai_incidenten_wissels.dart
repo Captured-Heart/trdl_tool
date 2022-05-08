@@ -44,7 +44,6 @@ class AIIncidentenWissels extends StatelessWidget {
                   ),
                 ),
               ),
-              //TODO: Hier verder!!!
               /*NAVIGATION CARD*/
               Card(
                 elevation: kCardElevation,

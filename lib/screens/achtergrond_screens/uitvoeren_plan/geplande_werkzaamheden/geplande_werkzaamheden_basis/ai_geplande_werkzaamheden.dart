@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIGeplandeWerkzaamheden { home_screen, ww_geplande_werkzaamheden, ai_controleren_wbi, ai_fouten_wbi, ai_aanvang_werkzaamheden, ai_werkzones, ai_toelaten_werktreinen, }
+
 class AIGeplandeWerkzaamheden extends StatelessWidget {
   const AIGeplandeWerkzaamheden({Key? key}) : super(key: key);
 
@@ -9,14 +11,136 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Geplande werkzaamheden',
+          title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIGeplandeWerkzaamheden>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIGeplandeWerkzaamheden result) {
+              if (result == WhereToGoFromAIGeplandeWerkzaamheden.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIGeplandeWerkzaamheden.ww_geplande_werkzaamheden) {
+                Navigator.pushNamed(context, 'ww_geplande_werkzaamheden');
+              } else if (result ==
+                  WhereToGoFromAIGeplandeWerkzaamheden.ai_controleren_wbi) {
+                Navigator.pushNamed(context, 'ai_controleren_wbi');
+              } else if (result ==
+                  WhereToGoFromAIGeplandeWerkzaamheden.ai_fouten_wbi) {
+                Navigator.pushNamed(context, 'ai_fouten_wbi');
+              } else if (result ==
+                  WhereToGoFromAIGeplandeWerkzaamheden.ai_aanvang_werkzaamheden) {
+                Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
+              } else if (result ==
+                  WhereToGoFromAIGeplandeWerkzaamheden.ai_werkzones) {
+                Navigator.pushNamed(context, 'ai_werkzones');
+              } else if (result ==
+                  WhereToGoFromAIGeplandeWerkzaamheden.ai_toelaten_werktreinen) {
+                Navigator.pushNamed(context, 'ai_toelaten_werktreinen');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIGeplandeWerkzaamheden>>[
+              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+                value: WhereToGoFromAIGeplandeWerkzaamheden.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+                value: WhereToGoFromAIGeplandeWerkzaamheden.ww_geplande_werkzaamheden,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.train,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('WW Geplande Werkzaamheden'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+                value: WhereToGoFromAIGeplandeWerkzaamheden.ai_controleren_wbi,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Controleren WBI'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+                value: WhereToGoFromAIGeplandeWerkzaamheden.ai_fouten_wbi,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Fouten WBI'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+                value: WhereToGoFromAIGeplandeWerkzaamheden.ai_aanvang_werkzaamheden,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Aanvang Werkzaamheden'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+                value: WhereToGoFromAIGeplandeWerkzaamheden.ai_werkzones,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Werkzones'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+                value: WhereToGoFromAIGeplandeWerkzaamheden.ai_toelaten_werktreinen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Toelaten Werktreinen'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Column(
             children: [
               /*CARD #1*/
@@ -33,82 +157,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Geplande werkzaamheden zijn werkzaamheden die van tevoren gepland zijn en waarvoor alle benodigde zaken geregeld zijn. Als aan spoorweginfrastructuur onderhoud moet worden uitgevoerd, hebben we te maken met verschillende regelgevingen ten aanzien van veilig werken. Voor alle geplande werkzaamheden waarbij medewerking van de treindienstleider is vereist, moet je in het bezit zijn van een Werkplekbeveiligingsinstructie (WBI/WECO). Je toetst de WBI/WECO en bent verantwoordelijk voor de goede uitvoering van de taken die je in een WBI/WECO zijn toebedeeld.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Als treindienstleider stel je railinfracapaciteit beschikbaar. De verantwoordelijke voor de veiligheid buiten neemt vervolgens maatregelen voor zijn eigen veiligheid en de veiligheid van de werkenden. Hierover maak je afspraken met de verantwoordelijke voor de veiligheid buiten.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'De taakverantwoordelijke voor de veiligheid buiten kan worden uitgevoerd door verschillende functionarissen, bijvoorbeeld:',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: '- Voor werken aan de railinfrastructuur:',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '* Leider Werkplek Beveiliging (LWB)',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: '- Voor werken aan/in materieel:',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '* Storingsmonteur (stmt of ATB monteur)',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '* Voorman reiniging van een reinigingsbedrijf (HRD/TreinSchoon)',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '* Specialistische reiniging (graffiti en projectmatige reinigingsklussen)',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '* Monteur technische dienst',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '* Machinist',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '* Wagenmeester',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '* Etc.',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: '- Voor veilig werken bij treinincidenten:',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '* Algemeen Leider (AL)',
-                      ),
-                      SizedBoxH(),
-                      BoldText(
-                        indents: 0,
-                        boldtext: '- Voor inpecties aan infra en/of materieel:',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '* Inspecteur ILT',
-                      ),
+                            'Geplande werkzaamheden zijn werkzaamheden die van tevoren gepland zijn en waarvoor alle benodigde zaken geregeld zijn. Als aan spoorweginfrastructuur onderhoud moet worden uitgevoerd, hebben we te maken met verschillende regelgevingen ten aanzien van veilig werken. Voor alle geplande werkzaamheden waarbij medewerking van de TRDL is vereist, moet je in het bezit zijn van een Werkplekbeveiligingsinstructie (WBI/WECO). Je toetst de WBI/WECO en bent verantwoordelijk voor de goede uitvoering van de taken die je in een WBI/WECO zijn toebedeeld.',),
                     ],
                   ),
                 ),
@@ -127,7 +176,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Voor geplande werkzaamheden aan ProRail-sporen is zoals gezegd een WBI/WECO beschikbaar, aangeleverd door de afdeling Werkplekbeveiliging. Bij geplande werkzaamheden spreken we over een Standaard WBI/WECO.  Een Standaard WBI/WECO bestaat uit één of meerdere werkplekken, waarbij minimaal één van deze werkplekken een vaste werkplek is. Daarnaast kunnen er werkplekken in de WBI/WECO in overleg met (IOM) de treindienstleider zitten ten behoeve van het in- en uitzetten van voertuigen, aanbrengen veiligheidsmiddelen. Én er kunnen werkplekken in de WBI/WECO zitten IOM treindienstleider ten behoeve van het uitvoeren van werkzaamheden. Bij hoge uitzondering kan het voorkomen dat een WBI/WECO in zijn geheel bestaat uit werkplekken IOM ten behoeve van werkzaamheden.',
+                            'Voor geplande werkzaamheden aan ProRail-sporen is zoals gezegd een WBI/WECO beschikbaar, aangeleverd door de afdeling Werkplekbeveiliging. Bij geplande werkzaamheden spreken we over een Standaard WBI/WECO.  Een Standaard WBI/WECO bestaat uit één of meerdere werkplekken, waarbij minimaal één van deze werkplekken een vaste werkplek is. Daarnaast kunnen er werkplekken in de WBI/WECO in overleg met (IOM) de TRDL zitten ten behoeve van het in- en uitzetten van voertuigen, aanbrengen veiligheidsmiddelen. Én er kunnen werkplekken in de WBI/WECO zitten IOM TRDL ten behoeve van het uitvoeren van werkzaamheden. Bij hoge uitzondering kan het voorkomen dat een WBI/WECO in zijn geheel bestaat uit werkplekken IOM TRDL ten behoeve van werkzaamheden.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -150,7 +199,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Deze werkplek wordt enkel toegevoegd op WBI/WECO’s met daarin óók een vaste werkplek en is met name bedoeld voor het in- en uitzetten van voertuigen en/of het plaatsen of verwijderen van safety fence. Dit soort werkzaamheden vindt over het algemeen plaats aan het begin en aan het einde van de buitendienststelling en is zodoende alleen gegarandeerd in eerste en laatste 30 minuten van de buitendienststelling. Buiten deze periodes kan de werkplek door de LWB worden aangevraagd, maar heeft de treinenloop voorrang op de werkzaamheden. De genoemde tijdsperiode op de WBI dient altijd onverkort gegeven te worden.',
+                            'Deze werkplek wordt enkel toegevoegd op WBI/WECO\'s met daarin óók een vaste werkplek en is met name bedoeld voor het in- en uitzetten van voertuigen en/of het plaatsen of verwijderen van safety fence. Dit soort werkzaamheden vindt over het algemeen plaats aan het begin en aan het einde van de buitendienststelling en is zodoende alleen gegarandeerd in eerste en laatste 30 minuten van de buitendienststelling. Buiten deze periodes kan de werkplek door de LWB worden aangevraagd, maar heeft de treinenloop voorrang op de werkzaamheden. De genoemde tijdsperiode op de WBI dient altijd onverkort gegeven te worden.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -162,7 +211,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Deze werkplek is onderdeel van een WBI/WECO met daarin óók een vaste werkplek. Een dergelijke werkplek wordt door de aannemer vaak gebruikt om kleine werkzaamheden zonder prioriteit uit te voeren aan de railinfrastructuur. Er is géén treinvrije periode gecreëerd in het plan, de werkplek is dan ook niet gegarandeerd. Infracapaciteit wordt gegeven op basis van mogelijkheden in de treinenloop. De treinenloop heeft hierbij dus voorrang op de werkzaamheden. De benoemde tijdsperiode van 59 minuten staat fictief benoemd op de WBI/WECO. De tijdsperiode die gegeven wordt gebeurt in overleg tussen treindienstleider en LWB.​​​​​​​',
+                            'Deze werkplek is onderdeel van een WBI/WECO met daarin óók een vaste werkplek. Een dergelijke werkplek wordt door de aannemer vaak gebruikt om kleine werkzaamheden zonder prioriteit uit te voeren aan de railinfrastructuur. Er is géén treinvrije periode gecreëerd in het plan, de werkplek is dan ook niet gegarandeerd. Infracapaciteit wordt gegeven op basis van mogelijkheden in de treinenloop. De treinenloop heeft hierbij dus voorrang op de werkzaamheden. De benoemde tijdsperiode van 59 minuten staat fictief benoemd op de WBI/WECO. De tijdsperiode die gegeven wordt gebeurt in overleg tussen TRDL en LWB.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -199,7 +248,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Dit zijn werkzaamheden waarbij geen medewerking van de treindienstleider gevraagd wordt en/of noodzakelijk is. Denk hierbij aan werkzaamheden aan het perron, maar ook aan bijvoorbeeld het maaien van bermen.',
+                            'Dit zijn werkzaamheden waarbij geen medewerking van de TRDL gevraagd wordt en/of noodzakelijk is. Denk hierbij aan werkzaamheden aan het perron, maar ook aan bijv. het maaien van bermen.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -216,19 +265,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- de veiligheid niet aantasten;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- de tijdige rijweginstelling niet (mogen) hinderen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- door de postmanager, TM en/of OvD-V van de verkeersleidingspost aan de TRDL zijn gemeld.',
+                        text: '- De veiligheid niet aantasten;\n\n- De tijdige rijweginstelling niet (mogen) hinderen;\n\n- Door de postmanager, TM en/of OvD-V van de verkeersleidingspost aan de TRDL zijn gemeld.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -264,13 +301,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Bij alle geplande werkzaamheden wordt vooraf door de opdrachtnemer een WBI aangevraagd. Deze kunnen worden verkregen bij de regionale afdelingen Infrabeschikbaarheid. De WBI bevat de veiligheidsplanning voor de werkzaamheden. De aanvraag wordt uitgewerkt door het kantoor IBP.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Een WBI kan zonder datum en tijd zijn opgesteld, voor werkzaamheden waarvan de datum en het tijdstip redelijkerwijs niet van te voren kan worden vastgesteld. De goedgekeurde WBI moet drie werkdagen voor aanvang van de werkzaamheden afgestemd en beschikbaar zijn bij de uitvoerende partij(en) en bij de treindienstleider.',
+                            'Bij alle geplande werkzaamheden wordt vooraf door de opdrachtnemer een WBI aangevraagd. Deze kunnen worden verkregen bij de regionale afdelingen Infrabeschikbaarheid. De WBI bevat de veiligheidsplanning voor de werkzaamheden. De aanvraag wordt uitgewerkt door het kantoor IBP.\n\nEen WBI kan zonder datum en tijd zijn opgesteld, voor werkzaamheden waarvan de datum en het tijdstip redelijkerwijs niet van te voren kan worden vastgesteld. De goedgekeurde WBI moet drie werkdagen voor aanvang van de werkzaamheden afgestemd en beschikbaar zijn bij de uitvoerende partij(en) en bij de TRDL.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -281,7 +312,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Een WBI kan zonder datum en tijd zijn opgesteld, voor werkzaamheden waarvan de datum en het tijdstip redelijkerwijs niet van te voren kan worden vastgesteld. De goedgekeurde WBI moet drie werkdagen voor aanvang van de werkzaamheden afgestemd en beschikbaar zijn bij de uitvoerende partij(en) en bij de treindienstleider.',
+                            'Infrabeschikbaarheid houdt zich bezig met het gepland niet-beschikbaar zijn van het spoor. Zij coördineert buitendienststellingen, schouwtreinen, mobiele werkplaatsen en tijdelijke snelheidsbeperkingen (TSB\'s). Hierdoor ontstaat er landelijk een zo optimaal mogelijke planning.\n\nVerder ontwikkelt IB samen met Capaciteitsverdeling (CV), vervoerders en aannemers een onderhoudsrooster. De aannemers gebruiken dit rooster voor hun planning.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -292,7 +323,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'In de WBI/WECO kun je worden aangewezen als communicerend treindienstleider. Je kunt je voorstellen dat werkzaamheden soms plaatsvinden op plekken die \'werkplekoverschrijdend\' zijn. Dit zou in de communicatie tot gevaar kunnen leiden, vandaar dat beslon is om in dit soort situaties één treindienstleider aan te wijzen die de communicatie met de LWB verzorgt. De communicerend treindienstleider verzorgt dan de communicatie met de andere betrokken treindienstleiders. Communicatie tussen de machinist en de andere treindienstleiders blijft wel mogelijk zonder tussenkomst.',
+                            'In de WBI/WECO kun je worden aangewezen als communicerend TRDL. Je kunt je voorstellen dat werkzaamheden soms plaatsvinden op plekken die \'werkplekoverschrijdend\' zijn. Dit zou in de communicatie tot gevaar kunnen leiden, vandaar dat beslon is om in dit soort situaties één TRDL aan te wijzen die de communicatie met de LWB verzorgt. De communicerend TRDL verzorgt dan de communicatie met de andere betrokken TRDL. Communicatie tussen de MCN en de andere TRDL blijft wel mogelijk zonder tussenkomst.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -303,7 +334,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Het is mogelijk om de treindienstleider in deze rubriek aan te passen. De reden hiervan kan zijn dat de oorspronkelijke toewijzing door de BTD-planner, aan de hand van eigenaarschap van de meeste verhinderingsmaatregelen, niet praktisch is in de uitvoering. Denk bijvoorbeeld aan het verlenen van medewerking of beproeven van zaken. D.m.v. een penwijziging kan dit worden aangepast. Dit dien je dan wel af te stemmen met de collega treindienstleider die de rol van communicerend treindienstleider overneemt. Ook moet je het doorgeven aan de LWB en eventueel andere betrokken treindienstleiders.',
+                            'Het is mogelijk om de TRDL in deze rubriek aan te passen. De reden hiervan kan zijn dat de oorspronkelijke toewijzing door de BTD-planner, aan de hand van eigenaarschap van de meeste verhinderingsmaatregelen, niet praktisch is in de uitvoering. Denk bijvoorbeeld aan het verlenen van medewerking of beproeven van zaken. D.m.v. een penwijziging kan dit worden aangepast. Dit dien je dan wel af te stemmen met de collega TRDL die de rol van communicerend TRDL overneemt. Ook moet je het doorgeven aan de LWB en eventueel andere betrokken TRDL.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -315,25 +346,13 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Verhinderingen worden gebruikt om te voorkomen dat er onbedoeld een rijweg ingesteld kan worden naar de exacte buitendienststelling en materieel onbedoeld de buitendienststelling vanuit de flank kan verlaten.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Bij het voorschrijven van die verhinderingen om te voorkomen dat materieel onbedoeld de buitendienststelling vanuit de flank kan verlaten, zullen de volgende regels in acht worden genomen:',
+                            'Verhinderingen worden gebruikt om te voorkomen dat er onbedoeld een rijweg ingesteld kan worden naar de exacte buitendienststelling en materieel onbedoeld de buitendienststelling vanuit de flank kan verlaten.\n\nBij het voorschrijven van die verhinderingen om te voorkomen dat materieel onbedoeld de buitendienststelling vanuit de flank kan verlaten, zullen de volgende regels in acht worden genomen:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
-                            '- In de WBI onder kolom \'Maatregelen Treindienstleider\' worden verhinderingen opgenomen die de grens van een buitendienststelling markeren. Hierbij wordt aangegeven in welke stand het element dient te worden vastgelegd. De elementen zullen worden verhinderd met een VHB;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Wissels met een in de BVS voorgeschreven stand mogen tijdens de werkzaamheden in een andere stand worden vastgelegd. Na de werkzaamheden moet het wissel weer in de voorgeschreven stand worden achtergelaten',
+                            '- In de WBI onder kolom \'Maatregelen Treindienstleider\' worden verhinderingen opgenomen die de grens van een buitendienststelling markeren. Hierbij wordt aangegeven in welke stand het element dient te worden vastgelegd. De elementen zullen worden verhinderd met een VHB;\n\n- Wissels met een in de BVS voorgeschreven stand mogen tijdens de werkzaamheden in een andere stand worden vastgelegd. Na de werkzaamheden moet het wissel weer in de voorgeschreven stand worden achtergelaten.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -344,19 +363,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Het komt voor dat een treindienstleider niet één, maar meerdere werkzaamheden tegelijkertijd moet uitvoeren. Dit hoeft geen probleem te zijn, als de werkdruk maar niet te hoog komt te liggen.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Tijdens de planning van werkzaamheden wordt gecontroleerd of de WBI-aanvragen het werkdrukniveau van de treindienstleider niet overschrijden. Er wordt hier gekeken naar het totaal aan WBI’s op een bepaald tijdstip, waarna bepaald wordt of het haalbaar is of niet.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Mocht er door omstandigheden toch te veel werkdruk bij de treindienstleider komen te liggen, dan kan in overleg met de betrokken aannemers en verkeersleiding naar een oplossing worden gezocht.',
+                            'Het komt voor dat een TRDL niet één, maar meerdere werkzaamheden tegelijkertijd moet uitvoeren. Dit hoeft geen probleem te zijn, als de werkdruk maar niet te hoog komt te liggen.\n\nTijdens de planning van werkzaamheden wordt gecontroleerd of de WBI-aanvragen het werkdrukniveau van de TRDL niet overschrijden. Er wordt hier gekeken naar het totaal aan WBI\'s op een bepaald tijdstip, waarna bepaald wordt of het haalbaar is of niet.\n\nMocht er door omstandigheden toch te veel werkdruk bij de TRDL komen te liggen, dan kan in overleg met de betrokken aannemers en verkeersleiding naar een oplossing worden gezocht.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -368,70 +375,24 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Het kan voorkomen dat werkzaamheden moeten beginnen terwijl er nog vertraagde bijzonderheden_trein onderweg zijn. In dit geval wordt er gebruik gemaakt van de FAB. Hierin staan in stroomschema de aanvullende afspraken tussen vervoerders, verkeersleiding en asset management (AM). De start van een dubbelsporige buitendienststelling kan 15 minuten schuiven met behoud van het recht op 4 uur doorlooptijd. AM heeft een inspanningsverplichting het werk toch op de oorspronkelijke tijd af te ronden.',
+                            'Het kan voorkomen dat werkzaamheden moeten beginnen terwijl er nog vertraagde treinen onderweg zijn. In dit geval wordt er gebruik gemaakt van de FAB. Hierin staan in stroomschema de aanvullende afspraken tussen vervoerders, verkeersleiding en asset management (AM). De start van een dubbelsporige buitendienststelling kan 15 minuten schuiven met behoud van het recht op 4 uur doorlooptijd. AM heeft een inspanningsverplichting het werk toch op de oorspronkelijke tijd af te ronden.\n\nIndien de vertraging van de laatste trein op het laatste knooppunt voor een baanvak versperrende buitendienststelling groter is dan 15 minuten dan handel je als volgt:',
+                      ),
+                      SizedBoxH(),
+                      BodyText(
+                        indents: 1,
+                        text: '- Laat deze trein niet vertrekken;\n\n- Meld dit aan de DVL.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Indien de vertraging van de laatste trein op het laatste knooppunt voor een baanvak versperrende buitendienststelling groter is dan 15 minuten dan handel je als volgt:',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Laat deze trein niet vertrekken;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Meld dit aan de DVL.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'De afspraak met vervoerders wordt opgenomen in een TAD.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'De uitgangspunten zijn:',
+                            'De afspraak met vervoerders wordt opgenomen in een TAD.\n\nDe uitgangspunten zijn:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
-                            '- Indien de vertraging op/voor het laatste knooppunt voor de werkzaamheden groter is dan 15 minuten dat wordt de trein opgeheven. Reizigers en Personeel worden tussen de laatste knooppunten vervoerd met taxi/bus;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Formule: Tijdligging voor de aanvangstijd WBI + 15 minuten = uiterste vertrektijd;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- De vervoerders accepteren daarbij mogelijke consequenties voor de opstart treindienst van de volgende dag;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Indien de vertraging, groter dan 15 minuten, wordt opgelopen tussen het laatste knooppunt en de buitendienststelling is er sprake van een gestrande trein en is het aan de operatie (ORT = OCCR Regie Team) hiervoor een oplossing te vinden;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- In alle andere denkbare scenario’s is het operationele OvD-S besluit leidend;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Het staat vervoerders natuurlijk vrij om proactief bij te sturen op de laatste verbinding.',
+                            '- Indien de vertraging op/voor het laatste knooppunt voor de werkzaamheden groter is dan 15 minuten dat wordt de trein opgeheven. Reizigers en Personeel worden tussen de laatste knooppunten vervoerd met taxi/bus;\n\n- Formule: Tijdligging voor de aanvangstijd WBI + 15 minuten = uiterste vertrektijd;\n\n- De vervoerders accepteren daarbij mogelijke consequenties voor de opstart treindienst van de volgende dag;\n\n- Indien de vertraging, groter dan 15 minuten, wordt opgelopen tussen het laatste knooppunt en de buitendienststelling is er sprake van een gestrande trein en is het aan de operatie (ORT = OCCR Regie Team) hiervoor een oplossing te vinden;\n\n- In alle andere denkbare scenario\'s is het operationele OvD-S besluit leidend;\n\n- Het staat vervoerders natuurlijk vrij om proactief bij te sturen op de laatste verbinding.',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -456,42 +417,13 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Binnen het gebied waarop de werkplekbeveiliging van toepassing is, heeft de LWB voor het aspect veiligheid (aanrijd- en electrocutiegevaar) de leiding over al het personeel dat een veiligheidstaak uitoefent. Hij onderhoudt het contact met de TRDL, de CVB’s, VHM en BBD en bij SL met ploegleider of WV conform regelgeving van de opdrachtgever.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'De LWB heeft hierbij de volgende (kern)taken:',
+                            'Binnen het gebied waarop de werkplekbeveiliging van toepassing is, heeft de LWB voor het aspect veiligheid (aanrijd- en electrocutiegevaar) de leiding over al het personeel dat een veiligheidstaak uitoefent. Hij onderhoudt het contact met de TRDL, de CVB\'s, VHM en BBD en bij SL met ploegleider of WV conform regelgeving van de opdrachtgever.\n\nDe LWB heeft hierbij de volgende (kern)taken:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
-                            '1. Het aantoonbaar beoordelen van de aangeleverde veiligheidsinstructie op veilige uitvoerbaarheid en beargumenteren van de beoordeling als de maatregelen niet voldoen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '2. Het aantoonbaar (laten)verzorgen van de veiligheidsinstructie aan uitvoerenden;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '3. Het (laten) uitvoeren van de in de WBI voorgeschreven veiligheidsmaatregelen door een LLV, BBD of gecertificeerd medewerker seinwezen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '4. Het houden van toezicht op de naleving van veiligheidsmaatregelen, zelf het goede voorbeeld geven en het escaleren naar de WB-U en stopzetten van het werk als de veiligheid dit vereist;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '5. Het evalueren van de veiligheidsmaatregelen en de organisatie na afloop van de werkzaamheden en het doorgeven van de resultaten aan de WB-U/V&G-coördinator uitvoeringsfase.',
+                            '1. Het aantoonbaar beoordelen van de aangeleverde veiligheidsinstructie op veilige uitvoerbaarheid en beargumenteren van de beoordeling als de maatregelen niet voldoen;\n\n2. Het aantoonbaar (laten) verzorgen van de veiligheidsinstructie aan uitvoerenden;\n\n3. Het (laten) uitvoeren van de in de WBI voorgeschreven veiligheidsmaatregelen door een LLV, BBD of gecertificeerd medewerker seinwezen;\n\n4. Het houden van toezicht op de naleving van veiligheidsmaatregelen, zelf het goede voorbeeld geven en het escaleren naar de WB-U en stopzetten van het werk als de veiligheid dit vereist;\n\n5. Het evalueren van de veiligheidsmaatregelen en de organisatie na afloop van de werkzaamheden en het doorgeven van de resultaten aan de WB-U/V&G-coördinator uitvoeringsfase.',
                       ),
                     ],
                   ),
@@ -511,13 +443,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Een zelfsignalerende kortsluitlans wordt gebruikt om bij werkzaamheden in een baanvak een veilige werkplek te creëren. Een tussen de rails geplaatste kortsluitlans beïnvloedt het spoorstroomloopsysteem zoals een trein dat doet, waardoor de seinen \'afvallen\'. De rijrichting op vrije baan sporen kan nu niet meer gekeerd worden. Hierdoor worden bijzonderheden_trein gedwongen te stoppen en kan men veilig werken.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'De zelfsignalerende kortsluitlans is uitgerust met een veiligheidsidentificatie. De identificatie geeft aan of de lans zodanig is geplaatst, dat er inderdaad een kortsluiting tussen beide spoorstaven tot stand is gekomen.',
+                            'Een zelfsignalerende kortsluitlans (ZKL) wordt gebruikt om bij werkzaamheden in een baanvak een veilige werkplek te creëren. Een tussen de rails geplaatste kortsluitlans beïnvloedt het spoorstroomloopsysteem zoals een trein dat doet, waardoor de seinen \'afvallen\'. De rijrichting op vrije baan sporen kan nu niet meer gekeerd worden. Hierdoor worden treinen gedwongen te stoppen en kan men veilig werken.\n\nDe ZKL is uitgerust met een veiligheidsidentificatie. De identificatie geeft aan of de lans zodanig is geplaatst, dat er inderdaad een kortsluiting tussen beide spoorstaven tot stand is gekomen.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -534,48 +460,19 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Attendeer de LWB op het niet signaleren van de zelfsignalerende kortsluitlans;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- Informeer de Meldkamer Spoor/Back Office;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Registreer het incident als veiligheidsincident.',
+                            '- Attendeer de LWB op het niet signaleren van de zelfsignalerende kortsluitlans;\n\n- Informeer de Meldkamer Spoor/Back Office;\n\n- Registreer het incident als veiligheidsincident.',
                       ),
                       SizedBoxH(),
                       BoldText(
                         indents: 0,
                         boldtext:
-                            'Werkplekbeveiliging met de zelfsignalerende kortsluitlans (ZKL) in combinatie met rijweginstelling',
+                            'Werkplekbeveiliging met de ZKL in combinatie met rijweginstelling',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Een van de mogelijkheden voor een LWB om een werkplek te beveiligen, is met de kortsluitlans in combinatie met rijweginstelling. Deze veiligheidsmaatregel kan alleen worden toegepast in samenwerking met de treindienstleider.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Er moet wel aan een aantal voorwaarden worden voldaan. Deze zijn om te voorkomen dat er onveilige situaties ontstaan bij het gebruik van deze veiligheidsmaatregel.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Kijk voor de voorwaarden in de werkwijze treindienstleider.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Er wordt gebruik gemaakt van twee soorten kortsluitlansen. De ZKL mét remote control (afstandsbediening) en zonder remote control. De LWB kan de ZKL mét remote control al eerder plaatsen zonder dat deze zich signaleert. Hij kan op veilig afstand het sein kan laten bedienen door de treindienstleider en dan met de afstandsbediening  kortsluiting maken in het spoor.',
+                            'Een van de mogelijkheden voor een LWB om een werkplek te beveiligen, is met de ZKL in combinatie met rijweginstelling. Deze veiligheidsmaatregel kan alleen worden toegepast in samenwerking met de TRDL.\n\nEr moet wel aan een aantal voorwaarden worden voldaan. Deze zijn om te voorkomen dat er onveilige situaties ontstaan bij het gebruik van deze veiligheidsmaatregel.\n\nKijk voor de voorwaarden in de werkwijze TRDL.\n\nEr wordt gebruik gemaakt van twee soorten kortsluitlansen. De ZKL mét remote control (afstandsbediening) en zonder remote control. De LWB kan de ZKL mét remote control al eerder plaatsen zonder dat deze zich signaleert. Hij kan op veilig afstand het sein kan laten bedienen door de TRDL en dan met de afstandsbediening kortsluiting maken in het spoor.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -586,13 +483,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Op sommige baanvakken en emplacementen in Nederland voert men werkzaamheden uit binnen een vaste werkzone (werkzones). Dit zijn een soort vrijgavegebieden waarbinnen gewerkt wordt. Dus altijd met vaste veiligheidsmaatregelen.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Uitleg over werkzones en bijbehorende informatie vind je in de achtergrondinformatie bij ‘Geplande werkzaamheden – verdieping: werkzones’.',
+                            'Op sommige baanvakken en emplacementen in NL voert men werkzaamheden uit binnen een vaste werkzone (werkzones). Dit zijn een soort vrijgavegebieden waarbinnen gewerkt wordt. Dus altijd met vaste veiligheidsmaatregelen.\n\nUitleg over werkzones en bijbehorende informatie vind je in de achtergrondinformatie bij \'Geplande werkzaamheden - verdieping: werkzones\'.',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -617,13 +508,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Een werktrein is een trein die rijdt op een voor werkzaamheden ter beschikking gesteld deel van de railinfrastructuur. Een werktrein wordt bediend (gereden) door een werktreinmachinist. Voor een werktrein is altijd een Voertuig Instructie (VTI) voorhanden waarin staat hoe de (werktrein)machinist moet handelen op de betrokken railinfra. De (werktrein)machinist moet altijd in het bezit zijn van deze VTI voordat hij mag gaan rijden. Ook is er voor elke werktrein een BBD , begeleider buitendienst gesteld spoor, aangewezen die de machinist opdrachten kan geven.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Een trein die ingezet gaat worden als werktrein zal normaliter als gewone (goederentrein/onderhoudsmachine) rijden tot aan de grens van de voor werkzaamheden beschikbaar gestelde railinfra. Vanaf dat punt wordt het een werktrein. Het is echter ook mogelijk om een bijzonder voertuig in te zetten op een overweg of speciaal inzetpunt en vanaf daar te gaan rijden als werktrein. Het is ook toegestaan om materieel bestemd voor werkzaamheden van te voren al te plaatsen (voor de railinfra ter beschikking is gesteld). Maar dat is altijd in samenspraak met de LWB.',
+                            'Een werktrein is een trein die rijdt op een voor werkzaamheden ter beschikking gesteld deel van de railinfrastructuur. Een werktrein wordt bediend (gereden) door een werktreinMCN. Voor een werktrein is altijd een Voertuig Instructie (VTI) voorhanden waarin staat hoe de (werktrein)MCN moet handelen op de betrokken railinfra. De (werktrein)MCN moet altijd in het bezit zijn van deze VTI voordat hij mag gaan rijden. Ook is er voor elke werktrein een BBD, begeleider buitendienst gesteld spoor, aangewezen die de MCN opdrachten kan geven.\n\nEen trein die ingezet gaat worden als werktrein zal normaliter als gewone (goederentrein/onderhoudsmachine) rijden tot aan de grens van de voor werkzaamheden beschikbaar gestelde railinfra. Vanaf dat punt wordt het een werktrein. Het is echter ook mogelijk om een bijzonder voertuig in te zetten op een overweg of speciaal inzetpunt en vanaf daar te gaan rijden als werktrein. Het is ook toegestaan om materieel bestemd voor werkzaamheden van te voren al te plaatsen (voor de railinfra ter beschikking is gesteld). Maar dat is altijd in samenspraak met de LWB.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -633,53 +518,19 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
-                        text: '- Rijden op zicht;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Maximale snelheid in de nabijheid van personeel is 10 km/u;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Stoppen als de veiligheid dit noodzakelijk maakt.',
+                        text: '- Rijden op zicht;\n\n- Maximale snelheid in de nabijheid van personeel is 10 km/u;\n\n- Stoppen als de veiligheid dit noodzakelijk maakt.',
                       ),
                       SizedBoxH(),
                       BoldText(
                         indents: 0,
                         boldtext:
-                            'De LWB instrueert de BBD en (werktrein)machinist over:',
+                            'De LWB instrueert de BBD en (werktrein)MCN over:',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
-                            '- De verplaatsingen van en de werkzaamheden uit te voeren met de werktrein;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- De communicatie;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- De aanwezigheid van mensen, obstakels en eventueel andere werktreinen;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text: '- De VTI;',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Bijzondere omstandigheden die van belang zijn voor het veilig rijden.',
+                            '- De verplaatsingen van en de werkzaamheden uit te voeren met de werktrein;\n\n- De communicatie;\n\n- De aanwezigheid van mensen, obstakels en eventueel andere werktreinen;\n\n- De VTI;\n\n- Bijzondere omstandigheden die van belang zijn voor het veilig rijden.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -699,7 +550,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromAIUitvoerenPlanMain { home }
+enum WhereToGoFromAIUitvoerenPlanMain { home_screen, ai_rijwegen_ari, ww_uitvoeren_plan_main,}
 
 class AIUitvoerenPlanMain extends StatelessWidget {
   const AIUitvoerenPlanMain({Key? key}) : super(key: key);
@@ -18,24 +18,63 @@ class AIUitvoerenPlanMain extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIUitvoerenPlanMain result) {
-              if (result == WhereToGoFromAIUitvoerenPlanMain.home) {
+              if (result == WhereToGoFromAIUitvoerenPlanMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromAIUitvoerenPlanMain.ww_uitvoeren_plan_main) {
+                Navigator.pushNamed(context, 'ai_rijwegen_ari');
+              } else if (result == WhereToGoFromAIUitvoerenPlanMain.ai_rijwegen_ari) {
+                Navigator.pushNamed(context, 'ai_rijwegen_ari');
               } else {
                 Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIUitvoerenPlanMain>>[
-              const PopupMenuItem<WhereToGoFromAIUitvoerenPlanMain>(
-                value: WhereToGoFromAIUitvoerenPlanMain.home,
-                child: Text('Home'),
+              PopupMenuItem<WhereToGoFromAIUitvoerenPlanMain>(
+                value: WhereToGoFromAIUitvoerenPlanMain.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIUitvoerenPlanMain>(
+                value: WhereToGoFromAIUitvoerenPlanMain.ww_uitvoeren_plan_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.train,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('WW Uitvoeren Plan'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIUitvoerenPlanMain>(
+                value: WhereToGoFromAIUitvoerenPlanMain.ai_rijwegen_ari,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Rijwegen ARI'),
+                  ],
+                ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Column(
             children: [
               /*TITLE CARD*/
@@ -97,9 +136,8 @@ class AIUitvoerenPlanMain extends StatelessWidget {
                           ),
                           SizedBoxH(),
                           NavButton(
-                            //TODO: Add page!
                             buttontext: 'Dienstovergave',
-                            destination: 'dienstovergaveachtergrond',
+                            destination: 'ai_dienstovergave',
                           ),
                         ],
                       ),
@@ -127,7 +165,7 @@ class AIUitvoerenPlanMain extends StatelessWidget {
             ],
           ),
         ),
-      ),
+    
     );
   }
 }

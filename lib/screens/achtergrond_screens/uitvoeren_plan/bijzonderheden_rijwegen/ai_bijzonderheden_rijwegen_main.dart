@@ -73,13 +73,11 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
                           ),
                           SizedBoxH(),
                           NavButton(
-                            //TODO: Add page!
                             buttontext: 'TROTS en ABT - basis',
                             destination: 'rijwegentrotsabtachtergrond',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            //TODO: Add page!
                             buttontext: 'Rijweg in bedienscherm',
                             destination: 'rijwegenbedienschermachtergrond',
                           ),

@@ -1,23 +1,82 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIUitvoerenPlan { home_screen, ai_aanpassen_plan, ai_bovenleiding, }
+
 class AIUitvoerenPlan extends StatelessWidget {
   const AIUitvoerenPlan({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // double width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Uitvoeren plan',
+          title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIUitvoerenPlan>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIUitvoerenPlan result) {
+              if (result == WhereToGoFromAIUitvoerenPlan.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIUitvoerenPlan.ai_aanpassen_plan) {
+                Navigator.pushNamed(context, 'ai_aanpassen_plan');
+              } else if (result ==
+                  WhereToGoFromAIUitvoerenPlan.ai_bovenleiding) {
+                Navigator.pushNamed(context, 'ai_bovenleiding');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIUitvoerenPlan>>[
+              PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
+                value: WhereToGoFromAIUitvoerenPlan.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
+                value: WhereToGoFromAIUitvoerenPlan.ai_aanpassen_plan,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Aanpassen Plan'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
+                value: WhereToGoFromAIUitvoerenPlan.ai_bovenleiding,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Bovenleiding'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Column(
             children: [
               /*CARD #1*/
@@ -39,13 +98,9 @@ class AIUitvoerenPlan extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Reizigersvervoerders, goederenvervoerders, aannemers, besloten personenvervoer, stoomtreinmaatschappijen. Zo’n 50 partijen maken gebruik van het Nederlandse spoor. Het is kortom druk op het spoor. Vervoerders vragen elk jaar ruimte aan op het spoor. ProRail verdeelt vervolgens de capaciteit efficiënt en onafhankelijk, volgens wettelijke spelregels.',
+                            'Reizigersvervoerders, goederenvervoerders, aannemers, besloten personenvervoer, stoomtreinmaatschappijen. Zo\'n 50 partijen maken gebruik van het Nederlandse spoor. Het is kortom druk op het spoor. Vervoerders vragen elk jaar ruimte aan op het spoor. ProRail verdeelt vervolgens de capaciteit efficiënt en onafhankelijk, volgens wettelijke spelregels.\n\nRuimte verdelen gaat in 7 stappen:',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Ruimte verdelen gaat in 7 stappen:',
-                      ),
                       BoldText(
                         indents: 0,
                         boldtext: '1. Basisuurpatroon opzetten',
@@ -53,7 +108,7 @@ class AIUitvoerenPlan extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            'ProRail en vervoerders stellen samen het ‘basisuurpatroon’ op. Daarin leggen we vast hoeveel bijzonderheden_trein er per uur kunnen rijden op een bepaald traject en in welke frequentie. In deze fase worden de grootste knelpunten vast geïnventariseerd;',
+                            'ProRail en vervoerders stellen samen het \'basisuurpatroon\' op. Daarin leggen we vast hoeveel treinen er per uur kunnen rijden op een bepaald traject en in welke frequentie. In deze fase worden de grootste knelpunten vast geïnventariseerd;',
                       ),
                       BoldText(
                         indents: 0,
@@ -98,7 +153,7 @@ class AIUitvoerenPlan extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            'Op de 3e maandag is augustus wordt de definitieve verdeling vast gelegd en is het “spoorboekje” voor het komende jaar klaar;',
+                            'Op de 3e maandag is augustus wordt de definitieve verdeling vast gelegd en is het \'spoorboekje\' voor het komende jaar klaar;',
                       ),
                       BoldText(
                         indents: 0,
@@ -132,7 +187,7 @@ class AIUitvoerenPlan extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'De beschikbare infracapaciteit wordt planmatig toegewezen aan de verschillende infragebruikers. Het plan is zodanig ingericht dat er voldoende ruimte blijft voor bijsturing en extra capaciteitsaanvragen. Het plan is opgebouwd uit o.a. treinpaden, rangeerbewegingen, brugopeningen, WBI’s, tijd/ruimte-slots en is gebaseerd op de overeengekomen planmatige verdeling van de infra.',
+                            'De beschikbare infracapaciteit wordt planmatig toegewezen aan de verschillende infragebruikers. Het plan is zodanig ingericht dat er voldoende ruimte blijft voor bijsturing en extra capaciteitsaanvragen. Het plan is opgebouwd uit o.a. treinpaden, rangeerbewegingen, brugopeningen, WBI\'s, tijd/ruimte-slots en is gebaseerd op de overeengekomen planmatige verdeling van de infra.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -143,13 +198,7 @@ class AIUitvoerenPlan extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Indien tijdens de uitvoering van het plan een incident optreedt, is het nodig om het plan aan te passen. Hierbij wordt zoveel mogelijk gebruik gemaakt van vooraf afgesproken scenario’s en afhandelingen. Ook kan het plan aangepast worden wanneer extra infracapaciteit gevraagd wordt. Deze aanvragen worden gepland middels orderacceptatie.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Wanneer het plan moet worden aangepast zal dat zoveel mogelijk gebeuren conform vooraf gemaakte afspraken met de infragebruikers (Operationele Voorwaarden uitgewerkt in afhandelingsafspraken). Zie ook: Aanpassen plan - basisinformatie.',
+                            'Indien tijdens de uitvoering van het plan een incident optreedt, is het nodig om het plan aan te passen. Hierbij wordt zoveel mogelijk gebruik gemaakt van vooraf afgesproken scenario\'s en afhandelingen. Ook kan het plan aangepast worden wanneer extra infracapaciteit gevraagd wordt. Deze aanvragen worden gepland middels orderacceptatie.\n\nWanneer het plan moet worden aangepast zal dat zoveel mogelijk gebeuren conform vooraf gemaakte afspraken met de infragebruikers (Operationele Voorwaarden uitgewerkt in afhandelingsafspraken). Zie ook: Aanpassen plan - basisinformatie.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -192,39 +241,22 @@ class AIUitvoerenPlan extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Voor ieder bediengebied van de treindienstleider zijn er bedieningsvoorschriften (BVS) aanwezig. Deze zijn digitaal aanwezig bij de betreffende werkplek waarvoor ze bestemd zijn. In de bedieningsvoorschriften worden de bijzonderheden van jouw bediengebied beschreven.',
+                            'Voor ieder bediengebied van de TRDL zijn er bedieningsvoorschriften (BVS) aanwezig. Deze zijn digitaal aanwezig bij de betreffende werkplek waarvoor ze bestemd zijn. In de bedieningsvoorschriften worden de bijzonderheden van jouw bediengebied beschreven.\n\nOnderdelen:',
                       ),
                       SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text: 'Onderdelen:',
-                      ),
                       BodyText(
                         indents: 1,
                         text: '- BVS algemeen;',
                       ),
                       BodyText(
                         indents: 1,
-                        text: '- Bijzonderheden pplg\'s;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Tekeningen seinzaal, werkplekken, signaleringsbeelden;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '- Baanvak en emplacementstekeningen;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '- OS-bladen.',
+                        text: '- Bijzonderheden pplg\'s;\n\n- Tekeningen seinzaal, werkplekken, signaleringsbeelden;\n\n- Baanvak en emplacementstekeningen;\n\n- OS-bladen.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Een apart onderdeel zijn de bovenleiding schema’s. Meer info vind je bij Bovenleiding - Basisinformatie.',
+                            'Een apart onderdeel zijn de bovenleiding schema\'s. Meer info vind je bij Bovenleiding - Basisinformatie.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -246,40 +278,11 @@ class AIUitvoerenPlan extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'In dit gedeelte vind je alle bijzonderheden van het pplg. De opbouw van alle BVS ‘en is gelijk. In eerste instantie is het lastig lezen, maar als je eenmaal doorhebt wat er staat, zal je alle BVS ‘en goed kunnen lezen. Je vindt hier onder andere gegevens over:',
+                            'In dit gedeelte vind je alle bijzonderheden van het pplg. De opbouw van alle BVS\'en is gelijk. In eerste instantie is het lastig lezen, maar als je eenmaal doorhebt wat er staat, zal je alle BVS\'en goed kunnen lezen. Je vindt hier onder andere gegevens over:',
                       ),
                       BodyText(
                         indents: 1,
-                        text: '- Seinbediening;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '- Vertrekseinlichten;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '- Treinaankondiging;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '- Fictieve eindseinnummers;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '- \'STOP\'/\'DOOR\'-criterium vrije baan;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- Vertraagd uit de stand \'STOP\' komende seinen;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '- Overwegen/waarschuwingsinstallaties;',
-                      ),
-                      BodyText(
-                        indents: 1,
-                        text: '- Herroepen.',
+                        text: '- Seinbediening;\n\n- Vertrekseinlichten;\n\n- Treinaankondiging;\n\n- Fictieve eindseinnummers;\n\n- \'STOP\'/\'DOOR\'-criterium vrije baan;\n\n- Vertraagd uit de stand \'STOP\' komende seinen;\n\n- Overwegen/waarschuwingsinstallaties;\n\n- Herroepen.',
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -301,7 +304,7 @@ class AIUitvoerenPlan extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Waarschijnlijk is dit het onderdeel van de BVS wat je als treindienstleider het meest zal gebruiken. Je vindt hier de tekeningen van jouw bediengebied (pplg\'s en vrije banen). De gebruikte symbolen op de BVS-tekening kun je vinden in de B-voorschriften Deel I.',
+                            'Waarschijnlijk is dit het onderdeel van de BVS wat je als TRDL het meest zal gebruiken. Je vindt hier de tekeningen van jouw bediengebied (pplg\'s en vrije banen). De gebruikte symbolen op de BVS-tekening kun je vinden in de B-voorschriften Deel I.',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -333,7 +336,7 @@ class AIUitvoerenPlan extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Op dit moment zijn bovenleidingschema\'s nog niet op alle posten digitaal beschikbaar. Op deze tekeningen vind je onder andere de verschillende bovenleidingsgroepen, welke elektrische scheidingen gebruikt worden en waar onder- en schakelstations zijn. Ook deze tekening zal je als treindienstleider vaak gebruiken.',
+                            'Op dit moment zijn bovenleidingschema\'s nog niet op alle posten digitaal beschikbaar. Op deze tekeningen vind je onder andere de verschillende bovenleidingsgroepen, welke elektrische scheidingen gebruikt worden en waar onder- en schakelstations zijn. Ook deze tekening zal je als TRDL vaak gebruiken.',
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -348,7 +351,7 @@ class AIUitvoerenPlan extends StatelessWidget {
             ],
           ),
         ),
-      ),
+    
     );
   }
 }

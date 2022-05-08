@@ -118,13 +118,11 @@ class AIVertragingen extends StatelessWidget {
                           ),
                           SizedBoxH(),
                           NavButton(
-                            //TODO: Pagina toevoegen!
                             buttontext: 'Vertragingen & Monitoring',
                             destination: 'ww_vertragingen',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            //TODO: Pagina toevoegen!
                             buttontext: 'Klanthinder',
                             destination: 'ww_vertragingen',
                           ),

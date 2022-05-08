@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIGeplandeWerkzaamhedenMain { home_screen, ww_geplande_werkzaamheden_main, }
+
 class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
   const AIGeplandeWerkzaamhedenMain({Key? key}) : super(key: key);
 
@@ -11,12 +13,54 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIGeplandeWerkzaamhedenMain result) {
+              if (result == WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIGeplandeWerkzaamhedenMain.ww_geplande_werkzaamheden_main) {
+                Navigator.pushNamed(context, 'ww_geplande_werkzaamheden_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIGeplandeWerkzaamhedenMain>>[
+              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
+                value: WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
+                value: WhereToGoFromAIGeplandeWerkzaamhedenMain.ww_geplande_werkzaamheden_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.train,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('WW Geplande Werkzaamheden'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
+      body: SingleChildScrollView(
           child: Column(
             children: [
               //*PROCEDURE CARD*/
@@ -52,6 +96,7 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
                             destination: 'ai_geplande_werkzaamheden',
                           ),
                           SizedBoxH(),
+                          //TODO: Hier verder met enum en navigatie!
                           NavButton(
                             buttontext: 'Controleren WBI',
                             destination: 'ai_controleren_wbi',
@@ -103,7 +148,7 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      
     );
   }
 }
