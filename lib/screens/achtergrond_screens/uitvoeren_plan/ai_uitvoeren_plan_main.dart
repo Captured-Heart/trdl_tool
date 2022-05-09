@@ -121,6 +121,7 @@ class AIUitvoerenPlanMain extends StatelessWidget {
                           destination: 'ai_geplande_werkzaamheden_main',
                         ),
                         SizedBoxH(),
+                        //TODO: Hier verder met enum en navigatie!
                         NavButton(
                           buttontext: 'Bijzonderheden trein',
                           destination: 'ai_bijzonderheden_trein_main',

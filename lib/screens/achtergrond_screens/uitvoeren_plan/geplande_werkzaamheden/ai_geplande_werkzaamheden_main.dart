@@ -119,7 +119,6 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
                           buttontext: 'Aanvang werkzaamheden',
                           destination: 'ai_aanvang_werkzaamheden',
                         ),
-                        //TODO: Hier verder met enum en navigatie!
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Toelaten werktreinen',
