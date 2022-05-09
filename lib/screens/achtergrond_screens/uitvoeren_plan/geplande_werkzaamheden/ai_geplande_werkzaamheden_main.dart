@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromAIGeplandeWerkzaamhedenMain { home_screen, ww_geplande_werkzaamheden_main, }
+enum WhereToGoFromAIGeplandeWerkzaamhedenMain {
+  home_screen,
+  ww_geplande_werkzaamheden_main,
+}
 
 class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
   const AIGeplandeWerkzaamhedenMain({Key? key}) : super(key: key);
@@ -18,10 +21,12 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIGeplandeWerkzaamhedenMain result) {
-              if (result == WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen) {
+              if (result ==
+                  WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromAIGeplandeWerkzaamhedenMain.ww_geplande_werkzaamheden_main) {
+                  WhereToGoFromAIGeplandeWerkzaamhedenMain
+                      .ww_geplande_werkzaamheden_main) {
                 Navigator.pushNamed(context, 'ww_geplande_werkzaamheden_main');
               } else {
                 Navigator.pop(context);
@@ -43,16 +48,20 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
-                value: WhereToGoFromAIGeplandeWerkzaamhedenMain.ww_geplande_werkzaamheden_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Geplande Werkzaamheden'),
-                  ],
+                value: WhereToGoFromAIGeplandeWerkzaamhedenMain
+                    .ww_geplande_werkzaamheden_main,
+                child: FittedBox(
+                  fit: BoxFit.fitWidth,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(
+                        Icons.train,
+                        color: flexSchemeLight.primary,
+                      ),
+                      const Text('WW Geplande Werkzaamheden'),
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -61,94 +70,93 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-          child: Column(
-            children: [
-              //*PROCEDURE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Geplande Werkzaamheden',
-                      ),
-                    ],
-                  ),
+        child: Column(
+          children: [
+            //*PROCEDURE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Geplande Werkzaamheden',
+                    ),
+                  ],
                 ),
               ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Basisinformatie',
-                            destination: 'ai_geplande_werkzaamheden',
-                          ),
-                          SizedBoxH(),
-                          //TODO: Hier verder met enum en navigatie!
-                          NavButton(
-                            buttontext: 'Controleren WBI',
-                            destination: 'ai_controleren_wbi',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Fouten in de WBI',
-                            destination: 'ai_fouten_wbi',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Aanvang werkzaamheden',
-                            destination: 'ai_aanvang_werkzaamheden',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Toelaten werktreinen',
-                            destination: 'ai_toelaten_werktreinen',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Werkzones',
-                            destination: 'ai_werkzones',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                    ],
-                  ),
+            ),
+            /*NAVIGATION CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: [
+                    const TitleText(
+                      title: 'Ga snel naar',
+                    ),
+                    const SizedBoxH(),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        NavButton(
+                          buttontext: 'Basisinformatie',
+                          destination: 'ai_geplande_werkzaamheden',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Controleren WBI',
+                          destination: 'ai_controleren_wbi',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Fouten in de WBI',
+                          destination: 'ai_fouten_wbi',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Aanvang werkzaamheden',
+                          destination: 'ai_aanvang_werkzaamheden',
+                        ),
+                        //TODO: Hier verder met enum en navigatie!
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Toelaten werktreinen',
+                          destination: 'ai_toelaten_werktreinen',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Werkzones',
+                          destination: 'ai_werkzones',
+                        ),
+                      ],
+                    ),
+                    const SizedBoxH(),
+                  ],
                 ),
               ),
-              /*IMAGE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SizedBoxH(),
-                      InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzaamhedenBovenleiding.jpg',
-                      ),
-                      SizedBoxH(),
-                    ],
-                  ),
+            ),
+            /*IMAGE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/werkzaamhedenBovenleiding.jpg',
+                    ),
+                    SizedBoxH(),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-      
+      ),
     );
   }
 }

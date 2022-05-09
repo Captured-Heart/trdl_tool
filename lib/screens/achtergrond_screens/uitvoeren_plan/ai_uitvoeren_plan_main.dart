@@ -1,6 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromAIUitvoerenPlanMain { home_screen, ai_rijwegen_ari, ww_uitvoeren_plan_main,}
+enum WhereToGoFromAIUitvoerenPlanMain {
+  home_screen,
+  ww_uitvoeren_plan_main,
+  ai_rijwegen_ari,
+}
 
 class AIUitvoerenPlanMain extends StatelessWidget {
   const AIUitvoerenPlanMain({Key? key}) : super(key: key);
@@ -20,9 +24,11 @@ class AIUitvoerenPlanMain extends StatelessWidget {
             onSelected: (WhereToGoFromAIUitvoerenPlanMain result) {
               if (result == WhereToGoFromAIUitvoerenPlanMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
-              } else if (result == WhereToGoFromAIUitvoerenPlanMain.ww_uitvoeren_plan_main) {
-                Navigator.pushNamed(context, 'ai_rijwegen_ari');
-              } else if (result == WhereToGoFromAIUitvoerenPlanMain.ai_rijwegen_ari) {
+              } else if (result ==
+                  WhereToGoFromAIUitvoerenPlanMain.ww_uitvoeren_plan_main) {
+                Navigator.pushNamed(context, 'ww_uitvoeren_plan_main');
+              } else if (result ==
+                  WhereToGoFromAIUitvoerenPlanMain.ai_rijwegen_ari) {
                 Navigator.pushNamed(context, 'ai_rijwegen_ari');
               } else {
                 Navigator.pop(context);
@@ -75,97 +81,96 @@ class AIUitvoerenPlanMain extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-          child: Column(
-            children: [
-              /*TITLE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      TitleText(
-                        title: 'Uitvoeren Plan',
-                      ),
-                    ],
-                  ),
+        child: Column(
+          children: [
+            /*TITLE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    TitleText(
+                      title: 'Uitvoeren Plan',
+                    ),
+                  ],
                 ),
               ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Uitvoeren plan - basis',
-                            destination: 'ai_uitvoeren_plan',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Geplande werkzaamheden',
-                            destination: 'ai_geplande_werkzaamheden_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Bijzonderheden trein',
-                            destination: 'ai_bijzonderheden_trein_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Bijzonderheden rijwegen',
-                            destination: 'ai_bijzonderheden_rijwegen_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Communicatie',
-                            destination: 'ai_communicatie_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'NCBG',
-                            destination: 'ai_ncbg',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Dienstovergave',
-                            destination: 'ai_dienstovergave',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                    ],
-                  ),
+            ),
+            /*NAVIGATION CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: [
+                    const TitleText(
+                      title: 'Ga snel naar',
+                    ),
+                    const SizedBoxH(),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        NavButton(
+                          buttontext: 'Uitvoeren plan - basis',
+                          destination: 'ai_uitvoeren_plan',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Geplande werkzaamheden',
+                          destination: 'ai_geplande_werkzaamheden_main',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Bijzonderheden trein',
+                          destination: 'ai_bijzonderheden_trein_main',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Bijzonderheden rijwegen',
+                          destination: 'ai_bijzonderheden_rijwegen_main',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Communicatie',
+                          destination: 'ai_communicatie_main',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'NCBG',
+                          destination: 'ai_ncbg',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Dienstovergave',
+                          destination: 'ai_dienstovergave',
+                        ),
+                      ],
+                    ),
+                    const SizedBoxH(),
+                  ],
                 ),
               ),
-              /*IMAGE CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: const [
-                      SizedBoxH(),
-                      InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/uitvoeren_plan/spoorKaart2020.jpg',
-                      ),
-                    ],
-                  ),
+            ),
+            /*IMAGE CARD*/
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/uitvoeren_plan/spoorKaart2020.jpg',
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-    
+      ),
     );
   }
 }
