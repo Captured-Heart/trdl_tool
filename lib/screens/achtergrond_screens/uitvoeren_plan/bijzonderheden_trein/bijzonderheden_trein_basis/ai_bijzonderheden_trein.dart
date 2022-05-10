@@ -1,9 +1,11 @@
 import 'package:trdl_tool/all_imports.dart';
 
-const String treinenVanNS = 'https://ns.nl/over-ns/bijzonderheden_trein-van-ns';
-const String nlSpoorwegMaterieel =
-    'https://nl.wikipedia.org/wiki/Nederlands_spoorwegmaterieel';
-const String goederenWagon = 'https://nl.wikipedia.org/wiki/Goederenwagon';
+final Uri treinenVanNS =
+    Uri.parse('https://ns.nl/over-ns/bijzonderheden_trein-van-ns');
+final Uri nlSpoorwegMaterieel =
+    Uri.parse('https://nl.wikipedia.org/wiki/Nederlands_spoorwegmaterieel');
+final Uri goederenWagon =
+    Uri.parse('https://nl.wikipedia.org/wiki/Goederenwagon');
 
 final List<Image> elektrLocsList = [
   Image.asset(
@@ -17,6 +19,13 @@ final List<Image> elektrLocsList = [
   ),
 ];
 
+enum WhereToGoFromAIBijzonderhedenTrein {
+  home_screen,
+  ww_bijzonderheden_trein_main,
+  ai_vervoersregeling,
+  ai_onjuiste_detectie,
+}
+
 class AIBijzonderhedenTrein extends StatelessWidget {
   const AIBijzonderhedenTrein({Key? key}) : super(key: key);
 
@@ -26,10 +35,87 @@ class AIBijzonderhedenTrein extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Bijzonderheden trein',
+          title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIBijzonderhedenTrein>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIBijzonderhedenTrein result) {
+              if (result == WhereToGoFromAIBijzonderhedenTrein.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIBijzonderhedenTrein
+                      .ww_bijzonderheden_trein_main) {
+                Navigator.pushNamed(context, 'ww_bijzonderheden_trein_main');
+              } else if (result ==
+                  WhereToGoFromAIBijzonderhedenTrein.ai_vervoersregeling) {
+                Navigator.pushNamed(context, 'ai_vervoersregeling');
+              } else if (result ==
+                  WhereToGoFromAIBijzonderhedenTrein.ai_onjuiste_detectie) {
+                Navigator.pushNamed(context, 'ai_onjuiste_detectie');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIBijzonderhedenTrein>>[
+              PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
+                value: WhereToGoFromAIBijzonderhedenTrein.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
+                value: WhereToGoFromAIBijzonderhedenTrein
+                    .ww_bijzonderheden_trein_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.train,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('WW Bijzonderheden Trein'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
+                value: WhereToGoFromAIBijzonderhedenTrein.ai_vervoersregeling,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Vervoersregeling'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
+                value: WhereToGoFromAIBijzonderhedenTrein.ai_onjuiste_detectie,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Onjuiste Detectie'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
@@ -85,7 +171,7 @@ class AIBijzonderhedenTrein extends StatelessWidget {
                         Expanded(
                           child: GestureDetector(
                             onTap: () {
-                              lauchNLSpoorwegMaterieel();
+                              launchNLSpoorwegMaterieel();
                             },
                             child: const Text(
                               '- NL Spoorwegmaterieel',
@@ -850,19 +936,19 @@ class AIBijzonderhedenTrein extends StatelessWidget {
   }
 
   void launchTreinenVanNS() async {
-    if (!await launch(treinenVanNS)) {
+    if (!await launchUrl(treinenVanNS)) {
       throw 'Could not launch $treinenVanNS';
     }
   }
 
-  void lauchNLSpoorwegMaterieel() async {
-    if (!await launch(nlSpoorwegMaterieel)) {
+  void launchNLSpoorwegMaterieel() async {
+    if (!await launchUrl(nlSpoorwegMaterieel)) {
       throw 'Could not launch $nlSpoorwegMaterieel';
     }
   }
 
   void launchGoederenwagon() async {
-    if (!await launch(goederenWagon)) {
+    if (!await launchUrl(goederenWagon)) {
       throw 'Could not launch $goederenWagon';
     }
   }

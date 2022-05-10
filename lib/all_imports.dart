@@ -94,7 +94,9 @@ export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderhede
 export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderheden_rijwegen/kop_van_trein_voorbij_sein/ww_kop_van_trein_voorbij_sein.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_exploitatie/ww_rijwegen_exploitatie.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderheden_rijwegen/toelaten_werktreinen/ww_toelaten_werktreinen.dart';
-export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderheden_trein/ww_bijzonderheden_trein.dart';
+export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderheden_trein/ww_bijzonderheden_trein_main.dart';
+export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderheden_trein/vervoersregeling/ww_vervoersregeling.dart';
+export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderheden_trein/onjuiste_detectie/ww_onjuiste_detectie.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/communicatie/ww_communicatie_main.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/communicatie/mondelinge_communicatie/ww_mondelinge_communicatie.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/dienstovergave/ww_dienstovergave.dart';

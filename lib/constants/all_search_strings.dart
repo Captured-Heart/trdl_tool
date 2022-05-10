@@ -61,6 +61,8 @@ List<String> searchStringsList = [
   'ww_sts_passage',
   'ww_weersomstandigheden',
   'ww_wissels_vrijmaken',
+  'ww_vervoersregeling',
+  'ww_onjuiste_detectie',
   'ai_uitvoeren_plan_main',
   'ai_bijzonderheden_rijwegen_main',
   'ai_inzetten_railvoertuig',

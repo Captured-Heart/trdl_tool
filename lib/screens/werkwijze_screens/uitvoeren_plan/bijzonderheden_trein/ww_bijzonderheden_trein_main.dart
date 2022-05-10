@@ -1,9 +1,12 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWUitvoerenPlanMain { home_screen, ai_uitvoeren_plan_main }
+enum WhereToGoFromWWBijzonderhedenTreinMain {
+  home_screen,
+  ai_bijzonderheden_trein_main,
+}
 
-class WWUitvoerenPlanMain extends StatelessWidget {
-  const WWUitvoerenPlanMain({Key? key}) : super(key: key);
+class WWBijzonderhedenTreinMain extends StatelessWidget {
+  const WWBijzonderhedenTreinMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,23 +17,25 @@ class WWUitvoerenPlanMain extends StatelessWidget {
           title: 'Werkwijze',
         ),
         actions: [
-          PopupMenuButton<WhereToGoFromWWUitvoerenPlanMain>(
+          PopupMenuButton<WhereToGoFromWWBijzonderhedenTreinMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWUitvoerenPlanMain result) {
-              if (result == WhereToGoFromWWUitvoerenPlanMain.home_screen) {
+            onSelected: (WhereToGoFromWWBijzonderhedenTreinMain result) {
+              if (result ==
+                  WhereToGoFromWWBijzonderhedenTreinMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromWWUitvoerenPlanMain.ai_uitvoeren_plan_main) {
-                Navigator.pushNamed(context, 'ai_uitvoeren_plan_main');
+                  WhereToGoFromWWBijzonderhedenTreinMain
+                      .ai_bijzonderheden_trein_main) {
+                Navigator.pushNamed(context, 'ai_bijzonderheden_trein_main');
               } else {
                 Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromWWUitvoerenPlanMain>>[
-              PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
-                value: WhereToGoFromWWUitvoerenPlanMain.home_screen,
+                <PopupMenuEntry<WhereToGoFromWWBijzonderhedenTreinMain>>[
+              PopupMenuItem<WhereToGoFromWWBijzonderhedenTreinMain>(
+                value: WhereToGoFromWWBijzonderhedenTreinMain.home_screen,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -42,8 +47,9 @@ class WWUitvoerenPlanMain extends StatelessWidget {
                   ],
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
-                value: WhereToGoFromWWUitvoerenPlanMain.ai_uitvoeren_plan_main,
+              PopupMenuItem<WhereToGoFromWWBijzonderhedenTreinMain>(
+                value: WhereToGoFromWWBijzonderhedenTreinMain
+                    .ai_bijzonderheden_trein_main,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -51,7 +57,7 @@ class WWUitvoerenPlanMain extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('AI Uitvoeren Plan'),
+                    const Text('AI Bijzonderheden Trein'),
                   ],
                 ),
               ),
@@ -71,13 +77,7 @@ class WWUitvoerenPlanMain extends StatelessWidget {
                 child: Column(
                   children: const [
                     TitleText(
-                      title: 'Uitvoeren Plan',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'De TRDL voert het actuele plan uit en stelt infra ter beschikking volgens vooraf gemaakte afspraken.',
+                      title: 'Bijzonderheden Trein',
                     ),
                   ],
                 ),
@@ -98,33 +98,13 @@ class WWUitvoerenPlanMain extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         NavButton(
-                          buttontext: 'Geplande Werkzaamheden',
-                          destination: 'ww_geplande_werkzaamheden_main',
+                          buttontext: 'Treinen met Vervoersregeling',
+                          destination: 'ww_vervoersregeling',
                         ),
                         SizedBoxH(),
                         NavButton(
-                          buttontext: 'Bijzonderheden Rijwegen',
-                          destination: 'ww_bijzonderheden_rijwegen_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Bijzonderheden Trein',
-                          destination: 'ww_bijzonderheden_trein_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Communicatie',
-                          destination: 'ww_communicatie_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'NCBG',
-                          destination: 'ww_ncbg',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Dienstovergave',
-                          destination: 'ww_dienstovergave',
+                          buttontext: 'Voertuigen zonder Detectie',
+                          destination: 'ww_onjuiste_detectie',
                         ),
                       ],
                     ),

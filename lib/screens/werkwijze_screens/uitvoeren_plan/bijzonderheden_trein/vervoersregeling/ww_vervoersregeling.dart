@@ -1,9 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWBijzonderhedenTrein { home_screen, ai_vervoersregeling }
+enum WhereToGoFromWWVervoersregeling { home_screen, ai_vervoersregeling }
 
-class WWBijzonderhedenTrein extends StatelessWidget {
-  const WWBijzonderhedenTrein({Key? key}) : super(key: key);
+class WWVervoersregeling extends StatelessWidget {
+  const WWVervoersregeling({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,23 +14,23 @@ class WWBijzonderhedenTrein extends StatelessWidget {
           title: 'Werkwijze',
         ),
         actions: [
-          PopupMenuButton<WhereToGoFromWWBijzonderhedenTrein>(
+          PopupMenuButton<WhereToGoFromWWVervoersregeling>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWBijzonderhedenTrein result) {
-              if (result == WhereToGoFromWWBijzonderhedenTrein.home_screen) {
+            onSelected: (WhereToGoFromWWVervoersregeling result) {
+              if (result == WhereToGoFromWWVervoersregeling.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromWWBijzonderhedenTrein.ai_vervoersregeling) {
+                  WhereToGoFromWWVervoersregeling.ai_vervoersregeling) {
                 Navigator.pushNamed(context, 'ai_vervoersregeling');
               } else {
                 Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromWWBijzonderhedenTrein>>[
-              PopupMenuItem<WhereToGoFromWWBijzonderhedenTrein>(
-                value: WhereToGoFromWWBijzonderhedenTrein.home_screen,
+                <PopupMenuEntry<WhereToGoFromWWVervoersregeling>>[
+              PopupMenuItem<WhereToGoFromWWVervoersregeling>(
+                value: WhereToGoFromWWVervoersregeling.home_screen,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -42,8 +42,8 @@ class WWBijzonderhedenTrein extends StatelessWidget {
                   ],
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWBijzonderhedenTrein>(
-                value: WhereToGoFromWWBijzonderhedenTrein.ai_vervoersregeling,
+              PopupMenuItem<WhereToGoFromWWVervoersregeling>(
+                value: WhereToGoFromWWVervoersregeling.ai_vervoersregeling,
                 child: FittedBox(
                   fit: BoxFit.fitWidth,
                   child: Row(

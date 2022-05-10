@@ -52,7 +52,10 @@ class MainEntry extends StatelessWidget {
             const WWKopVanTreinVoorbijSein(),
         'ww_inzetten_icb': (context) => const WWInzettenICB(),
         'ww_toelaten_werktreinen': (context) => const WWToelatenWerktreinen(),
-        'ww_bijzonderheden_trein': (context) => const WWBijzonderhedenTrein(),
+        'ww_bijzonderheden_trein_main': (context) =>
+            const WWBijzonderhedenTreinMain(),
+        'ww_vervoersregeling': (context) => const WWVervoersregeling(),
+        'ww_onjuiste_detectie': (context) => const WWOnjuisteDetectie(),
         'ww_communicatie_main': (context) => const WWCommunicatieMain(),
         'ww_mondelinge_communicatie': (context) =>
             const WWMondelingeCommunicatie(),
