@@ -102,7 +102,6 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
                           destination: 'ai_bijzonderheden_trein',
                         ),
                         SizedBoxH(),
-                        //TODO: Hier verder met enum en navigatie!
                         NavButton(
                           buttontext: 'Vervoersregeling',
                           destination: 'ai_vervoersregeling',

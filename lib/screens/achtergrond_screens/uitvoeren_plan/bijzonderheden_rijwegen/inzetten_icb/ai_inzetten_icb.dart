@@ -78,12 +78,12 @@ class AIInzettenRailvoertuig extends StatelessWidget {
                     SizedBoxH(),
                     InsertImage(
                       image:
-                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig/bergingsVoertuig2.jpg',
+                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_icb/bergingsVoertuig2.jpg',
                     ),
                     SizedBoxH(),
                     InsertImage(
                       image:
-                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig/bergingsVoertuig1.jpg',
+                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_icb/bergingsVoertuig1.jpg',
                     ),
                     SizedBoxH(),
                     SubTitleText(
@@ -98,12 +98,12 @@ class AIInzettenRailvoertuig extends StatelessWidget {
                     SizedBoxH(),
                     InsertImage(
                       image:
-                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig/unimog1.jpg',
+                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_icb/unimog1.jpg',
                     ),
                     SizedBoxH(),
                     InsertImage(
                       image:
-                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig/unimog2.jpg',
+                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_icb/unimog2.jpg',
                     ),
                   ],
                 ),
@@ -183,7 +183,7 @@ class AIInzettenRailvoertuig extends StatelessWidget {
                     SizedBoxH(),
                     InsertImage(
                       image:
-                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_railvoertuig/langsTransport.jpg',
+                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_icb/langsTransport.jpg',
                     ),
                     SizedBoxH(),
                   ],

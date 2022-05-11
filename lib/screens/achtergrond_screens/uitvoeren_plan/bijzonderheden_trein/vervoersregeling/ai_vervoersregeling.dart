@@ -1,6 +1,11 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromAIVervoersregeling { home_screen, ww_vervoersregeling, ai_bijzonderheden_trein, ai_onjuiste_detectie, }
+enum WhereToGoFromAIVervoersregeling {
+  home_screen,
+  ww_vervoersregeling,
+  ai_bijzonderheden_trein,
+  ai_onjuiste_detectie,
+}
 
 class AIVervoersregeling extends StatelessWidget {
   const AIVervoersregeling({Key? key}) : super(key: key);
@@ -204,61 +209,13 @@ class AIVervoersregeling extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Treinen met een standaard zending met profieloverschrijding.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Op ons (inter)nationale spoornetwerk rijden er bijzonderheden_trein met een standaard profieloverschrijding. Om met deze bijzonderheden_trein goed om te gaan, in de planning en de dagelijkse uitvoering, is er gekozen voor een vereenvoudigde indeling van deze profieloverschrijdingen binnen Nederland.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Overzicht kan je vinden in het document ‘Standaardvoorwaarden BP 1, 2 en 3.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Vervoer van standaard zendingen met profieloverschrijding',
+                          'Treinen met een standaard zending met profieloverschrijding.\n\nOp ons (inter)nationale spoornetwerk rijden er treinen met een standaard profieloverschrijding. Om met deze treinen goed om te gaan, in de planning en de dagelijkse uitvoering, is er gekozen voor een vereenvoudigde indeling van deze profieloverschrijdingen binnen Nederland.\n\nEen overzicht kan je vinden in het document ‘Standaardvoorwaarden BP 1, 2 en 3.\n\nVervoer van standaard zendingen met profieloverschrijding:',
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '- Het vervoer van wagens/ladingen met profiel overschrijdende afmetingen wordt in de plansystemen verwerkt, waarbij aan de treinnummers BP1, BP2 en BP3 worden toegevoegd. Deze profielcodes worden in DONNA geregistreerd en door procesleiding in het scherm getoond;',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          '- Bij ProRail verkeersleiding Orderacceptatie moeten alle bijzonderheden_trein worden aangevraagd die niet in de plansystemen van ProRail zijn opgenomen. De vervoerder moet aan ProRail verkeersleiding Orderacceptatie de BP code opgeven. Ook alle wijzigingen van de profielen moeten tijdig worden gemeld bij ProRail verkeersleiding Orderacceptatie;',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          '- Vervoer mag uitsluitend plaatsvinden over de baanvakken welke geschikt zijn voor de bij de profielcode geldende voorwaarden;',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          '- Op de toegelaten baanvakken, stations en emplacementen voor buiten profiel vervoer kunnen er gebruiksbeperkingen van toepassing zijn (zie lijst Opgave Baanvakken, Stations en Emplacementen).',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          '- In de niet centraal bediende gebieden is het rijden onder ladingmallen niet toegestaan met bijzonderheden_trein met profieloverschrijding;',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          '- Standaard zendingen aangeduid met BP1, BP2 en BP3 zijn in Nederland alleen in hoogte buiten profiel. Indien in een BV regeling is opgenomen \'Geen BV bijzonderheden_trein of treindelen met lading Buiten Profiel op het nevenspoor\' is deze beperking niet van toepassing op standaardzendingen BP1, BP2 en BP3.',
+                          '- Het vervoer van wagens/ladingen met profiel overschrijdende afmetingen wordt in de plansystemen verwerkt, waarbij aan de treinnummers BP1, BP2 en BP3 worden toegevoegd. Deze profielcodes worden in DONNA geregistreerd en door procesleiding in het scherm getoond;\n\n- Bij VL Orderacceptatie moeten alle treinen worden aangevraagd die niet in de plansystemen van ProRail zijn opgenomen. De vervoerder moet aan VL Orderacceptatie de BP code opgeven. Ook alle wijzigingen van de profielen moeten tijdig worden gemeld bij VL Orderacceptatie;\n\n- Vervoer mag uitsluitend plaatsvinden over de baanvakken welke geschikt zijn voor de bij de profielcode geldende voorwaarden;\n\n- Op de toegelaten baanvakken, stations en emplacementen voor buiten profiel vervoer kunnen er gebruiksbeperkingen van toepassing zijn (zie lijst Opgave Baanvakken, Stations en Emplacementen);\n\n- In de niet centraal bediende gebieden is het rijden onder ladingmallen niet toegestaan met treinen met profieloverschrijding;\n\n- Standaard zendingen aangeduid met BP1, BP2 en BP3 zijn in Nederland alleen in hoogte buiten profiel. Indien in een BV regeling is opgenomen \'Geen BV treinen of treindelen met lading Buiten Profiel op het nevenspoor\' is deze beperking niet van toepassing op standaardzendingen BP1, BP2 en BP3.',
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -289,13 +246,7 @@ class AIVervoersregeling extends StatelessWidget {
                     const BodyText(
                       indents: 1,
                       text:
-                          '- Kennis hebt genomen van de beperkingen die voor deze bijzonderheden_trein gelden;',
-                    ),
-                    const SizedBoxH(),
-                    const BodyText(
-                      indents: 1,
-                      text:
-                          '- De aanwijzingen over de beperkingen hebt opgevolgd.',
+                          '- Kennis hebt genomen van de beperkingen die voor deze treinen gelden;\n\n- De aanwijzingen over de beperkingen hebt opgevolgd.',
                     ),
                     const SizedBoxH(),
                     const SubTitleText(
@@ -314,12 +265,7 @@ class AIVervoersregeling extends StatelessWidget {
                     const BodyText(
                       indents: 2,
                       text:
-                          '* kennis hebt genomen van de beperkingen die voor deze bijzonderheden_trein gelden;',
-                    ),
-                    const BodyText(
-                      indents: 2,
-                      text:
-                          '* de aanwijzingen over de beperkingen hebt opgevolgd.',
+                          '* kennis hebt genomen van de beperkingen die voor deze treinen gelden;\n\n* de aanwijzingen over de beperkingen hebt opgevolgd.',
                     ),
                     const SizedBoxH(),
                     const BodyText(
@@ -339,11 +285,8 @@ class AIVervoersregeling extends StatelessWidget {
                     ),
                     const BodyText(
                       indents: 2,
-                      text: '* stel je geen rijweg in;',
-                    ),
-                    const BodyText(
-                      indents: 2,
-                      text: '* licht je de DVL in.',
+                      text:
+                          '* stel je geen rijweg in;\n\n* licht je de DVL in.',
                     ),
                     const SizedBoxH(),
                     const SubTitleText(
@@ -353,13 +296,8 @@ class AIVervoersregeling extends StatelessWidget {
                     const SizedBoxH(),
                     const BodyText(
                       indents: 1,
-                      text: '- De DVL moet de trein herplannen;',
-                    ),
-                    const SizedBoxH(),
-                    const BodyText(
-                      indents: 1,
                       text:
-                          '- Zit er op de oorspronkelijke trein een vervoersregeling, dan geldt die ook voor de herplande en opnieuw ingelegde trein.',
+                          '- De DVL moet de trein herplannen;\n\n- Zit er op de oorspronkelijke trein een vervoersregeling, dan geldt die ook voor de herplande en opnieuw ingelegde trein.',
                     ),
                     const SizedBoxH(),
                     const SubTitleText(

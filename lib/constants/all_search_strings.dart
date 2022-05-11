@@ -69,6 +69,8 @@ List<String> searchStringsList = [
   'ai_rijwegen_ari',
   'ai_rijwegen_planopbouw',
   'ai_rijwegen_planscherm',
+  'ai_rijwegen_trots',
+  'ai_rijwegen_bedienscherm',
   'ai_bijzonderheden_trein_main',
   'ai_bijzondere_aandacht',
   'ai_bijzonderheden_trein',

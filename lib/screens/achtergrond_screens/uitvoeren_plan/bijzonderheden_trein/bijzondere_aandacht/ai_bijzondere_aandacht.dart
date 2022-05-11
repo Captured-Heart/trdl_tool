@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIBijzondereAandacht {
+  home_screen,
+  ai_bijzonderheden_trein_main,
+}
+
 class AIBijzondereAandacht extends StatelessWidget {
   const AIBijzondereAandacht({Key? key}) : super(key: key);
 
@@ -9,10 +14,55 @@ class AIBijzondereAandacht extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Bijzondere aandacht',
+          title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIBijzondereAandacht>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIBijzondereAandacht result) {
+              if (result == WhereToGoFromAIBijzondereAandacht.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIBijzondereAandacht
+                      .ai_bijzonderheden_trein_main) {
+                Navigator.pushNamed(context, 'ai_bijzonderheden_trein_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIBijzondereAandacht>>[
+              PopupMenuItem<WhereToGoFromAIBijzondereAandacht>(
+                value: WhereToGoFromAIBijzondereAandacht.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIBijzondereAandacht>(
+                value: WhereToGoFromAIBijzondereAandacht
+                    .ai_bijzonderheden_trein_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Bijzonderheden Trein'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
@@ -34,7 +84,6 @@ class AIBijzondereAandacht extends StatelessWidget {
                       text:
                           'Het kan voorkomen dat er in de dienst treinen verwacht worden die bijzondere aandacht van de TRDL en DVL eisen. Denk hierbij aan de koninklijke trein of een supporterstrein. Deze treinen worden aan het begin van de dienst via de OvD-S aangekondigd bij de OvD-V.\n\nDe OvD-V bespreekt deze treinen met de TRDL en DVL. Wanneer de treinen niet via de OvD-S op de post aangekondigd kunnen worden, zal de VLC de betreffende trein(en) aankondigen bij de DVL. Die geeft dan eventuele bijzonderheden weer aan je door.',
                     ),
-                    SizedBoxH(),
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'Opdracht van bevoegd functionaris',

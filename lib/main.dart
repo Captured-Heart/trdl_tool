@@ -133,6 +133,8 @@ class MainEntry extends StatelessWidget {
         'ai_rijwegen_ari': (context) => const AIRijwegenARI(),
         'ai_rijwegen_planopbouw': (context) => const AIRijwegenPlanopbouw(),
         'ai_rijwegen_planscherm': (context) => const AIRijwegenPlanscherm(),
+        'ai_rijwegen_trots': (context) => const AIRijwegenTrots(),
+        'ai_rijwegen_bedienscherm': (context) => const AIRijwegenBedienscherm(),
         'ai_bijzonderheden_trein_main': (context) =>
             const AIBijzonderhedenTreinMain(),
         'ai_bijzondere_aandacht': (context) => const AIBijzondereAandacht(),

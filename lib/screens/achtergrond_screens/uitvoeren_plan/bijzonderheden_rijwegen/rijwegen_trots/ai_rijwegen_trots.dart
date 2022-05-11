@@ -1,14 +1,14 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromAIOnjuisteDetectie {
+enum WhereToGoFromAIRijwegenTrots {
   home_screen,
   ww_onjuiste_detectie,
   ai_bijzonderheden_trein,
   ai_vervoersregeling,
 }
 
-class AIOnjuisteDetectie extends StatelessWidget {
-  const AIOnjuisteDetectie({Key? key}) : super(key: key);
+class AIRijwegenTrots extends StatelessWidget {
+  const AIRijwegenTrots({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,29 +19,29 @@ class AIOnjuisteDetectie extends StatelessWidget {
           title: 'Achtergrondinformatie',
         ),
         actions: [
-          PopupMenuButton<WhereToGoFromAIOnjuisteDetectie>(
+          PopupMenuButton<WhereToGoFromAIRijwegenTrots>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIOnjuisteDetectie result) {
-              if (result == WhereToGoFromAIOnjuisteDetectie.home_screen) {
+            onSelected: (WhereToGoFromAIRijwegenTrots result) {
+              if (result == WhereToGoFromAIRijwegenTrots.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromAIOnjuisteDetectie.ww_onjuiste_detectie) {
+                  WhereToGoFromAIRijwegenTrots.ww_onjuiste_detectie) {
                 Navigator.pushNamed(context, 'ww_onjuiste_detectie');
               } else if (result ==
-                  WhereToGoFromAIOnjuisteDetectie.ai_bijzonderheden_trein) {
+                  WhereToGoFromAIRijwegenTrots.ai_bijzonderheden_trein) {
                 Navigator.pushNamed(context, 'ai_bijzonderheden_trein');
               } else if (result ==
-                  WhereToGoFromAIOnjuisteDetectie.ai_vervoersregeling) {
+                  WhereToGoFromAIRijwegenTrots.ai_vervoersregeling) {
                 Navigator.pushNamed(context, 'ai_vervoersregeling');
               } else {
                 Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIOnjuisteDetectie>>[
-              PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
-                value: WhereToGoFromAIOnjuisteDetectie.home_screen,
+                <PopupMenuEntry<WhereToGoFromAIRijwegenTrots>>[
+              PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots.home_screen,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -53,8 +53,8 @@ class AIOnjuisteDetectie extends StatelessWidget {
                   ],
                 ),
               ),
-              PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
-                value: WhereToGoFromAIOnjuisteDetectie.ww_onjuiste_detectie,
+              PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots.ww_onjuiste_detectie,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -66,8 +66,8 @@ class AIOnjuisteDetectie extends StatelessWidget {
                   ],
                 ),
               ),
-              PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
-                value: WhereToGoFromAIOnjuisteDetectie.ai_bijzonderheden_trein,
+              PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots.ai_bijzonderheden_trein,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -79,8 +79,8 @@ class AIOnjuisteDetectie extends StatelessWidget {
                   ],
                 ),
               ),
-              PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
-                value: WhereToGoFromAIOnjuisteDetectie.ai_vervoersregeling,
+              PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots.ai_vervoersregeling,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
