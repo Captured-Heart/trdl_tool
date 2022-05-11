@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIVervoersregeling { home_screen, ww_vervoersregeling, ai_bijzonderheden_trein, ai_onjuiste_detectie, }
+
 class AIVervoersregeling extends StatelessWidget {
   const AIVervoersregeling({Key? key}) : super(key: key);
 
@@ -11,8 +13,83 @@ class AIVervoersregeling extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIVervoersregeling>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIVervoersregeling result) {
+              if (result == WhereToGoFromAIVervoersregeling.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIVervoersregeling.ww_vervoersregeling) {
+                Navigator.pushNamed(context, 'ww_vervoersregeling');
+              } else if (result ==
+                  WhereToGoFromAIVervoersregeling.ai_bijzonderheden_trein) {
+                Navigator.pushNamed(context, 'ai_bijzonderheden_trein');
+              } else if (result ==
+                  WhereToGoFromAIVervoersregeling.ai_onjuiste_detectie) {
+                Navigator.pushNamed(context, 'ai_onjuiste_detectie');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIVervoersregeling>>[
+              PopupMenuItem<WhereToGoFromAIVervoersregeling>(
+                value: WhereToGoFromAIVervoersregeling.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIVervoersregeling>(
+                value: WhereToGoFromAIVervoersregeling.ww_vervoersregeling,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.train,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('WW Vervoersregeling'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIVervoersregeling>(
+                value: WhereToGoFromAIVervoersregeling.ai_bijzonderheden_trein,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Bijzonderheden Trein'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIVervoersregeling>(
+                value: WhereToGoFromAIVervoersregeling.ai_onjuiste_detectie,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Onjuiste Detectie'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
