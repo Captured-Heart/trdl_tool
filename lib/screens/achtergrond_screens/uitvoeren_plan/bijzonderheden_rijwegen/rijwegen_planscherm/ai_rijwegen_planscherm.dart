@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIRijwegenPlanscherm { home_screen, ai_rijwegen_planopbouw, ai_rijwegen_ari, ai_rijwegen_trots, ai_rijwegen_bedienscherm, }
+
 class AIRijwegenPlanscherm extends StatelessWidget {
   const AIRijwegenPlanscherm({Key? key}) : super(key: key);
 
@@ -9,10 +11,101 @@ class AIRijwegenPlanscherm extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Planscherm',
+          title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIRijwegenPlanscherm>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIRijwegenPlanscherm result) {
+              if (result == WhereToGoFromAIRijwegenPlanscherm.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_planopbouw) {
+                Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_ari) {
+                Navigator.pushNamed(context, 'ai_rijwegen_ari');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_trots) {
+                Navigator.pushNamed(context, 'ai_rijwegen_trots');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_bedienscherm) {
+                Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIRijwegenPlanscherm>>[
+              PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
+                value: WhereToGoFromAIRijwegenPlanscherm.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
+                value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_planopbouw,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Rijwegen Planopbouw'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
+                value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_ari,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Rijwegen ARI'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
+                value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_trots,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Rijwegen TROTS'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
+                value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_bedienscherm,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Rijwegen Bedienscherm'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
@@ -64,46 +157,6 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                       text:
                           'Blijkt het om wat voor reden dan ook niet mogelijk de rijweg in het planscherm in te stellen, dan kun je de rijweg in het bedienscherm instellen.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Ga snel naar',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Rijwegen plan(regel)opbouw - basis',
-                          destination: 'ai_rijwegen_planopbouw',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen ARI - basis',
-                          destination: 'ai_rijwegen_ari',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen TROTS en ABT',
-                          destination: 'ai_bijzonderheden_rijwegen_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen bedienscherm - basis',
-                          destination: 'ai_bijzonderheden_rijwegen_main',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),
@@ -227,7 +280,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Procesleiding houdt in de gaten wanneer het volgens het plan tijd is om voor een bepaalde treinactiviteit de rijweg in te stellen. Als de insteltijd is aangebroken verkleurt de planregel van wit naar geel. Je moet zelf beoordelen of het mogelijk is de rijweg in te stellen. Denk daarbij aan de voorwaarden voor rijweginstelling. Als er voor de betreffende planregel klaarmeldingen zijn, moeten ze worden afgevinkt. Wordt dit niet gedaan, dan volgt er een waarschuwing.\n\nAls de opdracht voor rijweginstelling is verstuurd, wordt de planregel verplaatst naar de historie. Mislukt de instelling van een rijweg (mogelijke oorzaak kan een kruisende rijweg zijn…), dan wordt dit gemeld in het bedienscherm. De rijweg kan herplaatst in het planscherm om opnieuw te worden ingesteld. Je kan ook, met eventuele aanpassingen, vanuit het bedienscherm de rijweg instellen. Alleen is de afhandeling dan niet meer te volgen voor meekijkers. Een aanpassing kan zijn dat je het beginspoor moet wijzigen, omdat er al een deel van de (samengestelde) rijweg was ingesteld.\n\nDe postkoppeling heeft tot doel de buurpost tijdig te informeren over de nadering van een trein. Indien een treinnummer verschijnt vanuit een buurpost en ARI staat niet aan voor de relevante planregel of het pplg, dan dient de rijweg handmatig ingesteld te worden. Bij iedere verplaatsing van de naderende trein, dient een volgende seinstap ingesteld te worden.',
+                          'Procesleiding houdt in de gaten wanneer het volgens het plan tijd is om voor een bepaalde treinactiviteit de rijweg in te stellen. Als de insteltijd is aangebroken verkleurt de planregel van wit naar geel. Je moet zelf beoordelen of het mogelijk is de rijweg in te stellen. Denk daarbij aan de voorwaarden voor rijweginstelling. Als er voor de betreffende planregel klaarmeldingen zijn, moeten ze worden afgevinkt. Wordt dit niet gedaan, dan volgt er een waarschuwing.\n\nAls de opdracht voor rijweginstelling is verstuurd, wordt de planregel verplaatst naar de historie. Mislukt de instelling van een rijweg (mogelijke oorzaak kan een kruisende rijweg zijn...), dan wordt dit gemeld in het bedienscherm. De rijweg kan herplaatst in het planscherm om opnieuw te worden ingesteld. Je kan ook, met eventuele aanpassingen, vanuit het bedienscherm de rijweg instellen. Alleen is de afhandeling dan niet meer te volgen voor meekijkers. Een aanpassing kan zijn dat je het beginspoor moet wijzigen, omdat er al een deel van de (samengestelde) rijweg was ingesteld.\n\nDe postkoppeling heeft tot doel de buurpost tijdig te informeren over de nadering van een trein. Indien een treinnummer verschijnt vanuit een buurpost en ARI staat niet aan voor de relevante planregel of het PPLG, dan dient de rijweg handmatig ingesteld te worden. Bij iedere verplaatsing van de naderende trein, dient een volgende seinstap ingesteld te worden.',
                     ),
                     SizedBoxH(),
                     SubTitleText(
@@ -450,7 +503,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'In sommige gevallen, in het bijzonder (maar niet uitsluitend) bij goederentreinen, is instellen van de gehele samengestelde rijweg vereist. Om deze garantie af te dwingen is er een ‘integrale’ instelwijze als optie. Deze optie wordt als expliciete aanduiding in de instelregel van het procesplan aan ARI opgedragen. Je kan de instelwijze wijzigen via het mutatievenster. De default instelwijze is \'gefaseerd\'.',
+                          'In sommige gevallen, in het bijzonder (maar niet uitsluitend) bij goederentreinen, is instellen van de gehele samengestelde rijweg vereist. Om deze garantie af te dwingen is er een \'integrale\' instelwijze als optie. Deze optie wordt als expliciete aanduiding in de instelregel van het procesplan aan ARI opgedragen. Je kan de instelwijze wijzigen via het mutatievenster. De default instelwijze is \'gefaseerd\'.',
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -666,7 +719,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Herstel de fout;\n\n- Controleer de eerstvolgende planregel van dezelfde treinserie;\n\n- Treedt hierbij dezelfde fout op, waarschuw dan de Ovd-V. Die zorgt ervoor dat fouten aan de planningsafdeling worden gemeld, zodat de planning voor de volgende dagen kan worden aangepast.',
+                          '- Herstel de fout;\n\n- Controleer de eerstvolgende planregel van dezelfde treinserie;\n\n- Treedt hierbij dezelfde fout op, waarschuw dan de OvD-V. Die zorgt ervoor dat fouten aan de planningsafdeling worden gemeld, zodat de planning voor de volgende dagen kan worden aangepast.',
                     ),
                     SizedBoxH(),
                     SubTitleText(

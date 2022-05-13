@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIRijwegenARI { home_screen, ww_uitvoeren_plan_main, ai_rijwegen_trots, ai_bijzonderheden_rijwegen, ai_rijwegen_planopbouw, ai_rijwegen_planscherm, ai_rijwegen_bedienscherm, }
+
 class AIRijwegenARI extends StatelessWidget {
   const AIRijwegenARI({Key? key}) : super(key: key);
 
@@ -9,10 +11,133 @@ class AIRijwegenARI extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'ARI',
+          title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIRijwegenARI>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIRijwegenARI result) {
+              if (result == WhereToGoFromAIRijwegenARI.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenARI.ww_uitvoeren_plan_main) {
+                Navigator.pushNamed(context, 'ww_uitvoeren_plan_main');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenARI.ai_rijwegen_trots) {
+                Navigator.pushNamed(context, 'ai_rijwegen_trots');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenARI.ai_bijzonderheden_rijwegen) {
+                Navigator.pushNamed(context, 'ai_bijzonderheden_rijwegen');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenARI.ai_rijwegen_planopbouw) {
+                Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenARI.ai_rijwegen_planscherm) {
+                Navigator.pushNamed(context, 'ai_rijwegen_planscherm');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenARI.ai_rijwegen_bedienscherm) {
+                Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIRijwegenARI>>[
+              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.ww_uitvoeren_plan_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.train,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('WW Uitvoeren Plan'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.ai_rijwegen_trots,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Rijwegen TROTS'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.ai_bijzonderheden_rijwegen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Bijzonderheden Rijwegen'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planopbouw,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Rijwegen Planopbouw'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planscherm,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Rijwegen Planscherm'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.ai_rijwegen_bedienscherm,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Rijwegen Bedienscherm'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
@@ -198,7 +323,7 @@ class AIRijwegenARI extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Als er alleen een tijdvenster zou zijn, dan zouden bijzonderheden_trein met een vertrek- of rangeerregel ver voor vertrektijd door ARI worden ingesteld. Het gevolg zou zijn dat infra onnodig lang zal worden vastgehouden. De trein mag immers niet voor vertrektijd vertrekken. Dit beperkt jou in je mogelijkheden van het spoorgebruik. Het ARI-wachtvenster is bedoeld voor rangeer- en vertrekactiviteiten op stations en emplacementen.',
+                          'Als er alleen een tijdvenster zou zijn, dan zouden treinen met een vertrek- of rangeerregel ver voor vertrektijd door ARI worden ingesteld. Het gevolg zou zijn dat infra onnodig lang zal worden vastgehouden. De trein mag immers niet voor vertrektijd vertrekken. Dit beperkt jou in je mogelijkheden van het spoorgebruik. Het ARI-wachtvenster is bedoeld voor rangeer- en vertrekactiviteiten op stations en emplacementen.',
                     ),
                   ],
                 ),
@@ -433,7 +558,7 @@ class AIRijwegenARI extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Als niet aan alle voorwaarden is voldaan stelt ARI een ROZ-rijweg niet in. Er verschijnt dan een pop-up venster met de volgende tekst:\n\nWaarschuwing - Instellen rijwegen - ARI stelt ROZ-planregel: ...1 niet in, omdat ...2.\n\nBij ...1 wordt de betreffende planregel vermeld, en bij ...2 de reden:',
+                          'Als niet aan alle voorwaarden is voldaan stelt ARI een ROZ-rijweg niet in. Er verschijnt dan een pop-up venster met de volgende tekst:\n\nWaarschuwing - Instellen rijwegen - ARI stelt ROZ-planregel: \'planregel\' niet in, omdat \'reden\':',
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -639,7 +764,7 @@ class AIRijwegenARI extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Een trein die gedeeltelijk, ten onrechte of opnieuw langs een perron tot stilstand komt, levert risico’s op voor persoonlijke ongevallen. Een trein die stil komt te staan in een wisselstraat kost veel infracapaciteit. Daarnaast stelt ILT ook eisen ter voorkoming van het doorschieten van tot stilstand komende treinen voor kruisende en \'intakkende\' sporen. Beide situaties worden voorkomen door het configureren van lokaal specifieke instelvoorschriften. Deze instelvoorschriften worden in de PBH++ door de functioneel beheerder in ARI vastgelegd.',
+                          'Een trein die gedeeltelijk, ten onrechte of opnieuw langs een perron tot stilstand komt, levert risico\'s op voor persoonlijke ongevallen. Een trein die stil komt te staan in een wisselstraat kost veel infracapaciteit. Daarnaast stelt ILT ook eisen ter voorkoming van het doorschieten van tot stilstand komende treinen voor kruisende en \'intakkende\' sporen. Beide situaties worden voorkomen door het configureren van lokaal specifieke instelvoorschriften. Deze instelvoorschriften worden in de PBH++ door de functioneel beheerder in ARI vastgelegd.',
                     ),
                     SizedBoxH(),
                     BoldText(

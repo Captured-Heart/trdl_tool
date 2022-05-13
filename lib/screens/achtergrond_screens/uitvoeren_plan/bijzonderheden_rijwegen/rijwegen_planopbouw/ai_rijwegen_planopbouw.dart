@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIRijwegenPlanopbouw { home_screen, ww_bijzonderheden_rijwegen_main, ai_bijzonderheden_rijwegen_main, ai_rijwegen_planscherm,}
+
 class AIRijwegenPlanopbouw extends StatelessWidget {
   const AIRijwegenPlanopbouw({Key? key}) : super(key: key);
 
@@ -9,10 +11,79 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Planregelopbouw',
+          title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIRijwegenPlanopbouw>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIRijwegenPlanopbouw result) {
+              if (result == WhereToGoFromAIRijwegenPlanopbouw.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenPlanopbouw.ww_bijzonderheden_rijwegen_main) {
+                Navigator.pushNamed(context, 'ww_bijzonderheden_rijwegen_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIRijwegenPlanopbouw>>[
+              PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
+                value: WhereToGoFromAIRijwegenPlanopbouw.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
+                value: WhereToGoFromAIRijwegenPlanopbouw.ww_bijzonderheden_rijwegen_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.train,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('WW Bijzonderheden Rijwegen'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
+                value: WhereToGoFromAIRijwegenPlanopbouw.ai_bijzonderheden_rijwegen_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Bijzonderheden Rijwegen'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
+                value: WhereToGoFromAIRijwegenPlanopbouw.ai_rijwegen_planscherm,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Rijwegen Planscherm'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
@@ -319,7 +390,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'De bijzonderheden bij een treinactiviteit kunnen bestaan uit maximaal 2 codes en/of een vrije tekst. Aangezien er ruimte is voor 11 tekens op een 21 inch scherm kan maar een beperkt deel van deze informatie worden   getoond. Deze ruimte wordt benut om eerst informatie over de standaard bijzonderheden te geven en pas daarna om de   bijzonderheden-tekst te tonen, afgekapt op het beschikbare aantal tekenposities. Als laatste teken wordt een speciaal teken (\'>\') getoond om duidelijk te maken dat er meer informatie is die hier niet meer getoond kan worden.\n\nD.m.v. de knop \'Bijz. heden\' in de planmenubalk kan de volledige tekst worden bekeken.\n\nStandaard bijzonderheden zijn bijzonderheden die aan een trein kunnen worden toegekend, gekozen uit een standaardlijst:',
+                          'De bijzonderheden bij een treinactiviteit kunnen bestaan uit maximaal 2 codes en/of een vrije tekst. Aangezien er ruimte is voor 11 tekens op een 21 inch scherm kan maar een beperkt deel van deze informatie worden getoond. Deze ruimte wordt benut om eerst informatie over de standaard bijzonderheden te geven en pas daarna om de bijzonderheden-tekst te tonen, afgekapt op het beschikbare aantal tekenposities. Als laatste teken wordt een speciaal teken (\'>\') getoond om duidelijk te maken dat er meer informatie is die hier niet meer getoond kan worden.\n\nD.m.v. de knop \'Bijz. heden\' in de planmenubalk kan de volledige tekst worden bekeken.\n\nStandaard bijzonderheden zijn bijzonderheden die aan een trein kunnen worden toegekend, gekozen uit een standaardlijst:',
                     ),
                     BodyText(
                       indents: 2,

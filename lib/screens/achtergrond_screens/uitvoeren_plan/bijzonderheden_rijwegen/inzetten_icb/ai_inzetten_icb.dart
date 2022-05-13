@@ -1,7 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class AIInzettenRailvoertuig extends StatelessWidget {
-  const AIInzettenRailvoertuig({Key? key}) : super(key: key);
+enum WhereToGoFromAIInzettenICB { home_screen, ww_inzetten_icb, ai_bijzonderheden_rijwegen_main, } 
+
+class AIInzettenICB extends StatelessWidget {
+  const AIInzettenICB({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +13,67 @@ class AIInzettenRailvoertuig extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIInzettenICB>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIInzettenICB result) {
+              if (result == WhereToGoFromAIInzettenICB.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIInzettenICB.ww_inzetten_icb) {
+                Navigator.pushNamed(context, 'ww_inzetten_icb');
+              } else if (result ==
+                  WhereToGoFromAIInzettenICB.ai_bijzonderheden_rijwegen_main) {
+                Navigator.pushNamed(context, 'ai_bijzonderheden_rijwegen_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIInzettenICB>>[
+              PopupMenuItem<WhereToGoFromAIInzettenICB>(
+                value: WhereToGoFromAIInzettenICB.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIInzettenICB>(
+                value: WhereToGoFromAIInzettenICB.ww_inzetten_icb,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.train,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('WW Inzetten ICB'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIInzettenICB>(
+                value: WhereToGoFromAIInzettenICB.ai_bijzonderheden_rijwegen_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Bijzonderheden Rijwegen'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
@@ -73,7 +134,7 @@ class AIInzettenRailvoertuig extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De bergingseenheid is een niet detecterend railwegvoertuig (vrachtwagen) met daarop een afzetcontainer, die door middel van een zogenaamde \'haakarm\' afgezet kan worden. zowel op de weg als op het spoor.\n\nHet inzetten van het voertuig op de spoorinfra wordt uitgevoerd door de gereedschapsmachinist - hij kan de installatie vanuit de cabine zelf bedienen. Het inzetten van het railvoertuig duurt ongeveer een kwartier.\n\nRijden over spoor kan in beide richtingen: in de afzetcontainer wordt een bedieningsinrichting geplaatst, zodat de gereedschapsmachinist altijd vooruit tijdens het voertuig bedient.\n\nDe bergingseenheid is gebouwd volgens de laatste inzichten op het gebied van arbo-regels. De inrichting is \'logisch\' gemaakt, en er is een kleine verblijfsruimte om schrijfwerk en overleg comfortabel te kunnen doen.\n\nBij herstelwerkzaamheden buiten de reddings- en bestrijdingsfase (dit wordt door de Algemeen Leider aangegeven) moeten alle sporen, dwz in-, uitzet-, verplaatsings- en bestemmingsspoor, beschikbaar gesteld zijn. Hiervoor gelden dezelfde procedures als bij werkzaamheden.',
+                          'De bergingseenheid is een niet detecterend railwegvoertuig (vrachtwagen) met daarop een afzetcontainer, die door middel van een zogenaamde \'haakarm\' afgezet kan worden. zowel op de weg als op het spoor.\n\nHet inzetten van het voertuig op de spoorinfra wordt uitgevoerd door de gereedschapsMCN - hij kan de installatie vanuit de cabine zelf bedienen. Het inzetten van het railvoertuig duurt ongeveer een kwartier.\n\nRijden over spoor kan in beide richtingen: in de afzetcontainer wordt een bedieningsinrichting geplaatst, zodat de gereedschapsMCN altijd vooruit tijdens het voertuig bedient.\n\nDe bergingseenheid is gebouwd volgens de laatste inzichten op het gebied van ARBO-regels. De inrichting is \'logisch\' gemaakt, en er is een kleine verblijfsruimte om schrijfwerk en overleg comfortabel te kunnen doen.\n\nBij herstelwerkzaamheden buiten de reddings- en bestrijdingsfase (dit wordt door de Algemeen Leider aangegeven) moeten alle sporen, d.w.z. in-, uitzet-, verplaatsings- en bestemmingsspoor, beschikbaar gesteld zijn. Hiervoor gelden dezelfde procedures als bij werkzaamheden.',
                     ),
                     SizedBoxH(),
                     InsertImage(

@@ -2,9 +2,11 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromAIRijwegenTrots {
   home_screen,
-  ww_onjuiste_detectie,
-  ai_bijzonderheden_trein,
-  ai_vervoersregeling,
+  ai_rijwegen_ari,
+  ai_rijwegen_planscherm,
+  ai_bijzonderheden_rijwegen_main,
+  ai_rijwegen_planopbouw,
+  ai_rijwegen_bedienscherm,
 }
 
 class AIRijwegenTrots extends StatelessWidget {
@@ -26,14 +28,20 @@ class AIRijwegenTrots extends StatelessWidget {
               if (result == WhereToGoFromAIRijwegenTrots.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromAIRijwegenTrots.ww_onjuiste_detectie) {
-                Navigator.pushNamed(context, 'ww_onjuiste_detectie');
+                  WhereToGoFromAIRijwegenTrots.ai_rijwegen_ari) {
+                Navigator.pushNamed(context, 'ai_rijwegen_ari');
               } else if (result ==
-                  WhereToGoFromAIRijwegenTrots.ai_bijzonderheden_trein) {
-                Navigator.pushNamed(context, 'ai_bijzonderheden_trein');
+                  WhereToGoFromAIRijwegenTrots.ai_rijwegen_planscherm) {
+                Navigator.pushNamed(context, 'ai_rijwegen_planscherm');
               } else if (result ==
-                  WhereToGoFromAIRijwegenTrots.ai_vervoersregeling) {
-                Navigator.pushNamed(context, 'ai_vervoersregeling');
+                  WhereToGoFromAIRijwegenTrots.ai_bijzonderheden_rijwegen_main) {
+                Navigator.pushNamed(context, 'ai_bijzonderheden_rijwegen_main');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenTrots.ai_rijwegen_planopbouw) {
+                Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenTrots.ai_rijwegen_bedienscherm) {
+                Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
               } else {
                 Navigator.pop(context);
               }
@@ -54,20 +62,7 @@ class AIRijwegenTrots extends StatelessWidget {
                 ),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-                value: WhereToGoFromAIRijwegenTrots.ww_onjuiste_detectie,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Onjuiste Detectie'),
-                  ],
-                ),
-              ),
-              PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-                value: WhereToGoFromAIRijwegenTrots.ai_bijzonderheden_trein,
+                value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_ari,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -75,12 +70,12 @@ class AIRijwegenTrots extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('AI Bijzonderheden Trein'),
+                    const Text('AI Rijwegen ARI'),
                   ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-                value: WhereToGoFromAIRijwegenTrots.ai_vervoersregeling,
+                value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planscherm,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -88,7 +83,46 @@ class AIRijwegenTrots extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('AI Vervoersregeling'),
+                    const Text('AI Rijwegen Planscherm'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots.ai_bijzonderheden_rijwegen_main,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Bijzonderheden Rijwegen'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planopbouw,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Rijwegen Planopbouw'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_bedienscherm,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Rijwegen Bedienscherm'),
                   ],
                 ),
               ),
@@ -108,19 +142,18 @@ class AIRijwegenTrots extends StatelessWidget {
                 child: Column(
                   children: const [
                     TitleText(
-                      title: 'Voertuigen zonder juiste detectie',
+                      title: 'Rijwegen - basisinformatie: Automatische Bediening TROTSnummers (ABT)',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle:
+                          'ABT: Automatische Bediening TROTSnummers',
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
                       text:
-                          'Lichte treinen en/of materieel met schijfremmen worden slechter gedetecteerd omdat de spoorstaven door het slechtere contact tussen de wielen de rails niet goed worden kortgesloten. De treinen worden niet altijd goed gedetecteerd en de ATB EG werkt bij deze treinen ook minder goed omdat dat eveneens via de spoorstroomloop gaat. Het grootste gevaar treedt op bij overwegen, omdat de spoorbomen te laat kunnen sluiten.\n\nDaarom wordt op spoorlijnen met dit materieel vaak een andere detectie geïnstalleerd. Officieel spreekt men bij dit soort materieel van voertuigen zonder de zekerheid van juiste spoordetectie.\n\nIn Nederland zijn bijvoorbeeld de volgende materieeltypen slecht detecteerbaar:',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          '- Lighttrains als de Stadler/GTW en LINT;\n\n- Railvoertuig Incidentenbestrijding;\n\n- Loc G2000.',
+                          'ABT is een functionaliteit van procesleiding waarbij de bediening van TROTS automatisch kan worden uitgevoerd. Deze geautomatiseerde bediening van TROTS wordt uitgevoerd op basis van de informatie uit het procesplan rijwegen (PPR).\n\nDe afkorting TROTS staat voor TRein Observatie en Tracking Systeem.',
                     ),
                   ],
                 ),
@@ -134,14 +167,47 @@ class AIRijwegenTrots extends StatelessWidget {
                 child: Column(
                   children: const [
                     SubTitleText(
-                      subtitle: 'Toegang tot het spoor',
+                      subtitle: 'Automatisch omnummeren',
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
                       text:
-                          'Al het materieel wat op het spoor rijdt is in bezit van een inzetcertificaat. Op het inzetcertificaat staat of er beperkingen zijn voor de inzetbaarheid van het materieel op het gecontroleerde spoor. Voor treinen die niet juist detecteren, zoals hierboven beschreven, worden aanvullende maatregelen voorgeschreven om de veiligheid te waarborgen.\n\nDe vervoerder is verplicht om jou te informeren m.b.t. de juiste detectie op het spoor. Dit kan via een (lokale) orderaanvraag (Medewerker rangeren, DVL) waarbij aangegeven wordt dat het materieel niet (juist) detecteert of een veiligheidsbericht van je buurTRDL.',
+                          'Het  invullen  van  treinnummers bij  materieelrelaties van  het  soort  \'splitsen\',  \'overgaan\'  en  \'combineren\' worden automatisch uitgevoerd. Bij splitsen en overgaan wordt direct bij aankomst omgenummerd. Bij combineren wordt met omnummeren gewacht tot het laatste deel van de materieelrelatie aangekomen is.',
                     ),
+                    SizedBoxH(),
+                    BoldText(
+                      indents: 0,
+                      boldtext: 'Voorwaarden voor automatische omnummering:',
+                    ),
+                    SizedBoxH(),
+                    BodyText(indents: 0, text: 'ABT mag alleen automatisch omnummeren als aan alle volgende voorwaarden is voldaan:\n\nDe twee belangrijkste voorwaarden zijn:',),
+                    SizedBoxH(),
+                    BodyText(indents: 1, text: '1. Het aankomst- en vertrekspoor moeten hetzelfde zijn, of tot dezelfde spoorgroep behoren;\n\n2. Als het aankomst- en vertrekspoor verschillend zijn: binnen de spoorgroep mogen zich geen treinnummers bevinden die niet tot de materieelrelatie behoren.',),
+                    SizedBoxH(),
+                    BodyText(indents: 0, text: 'Punt 3, 4, 5 en 6 beschrijven de uitzonderingssituaties:',),
+                    SizedBoxH(),
+                    BodyText(indents: 1, text: '3. Als het aankomst- en vertrekspoor verschillend zijn: er moet een aaneensluitende sectiebezetting zijn op het vertrekspoor. Daarnaast mag er geen andere sectiebezetting op het vertrekspoor zijn;\n\n4. Bij overgaan en splitsen: de aanvoerende activiteit moet zijn \'aangekomen\'. Dit is het geval zodra het juiste treinnummer op het aankomstspoor aanwezig is en het aankomstspoor bezet wordt. Het aankomstspoor wordt bezet zodra de sectie na het laatste tegensein (in de richting van de aankomstactiviteit) bezet is. Is er geen tegensein aanwezig, of valt het tegensein qua positie samen met het beginsein van de laatste seinstap, dan geldt alleen de eis dat het juiste treinnummer aanwezig moet zijn;\n\n5. Bij combineren: de laatste aanvoerende activiteit  moet zijn \'aangekomen\'. Dit is het geval zodra het treinnummer op het aankomstspoor aanwezig is;\n\n6. Als er van een set bij elkaar horende planregels, één of meer materieelrelaties uit staan voor ABT, zal er geen enkele van de bij deze materieelrelaties behorende omnummeringen plaatsvinden.',),
+                    SizedBoxH(),
+                    BoldText(
+                      indents: 0,
+                      boldtext: 'ABT vanaf TROTS-loze gebieden of sternummers',
+                    ),
+                    SizedBoxH(),
+                    BodyText(indents: 1, text: 'Bij treinen komend vanaf een gebied zonder TROTS, zoals rangeerterreinen, grensbaanvakken en bij treinen met een sternummer komend vanaf de vrije baan krijg je bedienvoorstellen (ABT-knop licht rood op). Sternummers die optreden op andere sporen dan vrije baansporen worden door ABT ongemoeid gelaten. Tijdens een stroomstoring dienen geen ABT bedienvoorstellen gegeven te worden.',),
+                    SizedBoxH(),
+                    BoldText(
+                      indents: 0,
+                      boldtext: 'ABT tijdvenster bij gebieden zonder TROTS',
+                    ),
+                    SizedBoxH(),
+                    BodyText(indents: 1, text: 'Om tijdig de TRDL te triggeren dat er een treinnummer op een bepaald spoor ingevuld moet worden, genereert ABT bij gebieden zonder TROTS een bedienvoorstel. Het bedienvoorstel wordt gegeven op een bepaalde door de postbeheerder configureerbare tijd en spoor van 0-10 minuten vóór de insteltijd. Dit betreft het ABT tijdvenster.\n\nLet op: ABT vanaf TROTS-loze gebieden en automatisch omnummeren als gevolg van een materieelrelatie werken onafhankelijk van elkaar. Dit betekent dat er een pop-up kan verschijnen over een in te voeren/wijziging TROTS-nummer terwijl de omnummering door de materieelrelatie al is uitgevoerd.',),
+                    BoldText(
+                      indents: 0,
+                      boldtext: 'ABT tijdvenster binnen de automatische omnummering',
+                    ),
+                    SizedBoxH(),
+                    BodyText(indents: 1, text: 'ABT heeft een eigen tijdvenster binnen de automatische omnummering van 30 minuten. Dit tijdvenster is actief per activiteit rond de insteltijd van deze planregel, dus voor een eerste afvoerende activiteit met een insteltijd van 10.00 uur zal het tijdvenster actief zijn van 9.30 uur tot 10.30 uur.\n\nVoor een tweede activiteit met een insteltijd van 10.05 uur zal het tijdvenster actief zijn van 9.35 uur tot 10.35 uur en zal ABT binnen deze tijdsperiode dus nog omnummeren.\n\nBij aanpassing van de insteltijd wordt ook de scoop van het tijdvenster mee aangepast: dus na 10.35 uur wordt er niet meer omgenummerd tenzij de insteltijd wordt opgehoogd.\n\nUiteraard werkt het tijdvenster ook zo voor combineer- en overgangsrelaties, denk hierbij aan treinen die veel te vroeg of te laat binnenkomen. Het tijdvenster ABT is actief per individuele omnummeractiviteiten niet configureerbaar.',),
                   ],
                 ),
               ),
@@ -154,34 +220,82 @@ class AIRijwegenTrots extends StatelessWidget {
                 child: Column(
                   children: const [
                     SubTitleText(
-                      subtitle: 'Detectie op niet aangepaste baanvakken',
+                      subtitle: 'Bediening',
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
                       text:
-                          'Overigens is uit detectieproeven gebleken dat op spoor wat niet is aangepast voor het berijden met Lightrail een solo rijdende DM90 en minimaal twee gekoppelde LINT-stellen zich wél normaal detecteren als het spoor binnen 24 uur minimaal 36 keer is bereden door normaal detecterend elektrisch materieel. Ook is vastgesteld dat minimaal twee gekoppelde DM90-stellen zich ook normaal detecteren; er hoeft dan niet aan extra voorwaarden worden voldaan.',
+                          'ABT is selectief aan/uit te schakelen per PPLG, per spoor of per planregel. Alleen afvoerende activiteiten kunnen worden uitgezet.\n\nDe toegang tot de ABT instellingen verloopt via 2 knoppen in het planmenu van het procesplan rijwegen venster:',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: const [
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 1,
+                      text:
+                          '- De knop \'ABT\';\n\n- De knop \'ARI/ABT\'.',
+                    ),
+                    SizedBoxH(),
                     SubTitleText(
-                      subtitle:
-                          'Voertuigen zonder juiste detectie i.c.m. overwegen',
+                      subtitle: 'ABT presentatie in de planregel',
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
                       text:
-                          'Voor het veilig berijden van overwegen hoef je als TRDL niets te doen, dit is aan de begeleider van het voertuig zonder juiste detectie: aanwijzingen OVW zijn dus niet nodig; dit in tegenstelling tot het berijden van gedurende langere tijd niet bereden sporen.\n\nTenzij je links tegen de rijrichting gaat rijden. De Werkwijze Treindienstleider schrijft dan voor dat je met een aanwijzing OVW rijdt.',
+                          'Voor een goede werking van ARI en reizigersinformatie systemen is het belangrijk dat treinnummers op het juiste moment en plaats naar een nieuw nummer worden omgenummerd. ABT doet dit op basis van materieelrelaties.\n\nOmdat de ABT-instellingen en -afhandelingen één op één samenhangen met de planregels op het procesplan rijwegen venster, worden ze gepresenteerd door middel van verschillende weergaves van de \'M\' in de betreffende planregels:',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 1,
+                      text:
+                          '- m = planregel behoort bij een aanvoerende activiteit;\n\n- M = planregel behoort bij een afvoerende activiteit.',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'De kleine letter m heeft altijd de kleur die de gehele planregel heeft. De kleuren van de hoofdletter M zie je hieronder uitgelegd.',
+                    ),
+                    SizedBoxH(),
+                    InsertImage(image: 'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_trots/rijwegentrots1.png'),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Als de M een andere kleur heeft dan wit kan je nadere informatie over de ABT status opvragen door een pop-up venster op te roepen met de ABT status voor die planregel.\n\nAls de M een andere kleur heeft dan wit kan je nadere informatie over de ABT status opvragen door een pop-up venster op te roepen met de ABT status voor die planregel.',
+                    ),
+                    SizedBoxH(),
+                    BoldText(indents: 0, boldtext: 'De mogelijke statussen bij groen en zeegroen zijn:',),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 1,
+                      text:
+                          '- ABT wacht op een aanvoerende trein;\n\n- Binnen de spoorgroep van de materieelrelatie bevindt zich een treinnummer, dat niet bij de materieelrelatie hoort, met vermelding van het treinnummer;\n\n- ABT wacht tot alle planregels voor aanvoerende activiteiten afgehandeld zijn (bijv. bij het omrijden van materieel);\n\n- Status onbekend (bijv. na in- en uitloggen).',
+                    ),
+                    SizedBoxH(),
+                    BoldText(indents: 0, boldtext: 'De mogelijke statussen bij rood zijn:',),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 1,
+                      text:
+                          '- ABT heeft niet omgenummerd, omdat het tijdvenster verstreken is;\n\n- ABT heeft het omnummeren afgebroken met een foutmelding. Deze foutmelding wordt ook gepresenteerd in het meldingenvenster, maar dat kan erg ruim voor het moment van omnummeren zijn geweest, waardoor de betekenis van de melding aan de TRDL voorbij is gegaan;\n\n- De samengestelde materieelrelatie is te complex voor ABT.',
+                    ),
+                    SizedBoxH(),
+                    BoldText(indents: 0, boldtext: 'Hoe wordt ABT bedienvoorstel getoond?',),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Nadat je in de planmenubalk de ABT knop hebt geactiveerd, wordt het ABT bedienvoorstel voor de invoer van een treinnummer zichtbaar. Deze bestaat uit een pop-up op het procesplan rijwegen venster met een keuzelijst met activiteitnummers die in het PPR overeenkomen met de van-spoorlocatie en de insteltijd.',
+                    ),
+                    SizedBoxH(),
+                    InsertImage(image: 'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_trots/rijwegentrots2.png'),
+                    SizedBoxH(),
+                    BoldText(indents: 0, boldtext: 'ABT bedienvoorstel pop-up',),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Bij het verschijnen van deze pop-up wordt er slechts één treinnummer getoond. Pas als de TRDL op de knop \'Treinnummer\' drukt, verschijnt ook de lijst met alternatieve treinnummers, die gekozen worden op basis van het van-spoor en het plan. Hieruit kan dan een ander treinnummer gekozen worden. Handmatige bewerking van het voorgestelde treinnummer is ook mogelijk. De knoppen \'Volgend voorstel\' en \'Vorig voorstel\' maken het mogelijk om door de lijst met nog niet verwerkte bedienvoorstellen te lopen.',
                     ),
                   ],
                 ),

@@ -129,7 +129,7 @@ class MainEntry extends StatelessWidget {
         'ai_uitvoeren_plan_main': (context) => const AIUitvoerenPlanMain(),
         'ai_bijzonderheden_rijwegen_main': (context) =>
             const AIBijzonderhedenRijwegenMain(),
-        'ai_inzetten_railvoertuig': (context) => const AIInzettenRailvoertuig(),
+        'ai_inzetten_icb': (context) => const AIInzettenICB(),
         'ai_rijwegen_ari': (context) => const AIRijwegenARI(),
         'ai_rijwegen_planopbouw': (context) => const AIRijwegenPlanopbouw(),
         'ai_rijwegen_planscherm': (context) => const AIRijwegenPlanscherm(),
