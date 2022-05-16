@@ -127,28 +127,28 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
                         ),
                         SizedBoxH(),
                         NavButton(
-                          buttontext: 'Opbouw Plan - basis',
+                          buttontext: 'Rijwegen - Planopbouw',
                           destination: 'ai_rijwegen_planopbouw',
                         ),
                         SizedBoxH(),
                         NavButton(
-                          buttontext: 'Werken Met Plan - basis',
+                          buttontext: 'Rijwegen - Planscherm',
                           destination: 'ai_rijwegen_planscherm',
                         ),
                         SizedBoxH(),
                         NavButton(
-                          buttontext: 'ARI - basis',
+                          buttontext: 'Rijwegen - ARI',
                           destination: 'ai_rijwegen_ari',
                         ),
                         SizedBoxH(),
                         NavButton(
-                          buttontext: 'TROTS en ABT - basis',
+                          buttontext: 'Rijwegen - TROTS en ABT',
                           destination: 'ai_rijwegen_trots',
                         ),
                         SizedBoxH(),
                         //TODO: Hier verder met enums en navigatie!
                         NavButton(
-                          buttontext: 'Rijweg in bedienscherm',
+                          buttontext: 'Rijwegen - Bedienscherm',
                           destination: 'ai_rijwegen_bedienscherm',
                         ),
                       ],
