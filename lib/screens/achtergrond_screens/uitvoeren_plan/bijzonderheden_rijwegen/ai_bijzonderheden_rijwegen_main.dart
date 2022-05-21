@@ -146,7 +146,6 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
                           destination: 'ai_rijwegen_trots',
                         ),
                         SizedBoxH(),
-                        //TODO: Hier verder met enums en navigatie!
                         NavButton(
                           buttontext: 'Rijwegen - Bedienscherm',
                           destination: 'ai_rijwegen_bedienscherm',

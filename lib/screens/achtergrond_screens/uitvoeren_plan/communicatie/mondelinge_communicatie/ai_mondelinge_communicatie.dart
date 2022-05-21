@@ -1,7 +1,8 @@
 import 'package:trdl_tool/all_imports.dart';
 
-class AIMondelingeVeiligheidsCommunicatie extends StatelessWidget {
-  const AIMondelingeVeiligheidsCommunicatie({Key? key}) : super(key: key);
+class AIMondelingeCommunicatie extends StatelessWidget {
+  const class AIMondelingeCommunicatie extends StatelessWidget {
+({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
