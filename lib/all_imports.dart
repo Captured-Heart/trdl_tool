@@ -192,7 +192,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderhe
 
 /*ACHTERGROND INFORMATIE COMMUNICATIE PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/ai_communicatie_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/mondelinge_veiligheid/ai_mondelinge_veiligheidscommunicatie.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/mondelinge_communicatie/ai_mondelinge_communicatie.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatiemiddelen/ai_communicatiemiddelen.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatiesysteem/ai_communicatiesysteem.dart';
 

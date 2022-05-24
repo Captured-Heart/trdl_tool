@@ -13,7 +13,15 @@ showVersionUpdatePopup(context) {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CurrentVersion(
-                  versionNumber: '0.2.3',
+                  versionNumber: '0.2.4',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-06-24: 0.2.4',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Achtergrondnavigatie wordt gaandeweg aangepast naar nieuwe structuur;\n- Zoekfunctie verder uitgebreid;\n- Routing aangepast naar nieuwe navigatiestijl;\n- Upgrade naar Flutter 3.0.1 en Dart 2.16!;\n- Werkwijze aangevuld met info die vanuit SharePoint amper vindbaar is.',
                 ),
                 SizedBoxH(),
                 DateChanged(
