@@ -2,7 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWMondelingeCommunicatie {
   home_screen,
-  ai_mondelinge_veiligheidscommunicatie
+  ai_mondelinge_communicatie,
 }
 
 class WWMondelingeCommunicatie extends StatelessWidget {
@@ -25,9 +25,8 @@ class WWMondelingeCommunicatie extends StatelessWidget {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWMondelingeCommunicatie
-                      .ai_mondelinge_veiligheidscommunicatie) {
-                Navigator.pushNamed(
-                    context, 'ai_mondelinge_veiligheidscommunicatie');
+                      .ai_mondelinge_communicatie) {
+                Navigator.pushNamed(context, 'ai_mondelinge_communicatie');
               } else {
                 Navigator.pop(context);
               }
@@ -49,7 +48,7 @@ class WWMondelingeCommunicatie extends StatelessWidget {
               ),
               PopupMenuItem<WhereToGoFromWWMondelingeCommunicatie>(
                 value: WhereToGoFromWWMondelingeCommunicatie
-                    .ai_mondelinge_veiligheidscommunicatie,
+                    .ai_mondelinge_communicatie,
                 child: FittedBox(
                   fit: BoxFit.fitWidth,
                   child: Row(
@@ -59,7 +58,7 @@ class WWMondelingeCommunicatie extends StatelessWidget {
                         Icons.menu_book,
                         color: flexSchemeLight.primary,
                       ),
-                      const Text('AI Mondelinge Veiligheidscommunicatie'),
+                      const Text('AI Mondelinge Communicatie'),
                     ],
                   ),
                 ),
