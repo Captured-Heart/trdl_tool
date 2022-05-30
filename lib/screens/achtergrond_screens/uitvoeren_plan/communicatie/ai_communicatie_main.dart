@@ -161,13 +161,13 @@ class AICommunicatieMain extends StatelessWidget {
                           buttontext: 'Communicatiemiddelen - Basis',
                           destination: 'ai_communicatiemiddelen',
                         ),
-                        //TODO: Hier verder met enums en navigatie!
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Communicatiesysteem GSM-R - Basis',
                           destination: 'ai_communicatiesysteem',
                         ),
                         SizedBoxH(),
+                        //TODO: Hier verder met enums en navigatie!
                         NavButton(
                           buttontext: 'Externe ketenpartners',
                           destination: 'ai_externe_ketenpartners',
