@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAINcbg { home_screen, ww_ncbg, }
+
 class AINcbg extends StatelessWidget {
   const AINcbg({Key? key}) : super(key: key);
 
@@ -11,8 +13,51 @@ class AINcbg extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAINcbg>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAINcbg result) {
+              if (result == WhereToGoFromAINcbg.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAINcbg.ww_ncbg) {
+                Navigator.pushNamed(context, 'ww_ncbg');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAINcbg>>[
+              PopupMenuItem<WhereToGoFromAINcbg>(
+                value: WhereToGoFromAINcbg.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAINcbg>(
+                value: WhereToGoFromAINcbg.ww_ncbg,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.train,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('WW NCBG'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
@@ -64,32 +109,6 @@ class AINcbg extends StatelessWidget {
                 ),
               ),
             ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Ga snel naar',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'NCBG - Werkwijze',
-                          destination: 'ww_ncbg',
-                        ),
-                        SizedBoxH(),
-                      ],
-                    ),
-                    const SizedBoxH(),
-                  ],
-                ),
-              ),
-            ),
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
@@ -116,19 +135,7 @@ class AINcbg extends StatelessWidget {
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '- Ter voorkoming van gevaar;',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          '- Als de infra gebruiker hierom verzoekt en dit mogelijk is;',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          '- Voor bijsturing om het actuele plan uitvoerbaar te houden.',
+                      text: '- Ter voorkoming van gevaar;\n\n- Als de infra gebruiker hierom verzoekt en dit mogelijk is;\n\n- Voor bijsturing om het actuele plan uitvoerbaar te houden.',
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -144,12 +151,7 @@ class AINcbg extends StatelessWidget {
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '- Sturing op rijwegniveau;',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text: '- Sturing op TijdRuimte-slotniveau.',
+                      text: '- Sturing op rijwegniveau;\n\n- Sturing op TijdRuimte-slotniveau.',
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -166,13 +168,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Voor het overgaan van sturing op TijdRuimte-slotniveau naar sturing op rijwegniveau informeer je de in het TijdRuimte-slot aanwezige infra gebruiker dat vanaf nu per beweging toestemming van jou nodig is. Je registreert de spoorbezetting en bijzonderheden.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Voor het overgaan van sturing op rijwegniveau naar sturing op TijdRuimte-slotniveau informeer je de dan in het TijdRuimte-slot aanwezige infragebruiker dat vanaf nu per beweging geen toestemming van jou nodig is.',
+                          'Voor het overgaan van sturing op TijdRuimte-slotniveau naar sturing op rijwegniveau informeer je de in het TijdRuimte-slot aanwezige infra gebruiker dat vanaf nu per beweging toestemming van jou nodig is. Je registreert de spoorbezetting en bijzonderheden.\n\nVoor het overgaan van sturing op rijwegniveau naar sturing op TijdRuimte-slotniveau informeer je de dan in het TijdRuimte-slot aanwezige infragebruiker dat vanaf nu per beweging geen toestemming van jou nodig is.',
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -194,7 +190,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Een deadlock-situatie is in de planning uitgesloten. Je kunt zonder overleg met de treindienstleider CBG een trein/rangeerdeel van een NCBG in de richting van het overgave spoor laten rijden als dit volgens planning gebeurt. De treindienstleider CBG mag zonder overleg met jou een trein van het centraal bediende gebied naar het overgavespoor laten rijden als dit volgens planning gebeurt. Bij afwijking van het plan moet de overgang afgestemd worden tussen jou en de treindienstleider CBG.',
+                          'Een deadlock-situatie is in de planning uitgesloten. Je kunt zonder overleg met de TRDL CBG een trein/rangeerdeel van een NCBG in de richting van het overgave spoor laten rijden als dit volgens planning gebeurt. De TRDL CBG mag zonder overleg met jou een trein van het centraal bediende gebied naar het overgavespoor laten rijden als dit volgens planning gebeurt. Bij afwijking van het plan moet de overgang afgestemd worden tussen jou en de TRDL CBG.',
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -206,30 +202,18 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Je geeft toestemming tot de grens tussen door ProRail beheerde sporen en niet door ProRail beheerde sporen. De infragebruiker rijdt vervolgens op eigen verantwoordelijkheid en inzicht het niet door ProRail beheerde spoor op. Je spreekt met de machinist af dat hij de ProRailsporen vrij meldt zodra hij in zijn geheel is aangekomen op de niet door ProRail beheerde sporen. Als de infragebruikers vanuit niet door ProRail beheerde sporen naar wel door ProRail beheerde sporen wil rijden, dient eerst toestemming van de treindienstleider NCBG te zijn verkregen.',
+                          'Je geeft toestemming tot de grens tussen door ProRail beheerde sporen en niet door ProRail beheerde sporen. De infragebruiker rijdt vervolgens op eigen verantwoordelijkheid en inzicht het niet door ProRail beheerde spoor op. Je spreekt met de MCN af dat hij de ProRailsporen vrij meldt zodra hij in zijn geheel is aangekomen op de niet door ProRail beheerde sporen. Als de infragebruikers vanuit niet door ProRail beheerde sporen naar wel door ProRail beheerde sporen wil rijden, dient eerst toestemming van de TRDL NCBG te zijn verkregen.',
                     ),
                     SizedBoxH(),
                     BoldText(
                       indents: 0,
-                      boldtext: 'Overleg met treindienstleider',
+                      boldtext: 'Overleg met TRDL',
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
                       text:
-                          'Wijzigingen in het planmatig gebruik van TijdRuimte-slot of rijwegen en vertraging/vervroeging/uitlopen van werkzaamheden die gevolgen hebben voor knooppuntprocessen van het aangrenzende centraal bediend gebied geef je door aan de treindienstleider van het aangrenzende centraal bediende gebied. Je overlegt met deze treindienstleider over de gevolgen van de vertraging/vervroeging.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Je bespreekt met de treindienstleider van het aangrenzende centraal bediende gebied de mogelijke aanpassingen/wijzingen in benutting van de infracapaciteit op het centraal en niet-centraal bediende van het emplacement.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Als de treindienstleider bijstuurt, gaat dit in overleg met de infragebruikers.',
+                          'Wijzigingen in het planmatig gebruik van TijdRuimte-slot of rijwegen en vertraging/vervroeging/uitlopen van werkzaamheden die gevolgen hebben voor knooppuntprocessen van het aangrenzende centraal bediend gebied geef je door aan de TRDL van het aangrenzende centraal bediende gebied. Je overlegt met deze TRDL over de gevolgen van de vertraging/vervroeging.\n\nJe bespreekt met de TRDL van het aangrenzende centraal bediende gebied de mogelijke aanpassingen/wijzingen in benutting van de infracapaciteit op het centraal en niet-centraal bediende van het emplacement.\n\nAls de TRDL bijstuurt, gaat dit in overleg met de infragebruikers.',
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -240,7 +224,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Je ontvangt orderaanvragen van de infragebruiker. Bij lokale en bovenlokale orderaanvragen waarbij extra capaciteit gevraagd wordt in de vorm van een TijdRuimte-slot, overlegt de (buur)treindienstleider CBG met jou over de benuttingstijd en het tijdstip waarop de trein mag oprijden tot het sein dat toegang geeft tot het TijdRuimte-slot.',
+                          'Je ontvangt orderaanvragen van de infragebruiker. Bij lokale en bovenlokale orderaanvragen waarbij extra capaciteit gevraagd wordt in de vorm van een TijdRuimte-slot, overlegt de (buur)TRDL CBG met jou over de benuttingstijd en het tijdstip waarop de trein mag oprijden tot het sein dat toegang geeft tot het TijdRuimte-slot.',
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -251,19 +235,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De benutting en alle wijzigingen in die benutting van het gebruik van het NCBG-gebied worden door jou geregistreerd. Registratie wordt gedaan op het sturingsniveau en op spoorbezetting.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Als een TijdRuimte-slot is toegekend aan een infragebruiker vindt registratie plaats op het moment dat de infragebruiker het TijdRuimte-slot ingaat. Het volgende registratiemoment is wanneer de infragebruiker het Tijdruimte-slot weer verlaat. Op dat moment wordt de actuele spoorbezetting geregistreerd en eventuele bijzonderheden aan de infra (buiten dienst, storingen). Bij het terugkrijgen van een TijdRuimte-slot van een infragebruiker benoem je het exacte tijdstip van overdracht.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Als gestuurd wordt op rijwegniveau registreer je voorafgaand aan de toestemming voor de lokale orderaanvraag de \'van – via – naar\' sporen. Je registreert direct na de uitvoering van de lokale orderaanvraag de actuele spoorbezetting. Wanneer een infragebruiker een specifieke route wenst, dan vraagt deze bij jou die aan middels een lokale orderaanvraag. Je kan aangeven (als gevolg van eerdere registratie) of de gewenste route vrij en bruikbaar is. Bijzonderheden aan de infra worden geregistreerd op spoorniveau in TRON.',
+                          'De benutting en alle wijzigingen in die benutting van het gebruik van het NCBG-gebied worden door jou geregistreerd. Registratie wordt gedaan op het sturingsniveau en op spoorbezetting.\n\nAls een TijdRuimte-slot is toegekend aan een infragebruiker vindt registratie plaats op het moment dat de infragebruiker het TijdRuimte-slot ingaat. Het volgende registratiemoment is wanneer de infragebruiker het Tijdruimte-slot weer verlaat. Op dat moment wordt de actuele spoorbezetting geregistreerd en eventuele bijzonderheden aan de infra (buiten dienst, storingen). Bij het terugkrijgen van een TijdRuimte-slot van een infragebruiker benoem je het exacte tijdstip van overdracht.\n\nAls gestuurd wordt op rijwegniveau registreer je voorafgaand aan de toestemming voor de lokale orderaanvraag de \'van - via - naar\' sporen. Je registreert direct na de uitvoering van de lokale orderaanvraag de actuele spoorbezetting. Wanneer een infragebruiker een specifieke route wenst, dan vraagt deze bij jou die aan middels een lokale orderaanvraag. Je kan aangeven (als gevolg van eerdere registratie) of de gewenste route vrij en bruikbaar is. Bijzonderheden aan de infra worden geregistreerd op spoorniveau in TRON.',
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -274,7 +246,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Wanneer je de melding hebt ontvangen dat een spoor is ingekort met een rode vlag/rode lamp of een afsluitbord licht je de machinist in.',
+                          'Wanneer je de melding hebt ontvangen dat een spoor is ingekort met een rode vlag/rode lamp of een afsluitbord licht je de MCN in.',
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -285,19 +257,13 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Wanneer een spoor bezet is, geef je de infracapaciteit pas vrij nadat je de machinist hebt ingelicht en je de zekerheid hebt dat:',
+                          'Wanneer een spoor bezet is, geef je de infracapaciteit pas vrij nadat je de MCN hebt ingelicht en je de zekerheid hebt dat:',
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '- Er geen andere beweging op het spoor plaatsvindt;',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          '- De gemelde werkzaamheden aan voertuigen op het spoor gereed zijn.',
+                          '- Er geen andere beweging op het spoor plaatsvindt;\n\n- De gemelde werkzaamheden aan voertuigen op het spoor gereed zijn.',
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -308,29 +274,12 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Je informeert de buurtreindienstleider over vertragingen. Mogelijke oorzaken van de vertraging:',
+                          'Je informeert de buurTRDL over vertragingen. Mogelijke oorzaken van de vertraging:',
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '- Uitlopen activiteiten in TijdRuimte-slot;',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text: '- Trein defect binnen het TijdRuimte-slot;',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          '- Trein kan tijdelijk niet verder door storing/stremming;',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          '- Trein/rangeerdeel waarvoor tijdelijk geen personeel/materieel aanwezig is;',
+                      text: '- Uitlopen activiteiten in TijdRuimte-slot;\n\n- Trein defect binnen het TijdRuimte-slot;\n\n- Trein kan tijdelijk niet verder door storing/stremming;\n\n- Trein/rangeerdeel waarvoor tijdelijk geen personeel/materieel aanwezig is.',
                     ),
                   ],
                 ),
@@ -351,19 +300,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'TRON staat voor \'TReindienstleiding Op NCBG\'. TRON-webapplicatie heeft tot doel beter te kunnen registreren. TRON-webapplicatie is ook in staat deze registraties te visualiseren. Er verandert niets in de werkwijze van een TRDL. Alleen de manier van registreren wijkt sterk af van de gangbare hulpmiddelen. ​​​​​​',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Treindienstleiders werken op dit moment met TRON om treinbewegingen en spoorbezetting te registreren in een NCBG. TRON is een extern programma (net zoals LOA-online).',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'In de toekomst zal TRON vervangen worden door een registratiesysteem dat geïntegreerd is met procesleiding. (Zoals SBG++ en TRR) Dit geïntegreerde systeem heet \'Feniks\'.',
+                          'TRON staat voor \'TReindienstleiding Op NCBG\'. TRON-webapplicatie heeft tot doel beter te kunnen registreren. TRON-webapplicatie is ook in staat deze registraties te visualiseren. Er verandert niets in de werkwijze van een TRDL. Alleen de manier van registreren wijkt sterk af van de gangbare hulpmiddelen.\n\nTRDL werken op dit moment met TRON om treinbewegingen en spoorbezetting te registreren in een NCBG. TRON is een extern programma (net zoals LOA-online).\n\nIn de toekomst zal TRON vervangen worden door een registratiesysteem dat geïntegreerd is met procesleiding. (Zoals SBG++ en TRR) Dit geïntegreerde systeem heet \'Feniks\'.',
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -374,31 +311,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Om van TRON-webapplicatie gebruik te kunnen maken, moet je je eerst aanmelden.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Na opstarten TRON-webapplicatie dien je eerst een locatie te kiezen. Na het kiezen van de locatie komen automatisch de mogelijke functies beschikbaar. Na kiezen van een functie komen automatisch de mogelijke gebruikers beschikbaar.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Kies een gebruikersnaam, voer het bijbehorende wachtwoord in en druk \'Enter\' of \'Return\' of klik op de knop \'Registreer\'.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Na aanmelding verschijnt het venster met alle benodigde onderdelen om voor één of meerdere NCBG te kunnen registreren. Beheer je als TRDL meerdere NCBG\'s, kunnen deze in één functie worden samengevoegd. Middels de keuzelijst achter \'Gebieden:\' kun je snel wisselen tussen registratie/visualisatie van verschillende NCBG. Hebben twee NCBG raakvlakken met elkaar, zullen op deze raakvlakken de registraties/beeld gesynchroniseerd worden. Dit geldt ook als een NCBG in één of meer configuraties is opgedeeld.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'N.B.: In het aanmeldvenster is een extra optie beschikbaar gekomen om direct na aanmelden een intro van enkele minuten te kunnen zien (en horen). Enkel de intro starten kan middels de knop \'Intro\' linksonder op het aanmeldingsscherm. Wil je, terwijl je aangemeld bent, de intro (nogmaals) zien (en horen), toets dan in het formulierveld van \'Bediening\' de code SWA en druk de ENTER-toets, en de intro wordt (opnieuw) afgespeeld.',
+                          'Om van TRON-webapplicatie gebruik te kunnen maken, moet je je eerst aanmelden.\n\nNa opstarten TRON-webapplicatie dien je eerst een locatie te kiezen. Na het kiezen van de locatie komen automatisch de mogelijke functies beschikbaar. Na kiezen van een functie komen automatisch de mogelijke gebruikers beschikbaar.\n\nKies een gebruikersnaam, voer het bijbehorende wachtwoord in en druk \'Enter\' of \'Return\' of klik op de knop \'Registreer\'.\n\nNa aanmelding verschijnt het venster met alle benodigde onderdelen om voor één of meerdere NCBG te kunnen registreren. Beheer je als TRDL meerdere NCBG\'s, kunnen deze in één functie worden samengevoegd. Middels de keuzelijst achter \'Gebieden:\' kun je snel wisselen tussen registratie/visualisatie van verschillende NCBG. Hebben twee NCBG raakvlakken met elkaar, zullen op deze raakvlakken de registraties/beeld gesynchroniseerd worden. Dit geldt ook als een NCBG in één of meer configuraties is opgedeeld.\n\nN.B.: In het aanmeldvenster is een extra optie beschikbaar gekomen om direct na aanmelden een intro van enkele minuten te kunnen zien (en horen). Enkel de intro starten kan middels de knop \'Intro\' linksonder op het aanmeldingsscherm. Wil je, terwijl je aangemeld bent, de intro (nogmaals) zien (en horen), toets dan in het formulierveld van \'Bediening\' de code SWA en druk de ENTER-toets, en de intro wordt (opnieuw) afgespeeld.',
                     ),
                   ],
                 ),
@@ -424,7 +337,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          '​​​​​​​​​​​​​​Het venster is in meerdere secties te verdelen, te weten:​​​​​​',
+                        'Het venster is in meerdere secties te verdelen, te weten:',
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -454,32 +367,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 2,
                       text:
-                          '- Knop \'Help\' geeft een beknopte informatie over TRON en andere/overige informatie;',
-                    ),
-                    BodyText(
-                      indents: 2,
-                      text:
-                          '- Knop \'Ged. bewegingen / TRS\'en\' (Tijd Ruimte Slot);',
-                    ),
-                    BodyText(
-                      indents: 2,
-                      text:
-                          '- Knop \'Mijn wachtwoord wijzigen\' – indien toegestaan kan hier het eigen wachtwoord gewijzigd worden;',
-                    ),
-                    BodyText(
-                      indents: 2,
-                      text:
-                          '- Knop \'Plangegevens importeren\' - Het installeren van een rangeerplan hier gestart worden.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text: 'Knop \'Sein-/Wisseladmin',
-                    ),
-                    BodyText(
-                      indents: 2,
-                      text:
-                          '- Deze knop is alleen zichtbaar indien het een registratie voor een PPLG van een uitwijksituatie fase 3 betreft. Hiermee kunnen de statussen van seinen en standen van wissels geadministreerd worden.',
+                          '- Knop \'Help\' geeft een beknopte informatie over TRON en andere/overige informatie;\n\n- Knop \'Ged. bewegingen / TRS\'en\' (Tijd Ruimte Slot);\n\n- Knop \'Mijn wachtwoord wijzigen\' - indien toegestaan kan hier het eigen wachtwoord gewijzigd worden;\n\n- Knop \'Plangegevens importeren\' - Het installeren van een rangeerplan hier gestart worden;\n\n- Knop \'Sein-/Wisseladmin\' - Deze knop is alleen zichtbaar indien het een registratie voor een PPLG van een uitwijksituatie fase 3 betreft. Hiermee kunnen de statussen van seinen en standen van wissels geadministreerd worden.',
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -573,18 +461,13 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De door het getal aangegeven snelheid wordt niet overschreden, totdat:​​​​​​',
+                          'De door het getal aangegeven snelheid wordt niet overschreden, totdat:',
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '- De voorkant van de trein de overweg is gepasseerd, of;',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text: '- De gehele trein de weegbrug is gepasseerd.',
+                          '- De voorkant van de trein de overweg is gepasseerd, of;\n\n- De gehele trein de weegbrug is gepasseerd.',
                     ),
                     InsertImage(
                       image:
@@ -593,7 +476,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Stoppen voor het bord en de opdracht, vermeld op het onderbord, uitvoeren. Indien geen opdracht wordt vermeld, mag na het stoppen verder worden gereden.​​​​​​',
+                          'Stoppen voor het bord en de opdracht, vermeld op het onderbord, uitvoeren. Indien geen opdracht wordt vermeld, mag na het stoppen verder worden gereden.',
                     ),
                     InsertImage(
                       image:
@@ -602,7 +485,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De opdracht vermeld op het onderbord uitvoeren alvorens het bord voorbij te rijden. Dit bord wordt onder meer toegepast op locaties waarover wegverkeer plaatsvindt en de machinist een overweg moet bedienen.​​​​​​',
+                          'De opdracht vermeld op het onderbord uitvoeren alvorens het bord voorbij te rijden. Dit bord wordt onder meer toegepast op locaties waarover wegverkeer plaatsvindt en de MCN een overweg moet bedienen.',
                     ),
                     InsertImage(
                       image:
@@ -611,7 +494,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Stoppen vóór het bord. Na contact met en toestemming van de op het onderbord vermelde functionaris mag verder worden gereden. Indien het onderbord meerdere opdrachten vermeldt deze uitvoeren alvorens het bord voorbij te rijden.​​​​​​',
+                          'Stoppen vóór het bord. Na contact met en toestemming van de op het onderbord vermelde functionaris mag verder worden gereden. Indien het onderbord meerdere opdrachten vermeldt deze uitvoeren alvorens het bord voorbij te rijden.',
                     ),
                     InsertImage(
                       image:
@@ -620,7 +503,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Stoppen voor het bord, tenzij de opdracht, vermeld op het onderbord, is uitgevoerd.​​​​​​',
+                          'Stoppen voor het bord, tenzij de opdracht, vermeld op het onderbord, is uitgevoerd.',
                     ),
                     InsertImage(
                       image:
@@ -629,7 +512,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Aanduiding van de grens van het gebied waar gerangeerd wordt. Geldt alleen voor bestuurders van treinen waarmee gerangeerd wordt.​​​​​​',
+                          'Aanduiding van de grens van het gebied waar gerangeerd wordt. Geldt alleen voor bestuurders van treinen waarmee gerangeerd wordt.',
                     ),
                     InsertImage(
                       image:
@@ -637,7 +520,7 @@ class AINcbg extends StatelessWidget {
                     ),
                     BodyText(
                       indents: 0,
-                      text: 'Stoppen voor het sein.​​​​​​',
+                      text: 'Stoppen voor het sein.',
                     ),
                     InsertImage(
                       image:
@@ -646,7 +529,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Voorbijrijden toegestaan met een zodanige snelheid, die niet hoger is dan 40 km/u, om op elke plaats achter dit sein te kunnen stoppen i.v.m. een mogelijke belemmering dan wel het ontbreken van de zekerheid dat de inrichtingen, gelegen tussen dit sein en het eerstvolgende lichtsein, goed functioneren.​​​​​​',
+                          'Voorbijrijden toegestaan met een zodanige snelheid, die niet hoger is dan 40 km/u, om op elke plaats achter dit sein te kunnen stoppen i.v.m. een mogelijke belemmering dan wel het ontbreken van de zekerheid dat de inrichtingen, gelegen tussen dit sein en het eerstvolgende lichtsein, goed functioneren.',
                     ),
                     InsertImage(
                       image:
@@ -655,7 +538,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Niet tegen het spoorvoertuig rangeren of afstoten.​​​​​​',
+                          'Niet tegen het spoorvoertuig rangeren of afstoten.',
                     ),
                     InsertImage(
                       image:

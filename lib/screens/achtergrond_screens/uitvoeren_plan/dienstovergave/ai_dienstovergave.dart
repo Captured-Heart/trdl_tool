@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIDienstovergave { home_screen, ww_dienstovergave}
+
 class AIDienstovergave extends StatelessWidget {
   const AIDienstovergave({Key? key}) : super(key: key);
 
@@ -11,8 +13,51 @@ class AIDienstovergave extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIDienstovergave>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIDienstovergave result) {
+              if (result == WhereToGoFromAIDienstovergave.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIDienstovergave.ww_dienstovergave) {
+                Navigator.pushNamed(context, 'ww_dienstovergave');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIDienstovergave>>[
+              PopupMenuItem<WhereToGoFromAIDienstovergave>(
+                value: WhereToGoFromAIDienstovergave.home_screen,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.home,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('Home'),
+                  ],
+                ),
+              ),
+              PopupMenuItem<WhereToGoFromAIDienstovergave>(
+                value: WhereToGoFromAIDienstovergave.ww_dienstovergave,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.train,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('WW Dienstovergave'),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

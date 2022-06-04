@@ -146,6 +146,7 @@ class MainEntry extends StatelessWidget {
         'ai_communicatiesysteem': (context) => const AICommunicatieSysteem(),
         'ai_mondelinge_communicatie': (context) =>
             const AIMondelingeCommunicatie(),
+            'ai_ketenpartners': (context) => const AIKetenpartners(),
         'ai_geplande_werkzaamheden_main': (context) =>
             const AIGeplandeWerkzaamhedenMain(),
         'ai_aanvang_werkzaamheden': (context) => const AIAanvangWerkzaamheden(),

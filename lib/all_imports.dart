@@ -195,6 +195,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicati
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/mondelinge_communicatie/ai_mondelinge_communicatie.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatiemiddelen/ai_communicatiemiddelen.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatiesysteem/ai_communicatiesysteem.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/ketenpartners/ai_ketenpartners.dart';
 
 /*ACHTERGROND INFORMATIE NCBG PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/ncbg/ai_ncbg.dart';

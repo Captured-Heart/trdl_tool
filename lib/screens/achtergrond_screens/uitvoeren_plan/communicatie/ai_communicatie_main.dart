@@ -6,6 +6,7 @@ enum WhereToGoFromAICommunicatieMain {
   ai_mondelinge_communicatie,
   ai_communicatiemiddelen,
   ai_communicatiesysteem,
+  ai_ketenpartners
 }
 
 class AICommunicatieMain extends StatelessWidget {
@@ -38,6 +39,9 @@ class AICommunicatieMain extends StatelessWidget {
               } else if (result ==
                   WhereToGoFromAICommunicatieMain.ai_communicatiesysteem) {
                 Navigator.pushNamed(context, 'ai_communicatiesysteem');
+              } else if (result ==
+                  WhereToGoFromAICommunicatieMain.ai_ketenpartners) {
+                Navigator.pushNamed(context, 'ai_ketenpartners');
               } else {
                 Navigator.pop(context);
               }
@@ -111,6 +115,19 @@ class AICommunicatieMain extends StatelessWidget {
                   ],
                 ),
               ),
+              PopupMenuItem<WhereToGoFromAICommunicatieMain>(
+                value: WhereToGoFromAICommunicatieMain.ai_ketenpartners,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const Text('AI Ketenpartners'),
+                  ],
+                ),
+              ),
             ],
           ),
           const HomeButton(),
@@ -167,7 +184,6 @@ class AICommunicatieMain extends StatelessWidget {
                           destination: 'ai_communicatiesysteem',
                         ),
                         SizedBoxH(),
-                        //TODO: Hier verder met enums en navigatie!
                         NavButton(
                           buttontext: 'Externe ketenpartners',
                           destination: 'ai_externe_ketenpartners',
