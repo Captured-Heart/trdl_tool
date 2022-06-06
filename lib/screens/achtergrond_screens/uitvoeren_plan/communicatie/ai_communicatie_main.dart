@@ -186,7 +186,7 @@ class AICommunicatieMain extends StatelessWidget {
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Externe ketenpartners',
-                          destination: 'ai_externe_ketenpartners',
+                          destination: 'ai_ketenpartners',
                         ),
                       ],
                     ),
