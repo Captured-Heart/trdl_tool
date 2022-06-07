@@ -13,11 +13,19 @@ showVersionUpdatePopup(context) {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CurrentVersion(
-                  versionNumber: '0.2.4',
+                  versionNumber: '0.2.5',
                 ),
                 SizedBoxH(),
                 DateChanged(
-                  date: '2022-06-24: 0.2.4',
+                  date: '2022-06-07: 0.2.5',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Zoekfunctie aangevuld;\n- Achtergrondinformatie verder uitgebreid (14);\n- Routing aangepast;\n- Android Gradle Plugin upgrade naar 7.2.1',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-05-24: 0.2.4',
                 ),
                 ChangesMade(
                   changes:
