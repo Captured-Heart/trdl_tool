@@ -77,33 +77,12 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Dit is een gebied waar de bediening van infra elementen niet of slechts gedeeltelijk middels bedieningsapparatuur kan plaatsvinden. Toestemming tot het gebruik van infrastructuur wordt uitsluitend mondeling gegeven.',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text: 'Het gaat hierbij om:',
+                          'Dit is een gebied waar de bediening van infra elementen niet of slechts gedeeltelijk middels bedieningsapparatuur kan plaatsvinden. Toestemming tot het gebruik van infrastructuur wordt uitsluitend mondeling gegeven.\n\nHet gaat hierbij om:',
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '- Emplacementen zonder beveiliging',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          '- Delen van emplacementen zonder beveiliging met minimaal 1 wissel',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text: '- Centraal Telecom Blokstelsel (CTB) baanvakken',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text: '- Baanvakken zonder beveiliging.',
+                      text: '- Emplacementen zonder beveiliging;\n\n- Delen van emplacementen zonder beveiliging met minimaal 1 wissel;\n\n - Centraal Telecom Blokstelsel (CTB) baanvakken;\n\n- Baanvakken zonder beveiliging.',
                     ),
                   ],
                 ),
@@ -300,7 +279,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'TRON staat voor \'TReindienstleiding Op NCBG\'. TRON-webapplicatie heeft tot doel beter te kunnen registreren. TRON-webapplicatie is ook in staat deze registraties te visualiseren. Er verandert niets in de werkwijze van een TRDL. Alleen de manier van registreren wijkt sterk af van de gangbare hulpmiddelen.\n\nTRDL werken op dit moment met TRON om treinbewegingen en spoorbezetting te registreren in een NCBG. TRON is een extern programma (net zoals LOA-online).\n\nIn de toekomst zal TRON vervangen worden door een registratiesysteem dat geïntegreerd is met procesleiding. (Zoals SBG++ en TRR) Dit geïntegreerde systeem heet \'Feniks\'.',
+                          'TRON staat voor \'Treindienstleiding op NCBG\'. TRON-webapplicatie heeft tot doel beter te kunnen registreren. TRON-webapplicatie is ook in staat deze registraties te visualiseren. Er verandert niets in de werkwijze van een TRDL. Alleen de manier van registreren wijkt sterk af van de gangbare hulpmiddelen.\n\nTRDL werken op dit moment met TRON om treinbewegingen en spoorbezetting te registreren in een NCBG. TRON is een extern programma (net zoals LOA-online).\n\nIn de toekomst zal TRON vervangen worden door een registratiesysteem dat geïntegreerd is met procesleiding. (Zoals SBG++ en TRR) Dit geïntegreerde systeem heet \'Feniks\'.',
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -607,7 +586,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Rijden over de rangeerheuvel naar de verdeelsporen toegestaan.​​​​​​',
+                          'Rijden over de rangeerheuvel naar de verdeelsporen toegestaan.',
                     ),
                     InsertImage(
                       image:
