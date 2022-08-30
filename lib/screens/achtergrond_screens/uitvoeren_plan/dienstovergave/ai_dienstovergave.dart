@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromAIDienstovergave { home_screen, ww_dienstovergave}
+enum WhereToGoFromAIDienstovergave {
+  home_screen,
+  ww_dienstovergave,
+}
 
 class AIDienstovergave extends StatelessWidget {
   const AIDienstovergave({Key? key}) : super(key: key);

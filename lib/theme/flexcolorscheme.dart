@@ -1,7 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
 ThemeData themeLight = FlexThemeData.light(
-  scheme: FlexScheme.jungle,
+  scheme: FlexScheme.money,
   surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
   blendLevel: 24,
   appBarOpacity: 0.85,
@@ -9,11 +9,13 @@ ThemeData themeLight = FlexThemeData.light(
   appBarElevation: 6.0,
   subThemesData: const FlexSubThemesData(
     blendOnLevel: 24,
+    defaultRadius: 24.0,
     bottomSheetRadius: 20.0,
     switchSchemeColor: SchemeColor.primary,
     checkboxSchemeColor: SchemeColor.primary,
     radioSchemeColor: SchemeColor.primary,
     unselectedToggleIsColored: true,
+    inputDecoratorRadius: 24.0,
     fabRadius: 20.0,
     chipRadius: 20.0,
     cardRadius: 12.0,
@@ -30,13 +32,17 @@ ThemeData themeLight = FlexThemeData.light(
   keyColors: const FlexKeyColors(
     useSecondary: true,
     useTertiary: true,
+    keepTertiaryContainer: true,
   ),
+  tones: FlexTones.vivid(Brightness.light),
   visualDensity: FlexColorScheme.comfortablePlatformDensity,
   useMaterial3: true,
+// To use the playground font, add GoogleFonts package and uncomment
   fontFamily: GoogleFonts.questrial().fontFamily,
 );
+
 ThemeData themeDark = FlexThemeData.dark(
-  scheme: FlexScheme.jungle,
+  scheme: FlexScheme.money,
   surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,
   blendLevel: 15,
   appBarStyle: FlexAppBarStyle.background,
@@ -44,11 +50,13 @@ ThemeData themeDark = FlexThemeData.dark(
   transparentStatusBar: false,
   subThemesData: const FlexSubThemesData(
     blendOnLevel: 30,
+    defaultRadius: 24.0,
     bottomSheetRadius: 20.0,
     switchSchemeColor: SchemeColor.primary,
     checkboxSchemeColor: SchemeColor.primary,
     radioSchemeColor: SchemeColor.primary,
     unselectedToggleIsColored: true,
+    inputDecoratorRadius: 24.0,
     fabRadius: 20.0,
     chipRadius: 20.0,
     cardRadius: 12.0,
@@ -65,8 +73,19 @@ ThemeData themeDark = FlexThemeData.dark(
   keyColors: const FlexKeyColors(
     useSecondary: true,
     useTertiary: true,
+    keepPrimary: true,
+    keepSecondary: true,
+    keepTertiary: true,
+    keepPrimaryContainer: true,
+    keepSecondaryContainer: true,
+    keepTertiaryContainer: true,
   ),
+  tones: FlexTones.vivid(Brightness.dark),
   visualDensity: FlexColorScheme.comfortablePlatformDensity,
   useMaterial3: true,
+// To use the playground font, add GoogleFonts package and uncomment
   fontFamily: GoogleFonts.questrial().fontFamily,
 );
+// If you do not have a themeMode switch, uncomment this line
+// to let the device system mode control the theme mode:
+// themeMode: ThemeMode.system,

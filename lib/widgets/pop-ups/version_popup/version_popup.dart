@@ -13,7 +13,15 @@ showVersionUpdatePopup(context) {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CurrentVersion(
-                  versionNumber: '0.2.5',
+                  versionNumber: '0.2.6',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-08-30: 0.2.6',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Diverse package upgrades;\n\n- Appkleuren aangepast.',
                 ),
                 SizedBoxH(),
                 DateChanged(

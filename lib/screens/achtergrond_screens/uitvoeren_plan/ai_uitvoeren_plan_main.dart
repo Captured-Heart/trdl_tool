@@ -136,7 +136,6 @@ class AIUitvoerenPlanMain extends StatelessWidget {
                           destination: 'ai_communicatie_main',
                         ),
                         SizedBoxH(),
-                        //TODO: Hier verder met enums en navigatie!
                         NavButton(
                           buttontext: 'NCBG',
                           destination: 'ai_ncbg',
