@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWDienstovergave { home_screen, ai_dienstovergave }
+enum WhereToGoFromWWDienstovergave {
+  home_screen,
+  ai_dienstovergave,
+}
 
 class WWDienstovergave extends StatelessWidget {
   const WWDienstovergave({Key? key}) : super(key: key);
@@ -38,6 +41,9 @@ class WWDienstovergave extends StatelessWidget {
                       Icons.home,
                       color: flexSchemeLight.primary,
                     ),
+                    const SizedBox(
+                      width: 2.0,
+                    ),
                     const Text('Home'),
                   ],
                 ),
@@ -50,6 +56,9 @@ class WWDienstovergave extends StatelessWidget {
                     Icon(
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
+                    ),
+                    const SizedBox(
+                      width: 2.0,
                     ),
                     const Text('AI Dienstovergave'),
                   ],

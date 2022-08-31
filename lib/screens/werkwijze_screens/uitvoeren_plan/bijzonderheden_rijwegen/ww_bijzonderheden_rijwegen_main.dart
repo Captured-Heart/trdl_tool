@@ -43,6 +43,9 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
                       Icons.home,
                       color: flexSchemeLight.primary,
                     ),
+                    const SizedBox(
+                      width: 2.0,
+                    ),
                     const Text('Home'),
                   ],
                 ),
@@ -56,6 +59,9 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
                     Icon(
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
+                    ),
+                    const SizedBox(
+                      width: 2.0,
                     ),
                     const Text('AI Bijzonderheden Rijwegen'),
                   ],

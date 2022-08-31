@@ -101,7 +101,7 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         NavButton(
-                          buttontext: 'Basisinformatie',
+                          buttontext: 'Geplande werkzaamheden - Basis',
                           destination: 'ai_geplande_werkzaamheden',
                         ),
                         SizedBoxH(),

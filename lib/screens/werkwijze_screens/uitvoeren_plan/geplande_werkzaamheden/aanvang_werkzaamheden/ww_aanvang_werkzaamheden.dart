@@ -56,6 +56,9 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
+                    const SizedBox(
+                      width: 2.0,
+                    ),
                     const Text('AI Aanvang Werkzaamheden'),
                   ],
                 ),

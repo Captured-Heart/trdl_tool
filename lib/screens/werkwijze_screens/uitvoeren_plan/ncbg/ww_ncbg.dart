@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWNcbg { home_screen, ai_ncbg }
+enum WhereToGoFromWWNcbg {
+  home_screen,
+  ai_ncbg,
+}
 
 class WWNcbg extends StatelessWidget {
   const WWNcbg({Key? key}) : super(key: key);
@@ -37,6 +40,9 @@ class WWNcbg extends StatelessWidget {
                       Icons.home,
                       color: flexSchemeLight.primary,
                     ),
+                    const SizedBox(
+                      width: 2.0,
+                    ),
                     const Text('Home'),
                   ],
                 ),
@@ -49,6 +55,9 @@ class WWNcbg extends StatelessWidget {
                     Icon(
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
+                    ),
+                    const SizedBox(
+                      width: 2.0,
                     ),
                     const Text('AI NCBG'),
                   ],

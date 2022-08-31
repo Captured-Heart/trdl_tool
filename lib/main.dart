@@ -38,7 +38,7 @@ class MainEntry extends StatelessWidget {
         'home_index2': (context) => const HomeIndex2(),
         'home_index3': (context) => const HomeIndex3(),
 
-        /*UITVOEREN PLAN ROUTES*/
+        /*WERKWIJZE UITVOEREN PLAN ROUTES*/
         'ww_uitvoeren_plan_main': (context) => const WWUitvoerenPlanMain(),
         'ww_geplande_werkzaamheden_main': (context) =>
             const WWGeplandeWerkzaamhedenMain(),
@@ -62,7 +62,7 @@ class MainEntry extends StatelessWidget {
         'ww_ncbg': (context) => const WWNcbg(),
         'ww_dienstovergave': (context) => const WWDienstovergave(),
 
-        /*AANPASSEN PLAN ROUTES*/
+        /*WERKWIJZE AANPASSEN PLAN ROUTES*/
         'ww_aanpassenplan_main': (context) => const WWAanpassenPlanMain(),
         'ww_ongepland_werk_main': (context) => const WWOngeplandWerkMain(),
         'ww_ongepland_werk_infra': (context) => const WWOngeplandWerkInfra(),
@@ -73,7 +73,7 @@ class MainEntry extends StatelessWidget {
             const WWStappenplanVersperringen(),
         'ww_vertragingen': (context) => const WWVertragingen(),
 
-        /*INCIDENTEN ROUTES*/
+        /*WERKWIJZE INCIDENTEN ROUTES*/
         'ww_incidenten_main': (context) => const WWIncidentenMain(),
         'ww_derden_dieren': (context) => const WWDerdenDieren(),
         'ww_herroepen_sein': (context) => const WWHerroepenSein(),
@@ -146,7 +146,7 @@ class MainEntry extends StatelessWidget {
         'ai_communicatiesysteem': (context) => const AICommunicatieSysteem(),
         'ai_mondelinge_communicatie': (context) =>
             const AIMondelingeCommunicatie(),
-            'ai_ketenpartners': (context) => const AIKetenpartners(),
+        'ai_ketenpartners': (context) => const AIKetenpartners(),
         'ai_geplande_werkzaamheden_main': (context) =>
             const AIGeplandeWerkzaamhedenMain(),
         'ai_aanvang_werkzaamheden': (context) => const AIAanvangWerkzaamheden(),

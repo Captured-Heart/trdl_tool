@@ -5,7 +5,7 @@ enum WhereToGoFromAIToelatenWerktreinen {
   ww_toelaten_werktreinen,
   ai_bijzonderheden_rijwegen_main,
   ai_geplande_werkzaamheden_main,
-  ai_inzetten_railvoertuig,
+  ai_inzetten_icb,
   ai_onjuiste_detectie,
 }
 
@@ -39,8 +39,8 @@ class AIToelatenWerktreinen extends StatelessWidget {
                       .ai_geplande_werkzaamheden_main) {
                 Navigator.pushNamed(context, 'ai_geplande_werkzaamheden_main');
               } else if (result ==
-                  WhereToGoFromAIToelatenWerktreinen.ai_inzetten_railvoertuig) {
-                Navigator.pushNamed(context, 'ai_inzetten_railvoertuig');
+                  WhereToGoFromAIToelatenWerktreinen.ai_inzetten_icb) {
+                Navigator.pushNamed(context, 'ai_inzetten_icb');
               } else if (result ==
                   WhereToGoFromAIToelatenWerktreinen.ai_onjuiste_detectie) {
                 Navigator.pushNamed(context, 'ai_onjuiste_detectie');
@@ -94,20 +94,27 @@ class AIToelatenWerktreinen extends StatelessWidget {
               PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
                 value: WhereToGoFromAIToelatenWerktreinen
                     .ai_geplande_werkzaamheden_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Geplande Werkzaamheden'),
-                  ],
+                child: FittedBox(
+                  fit: BoxFit.fill,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(
+                        Icons.menu_book,
+                        color: flexSchemeLight.primary,
+                      ),
+                      const SizedBox(
+                        width: 2.0,
+                      ),
+                      const Text(
+                        'AI Geplande Werkzaamheden',
+                      ),
+                    ],
+                  ),
                 ),
               ),
               PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
-                value:
-                    WhereToGoFromAIToelatenWerktreinen.ai_inzetten_railvoertuig,
+                value: WhereToGoFromAIToelatenWerktreinen.ai_inzetten_icb,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -115,7 +122,7 @@ class AIToelatenWerktreinen extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('AI Inzetten Railvoertuig ICB'),
+                    const Text('AI Inzetten ICB'),
                   ],
                 ),
               ),

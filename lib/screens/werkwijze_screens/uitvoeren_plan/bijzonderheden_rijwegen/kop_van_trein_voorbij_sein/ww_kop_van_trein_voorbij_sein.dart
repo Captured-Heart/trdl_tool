@@ -35,6 +35,9 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
                       Icons.home,
                       color: flexSchemeLight.primary,
                     ),
+                    const SizedBox(
+                      width: 2.0,
+                    ),
                     const Text('Home'),
                   ],
                 ),

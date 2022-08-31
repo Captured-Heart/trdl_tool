@@ -6,7 +6,7 @@ showAvatarPopup(context) {
     builder: (BuildContext context) {
       return AlertDialog(
         contentPadding: const EdgeInsets.all(
-          6.0,
+          12.0,
         ),
         content: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -17,6 +17,9 @@ showAvatarPopup(context) {
                 Icons.person,
                 size: 78.0,
               ),
+            ),
+            const SizedBox(
+              height: 24.0,
             ),
             ListTile(
               title: Text(

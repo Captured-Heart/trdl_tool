@@ -21,7 +21,7 @@ showVersionUpdatePopup(context) {
                 ),
                 ChangesMade(
                   changes:
-                      '- Diverse package upgrades;\n\n- Appkleuren aangepast.',
+                      '- Diverse package upgrades;\n- Appkleuren aangepast.',
                 ),
                 SizedBoxH(),
                 DateChanged(

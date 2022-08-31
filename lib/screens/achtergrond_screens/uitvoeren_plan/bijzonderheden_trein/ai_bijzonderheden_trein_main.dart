@@ -98,7 +98,7 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         NavButton(
-                          buttontext: 'Basisinformatie',
+                          buttontext: 'Bijzonderheden Trein - Basis',
                           destination: 'ai_bijzonderheden_trein',
                         ),
                         SizedBoxH(),

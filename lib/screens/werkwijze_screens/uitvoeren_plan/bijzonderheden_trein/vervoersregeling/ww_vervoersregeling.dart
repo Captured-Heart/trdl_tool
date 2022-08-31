@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWVervoersregeling { home_screen, ai_vervoersregeling }
+enum WhereToGoFromWWVervoersregeling {
+  home_screen,
+  ai_vervoersregeling,
+}
 
 class WWVervoersregeling extends StatelessWidget {
   const WWVervoersregeling({Key? key}) : super(key: key);
@@ -52,6 +55,9 @@ class WWVervoersregeling extends StatelessWidget {
                       Icon(
                         Icons.menu_book,
                         color: flexSchemeLight.primary,
+                      ),
+                      const SizedBox(
+                        width: 2.0,
                       ),
                       const Text('AI Treinen met Vervoersregeling'),
                     ],

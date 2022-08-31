@@ -4,7 +4,7 @@ enum WhereToGoFromWWToelatenWerktreinen {
   home_screen,
   ww_geplande_werkzaamheden_main,
   ai_toelaten_werktreinen,
-  ai_geplande_werkzaamheden_main
+  ai_geplande_werkzaamheden_main,
 }
 
 class WWToelatenWerktreinen extends StatelessWidget {
@@ -51,6 +51,9 @@ class WWToelatenWerktreinen extends StatelessWidget {
                       Icons.home,
                       color: flexSchemeLight.primary,
                     ),
+                    const SizedBox(
+                      width: 2.0,
+                    ),
                     const Text('Home'),
                   ],
                 ),
@@ -67,6 +70,9 @@ class WWToelatenWerktreinen extends StatelessWidget {
                         Icons.train,
                         color: flexSchemeLight.primary,
                       ),
+                      const SizedBox(
+                        width: 2.0,
+                      ),
                       const Text('WW Geplande Werkzaamheden'),
                     ],
                   ),
@@ -82,6 +88,9 @@ class WWToelatenWerktreinen extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
+                    const SizedBox(
+                      width: 2.0,
+                    ),
                     const Text('AI Toelaten Werktreinen'),
                   ],
                 ),
@@ -95,6 +104,9 @@ class WWToelatenWerktreinen extends StatelessWidget {
                     Icon(
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
+                    ),
+                    const SizedBox(
+                      width: 2.0,
                     ),
                     const Text('AI Geplande Werkzaamheden'),
                   ],

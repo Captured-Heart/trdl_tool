@@ -58,6 +58,9 @@ class WWControlerenWBI extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
+                    const SizedBox(
+                      width: 2.0,
+                    ),
                     const Text('AI Controleren WBI'),
                   ],
                 ),
@@ -70,6 +73,9 @@ class WWControlerenWBI extends StatelessWidget {
                     Icon(
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
+                    ),
+                    const SizedBox(
+                      width: 2.0,
                     ),
                     const Text('AI Fouten in de WBI'),
                   ],
