@@ -69,45 +69,33 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
               PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
                 value: WhereToGoFromAIAanvangWerkzaamheden
                     .ww_aanvang_werkzaamheden,
-                child: FittedBox(
-                  fit: BoxFit.fill,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.train,
-                        color: flexSchemeLight.primary,
-                      ),
-                      const SizedBox(
-                        width: 2.0,
-                      ),
-                      const Text(
-                        'WW Aanvang Werkzaamheden',
-                      ),
-                    ],
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.train,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const MenuItemText(
+                      menuItemText: 'WW Aanvang Werkzaamheden',
+                    ),
+                  ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
                 value: WhereToGoFromAIAanvangWerkzaamheden
                     .ai_geplande_werkzaamheden,
-                child: FittedBox(
-                  fit: BoxFit.fill,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.menu_book,
-                        color: flexSchemeLight.primary,
-                      ),
-                      const SizedBox(
-                        width: 2.0,
-                      ),
-                      const Text(
-                        'AI Geplande Werkzaamheden',
-                      ),
-                    ],
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Icon(
+                      Icons.menu_book,
+                      color: flexSchemeLight.primary,
+                    ),
+                    const MenuItemText(
+                      menuItemText: 'AI Geplande Werkzaamheden',
+                    ),
+                  ],
                 ),
               ),
               PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
@@ -119,7 +107,9 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('AI Controleren WBI'),
+                    const MenuItemText(
+                      menuItemText: 'AI Controleren WBI',
+                    ),
                   ],
                 ),
               ),
@@ -132,7 +122,9 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('AI Fouten WBI'),
+                    const MenuItemText(
+                      menuItemText: 'AI Fouten WBI',
+                    ),
                   ],
                 ),
               ),
@@ -145,7 +137,9 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
                       Icons.menu_book,
                       color: flexSchemeLight.primary,
                     ),
-                    const Text('AI Bovenleiding'),
+                    const MenuItemText(
+                      menuItemText: 'AI Bovenleiding',
+                    ),
                   ],
                 ),
               ),

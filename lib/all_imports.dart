@@ -57,6 +57,7 @@ export 'package:trdl_tool/widgets/text_widgets/title_text/title_text.dart';
 export 'package:trdl_tool/widgets/text_widgets/subtitle_text/subtitle_text.dart';
 export 'package:trdl_tool/widgets/text_widgets/bold_text/bold_text.dart';
 export 'package:trdl_tool/widgets/text_widgets/body_text/body_text.dart';
+export 'package:trdl_tool/widgets/text_widgets/menuitem_text/menuitem_text.dart';
 
 export 'package:trdl_tool/widgets/image_widgets/insert_image.dart';
 
