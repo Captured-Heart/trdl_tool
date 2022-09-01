@@ -5,8 +5,8 @@ final FirebaseAuth _auth = FirebaseAuth.instance;
 String? emailCurrentUser = _auth.currentUser!.email;
 
 /*CARD CONSTANTS*/
-const double kCardElevation = 6.0;
-const EdgeInsets kCardPadding = EdgeInsets.all(8.0);
+const double kCardElevation = 8.0;
+const EdgeInsets kCardPadding = EdgeInsets.all(12.0);
 
 /*PROCHAT CONSTANTS*/
 late String hintText;
