@@ -2,7 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWBijzonderhedenRijwegenMain {
   home_screen,
-  ai_bijzonderheden_rijwegen_main
+  ai_bijzonderheden_rijwegen_main,
 }
 
 class WWBijzonderhedenRijwegenMain extends StatelessWidget {
@@ -34,37 +34,20 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWBijzonderhedenRijwegenMain>>[
-              PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
+              const PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
                 value: WhereToGoFromWWBijzonderhedenRijwegenMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
+              const PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
                 value: WhereToGoFromWWBijzonderhedenRijwegenMain
                     .ai_bijzonderheden_rijwegen_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI Bijzonderheden Rijwegen'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Bijzonderheden Rijwegen',
+                  //TODO: Hier verder met Refactoring MenuItemContent!
                 ),
               ),
             ],

@@ -3,7 +3,7 @@ import 'package:trdl_tool/all_imports.dart';
 enum WhereToGoFromWWControlerenWBI {
   home_screen,
   ai_controleren_wbi,
-  ai_fouten_wbi
+  ai_fouten_wbi,
 }
 
 class WWControlerenWBI extends StatelessWidget {
@@ -36,49 +36,25 @@ class WWControlerenWBI extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWControlerenWBI>>[
-              PopupMenuItem<WhereToGoFromWWControlerenWBI>(
+              const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
                 value: WhereToGoFromWWControlerenWBI.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWControlerenWBI>(
+              const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
                 value: WhereToGoFromWWControlerenWBI.ai_controleren_wbi,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI Controleren WBI'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Controleren WBI',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWControlerenWBI>(
+              const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
                 value: WhereToGoFromWWControlerenWBI.ai_fouten_wbi,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI Fouten in de WBI'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Fouten WBI',
                 ),
               ),
             ],

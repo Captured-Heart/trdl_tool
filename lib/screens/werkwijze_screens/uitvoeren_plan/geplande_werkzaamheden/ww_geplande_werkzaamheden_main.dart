@@ -34,34 +34,19 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWGeplandeWerkzaamhedenMain>>[
-              PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
+              const PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
                 value: WhereToGoFromWWGeplandeWerkzaamhedenMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
+              const PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
                 value: WhereToGoFromWWGeplandeWerkzaamhedenMain
                     .ai_geplande_werkzaamheden_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI Geplande Werkzaamheden'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Geplande Werkzaamheden',
                 ),
               ),
             ],

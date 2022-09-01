@@ -2,7 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWAanvangWerkzaamheden {
   home_screen,
-  ai_aanvang_werkzaamheden
+  ai_aanvang_werkzaamheden,
 }
 
 class WWAanvangWerkzaamheden extends StatelessWidget {
@@ -33,34 +33,19 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWAanvangWerkzaamheden>>[
-              PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
+              const PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
                 value: WhereToGoFromWWAanvangWerkzaamheden.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
+              const PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
                 value: WhereToGoFromWWAanvangWerkzaamheden
                     .ai_aanvang_werkzaamheden,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI Aanvang Werkzaamheden'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Aanvang Werkzaamheden',
                 ),
               ),
             ],
