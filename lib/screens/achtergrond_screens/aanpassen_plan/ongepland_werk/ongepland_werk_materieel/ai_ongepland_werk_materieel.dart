@@ -1,5 +1,12 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIOngeplandWerkMaterieel {
+  home_screen,
+  ww_ongepland_werk_materieel,
+  ai_infra_ter_beschikking,
+  ai_ongepland_werk_main,
+}
+
 class AIOngeplandWerkMaterieel extends StatelessWidget {
   const AIOngeplandWerkMaterieel({Key? key}) : super(key: key);
 
@@ -11,8 +18,66 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIOngeplandWerkMaterieel>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIOngeplandWerkMaterieel result) {
+              if (result == WhereToGoFromAIOngeplandWerkMaterieel.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIOngeplandWerkMaterieel
+                      .ww_ongepland_werk_materieel) {
+                Navigator.pushNamed(context, 'ww_ongepland_werk_materieel');
+              } else if (result ==
+                  WhereToGoFromAIOngeplandWerkMaterieel
+                      .ai_infra_ter_beschikking) {
+                Navigator.pushNamed(context, 'ai_infra_ter_beschikking');
+              } else if (result ==
+                  WhereToGoFromAIOngeplandWerkMaterieel
+                      .ai_ongepland_werk_main) {
+                Navigator.pushNamed(context, 'ai_ongepland_werk_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIOngeplandWerkMaterieel>>[
+              const PopupMenuItem<WhereToGoFromAIOngeplandWerkMaterieel>(
+                value: WhereToGoFromAIOngeplandWerkMaterieel.home_screen,
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIOngeplandWerkMaterieel>(
+                value: WhereToGoFromAIOngeplandWerkMaterieel
+                    .ww_ongepland_werk_materieel,
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Ongepland Werk - Materieel',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIOngeplandWerkMaterieel>(
+                value: WhereToGoFromAIOngeplandWerkMaterieel
+                    .ai_infra_ter_beschikking,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Infra ter beschikking stellen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIOngeplandWerkMaterieel>(
+                value: WhereToGoFromAIOngeplandWerkMaterieel
+                    .ai_ongepland_werk_main,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Ongepland Werk',
+                ),
+                //TODO: Hier verder met toevoegen navigatie aan achtergrondinformatie!
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SafeArea(
@@ -34,43 +99,6 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                         image:
                             'assets/images/achtergrond_info/aanpassen_plan/ongepland_werk/ongepland_werk_materieel_stroomschema.png',
                       ),
-                    ],
-                  ),
-                ),
-              ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext:
-                                'Materieel (ongepland werk) - werkwijze',
-                            destination: 'ww_ongepland_werk_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Ongepland werk',
-                            destination: 'ai_ongepland_werk_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext:
-                                'Infracapaciteit ter beschikking stellen',
-                            destination: 'ai_infra_ter_beschikking',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
                     ],
                   ),
                 ),

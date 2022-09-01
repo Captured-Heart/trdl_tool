@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIOrderacceptatie {
+  home_screen,
+  ww_orderacceptatie,
+}
+
 class AIOrderacceptatie extends StatelessWidget {
   const AIOrderacceptatie({Key? key}) : super(key: key);
 
@@ -11,8 +16,39 @@ class AIOrderacceptatie extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIOrderacceptatie>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIOrderacceptatie result) {
+              if (result == WhereToGoFromAIOrderacceptatie.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIOrderacceptatie.ww_orderacceptatie) {
+                Navigator.pushNamed(context, 'ww_orderacceptatie');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIOrderacceptatie>>[
+              const PopupMenuItem<WhereToGoFromAIOrderacceptatie>(
+                value: WhereToGoFromAIOrderacceptatie.home_screen,
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIOrderacceptatie>(
+                value: WhereToGoFromAIOrderacceptatie.ww_orderacceptatie,
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Orderacceptatie',
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
@@ -56,31 +92,6 @@ class AIOrderacceptatie extends StatelessWidget {
                       text:
                           'N.B.: In alle fasen van capaciteitsverdeling en -planning gelden de plannormen. Deze normen gelden ook voor het plannen van treinen en rangeerbewegingen in de fase van verkeersleiding. Voor bijsturing gelden deze normen niet.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Ga snel naar',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Orderacceptatie - werkwijze',
-                          destination: 'ww_orderacceptatie',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),

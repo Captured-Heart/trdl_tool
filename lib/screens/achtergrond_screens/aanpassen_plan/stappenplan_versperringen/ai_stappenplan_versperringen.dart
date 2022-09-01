@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIStappenplanVersperringen {
+  home_screen,
+  ww_stappenplan_versperringen,
+}
+
 class AIStappenplanVersperringen extends StatelessWidget {
   const AIStappenplanVersperringen({Key? key}) : super(key: key);
 
@@ -11,8 +16,42 @@ class AIStappenplanVersperringen extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIStappenplanVersperringen>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIStappenplanVersperringen result) {
+              if (result ==
+                  WhereToGoFromAIStappenplanVersperringen.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIStappenplanVersperringen
+                      .ww_stappenplan_versperringen) {
+                Navigator.pushNamed(context, 'ww_stappenplan_versperringen');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIStappenplanVersperringen>>[
+              const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
+                value: WhereToGoFromAIStappenplanVersperringen.home_screen,
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
+                value: WhereToGoFromAIStappenplanVersperringen
+                    .ww_stappenplan_versperringen,
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Stappenplan Versperringen',
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SafeArea(
@@ -52,36 +91,6 @@ class AIStappenplanVersperringen extends StatelessWidget {
                         text:
                             '- 1e Fase: Overgang van oorspronkelijk plan naar een nieuw, actueel plan;\n\n- 2e Fase: Het rijden volgens het nieuwe, actuele plan;\n\n- 3e Fase: De terugkeer naar het oorspronkelijke plan.',
                       ),
-                    ],
-                  ),
-                ),
-              ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Stappenplan versperringen -werkwijze',
-                            destination: 'ww_stappenplan_versperringen',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Aanpassen plan',
-                            destination: 'ai_aanpassen_plan_main',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
                     ],
                   ),
                 ),

@@ -1,5 +1,14 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIAanpassenPlan {
+  home_screen,
+  ww_aanpassen_plan_main,
+  ai_orderacceptatie,
+  ai_vertragingen,
+  ai_ongepland_werk_main,
+  ai_stappenplan_versperringen,
+}
+
 class AIAanpassenPlan extends StatelessWidget {
   const AIAanpassenPlan({Key? key}) : super(key: key);
 
@@ -9,10 +18,82 @@ class AIAanpassenPlan extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Aanpassen plan - basis',
+          title: 'Aanpassen plan - Basis',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIAanpassenPlan>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIAanpassenPlan result) {
+              if (result == WhereToGoFromAIAanpassenPlan.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIAanpassenPlan.ww_aanpassen_plan_main) {
+                Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
+              } else if (result ==
+                  WhereToGoFromAIAanpassenPlan.ai_orderacceptatie) {
+                Navigator.pushNamed(context, 'ai_orderacceptatie');
+              } else if (result ==
+                  WhereToGoFromAIAanpassenPlan.ai_vertragingen) {
+                Navigator.pushNamed(context, 'ai_vertragingen');
+              } else if (result ==
+                  WhereToGoFromAIAanpassenPlan.ai_ongepland_werk_main) {
+                Navigator.pushNamed(context, 'ai_ongepland_werk_main');
+              } else if (result ==
+                  WhereToGoFromAIAanpassenPlan.ai_stappenplan_versperringen) {
+                Navigator.pushNamed(context, 'ai_stappenplan_versperringen');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIAanpassenPlan>>[
+              const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
+                value: WhereToGoFromAIAanpassenPlan.home_screen,
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
+                value: WhereToGoFromAIAanpassenPlan.ww_aanpassen_plan_main,
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Aanpassen Plan',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
+                value: WhereToGoFromAIAanpassenPlan.ai_orderacceptatie,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Orderacceptatie',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
+                value: WhereToGoFromAIAanpassenPlan.ai_vertragingen,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Vertragingen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
+                value: WhereToGoFromAIAanpassenPlan.ai_ongepland_werk_main,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Ongepland Werk',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
+                value:
+                    WhereToGoFromAIAanpassenPlan.ai_stappenplan_versperringen,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Stappenplan Versperringen',
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
@@ -46,51 +127,6 @@ class AIAanpassenPlan extends StatelessWidget {
                       text:
                           'Breng wijzigingen tijdig aan, indien mogelijk minstens 15 minuten voor het uitvoeringsmoment.\n\nBij aanpassing van rijwegen voor rangeerbewegingen, schouwtreinen en meetritten, ben je verplicht -voordat je de rijweg instelt- de MCN of de medewerker rangeren in te lichten over de aanpassing.\n\nAls je een spoorwijziging initieert naar een korter (perron)spoor dan het geplande (perron)spoor, vraag je de MCN of de medewerker rangeren naar de lengte van de trein.\n\nJe controleert of de trein langs het perron of op het spoor past. Pas daarna voer je de spoorwijziging door.\n\nWanneer blijkt dat een reizigerstrein niet in zijn geheel langs het perron past en er géén ander geschikt perronspoor beschikbaar is, communiceer je dit met de MCN of de medewerker rangeren en stemt af of de spoorwijziging toch kan worden doorgevoerd.\n\nVoor het bepalen van de langte van een (perron)spoor maakt je gebruik van de BVS.',
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: [
-                    const TitleText(
-                      title: 'Ga snel naar',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
-                        NavButton(
-                          buttontext: 'Aanpassen plan - werkwijze',
-                          destination: 'ww_aanpassenplan_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Orderacceptatie - achtergrond',
-                          destination: 'ai_orderacceptatie',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Vertragingen - achtergrond',
-                          destination: 'ai_vertragingen',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Ongepland werk - achtergrond',
-                          destination: 'ai_ongepland_werk_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Stappenplan versperringen - achtergrond',
-                          destination: 'ai_stappenplan_versperringen',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),

@@ -1,5 +1,12 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIOngeplandWerkInfra {
+  home_screen,
+  ww_ongepland_werk_infra,
+  ai_infra_ter_beschikking,
+  ai_aanpassen_plan_main,
+}
+
 class AIOngeplandWerkInfra extends StatelessWidget {
   const AIOngeplandWerkInfra({Key? key}) : super(key: key);
 
@@ -9,10 +16,63 @@ class AIOngeplandWerkInfra extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Ongepland werk infra',
+          title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIOngeplandWerkInfra>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIOngeplandWerkInfra result) {
+              if (result == WhereToGoFromAIOngeplandWerkInfra.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIOngeplandWerkInfra.ww_ongepland_werk_infra) {
+                Navigator.pushNamed(context, 'ww_ongepland_werk_infra');
+              } else if (result ==
+                  WhereToGoFromAIOngeplandWerkInfra.ai_infra_ter_beschikking) {
+                Navigator.pushNamed(context, 'ai_infra_ter_beschikking');
+              } else if (result ==
+                  WhereToGoFromAIOngeplandWerkInfra.ai_aanpassen_plan_main) {
+                Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIOngeplandWerkInfra>>[
+              const PopupMenuItem<WhereToGoFromAIOngeplandWerkInfra>(
+                value: WhereToGoFromAIOngeplandWerkInfra.home_screen,
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIOngeplandWerkInfra>(
+                value:
+                    WhereToGoFromAIOngeplandWerkInfra.ww_ongepland_werk_infra,
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Ongepland Werk - Infra',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIOngeplandWerkInfra>(
+                value:
+                    WhereToGoFromAIOngeplandWerkInfra.ai_infra_ter_beschikking,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Infra ter beschikking stellen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIOngeplandWerkInfra>(
+                value: WhereToGoFromAIOngeplandWerkInfra.ai_aanpassen_plan_main,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Aanpassen Plan',
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SafeArea(

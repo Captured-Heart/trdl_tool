@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIAanpassenPlanMain {
+  home_screen,
+  ww_aanpassen_plan_main,
+}
+
 class AIAanpassenPlanMain extends StatelessWidget {
   const AIAanpassenPlanMain({Key? key}) : super(key: key);
 
@@ -11,8 +16,39 @@ class AIAanpassenPlanMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinfo',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIAanpassenPlanMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIAanpassenPlanMain result) {
+              if (result == WhereToGoFromAIAanpassenPlanMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIAanpassenPlanMain.ww_aanpassen_plan_main) {
+                Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIAanpassenPlanMain>>[
+              const PopupMenuItem<WhereToGoFromAIAanpassenPlanMain>(
+                value: WhereToGoFromAIAanpassenPlanMain.home_screen,
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIAanpassenPlanMain>(
+                value: WhereToGoFromAIAanpassenPlanMain.ww_aanpassen_plan_main,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'WW Aanpassen Plan',
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(

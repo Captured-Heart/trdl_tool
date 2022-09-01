@@ -1,5 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIOngeplandWerkMain {
+  home_screen,
+  ww_ongepland_werk,
+}
+
 class AIOngeplandWerkMain extends StatelessWidget {
   const AIOngeplandWerkMain({Key? key}) : super(key: key);
 
@@ -11,8 +16,39 @@ class AIOngeplandWerkMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
-          HomeButton(),
+        actions: [
+          PopupMenuButton<WhereToGoFromAIOngeplandWerkMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIOngeplandWerkMain result) {
+              if (result == WhereToGoFromAIOngeplandWerkMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIOngeplandWerkMain.ww_ongepland_werk) {
+                Navigator.pushNamed(context, 'ww_ongepland_werk');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIOngeplandWerkMain>>[
+              const PopupMenuItem<WhereToGoFromAIOngeplandWerkMain>(
+                value: WhereToGoFromAIOngeplandWerkMain.home_screen,
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIOngeplandWerkMain>(
+                value: WhereToGoFromAIOngeplandWerkMain.ww_ongepland_werk,
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Ongepland Werk',
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SafeArea(
