@@ -47,7 +47,6 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
                 child: MenuItemContent(
                   icon: Icons.menu_book,
                   text: 'AI Bijzonderheden Rijwegen',
-                  //TODO: Hier verder met Refactoring MenuItemContent!
                 ),
               ),
             ],
