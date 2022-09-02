@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWHerroepenSein { home_screen, ai_incidenten_main }
+enum WhereToGoFromWWHerroepenSein {
+  home_screen,
+  ai_incidenten_main,
+}
 
 class WWHerroepenSein extends StatelessWidget {
   const WWHerroepenSein({Key? key}) : super(key: key);
@@ -29,30 +32,18 @@ class WWHerroepenSein extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWHerroepenSein>>[
-              PopupMenuItem<WhereToGoFromWWHerroepenSein>(
+              const PopupMenuItem<WhereToGoFromWWHerroepenSein>(
                 value: WhereToGoFromWWHerroepenSein.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWHerroepenSein>(
+              const PopupMenuItem<WhereToGoFromWWHerroepenSein>(
                 value: WhereToGoFromWWHerroepenSein.ai_incidenten_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Incidenten'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Incidenten',
                 ),
               ),
             ],

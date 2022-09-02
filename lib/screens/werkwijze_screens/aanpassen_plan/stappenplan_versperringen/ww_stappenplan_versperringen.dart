@@ -2,7 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromWWStappenplanVersperringen {
   home_screen,
-  ai_stappenplan_versperringen
+  ai_stappenplan_versperringen,
 }
 
 class WWStappenplanVersperringen extends StatelessWidget {
@@ -34,31 +34,19 @@ class WWStappenplanVersperringen extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWStappenplanVersperringen>>[
-              PopupMenuItem<WhereToGoFromWWStappenplanVersperringen>(
+              const PopupMenuItem<WhereToGoFromWWStappenplanVersperringen>(
                 value: WhereToGoFromWWStappenplanVersperringen.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWStappenplanVersperringen>(
+              const PopupMenuItem<WhereToGoFromWWStappenplanVersperringen>(
                 value: WhereToGoFromWWStappenplanVersperringen
                     .ai_stappenplan_versperringen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Stappenplan Versperringen'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Stappenplan Versperringen',
                 ),
               ),
             ],

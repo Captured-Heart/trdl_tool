@@ -31,36 +31,18 @@ class WWNcbg extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWNcbg>>[
-              PopupMenuItem<WhereToGoFromWWNcbg>(
+              const PopupMenuItem<WhereToGoFromWWNcbg>(
                 value: WhereToGoFromWWNcbg.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWNcbg>(
+              const PopupMenuItem<WhereToGoFromWWNcbg>(
                 value: WhereToGoFromWWNcbg.ai_ncbg,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI NCBG'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI NCBG',
                 ),
               ),
             ],

@@ -36,45 +36,27 @@ class WWOngeplandWerkInfra extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWOngeplandWerkInfra>>[
-              PopupMenuItem<WhereToGoFromWWOngeplandWerkInfra>(
+              const PopupMenuItem<WhereToGoFromWWOngeplandWerkInfra>(
                 value: WhereToGoFromWWOngeplandWerkInfra.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWOngeplandWerkInfra>(
+              const PopupMenuItem<WhereToGoFromWWOngeplandWerkInfra>(
                 value:
                     WhereToGoFromWWOngeplandWerkInfra.ai_ongepland_werk_infra,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Ongepland Werk Infra'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Ongepland Werk (Infra)',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWOngeplandWerkInfra>(
+              const PopupMenuItem<WhereToGoFromWWOngeplandWerkInfra>(
                 value:
                     WhereToGoFromWWOngeplandWerkInfra.ai_infra_ter_beschikking,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Infra ter Beschikking'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'Infra ter beschikking stellen',
                 ),
               ),
             ],

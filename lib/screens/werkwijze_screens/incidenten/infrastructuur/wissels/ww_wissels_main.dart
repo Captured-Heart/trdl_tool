@@ -38,56 +38,33 @@ class WWWisselsMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWWisselsMain>>[
-              PopupMenuItem<WhereToGoFromWWWisselsMain>(
+              const PopupMenuItem<WhereToGoFromWWWisselsMain>(
                 value: WhereToGoFromWWWisselsMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWWisselsMain>(
+              const PopupMenuItem<WhereToGoFromWWWisselsMain>(
                 value: WhereToGoFromWWWisselsMain.ai_wissels_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Wissels'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Wissels',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWWisselsMain>(
+              const PopupMenuItem<WhereToGoFromWWWisselsMain>(
                 value: WhereToGoFromWWWisselsMain.ai_infra_overig,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Infra Overig'),
-                  ],
+                //TODO: Pagina ai_infra_overig.dart toevoegen!
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Infra Overig',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWWisselsMain>(
+              const PopupMenuItem<WhereToGoFromWWWisselsMain>(
                 value: WhereToGoFromWWWisselsMain.ai_incidenten_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Incidenten'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Incidenten',
                 ),
               ),
             ],

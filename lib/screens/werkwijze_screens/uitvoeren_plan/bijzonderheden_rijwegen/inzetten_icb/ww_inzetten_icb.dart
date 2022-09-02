@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWInzettenICB { home_screen, ai_inzetten_railvoertuig }
+enum WhereToGoFromWWInzettenICB {
+  home_screen,
+  ai_inzetten_railvoertuig,
+}
 
 class WWInzettenICB extends StatelessWidget {
   const WWInzettenICB({Key? key}) : super(key: key);
@@ -29,36 +32,18 @@ class WWInzettenICB extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWInzettenICB>>[
-              PopupMenuItem<WhereToGoFromWWInzettenICB>(
+              const PopupMenuItem<WhereToGoFromWWInzettenICB>(
                 value: WhereToGoFromWWInzettenICB.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWInzettenICB>(
+              const PopupMenuItem<WhereToGoFromWWInzettenICB>(
                 value: WhereToGoFromWWInzettenICB.ai_inzetten_railvoertuig,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI Inzetten ICB'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Inzetten ICB',
                 ),
               ),
             ],

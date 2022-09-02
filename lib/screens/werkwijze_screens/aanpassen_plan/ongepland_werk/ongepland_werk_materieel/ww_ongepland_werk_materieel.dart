@@ -33,31 +33,19 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWOngeplandWerkMaterieel>>[
-              PopupMenuItem<WhereToGoFromWWOngeplandWerkMaterieel>(
+              const PopupMenuItem<WhereToGoFromWWOngeplandWerkMaterieel>(
                 value: WhereToGoFromWWOngeplandWerkMaterieel.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWOngeplandWerkMaterieel>(
+              const PopupMenuItem<WhereToGoFromWWOngeplandWerkMaterieel>(
                 value: WhereToGoFromWWOngeplandWerkMaterieel
                     .ai_ongepland_werk_materieel,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Ongepland Werk Materieel'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Ongepland Werk (Materieel)',
                 ),
               ),
             ],

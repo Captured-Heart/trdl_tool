@@ -32,36 +32,18 @@ class WWVervoersregeling extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWVervoersregeling>>[
-              PopupMenuItem<WhereToGoFromWWVervoersregeling>(
+              const PopupMenuItem<WhereToGoFromWWVervoersregeling>(
                 value: WhereToGoFromWWVervoersregeling.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWVervoersregeling>(
+              const PopupMenuItem<WhereToGoFromWWVervoersregeling>(
                 value: WhereToGoFromWWVervoersregeling.ai_vervoersregeling,
-                child: FittedBox(
-                  fit: BoxFit.fitWidth,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.menu_book,
-                        color: flexSchemeLight.primary,
-                      ),
-                      const SizedBox(
-                        width: 2.0,
-                      ),
-                      const Text('AI Treinen met Vervoersregeling'),
-                    ],
-                  ),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Treinen met Vervoersregeling',
                 ),
               ),
             ],

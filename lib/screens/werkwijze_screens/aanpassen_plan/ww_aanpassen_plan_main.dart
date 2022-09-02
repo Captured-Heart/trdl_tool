@@ -32,36 +32,18 @@ class WWAanpassenPlanMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWAanpassenPlanMain>>[
-              PopupMenuItem<WhereToGoFromWWAanpassenPlanMain>(
+              const PopupMenuItem<WhereToGoFromWWAanpassenPlanMain>(
                 value: WhereToGoFromWWAanpassenPlanMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWAanpassenPlanMain>(
+              const PopupMenuItem<WhereToGoFromWWAanpassenPlanMain>(
                 value: WhereToGoFromWWAanpassenPlanMain.ai_aanpassen_plan,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI Aanpassen Plan'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Aanpassen Plan',
                 ),
               ),
             ],

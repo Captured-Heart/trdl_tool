@@ -32,30 +32,18 @@ class WWVertragingen extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWVertragingen>>[
-              PopupMenuItem<WhereToGoFromWWVertragingen>(
+              const PopupMenuItem<WhereToGoFromWWVertragingen>(
                 value: WhereToGoFromWWVertragingen.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWVertragingen>(
+              const PopupMenuItem<WhereToGoFromWWVertragingen>(
                 value: WhereToGoFromWWVertragingen.ai_vertragingen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Vertragingen'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Vertragingen',
                 ),
               ),
             ],

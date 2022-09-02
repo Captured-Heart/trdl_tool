@@ -32,36 +32,18 @@ class WWDienstovergave extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWDienstovergave>>[
-              PopupMenuItem<WhereToGoFromWWDienstovergave>(
+              const PopupMenuItem<WhereToGoFromWWDienstovergave>(
                 value: WhereToGoFromWWDienstovergave.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWDienstovergave>(
+              const PopupMenuItem<WhereToGoFromWWDienstovergave>(
                 value: WhereToGoFromWWDienstovergave.ai_dienstovergave,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI Dienstovergave'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Dienstovergave',
                 ),
               ),
             ],

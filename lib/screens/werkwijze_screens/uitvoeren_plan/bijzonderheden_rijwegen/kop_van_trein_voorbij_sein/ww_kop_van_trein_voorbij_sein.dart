@@ -26,20 +26,11 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWKopVanTreinVoorbijSein>>[
-              PopupMenuItem<WhereToGoFromWWKopVanTreinVoorbijSein>(
+              const PopupMenuItem<WhereToGoFromWWKopVanTreinVoorbijSein>(
                 value: WhereToGoFromWWKopVanTreinVoorbijSein.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
             ],

@@ -33,40 +33,19 @@ class WWMondelingeCommunicatie extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWMondelingeCommunicatie>>[
-              PopupMenuItem<WhereToGoFromWWMondelingeCommunicatie>(
+              const PopupMenuItem<WhereToGoFromWWMondelingeCommunicatie>(
                 value: WhereToGoFromWWMondelingeCommunicatie.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWMondelingeCommunicatie>(
+              const PopupMenuItem<WhereToGoFromWWMondelingeCommunicatie>(
                 value: WhereToGoFromWWMondelingeCommunicatie
                     .ai_mondelinge_communicatie,
-                child: FittedBox(
-                  fit: BoxFit.fitWidth,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.menu_book,
-                        color: flexSchemeLight.primary,
-                      ),
-                      const SizedBox(
-                        width: 2.0,
-                      ),
-                      const Text('AI Mondelinge Communicatie'),
-                    ],
-                  ),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Mondelinge Communicatie',
                 ),
               ),
             ],

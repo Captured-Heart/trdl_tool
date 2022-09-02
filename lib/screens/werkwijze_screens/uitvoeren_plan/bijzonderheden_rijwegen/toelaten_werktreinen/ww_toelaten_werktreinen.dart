@@ -42,74 +42,35 @@ class WWToelatenWerktreinen extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWToelatenWerktreinen>>[
-              PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
+              const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
                 value: WhereToGoFromWWToelatenWerktreinen.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
+              const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
                 value: WhereToGoFromWWToelatenWerktreinen
                     .ww_geplande_werkzaamheden_main,
-                child: FittedBox(
-                  fit: BoxFit.fitWidth,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.train,
-                        color: flexSchemeLight.primary,
-                      ),
-                      const SizedBox(
-                        width: 2.0,
-                      ),
-                      const Text('WW Geplande Werkzaamheden'),
-                    ],
-                  ),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Geplande Werkzaamheden',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
+              const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
                 value:
                     WhereToGoFromWWToelatenWerktreinen.ai_toelaten_werktreinen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI Toelaten Werktreinen'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Toelaten Werktreinen',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
+              const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
                 value: WhereToGoFromWWToelatenWerktreinen
                     .ai_geplande_werkzaamheden_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI Geplande Werkzaamheden'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Geplande Werkzaamheden',
                 ),
               ),
             ],

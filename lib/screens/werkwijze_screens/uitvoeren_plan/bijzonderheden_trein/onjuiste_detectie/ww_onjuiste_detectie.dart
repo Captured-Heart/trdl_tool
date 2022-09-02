@@ -32,33 +32,18 @@ class WWOnjuisteDetectie extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWOnjuisteDetectie>>[
-              PopupMenuItem<WhereToGoFromWWOnjuisteDetectie>(
+              const PopupMenuItem<WhereToGoFromWWOnjuisteDetectie>(
                 value: WhereToGoFromWWOnjuisteDetectie.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWOnjuisteDetectie>(
+              const PopupMenuItem<WhereToGoFromWWOnjuisteDetectie>(
                 value: WhereToGoFromWWOnjuisteDetectie.ai_onjuiste_detectie,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI Onjuiste Detectie'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Onjuiste Detectie',
                 ),
               ),
             ],

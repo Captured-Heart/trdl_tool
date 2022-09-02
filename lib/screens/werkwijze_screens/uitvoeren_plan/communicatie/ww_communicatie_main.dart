@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWCommunicatieMain { home_screen, ai_communicatie_main }
+enum WhereToGoFromWWCommunicatieMain {
+  home_screen,
+  ai_communicatie_main,
+}
 
 class WWCommunicatieMain extends StatelessWidget {
   const WWCommunicatieMain({Key? key}) : super(key: key);
@@ -29,36 +32,18 @@ class WWCommunicatieMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWCommunicatieMain>>[
-              PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
+              const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
                 value: WhereToGoFromWWCommunicatieMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
+              const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
                 value: WhereToGoFromWWCommunicatieMain.ai_communicatie_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const SizedBox(
-                      width: 2.0,
-                    ),
-                    const Text('AI Communicatie'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Communicatie',
                 ),
               ),
             ],

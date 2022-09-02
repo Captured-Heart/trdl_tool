@@ -35,43 +35,25 @@ class WWInfraMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWInfraMain>>[
-              PopupMenuItem<WhereToGoFromWWInfraMain>(
+              const PopupMenuItem<WhereToGoFromWWInfraMain>(
                 value: WhereToGoFromWWInfraMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWInfraMain>(
+              const PopupMenuItem<WhereToGoFromWWInfraMain>(
                 value: WhereToGoFromWWInfraMain.ai_infra_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Infra'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Infra',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWInfraMain>(
+              const PopupMenuItem<WhereToGoFromWWInfraMain>(
                 value: WhereToGoFromWWInfraMain.ai_incidenten_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Incidenten'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Incidenten',
                 ),
               ),
             ],

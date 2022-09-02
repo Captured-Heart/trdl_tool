@@ -32,30 +32,18 @@ class WWOrderAcceptatie extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWOrderAcceptatie>>[
-              PopupMenuItem<WhereToGoFromWWOrderAcceptatie>(
+              const PopupMenuItem<WhereToGoFromWWOrderAcceptatie>(
                 value: WhereToGoFromWWOrderAcceptatie.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWOrderAcceptatie>(
+              const PopupMenuItem<WhereToGoFromWWOrderAcceptatie>(
                 value: WhereToGoFromWWOrderAcceptatie.ai_orderacceptatie,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Orderacceptatie'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Orderacceptatie',
                 ),
               ),
             ],
