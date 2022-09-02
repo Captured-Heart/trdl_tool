@@ -38,43 +38,16 @@ class WWWeersomstandigheden extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWWeersomstandigheden>>[
               PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
                 value: WhereToGoFromWWWeersomstandigheden.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
                 value:
                     WhereToGoFromWWWeersomstandigheden.ai_weersomstandigheden,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Weersomstandigheden'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Weersomstandigheden',),
               ),
               PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
                 value: WhereToGoFromWWWeersomstandigheden.ai_overige_incidenten,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Overige Incidenten'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
               ),
             ],
           ),

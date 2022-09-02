@@ -50,71 +50,26 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWAfhandelenSysteemstoringen>>[
               PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
                 value: WhereToGoFromWWAfhandelenSysteemstoringen.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
                 value: WhereToGoFromWWAfhandelenSysteemstoringen
                     .ai_systeemstoringen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Systeemstoringen'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Systeemstoringen',),
               ),
               PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
                 value: WhereToGoFromWWAfhandelenSysteemstoringen.ai_systemen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Systemen'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Systemen',),
               ),
               PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
                 value: WhereToGoFromWWAfhandelenSysteemstoringen
                     .ai_systeemstoring_gsmr,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Systeemstoring GSM-R/INTel'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Systeemstoring GSM-R',),
               ),
               PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
                 value: WhereToGoFromWWAfhandelenSysteemstoringen
                     .ai_overige_incidenten,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Overige Incidenten'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
               ),
             ],
           ),

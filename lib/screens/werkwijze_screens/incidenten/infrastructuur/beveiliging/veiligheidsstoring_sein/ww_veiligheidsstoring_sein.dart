@@ -35,30 +35,12 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWVeiligheidsstoringSein>>[
               PopupMenuItem<WhereToGoFromWWVeiligheidsstoringSein>(
                 value: WhereToGoFromWWVeiligheidsstoringSein.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWVeiligheidsstoringSein>(
                 value: WhereToGoFromWWVeiligheidsstoringSein
                     .ai_veiligheidsstoring_sein,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Veiligheidsstoring Sein'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Veiligheidsstoring Sein',),
               ),
             ],
           ),

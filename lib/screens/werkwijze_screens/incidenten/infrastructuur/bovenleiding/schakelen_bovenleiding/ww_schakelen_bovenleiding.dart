@@ -35,30 +35,12 @@ class WWSchakelenBovenleiding extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWSchakelenBovenleiding>>[
               PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
                 value: WhereToGoFromWWSchakelenBovenleiding.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
                 value: WhereToGoFromWWSchakelenBovenleiding
                     .ai_schakelen_bovenleiding,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Schakelen Bovenleiding'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Schakelen Bovenleiding',),
               ),
             ],
           ),

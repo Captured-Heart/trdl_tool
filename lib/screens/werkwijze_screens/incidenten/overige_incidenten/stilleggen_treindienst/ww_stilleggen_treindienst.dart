@@ -39,44 +39,17 @@ class WWStilleggenTreindienst extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWStilleggenTreindienst>>[
               PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
                 value: WhereToGoFromWWStilleggenTreindienst.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
                 value: WhereToGoFromWWStilleggenTreindienst
                     .ai_stilleggen_treindienst,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Stilleggen Treindienst'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Stilleggen Treindienst',),
               ),
               PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
                 value:
                     WhereToGoFromWWStilleggenTreindienst.ai_overige_incidenten,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Overige Incidenten'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
               ),
             ],
           ),

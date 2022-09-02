@@ -35,30 +35,12 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWOnregelmatighedenBaan>>[
               PopupMenuItem<WhereToGoFromWWOnregelmatighedenBaan>(
                 value: WhereToGoFromWWOnregelmatighedenBaan.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWOnregelmatighedenBaan>(
                 value: WhereToGoFromWWOnregelmatighedenBaan
                     .ai_onregelmatigheden_baan,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Onregelmatigheden Baan'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Onregelmatigheden Baan',),
               ),
             ],
           ),

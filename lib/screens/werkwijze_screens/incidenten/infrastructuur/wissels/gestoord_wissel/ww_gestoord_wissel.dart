@@ -48,7 +48,6 @@ class WWGestoordWissel extends StatelessWidget {
               ),
             ],
           ),
-          //TODO: Hier verder met Refactoring MenuItemContent!
           const HomeButton(),
         ],
       ),

@@ -38,42 +38,15 @@ class WWKunstwerkenMain extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWKunstwerkenMain>>[
               PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
                 value: WhereToGoFromWWKunstwerkenMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
                 value: WhereToGoFromWWKunstwerkenMain.ai_kunstwerken_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Kunstwerken'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Kunstwerken',),
               ),
               PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
                 value: WhereToGoFromWWKunstwerkenMain.ai_infra_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Infra'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Infra',),
               ),
             ],
           ),

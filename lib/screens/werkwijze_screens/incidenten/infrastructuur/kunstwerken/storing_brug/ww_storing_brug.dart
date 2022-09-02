@@ -33,29 +33,11 @@ class WWStoringBrug extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWStoringBrug>>[
               PopupMenuItem<WhereToGoFromWWStoringBrug>(
                 value: WhereToGoFromWWStoringBrug.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWStoringBrug>(
                 value: WhereToGoFromWWStoringBrug.ai_storing_brug,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Storing Beweegbare Brug'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Storing Brug',),
               ),
             ],
           ),

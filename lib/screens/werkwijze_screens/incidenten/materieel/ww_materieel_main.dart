@@ -34,29 +34,11 @@ class WWMaterieelMain extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWMaterieelMain>>[
               PopupMenuItem<WhereToGoFromWWMaterieelMain>(
                 value: WhereToGoFromWWMaterieelMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWMaterieelMain>(
                 value: WhereToGoFromWWMaterieelMain.ai_materieel_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Materieel'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Materieel',),
               ),
             ],
           ),

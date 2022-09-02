@@ -32,31 +32,13 @@ class WWBeschadigdWissel extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWBeschadigdWissel>>[
-              PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
+              const PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
                 value: WhereToGoFromWWBeschadigdWissel.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
-              PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
+              const PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
                 value: WhereToGoFromWWBeschadigdWissel.ai_beschadigd_wissel,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Beschadigd Wissel'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Beschadigd Wissel',),
               ),
             ],
           ),

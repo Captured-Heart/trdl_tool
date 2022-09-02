@@ -34,29 +34,11 @@ class WWDerdenDieren extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWDerdenDieren>>[
               PopupMenuItem<WhereToGoFromWWDerdenDieren>(
                 value: WhereToGoFromWWDerdenDieren.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWDerdenDieren>(
                 value: WhereToGoFromWWDerdenDieren.ai_derden_dieren,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Derden en/of Dieren'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Derden / Dieren',),
               ),
             ],
           ),

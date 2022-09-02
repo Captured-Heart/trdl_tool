@@ -36,42 +36,15 @@ class WWVasteRem extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWVasteRem>>[
               PopupMenuItem<WhereToGoFromWWVasteRem>(
                 value: WhereToGoFromWWVasteRem.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWVasteRem>(
                 value: WhereToGoFromWWVasteRem.ai_materieel_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Materieel'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Materieel',),
               ),
               PopupMenuItem<WhereToGoFromWWVasteRem>(
                 value: WhereToGoFromWWVasteRem.ai_vaste_rem,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Vaste Rem'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Vaste Rem',),
               ),
             ],
           ),

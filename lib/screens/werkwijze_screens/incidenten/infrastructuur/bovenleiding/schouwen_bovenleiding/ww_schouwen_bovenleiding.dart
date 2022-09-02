@@ -35,30 +35,12 @@ class WWSchouwenBovenleiding extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWSchouwenBovenleiding>>[
               PopupMenuItem<WhereToGoFromWWSchouwenBovenleiding>(
                 value: WhereToGoFromWWSchouwenBovenleiding.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWSchouwenBovenleiding>(
                 value: WhereToGoFromWWSchouwenBovenleiding
                     .ai_schouwen_bovenleiding,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Schouwen Bovenleiding'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Schouwen Bovenleiding',),
               ),
             ],
           ),

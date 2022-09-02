@@ -37,42 +37,15 @@ class WWStsPassage extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWStsPassage>>[
               PopupMenuItem<WhereToGoFromWWStsPassage>(
                 value: WhereToGoFromWWStsPassage.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWStsPassage>(
                 value: WhereToGoFromWWStsPassage.ai_sts_passage,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI STS Passage'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI STS Passage',),
               ),
               PopupMenuItem<WhereToGoFromWWStsPassage>(
                 value: WhereToGoFromWWStsPassage.ai_overige_incidenten,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Overige Incidenten'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
               ),
             ],
           ),

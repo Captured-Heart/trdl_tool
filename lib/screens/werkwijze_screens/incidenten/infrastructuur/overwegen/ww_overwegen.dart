@@ -41,55 +41,19 @@ class WWOverwegen extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWOverwegen>>[
               PopupMenuItem<WhereToGoFromWWOverwegen>(
                 value: WhereToGoFromWWOverwegen.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWOverwegen>(
                 value: WhereToGoFromWWOverwegen.ai_overwegen_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Overwegen'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overwegen',),
               ),
               PopupMenuItem<WhereToGoFromWWOverwegen>(
                 value: WhereToGoFromWWOverwegen.ai_overwegen_storing,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Overwegstoring'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overwegen Storing',),
               ),
               PopupMenuItem<WhereToGoFromWWOverwegen>(
                 value: WhereToGoFromWWOverwegen.ai_incidenten_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Incidenten'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Incidenten',),
               ),
             ],
           ),

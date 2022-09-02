@@ -34,44 +34,17 @@ class WWSpoorMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWSpoorMain>>[
-              PopupMenuItem<WhereToGoFromWWSpoorMain>(
+              const PopupMenuItem<WhereToGoFromWWSpoorMain>(
                 value: WhereToGoFromWWSpoorMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
-              PopupMenuItem<WhereToGoFromWWSpoorMain>(
+              const PopupMenuItem<WhereToGoFromWWSpoorMain>(
                 value: WhereToGoFromWWSpoorMain.ai_infra_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Infra'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Infra',),
               ),
-              PopupMenuItem<WhereToGoFromWWSpoorMain>(
+              const PopupMenuItem<WhereToGoFromWWSpoorMain>(
                 value: WhereToGoFromWWSpoorMain.ai_spoor_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Spoor'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Spoor',),
               ),
             ],
           ),

@@ -34,29 +34,11 @@ class WWResetAssenteller extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWResetAssenteller>>[
               PopupMenuItem<WhereToGoFromWWResetAssenteller>(
                 value: WhereToGoFromWWResetAssenteller.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWResetAssenteller>(
                 value: WhereToGoFromWWResetAssenteller.ai_assenteller,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Assenteller'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Assenteller',),
               ),
             ],
           ),

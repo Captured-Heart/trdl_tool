@@ -42,55 +42,19 @@ class WWOntruimenPost extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWOntruimenPost>>[
               PopupMenuItem<WhereToGoFromWWOntruimenPost>(
                 value: WhereToGoFromWWOntruimenPost.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWOntruimenPost>(
                 value: WhereToGoFromWWOntruimenPost.ai_ontruimen_post,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Ontruimen Post'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Ontruimen Post',),
               ),
               PopupMenuItem<WhereToGoFromWWOntruimenPost>(
                 value: WhereToGoFromWWOntruimenPost.ai_stilleggen_treindienst,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Stilleggen Treindienst'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Stilleggen Treindienst',),
               ),
               PopupMenuItem<WhereToGoFromWWOntruimenPost>(
                 value: WhereToGoFromWWOntruimenPost.ai_overige_incidenten,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Overige Incidenten'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
               ),
             ],
           ),

@@ -43,68 +43,23 @@ class WWBrand extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWBrand>>[
               PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.ai_brand,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Brand'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Brand',),
               ),
               PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.ai_ruclu,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI RU/CLU'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Procedure RU/CLU',),
               ),
               PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.ai_schakelen_bovenleiding,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Schakelen Bovenleiding'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Schakelen Bovenleiding',),
               ),
               PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.ai_overige_incidenten,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Overige Incidenten'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
               ),
             ],
           ),

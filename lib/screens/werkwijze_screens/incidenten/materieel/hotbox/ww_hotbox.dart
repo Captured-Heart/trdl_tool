@@ -36,42 +36,15 @@ class WWHotBox extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWHotBox>>[
               PopupMenuItem<WhereToGoFromWWHotBox>(
                 value: WhereToGoFromWWHotBox.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWHotBox>(
                 value: WhereToGoFromWWHotBox.ai_hotbox,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Hotbox & Quo Vadis'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Hotbox',),
               ),
               PopupMenuItem<WhereToGoFromWWHotBox>(
                 value: WhereToGoFromWWHotBox.ai_materieel_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Materieel'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Materieel',),
               ),
             ],
           ),

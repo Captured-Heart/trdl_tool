@@ -42,55 +42,19 @@ class WWRoestvorming extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWRoestvorming>>[
               PopupMenuItem<WhereToGoFromWWRoestvorming>(
                 value: WhereToGoFromWWRoestvorming.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWRoestvorming>(
                 value: WhereToGoFromWWRoestvorming.ai_roestvorming,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Roestvorming'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Roestvorming',),
               ),
               PopupMenuItem<WhereToGoFromWWRoestvorming>(
                 value: WhereToGoFromWWRoestvorming.ai_beveiliging_basis1,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Beveiliging Basis 1'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Beveiliging Basis 1',),
               ),
               PopupMenuItem<WhereToGoFromWWRoestvorming>(
                 value: WhereToGoFromWWRoestvorming.ai_beveiliging_basis2,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Beveiliging Basis 2'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Beveiliging Basis 2',),
               ),
             ],
           ),

@@ -34,29 +34,11 @@ class WWWisselsVrijmaken extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWWisselsVrijmaken>>[
               PopupMenuItem<WhereToGoFromWWWisselsVrijmaken>(
                 value: WhereToGoFromWWWisselsVrijmaken.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWWisselsVrijmaken>(
                 value: WhereToGoFromWWWisselsVrijmaken.ai_stroomstoring,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Stroomstoring'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Stroomstoring',),
               ),
             ],
           ),

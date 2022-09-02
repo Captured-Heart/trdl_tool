@@ -36,42 +36,15 @@ class WWSectieStoring extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWSectieStoring>>[
               PopupMenuItem<WhereToGoFromWWSectieStoring>(
                 value: WhereToGoFromWWSectieStoring.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromWWSectieStoring>(
                 value: WhereToGoFromWWSectieStoring.ai_infra_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Infra'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Infra',),
               ),
               PopupMenuItem<WhereToGoFromWWSectieStoring>(
                 value: WhereToGoFromWWSectieStoring.ai_sectie,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Sectie'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Sectie',),
               ),
             ],
           ),
