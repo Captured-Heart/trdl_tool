@@ -32,34 +32,23 @@ class WWGestoordWissel extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWGestoordWissel>>[
-              PopupMenuItem<WhereToGoFromWWGestoordWissel>(
+              const PopupMenuItem<WhereToGoFromWWGestoordWissel>(
                 value: WhereToGoFromWWGestoordWissel.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWGestoordWissel>(
+              const PopupMenuItem<WhereToGoFromWWGestoordWissel>(
                 value: WhereToGoFromWWGestoordWissel.ai_gestoord_wissel,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Gestoord Wissel'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Gestoord Wissel',
                 ),
               ),
             ],
           ),
+          //TODO: Hier verder met Refactoring MenuItemContent!
           const HomeButton(),
         ],
       ),
