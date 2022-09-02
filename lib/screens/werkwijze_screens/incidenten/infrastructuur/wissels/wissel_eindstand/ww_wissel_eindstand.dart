@@ -5,8 +5,6 @@ enum WhereToGoFromWWWisselEindstand {
   ai_wissel_eindstand,
 }
 
-//TODO: Hier verder met refactoring PopupMenuItem!
-
 class WWWisselEindstand extends StatelessWidget {
   const WWWisselEindstand({Key? key}) : super(key: key);
 
@@ -34,30 +32,18 @@ class WWWisselEindstand extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWWisselEindstand>>[
-              PopupMenuItem<WhereToGoFromWWWisselEindstand>(
+              const PopupMenuItem<WhereToGoFromWWWisselEindstand>(
                 value: WhereToGoFromWWWisselEindstand.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
                 ),
               ),
-              PopupMenuItem<WhereToGoFromWWWisselEindstand>(
+              const PopupMenuItem<WhereToGoFromWWWisselEindstand>(
                 value: WhereToGoFromWWWisselEindstand.ai_wissel_eindstand,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Wissel niet in eindstand'),
-                  ],
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Wissel Eindstand',
                 ),
               ),
             ],
