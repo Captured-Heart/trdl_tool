@@ -7,13 +7,21 @@ showVersionUpdatePopup(context) {
       return AlertDialog(
         content: SizedBox(
           width: MediaQuery.of(context).size.width * 0.75,
-          height: MediaQuery.of(context).size.width * 0.50,
+          height: MediaQuery.of(context).size.width * 0.75,
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CurrentVersion(
-                  versionNumber: '0.2.6',
+                  versionNumber: '0.2.7',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-09-04: 0.2.7',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Android Gradle upgrade naar 7.2.2;\n- Flutter upgrade naar 3.3.0;\nKotlin upgrade naar 1.7.10;\nGoogle Services upgrade naar 4.3.13;\nVersie & Updates popup aangepast;\nRefactor van PopMenuItem;\nNavigatie toegevoegd aan AppBar.',
                 ),
                 SizedBoxH(),
                 DateChanged(
