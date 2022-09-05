@@ -40,68 +40,23 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIRijwegenPlanscherm>>[
               PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
                 value: WhereToGoFromAIRijwegenPlanscherm.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
                 value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_planopbouw,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen Planopbouw'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen Planopbouw',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
                 value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_ari,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen ARI'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen ARI',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
                 value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_trots,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen TROTS'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen TROTS',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
                 value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_bedienscherm,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen Bedienscherm'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen Bedienscherm',),
               ),
             ],
           ),

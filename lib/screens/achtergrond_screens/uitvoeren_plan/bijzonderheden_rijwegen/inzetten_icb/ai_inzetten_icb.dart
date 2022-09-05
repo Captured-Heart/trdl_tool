@@ -34,42 +34,15 @@ class AIInzettenICB extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIInzettenICB>>[
               PopupMenuItem<WhereToGoFromAIInzettenICB>(
                 value: WhereToGoFromAIInzettenICB.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIInzettenICB>(
                 value: WhereToGoFromAIInzettenICB.ww_inzetten_icb,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Inzetten ICB'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Inzetten ICB',),
               ),
               PopupMenuItem<WhereToGoFromAIInzettenICB>(
                 value: WhereToGoFromAIInzettenICB.ai_bijzonderheden_rijwegen_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Bijzonderheden Rijwegen'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bijzonderheden Rijwegen',),
               ),
             ],
           ),

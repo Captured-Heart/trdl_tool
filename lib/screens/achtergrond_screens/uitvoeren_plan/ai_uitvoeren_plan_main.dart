@@ -1,3 +1,5 @@
+//TODO: Finished achtergrond_screen/uitvoeren_plan for PopMenuItem refactor. Continue on achtergrond_screens/aanpassen_plan!
+
 import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromAIUitvoerenPlanMain {
@@ -38,42 +40,15 @@ class AIUitvoerenPlanMain extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIUitvoerenPlanMain>>[
               PopupMenuItem<WhereToGoFromAIUitvoerenPlanMain>(
                 value: WhereToGoFromAIUitvoerenPlanMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIUitvoerenPlanMain>(
                 value: WhereToGoFromAIUitvoerenPlanMain.ww_uitvoeren_plan_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Uitvoeren Plan'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Uitvoeren Plan',),
               ),
               PopupMenuItem<WhereToGoFromAIUitvoerenPlanMain>(
                 value: WhereToGoFromAIUitvoerenPlanMain.ai_rijwegen_ari,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen ARI'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen ARI',),
               ),
             ],
           ),

@@ -42,55 +42,19 @@ class AIVervoersregeling extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIVervoersregeling>>[
               PopupMenuItem<WhereToGoFromAIVervoersregeling>(
                 value: WhereToGoFromAIVervoersregeling.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIVervoersregeling>(
                 value: WhereToGoFromAIVervoersregeling.ww_vervoersregeling,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Vervoersregeling'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Vervoersregeling',),
               ),
               PopupMenuItem<WhereToGoFromAIVervoersregeling>(
                 value: WhereToGoFromAIVervoersregeling.ai_bijzonderheden_trein,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Bijzonderheden Trein'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bijzonderheden Trein',),
               ),
               PopupMenuItem<WhereToGoFromAIVervoersregeling>(
                 value: WhereToGoFromAIVervoersregeling.ai_onjuiste_detectie,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Onjuiste Detectie'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Onjuiste Detectie',),
               ),
             ],
           ),

@@ -50,81 +50,27 @@ class AIRijwegenTrots extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIRijwegenTrots>>[
               PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
                 value: WhereToGoFromAIRijwegenTrots.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
                 value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_ari,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen ARI'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen ARI',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
                 value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planscherm,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen Planscherm'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen Planscherm',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
                 value: WhereToGoFromAIRijwegenTrots.ai_bijzonderheden_rijwegen_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Bijzonderheden Rijwegen'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bijzonderheden Rijwegen',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
                 value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planopbouw,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen Planopbouw'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen Planopbouw',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
                 value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_bedienscherm,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen Bedienscherm'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen Bedienscherm',),
               ),
             ],
           ),

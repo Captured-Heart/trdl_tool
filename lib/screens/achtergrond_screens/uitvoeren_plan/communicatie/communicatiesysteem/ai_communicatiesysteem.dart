@@ -34,42 +34,15 @@ class AICommunicatieSysteem extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAICommunicatieSysteem>>[
               PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
                 value: WhereToGoFromAICommunicatieSysteem.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
                 value: WhereToGoFromAICommunicatieSysteem.ww_communicatie_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Communicatie'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Communicatie',),
               ),
               PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
                 value: WhereToGoFromAICommunicatieSysteem.ai_incidenten_basis,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Incidenten'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Incidenten',),
               ),
             ],
           ),

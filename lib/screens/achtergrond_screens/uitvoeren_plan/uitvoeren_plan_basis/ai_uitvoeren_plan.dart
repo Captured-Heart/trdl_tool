@@ -38,42 +38,15 @@ class AIUitvoerenPlan extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIUitvoerenPlan>>[
               PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
                 value: WhereToGoFromAIUitvoerenPlan.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
                 value: WhereToGoFromAIUitvoerenPlan.ai_aanpassen_plan,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Aanpassen Plan'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Aanpassen Plan',),
               ),
               PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
                 value: WhereToGoFromAIUitvoerenPlan.ai_bovenleiding_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Bovenleiding'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bovenleiding',),
               ),
             ],
           ),

@@ -46,68 +46,23 @@ class AIControlerenWBI extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIControlerenWBI>>[
               PopupMenuItem<WhereToGoFromAIControlerenWBI>(
                 value: WhereToGoFromAIControlerenWBI.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIControlerenWBI>(
                 value: WhereToGoFromAIControlerenWBI.ww_controleren_wbi,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Controleren WBI'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Controleren WBI',),
               ),
               PopupMenuItem<WhereToGoFromAIControlerenWBI>(
                 value: WhereToGoFromAIControlerenWBI.ai_fouten_wbi,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Fouten WBI'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Fouten in de WBI',),
               ),
               PopupMenuItem<WhereToGoFromAIControlerenWBI>(
                 value: WhereToGoFromAIControlerenWBI.ai_geplande_werkzaamheden,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Geplande Werkzaamheden'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Geplande Werkzaamheden',),
               ),
               PopupMenuItem<WhereToGoFromAIControlerenWBI>(
                 value: WhereToGoFromAIControlerenWBI.ai_aanvang_werkzaamheden,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Aanvang Werkzaamheden'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Aanvang Werkzaamheden',),
               ),
             ],
           ),

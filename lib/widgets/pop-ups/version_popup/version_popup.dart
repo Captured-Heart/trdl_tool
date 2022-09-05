@@ -21,7 +21,7 @@ showVersionUpdatePopup(context) {
                 ),
                 ChangesMade(
                   changes:
-                      '- Android Gradle upgrade naar 7.2.2;\n- Flutter upgrade naar 3.3.0;\nKotlin upgrade naar 1.7.10;\nGoogle Services upgrade naar 4.3.13;\nVersie & Updates popup aangepast;\nRefactor van PopMenuItem;\nNavigatie toegevoegd aan AppBar.',
+                      '- Android Gradle upgrade naar 7.2.2;\n- Flutter upgrade naar 3.3.0;\n- Kotlin upgrade naar 1.7.10;\n- Google Services upgrade naar 4.3.13;\n- Versie & Updates popup aangepast;\n- Refactor van PopMenuItem;\n- Navigatie toegevoegd aan AppBar.',
                 ),
                 SizedBoxH(),
                 DateChanged(

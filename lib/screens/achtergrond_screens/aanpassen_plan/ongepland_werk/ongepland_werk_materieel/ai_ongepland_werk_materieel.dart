@@ -73,7 +73,6 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                   icon: Icons.menu_book,
                   text: 'AI Ongepland Werk',
                 ),
-                //TODO: Hier verder met toevoegen navigatie aan achtergrondinformatie!
               ),
             ],
           ),

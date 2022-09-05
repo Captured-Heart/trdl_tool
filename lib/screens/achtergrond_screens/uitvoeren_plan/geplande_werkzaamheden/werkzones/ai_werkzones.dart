@@ -38,42 +38,15 @@ class AIWerkzones extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIWerkzones>>[
               PopupMenuItem<WhereToGoFromAIWerkzones>(
                 value: WhereToGoFromAIWerkzones.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIWerkzones>(
                 value: WhereToGoFromAIWerkzones.ai_geplande_werkzaamheden_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Geplande Werkzaamheden'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Geplande Werkzaamheden',),
               ),
               PopupMenuItem<WhereToGoFromAIWerkzones>(
                 value: WhereToGoFromAIWerkzones.ai_aanvang_werkzaamheden,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Aanvang Werkzaamheden'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Aanvang Werkzaamheden',),
               ),
             ],
           ),

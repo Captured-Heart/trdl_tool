@@ -36,33 +36,12 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIGeplandeWerkzaamhedenMain>>[
               PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
                 value: WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
                 value: WhereToGoFromAIGeplandeWerkzaamhedenMain
                     .ww_geplande_werkzaamheden_main,
-                child: FittedBox(
-                  fit: BoxFit.fitWidth,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.train,
-                        color: flexSchemeLight.primary,
-                      ),
-                      const Text('WW Geplande Werkzaamheden'),
-                    ],
-                  ),
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Geplande Werkzaamheden',),
               ),
             ],
           ),

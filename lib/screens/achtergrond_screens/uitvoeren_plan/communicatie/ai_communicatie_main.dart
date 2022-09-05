@@ -50,83 +50,29 @@ class AICommunicatieMain extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAICommunicatieMain>>[
               PopupMenuItem<WhereToGoFromAICommunicatieMain>(
                 value: WhereToGoFromAICommunicatieMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAICommunicatieMain>(
                 value:
                     WhereToGoFromAICommunicatieMain.ww_mondelinge_communicatie,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Mondelinge Communicatie'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Mondelinge Communicatie',),
               ),
               PopupMenuItem<WhereToGoFromAICommunicatieMain>(
                 value:
                     WhereToGoFromAICommunicatieMain.ai_mondelinge_communicatie,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Mondelinge Communicatie'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Mondelinge Communicatie',),
               ),
               PopupMenuItem<WhereToGoFromAICommunicatieMain>(
                 value: WhereToGoFromAICommunicatieMain.ai_communicatiemiddelen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Communicatiemiddelen'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Communicatiemiddelen',),
               ),
               PopupMenuItem<WhereToGoFromAICommunicatieMain>(
                 value: WhereToGoFromAICommunicatieMain.ai_communicatiesysteem,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Communicatiesysteem'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Communicatiesysteem',),
               ),
               PopupMenuItem<WhereToGoFromAICommunicatieMain>(
                 value: WhereToGoFromAICommunicatieMain.ai_ketenpartners,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Ketenpartners'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Ketenpartners',),
               ),
             ],
           ),

@@ -35,33 +35,12 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAICommmunicatieMiddelen>>[
               PopupMenuItem<WhereToGoFromAICommmunicatieMiddelen>(
                 value: WhereToGoFromAICommmunicatieMiddelen.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAICommmunicatieMiddelen>(
                 value: WhereToGoFromAICommmunicatieMiddelen
                     .ww_mondelinge_communicatie,
-                child: FittedBox(
-                  fit: BoxFit.fitWidth,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.train,
-                        color: flexSchemeLight.primary,
-                      ),
-                      const Text('WW Mondelinge Communicatie'),
-                    ],
-                  ),
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Mondelinge Communicatie',),
               ),
             ],
           ),

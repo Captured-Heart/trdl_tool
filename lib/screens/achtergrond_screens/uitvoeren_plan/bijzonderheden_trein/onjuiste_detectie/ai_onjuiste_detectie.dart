@@ -42,55 +42,19 @@ class AIOnjuisteDetectie extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIOnjuisteDetectie>>[
               PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
                 value: WhereToGoFromAIOnjuisteDetectie.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
                 value: WhereToGoFromAIOnjuisteDetectie.ww_onjuiste_detectie,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Onjuiste Detectie'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Onjuiste Detectie',),
               ),
               PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
                 value: WhereToGoFromAIOnjuisteDetectie.ai_bijzonderheden_trein,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Bijzonderheden Trein'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bijzonderheden Trein',),
               ),
               PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
                 value: WhereToGoFromAIOnjuisteDetectie.ai_vervoersregeling,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Vervoersregeling'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Vervoersregeling',),
               ),
             ],
           ),

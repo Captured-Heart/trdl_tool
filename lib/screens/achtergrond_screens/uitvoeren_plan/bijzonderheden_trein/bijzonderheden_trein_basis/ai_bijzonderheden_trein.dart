@@ -62,56 +62,20 @@ class AIBijzonderhedenTrein extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIBijzonderhedenTrein>>[
               PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
                 value: WhereToGoFromAIBijzonderhedenTrein.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
                 value: WhereToGoFromAIBijzonderhedenTrein
                     .ww_bijzonderheden_trein_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Bijzonderheden Trein'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Bijzonderheden Trein',),
               ),
               PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
                 value: WhereToGoFromAIBijzonderhedenTrein.ai_vervoersregeling,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Vervoersregeling'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Vervoersregeling',),
               ),
               PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
                 value: WhereToGoFromAIBijzonderhedenTrein.ai_onjuiste_detectie,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Onjuiste Detectie'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Onjuiste Detectie',),
               ),
             ],
           ),

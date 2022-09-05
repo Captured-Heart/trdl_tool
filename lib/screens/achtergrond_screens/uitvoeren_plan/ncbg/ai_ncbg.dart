@@ -31,29 +31,11 @@ class AINcbg extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAINcbg>>[
               PopupMenuItem<WhereToGoFromAINcbg>(
                 value: WhereToGoFromAINcbg.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAINcbg>(
                 value: WhereToGoFromAINcbg.ww_ncbg,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW NCBG'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW NCBG',),
               ),
             ],
           ),

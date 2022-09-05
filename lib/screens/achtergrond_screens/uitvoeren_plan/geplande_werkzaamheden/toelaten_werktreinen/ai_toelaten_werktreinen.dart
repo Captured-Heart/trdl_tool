@@ -52,92 +52,30 @@ class AIToelatenWerktreinen extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIToelatenWerktreinen>>[
               PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
                 value: WhereToGoFromAIToelatenWerktreinen.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
                 value:
                     WhereToGoFromAIToelatenWerktreinen.ww_toelaten_werktreinen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Toelaten Werktreinen'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Toelaten Werktreinen',),
               ),
               PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
                 value: WhereToGoFromAIToelatenWerktreinen
                     .ai_bijzonderheden_rijwegen_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Bijzonderheden Rijwegen'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bijzonderheden Rijwegen',),
               ),
               PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
                 value: WhereToGoFromAIToelatenWerktreinen
                     .ai_geplande_werkzaamheden_main,
-                child: FittedBox(
-                  fit: BoxFit.fill,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Icon(
-                        Icons.menu_book,
-                        color: flexSchemeLight.primary,
-                      ),
-                      const SizedBox(
-                        width: 2.0,
-                      ),
-                      const Text(
-                        'AI Geplande Werkzaamheden',
-                      ),
-                    ],
-                  ),
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Geplande Werkzaamheden',),
               ),
               PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
                 value: WhereToGoFromAIToelatenWerktreinen.ai_inzetten_icb,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Inzetten ICB'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Inzetten ICB',),
               ),
               PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
                 value: WhereToGoFromAIToelatenWerktreinen.ai_onjuiste_detectie,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Onjuiste Detectie'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Onjuiste Detectie',),
               ),
             ],
           ),

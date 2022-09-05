@@ -46,94 +46,31 @@ class AIRijwegenARI extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIRijwegenARI>>[
               PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ww_uitvoeren_plan_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Uitvoeren Plan'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Uitvoeren Plan',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_rijwegen_trots,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen TROTS'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen TROTS',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_bijzonderheden_rijwegen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Bijzonderheden Rijwegen'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bijzonderheden Rijwegen',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planopbouw,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen Planopbouw'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen Planopbouw',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planscherm,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen Planscherm'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen Planscherm',),
               ),
               PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_rijwegen_bedienscherm,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Rijwegen Bedienscherm'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen Bedienscherm',),
               ),
             ],
           ),

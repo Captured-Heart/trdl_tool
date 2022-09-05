@@ -36,30 +36,12 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIBijzonderhedenTreinMain>>[
               PopupMenuItem<WhereToGoFromAIBijzonderhedenTreinMain>(
                 value: WhereToGoFromAIBijzonderhedenTreinMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIBijzonderhedenTreinMain>(
                 value: WhereToGoFromAIBijzonderhedenTreinMain
                     .ww_bijzonderheden_trein_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Bijzonderheden Trein'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Bijzonderheden Trein',),
               ),
             ],
           ),

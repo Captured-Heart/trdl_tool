@@ -41,44 +41,17 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIBijzonderhedenRijwegenMain>>[
               PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
                 value: WhereToGoFromAIBijzonderhedenRijwegenMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
                 value: WhereToGoFromAIBijzonderhedenRijwegenMain
                     .ww_bijzonderheden_rijwegen_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Bijzonderheden Rijwegen'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Bijzonderheden Rijwegen',),
               ),
               PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
                 value: WhereToGoFromAIBijzonderhedenRijwegenMain
                     .ww_kop_van_trein_voorbij_sein,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.train,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Kop voorbij Sein'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Kop van Trein Voorbij Sein',),
               ),
             ],
           ),

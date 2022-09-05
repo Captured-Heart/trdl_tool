@@ -35,30 +35,12 @@ class AIBijzondereAandacht extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIBijzondereAandacht>>[
               PopupMenuItem<WhereToGoFromAIBijzondereAandacht>(
                 value: WhereToGoFromAIBijzondereAandacht.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIBijzondereAandacht>(
                 value: WhereToGoFromAIBijzondereAandacht
                     .ai_bijzonderheden_trein_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('AI Bijzonderheden Trein'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bijzonderheden Trein',),
               ),
             ],
           ),
