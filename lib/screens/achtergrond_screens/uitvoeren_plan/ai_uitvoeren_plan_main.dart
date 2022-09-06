@@ -1,5 +1,3 @@
-//TODO: Finished achtergrond_screen/uitvoeren_plan for PopMenuItem refactor. Continue on achtergrond_screens/aanpassen_plan!
-
 import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromAIUitvoerenPlanMain {

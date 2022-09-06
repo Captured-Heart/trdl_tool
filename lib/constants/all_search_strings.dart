@@ -97,6 +97,7 @@ List<String> searchStringsList = [
   'ai_ongepland_werk_infra',
   'ai_ongepland_werk_materieel',
   'ai_vertragingen',
+  'ai_monitoring',
   'ai_orderacceptatie',
   'ai_stappenplan_versperringen',
   'ai_incidenten_main',

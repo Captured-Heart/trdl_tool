@@ -169,6 +169,7 @@ class MainEntry extends StatelessWidget {
         'ai_ongepland_werk_materieel': (context) =>
             const AIOngeplandWerkMaterieel(),
         'ai_vertragingen': (context) => const AIVertragingen(),
+        'ai_monitoring': (context) => const AIMonitoring(),
         'ai_orderacceptatie': (context) => const AIOrderacceptatie(),
         'ai_stappenplan_versperringen': (context) =>
             const AIStappenplanVersperringen(),

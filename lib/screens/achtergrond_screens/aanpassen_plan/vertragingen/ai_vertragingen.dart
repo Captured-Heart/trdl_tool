@@ -1,5 +1,13 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIVertragingen {
+  home_screen,
+  ww_vertragingen,
+  ai_aanpassen_plan_main,
+  ai_monitoring,
+  ai_klanthinder,
+}
+
 class AIVertragingen extends StatelessWidget {
   const AIVertragingen({Key? key}) : super(key: key);
 
@@ -12,7 +20,59 @@ class AIVertragingen extends StatelessWidget {
           title: 'Achtergrondinformatie',
         ),
         actions: const [
-          HomeButton(),
+          PopupMenuButton<WhereToGoFromAIVertragingen>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIVertragingen result) {
+              if (result == WhereToGoFromAIVertragingen.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIVertragingen.ww_aanpassen_plan_main) {
+                Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIVertragingen>>[
+              const PopupMenuItem<WhereToGoFromAIVertragingen>(
+                value: WhereToGoFromAIVertragingen.home_screen,
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIVertragingen>(
+                value: WhereToGoFromAIVertragingen.ww_vertragingen,
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Vertragingen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIVertragingen>(
+                value: WhereToGoFromAIVertragingen.ai_aanpassen_plan_main,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Aanpassen Plan',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIVertragingen>(
+                value: WhereToGoFromAIVertragingen.ai_monitoring,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Vertraging en Monitoring',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIVertragingen>(
+                value: WhereToGoFromAIVertragingen.ai_klanthinder,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Klanthinder',
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
         ],
       ),
       body: SafeArea(
