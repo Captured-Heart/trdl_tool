@@ -122,11 +122,10 @@ class AIMonitoring extends StatelessWidget {
                         text:
                             '- de KPI Klanthinder wordt bepaald;\n\n- Inzicht wordt verschaft in vervoers- en onderhoudsprestaties;\n\n- De prestaties van de spoorsector (mede) verklaard kunnen worden (bijv. waarmee meer inzicht verkregen kan worden in de (dis)punctualiteit);\n\n- Sturing op de operationele processen (mede) kan plaatsvinden;- Informatie aangeleverd kan worden ter verantwoording van formele afspraken zoals:',
                       ),
-                      SizedBoxH(),
                       BodyText(
                         indents: 2,
                         text:
-                            '- De prestatieregeling die is overeengekomen tussen Directoraat Generaal Personenvervoer van I&M (DGP) en High Speed Alliance (HSA) (tegenwoordig NS International);\n\n- De Kwartaalrapportage ProRail ten behoeve van het Ministerie van Infrastructuur & Milieu wordt samengesteld;',
+                            '* De prestatieregeling die is overeengekomen tussen Directoraat Generaal Personenvervoer van I&M (DGP) en High Speed Alliance (HSA) (tegenwoordig NS International);\n* De Kwartaalrapportage ProRail ten behoeve van het Ministerie van Infrastructuur & Milieu wordt samengesteld;',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -163,7 +162,7 @@ class AIMonitoring extends StatelessWidget {
                       SizedBoxH(),
                       InsertImage(
                         image:
-                            'assets/images/achtergrond_info/aanpassen_plan/vertragingen/ai_monitoring_1.jpg',
+                            'assets/images/achtergrond_info/aanpassen_plan/vertragingen/ai_monitoring_2.jpg',
                       ),
                       SizedBoxH(),
                     ],

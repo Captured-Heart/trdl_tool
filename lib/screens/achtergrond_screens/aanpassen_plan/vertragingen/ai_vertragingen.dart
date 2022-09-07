@@ -122,7 +122,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Jij voert NB in via PRL;\n\n- De DVL voert het in via VOS;\n\n- De Grensdisponent of de VLCG voert het in voor grens-in verkeer via VOS;\n\n- Een goederenvervoerder voert het in op een vertrekstation in Nederland via RMS.',
+                            '- TRDL voert NB in via PRL;\n\n- De DVL voert het in via VOS;\n\n- De Grensdisponent of de VLCG voert het in voor grens-in verkeer via VOS;\n\n- Een goederenvervoerder voert het in op een vertrekstation in Nederland via RMS.',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -156,46 +156,6 @@ class AIVertragingen extends StatelessWidget {
                         text:
                             '\'Exact\' wordt door het systeem gemeten en derhalve niet gebruikt. Als je deze wel gebruikt, meet het systeem niet meer op het betreffende meetpunt.',
                       ),
-                    ],
-                  ),
-                ),
-              ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Vertragingen - werkwijze',
-                            destination: 'ww_vertragingen',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Aanpassen plan',
-                            destination: 'ww_aanpassenplan_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Vertragingen & Monitoring',
-                            destination: 'ww_vertragingen',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Klanthinder',
-                            destination: 'ww_vertragingen',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
                     ],
                   ),
                 ),
