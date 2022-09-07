@@ -19,7 +19,7 @@ class AIVertragingen extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
+        actions: [
           PopupMenuButton<WhereToGoFromAIVertragingen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
@@ -27,8 +27,15 @@ class AIVertragingen extends StatelessWidget {
               if (result == WhereToGoFromAIVertragingen.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromAIVertragingen.ww_aanpassen_plan_main) {
-                Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
+                  WhereToGoFromAIVertragingen.ww_vertragingen) {
+                Navigator.pushNamed(context, 'ww_vertragingen');
+              } else if (result ==
+                  WhereToGoFromAIVertragingen.ai_aanpassen_plan_main) {
+                Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
+              } else if (result == WhereToGoFromAIVertragingen.ai_monitoring) {
+                Navigator.pushNamed(context, 'ai_monitoring');
+              } else if (result == WhereToGoFromAIVertragingen.ai_klanthinder) {
+                Navigator.pushNamed(context, 'ai_klanthinder');
               } else {
                 Navigator.pop(context);
               }

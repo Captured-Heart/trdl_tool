@@ -16,6 +16,7 @@ export 'package:trdl_tool/services/auth_service.dart';
 /*EXTERNAL PACKAGES (THIRD PARTY)*/
 export 'package:google_fonts/google_fonts.dart';
 export 'package:flex_color_scheme/flex_color_scheme.dart';
+export 'package:flutter_animate/flutter_animate.dart';
 export 'package:flutter_spinkit/flutter_spinkit.dart';
 export 'package:logger/logger.dart';
 export 'package:url_launcher/url_launcher.dart';
