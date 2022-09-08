@@ -216,6 +216,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_w
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/infra_ter_beschikking/ai_infra_ter_beschikking.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_vertragingen.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_monitoring.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_klanthinder.dart';
 
 /*ACHTERGROND INFORMATIE INCIDENTEN PAGES*/
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/ai_incidenten_main.dart';
