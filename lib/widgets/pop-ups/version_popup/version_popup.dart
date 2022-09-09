@@ -13,7 +13,15 @@ showVersionUpdatePopup(context) {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CurrentVersion(
-                  versionNumber: '0.2.7',
+                  versionNumber: '0.2.8',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-09-09: 0.2.8',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Achtergrondinformatie verder uitgebreid (15);\n\n- Overflow bug aanpakt;\n\n- Gradle naar laatste versie;\n\n- Firebase opnieuw toegevoegd + json;\n\n- Flexcolorscheme aangepast.',
                 ),
                 SizedBoxH(),
                 DateChanged(
