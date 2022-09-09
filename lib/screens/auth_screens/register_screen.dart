@@ -46,7 +46,7 @@ class _RegisterState extends State<Register> {
               const SizedBoxH(),
               SizedBox(
                 width: MediaQuery.of(context).size.width,
-                height: 350,
+                height: 400,
                 child: Card(
                   elevation: 6.0,
                   child: Padding(

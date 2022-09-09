@@ -29,6 +29,13 @@
             {
               "client_id": "35344141665-45ep7aroqtb10ko7pttlgp1fpr29gmi5.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "35344141665-ah73ihrbdhcdjd857l8s5qg1rsh0qv0a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "nl.plotsklapps.trdlTool"
+              }
             }
           ]
         }
