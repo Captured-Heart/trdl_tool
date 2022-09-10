@@ -100,12 +100,12 @@ class AIMaterieelMain extends StatelessWidget {
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Quo Vadis & Hotbox',
-                          destination: 'ai_quo_vadis_hotbox',
+                          destination: 'ai_quo_vadis_hotbox', //TODO: Toevoegen!
                         ),
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Gevaarlijke stoffen en Milieu',
-                          destination: 'ai_gevaarlijke_stoffen_milieu',
+                          destination: 'ai_gevaarlijke_stoffen_milieu', //TODO: Toevoegen!
                         ),
                       ],
                     ),
