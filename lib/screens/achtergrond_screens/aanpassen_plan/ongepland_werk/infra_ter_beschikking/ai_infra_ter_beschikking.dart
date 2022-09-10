@@ -1,5 +1,12 @@
 import 'package:trdl_tool/all_imports.dart';
 
+enum WhereToGoFromAIInfraTerBeschikking {
+  home_screen,
+  ww_ongepland_werk_infra,
+  ai_ongepland_werk_main,
+  ai_ongepland_werk_materieel,
+}
+
 class AIInfraTerBeschikking extends StatelessWidget {
   const AIInfraTerBeschikking({Key? key}) : super(key: key);
 
@@ -11,7 +18,60 @@ class AIInfraTerBeschikking extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
+        actions: [
+          PopupMenuButton<WhereToGoFromAIInfraTerBeschikking>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIInfraTerBeschikking result) {
+              if (result == WhereToGoFromAIInfraTerBeschikking.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIInfraTerBeschikking.ww_ongepland_werk_infra) {
+                Navigator.pushNamed(context, 'ww_ongepland_werk_infra');
+              } else if (result ==
+                  WhereToGoFromAIInfraTerBeschikking.ai_ongepland_werk_main) {
+                Navigator.pushNamed(context, 'ai_ongepland_werk_main');
+              } else if (result ==
+                  WhereToGoFromAIInfraTerBeschikking.ai_ongepland_werk_materieel) {
+                Navigator.pushNamed(context, 'ai_ongepland_werk_materieel');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIInfraTerBeschikking>>[
+              const PopupMenuItem<WhereToGoFromAIInfraTerBeschikking>(
+                value: WhereToGoFromAIInfraTerBeschikking.home_screen,
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIInfraTerBeschikking>(
+                value:
+                    WhereToGoFromAIInfraTerBeschikking.ww_ongepland_werk_infra,
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Ongepland Werk',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIInfraTerBeschikking>(
+                value:
+                    WhereToGoFromAIInfraTerBeschikking.ai_ongepland_werk_main,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Ongepland Werk',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIInfraTerBeschikking>(
+                value: WhereToGoFromAIInfraTerBeschikking.ai_ongepland_werk_materieel,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Ongepland Werk - Materieel',
+                ),
+              ),
+            ],
+          ),
           HomeButton(),
         ],
       ),

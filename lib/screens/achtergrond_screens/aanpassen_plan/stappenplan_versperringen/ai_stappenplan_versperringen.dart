@@ -3,6 +3,7 @@ import 'package:trdl_tool/all_imports.dart';
 enum WhereToGoFromAIStappenplanVersperringen {
   home_screen,
   ww_stappenplan_versperringen,
+  ai_aanpassen_plan_main,
 }
 
 class AIStappenplanVersperringen extends StatelessWidget {
@@ -28,6 +29,10 @@ class AIStappenplanVersperringen extends StatelessWidget {
                   WhereToGoFromAIStappenplanVersperringen
                       .ww_stappenplan_versperringen) {
                 Navigator.pushNamed(context, 'ww_stappenplan_versperringen');
+              } else if (result ==
+                  WhereToGoFromAIStappenplanVersperringen
+                      .ai_aanpassen_plan_main) {
+                Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
               } else {
                 Navigator.pop(context);
               }
@@ -47,6 +52,14 @@ class AIStappenplanVersperringen extends StatelessWidget {
                 child: MenuItemContent(
                   icon: Icons.train,
                   text: 'WW Stappenplan Versperringen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
+                value: WhereToGoFromAIStappenplanVersperringen
+                    .ai_aanpassen_plan_main,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Aanpassen Plan',
                 ),
               ),
             ],
