@@ -231,6 +231,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/overwegen
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/spoor/ai_spoor_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/ai_wissels_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/sectie/ai_sectie_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/materieel/ai_materieel_main.dart';
 
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/screens/proquiz_screens/proquiz_main.dart';

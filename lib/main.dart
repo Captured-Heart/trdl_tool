@@ -180,6 +180,7 @@ class MainEntry extends StatelessWidget {
         'ai_incidenten_basis': (context) => const AIIncidentenBasis(),
         'ai_incidenten_derdendieren': (context) => const AIDerdenDieren(),
         'ai_infra_main': (context) => const AIInfraMain(),
+        'ai_materieel_main': (context) => const AIMaterieelMain(),
         'ai_beveiliging_main': (context) => const AIBeveiligingMain(),
         'ai_beveiliging_basis1': (context) => const AIBeveiligingBasis1(),
         'ai_bovenleiding_main': (context) => const AIBovenleidingMain(),

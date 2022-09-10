@@ -104,6 +104,7 @@ List<String> searchStringsList = [
   'ai_incidenten_main',
   'ai_incidenten_basis',
   'ai_infra_main',
+  'ai_materieel_main',
   'ai_beveiliging_main',
   'ai_beveiliging_basis1',
   'ai_bovenleiding_main',

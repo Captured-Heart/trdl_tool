@@ -34,29 +34,11 @@ class AIIncidentenMain extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIIncidentenMain>>[
               PopupMenuItem<WhereToGoFromAIIncidentenMain>(
                 value: WhereToGoFromAIIncidentenMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIIncidentenMain>(
                 value: WhereToGoFromAIIncidentenMain.ai_inzetten_railvoertuig,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Inzetten railvoertuig ICB'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Inzetten Railvoertuig',),
               ),
             ],
           ),
@@ -112,13 +94,14 @@ class AIIncidentenMain extends StatelessWidget {
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Infra',
-                          destination: 'ai_incidenten_infra_main',
+                          destination: 'ai_infra_main',
                         ),
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Materieel',
-                          destination: 'ai_incidenten_materieel_main',
+                          destination: 'ai_materieel_main',
                         ),
+                        //TOEVOEGEN MATERIEEL!!!
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Mensen, dieren en voorwerpen',
