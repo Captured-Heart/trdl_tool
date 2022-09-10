@@ -3,7 +3,12 @@ import 'package:trdl_tool/all_imports.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   /*START FIREBASE BACKEND*/
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  await FirebaseAppCheck.instance.activate(
+    webRecaptchaSiteKey: 'recaptcha-v3-site-key',
+  );
   runApp(
     const MainEntry(),
   );
@@ -181,6 +186,12 @@ class MainEntry extends StatelessWidget {
         'ai_incidenten_derdendieren': (context) => const AIDerdenDieren(),
         'ai_infra_main': (context) => const AIInfraMain(),
         'ai_materieel_main': (context) => const AIMaterieelMain(),
+        'ai_verloren_onderdelen': (context) => const AIVerlorenOnderdelen(),
+        'ai_vaste_rem': (context) => const AIVasteRem(),
+        'ai_quo_vadis_hotbox': (context) => const AIQuoVadisHotbox(),
+        'ai_gevaarlijke_stoffen_milieu': (context) =>
+            const AIGevaarlijkeStoffenMilieu(),
+        'ai_atb': (context) => const AIATB(),
         'ai_beveiliging_main': (context) => const AIBeveiligingMain(),
         'ai_beveiliging_basis1': (context) => const AIBeveiligingBasis1(),
         'ai_bovenleiding_main': (context) => const AIBovenleidingMain(),

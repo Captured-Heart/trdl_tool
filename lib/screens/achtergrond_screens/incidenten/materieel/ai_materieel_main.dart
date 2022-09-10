@@ -32,13 +32,19 @@ class AIMaterieelMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIMaterieelMain>>[
-              PopupMenuItem<WhereToGoFromAIMaterieelMain>(
+              const PopupMenuItem<WhereToGoFromAIMaterieelMain>(
                 value: WhereToGoFromAIMaterieelMain.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIMaterieelMain>(
+              const PopupMenuItem<WhereToGoFromAIMaterieelMain>(
                 value: WhereToGoFromAIMaterieelMain.ww_materieel_main,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Materieel',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Materieel',
+                ),
               ),
             ],
           ),
@@ -61,7 +67,7 @@ class AIMaterieelMain extends StatelessWidget {
                     SizedBoxH(),
                     InsertImage(
                       image:
-                          'assets/images/achtergrond_info/aanpassen_plan/incidenten/ai_materieel_1.jpg',
+                          'assets/images/achtergrond_info/incidenten/ai_materieel_1.jpg',
                     ),
                     SizedBoxH(),
                   ],
@@ -84,7 +90,8 @@ class AIMaterieelMain extends StatelessWidget {
                       children: const [
                         NavButton(
                           buttontext: 'Materieel - Verloren Onderdelen',
-                          destination: 'ai_verloren_onderdelen', //TODO: Toevoegen!
+                          destination:
+                              'ai_verloren_onderdelen', //TODO: Toevoegen!
                         ),
                         SizedBoxH(),
                         NavButton(
@@ -105,7 +112,8 @@ class AIMaterieelMain extends StatelessWidget {
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Gevaarlijke stoffen en Milieu',
-                          destination: 'ai_gevaarlijke_stoffen_milieu', //TODO: Toevoegen!
+                          destination:
+                              'ai_gevaarlijke_stoffen_milieu', //TODO: Toevoegen!
                         ),
                       ],
                     ),

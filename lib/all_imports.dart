@@ -9,6 +9,8 @@ export 'dart:io';
 
 /*FIREBASE PACKAGES*/
 export 'package:firebase_core/firebase_core.dart';
+export 'firebase_options.dart';
+export 'package:firebase_app_check/firebase_app_check.dart';
 export 'package:cloud_firestore/cloud_firestore.dart';
 export 'package:firebase_auth/firebase_auth.dart';
 export 'package:trdl_tool/services/auth_service.dart';
@@ -232,6 +234,11 @@ export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/spoor/ai_
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/ai_wissels_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/sectie/ai_sectie_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/materieel/ai_materieel_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/materieel/atb/ai_atb.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/materieel/gevaarlijke_stoffen_milieu/ai_gevaarlijke_stoffen_milieu.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/materieel/quo_vadis_hotbox/ai_quo_vadis_hotbox.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/materieel/vaste_rem/ai_vaste_rem.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/materieel/verloren_onderdelen/ai_verloren_onderdelen.dart';
 
 /*PROQUIZ PAGES*/
 export 'package:trdl_tool/screens/proquiz_screens/proquiz_main.dart';
