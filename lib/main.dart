@@ -199,6 +199,7 @@ class MainEntry extends StatelessWidget {
         'ai_overwegen_main': (context) => const AIOverwegenMain(),
         'ai_spoor_main': (context) => const AISpoorMain(),
         'ai_wissels_main': (context) => const AIWisselsMain(),
+        'ai_wissels_basis': (context) => const AIWisselsBasis(),
 
         /*PROQUIZ ROUTES*/
         'proquiz_main': (context) => const ProQuiz(),

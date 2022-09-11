@@ -1,7 +1,8 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromAIIncidentenWisselsMain {
+enum WhereToGoFromAIWisselsMain {
   home_screen,
+  ww_wissels_main,
   ai_overige_infra_elementen,
 }
 
@@ -17,48 +18,39 @@ class AIWisselsMain extends StatelessWidget {
           title: 'Achtergrondinformatie',
         ),
         actions: [
-          PopupMenuButton<WhereToGoFromAIIncidentenWisselsMain>(
+          PopupMenuButton<WhereToGoFromAIWisselsMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIIncidentenWisselsMain result) {
-              if (result == WhereToGoFromAIIncidentenWisselsMain.home_screen) {
+            onSelected: (WhereToGoFromAIWisselsMain result) {
+              if (result == WhereToGoFromAIWisselsMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromAIIncidentenWisselsMain
+                  WhereToGoFromAIWisselsMain
+                      .ww_wissels_main) {
+                Navigator.pushNamed(context, 'ww_wissels_main');
+              } else if (result ==
+                  WhereToGoFromAIWisselsMain
                       .ai_overige_infra_elementen) {
-                Navigator.pushNamed(context, 'ai_uitvoeren_plan_main');
+                Navigator.pushNamed(context, 'ai_overige_infra_elementen');
               } else {
                 Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIIncidentenWisselsMain>>[
-              PopupMenuItem<WhereToGoFromAIIncidentenWisselsMain>(
-                value: WhereToGoFromAIIncidentenWisselsMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                <PopupMenuEntry<WhereToGoFromAIWisselsMain>>[
+              PopupMenuItem<WhereToGoFromAIWisselsMain>(
+                value: WhereToGoFromAIWisselsMain.home_screen,
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
-              PopupMenuItem<WhereToGoFromAIIncidentenWisselsMain>(
-                value: WhereToGoFromAIIncidentenWisselsMain
+              PopupMenuItem<WhereToGoFromAIWisselsMain>(
+                value: WhereToGoFromAIWisselsMain
+                    .ww_wissels_main,
+                child: MenuItemContent(icon: Icons.train, text: 'WW Wissels',),
+              ),
+              PopupMenuItem<WhereToGoFromAIWisselsMain>(
+                value: WhereToGoFromAIWisselsMain
                     .ai_overige_infra_elementen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Overige infra-elementen'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Infra',),
               ),
             ],
           ),
@@ -102,28 +94,23 @@ class AIWisselsMain extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
                         NavButton(
-                          buttontext: 'Werkwijze - Wissels',
-                          destination: 'ww_wissels_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
                           buttontext: 'Wissels - basisinformatie',
-                          destination: 'ai_incidenten_wissels_basis',
+                          destination: 'ai_wissels_basis',
                         ),
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Wissel niet in eindstand',
-                          destination: 'ai_incidenten_wisselnietineindstand',
+                          destination: 'ai_wissel_eindstand',
                         ),
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Gestoord wissel',
-                          destination: 'ai_incidenten_gestoordwissel',
+                          destination: 'ai_gestoord_wissel',
                         ),
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Opengereden wissel',
-                          destination: 'ai_incidenten_opengeredenwissel',
+                          destination: 'ai_opengereden_wissel',
                         ),
                       ],
                     ),

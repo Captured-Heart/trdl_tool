@@ -1,6 +1,13 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromAIIncidentenBasis { home_screen, ai_communicatiemiddelen_basis, ai_communicatiesysteem_gsmr_basis, ai_systeemstoring_gsmr, }
+enum WhereToGoFromAIIncidentenBasis { 
+home_screen, 
+ww_incidenten_main,
+ai_infra_main,
+ai_mensen_dieren_voorwerpen,
+ai_materieel_main,
+ai_overige_incidenten,
+}
 
 class AIIncidentenBasis extends StatelessWidget {
   const AIIncidentenBasis({Key? key}) : super(key: key);
@@ -21,14 +28,20 @@ class AIIncidentenBasis extends StatelessWidget {
               if (result == WhereToGoFromAIIncidentenBasis.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromAIIncidentenBasis.ai_communicatiemiddelen_basis) {
-                Navigator.pushNamed(context, 'ai_communicatiemiddelen_basis');
+                  WhereToGoFromAIIncidentenBasis.ww_incidenten_main) {
+                Navigator.pushNamed(context, 'ww_incidenten_main');
               } else if (result ==
-                  WhereToGoFromAIIncidentenBasis.ai_communicatiesysteem_gsmr_basis) {
-                Navigator.pushNamed(context, 'ai_communicatiesysteem_gsmr_basis');
+                  WhereToGoFromAIIncidentenBasis.ai_infra_main) {
+                Navigator.pushNamed(context, 'ai_infra_main');
               } else if (result ==
-                  WhereToGoFromAIIncidentenBasis.ai_systeemstoring_gsmr) {
-                Navigator.pushNamed(context, 'ai_systeemstoring_gsmr');
+                  WhereToGoFromAIIncidentenBasis.ai_mensen_dieren_voorwerpen) {
+                Navigator.pushNamed(context, 'ai_mensen_dieren_voorwerpen');
+              } else if (result ==
+                  WhereToGoFromAIIncidentenBasis.ai_materieel_main) {
+                Navigator.pushNamed(context, 'ai_materieel_main');
+              } else if (result ==
+                  WhereToGoFromAIIncidentenBasis.ai_overige_incidenten) {
+                Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -37,55 +50,27 @@ class AIIncidentenBasis extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIIncidentenBasis>>[
               PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
                 value: WhereToGoFromAIIncidentenBasis.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
-                value: WhereToGoFromAIIncidentenBasis.ai_communicatiemiddelen_basis,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Communicatiemiddelen Basis'),
-                  ],
-                ),
+                value: WhereToGoFromAIIncidentenBasis.ww_incidenten_main,
+                child: MenuItemContent(icon: Icons.train, text: 'WW Incidenten',),
               ),
               PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
-                value: WhereToGoFromAIIncidentenBasis.ai_communicatiesysteem_gsmr_basis,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Communicatiesysteem GSM-R'),
-                  ],
-                ),
+                value: WhereToGoFromAIIncidentenBasis.ai_infra_main,
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Infra',),
               ),
               PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
-                value: WhereToGoFromAIIncidentenBasis.ai_systeemstoring_gsmr,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Systeemstoring GSM-R'),
-                  ],
-                ),
+                value: WhereToGoFromAIIncidentenBasis.ai_mensen_dieren_voorwerpen,
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Mensen, Dieren, Voorwerpen',),
+              ),
+              PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
+                value: WhereToGoFromAIIncidentenBasis.ai_materieel_main,
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Materieel',),
+              ),
+              PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
+                value: WhereToGoFromAIIncidentenBasis.ai_overige_incidenten,
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
               ),
             ],
           ),
@@ -116,53 +101,6 @@ class AIIncidentenBasis extends StatelessWidget {
                         text:
                             '- Alarmeren;\n\n- Alarmoproep GSM-R;\n\n- Herroepen van een sein;\n\n- Alarmeer- en informeer formulier;\n\n- Aanwijzingen;\n\n- Spoorweb.',
                       ),
-                    ],
-                  ),
-                ),
-              ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Incidenten - werkwijze',
-                            destination: 'ww_incidenten_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Infra - achtergrond',
-                            destination: 'ai_incidenten_infra_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext:
-                                'Mensen, dieren, voorwerpen - achtergrond',
-                            destination:
-                                'ai_incidenten_mensendierenvoorwerpen_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Materieel',
-                            destination: 'ai_incidenten_materieel_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Overige incidenten',
-                            destination: 'ai_incidenten_overige_main',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
                     ],
                   ),
                 ),

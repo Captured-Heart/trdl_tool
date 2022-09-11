@@ -2,6 +2,7 @@ import 'package:trdl_tool/all_imports.dart';
 
 enum WhereToGoFromAIIncidentenMain {
   home_screen,
+  ww_incidenten_main,
   ai_inzetten_railvoertuig,
 }
 
@@ -24,6 +25,9 @@ class AIIncidentenMain extends StatelessWidget {
               if (result == WhereToGoFromAIIncidentenMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
+                  WhereToGoFromAIIncidentenMain.ww_incidenten_main) {
+                Navigator.pushNamed(context, 'ww_incidenten_main');
+              } else if (result ==
                   WhereToGoFromAIIncidentenMain.ai_inzetten_railvoertuig) {
                 Navigator.pushNamed(context, 'ai_inzetten_railvoertuig');
               } else {
@@ -32,13 +36,17 @@ class AIIncidentenMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIIncidentenMain>>[
-              PopupMenuItem<WhereToGoFromAIIncidentenMain>(
+              const PopupMenuItem<WhereToGoFromAIIncidentenMain>(
                 value: WhereToGoFromAIIncidentenMain.home_screen,
                 child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
-              PopupMenuItem<WhereToGoFromAIIncidentenMain>(
+              const PopupMenuItem<WhereToGoFromAIIncidentenMain>(
+                value: WhereToGoFromAIIncidentenMain.ww_incidenten_main,
+                child: MenuItemContent(icon: Icons.train, text: 'WW Incidenten',),
+              ),
+              const PopupMenuItem<WhereToGoFromAIIncidentenMain>(
                 value: WhereToGoFromAIIncidentenMain.ai_inzetten_railvoertuig,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Inzetten Railvoertuig',),
+                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Inzetten ICB',),
               ),
             ],
           ),
@@ -82,10 +90,6 @@ class AIIncidentenMain extends StatelessWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: const [
-                        NavButton(
-                          buttontext: 'Incidenten - werkwijze',
-                          destination: 'ww_incidenten_main',
-                        ),
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Incidenten - basisinformatie',
@@ -94,7 +98,7 @@ class AIIncidentenMain extends StatelessWidget {
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Infra',
-                          destination: 'ai_infra_main',
+                          destination: 'ai_infrastructuur_main',
                         ),
                         SizedBoxH(),
                         NavButton(

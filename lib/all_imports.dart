@@ -224,7 +224,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertraginge
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/ai_incidenten_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/incidenten_basis/ai_incidenten_basis.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/mensen_dieren_voorwerpen/ai_derdendieren.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/ai_infra_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/ai_infrastructuur_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/beveiliging/ai_beveiliging_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/beveiliging/beveiliging_basis/ai_beveiliging_basis1.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/bovenleiding/ai_bovenleiding_main.dart';
@@ -232,6 +232,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/kunstwerk
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/overwegen/ai_overwegen_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/spoor/ai_spoor_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/ai_wissels_main.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/ai_wissels_basis.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/sectie/ai_sectie_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/materieel/ai_materieel_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/materieel/atb/ai_atb.dart';

@@ -34,29 +34,11 @@ class AIInfraMain extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIInfraMain>>[
               PopupMenuItem<WhereToGoFromAIInfraMain>(
                 value: WhereToGoFromAIInfraMain.home_screen,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.home,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('Home'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.home, text: 'Home',),
               ),
               PopupMenuItem<WhereToGoFromAIInfraMain>(
                 value: WhereToGoFromAIInfraMain.ww_infrastructuur_main,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Icon(
-                      Icons.menu_book,
-                      color: flexSchemeLight.primary,
-                    ),
-                    const Text('WW Infra'),
-                  ],
-                ),
+                child: MenuItemContent(icon: Icons.train, text: 'WW Infra',),
               ),
             ],
           ),

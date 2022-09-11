@@ -44,53 +44,6 @@ class AIIncidentenWissels extends StatelessWidget {
                   ),
                 ),
               ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: kCardElevation,
-                child: Padding(
-                  padding: kCardPadding,
-                  child: Column(
-                    children: [
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
-                          NavButton(
-                            buttontext: 'Incidenten - werkwijze',
-                            destination: 'ww_incidenten_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Infra - achtergrond',
-                            destination: 'ai_incidenten_infra_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext:
-                                'Mensen, dieren, voorwerpen - achtergrond',
-                            destination:
-                                'ai_incidenten_mensendierenvoorwerpen_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Materieel',
-                            destination: 'ai_incidenten_materieel_main',
-                          ),
-                          SizedBoxH(),
-                          NavButton(
-                            buttontext: 'Overige incidenten',
-                            destination: 'ai_incidenten_overige_main',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                    ],
-                  ),
-                ),
-              ),
               /*CARD #2*/
               Card(
                 elevation: kCardElevation,
@@ -98,7 +51,7 @@ class AIIncidentenWissels extends StatelessWidget {
                   padding: kCardPadding,
                   child: Column(
                     children: const [
-                      TitleText(title: 'Alarmeren'),
+                      SubTitleText(subtitle: 'Onderdelen van een wissel'),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
