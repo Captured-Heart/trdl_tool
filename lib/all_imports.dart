@@ -232,7 +232,10 @@ export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/kunstwerk
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/overwegen/ai_overwegen_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/spoor/ai_spoor_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/ai_wissels_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/ai_wissels_basis.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/wissels_basis/ai_wissels_basis.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/wissel_eindstand/ai_wissel_eindstand.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/gestoord_wissel/ai_gestoord_wissel.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/opengereden_wissel/ai_opengereden_wissel.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/sectie/ai_sectie_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/materieel/ai_materieel_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/materieel/atb/ai_atb.dart';

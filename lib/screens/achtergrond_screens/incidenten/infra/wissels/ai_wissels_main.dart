@@ -24,13 +24,10 @@ class AIWisselsMain extends StatelessWidget {
             onSelected: (WhereToGoFromAIWisselsMain result) {
               if (result == WhereToGoFromAIWisselsMain.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIWisselsMain
-                      .ww_wissels_main) {
+              } else if (result == WhereToGoFromAIWisselsMain.ww_wissels_main) {
                 Navigator.pushNamed(context, 'ww_wissels_main');
               } else if (result ==
-                  WhereToGoFromAIWisselsMain
-                      .ai_overige_infra_elementen) {
+                  WhereToGoFromAIWisselsMain.ai_overige_infra_elementen) {
                 Navigator.pushNamed(context, 'ai_overige_infra_elementen');
               } else {
                 Navigator.pop(context);
@@ -38,19 +35,26 @@ class AIWisselsMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIWisselsMain>>[
-              PopupMenuItem<WhereToGoFromAIWisselsMain>(
+              const PopupMenuItem<WhereToGoFromAIWisselsMain>(
                 value: WhereToGoFromAIWisselsMain.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIWisselsMain>(
-                value: WhereToGoFromAIWisselsMain
-                    .ww_wissels_main,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Wissels',),
+              const PopupMenuItem<WhereToGoFromAIWisselsMain>(
+                value: WhereToGoFromAIWisselsMain.ww_wissels_main,
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Wissels',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIWisselsMain>(
-                value: WhereToGoFromAIWisselsMain
-                    .ai_overige_infra_elementen,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Infra',),
+              const PopupMenuItem<WhereToGoFromAIWisselsMain>(
+                value: WhereToGoFromAIWisselsMain.ai_overige_infra_elementen,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Overige Infra',
+                ),
               ),
             ],
           ),

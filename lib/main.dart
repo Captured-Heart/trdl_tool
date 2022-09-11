@@ -1,4 +1,5 @@
 import 'package:trdl_tool/all_imports.dart';
+import 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/wissels/opengereden_wissel/ai_opengereden_wissel.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -184,7 +185,12 @@ class MainEntry extends StatelessWidget {
         'ai_incidenten_main': (context) => const AIIncidentenMain(),
         'ai_incidenten_basis': (context) => const AIIncidentenBasis(),
         'ai_incidenten_derdendieren': (context) => const AIDerdenDieren(),
-        'ai_infra_main': (context) => const AIInfraMain(),
+        'ai_infrastructuur_main': (context) => const AIInfraMain(),
+        'ai_wissels_main': (context) => const AIWisselsMain(),
+        'ai_wissels_basis': (context) => const AIWisselsBasis(),
+        'ai_wissel_eindstand': (context) => const AIWisselEindstand(),
+        'ai_gestoord_wissel': (context) => const AIGestoordWissel(),
+        'ai_opengereden_wissel': (context) => const AIOpengeredenWissel(),
         'ai_materieel_main': (context) => const AIMaterieelMain(),
         'ai_verloren_onderdelen': (context) => const AIVerlorenOnderdelen(),
         'ai_vaste_rem': (context) => const AIVasteRem(),
@@ -198,8 +204,6 @@ class MainEntry extends StatelessWidget {
         'ai_kunstwerken_main': (context) => const AIKunstwerkenMain(),
         'ai_overwegen_main': (context) => const AIOverwegenMain(),
         'ai_spoor_main': (context) => const AISpoorMain(),
-        'ai_wissels_main': (context) => const AIWisselsMain(),
-        'ai_wissels_basis': (context) => const AIWisselsBasis(),
 
         /*PROQUIZ ROUTES*/
         'proquiz_main': (context) => const ProQuiz(),

@@ -32,13 +32,19 @@ class AIInfraMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIInfraMain>>[
-              PopupMenuItem<WhereToGoFromAIInfraMain>(
+              const PopupMenuItem<WhereToGoFromAIInfraMain>(
                 value: WhereToGoFromAIInfraMain.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIInfraMain>(
+              const PopupMenuItem<WhereToGoFromAIInfraMain>(
                 value: WhereToGoFromAIInfraMain.ww_infrastructuur_main,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Infra',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Infra',
+                ),
               ),
             ],
           ),
