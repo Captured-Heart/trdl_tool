@@ -13,7 +13,15 @@ showVersionUpdatePopup(context) {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CurrentVersion(
-                  versionNumber: '0.2.8',
+                  versionNumber: '0.2.9',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-09-11: 0.2.9',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Achtergrondinformatie verder uitgebreid (16);\n\n- PopupMenuItems toegevoegd;\n\n- FlutterFire geïnstalleerd;\n\n- Firebase AppCheck toegevoegd.',
                 ),
                 SizedBoxH(),
                 DateChanged(
