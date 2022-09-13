@@ -197,6 +197,7 @@ class AIWisselsBasis extends StatelessWidget {
                 ),
               ),
             ),
+            //CARD #3
             Card(
               elevation: kCardElevation,
               child: Padding(
@@ -218,6 +219,164 @@ class AIWisselsBasis extends StatelessWidget {
                           'assets/images/achtergrond_info/incidenten/ai_wissels_basis_5gif.gif',
                     ),
                     SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/incidenten/ai_wissels_basis_6.jpg',
+                    ),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Linksleidend - Er is ruimte tussen de linker wisseltong en de linker spoorstaaf; de trein gaat op dit wissel naar links.',
+                    ),
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/incidenten/ai_wissels_basis_7.jpg',
+                    ),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Rechtsleidend - Er is ruimte tussen de rechter wisseltong en de rechter spoorstaaf; de trein gaat op dit wissel naar rechts.',
+                    ),
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/incidenten/ai_wissels_basis_8.jpg',
+                    ),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'De wisseltong die tegen de spoorstaaf aanligt noemen we de aanliggende tong. De wisseltong die vrij ligt van de spoorstaaf noemen we de afliggende tong.',
+                    ),
+                    SizedBoxH(),
+                  ],
+                ),
+              ),
+            ),
+            //CARD #4
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: 'Hoekverhouding',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Een wissel bevat minimaal één stand waarin de trein afbuigt van zijn oorspronkelijke richting, een \'bocht\' dus. Standaard wissels zijn er in verschillende maten. Hoe scherper de bocht, hoe lager de maximum snelheid waarmee een trein de bocht mag berijden. De afbuiging van een wissel wordt uitgedrukt in een hoekverhouding. Een wissel 1 : 9 (spreek uit: één op negen) wijkt een meter uit per negen meter doorgaand spoor. De hoekverhouding geeft aan hoeveel meter een trein het wissel op rijdt en een zijdelingse verplaatsing van een meter bereikt heeft. Dit wil zeggen dat na 9 meter de verplaatsing zijdelings 1 meter is.\n\nAls er in de BVS niets bij het wissel staat aangegeven hebben we te maken met een 1 : 9 wissel en geldt de maximale snelheid van 40 km/h in de omgelegde stand.\n\nMaximum snelheden gerelateerd aan de hoekverhouding:',
+                    ),
+                    SizedBoxH(),
+                    Table(
+                      border: TableBorder.all(),
+                      defaultVerticalAlignment:
+                          TableCellVerticalAlignment.middle,
+                      children: const [
+                        TableRow(
+                          children: [
+                            TableText(text: '1:9'),
+                            TableText(text: '40 km/u'),
+                          ],
+                        ),
+                        TableRow(
+                          children: [
+                            TableText(text: '1:12'),
+                            TableText(text: '60 km/u'),
+                          ],
+                        ),
+                        TableRow(
+                          children: [
+                            TableText(text: '1:15'),
+                            TableText(text: '80 km/u'),
+                          ],
+                        ),
+                        TableRow(
+                          children: [
+                            TableText(text: '1:15 (Symmetrisch)'),
+                            TableText(text: '100 km/u'),
+                          ],
+                        ),
+                        TableRow(
+                          children: [
+                            TableText(text: '1:18'),
+                            TableText(text: '80 km/u'),
+                          ],
+                        ),
+                        TableRow(
+                          children: [
+                            TableText(text: '1:20 (Symmetrisch)'),
+                            TableText(text: '125 km/u'),
+                          ],
+                        ),
+                        TableRow(
+                          children: [
+                            TableText(text: '1:29'),
+                            TableText(text: '140 km/u'),
+                          ],
+                        ),
+                        TableRow(
+                          children: [
+                            TableText(text: '1:34,7'),
+                            TableText(text: '140 km/u'),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            //CARD #5
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const [
+                    SubTitleText(
+                      subtitle: 'Soorten wissels - NCBG',
+                    ),
+                    SizedBoxH(),
+                    BoldText(indents: 0, boldtext: 'Handwissel',),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Op rangeerterreinen worden veel wissels handmatig bediend. Deze wissels noemen we handwissels of ter plaatse bediende wissels.',
+                    ),
+                    SizedBoxH(),
+                    BoldText(indents: 0, boldtext: 'Bromwissel',),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Dit wissel kan men met een druk op een knop omleggen, door middel van de EHO (Electrohydraulische Omzetstoel) of door middel van een voetpomp: de VHO (Voethydraulische Omzetstoel).',
+                    ),
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/incidenten/ai_wissels_basis_9.jpg',
+                    ),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Handwissel',
+                    ),
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/incidenten/ai_wissels_basis_10.jpg',
+                    ),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Handwissel',
+                    ),
+
+                  //TODO: Hier verder met ai_wissels_basis!
                   ],
                 ),
               ),
