@@ -259,17 +259,17 @@ class AIWisselsBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
-                    SubTitleText(
+                  children: [
+                    const SubTitleText(
                       subtitle: 'Hoekverhouding',
                     ),
-                    SizedBoxH(),
-                    BodyText(
+                    const SizedBoxH(),
+                    const BodyText(
                       indents: 0,
                       text:
                           'Een wissel bevat minimaal één stand waarin de trein afbuigt van zijn oorspronkelijke richting, een \'bocht\' dus. Standaard wissels zijn er in verschillende maten. Hoe scherper de bocht, hoe lager de maximum snelheid waarmee een trein de bocht mag berijden. De afbuiging van een wissel wordt uitgedrukt in een hoekverhouding. Een wissel 1 : 9 (spreek uit: één op negen) wijkt een meter uit per negen meter doorgaand spoor. De hoekverhouding geeft aan hoeveel meter een trein het wissel op rijdt en een zijdelingse verplaatsing van een meter bereikt heeft. Dit wil zeggen dat na 9 meter de verplaatsing zijdelings 1 meter is.\n\nAls er in de BVS niets bij het wissel staat aangegeven hebben we te maken met een 1 : 9 wissel en geldt de maximale snelheid van 40 km/h in de omgelegde stand.\n\nMaximum snelheden gerelateerd aan de hoekverhouding:',
                     ),
-                    SizedBoxH(),
+                    const SizedBoxH(),
                     Table(
                       border: TableBorder.all(),
                       defaultVerticalAlignment:
@@ -340,7 +340,10 @@ class AIWisselsBasis extends StatelessWidget {
                       subtitle: 'Soorten wissels - NCBG',
                     ),
                     SizedBoxH(),
-                    BoldText(indents: 0, boldtext: 'Handwissel',),
+                    BoldText(
+                      indents: 0,
+                      boldtext: 'Handwissel',
+                    ),
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
@@ -348,7 +351,10 @@ class AIWisselsBasis extends StatelessWidget {
                           'Op rangeerterreinen worden veel wissels handmatig bediend. Deze wissels noemen we handwissels of ter plaatse bediende wissels.',
                     ),
                     SizedBoxH(),
-                    BoldText(indents: 0, boldtext: 'Bromwissel',),
+                    BoldText(
+                      indents: 0,
+                      boldtext: 'Bromwissel',
+                    ),
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
@@ -362,8 +368,7 @@ class AIWisselsBasis extends StatelessWidget {
                     ),
                     BodyText(
                       indents: 0,
-                      text:
-                          'Handwissel',
+                      text: 'Handwissel',
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -372,11 +377,10 @@ class AIWisselsBasis extends StatelessWidget {
                     ),
                     BodyText(
                       indents: 0,
-                      text:
-                          'Handwissel',
+                      text: 'Handwissel',
                     ),
 
-                  //TODO: Hier verder met ai_wissels_basis!
+                    //TODO: Hier verder met ai_wissels_basis!
                   ],
                 ),
               ),
