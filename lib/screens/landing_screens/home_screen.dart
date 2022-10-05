@@ -65,6 +65,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
             ),
             child: CircleAvatar(
               child: IconButton(
+                padding: EdgeInsets.zero,
                 icon: const Icon(
                   Icons.person,
                   size: 32.0,

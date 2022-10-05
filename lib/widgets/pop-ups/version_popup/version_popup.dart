@@ -13,7 +13,15 @@ showVersionUpdatePopup(context) {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CurrentVersion(
-                  versionNumber: '0.2.9',
+                  versionNumber: '0.3.0',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-10-05: 0.3.0',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Achtergrondinformatie verder uitgebreid (17);\n- IconButton in CircleAvatar gecentreerd;\n- App klaargestoomd voor Android 13;\n- Diverse dependency upgrades.',
                 ),
                 SizedBoxH(),
                 DateChanged(
@@ -21,7 +29,7 @@ showVersionUpdatePopup(context) {
                 ),
                 ChangesMade(
                   changes:
-                      '- Achtergrondinformatie verder uitgebreid (16);\n\n- PopupMenuItems toegevoegd;\n\n- FlutterFire geïnstalleerd;\n\n- Firebase AppCheck toegevoegd.',
+                      '- Achtergrondinformatie verder uitgebreid (16);\n- PopupMenuItems toegevoegd;\n- FlutterFire geïnstalleerd;\n- Firebase AppCheck toegevoegd.',
                 ),
                 SizedBoxH(),
                 DateChanged(
@@ -29,7 +37,7 @@ showVersionUpdatePopup(context) {
                 ),
                 ChangesMade(
                   changes:
-                      '- Achtergrondinformatie verder uitgebreid (15);\n\n- Overflow bug aanpakt;\n\n- Gradle naar laatste versie;\n\n- Firebase opnieuw toegevoegd + json;\n\n- Flexcolorscheme aangepast.',
+                      '- Achtergrondinformatie verder uitgebreid (15);\n- Overflow bug aanpakt;\n- Gradle naar laatste versie;\n- Firebase opnieuw toegevoegd + json;\n- Flexcolorscheme aangepast.',
                 ),
                 SizedBoxH(),
                 DateChanged(
