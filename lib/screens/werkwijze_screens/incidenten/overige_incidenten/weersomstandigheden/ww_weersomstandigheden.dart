@@ -36,18 +36,27 @@ class WWWeersomstandigheden extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWWeersomstandigheden>>[
-              PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
+              const PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
                 value: WhereToGoFromWWWeersomstandigheden.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
+              const PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
                 value:
                     WhereToGoFromWWWeersomstandigheden.ai_weersomstandigheden,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Weersomstandigheden',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Weersomstandigheden',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
+              const PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
                 value: WhereToGoFromWWWeersomstandigheden.ai_overige_incidenten,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Overige Incidenten',
+                ),
               ),
             ],
           ),

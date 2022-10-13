@@ -33,14 +33,20 @@ class WWSchakelenBovenleiding extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWSchakelenBovenleiding>>[
-              PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
+              const PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
                 value: WhereToGoFromWWSchakelenBovenleiding.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
+              const PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
                 value: WhereToGoFromWWSchakelenBovenleiding
                     .ai_schakelen_bovenleiding,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Schakelen Bovenleiding',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Schakelen Bovenleiding',
+                ),
               ),
             ],
           ),

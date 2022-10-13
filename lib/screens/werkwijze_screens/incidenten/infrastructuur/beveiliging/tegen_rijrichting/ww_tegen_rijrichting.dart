@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromWWTegenRijrichting { home_screen, ai_tegen_rijrichting, }
+enum WhereToGoFromWWTegenRijrichting {
+  home_screen,
+  ai_tegen_rijrichting,
+}
 
 class WWTegenRijrichting extends StatelessWidget {
   const WWTegenRijrichting({Key? key}) : super(key: key);
@@ -29,13 +32,19 @@ class WWTegenRijrichting extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWTegenRijrichting>>[
-              PopupMenuItem<WhereToGoFromWWTegenRijrichting>(
+              const PopupMenuItem<WhereToGoFromWWTegenRijrichting>(
                 value: WhereToGoFromWWTegenRijrichting.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWTegenRijrichting>(
+              const PopupMenuItem<WhereToGoFromWWTegenRijrichting>(
                 value: WhereToGoFromWWTegenRijrichting.ai_tegen_rijrichting,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Tegen de Rijrichting',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Tegen de Rijrichting',
+                ),
               ),
             ],
           ),

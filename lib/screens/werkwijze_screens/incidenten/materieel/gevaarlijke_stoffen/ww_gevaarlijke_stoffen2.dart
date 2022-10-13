@@ -32,14 +32,20 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWGevaarlijkeStoffen2>>[
-              PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen2>(
+              const PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen2>(
                 value: WhereToGoFromWWGevaarlijkeStoffen2.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen2>(
+              const PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen2>(
                 value:
                     WhereToGoFromWWGevaarlijkeStoffen2.ai_gevaarlijke_stoffen,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Gevaarlijke Stoffen',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Gevaarlijke Stoffen',
+                ),
               ),
             ],
           ),

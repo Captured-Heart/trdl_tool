@@ -36,17 +36,26 @@ class WWGestrandeTrein extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWGestrandeTrein>>[
-              PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
+              const PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
                 value: WhereToGoFromWWGestrandeTrein.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
+              const PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
                 value: WhereToGoFromWWGestrandeTrein.ai_gestrande_trein,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Gestrande Trein',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Gestrande Trein',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
+              const PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
                 value: WhereToGoFromWWGestrandeTrein.ai_overige_incidenten,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Overige Incidenten',
+                ),
               ),
             ],
           ),

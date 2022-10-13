@@ -36,17 +36,26 @@ class WWStroomstoring extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWStroomstoring>>[
-              PopupMenuItem<WhereToGoFromWWStroomstoring>(
+              const PopupMenuItem<WhereToGoFromWWStroomstoring>(
                 value: WhereToGoFromWWStroomstoring.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWStroomstoring>(
+              const PopupMenuItem<WhereToGoFromWWStroomstoring>(
                 value: WhereToGoFromWWStroomstoring.ai_stroomstoring,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Stroomstoring',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Stroomstoring',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWStroomstoring>(
+              const PopupMenuItem<WhereToGoFromWWStroomstoring>(
                 value: WhereToGoFromWWStroomstoring.ai_overige_incidenten,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Overige Incidenten',
+                ),
               ),
             ],
           ),

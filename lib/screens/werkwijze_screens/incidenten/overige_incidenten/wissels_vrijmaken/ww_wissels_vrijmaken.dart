@@ -32,13 +32,19 @@ class WWWisselsVrijmaken extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWWisselsVrijmaken>>[
-              PopupMenuItem<WhereToGoFromWWWisselsVrijmaken>(
+              const PopupMenuItem<WhereToGoFromWWWisselsVrijmaken>(
                 value: WhereToGoFromWWWisselsVrijmaken.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWWisselsVrijmaken>(
+              const PopupMenuItem<WhereToGoFromWWWisselsVrijmaken>(
                 value: WhereToGoFromWWWisselsVrijmaken.ai_stroomstoring,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Stroomstoring',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Stroomstoring',
+                ),
               ),
             ],
           ),

@@ -24,8 +24,7 @@ class AIKetenpartners extends StatelessWidget {
               if (result == WhereToGoFromAIKetenpartners.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
-                  WhereToGoFromAIKetenpartners
-                      .ww_mondelinge_communicatie) {
+                  WhereToGoFromAIKetenpartners.ww_mondelinge_communicatie) {
                 Navigator.pushNamed(context, 'ww_mondelinge_communicatie');
               } else {
                 Navigator.pop(context);
@@ -33,14 +32,19 @@ class AIKetenpartners extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIKetenpartners>>[
-              PopupMenuItem<WhereToGoFromAIKetenpartners>(
+              const PopupMenuItem<WhereToGoFromAIKetenpartners>(
                 value: WhereToGoFromAIKetenpartners.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIKetenpartners>(
-                value: WhereToGoFromAIKetenpartners
-                    .ww_mondelinge_communicatie,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Mondelinge Communicatie',),
+              const PopupMenuItem<WhereToGoFromAIKetenpartners>(
+                value: WhereToGoFromAIKetenpartners.ww_mondelinge_communicatie,
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Mondelinge Communicatie',
+                ),
               ),
             ],
           ),
@@ -79,8 +83,7 @@ class AIKetenpartners extends StatelessWidget {
                     SizedBoxH(),
                     BoldText(
                       indents: 0,
-                      boldtext:
-                          'Wanneer is telefonisch contact wel wenselijk?',
+                      boldtext: 'Wanneer is telefonisch contact wel wenselijk?',
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -97,23 +100,24 @@ class AIKetenpartners extends StatelessWidget {
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
-                      text: 'In eenmalige en/of kleine wijzigingen is, naast het bijwerken van het systeem, het niet nodig om telefonisch contact met de medewerker Reisinformatie op te nemen. Dit wordt vanuit de bron automatisch afgehandeld.',
+                      text:
+                          'In eenmalige en/of kleine wijzigingen is, naast het bijwerken van het systeem, het niet nodig om telefonisch contact met de medewerker Reisinformatie op te nemen. Dit wordt vanuit de bron automatisch afgehandeld.',
                     ),
                     SizedBoxH(),
                     BoldText(
                       indents: 0,
-                      boldtext:
-                          'Uitzonderingen en waar NSR nu mee bezig is',
+                      boldtext: 'Uitzonderingen en waar NSR nu mee bezig is',
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
-                      text: 'Informatie over het voor- of achteraan instappen wordt automatisch in de borden gepubliceerd. Hiervoor voert de medewerker Reisinformatie sinds kort dus geen handmatige acties meer voor uit. In de meeste situaties zijn voor- of achteraan instapadviezen volgens een planning, denk hierbij het standaard aftrappen van een treinstel na de spits. In deze situatie is er bewust voor gekozen dit niet in de omroep te benadrukken, omdat dit volgens plan is. Let op: dit wordt nog wel in de borden getoond.\n\nIn het geval dat het aftrappen van een treinstel kort voor vertrek én afwijkend van de geplande situatie pas bekend wordt, is het wel wenselijk de reiziger hier via de omroep op te attenderen. Als deze wijziging in het systeem is doorgevoerd, komt het voor- of achteraan instappen advies wel in de borden, maar nog niet automatisch in de omroep. Als de TRDL op de hoogte is van deze last minute treinstel aftrap, dan is het wenselijk dat deze telefonisch wordt gedeeld met de medewerker Reisinformatie.\n\nBinnen het IT-team van de omroep wordt eraan gewerkt om ook deze berichtgeving in de omroep zo snel mogelijk te automatiseren.',
+                      text:
+                          'Informatie over het voor- of achteraan instappen wordt automatisch in de borden gepubliceerd. Hiervoor voert de medewerker Reisinformatie sinds kort dus geen handmatige acties meer voor uit. In de meeste situaties zijn voor- of achteraan instapadviezen volgens een planning, denk hierbij het standaard aftrappen van een treinstel na de spits. In deze situatie is er bewust voor gekozen dit niet in de omroep te benadrukken, omdat dit volgens plan is. Let op: dit wordt nog wel in de borden getoond.\n\nIn het geval dat het aftrappen van een treinstel kort voor vertrek én afwijkend van de geplande situatie pas bekend wordt, is het wel wenselijk de reiziger hier via de omroep op te attenderen. Als deze wijziging in het systeem is doorgevoerd, komt het voor- of achteraan instappen advies wel in de borden, maar nog niet automatisch in de omroep. Als de TRDL op de hoogte is van deze last minute treinstel aftrap, dan is het wenselijk dat deze telefonisch wordt gedeeld met de medewerker Reisinformatie.\n\nBinnen het IT-team van de omroep wordt eraan gewerkt om ook deze berichtgeving in de omroep zo snel mogelijk te automatiseren.',
                     ),
                   ],
                 ),
-              ),),
-
+              ),
+            ),
           ],
         ),
       ),

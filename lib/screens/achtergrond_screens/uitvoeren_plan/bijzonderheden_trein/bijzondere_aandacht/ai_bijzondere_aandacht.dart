@@ -33,14 +33,20 @@ class AIBijzondereAandacht extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIBijzondereAandacht>>[
-              PopupMenuItem<WhereToGoFromAIBijzondereAandacht>(
+              const PopupMenuItem<WhereToGoFromAIBijzondereAandacht>(
                 value: WhereToGoFromAIBijzondereAandacht.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIBijzondereAandacht>(
+              const PopupMenuItem<WhereToGoFromAIBijzondereAandacht>(
                 value: WhereToGoFromAIBijzondereAandacht
                     .ai_bijzonderheden_trein_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bijzonderheden Trein',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Bijzonderheden Trein',
+                ),
               ),
             ],
           ),

@@ -1,6 +1,9 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromAINcbg { home_screen, ww_ncbg, }
+enum WhereToGoFromAINcbg {
+  home_screen,
+  ww_ncbg,
+}
 
 class AINcbg extends StatelessWidget {
   const AINcbg({Key? key}) : super(key: key);
@@ -20,8 +23,7 @@ class AINcbg extends StatelessWidget {
             onSelected: (WhereToGoFromAINcbg result) {
               if (result == WhereToGoFromAINcbg.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAINcbg.ww_ncbg) {
+              } else if (result == WhereToGoFromAINcbg.ww_ncbg) {
                 Navigator.pushNamed(context, 'ww_ncbg');
               } else {
                 Navigator.pop(context);
@@ -29,13 +31,19 @@ class AINcbg extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAINcbg>>[
-              PopupMenuItem<WhereToGoFromAINcbg>(
+              const PopupMenuItem<WhereToGoFromAINcbg>(
                 value: WhereToGoFromAINcbg.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAINcbg>(
+              const PopupMenuItem<WhereToGoFromAINcbg>(
                 value: WhereToGoFromAINcbg.ww_ncbg,
-                child: MenuItemContent(icon: Icons.train, text: 'WW NCBG',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW NCBG',
+                ),
               ),
             ],
           ),
@@ -64,7 +72,8 @@ class AINcbg extends StatelessWidget {
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '- Emplacementen zonder beveiliging;\n\n- Delen van emplacementen zonder beveiliging met minimaal 1 wissel;\n\n - Centraal Telecom Blokstelsel (CTB) baanvakken;\n\n- Baanvakken zonder beveiliging.',
+                      text:
+                          '- Emplacementen zonder beveiliging;\n\n- Delen van emplacementen zonder beveiliging met minimaal 1 wissel;\n\n - Centraal Telecom Blokstelsel (CTB) baanvakken;\n\n- Baanvakken zonder beveiliging.',
                     ),
                   ],
                 ),
@@ -96,7 +105,8 @@ class AINcbg extends StatelessWidget {
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '- Ter voorkoming van gevaar;\n\n- Als de infra gebruiker hierom verzoekt en dit mogelijk is;\n\n- Voor bijsturing om het actuele plan uitvoerbaar te houden.',
+                      text:
+                          '- Ter voorkoming van gevaar;\n\n- Als de infra gebruiker hierom verzoekt en dit mogelijk is;\n\n- Voor bijsturing om het actuele plan uitvoerbaar te houden.',
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -112,7 +122,8 @@ class AINcbg extends StatelessWidget {
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '- Sturing op rijwegniveau;\n\n- Sturing op TijdRuimte-slotniveau.',
+                      text:
+                          '- Sturing op rijwegniveau;\n\n- Sturing op TijdRuimte-slotniveau.',
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -240,7 +251,8 @@ class AINcbg extends StatelessWidget {
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '- Uitlopen activiteiten in TijdRuimte-slot;\n\n- Trein defect binnen het TijdRuimte-slot;\n\n- Trein kan tijdelijk niet verder door storing/stremming;\n\n- Trein/rangeerdeel waarvoor tijdelijk geen personeel/materieel aanwezig is.',
+                      text:
+                          '- Uitlopen activiteiten in TijdRuimte-slot;\n\n- Trein defect binnen het TijdRuimte-slot;\n\n- Trein kan tijdelijk niet verder door storing/stremming;\n\n- Trein/rangeerdeel waarvoor tijdelijk geen personeel/materieel aanwezig is.',
                     ),
                   ],
                 ),
@@ -298,7 +310,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                        'Het venster is in meerdere secties te verdelen, te weten:',
+                          'Het venster is in meerdere secties te verdelen, te weten:',
                     ),
                     SizedBoxH(),
                     BodyText(

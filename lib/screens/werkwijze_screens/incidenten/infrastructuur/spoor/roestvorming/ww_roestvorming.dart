@@ -40,21 +40,33 @@ class WWRoestvorming extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWRoestvorming>>[
-              PopupMenuItem<WhereToGoFromWWRoestvorming>(
+              const PopupMenuItem<WhereToGoFromWWRoestvorming>(
                 value: WhereToGoFromWWRoestvorming.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWRoestvorming>(
+              const PopupMenuItem<WhereToGoFromWWRoestvorming>(
                 value: WhereToGoFromWWRoestvorming.ai_roestvorming,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Roestvorming',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Roestvorming',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWRoestvorming>(
+              const PopupMenuItem<WhereToGoFromWWRoestvorming>(
                 value: WhereToGoFromWWRoestvorming.ai_beveiliging_basis1,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Beveiliging Basis 1',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Beveiliging Basis 1',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWRoestvorming>(
+              const PopupMenuItem<WhereToGoFromWWRoestvorming>(
                 value: WhereToGoFromWWRoestvorming.ai_beveiliging_basis2,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Beveiliging Basis 2',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Beveiliging Basis 2',
+                ),
               ),
             ],
           ),

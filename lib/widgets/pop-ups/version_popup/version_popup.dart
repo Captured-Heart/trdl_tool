@@ -17,11 +17,16 @@ showVersionUpdatePopup(context) {
                 ),
                 SizedBoxH(),
                 DateChanged(
-                  date: '2022-10-05: 0.3.0',
+                  date: '2022-10-13: 0.3.0',
                 ),
                 ChangesMade(
-                  changes:
-                      '- Achtergrondinformatie verder uitgebreid (17);\n- IconButton in CircleAvatar gecentreerd;\n- App klaargestoomd voor Android 13;\n- Diverse dependency upgrades.',
+                  changes: '- Achtergrondinformatie verder uitgebreid (17);\n- '
+                      'IconButton in CircleAvatar gecentreerd;\n- App '
+                      'klaargestoomd voor Android 13;\n- Diverse '
+                      'dependency upgrades;\n- Diverse packages '
+                      'verwijderd;\n- Riverpod toegevoegd;\n- ThemeMode '
+                      'en ThemeColor aanpasbaar gemaakt;\n- AlertDialog '
+                      'gewijzigd naar Drawer.',
                 ),
                 SizedBoxH(),
                 DateChanged(

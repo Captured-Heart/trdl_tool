@@ -33,14 +33,20 @@ class AIMondelingeCommunicatie extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIMondelingeCommunicatie>>[
-              PopupMenuItem<WhereToGoFromAIMondelingeCommunicatie>(
+              const PopupMenuItem<WhereToGoFromAIMondelingeCommunicatie>(
                 value: WhereToGoFromAIMondelingeCommunicatie.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIMondelingeCommunicatie>(
+              const PopupMenuItem<WhereToGoFromAIMondelingeCommunicatie>(
                 value: WhereToGoFromAIMondelingeCommunicatie
                     .ww_mondelinge_communicatie,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Mondelinge Communicatie',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Mondelinge Communicatie',
+                ),
               ),
             ],
           ),

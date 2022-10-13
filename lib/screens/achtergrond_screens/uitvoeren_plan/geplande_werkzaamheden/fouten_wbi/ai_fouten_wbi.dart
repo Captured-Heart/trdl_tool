@@ -44,25 +44,40 @@ class AIFoutenWBI extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIFoutenWBI>>[
-              PopupMenuItem<WhereToGoFromAIFoutenWBI>(
+              const PopupMenuItem<WhereToGoFromAIFoutenWBI>(
                 value: WhereToGoFromAIFoutenWBI.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIFoutenWBI>(
+              const PopupMenuItem<WhereToGoFromAIFoutenWBI>(
                 value: WhereToGoFromAIFoutenWBI.ww_fouten_in_de_wbi,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Fouten in de WBI',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Fouten in de WBI',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIFoutenWBI>(
+              const PopupMenuItem<WhereToGoFromAIFoutenWBI>(
                 value: WhereToGoFromAIFoutenWBI.ai_geplande_werkzaamheden,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Geplande Werkzaamheden',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Geplande Werkzaamheden',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIFoutenWBI>(
+              const PopupMenuItem<WhereToGoFromAIFoutenWBI>(
                 value: WhereToGoFromAIFoutenWBI.ai_controleren_wbi,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Controleren WBI',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Controleren WBI',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIFoutenWBI>(
+              const PopupMenuItem<WhereToGoFromAIFoutenWBI>(
                 value: WhereToGoFromAIFoutenWBI.ai_aanvang_werkzaamheden,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Aanvang Werkzaamheden',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Aanvang Werkzaamheden',
+                ),
               ),
             ],
           ),

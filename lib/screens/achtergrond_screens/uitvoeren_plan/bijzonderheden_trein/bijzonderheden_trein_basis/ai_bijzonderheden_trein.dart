@@ -60,22 +60,34 @@ class AIBijzonderhedenTrein extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIBijzonderhedenTrein>>[
-              PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
+              const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
                 value: WhereToGoFromAIBijzonderhedenTrein.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
+              const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
                 value: WhereToGoFromAIBijzonderhedenTrein
                     .ww_bijzonderheden_trein_main,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Bijzonderheden Trein',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Bijzonderheden Trein',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
+              const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
                 value: WhereToGoFromAIBijzonderhedenTrein.ai_vervoersregeling,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Vervoersregeling',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Vervoersregeling',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
+              const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
                 value: WhereToGoFromAIBijzonderhedenTrein.ai_onjuiste_detectie,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Onjuiste Detectie',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Onjuiste Detectie',
+                ),
               ),
             ],
           ),

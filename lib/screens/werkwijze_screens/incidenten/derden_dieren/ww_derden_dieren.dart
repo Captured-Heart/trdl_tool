@@ -32,13 +32,19 @@ class WWDerdenDieren extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWDerdenDieren>>[
-              PopupMenuItem<WhereToGoFromWWDerdenDieren>(
+              const PopupMenuItem<WhereToGoFromWWDerdenDieren>(
                 value: WhereToGoFromWWDerdenDieren.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWDerdenDieren>(
+              const PopupMenuItem<WhereToGoFromWWDerdenDieren>(
                 value: WhereToGoFromWWDerdenDieren.ai_derden_dieren,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Derden / Dieren',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Derden / Dieren',
+                ),
               ),
             ],
           ),

@@ -31,13 +31,19 @@ class WWGladSpoor extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWGladSpoor>>[
-              PopupMenuItem<WhereToGoFromWWGladSpoor>(
+              const PopupMenuItem<WhereToGoFromWWGladSpoor>(
                 value: WhereToGoFromWWGladSpoor.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWGladSpoor>(
+              const PopupMenuItem<WhereToGoFromWWGladSpoor>(
                 value: WhereToGoFromWWGladSpoor.ai_glad_spoor,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Glad Spoor',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Glad Spoor',
+                ),
               ),
             ],
           ),

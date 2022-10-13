@@ -32,13 +32,19 @@ class WWAanrijdingViaduct extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWAanrijdingViaduct>>[
-              PopupMenuItem<WhereToGoFromWWAanrijdingViaduct>(
+              const PopupMenuItem<WhereToGoFromWWAanrijdingViaduct>(
                 value: WhereToGoFromWWAanrijdingViaduct.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWAanrijdingViaduct>(
+              const PopupMenuItem<WhereToGoFromWWAanrijdingViaduct>(
                 value: WhereToGoFromWWAanrijdingViaduct.ai_aanrijding_viaduct,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Aanrijding Viaduct',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Aanrijding Viaduct',
+                ),
               ),
             ],
           ),

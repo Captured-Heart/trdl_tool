@@ -39,19 +39,28 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIBijzonderhedenRijwegenMain>>[
-              PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
+              const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
                 value: WhereToGoFromAIBijzonderhedenRijwegenMain.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
+              const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
                 value: WhereToGoFromAIBijzonderhedenRijwegenMain
                     .ww_bijzonderheden_rijwegen_main,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Bijzonderheden Rijwegen',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Bijzonderheden Rijwegen',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
+              const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
                 value: WhereToGoFromAIBijzonderhedenRijwegenMain
                     .ww_kop_van_trein_voorbij_sein,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Kop van Trein Voorbij Sein',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Kop van Trein Voorbij Sein',
+                ),
               ),
             ],
           ),

@@ -18,9 +18,6 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     /*USER IS KNOWN => HOME_SCREEN*/
     if (alreadySignedInUser != null) {
-      Logger().wtf(
-        'User is known and logged in, go to home_screen.',
-      );
       timer = Timer(
         /*SET TIMER TO ... SECONDS*/
         const Duration(seconds: 3),
@@ -32,9 +29,6 @@ class _SplashScreenState extends State<SplashScreen> {
     }
     /*USER IS UNKNOWN => WELCOME_SCREEN*/
     else {
-      Logger().wtf(
-        'User is unknown or new, go to welcome_screen. Timer takes 3 seconds.',
-      );
       timer = Timer(
         const Duration(seconds: 3),
         () => Navigator.pushReplacementNamed(

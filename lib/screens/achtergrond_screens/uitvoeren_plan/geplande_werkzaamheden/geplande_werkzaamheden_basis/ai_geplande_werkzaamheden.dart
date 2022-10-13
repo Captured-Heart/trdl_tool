@@ -55,36 +55,57 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIGeplandeWerkzaamheden>>[
-              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+              const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
                 value: WhereToGoFromAIGeplandeWerkzaamheden.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+              const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
                 value: WhereToGoFromAIGeplandeWerkzaamheden
                     .ww_geplande_werkzaamheden_main,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Geplande Werkzaamheden',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Geplande Werkzaamheden',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+              const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
                 value: WhereToGoFromAIGeplandeWerkzaamheden.ai_controleren_wbi,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Controleren WBI',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Controleren WBI',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+              const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
                 value: WhereToGoFromAIGeplandeWerkzaamheden.ai_fouten_wbi,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Fouten in de WBI',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Fouten in de WBI',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+              const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
                 value: WhereToGoFromAIGeplandeWerkzaamheden
                     .ai_aanvang_werkzaamheden,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Aanvang Werkzaamheden',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Aanvang Werkzaamheden',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+              const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
                 value: WhereToGoFromAIGeplandeWerkzaamheden.ai_werkzones,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Werkzones',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Werkzones',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
+              const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
                 value: WhereToGoFromAIGeplandeWerkzaamheden
                     .ai_toelaten_werktreinen,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Toelaten Wertrein',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Toelaten Wertrein',
+                ),
               ),
             ],
           ),

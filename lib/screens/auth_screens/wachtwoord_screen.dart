@@ -85,9 +85,6 @@ class _WachtwoordState extends State<Wachtwoord> {
                               onPressed: () async {
                                 try {
                                   /*SEND PASSWORD RESETLINK*/
-                                  Logger().wtf(
-                                    'Password reset mail sent to $_emailCtrl.text',
-                                  );
                                   await AuthService().resetPassword(
                                     email: _emailCtrl.text,
                                   );
@@ -101,7 +98,6 @@ class _WachtwoordState extends State<Wachtwoord> {
                                 }
                                 /*CATCH ALL OTHER ERRORS*/
                                 catch (errorMessage) {
-                                  Logger().wtf('Er is iets mis: $errorMessage');
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarWachtwoordErIsIetsMis,
                                   );

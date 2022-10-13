@@ -32,13 +32,19 @@ class WWResetAssenteller extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWResetAssenteller>>[
-              PopupMenuItem<WhereToGoFromWWResetAssenteller>(
+              const PopupMenuItem<WhereToGoFromWWResetAssenteller>(
                 value: WhereToGoFromWWResetAssenteller.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWResetAssenteller>(
+              const PopupMenuItem<WhereToGoFromWWResetAssenteller>(
                 value: WhereToGoFromWWResetAssenteller.ai_assenteller,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Assenteller',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Assenteller',
+                ),
               ),
             ],
           ),

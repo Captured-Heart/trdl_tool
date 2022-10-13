@@ -36,17 +36,26 @@ class WWBeveiligingMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWBeveiligingMain>>[
-              PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
+              const PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
                 value: WhereToGoFromWWBeveiligingMain.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
+              const PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
                 value: WhereToGoFromWWBeveiligingMain.ai_infra_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Infra',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Infra',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
+              const PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
                 value: WhereToGoFromWWBeveiligingMain.ai_beveiliging_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Beveiliging',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Beveiliging',
+                ),
               ),
             ],
           ),

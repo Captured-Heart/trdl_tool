@@ -1,6 +1,10 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromAIInzettenICB { home_screen, ww_inzetten_icb, ai_bijzonderheden_rijwegen_main, } 
+enum WhereToGoFromAIInzettenICB {
+  home_screen,
+  ww_inzetten_icb,
+  ai_bijzonderheden_rijwegen_main,
+}
 
 class AIInzettenICB extends StatelessWidget {
   const AIInzettenICB({Key? key}) : super(key: key);
@@ -20,8 +24,7 @@ class AIInzettenICB extends StatelessWidget {
             onSelected: (WhereToGoFromAIInzettenICB result) {
               if (result == WhereToGoFromAIInzettenICB.home_screen) {
                 Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIInzettenICB.ww_inzetten_icb) {
+              } else if (result == WhereToGoFromAIInzettenICB.ww_inzetten_icb) {
                 Navigator.pushNamed(context, 'ww_inzetten_icb');
               } else if (result ==
                   WhereToGoFromAIInzettenICB.ai_bijzonderheden_rijwegen_main) {
@@ -32,17 +35,27 @@ class AIInzettenICB extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIInzettenICB>>[
-              PopupMenuItem<WhereToGoFromAIInzettenICB>(
+              const PopupMenuItem<WhereToGoFromAIInzettenICB>(
                 value: WhereToGoFromAIInzettenICB.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIInzettenICB>(
+              const PopupMenuItem<WhereToGoFromAIInzettenICB>(
                 value: WhereToGoFromAIInzettenICB.ww_inzetten_icb,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Inzetten ICB',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Inzetten ICB',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIInzettenICB>(
-                value: WhereToGoFromAIInzettenICB.ai_bijzonderheden_rijwegen_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bijzonderheden Rijwegen',),
+              const PopupMenuItem<WhereToGoFromAIInzettenICB>(
+                value:
+                    WhereToGoFromAIInzettenICB.ai_bijzonderheden_rijwegen_main,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Bijzonderheden Rijwegen',
+                ),
               ),
             ],
           ),

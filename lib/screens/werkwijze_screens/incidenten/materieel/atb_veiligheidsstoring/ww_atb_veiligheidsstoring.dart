@@ -32,13 +32,19 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWAtbVeiligheidsstoring>>[
-              PopupMenuItem<WhereToGoFromWWAtbVeiligheidsstoring>(
+              const PopupMenuItem<WhereToGoFromWWAtbVeiligheidsstoring>(
                 value: WhereToGoFromWWAtbVeiligheidsstoring.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWAtbVeiligheidsstoring>(
+              const PopupMenuItem<WhereToGoFromWWAtbVeiligheidsstoring>(
                 value: WhereToGoFromWWAtbVeiligheidsstoring.ai_atb,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI ATB',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI ATB',
+                ),
               ),
             ],
           ),

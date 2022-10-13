@@ -32,13 +32,19 @@ class WWMaterieelMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWMaterieelMain>>[
-              PopupMenuItem<WhereToGoFromWWMaterieelMain>(
+              const PopupMenuItem<WhereToGoFromWWMaterieelMain>(
                 value: WhereToGoFromWWMaterieelMain.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWMaterieelMain>(
+              const PopupMenuItem<WhereToGoFromWWMaterieelMain>(
                 value: WhereToGoFromWWMaterieelMain.ai_materieel_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Materieel',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Materieel',
+                ),
               ),
             ],
           ),

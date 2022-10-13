@@ -33,14 +33,20 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWOnregelmatighedenBaan>>[
-              PopupMenuItem<WhereToGoFromWWOnregelmatighedenBaan>(
+              const PopupMenuItem<WhereToGoFromWWOnregelmatighedenBaan>(
                 value: WhereToGoFromWWOnregelmatighedenBaan.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWOnregelmatighedenBaan>(
+              const PopupMenuItem<WhereToGoFromWWOnregelmatighedenBaan>(
                 value: WhereToGoFromWWOnregelmatighedenBaan
                     .ai_onregelmatigheden_baan,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Onregelmatigheden Baan',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Onregelmatigheden Baan',
+                ),
               ),
             ],
           ),

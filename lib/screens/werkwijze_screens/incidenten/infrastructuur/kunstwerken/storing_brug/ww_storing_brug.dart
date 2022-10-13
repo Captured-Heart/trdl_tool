@@ -31,13 +31,19 @@ class WWStoringBrug extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWStoringBrug>>[
-              PopupMenuItem<WhereToGoFromWWStoringBrug>(
+              const PopupMenuItem<WhereToGoFromWWStoringBrug>(
                 value: WhereToGoFromWWStoringBrug.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWStoringBrug>(
+              const PopupMenuItem<WhereToGoFromWWStoringBrug>(
                 value: WhereToGoFromWWStoringBrug.ai_storing_brug,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Storing Brug',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Storing Brug',
+                ),
               ),
             ],
           ),

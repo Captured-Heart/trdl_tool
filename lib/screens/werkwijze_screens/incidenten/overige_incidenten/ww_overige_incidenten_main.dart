@@ -32,14 +32,20 @@ class WWOverigeIncidentenMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWOverigeIncidentenMain>>[
-              PopupMenuItem<WhereToGoFromWWOverigeIncidentenMain>(
+              const PopupMenuItem<WhereToGoFromWWOverigeIncidentenMain>(
                 value: WhereToGoFromWWOverigeIncidentenMain.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWOverigeIncidentenMain>(
+              const PopupMenuItem<WhereToGoFromWWOverigeIncidentenMain>(
                 value:
                     WhereToGoFromWWOverigeIncidentenMain.ai_overige_incidenten,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Overige Incidenten',
+                ),
               ),
             ],
           ),

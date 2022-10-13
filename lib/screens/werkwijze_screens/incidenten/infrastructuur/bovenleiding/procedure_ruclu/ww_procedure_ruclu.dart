@@ -32,13 +32,19 @@ class WWProcedureRuClu extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWProcedureRuClu>>[
-              PopupMenuItem<WhereToGoFromWWProcedureRuClu>(
+              const PopupMenuItem<WhereToGoFromWWProcedureRuClu>(
                 value: WhereToGoFromWWProcedureRuClu.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWProcedureRuClu>(
+              const PopupMenuItem<WhereToGoFromWWProcedureRuClu>(
                 value: WhereToGoFromWWProcedureRuClu.ai_procedure_ruclu,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Procedure RU/CLU',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Procedure RU/CLU',
+                ),
               ),
             ],
           ),

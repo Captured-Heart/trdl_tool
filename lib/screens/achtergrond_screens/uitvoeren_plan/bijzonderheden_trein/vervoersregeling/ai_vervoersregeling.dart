@@ -40,21 +40,33 @@ class AIVervoersregeling extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIVervoersregeling>>[
-              PopupMenuItem<WhereToGoFromAIVervoersregeling>(
+              const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
                 value: WhereToGoFromAIVervoersregeling.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIVervoersregeling>(
+              const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
                 value: WhereToGoFromAIVervoersregeling.ww_vervoersregeling,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Vervoersregeling',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Vervoersregeling',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIVervoersregeling>(
+              const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
                 value: WhereToGoFromAIVervoersregeling.ai_bijzonderheden_trein,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bijzonderheden Trein',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Bijzonderheden Trein',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIVervoersregeling>(
+              const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
                 value: WhereToGoFromAIVervoersregeling.ai_onjuiste_detectie,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Onjuiste Detectie',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Onjuiste Detectie',
+                ),
               ),
             ],
           ),

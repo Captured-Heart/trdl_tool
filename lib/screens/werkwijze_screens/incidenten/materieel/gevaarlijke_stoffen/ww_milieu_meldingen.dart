@@ -32,13 +32,19 @@ class WWMilieuMeldingen extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWMilieuMeldingen>>[
-              PopupMenuItem<WhereToGoFromWWMilieuMeldingen>(
+              const PopupMenuItem<WhereToGoFromWWMilieuMeldingen>(
                 value: WhereToGoFromWWMilieuMeldingen.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWMilieuMeldingen>(
+              const PopupMenuItem<WhereToGoFromWWMilieuMeldingen>(
                 value: WhereToGoFromWWMilieuMeldingen.ai_gevaarlijke_stoffen,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Gevaarlijke Stoffen',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Gevaarlijke Stoffen',
+                ),
               ),
             ],
           ),

@@ -41,25 +41,40 @@ class WWBrand extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWBrand>>[
-              PopupMenuItem<WhereToGoFromWWBrand>(
+              const PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWBrand>(
+              const PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.ai_brand,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Brand',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Brand',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWBrand>(
+              const PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.ai_ruclu,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Procedure RU/CLU',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Procedure RU/CLU',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWBrand>(
+              const PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.ai_schakelen_bovenleiding,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Schakelen Bovenleiding',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Schakelen Bovenleiding',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWBrand>(
+              const PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.ai_overige_incidenten,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Overige Incidenten',
+                ),
               ),
             ],
           ),

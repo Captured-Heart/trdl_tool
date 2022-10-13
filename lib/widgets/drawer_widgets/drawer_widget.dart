@@ -23,7 +23,7 @@ Widget drawerWidget =
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Huidige gebruiker:'),
+                  const Text('Huidige gebruiker:'),
                   Text('$emailCurrentUser'),
                 ],
               ),
@@ -65,7 +65,7 @@ Widget drawerWidget =
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Versie & Updates:'),
+              const Text('Versie & Updates:'),
               Row(
                 children: [
                   IconButton(

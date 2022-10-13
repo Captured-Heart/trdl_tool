@@ -48,28 +48,43 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWAfhandelenSysteemstoringen>>[
-              PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
+              const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
                 value: WhereToGoFromWWAfhandelenSysteemstoringen.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
+              const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
                 value: WhereToGoFromWWAfhandelenSysteemstoringen
                     .ai_systeemstoringen,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Systeemstoringen',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Systeemstoringen',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
+              const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
                 value: WhereToGoFromWWAfhandelenSysteemstoringen.ai_systemen,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Systemen',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Systemen',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
+              const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
                 value: WhereToGoFromWWAfhandelenSysteemstoringen
                     .ai_systeemstoring_gsmr,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Systeemstoring GSM-R',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Systeemstoring GSM-R',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
+              const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
                 value: WhereToGoFromWWAfhandelenSysteemstoringen
                     .ai_overige_incidenten,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Overige Incidenten',
+                ),
               ),
             ],
           ),

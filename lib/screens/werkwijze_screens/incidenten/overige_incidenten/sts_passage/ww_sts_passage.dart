@@ -35,17 +35,26 @@ class WWStsPassage extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWStsPassage>>[
-              PopupMenuItem<WhereToGoFromWWStsPassage>(
+              const PopupMenuItem<WhereToGoFromWWStsPassage>(
                 value: WhereToGoFromWWStsPassage.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWStsPassage>(
+              const PopupMenuItem<WhereToGoFromWWStsPassage>(
                 value: WhereToGoFromWWStsPassage.ai_sts_passage,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI STS Passage',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI STS Passage',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWStsPassage>(
+              const PopupMenuItem<WhereToGoFromWWStsPassage>(
                 value: WhereToGoFromWWStsPassage.ai_overige_incidenten,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Overige Incidenten',
+                ),
               ),
             ],
           ),

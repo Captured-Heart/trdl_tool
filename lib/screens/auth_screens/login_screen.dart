@@ -112,9 +112,6 @@ class _LoginState extends State<Login> {
                                   );
                                   /*IF USER CLICKED VERIFICATION EMAIL*/
                                   if (_auth.currentUser!.emailVerified) {
-                                    Logger().wtf(
-                                      'Gebruiker heeft netjes zijn emailadres geverifieerd.',
-                                    );
                                     Navigator.pushReplacementNamed(
                                       context,
                                       'home_screen',
@@ -122,9 +119,6 @@ class _LoginState extends State<Login> {
                                   }
                                   /*IF USER DID NOT CLICK VERIFICATION EMAIL*/
                                   else if (!_auth.currentUser!.emailVerified) {
-                                    Logger().wtf(
-                                      'Gebruiker heeft zijn emailadres nog niet geverifieerd.',
-                                    );
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       snackBarLoginEmailVerificatie,
                                     );

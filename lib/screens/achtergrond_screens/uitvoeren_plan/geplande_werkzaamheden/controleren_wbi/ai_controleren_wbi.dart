@@ -44,25 +44,40 @@ class AIControlerenWBI extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIControlerenWBI>>[
-              PopupMenuItem<WhereToGoFromAIControlerenWBI>(
+              const PopupMenuItem<WhereToGoFromAIControlerenWBI>(
                 value: WhereToGoFromAIControlerenWBI.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIControlerenWBI>(
+              const PopupMenuItem<WhereToGoFromAIControlerenWBI>(
                 value: WhereToGoFromAIControlerenWBI.ww_controleren_wbi,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Controleren WBI',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Controleren WBI',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIControlerenWBI>(
+              const PopupMenuItem<WhereToGoFromAIControlerenWBI>(
                 value: WhereToGoFromAIControlerenWBI.ai_fouten_wbi,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Fouten in de WBI',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Fouten in de WBI',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIControlerenWBI>(
+              const PopupMenuItem<WhereToGoFromAIControlerenWBI>(
                 value: WhereToGoFromAIControlerenWBI.ai_geplande_werkzaamheden,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Geplande Werkzaamheden',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Geplande Werkzaamheden',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIControlerenWBI>(
+              const PopupMenuItem<WhereToGoFromAIControlerenWBI>(
                 value: WhereToGoFromAIControlerenWBI.ai_aanvang_werkzaamheden,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Aanvang Werkzaamheden',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Aanvang Werkzaamheden',
+                ),
               ),
             ],
           ),

@@ -27,10 +27,9 @@ class _ChatScreenState extends State<ChatScreen> {
       final user = _auth.currentUser;
       if (user != null) {
         loggedInUser = user;
-        Logger().wtf('getCurrentUser() is called if user != null');
       }
     } catch (e) {
-      Logger().wtf(e);
+      print('Er is iets misgegaan');
     }
   }
 

@@ -169,9 +169,6 @@ class _RegisterState extends State<Register> {
                                   }
                                   /*CATCH ALL OTHER ERRORS*/
                                   catch (errorMessage) {
-                                    Logger().wtf(
-                                      'Er is iets misgegaan: $errorMessage',
-                                    );
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
                                         content: Text(

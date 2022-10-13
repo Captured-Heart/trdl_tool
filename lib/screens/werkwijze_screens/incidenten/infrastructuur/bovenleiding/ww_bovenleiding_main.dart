@@ -40,21 +40,33 @@ class WWBovenleidingMain extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWBovenleidingMain>>[
-              PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
+              const PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
                 value: WhereToGoFromWWBovenleidingMain.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
+              const PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
                 value: WhereToGoFromWWBovenleidingMain.ai_incidenten_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Incidenten',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Incidenten',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
+              const PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
                 value: WhereToGoFromWWBovenleidingMain.ai_infra_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Infra',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Infra',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
+              const PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
                 value: WhereToGoFromWWBovenleidingMain.ai_bovenleiding_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bovenleiding',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Bovenleiding',
+                ),
               ),
             ],
           ),

@@ -1,6 +1,14 @@
 import 'package:trdl_tool/all_imports.dart';
 
-enum WhereToGoFromAIRijwegenARI { home_screen, ww_uitvoeren_plan_main, ai_rijwegen_trots, ai_bijzonderheden_rijwegen, ai_rijwegen_planopbouw, ai_rijwegen_planscherm, ai_rijwegen_bedienscherm, }
+enum WhereToGoFromAIRijwegenARI {
+  home_screen,
+  ww_uitvoeren_plan_main,
+  ai_rijwegen_trots,
+  ai_bijzonderheden_rijwegen,
+  ai_rijwegen_planopbouw,
+  ai_rijwegen_planscherm,
+  ai_rijwegen_bedienscherm,
+}
 
 class AIRijwegenARI extends StatelessWidget {
   const AIRijwegenARI({Key? key}) : super(key: key);
@@ -44,33 +52,54 @@ class AIRijwegenARI extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIRijwegenARI>>[
-              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ww_uitvoeren_plan_main,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Uitvoeren Plan',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Uitvoeren Plan',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_rijwegen_trots,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen TROTS',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Rijwegen TROTS',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_bijzonderheden_rijwegen,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bijzonderheden Rijwegen',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Bijzonderheden Rijwegen',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planopbouw,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen Planopbouw',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Rijwegen Planopbouw',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planscherm,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen Planscherm',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Rijwegen Planscherm',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_rijwegen_bedienscherm,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Rijwegen Bedienscherm',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Rijwegen Bedienscherm',
+                ),
               ),
             ],
           ),

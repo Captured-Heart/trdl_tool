@@ -39,21 +39,33 @@ class WWOverwegen extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWOverwegen>>[
-              PopupMenuItem<WhereToGoFromWWOverwegen>(
+              const PopupMenuItem<WhereToGoFromWWOverwegen>(
                 value: WhereToGoFromWWOverwegen.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWOverwegen>(
+              const PopupMenuItem<WhereToGoFromWWOverwegen>(
                 value: WhereToGoFromWWOverwegen.ai_overwegen_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overwegen',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Overwegen',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWOverwegen>(
+              const PopupMenuItem<WhereToGoFromWWOverwegen>(
                 value: WhereToGoFromWWOverwegen.ai_overwegen_storing,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overwegen Storing',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Overwegen Storing',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWOverwegen>(
+              const PopupMenuItem<WhereToGoFromWWOverwegen>(
                 value: WhereToGoFromWWOverwegen.ai_incidenten_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Incidenten',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Incidenten',
+                ),
               ),
             ],
           ),

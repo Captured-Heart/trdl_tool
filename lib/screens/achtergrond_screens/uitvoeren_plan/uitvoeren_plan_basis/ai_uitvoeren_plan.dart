@@ -36,17 +36,26 @@ class AIUitvoerenPlan extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIUitvoerenPlan>>[
-              PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
+              const PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
                 value: WhereToGoFromAIUitvoerenPlan.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
+              const PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
                 value: WhereToGoFromAIUitvoerenPlan.ai_aanpassen_plan,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Aanpassen Plan',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Aanpassen Plan',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
+              const PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
                 value: WhereToGoFromAIUitvoerenPlan.ai_bovenleiding_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Bovenleiding',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Bovenleiding',
+                ),
               ),
             ],
           ),

@@ -34,17 +34,26 @@ class WWVasteRem extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWVasteRem>>[
-              PopupMenuItem<WhereToGoFromWWVasteRem>(
+              const PopupMenuItem<WhereToGoFromWWVasteRem>(
                 value: WhereToGoFromWWVasteRem.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWVasteRem>(
+              const PopupMenuItem<WhereToGoFromWWVasteRem>(
                 value: WhereToGoFromWWVasteRem.ai_materieel_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Materieel',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Materieel',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWVasteRem>(
+              const PopupMenuItem<WhereToGoFromWWVasteRem>(
                 value: WhereToGoFromWWVasteRem.ai_vaste_rem,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Vaste Rem',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Vaste Rem',
+                ),
               ),
             ],
           ),

@@ -98,8 +98,7 @@ class AISeinenBasis extends StatelessWidget {
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
-                      text:
-                          'Het huidige snelheids-seinstelsel 1954 geeft:',
+                      text: 'Het huidige snelheids-seinstelsel 1954 geeft:',
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -155,8 +154,10 @@ class AISeinenBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
-                    InsertImage(image: 'assets/images/achtergrond_info/incidenten/ai_seinen_basis1.png'),
+                  children: const [
+                    InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/incidenten/ai_seinen_basis1.png'),
                   ],
                 ),
               ),

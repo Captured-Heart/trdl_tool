@@ -1,6 +1,3 @@
-import 'package:flutter_animate/animate.dart';
-import 'package:flutter_animate/effects/effects.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:trdl_tool/all_imports.dart';
 
 class HomeIndex2 extends StatelessWidget {
@@ -18,30 +15,24 @@ class HomeIndex2 extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: [
-                      const TitleText(
+                    children: const [
+                      TitleText(
                         title: 'ProQuiz',
                       ),
-                      const SizedBoxH(),
-                      const BodyText(
+                      SizedBoxH(),
+                      BodyText(
                         indents: 0,
                         text:
                             'In een latere update zal hier de ProQuiz verschijnen. Wil je je kennis testen in een zenuwslopende quiz? Ga je gang!',
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 24.0,
                       ),
-                      Animate(
-                        effects: [
-                          FadeEffect(duration: 1000.ms),
-                          ScaleEffect(duration: 1000.ms),
-                        ],
-                        child: const NavButton(
-                          buttontext: 'Klik hier voor de testversie',
-                          destination: 'proquiz_main',
-                        ),
+                      NavButton(
+                        buttontext: 'Klik hier voor de testversie',
+                        destination: 'proquiz_main',
                       ),
-                      const SizedBoxH(),
+                      SizedBoxH(),
                     ],
                   ),
                 ),

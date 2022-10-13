@@ -37,19 +37,28 @@ class WWStilleggenTreindienst extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWStilleggenTreindienst>>[
-              PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
+              const PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
                 value: WhereToGoFromWWStilleggenTreindienst.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
+              const PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
                 value: WhereToGoFromWWStilleggenTreindienst
                     .ai_stilleggen_treindienst,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Stilleggen Treindienst',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Stilleggen Treindienst',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
+              const PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
                 value:
                     WhereToGoFromWWStilleggenTreindienst.ai_overige_incidenten,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Overige Incidenten',
+                ),
               ),
             ],
           ),

@@ -40,21 +40,33 @@ class WWOntruimenPost extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWOntruimenPost>>[
-              PopupMenuItem<WhereToGoFromWWOntruimenPost>(
+              const PopupMenuItem<WhereToGoFromWWOntruimenPost>(
                 value: WhereToGoFromWWOntruimenPost.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWOntruimenPost>(
+              const PopupMenuItem<WhereToGoFromWWOntruimenPost>(
                 value: WhereToGoFromWWOntruimenPost.ai_ontruimen_post,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Ontruimen Post',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Ontruimen Post',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWOntruimenPost>(
+              const PopupMenuItem<WhereToGoFromWWOntruimenPost>(
                 value: WhereToGoFromWWOntruimenPost.ai_stilleggen_treindienst,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Stilleggen Treindienst',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Stilleggen Treindienst',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWOntruimenPost>(
+              const PopupMenuItem<WhereToGoFromWWOntruimenPost>(
                 value: WhereToGoFromWWOntruimenPost.ai_overige_incidenten,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Overige Incidenten',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Overige Incidenten',
+                ),
               ),
             ],
           ),

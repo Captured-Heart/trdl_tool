@@ -33,14 +33,20 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromWWVeiligheidsstoringSein>>[
-              PopupMenuItem<WhereToGoFromWWVeiligheidsstoringSein>(
+              const PopupMenuItem<WhereToGoFromWWVeiligheidsstoringSein>(
                 value: WhereToGoFromWWVeiligheidsstoringSein.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
-              PopupMenuItem<WhereToGoFromWWVeiligheidsstoringSein>(
+              const PopupMenuItem<WhereToGoFromWWVeiligheidsstoringSein>(
                 value: WhereToGoFromWWVeiligheidsstoringSein
                     .ai_veiligheidsstoring_sein,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Veiligheidsstoring Sein',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Veiligheidsstoring Sein',
+                ),
               ),
             ],
           ),
