@@ -97,7 +97,7 @@ class MessagesStream extends StatelessWidget {
         if (!snapshot.hasData) {
           return Center(
             child: CircularProgressIndicator(
-              backgroundColor: flexSchemeLight.primary,
+              backgroundColor: greenMoneyColorsLight.primary,
             ),
           );
         }
@@ -156,7 +156,7 @@ class MessageBubble extends StatelessWidget {
             ),
           ),
           Material(
-            shadowColor: flexSchemeLight.secondary,
+            shadowColor: greenMoneyColorsLight.secondary,
             elevation: 6.0,
             borderRadius: BorderRadius.only(
               topLeft: isMe
@@ -168,8 +168,9 @@ class MessageBubble extends StatelessWidget {
               bottomLeft: const Radius.circular(12.0),
               bottomRight: const Radius.circular(12.0),
             ),
-            color:
-                isMe ? flexSchemeLight.primary : flexSchemeLight.inversePrimary,
+            color: isMe
+                ? greenMoneyColorsLight.primary
+                : greenMoneyColorsLight.inversePrimary,
             child: Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 12.0,
@@ -180,8 +181,8 @@ class MessageBubble extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 16.0,
                   color: isMe
-                      ? flexSchemeLight.surface
-                      : flexSchemeLight.onSurface,
+                      ? greenMoneyColorsLight.surface
+                      : greenMoneyColorsLight.onSurface,
                 ),
               ),
             ),

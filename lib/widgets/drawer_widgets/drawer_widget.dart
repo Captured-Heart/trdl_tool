@@ -56,7 +56,10 @@ Widget drawerWidget =
             children: [
               //WATCH the themeColorStringProvider here, it
               //returns the current String for the themeColor
-              Text('Color: ${ref.watch(themeColorStringProvider)}'),
+              Expanded(
+                flex: 1,
+                child: Text('Color: ${ref.watch(themeColorStringProvider)}'),
+              ),
               //Look down
               const ThemeColorSwitch(),
             ],

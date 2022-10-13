@@ -2,13 +2,13 @@ import 'package:trdl_tool/all_imports.dart';
 
 const ColorScheme greenMoneyColorsLight = ColorScheme(
   brightness: Brightness.light,
-  primary: Color(0xff264e36),
+  primary: Color(0xff264e36), //Icon foreground
   onPrimary: Color(0xffffffff),
   primaryContainer: Color(0xff94bda5),
   onPrimaryContainer: Color(0xff1a201d),
   secondary: Color(0xff797b3a),
   onSecondary: Color(0xffffffff),
-  secondaryContainer: Color(0xffbfc0a0),
+  secondaryContainer: Color(0xffbfc0a0), //Icon background
   onSecondaryContainer: Color(0xff21211c),
   tertiary: Color(0xff555729),
   onTertiary: Color(0xffffffff),

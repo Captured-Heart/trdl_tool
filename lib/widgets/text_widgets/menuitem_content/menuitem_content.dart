@@ -17,7 +17,7 @@ class MenuItemContent extends StatelessWidget {
       children: [
         Icon(
           icon,
-          color: flexSchemeLight.primary,
+          color: greenMoneyColorsLight.primary,
         ),
         Expanded(
           child: FittedBox(

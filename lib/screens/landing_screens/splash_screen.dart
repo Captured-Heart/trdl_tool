@@ -67,7 +67,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
             SpinKitDoubleBounce(
               /*SPINNER DURATION ENDLESS*/
-              color: flexSchemeLight.primary,
+              color: greenMoneyColorsLight.primary,
               size: 100.0,
             ),
             const SizedBox(

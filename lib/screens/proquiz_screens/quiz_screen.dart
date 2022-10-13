@@ -270,7 +270,7 @@ Widget countDownTimerRunning() {
               size: 125.0,
             )
           : SpinKitDoubleBounce(
-              color: flexSchemeLight.primary,
+              color: greenMoneyColorsLight.primary,
               size: 125.0,
             ),
       CircularProgressIndicator(

@@ -38,7 +38,6 @@ export 'package:trdl_tool/constants/all_search_strings.dart';
 
 /*THEMING*/
 export 'package:trdl_tool/theme/flexcolorscheme.dart';
-export 'package:trdl_tool/theme/colors.dart';
 export 'package:trdl_tool/theme/theme_colors/outerspace_colors.dart';
 export 'package:trdl_tool/theme/theme_colors/bluedelight_colors.dart';
 export 'package:trdl_tool/theme/theme_colors/greenmoney_colors.dart';
