@@ -3,7 +3,6 @@ export 'package:flutter_native_splash/flutter_native_splash.dart';
 export 'package:flutter/material.dart';
 export 'package:flutter/painting.dart';
 export 'package:flutter/services.dart';
-export 'dart:async';
 export 'dart:math';
 export 'dart:io';
 
@@ -16,6 +15,7 @@ export 'package:firebase_auth/firebase_auth.dart';
 export 'package:trdl_tool/services/auth_service.dart';
 
 /*EXTERNAL PACKAGES (THIRD PARTY)*/
+export 'package:flutter_riverpod/flutter_riverpod.dart';
 export 'package:google_fonts/google_fonts.dart';
 export 'package:flex_color_scheme/flex_color_scheme.dart';
 export 'package:flutter_animate/flutter_animate.dart';
@@ -23,6 +23,13 @@ export 'package:flutter_spinkit/flutter_spinkit.dart';
 export 'package:logger/logger.dart';
 export 'package:url_launcher/url_launcher.dart';
 export 'package:carousel_slider/carousel_slider.dart';
+
+/*RIVERPOD PROVIDERS*/
+export 'package:trdl_tool/providers/thememode_provider.dart';
+export 'package:trdl_tool/providers/thememodestring_provider.dart';
+export 'package:trdl_tool/providers/themedata_provider.dart';
+export 'package:trdl_tool/providers/themecolor_provider.dart';
+export 'package:trdl_tool/providers/themecolorstring_provider.dart';
 
 /*STRINGS / LISTS / CONSTANTS / ETC*/
 export 'package:trdl_tool/constants/welcome_items.dart';
@@ -34,6 +41,10 @@ export 'package:trdl_tool/constants/all_search_strings.dart';
 /*THEMING*/
 export 'package:trdl_tool/theme/flexcolorscheme.dart';
 export 'package:trdl_tool/theme/colors.dart';
+export 'package:trdl_tool/theme/theme_colors/outerspace_colors.dart';
+export 'package:trdl_tool/theme/theme_colors/bluedelight_colors.dart';
+export 'package:trdl_tool/theme/theme_colors/greenmoney_colors.dart';
+export 'package:trdl_tool/theme/theme_colors/redredwine_colors.dart';
 
 /*CUSTOM WIDGETS*/
 export 'package:trdl_tool/widgets/pop-ups/exit-popup/exit_popup.dart';
@@ -44,6 +55,8 @@ export 'package:trdl_tool/widgets/pop-ups/version_popup/version_popup.dart';
 
 export 'package:trdl_tool/widgets/buttons/nav_button.dart';
 export 'package:trdl_tool/widgets/buttons/rounded_button.dart';
+
+export 'package:trdl_tool/widgets/drawer_widgets/drawer_widget.dart';
 
 export 'package:trdl_tool/widgets/appbar_widgets/appbar_title/appbar_title.dart';
 export 'package:trdl_tool/widgets/appbar_widgets/appbar_logout_button/appbar_logout_button.dart';

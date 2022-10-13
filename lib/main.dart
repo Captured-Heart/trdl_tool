@@ -1,49 +1,53 @@
 import 'package:trdl_tool/all_imports.dart';
 
 Future<void> main() async {
+  //Make sure everything is in place, before running the app
   WidgetsFlutterBinding.ensureInitialized();
-  /*START FIREBASE BACKEND*/
+  //Starts Firebase backend and checks it for current platform
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  //Activates Firebase AppCheck service
   await FirebaseAppCheck.instance.activate(
     webRecaptchaSiteKey: 'recaptcha-v3-site-key',
   );
   runApp(
-    const MainEntry(),
+    //ProviderScope manages Riverpod Providers
+    const ProviderScope(
+      child: MainEntry(),
+    ),
   );
 }
 
-class MainEntry extends StatelessWidget {
+//ConsumerWidget makes ref reachable
+class MainEntry extends ConsumerWidget {
   const MainEntry({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: Strings.mainTitle,
-      /*APPTHEME FROM FLEXCOLORSCHEME*/
-      theme: themeLight,
-      darkTheme: themeDark,
-      themeMode: ThemeMode.system,
-      /*LOAD SPLASH FIRST*/
+      //Theming starts from phonesetting, afterwards adjustable by user
+      theme: ref.watch(themeLightProvider),
+      darkTheme: ref.watch(themeDarkProvider),
+      themeMode: ref.watch(themeModeProvider),
+      //Load SplashScreen FIRST
       home: const SplashScreen(),
       routes: {
-        /*LANDING PAGES ROUTES*/
+        //Landing page routes
         'welcome_screen': (context) => const WelcomeScreen(),
         'login_screen': (context) => const Login(),
         'register_screen': (context) => const Register(),
         'wachtwoord_screen': (context) => const Wachtwoord(),
         'verify_screen': (context) => const VerifyScreen(),
         'home_screen': (context) => const HomeScreen(),
-
-        /*HOMEPAGES ROUTES*/
+        //Homepage routes
         'home_index0': (context) => const HomeIndex0(),
         'home_index1': (context) => const HomeIndex1(),
         'home_index2': (context) => const HomeIndex2(),
         'home_index3': (context) => const HomeIndex3(),
-
-        /*WERKWIJZE UITVOEREN PLAN ROUTES*/
+        //Werkwijze uitvoeren plan routes
         'ww_uitvoeren_plan_main': (context) => const WWUitvoerenPlanMain(),
         'ww_geplande_werkzaamheden_main': (context) =>
             const WWGeplandeWerkzaamhedenMain(),
@@ -66,8 +70,7 @@ class MainEntry extends StatelessWidget {
             const WWMondelingeCommunicatie(),
         'ww_ncbg': (context) => const WWNcbg(),
         'ww_dienstovergave': (context) => const WWDienstovergave(),
-
-        /*WERKWIJZE AANPASSEN PLAN ROUTES*/
+        //Werkwijze aanpassen plan routes
         'ww_aanpassenplan_main': (context) => const WWAanpassenPlanMain(),
         'ww_ongepland_werk_main': (context) => const WWOngeplandWerkMain(),
         'ww_ongepland_werk_infra': (context) => const WWOngeplandWerkInfra(),
@@ -77,8 +80,7 @@ class MainEntry extends StatelessWidget {
         'ww_stappenplan_versperringen': (context) =>
             const WWStappenplanVersperringen(),
         'ww_vertragingen': (context) => const WWVertragingen(),
-
-        /*WERKWIJZE INCIDENTEN ROUTES*/
+        //Werkwijze incidenten routes
         'ww_incidenten_main': (context) => const WWIncidentenMain(),
         'ww_derden_dieren': (context) => const WWDerdenDieren(),
         'ww_herroepen_sein': (context) => const WWHerroepenSein(),
@@ -129,8 +131,7 @@ class MainEntry extends StatelessWidget {
         'ww_sts_passage': (context) => const WWStsPassage(),
         'ww_weersomstandigheden': (context) => const WWWeersomstandigheden(),
         'ww_wissels_vrijmaken': (context) => const WWWisselsVrijmaken(),
-
-        /*ACHTERGRONDINFO UITVOEREN PLAN ROUTES*/
+        //Achtergrondinfo uitvoeren plan routes
         'ai_uitvoeren_plan_main': (context) => const AIUitvoerenPlanMain(),
         'ai_bijzonderheden_rijwegen_main': (context) =>
             const AIBijzonderhedenRijwegenMain(),
@@ -164,8 +165,7 @@ class MainEntry extends StatelessWidget {
         'ai_ncbg': (context) => const AINcbg(),
         'ai_uitvoeren_plan': (context) => const AIUitvoerenPlan(),
         'ai_dienstovergave': (context) => const AIDienstovergave(),
-
-        /*ACHTERGRONDINFO AANPASSEN PLAN ROUTES*/
+        //Achtergrondinfo aanpassen plan routes
         'ai_aanpassen_plan_main': (context) => const AIAanpassenPlanMain(),
         'ai_aanpassen_plan': (context) => const AIAanpassenPlan(),
         'ai_ongepland_werk_main': (context) => const AIOngeplandWerkMain(),
@@ -179,8 +179,7 @@ class MainEntry extends StatelessWidget {
         'ai_orderacceptatie': (context) => const AIOrderacceptatie(),
         'ai_stappenplan_versperringen': (context) =>
             const AIStappenplanVersperringen(),
-
-        /*ACHTERGRONDINFO INCIDENTEN ROUTES*/
+        //Achtergrondinfo incidenten routes
         'ai_incidenten_main': (context) => const AIIncidentenMain(),
         'ai_incidenten_basis': (context) => const AIIncidentenBasis(),
         'ai_incidenten_derdendieren': (context) => const AIDerdenDieren(),
@@ -203,14 +202,11 @@ class MainEntry extends StatelessWidget {
         'ai_kunstwerken_main': (context) => const AIKunstwerkenMain(),
         'ai_overwegen_main': (context) => const AIOverwegenMain(),
         'ai_spoor_main': (context) => const AISpoorMain(),
-
-        /*PROQUIZ ROUTES*/
+        //ProQuiz routes
         'proquiz_main': (context) => const ProQuiz(),
-
-        /*PROCHAT ROUTES*/
+        //ProChat routes
         'prochat_main': (context) => const ProChat(),
-
-        /*ADDING MORE ROUTES? ADD TO CONSTANTS/ALL_SEARCH_STRING.DART AS WELL*/
+        //Adding more routes? Add to constants/all_search_string.dart as well!
       },
     );
   }

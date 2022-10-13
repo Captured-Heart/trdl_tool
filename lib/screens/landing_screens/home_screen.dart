@@ -57,31 +57,13 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
       child: Scaffold(
         appBar: AppBar(
           centerTitle: true,
-          leading: Padding(
-            padding: const EdgeInsets.only(
-              left: 6.0,
-              top: 6.0,
-              bottom: 6.0,
-            ),
-            child: CircleAvatar(
-              child: IconButton(
-                padding: EdgeInsets.zero,
-                icon: const Icon(
-                  Icons.person,
-                  size: 32.0,
-                ),
-                onPressed: () {
-                  showAvatarPopup(context);
-                },
-              ),
-            ),
-          ),
           title: const AppBarText(title: 'TRDLtool'),
           actions: const [
             SearchButton(),
             LogOutButton(),
           ],
         ),
+        drawer: drawerWidget,
         body: Center(
           child: PageView(
             controller: _pageController,

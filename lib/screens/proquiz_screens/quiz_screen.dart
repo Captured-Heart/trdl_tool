@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:trdl_tool/all_imports.dart';
 
 bool showSpinner = false;
@@ -220,7 +222,7 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
                         height: 80.0,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.red,
+                            backgroundColor: Colors.red,
                           ),
                           onPressed: () {
                             setState(() {
