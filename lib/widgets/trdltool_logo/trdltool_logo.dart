@@ -11,7 +11,7 @@ class TRDLtoolLogo extends StatelessWidget {
       children: [
         Icon(
           Icons.railway_alert,
-          size: 64.0,
+          size: 70.0,
           color: greenMoneyColorsLight.primary,
         ),
         const SizedBoxW(),
@@ -22,7 +22,7 @@ class TRDLtoolLogo extends StatelessWidget {
               'TRDLtool',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 64.0,
+                fontSize: 50.0,
                 color: greenMoneyColorsLight.primary,
               ),
             ),

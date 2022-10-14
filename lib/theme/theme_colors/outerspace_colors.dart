@@ -4,7 +4,7 @@ const ColorScheme outerSpaceColorsLight = ColorScheme(
   brightness: Brightness.light,
   primary: Color(0xff1f3339),
   onPrimary: Color(0xffffffff),
-  primaryContainer: Color(0xff9ec4d4), //Splashscreen backgroundcolor
+  primaryContainer: Color(0xff9ec4d4),
   onPrimaryContainer: Color(0xff1b2124),
   secondary: Color(0xffd2600a),
   onSecondary: Color(0xffffffff),
@@ -18,7 +18,7 @@ const ColorScheme outerSpaceColorsLight = ColorScheme(
   onError: Color(0xffffffff),
   errorContainer: Color(0xffffdad6),
   onErrorContainer: Color(0xff410002),
-  background: Color(0xffe8eaea),
+  background: Color(0xffe8eaea), //Splash Screen background color
   onBackground: Color(0xff121212),
   surface: Color(0xfff3f4f4),
   onSurface: Color(0xff090909),

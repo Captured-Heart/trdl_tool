@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
     /*USER IS UNKNOWN => WELCOME_SCREEN*/
     else {
       timer = Timer(
-        const Duration(seconds: 3),
+        const Duration(seconds: 5),
         () => Navigator.pushReplacementNamed(
           context,
           'welcome_screen',
@@ -57,8 +57,8 @@ class _SplashScreenState extends State<SplashScreen> {
             const Padding(
               padding: EdgeInsets.only(
                 top: 16.0,
-                left: 24.0,
-                right: 24.0,
+                left: 16.0,
+                right: 16.0,
               ),
               child: TRDLtoolLogo(),
             ),

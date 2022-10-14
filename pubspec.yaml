@@ -31,22 +31,12 @@ dev_dependencies:
   flutter_lints: ^2.0.1
   flutter_test:
     sdk: flutter
-  flutter_launcher_icons: 0.10.0
-
-flutter_icons:
-  android: "launcher_icon"
-  ios: true
-  image_path: "assets/icons/trdltool_icon.png"
-  remove_alpha_ios: true
-  web:
-    generate: true
-    image_path: "assets/icons/trdltool_icon.png"
 
 flutter_native_splash:
-  color: "#9ec4d4"
-  image: assets/icons/plotsklappsIconColorBorder.png
+  color: "#e8eaea"
+  image: assets/icons/plotsklappsLogoSmall.png
   color_dark: "#000000"
-  image_dark: assets/icons/plotsklappsIconColorBorder.png
+  image_dark: assets/icons/plotsklappsLogoSmall.png
   android: true
   ios: true
   fullscreen: true

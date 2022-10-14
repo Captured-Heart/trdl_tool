@@ -22,6 +22,9 @@ export 'package:flutter_spinkit/flutter_spinkit.dart';
 export 'package:url_launcher/url_launcher.dart';
 export 'package:carousel_slider/carousel_slider.dart';
 
+//Routes
+export 'package:trdl_tool/routes.dart';
+
 /*RIVERPOD PROVIDERS*/
 export 'package:trdl_tool/providers/thememode_provider.dart';
 export 'package:trdl_tool/providers/thememodestring_provider.dart';
