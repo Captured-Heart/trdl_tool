@@ -13,7 +13,15 @@ showVersionUpdatePopup(context) {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const [
                 CurrentVersion(
-                  versionNumber: '0.3.0',
+                  versionNumber: '0.3.1',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  //TODO: Vul juiste naam in!
+                  date: '2022-10-??: 0.3.1',
+                ),
+                ChangesMade(
+                  changes: '- Routes naar apart bestand verplaatst;\n- Bestandspaden verkort;\n- Comments aangepast naar Markdown;',
                 ),
                 SizedBoxH(),
                 DateChanged(

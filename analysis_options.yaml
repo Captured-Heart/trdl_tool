@@ -7,3 +7,4 @@ linter:
     - avoid_print: true
     - always_put_control_body_on_new_line: true
     - require_trailing_commas: true
+    - slash_for_doc_comments: true
