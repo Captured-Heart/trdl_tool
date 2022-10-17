@@ -2,7 +2,7 @@
 // ignore_for_file: lines_longer_than_80_chars, avoid_classes_with_only_static_members
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
-    show defaultTargetPlatform, kIsWeb, TargetPlatform;
+    show TargetPlatform, defaultTargetPlatform, kIsWeb;
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -70,7 +70,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '35344141665',
     projectId: 'trdltool-2021',
     storageBucket: 'trdltool-2021.appspot.com',
-    iosClientId: '35344141665-ah73ihrbdhcdjd857l8s5qg1rsh0qv0a.apps.googleusercontent.com',
+    iosClientId:
+        '35344141665-ah73ihrbdhcdjd857l8s5qg1rsh0qv0a.apps.googleusercontent.com',
     iosBundleId: 'nl.plotsklapps.trdlTool',
   );
 }

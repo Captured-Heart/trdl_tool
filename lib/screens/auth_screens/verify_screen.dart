@@ -6,10 +6,10 @@ class VerifyScreen extends StatefulWidget {
   const VerifyScreen({Key? key}) : super(key: key);
 
   @override
-  _VerifyScreenState createState() => _VerifyScreenState();
+  VerifyScreenState createState() => VerifyScreenState();
 }
 
-class _VerifyScreenState extends State<VerifyScreen> {
+class VerifyScreenState extends State<VerifyScreen> {
   final _auth = FirebaseAuth.instance;
   User? currentUser = FirebaseAuth.instance.currentUser;
   late Timer timer;
@@ -107,10 +107,14 @@ class _VerifyScreenState extends State<VerifyScreen> {
     await currentUser!.reload();
     if (currentUser!.emailVerified) {
       timer.cancel();
-      Navigator.pushReplacementNamed(
-        context,
-        'login_screen',
-      );
+      if (mounted) {
+        Navigator.pushReplacementNamed(
+          context,
+          'login_screen',
+        );
+      } else {
+        return;
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
+/// Defining Colorscheme for themeColorProvider
 const ColorScheme outerSpaceColorsLight = ColorScheme(
   brightness: Brightness.light,
   primary: Color(0xff1f3339),
@@ -31,6 +32,7 @@ const ColorScheme outerSpaceColorsLight = ColorScheme(
   inversePrimary: Color(0xffa2b1b5),
 );
 
+/// Defining Colorscheme for themeColorProvider
 const ColorScheme outerSpaceColorsDark = ColorScheme(
   brightness: Brightness.dark,
   primary: Color(0xff486a71),

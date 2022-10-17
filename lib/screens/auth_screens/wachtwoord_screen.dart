@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class Wachtwoord extends StatefulWidget {
   const Wachtwoord({Key? key}) : super(key: key);
@@ -28,7 +28,7 @@ class _WachtwoordState extends State<Wachtwoord> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Widget>[
               const Padding(
                 padding: EdgeInsets.only(
                   top: 16.0,
@@ -47,9 +47,9 @@ class _WachtwoordState extends State<Wachtwoord> {
                     padding: const EdgeInsets.all(24.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: <Widget>[
                         Row(
-                          children: const [
+                          children: const <Expanded>[
                             Expanded(
                               child: TitleText(
                                 title: 'Reset Wachtwoord',
@@ -59,7 +59,7 @@ class _WachtwoordState extends State<Wachtwoord> {
                         ),
                         const SizedBoxH(),
                         Row(
-                          children: [
+                          children: <Expanded>[
                             Expanded(
                               /*EMAIL TEXTFIELD*/
                               child: TextField(
@@ -80,7 +80,7 @@ class _WachtwoordState extends State<Wachtwoord> {
                         const SizedBoxH(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
+                          children: <ElevatedButton>[
                             ElevatedButton(
                               onPressed: () async {
                                 try {
@@ -88,13 +88,17 @@ class _WachtwoordState extends State<Wachtwoord> {
                                   await AuthService().resetPassword(
                                     email: _emailCtrl.text,
                                   );
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    snackBarWachtwoordEmailVerzonden,
-                                  );
-                                  Navigator.pushNamed(
-                                    context,
-                                    'login_screen',
-                                  );
+                                  if (mounted) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      snackBarWachtwoordEmailVerzonden,
+                                    );
+                                    await Navigator.pushNamed(
+                                      context,
+                                      'login_screen',
+                                    );
+                                  } else {
+                                    return;
+                                  }
                                 }
                                 /*CATCH ALL OTHER ERRORS*/
                                 catch (errorMessage) {
@@ -118,11 +122,14 @@ class _WachtwoordState extends State<Wachtwoord> {
               const SizedBoxH(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: <TextButton>[
                   TextButton(
-                    onPressed: () {
+                    onPressed: () async {
                       /*BACK TO LOGIN_SCREEN*/
-                      Navigator.pushReplacementNamed(context, 'login_screen');
+                      await Navigator.pushReplacementNamed(
+                        context,
+                        'login_screen',
+                      );
                     },
                     child: const Text(
                       'Terug naar login',

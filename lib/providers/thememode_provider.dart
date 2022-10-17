@@ -1,5 +1,7 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
-final themeModeProvider = StateProvider<ThemeMode>((ref) {
+final StateProvider<ThemeMode> themeModeProvider =
+    // ignore: always_specify_types
+    StateProvider<ThemeMode>((ref) {
   return ThemeMode.system;
 });

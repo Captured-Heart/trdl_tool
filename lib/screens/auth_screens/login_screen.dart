@@ -112,16 +112,25 @@ class _LoginState extends State<Login> {
                                   );
                                   /*IF USER CLICKED VERIFICATION EMAIL*/
                                   if (_auth.currentUser!.emailVerified) {
-                                    Navigator.pushReplacementNamed(
-                                      context,
-                                      'home_screen',
-                                    );
+                                    if (mounted) {
+                                      Navigator.pushReplacementNamed(
+                                        context,
+                                        'home_screen',
+                                      );
+                                    } else {
+                                      return;
+                                    }
                                   }
                                   /*IF USER DID NOT CLICK VERIFICATION EMAIL*/
                                   else if (!_auth.currentUser!.emailVerified) {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      snackBarLoginEmailVerificatie,
-                                    );
+                                    if (mounted) {
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(
+                                        snackBarLoginEmailVerificatie,
+                                      );
+                                    } else {
+                                      return;
+                                    }
                                   }
                                   /*ALL OTHER ERROR SITUATIONS*/
                                 } catch (e) {

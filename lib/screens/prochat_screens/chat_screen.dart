@@ -8,10 +8,10 @@ class ChatScreen extends StatefulWidget {
   static const String id = 'chat_screen';
 
   @override
-  _ChatScreenState createState() => _ChatScreenState();
+  ChatScreenState createState() => ChatScreenState();
 }
 
-class _ChatScreenState extends State<ChatScreen> {
+class ChatScreenState extends State<ChatScreen> {
   final messageTextController = TextEditingController();
   final _auth = FirebaseAuth.instance;
   late String messageText;
@@ -29,7 +29,8 @@ class _ChatScreenState extends State<ChatScreen> {
         loggedInUser = user;
       }
     } catch (e) {
-      print('Er is iets misgegaan');
+      // TODO: Controleer of deze snackbar juist toont
+      ScaffoldMessenger.of(context).showSnackBar(snackBarLoginErIsIetsMis);
     }
   }
 

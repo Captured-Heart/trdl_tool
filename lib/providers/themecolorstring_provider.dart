@@ -1,11 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
-final themeColorStringProvider =
+final StateNotifierProvider<ThemeColorString, String> themeColorStringProvider =
+    // ignore: always_specify_types
     StateNotifierProvider<ThemeColorString, String>((ref) {
   return ThemeColorString();
 });
 
 class ThemeColorString extends StateNotifier<String> {
+  // ignore: public_member_api_docs
   ThemeColorString() : super('Outer Space');
 
   void setThemeColorStringOuterSpace() {

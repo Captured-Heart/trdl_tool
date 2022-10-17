@@ -1,6 +1,7 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
-final themeModeStringProvider =
+final StateNotifierProvider<ThemeModeString, String> themeModeStringProvider =
+    // ignore: always_specify_types
     StateNotifierProvider<ThemeModeString, String>((ref) {
   return ThemeModeString();
 });
