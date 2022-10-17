@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import './all_imports.dart';
 
 Future<void> main() async {
   //Make sure everything is in place, before running the app
@@ -19,8 +19,9 @@ Future<void> main() async {
   );
 }
 
-//ConsumerWidget makes providers reachable
+/// ConsumerWidget makes providers reachable
 class MainEntry extends ConsumerWidget {
+  /// MainEntry constructor
   const MainEntry({Key? key}) : super(key: key);
 
   @override

@@ -131,10 +131,14 @@ class _RegisterState extends State<Register> {
                                     email: _emailCtrl.text,
                                     password: _password1Ctrl.text,
                                   );
-                                  Navigator.pushReplacementNamed(
-                                    context,
-                                    'verify_screen',
-                                  );
+                                  if (mounted) {
+                                    Navigator.pushReplacementNamed(
+                                      context,
+                                      'verify_screen',
+                                    );
+                                  } else {
+                                    return;
+                                  }
                                 }
                                 /*CHECK IF EMAIL IS EMPTY OR NOT PRORAIL*/
                                 else if (_emailCtrl.text.isEmpty ||
@@ -162,10 +166,14 @@ class _RegisterState extends State<Register> {
                                       email: _emailCtrl.text,
                                       password: _password1Ctrl.text,
                                     );
-                                    Navigator.pushReplacementNamed(
-                                      context,
-                                      'verify_screen',
-                                    );
+                                    if (mounted) {
+                                      Navigator.pushReplacementNamed(
+                                        context,
+                                        'verify_screen',
+                                      );
+                                    } else {
+                                      return;
+                                    }
                                   }
                                   /*CATCH ALL OTHER ERRORS*/
                                   catch (errorMessage) {

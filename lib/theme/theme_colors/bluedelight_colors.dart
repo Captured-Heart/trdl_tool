@@ -1,5 +1,6 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
+/// Defining Colorscheme for themeColorProvider
 const ColorScheme blueDelightColorsLight = ColorScheme(
   brightness: Brightness.light,
   primary: Color(0xff1565c0),
@@ -31,6 +32,7 @@ const ColorScheme blueDelightColorsLight = ColorScheme(
   inversePrimary: Color(0xffaedfff),
 );
 
+/// Defining Colorscheme for themeColorProvider
 const ColorScheme blueDelightColorsDark = ColorScheme(
   brightness: Brightness.dark,
   primary: Color(0xff90caf9),

@@ -1,6 +1,7 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
-final themeLightProvider = StateProvider<ThemeData>(
+final StateProvider<ThemeData> themeLightProvider = StateProvider<ThemeData>(
+  // ignore: always_specify_types
   (ref) {
     return FlexThemeData.light(
       scheme: ref.watch(themeColorProvider),
@@ -21,7 +22,9 @@ final themeLightProvider = StateProvider<ThemeData>(
   },
 );
 
-final themeDarkProvider = StateProvider<ThemeData>((ref) {
+final StateProvider<ThemeData> themeDarkProvider =
+    // ignore: always_specify_types
+    StateProvider<ThemeData>((ref) {
   return FlexThemeData.dark(
     scheme: ref.watch(themeColorProvider),
     surfaceMode: FlexSurfaceMode.highScaffoldLowSurface,

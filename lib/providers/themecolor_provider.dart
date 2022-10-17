@@ -1,6 +1,7 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
-final themeColorProvider =
+final StateNotifierProvider<ThemeColorState, FlexScheme> themeColorProvider =
+    // ignore: always_specify_types
     StateNotifierProvider<ThemeColorState, FlexScheme>((ref) {
   return ThemeColorState();
 });

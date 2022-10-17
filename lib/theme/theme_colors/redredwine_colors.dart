@@ -1,5 +1,6 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
+/// Defining Colorscheme for themeColorProvider
 const ColorScheme redRedWineColorsLight = ColorScheme(
   brightness: Brightness.light,
   primary: Color(0xff9b1b30),
@@ -31,6 +32,7 @@ const ColorScheme redRedWineColorsLight = ColorScheme(
   inversePrimary: Color(0xffffb4c1),
 );
 
+/// Defining Colorscheme for themeColorProvider
 const ColorScheme redRedWineColorsDark = ColorScheme(
   brightness: Brightness.dark,
   primary: Color(0xffe4677c),

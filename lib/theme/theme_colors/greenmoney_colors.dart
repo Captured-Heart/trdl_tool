@@ -1,5 +1,6 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
+/// Defining Colorscheme for themeColorProvider
 const ColorScheme greenMoneyColorsLight = ColorScheme(
   brightness: Brightness.light,
   primary: Color(0xff264e36), //Icon foreground
@@ -31,6 +32,7 @@ const ColorScheme greenMoneyColorsLight = ColorScheme(
   inversePrimary: Color(0xffabc8b7),
 );
 
+/// Defining Colorscheme for themeColorProvider
 const ColorScheme greenMoneyColorsDark = ColorScheme(
   brightness: Brightness.dark,
   primary: Color(0xff7ab893),

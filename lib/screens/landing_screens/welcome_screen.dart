@@ -1,20 +1,20 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
   @override
-  _WelcomeScreen createState() => _WelcomeScreen();
+  WelcomeScreenState createState() => WelcomeScreenState();
 }
 
-class _WelcomeScreen extends State<WelcomeScreen> {
+class WelcomeScreenState extends State<WelcomeScreen> {
   bool fabLabelOverslaan = true;
 
   List<Widget> slides = items
       .map(
-        (item) => Container(
+        (Map<String, String> item) => Container(
           padding: const EdgeInsets.symmetric(horizontal: 18.0),
           child: Column(
-            children: <Widget>[
+            children: <Flexible>[
               Flexible(
                 flex: 1,
                 fit: FlexFit.tight,
@@ -64,7 +64,7 @@ class _WelcomeScreen extends State<WelcomeScreen> {
 
   List<Widget> indicator() => List<Widget>.generate(
         slides.length,
-        (index) => Container(
+        (int index) => Container(
           margin: const EdgeInsets.symmetric(horizontal: 3.0),
           height: 12.0,
           width: 12.0,
@@ -79,16 +79,16 @@ class _WelcomeScreen extends State<WelcomeScreen> {
       );
 
   double currentPage = 0.0;
-  final _pageViewController = PageController();
+  final PageController _pageViewController = PageController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.miniEndFloat,
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
+        onPressed: () async {
           /*SKIP AND GO TO WELCOME_SCREEN*/
-          Navigator.pushNamed(
+          await Navigator.pushNamed(
             context,
             'login_screen',
           );

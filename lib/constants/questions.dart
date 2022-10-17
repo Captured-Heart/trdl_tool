@@ -5,9 +5,9 @@ class Question {
 }
 
 class QuestionBank {
-  List<Question> questionBank = [
+  List<Question> questionBank = <Question>[
     Question(
-      'Je hebt 1 minuut om zoveel mogelijk stellingen met \'waar\' of \'niet waar\' te beantwoorden. Ieder goed antwoord is +1 punt, maar ieder fout antwoord -2 punten! Zit je er klaar voor?',
+      "Je hebt 1 minuut om zoveel mogelijk stellingen met 'waar' of 'niet waar te beantwoorden. Ieder goed antwoord is +1 punt, maar ieder fout antwoord -2 punten! Zit je er klaar voor?",
       true,
     ),
     Question(
@@ -58,7 +58,7 @@ class QuestionBank {
       'Bij stilleggen treindienst laat je reizigerstreinen in het getroffen gebied stoppen langs het eerstvolgende perron.',
       true,
     ),
-    Question('\'Begrepen\' is een correcte dienstuitdrukking.', false),
+    Question("'Begrepen' is een correcte dienstuitdrukking.", false),
     Question(
       'Het verdelingsbesluit bij een infrabeperking wordt genomen door de VLC.',
       false,

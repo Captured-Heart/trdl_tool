@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 showVersionUpdatePopup(context) {
   return showDialog(
@@ -21,7 +21,8 @@ showVersionUpdatePopup(context) {
                   date: '2022-10-??: 0.3.1',
                 ),
                 ChangesMade(
-                  changes: '- Routes naar apart bestand verplaatst;\n- Bestandspaden verkort;\n- Comments aangepast naar Markdown;',
+                  changes:
+                      '- Routes naar apart bestand verplaatst;\n- Bestandspaden verkort;\n- Comments aangepast naar Markdown;',
                 ),
                 SizedBoxH(),
                 DateChanged(

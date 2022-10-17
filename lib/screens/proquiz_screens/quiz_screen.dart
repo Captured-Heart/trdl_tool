@@ -19,10 +19,10 @@ late Timer timer;
 class ProQuizScreen extends StatefulWidget {
   const ProQuizScreen({Key? key}) : super(key: key);
   @override
-  _ProQuizScreenState createState() => _ProQuizScreenState();
+  ProQuizScreenState createState() => ProQuizScreenState();
 }
 
-class _ProQuizScreenState extends State<ProQuizScreen> {
+class ProQuizScreenState extends State<ProQuizScreen> {
   /*SET TIMER*/
   void startTimer() {
     timer = Timer.periodic(
@@ -222,7 +222,7 @@ class _ProQuizScreenState extends State<ProQuizScreen> {
                         height: 80.0,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.red,
+                            primary: Colors.red,
                           ),
                           onPressed: () {
                             setState(() {

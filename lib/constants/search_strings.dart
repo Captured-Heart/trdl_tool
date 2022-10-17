@@ -1,4 +1,4 @@
-List<String> searchStringsList = [
+List<String> searchStringsList = <String>[
   'ww_uitvoeren_plan',
   'ww_geplande_werkzaamheden',
   'ww_aanvang_werkzaamheden',
