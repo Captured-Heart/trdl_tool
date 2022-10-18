@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class AIBeveiligingMain extends StatelessWidget {
   const AIBeveiligingMain({Key? key}) : super(key: key);
@@ -18,14 +18,14 @@ class AIBeveiligingMain extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Card>[
               /*PROCEDURE CARD*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       TitleText(
                         title: 'Beveiliging',
                       ),
@@ -45,14 +45,14 @@ class AIBeveiligingMain extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: [
+                    children: <Widget>[
                       const TitleText(
                         title: 'Ga snel naar',
                       ),
                       const SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
+                        children: const <Widget>[
                           NavButton(
                             buttontext: 'Werkwijze - Beveiliging',
                             destination: 'ww_beveiliging_main',

@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIAanpassenPlanMain {
   home_screen,
@@ -20,12 +20,12 @@ class AIAanpassenPlanMain extends StatelessWidget {
           PopupMenuButton<WhereToGoFromAIAanpassenPlanMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIAanpassenPlanMain result) {
+            onSelected: (WhereToGoFromAIAanpassenPlanMain result) async {
               if (result == WhereToGoFromAIAanpassenPlanMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIAanpassenPlanMain.ww_aanpassen_plan_main) {
-                Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
+                await Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +53,14 @@ class AIAanpassenPlanMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*TITLE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Aanpassen Plan',
                     ),
@@ -74,7 +74,7 @@ class AIAanpassenPlanMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
@@ -119,7 +119,7 @@ class AIAanpassenPlanMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     InsertImage(
                       image:

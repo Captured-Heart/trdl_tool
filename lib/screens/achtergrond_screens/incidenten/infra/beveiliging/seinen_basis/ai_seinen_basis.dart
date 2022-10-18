@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class AISeinenBasis extends StatelessWidget {
   const AISeinenBasis({Key? key}) : super(key: key);
@@ -17,14 +17,14 @@ class AISeinenBasis extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Seinstelsel',
                     ),
@@ -122,7 +122,7 @@ class AISeinenBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
@@ -154,7 +154,7 @@ class AISeinenBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <InsertImage>[
                     InsertImage(
                         image:
                             'assets/images/achtergrond_info/incidenten/ai_seinen_basis1.png'),

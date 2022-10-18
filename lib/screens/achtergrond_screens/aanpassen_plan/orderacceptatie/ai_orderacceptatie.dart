@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIOrderacceptatie {
   home_screen,
@@ -20,14 +20,14 @@ class AIOrderacceptatie extends StatelessWidget {
           PopupMenuButton<WhereToGoFromAIOrderacceptatie>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIOrderacceptatie result) {
+            onSelected: (WhereToGoFromAIOrderacceptatie result) async {
               if (result == WhereToGoFromAIOrderacceptatie.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIOrderacceptatie.ww_orderacceptatie) {
-                Navigator.pushNamed(context, 'ww_orderacceptatie');
+                await Navigator.pushNamed(context, 'ww_orderacceptatie');
               } else {
-                Navigator.pop(context);
+                await Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
@@ -53,14 +53,14 @@ class AIOrderacceptatie extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Orderacceptatie',
                     ),
@@ -102,7 +102,7 @@ class AIOrderacceptatie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Lokale orderaanvraag',
                     ),
@@ -140,7 +140,7 @@ class AIOrderacceptatie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Afhandelen LOA reizigersvervoer',
                     ),
@@ -160,7 +160,7 @@ class AIOrderacceptatie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Afhandelen LOA goederenvervoer',
                     ),
@@ -186,7 +186,7 @@ class AIOrderacceptatie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'LOA Online',
                     ),
@@ -217,7 +217,7 @@ class AIOrderacceptatie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Bovenlokale Orderaanvragen',
                     ),
@@ -249,7 +249,7 @@ class AIOrderacceptatie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Plannen versus besturen',
                     ),
@@ -280,7 +280,7 @@ class AIOrderacceptatie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Besturings- en/of planningsnormen',
                     ),

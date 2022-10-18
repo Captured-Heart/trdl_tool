@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIIncidentenBasis {
   home_screen,
@@ -24,24 +24,24 @@ class AIIncidentenBasis extends StatelessWidget {
           PopupMenuButton<WhereToGoFromAIIncidentenBasis>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIIncidentenBasis result) {
+            onSelected: (WhereToGoFromAIIncidentenBasis result) async {
               if (result == WhereToGoFromAIIncidentenBasis.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIIncidentenBasis.ww_incidenten_main) {
-                Navigator.pushNamed(context, 'ww_incidenten_main');
+                await Navigator.pushNamed(context, 'ww_incidenten_main');
               } else if (result ==
                   WhereToGoFromAIIncidentenBasis.ai_infra_main) {
-                Navigator.pushNamed(context, 'ai_infra_main');
+                await Navigator.pushNamed(context, 'ai_infra_main');
               } else if (result ==
                   WhereToGoFromAIIncidentenBasis.ai_mensen_dieren_voorwerpen) {
-                Navigator.pushNamed(context, 'ai_mensen_dieren_voorwerpen');
+                await Navigator.pushNamed(context, 'ai_mensen_dieren_voorwerpen');
               } else if (result ==
                   WhereToGoFromAIIncidentenBasis.ai_materieel_main) {
-                Navigator.pushNamed(context, 'ai_materieel_main');
+                await Navigator.pushNamed(context, 'ai_materieel_main');
               } else if (result ==
                   WhereToGoFromAIIncidentenBasis.ai_overige_incidenten) {
-                Navigator.pushNamed(context, 'ai_overige_incidenten');
+                await Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -98,14 +98,14 @@ class AIIncidentenBasis extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Incidenten - basisinformatie',
                     ),
@@ -130,7 +130,7 @@ class AIIncidentenBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(title: 'Alarmeren'),
                     SizedBoxH(),
                     BodyText(
@@ -190,7 +190,7 @@ class AIIncidentenBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Alarmoproep GSM-R',
                     ),
@@ -318,7 +318,7 @@ class AIIncidentenBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Meer info',
                     ),
@@ -353,7 +353,7 @@ class AIIncidentenBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(subtitle: 'Herroepen van een sein'),
                     SizedBoxH(),
                     BoldText(indents: 0, boldtext: 'Gevaar'),
@@ -398,7 +398,7 @@ class AIIncidentenBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(subtitle: 'Alarmeer- en informeerformulier'),
                     SizedBoxH(),
                     BodyText(
@@ -420,7 +420,7 @@ class AIIncidentenBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(subtitle: 'Alarmeer- en informeerformulier'),
                     SizedBoxH(),
                     BodyText(
@@ -447,7 +447,7 @@ class AIIncidentenBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(subtitle: 'Aanwijzingen'),
                     SizedBoxH(),
                     BodyText(
@@ -557,7 +557,7 @@ class AIIncidentenBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(subtitle: 'Spoorweb'),
                     SizedBoxH(),
                     BodyText(
@@ -578,7 +578,7 @@ class AIIncidentenBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(title: 'Treinincidentscenario'),
                     SizedBoxH(),
                     BodyText(

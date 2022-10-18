@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIStappenplanVersperringen {
   home_screen,
@@ -21,20 +21,20 @@ class AIStappenplanVersperringen extends StatelessWidget {
           PopupMenuButton<WhereToGoFromAIStappenplanVersperringen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIStappenplanVersperringen result) {
+            onSelected: (WhereToGoFromAIStappenplanVersperringen result) async {
               if (result ==
                   WhereToGoFromAIStappenplanVersperringen.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIStappenplanVersperringen
                       .ww_stappenplan_versperringen) {
-                Navigator.pushNamed(context, 'ww_stappenplan_versperringen');
+                await Navigator.pushNamed(context, 'ww_stappenplan_versperringen');
               } else if (result ==
                   WhereToGoFromAIStappenplanVersperringen
                       .ai_aanpassen_plan_main) {
-                Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
+                await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
               } else {
-                Navigator.pop(context);
+                await Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
@@ -70,7 +70,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Card>[
               /*CARD #1*/
               Card(
                 elevation: kCardElevation,
@@ -114,7 +114,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Verdelingsbesluit',
                       ),
@@ -152,7 +152,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Rol van de TRDL',
                       ),
@@ -172,7 +172,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Werkwijze bij versperring',
                       ),

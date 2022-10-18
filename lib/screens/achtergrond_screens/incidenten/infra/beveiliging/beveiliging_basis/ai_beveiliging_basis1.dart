@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class AIBeveiligingBasis1 extends StatelessWidget {
   const AIBeveiligingBasis1({Key? key}) : super(key: key);
@@ -17,14 +17,14 @@ class AIBeveiligingBasis1 extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Het ruststroomprincipe',
                     ),
@@ -120,7 +120,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Emplacementsbeveiliging',
                     ),
@@ -168,7 +168,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
@@ -193,7 +193,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Cascadeschakeling en Two Track Pick Up',
                     ),
@@ -295,7 +295,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
