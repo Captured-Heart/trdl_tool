@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -8,7 +8,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  final _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
 
   late final TextEditingController _emailCtrl;
   late final TextEditingController _passwordCtrl;
@@ -33,7 +33,7 @@ class _LoginState extends State<Login> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Widget>[
               const Padding(
                 padding: EdgeInsets.only(
                   top: 16.0,
@@ -52,9 +52,9 @@ class _LoginState extends State<Login> {
                     padding: const EdgeInsets.all(24.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: <Widget>[
                         Row(
-                          children: const [
+                          children: const <Expanded>[
                             Expanded(
                               child: TitleText(title: 'Login'),
                             ),
@@ -62,7 +62,7 @@ class _LoginState extends State<Login> {
                         ),
                         const SizedBoxH(),
                         Row(
-                          children: [
+                          children: <Expanded>[
                             Expanded(
                               /*EMAIL TEXTFIELD*/
                               child: TextField(
@@ -81,7 +81,7 @@ class _LoginState extends State<Login> {
                         ),
                         const SizedBoxH(),
                         Row(
-                          children: [
+                          children: <Expanded>[
                             Expanded(
                               /*PASSWORD TEXTFIELD*/
                               child: TextField(
@@ -101,7 +101,7 @@ class _LoginState extends State<Login> {
                         const SizedBoxH(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
+                          children: <ElevatedButton>[
                             ElevatedButton(
                               onPressed: () async {
                                 try {
@@ -113,7 +113,7 @@ class _LoginState extends State<Login> {
                                   /*IF USER CLICKED VERIFICATION EMAIL*/
                                   if (_auth.currentUser!.emailVerified) {
                                     if (mounted) {
-                                      Navigator.pushReplacementNamed(
+                                      await Navigator.pushReplacementNamed(
                                         context,
                                         'home_screen',
                                       );
@@ -154,11 +154,11 @@ class _LoginState extends State<Login> {
               const SizedBoxH(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: <TextButton>[
                   TextButton(
-                    onPressed: () {
+                    onPressed: () async {
                       /*GO TO REGISTER_SCREEN*/
-                      Navigator.pushNamed(
+                      await Navigator.pushNamed(
                         context,
                         'register_screen',
                       );
@@ -174,11 +174,11 @@ class _LoginState extends State<Login> {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: <TextButton>[
                   TextButton(
-                    onPressed: () {
+                    onPressed: () async {
                       /*GO TO WACHTWOORD_SCREEN*/
-                      Navigator.pushNamed(
+                      await Navigator.pushNamed(
                         context,
                         'wachtwoord_screen',
                       );

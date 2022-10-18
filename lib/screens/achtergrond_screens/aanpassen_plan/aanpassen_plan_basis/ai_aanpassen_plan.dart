@@ -1,11 +1,17 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIAanpassenPlan {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_aanpassen_plan_main,
+  // ignore: constant_identifier_names
   ai_orderacceptatie,
+  // ignore: constant_identifier_names
   ai_vertragingen,
+  // ignore: constant_identifier_names
   ai_ongepland_werk_main,
+  // ignore: constant_identifier_names
   ai_stappenplan_versperringen,
 }
 
@@ -20,28 +26,31 @@ class AIAanpassenPlan extends StatelessWidget {
         title: const AppBarText(
           title: 'Aanpassen plan - Basis',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIAanpassenPlan>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIAanpassenPlan result) {
+            onSelected: (WhereToGoFromAIAanpassenPlan result) async {
               if (result == WhereToGoFromAIAanpassenPlan.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIAanpassenPlan.ww_aanpassen_plan_main) {
-                Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
+                await Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
               } else if (result ==
                   WhereToGoFromAIAanpassenPlan.ai_orderacceptatie) {
-                Navigator.pushNamed(context, 'ai_orderacceptatie');
+                await Navigator.pushNamed(context, 'ai_orderacceptatie');
               } else if (result ==
                   WhereToGoFromAIAanpassenPlan.ai_vertragingen) {
-                Navigator.pushNamed(context, 'ai_vertragingen');
+                await Navigator.pushNamed(context, 'ai_vertragingen');
               } else if (result ==
                   WhereToGoFromAIAanpassenPlan.ai_ongepland_werk_main) {
-                Navigator.pushNamed(context, 'ai_ongepland_werk_main');
+                await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
               } else if (result ==
                   WhereToGoFromAIAanpassenPlan.ai_stappenplan_versperringen) {
-                Navigator.pushNamed(context, 'ai_stappenplan_versperringen');
+                await Navigator.pushNamed(
+                  context,
+                  'ai_stappenplan_versperringen',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -98,14 +107,14 @@ class AIAanpassenPlan extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Aanpassen plan - basisinformatie',
                     ),
@@ -137,7 +146,7 @@ class AIAanpassenPlan extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Opdracht van een bevoegd functionaris',
                     ),
@@ -188,7 +197,7 @@ class AIAanpassenPlan extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Plannen, veilig en op welke manieren',
                     ),
@@ -217,7 +226,7 @@ class AIAanpassenPlan extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Voor het plannen van goederentreinen in de zogeheten \'ad-hoc fase\' zijn in de dienstregeling lege paden (BUP-paden) opgenomen. Dit zijn vooraf vastgelegde paden in de bestaande dienstregeling waarop treinen ingelegd kunnen worden. In feite een pad in de dienstregeling waar men nog een treinnummer aan moet koppelen. Door hier gebruik van te maken plannen verkeersleiders nieuwe treinen dus al voor een groot deel conflictvrij.\n\nDit principe kan ook toegepast worden voor het plannen van conflictvrije rangeerbewegingen op het emplacement door de TRDL. Zijn deze standaard rangeerrijwegen eenmaal bepaald, dan kunnen deze worden toegepast bij de afhandeling van lokale orders.',
+                          "Voor het plannen van goederentreinen in de zogeheten 'ad-hoc fase' zijn in de dienstregeling lege paden (BUP-paden) opgenomen. Dit zijn vooraf vastgelegde paden in de bestaande dienstregeling waarop treinen ingelegd kunnen worden. In feite een pad in de dienstregeling waar men nog een treinnummer aan moet koppelen. Door hier gebruik van te maken plannen verkeersleiders nieuwe treinen dus al voor een groot deel conflictvrij.\n\nDit principe kan ook toegepast worden voor het plannen van conflictvrije rangeerbewegingen op het emplacement door de TRDL. Zijn deze standaard rangeerrijwegen eenmaal bepaald, dan kunnen deze worden toegepast bij de afhandeling van lokale orders.",
                     ),
                   ],
                 ),
@@ -229,7 +238,7 @@ class AIAanpassenPlan extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Plannen van treinen op netwerkniveau',
                     ),
@@ -241,7 +250,7 @@ class AIAanpassenPlan extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Voor het plannen van goederentreinen maken verkeersleiders gebruik van lege patroonpaden (BUP-paden) in de dienstregeling. Deze paden zijn conflictvrij en exclusief gereserveerd voor orders van goederenvervoerders in de fase van Verkeersleiding. Ook wordt verkeersleiders de mogelijkheid geboden een bepaald BUP-pad te kopiëren en dit te verleggen naar een ander tijdstip van de dag. De bedoeling is om straks alle goederentreinen in zulke vooraf gedefinieerde paden te plannen.\n\nReizigerstreinen en ledig-materieelritten worden voorlopig nog in de \'witte ruimte\' (niet vooraf getoetste paden) gepland.',
+                          "Voor het plannen van goederentreinen maken verkeersleiders gebruik van lege patroonpaden (BUP-paden) in de dienstregeling. Deze paden zijn conflictvrij en exclusief gereserveerd voor orders van goederenvervoerders in de fase van Verkeersleiding. Ook wordt verkeersleiders de mogelijkheid geboden een bepaald BUP-pad te kopiëren en dit te verleggen naar een ander tijdstip van de dag. De bedoeling is om straks alle goederentreinen in zulke vooraf gedefinieerde paden te plannen.\n\nReizigerstreinen en ledig-materieelritten worden voorlopig nog in de 'witte ruimte' (niet vooraf getoetste paden) gepland.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -273,7 +282,7 @@ class AIAanpassenPlan extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle:
                           'Plannen van rangeerbewegingen op het emplacement',
@@ -287,7 +296,7 @@ class AIAanpassenPlan extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Verkeersleiding wil ook graag zoveel mogelijk rangeerbewegingen plannen in vooraf gedefinieerde rangeerrijwegen. Om dit te bewerkstelligen heeft men per emplacement een zogenaamde \'rijwegencatalogus\' gemaakt. Hierin staan voor elke dag afzonderlijk voor alle 24 uren de beschikbare rangeerrijwegen aangegeven van spoor naar spoor. Al deze rijwegen zijn getoetst conform de plannormen. Wil een vervoerder een rangeerbeweging uitvoeren op het emplacement, dan zoekt deze een geschikte standaard rijweg uit de catalogus en vraagt deze via een LOA aan bij de TRDL. De TRDL toetst op zijn beurt of de aangevraagde rijweg beschikbaar is. Is dit het geval dan honoreert hij de aanvraag en verwerkt deze in het plan\n\nOmdat het niet handig is om rijwegen aan te vragen uit een papieren catalogus heeft men de volgende hulpmiddelen ontwikkeld:',
+                          "Verkeersleiding wil ook graag zoveel mogelijk rangeerbewegingen plannen in vooraf gedefinieerde rangeerrijwegen. Om dit te bewerkstelligen heeft men per emplacement een zogenaamde 'rijwegencatalogus' gemaakt. Hierin staan voor elke dag afzonderlijk voor alle 24 uren de beschikbare rangeerrijwegen aangegeven van spoor naar spoor. Al deze rijwegen zijn getoetst conform de plannormen. Wil een vervoerder een rangeerbeweging uitvoeren op het emplacement, dan zoekt deze een geschikte standaard rijweg uit de catalogus en vraagt deze via een LOA aan bij de TRDL. De TRDL toetst op zijn beurt of de aangevraagde rijweg beschikbaar is. Is dit het geval dan honoreert hij de aanvraag en verwerkt deze in het plan\n\nOmdat het niet handig is om rijwegen aan te vragen uit een papieren catalogus heeft men de volgende hulpmiddelen ontwikkeld:",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -303,12 +312,12 @@ class AIAanpassenPlan extends StatelessWidget {
                     BoldText(
                       indents: 0,
                       boldtext:
-                          '- Plannen in de \'witte ruimte\' met SBG Conflictsignalering',
+                          "- Plannen in de 'witte ruimte' met SBG Conflictsignalering",
                     ),
                     BodyText(
                       indents: 1,
                       text:
-                          'Niet alle rangeerbewegingen zullen uiteindelijk kunnen worden gepland in vooraf gedefinieerde rangeerrijwegen. Met name de unieke of incidentele rangeerrijwegen zullen in de \'witte ruimte\' van het plan gepland blijven worden. Om de TRDL in staat te stellen ook deze rijwegen volgens de plannormen te plannen wordt SBG++ voorzien van conflictsignalering. Zo kan de TRDL concept rangeerrijwegen aanmaken en deze laten toetsen op mogelijke conflicten.',
+                          "Niet alle rangeerbewegingen zullen uiteindelijk kunnen worden gepland in vooraf gedefinieerde rangeerrijwegen. Met name de unieke of incidentele rangeerrijwegen zullen in de 'witte ruimte' van het plan gepland blijven worden. Om de TRDL in staat te stellen ook deze rijwegen volgens de plannormen te plannen wordt SBG++ voorzien van conflictsignalering. Zo kan de TRDL concept rangeerrijwegen aanmaken en deze laten toetsen op mogelijke conflicten.",
                     ),
                   ],
                 ),
@@ -320,7 +329,7 @@ class AIAanpassenPlan extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Bijsturings- en/of planningsnormen',
                     ),
@@ -414,7 +423,7 @@ class AIAanpassenPlan extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const SubTitleText(
                       subtitle: 'Corridors',
                     ),
@@ -422,7 +431,7 @@ class AIAanpassenPlan extends StatelessWidget {
                     const BodyText(
                       indents: 0,
                       text:
-                          'Treinen hebben een nummer en rijden in series (treinseries). Alle treinen hebben een uniek nummer dat maar 1 keer per dag mag voorkomen. Serienummers zijn niet uniek. Zij geven aan van waar naar waar een trein rijdt.\n\nWe hebben ook verschillende soorten treinen. Denk aan intercity\'s, stoptreinen, goederentreinen, etc. Ook aan het treinnummer kan je zien tot welke soort een trein behoort.\n\nAlle treinen rijden van een begin- naar een eindstation. Dit noemen we het traject waarop een bepaalde treinserie rijdt. Dit kunnen korte, middellange of lange trajecten zijn. En over het algemeen rijden intercity\'s over langere trajecten dan bijvoorbeeld stoptreinen.\n\nIn Nederland hebben we aantal intercity\'s die over een relatief lang traject rijden. Ze vormen een rechtstreekse verbinding tussen bijvoorbeeld Noord- en Zuid-Nederland en tussen de Randstad en het Noorden respectievelijk Zuiden van Nederland. Zij rijden over zogenaamde \'corridors\'. Op deze trajecten vindt zogenaamde \'corridorsturing\' plaats.\n\nOmdat corridor treinen over lange afstanden rijden is het noodzakelijk dat deze treinen goed in de gaten gehouden worden. Wanneer er binnen jouw TRDLgebied iets met een dergelijke trein gebeurt zal dat gevolgen (kunnen) hebben voor het verdere traject.\n\nEn omdat deze treinen altijd door het gebied van meerdere posten gaan zal er landelijk naar deze treinen gekeken worden. Vandaar dat de bijsturing van deze treinen ook niet door de DVL maar door de VLC (VerkeersLeider CMBO) wordt gedaan.',
+                          "Treinen hebben een nummer en rijden in series (treinseries). Alle treinen hebben een uniek nummer dat maar 1 keer per dag mag voorkomen. Serienummers zijn niet uniek. Zij geven aan van waar naar waar een trein rijdt.\n\nWe hebben ook verschillende soorten treinen. Denk aan intercity's, stoptreinen, goederentreinen, etc. Ook aan het treinnummer kan je zien tot welke soort een trein behoort.\n\nAlle treinen rijden van een begin- naar een eindstation. Dit noemen we het traject waarop een bepaalde treinserie rijdt. Dit kunnen korte, middellange of lange trajecten zijn. En over het algemeen rijden intercity's over langere trajecten dan bijvoorbeeld stoptreinen.\n\nIn Nederland hebben we aantal intercity's die over een relatief lang traject rijden. Ze vormen een rechtstreekse verbinding tussen bijvoorbeeld Noord- en Zuid-Nederland en tussen de Randstad en het Noorden respectievelijk Zuiden van Nederland. Zij rijden over zogenaamde 'corridors'. Op deze trajecten vindt zogenaamde 'corridorsturing' plaats.\n\nOmdat corridor treinen over lange afstanden rijden is het noodzakelijk dat deze treinen goed in de gaten gehouden worden. Wanneer er binnen jouw TRDLgebied iets met een dergelijke trein gebeurt zal dat gevolgen (kunnen) hebben voor het verdere traject.\n\nEn omdat deze treinen altijd door het gebied van meerdere posten gaan zal er landelijk naar deze treinen gekeken worden. Vandaar dat de bijsturing van deze treinen ook niet door de DVL maar door de VLC (VerkeersLeider CMBO) wordt gedaan.",
                     ),
                     const SizedBoxH(),
                     const BoldText(
@@ -509,114 +518,114 @@ class AIAanpassenPlan extends StatelessWidget {
                       border: TableBorder.all(),
                       defaultVerticalAlignment:
                           TableCellVerticalAlignment.middle,
-                      children: const [
+                      children: const <TableRow>[
                         TableRow(
-                          children: [
+                          children: <TableTextBold>[
                             TableTextBold(text: 'Naam corridor'),
                             TableTextBold(text: 'Van - Naar'),
                             TableTextBold(text: 'Bijzonderheden'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G1'),
                             TableText(text: 'Mvt - Vl grens'),
                             TableText(text: 'via Ehv'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G2'),
                             TableText(text: 'Mvt - Zv grens'),
                             TableText(text: 'via Betuweroute'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G3'),
                             TableText(text: 'Kfh - Odz grens'),
                             TableText(text: 'via Dvd'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G4'),
                             TableText(text: 'Mvt - On'),
                             TableText(text: 'via Dvd'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G5'),
                             TableText(text: 'Kfh - Lutdsm'),
                             TableText(text: ''),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G6'),
                             TableText(text: 'Bvhc - Edn grens'),
                             TableText(text: 'via Ut'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G7'),
                             TableText(text: 'Kfh - Rsd grens/Sloe'),
                             TableText(text: ''),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G8'),
                             TableText(text: 'Bvhc - Kfh'),
                             TableText(text: 'via Hlm - Ledn - Gv - Rtd'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G9'),
                             TableText(text: 'Sloe - Vl grens'),
                             TableText(text: ''),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G10'),
                             TableText(text: 'Vl grens - Lutdsm'),
                             TableText(text: ''),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G11'),
                             TableText(text: 'Awhv - Odz grens'),
                             TableText(text: ''),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G12'),
                             TableText(text: 'Bvhc - Zv grens'),
                             TableText(text: 'via Betuweroute'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G13'),
                             TableText(text: 'Rsd grens - Odz grens'),
                             TableText(text: 'via Ht - Ut - Amf'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G14'),
                             TableText(text: 'Esn - Zvgr'),
                             TableText(text: ''),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G15'),
                             TableText(text: 'Emn - Lutdsm'),
                             TableText(
@@ -626,14 +635,14 @@ class AIAanpassenPlan extends StatelessWidget {
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G16'),
                             TableText(text: 'Vdm - Edng'),
                             TableText(text: ''),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Overige routes'),
                             TableText(
                               text: 'Bh - Vdm / Co - Kfh / Lutdsm - Hz',

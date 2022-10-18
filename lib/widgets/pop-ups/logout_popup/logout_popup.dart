@@ -1,8 +1,8 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
-final _auth = FirebaseAuth.instance;
+final FirebaseAuth _auth = FirebaseAuth.instance;
 
-showLogOutPopup(context) {
+Future<dynamic> showLogOutPopup(BuildContext context) {
   return showDialog(
     context: context,
     builder: (BuildContext context) {

@@ -1,9 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIOngeplandWerkInfra {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_ongepland_werk_infra,
+  // ignore: constant_identifier_names
   ai_infra_ter_beschikking,
+  // ignore: constant_identifier_names
   ai_aanpassen_plan_main,
 }
 
@@ -18,22 +22,22 @@ class AIOngeplandWerkInfra extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIOngeplandWerkInfra>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIOngeplandWerkInfra result) {
+            onSelected: (WhereToGoFromAIOngeplandWerkInfra result) async {
               if (result == WhereToGoFromAIOngeplandWerkInfra.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIOngeplandWerkInfra.ww_ongepland_werk_infra) {
-                Navigator.pushNamed(context, 'ww_ongepland_werk_infra');
+                await Navigator.pushNamed(context, 'ww_ongepland_werk_infra');
               } else if (result ==
                   WhereToGoFromAIOngeplandWerkInfra.ai_infra_ter_beschikking) {
-                Navigator.pushNamed(context, 'ai_infra_ter_beschikking');
+                await Navigator.pushNamed(context, 'ai_infra_ter_beschikking');
               } else if (result ==
                   WhereToGoFromAIOngeplandWerkInfra.ai_aanpassen_plan_main) {
-                Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
+                await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
               } else {
                 Navigator.pop(context);
               }
@@ -78,14 +82,14 @@ class AIOngeplandWerkInfra extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Card>[
               /*CARD #1*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       TitleText(
                         title: 'Ongepland werk aan de infra',
                       ),
@@ -97,7 +101,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Ongeplande werkzaamheden mogen alleen plaatsvinden als gevolg of ter voorkoming van een (dreigend) incident.\n\nOm herstel efficiënt en effectief te organiseren, hebben AM en VL met elkaar de volgende werkafspraak gemaakt:\n\nHerstel moet zo snel mogelijk worden gerealiseerd, maar er moet ook rekening gehouden worden met de logistieke belangen met als doel de klanthinder van VL tot het minimum te beperken.\n\nDit resulteert in het zoeken naar een \'goed\' tijdslot van 25 minuten waarin de aannemer het spoor in kan. In eerste instantie is dit om een goede diagnose te stellen en indien mogelijk de storing direct verhelpen.',
+                            "Ongeplande werkzaamheden mogen alleen plaatsvinden als gevolg of ter voorkoming van een (dreigend) incident.\n\nOm herstel efficiënt en effectief te organiseren, hebben AM en VL met elkaar de volgende werkafspraak gemaakt:\n\nHerstel moet zo snel mogelijk worden gerealiseerd, maar er moet ook rekening gehouden worden met de logistieke belangen met als doel de klanthinder van VL tot het minimum te beperken.\n\nDit resulteert in het zoeken naar een 'goed' tijdslot van 25 minuten waarin de aannemer het spoor in kan. In eerste instantie is dit om een goede diagnose te stellen en indien mogelijk de storing direct verhelpen.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -131,7 +135,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle:
                             'Storingsanalyse en een toets op veilige berijdbaarheid',
@@ -140,7 +144,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Als er sprake is van urgent herstel of een analyse dan wordt de LWB maximaal 1 uur na de melding door jou in de gelegenheid gesteld om de benodigde infracapaciteit te benutten voor analyse en herstel.\n\nVoor het uitvoeren van een analyse betreft het een periode van 25 minuten. Dit is inclusief de tijd die nodig is voor het nemen van veiligheidsmaatregelen.\n\nAls geen urgent herstel hoeft plaats te vinden en je de gestoorde infra wel laat berijden kan ook een analyse op de veilige berijdbaarheid nodig zijn. Dit hoor je van de MKS-BO. Dit valt dan onder \'Urgent met tijdsafspraak\'.\n\nUitkomst van deze analyse kan zijn:',
+                            "Als er sprake is van urgent herstel of een analyse dan wordt de LWB maximaal 1 uur na de melding door jou in de gelegenheid gesteld om de benodigde infracapaciteit te benutten voor analyse en herstel.\n\nVoor het uitvoeren van een analyse betreft het een periode van 25 minuten. Dit is inclusief de tijd die nodig is voor het nemen van veiligheidsmaatregelen.\n\nAls geen urgent herstel hoeft plaats te vinden en je de gestoorde infra wel laat berijden kan ook een analyse op de veilige berijdbaarheid nodig zijn. Dit hoor je van de MKS-BO. Dit valt dan onder 'Urgent met tijdsafspraak'.\n\nUitkomst van deze analyse kan zijn:",
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -158,7 +162,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Reden voor niet urgent herstel',
                       ),
@@ -183,7 +187,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Indien op basis van de analyse of prioritering wordt besloten tot uitstel van storingsherstel met tijdsafspraak, worden afspraken over logistieke impact en het moment van herstel gemaakt d.m.v. afstemming tussen DVL en Planner CMBO. De planner CMBO neemt de verdere uitwerking (BUTA) en systeemaanpassingen voor zijn rekening en de OvD-S bekrachtigt het toedelingsbesluit.\n\nHet herstel mag niet conflicteren met reeds geplande werkzaamheden. Hiermee dient rekening gehouden te worden bij het bepalen van een geschikt tijdstip voor storingsherstel.\n\nVerkeersleiding belegt de afhandeling van de BUTA bij het CMBO. Dit doen we om gestandaardiseerde en eenduidige BUTA\'s te kunnen ontwikkelen. Dit past binnen het 24/7 WBI loket dat door AM op het CMBO is gesitueerd.',
+                            "Indien op basis van de analyse of prioritering wordt besloten tot uitstel van storingsherstel met tijdsafspraak, worden afspraken over logistieke impact en het moment van herstel gemaakt d.m.v. afstemming tussen DVL en Planner CMBO. De planner CMBO neemt de verdere uitwerking (BUTA) en systeemaanpassingen voor zijn rekening en de OvD-S bekrachtigt het toedelingsbesluit.\n\nHet herstel mag niet conflicteren met reeds geplande werkzaamheden. Hiermee dient rekening gehouden te worden bij het bepalen van een geschikt tijdstip voor storingsherstel.\n\nVerkeersleiding belegt de afhandeling van de BUTA bij het CMBO. Dit doen we om gestandaardiseerde en eenduidige BUTA's te kunnen ontwikkelen. Dit past binnen het 24/7 WBI loket dat door AM op het CMBO is gesitueerd.",
                       ),
                     ],
                   ),
@@ -195,7 +199,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle:
                             'Ongeplande werkzaamheden met of zonder WBI/WECO',
@@ -215,7 +219,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            'De storingsWBI\'s zijn vooraf ontworpen \'beveiligde\' werkplekken.  Zo is voor elk wissel een eigen storingsWBI/WECO gemaakt, waarbij ook rekening is gehouden met de aan- en aflooproute naar de werkplek. Dit type storingsWBI is niet bedoeld voor werkzaamheden aan de bovenleiding of inzet (rail)wegvoertuigen!',
+                            "De storingsWBI's zijn vooraf ontworpen 'beveiligde' werkplekken.  Zo is voor elk wissel een eigen storingsWBI/WECO gemaakt, waarbij ook rekening is gehouden met de aan- en aflooproute naar de werkplek. Dit type storingsWBI is niet bedoeld voor werkzaamheden aan de bovenleiding of inzet (rail)wegvoertuigen!",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -226,7 +230,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            'In dit geval wordt op basis van een vastgesteld proces direct een passende storingsWBI gemaakt voor de storing door de medewerker 24/7 werkplekbeveiliging. Uitgangspunten hierbij zijn: er is altijd een WBI en een WOT nodig en soms ook een VTI (werktreinen).\n\nDe (maatwerk) storingsWBI\'s zijn ontwikkeld om een veilige route naar en van de werkplek te garanderen. Daarvoor moet gebruik gemaakt worden van een aan- en afvoerroute van en naar de werkplek die voor de duur van de herstelactiviteiten ongehinderd beschikbaar is.',
+                            "In dit geval wordt op basis van een vastgesteld proces direct een passende storingsWBI gemaakt voor de storing door de medewerker 24/7 werkplekbeveiliging. Uitgangspunten hierbij zijn: er is altijd een WBI en een WOT nodig en soms ook een VTI (werktreinen).\n\nDe (maatwerk) storingsWBI's zijn ontwikkeld om een veilige route naar en van de werkplek te garanderen. Daarvoor moet gebruik gemaakt worden van een aan- en afvoerroute van en naar de werkplek die voor de duur van de herstelactiviteiten ongehinderd beschikbaar is.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -254,7 +258,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Je maakt samen met de LWB het WECO op. Het WECO moet altijd voldoen aan de \'Toetscriteria WBI/WECO\'.\n\nN.B.: Om een veilige route naar en van de werkplek te garanderen kan LWB je extra railinfracapaciteit vragen. Hiervoor mag gebruik gemaakt worden van een door jou en LWB - middels rijweginstelling en door de LWB beveiligd - spoor naar de beschikbaar gestelde railinfracapaciteit.',
+                            "Je maakt samen met de LWB het WECO op. Het WECO moet altijd voldoen aan de 'Toetscriteria WBI/WECO'.\n\nN.B.: Om een veilige route naar en van de werkplek te garanderen kan LWB je extra railinfracapaciteit vragen. Hiervoor mag gebruik gemaakt worden van een door jou en LWB - middels rijweginstelling en door de LWB beveiligd - spoor naar de beschikbaar gestelde railinfracapaciteit.",
                       ),
                     ],
                   ),
@@ -266,7 +270,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle:
                             'Werkzaamheden aan de hand van een BUTA (Buiten Termijn Aanvraag)',
@@ -281,7 +285,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- De aanvraag is akkoord bevonden door Tracémanagement;\n\n- Valt in de categorie \'Noodzaak\' of \'Spoed\'.',
+                            "- De aanvraag is akkoord bevonden door Tracémanagement;\n\n- Valt in de categorie 'Noodzaak' of 'Spoed'.",
                       ),
                       SizedBoxH(),
                       BoldText(

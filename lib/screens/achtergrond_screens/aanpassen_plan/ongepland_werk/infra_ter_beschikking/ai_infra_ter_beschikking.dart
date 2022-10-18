@@ -1,9 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIInfraTerBeschikking {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_ongepland_werk_infra,
+  // ignore: constant_identifier_names
   ai_ongepland_werk_main,
+  // ignore: constant_identifier_names
   ai_ongepland_werk_materieel,
 }
 
@@ -18,22 +22,26 @@ class AIInfraTerBeschikking extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIInfraTerBeschikking>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIInfraTerBeschikking result) {
+            onSelected: (WhereToGoFromAIInfraTerBeschikking result) async {
               if (result == WhereToGoFromAIInfraTerBeschikking.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIInfraTerBeschikking.ww_ongepland_werk_infra) {
-                Navigator.pushNamed(context, 'ww_ongepland_werk_infra');
+                await Navigator.pushNamed(context, 'ww_ongepland_werk_infra');
               } else if (result ==
                   WhereToGoFromAIInfraTerBeschikking.ai_ongepland_werk_main) {
-                Navigator.pushNamed(context, 'ai_ongepland_werk_main');
+                await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
               } else if (result ==
-                  WhereToGoFromAIInfraTerBeschikking.ai_ongepland_werk_materieel) {
-                Navigator.pushNamed(context, 'ai_ongepland_werk_materieel');
+                  WhereToGoFromAIInfraTerBeschikking
+                      .ai_ongepland_werk_materieel) {
+                await Navigator.pushNamed(
+                  context,
+                  'ai_ongepland_werk_materieel',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -64,7 +72,8 @@ class AIInfraTerBeschikking extends StatelessWidget {
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIInfraTerBeschikking>(
-                value: WhereToGoFromAIInfraTerBeschikking.ai_ongepland_werk_materieel,
+                value: WhereToGoFromAIInfraTerBeschikking
+                    .ai_ongepland_werk_materieel,
                 child: MenuItemContent(
                   icon: Icons.menu_book,
                   text: 'AI Ongepland Werk - Materieel',
@@ -72,19 +81,19 @@ class AIInfraTerBeschikking extends StatelessWidget {
               ),
             ],
           ),
-          HomeButton(),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Infracapaciteit ter beschikking stellen',
                     ),
@@ -104,7 +113,7 @@ class AIInfraTerBeschikking extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Creëren van een veilige werkplek',
                     ),

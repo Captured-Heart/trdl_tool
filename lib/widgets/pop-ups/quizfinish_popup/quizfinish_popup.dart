@@ -1,6 +1,6 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
-finishQuizPopup(context) {
+Future<dynamic> finishQuizPopup(BuildContext context) {
   return showDialog(
     context: context,
     builder: (BuildContext context) {

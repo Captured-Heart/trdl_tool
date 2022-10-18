@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class VerifyScreen extends StatefulWidget {
   const VerifyScreen({Key? key}) : super(key: key);
@@ -10,22 +10,24 @@ class VerifyScreen extends StatefulWidget {
 }
 
 class VerifyScreenState extends State<VerifyScreen> {
-  final _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   User? currentUser = FirebaseAuth.instance.currentUser;
   late Timer timer;
 
   @override
   void initState() {
-    _waitForEmailVerification();
+    Future<void>.delayed(Duration.zero, () async {
+      await _waitForEmailVerification();
+    });
     super.initState();
   }
 
-  _waitForEmailVerification() async {
+  Future<void> _waitForEmailVerification() async {
     if (currentUser != null && !currentUser!.emailVerified) {
       await currentUser!.sendEmailVerification();
     }
 
-    timer = Timer.periodic(const Duration(seconds: 5), (timer) {
+    timer = Timer.periodic(const Duration(seconds: 5), (Timer timer) {
       checkEmailVerified();
     });
   }
@@ -42,7 +44,7 @@ class VerifyScreenState extends State<VerifyScreen> {
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: <Widget>[
             const Padding(
               padding: EdgeInsets.only(
                 top: 16.0,
@@ -103,12 +105,12 @@ class VerifyScreenState extends State<VerifyScreen> {
   }
 
   Future<void> checkEmailVerified() async {
-    currentUser = _auth.currentUser!;
+    currentUser = _auth.currentUser;
     await currentUser!.reload();
     if (currentUser!.emailVerified) {
       timer.cancel();
       if (mounted) {
-        Navigator.pushReplacementNamed(
+        await Navigator.pushReplacementNamed(
           context,
           'login_screen',
         );

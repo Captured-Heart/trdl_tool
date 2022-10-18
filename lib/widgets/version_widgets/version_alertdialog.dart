@@ -1,6 +1,6 @@
 import '/all_imports.dart';
 
-showVersionUpdatePopup(context) {
+Future<dynamic> showVersionUpdatePopup(BuildContext context) {
   return showDialog(
     context: context,
     builder: (BuildContext context) {

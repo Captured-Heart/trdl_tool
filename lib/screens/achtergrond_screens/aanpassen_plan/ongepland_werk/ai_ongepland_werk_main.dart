@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIOngeplandWerkMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_ongepland_werk,
 }
 
@@ -16,16 +18,16 @@ class AIOngeplandWerkMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIOngeplandWerkMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIOngeplandWerkMain result) {
+            onSelected: (WhereToGoFromAIOngeplandWerkMain result) async {
               if (result == WhereToGoFromAIOngeplandWerkMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIOngeplandWerkMain.ww_ongepland_werk) {
-                Navigator.pushNamed(context, 'ww_ongepland_werk');
+                await Navigator.pushNamed(context, 'ww_ongepland_werk');
               } else {
                 Navigator.pop(context);
               }
@@ -54,14 +56,14 @@ class AIOngeplandWerkMain extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Card>[
               /*TITLE CARD*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <TitleText>[
                       TitleText(
                         title: 'Ongepland Werk',
                       ),
@@ -75,14 +77,14 @@ class AIOngeplandWerkMain extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: [
+                    children: <Widget>[
                       const TitleText(
                         title: 'Ga snel naar',
                       ),
                       const SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
+                        children: const <Widget>[
                           NavButton(
                             buttontext: 'Ongepland werk - Infra',
                             destination: 'ai_ongepland_werk_infra',
@@ -120,7 +122,7 @@ class AIOngeplandWerkMain extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SizedBoxH(),
                       InsertImage(
                         image:
