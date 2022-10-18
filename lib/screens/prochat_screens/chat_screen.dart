@@ -1,6 +1,6 @@
 import 'package:trdl_tool/all_imports.dart';
 
-final _firestore = FirebaseFirestore.instance;
+final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 late User loggedInUser;
 
 class ChatScreen extends StatefulWidget {
@@ -12,8 +12,8 @@ class ChatScreen extends StatefulWidget {
 }
 
 class ChatScreenState extends State<ChatScreen> {
-  final messageTextController = TextEditingController();
-  final _auth = FirebaseAuth.instance;
+  final TextEditingController messageTextController = TextEditingController();
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   late String messageText;
 
   @override
@@ -24,7 +24,7 @@ class ChatScreenState extends State<ChatScreen> {
 
   void getCurrentUser() {
     try {
-      final user = _auth.currentUser;
+      final User? user = _auth.currentUser;
       if (user != null) {
         loggedInUser = user;
       }
@@ -57,7 +57,7 @@ class ChatScreenState extends State<ChatScreen> {
                   ),
                   child: TextField(
                     controller: messageTextController,
-                    onChanged: (value) {
+                    onChanged: (String value) {
                       messageText = value;
                     },
                     decoration: kMessageTextFieldDecoration,
@@ -94,7 +94,8 @@ class MessagesStream extends StatelessWidget {
     return StreamBuilder<QuerySnapshot>(
       stream:
           _firestore.collection('messages').orderBy('timestamp').snapshots(),
-      builder: (context, snapshot) {
+      builder: (BuildContext context,
+          AsyncSnapshot<QuerySnapshot<Object?>> snapshot) {
         if (!snapshot.hasData) {
           return Center(
             child: CircularProgressIndicator(
@@ -102,16 +103,17 @@ class MessagesStream extends StatelessWidget {
             ),
           );
         }
-        final messages = snapshot.data!.docs.reversed;
-        List<MessageBubble> messageBubbles = [];
-        for (var message in messages) {
-          final messageText = message.get('text');
-          final messageSender = message.get('sender');
-          final currentUser = loggedInUser.email;
+        final Iterable<QueryDocumentSnapshot<Object?>> messages =
+            snapshot.data!.docs.reversed;
+        final List<MessageBubble> messageBubbles = <MessageBubble>[];
+        for (final QueryDocumentSnapshot<Object?> message in messages) {
+          final dynamic messageText = message.get('text');
+          final dynamic messageSender = message.get('sender');
+          final String? currentUser = loggedInUser.email;
 
-          final messageBubble = MessageBubble(
-            sender: messageSender,
-            message: messageText,
+          final MessageBubble messageBubble = MessageBubble(
+            sender: messageSender.toString(),
+            message: messageText.toString(),
             isMe: currentUser == messageSender,
           );
           messageBubbles.add(messageBubble);

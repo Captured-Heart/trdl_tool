@@ -1,9 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIKlanthinder {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_ongepland_werk_main,
+  // ignore: constant_identifier_names
   ai_aanpassen_plan_main,
+  // ignore: constant_identifier_names
   ai_vertragingen,
 }
 
@@ -18,19 +22,21 @@ class AIKlanthinder extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIKlanthinder>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIKlanthinder result) {
+            onSelected: (WhereToGoFromAIKlanthinder result) async {
               if (result == WhereToGoFromAIKlanthinder.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
-              } else if (result == WhereToGoFromAIKlanthinder.ai_ongepland_werk_main) {
-                Navigator.pushNamed(context, 'ai_ongepland_werk_main');
-              } else if (result == WhereToGoFromAIKlanthinder.ai_aanpassen_plan_main) {
-                Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIKlanthinder.ai_ongepland_werk_main) {
+                await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
+              } else if (result ==
+                  WhereToGoFromAIKlanthinder.ai_aanpassen_plan_main) {
+                await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
               } else if (result == WhereToGoFromAIKlanthinder.ai_vertragingen) {
-                Navigator.pushNamed(context, 'ai_vertragingen');
+                await Navigator.pushNamed(context, 'ai_vertragingen');
               } else {
                 Navigator.pop(context);
               }
@@ -73,26 +79,32 @@ class AIKlanthinder extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Card>[
               /*CARD #1*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       TitleText(
                         title: 'Klanthinder',
                       ),
                       SizedBoxH(),
-                      BoldText(indents: 0, boldtext: 'Wat is klanthinder?',),
+                      BoldText(
+                        indents: 0,
+                        boldtext: 'Wat is klanthinder?',
+                      ),
                       BodyText(
                         indents: 0,
                         text:
-                            'Klanthinder is een verstoring in de treindienst waardoor vertraging ontstaat. Onder vertraagde treinen worden ook opgeheven en omgeleide treinen verstaan. \n\nProRail heeft afspraken gemaakt met de overheid over prestaties die geleverd moeten worden op verschillende gebieden. Deze afspraken noemen we KPI\'s, Kritische Prestatie Indicatoren. Een van die KPI\'s is Klanthinder. De afspraken die ProRail hierover heeft gemaakt met de overheid gaan over hinderrijke incidenten. We spreken van een hinderrijk incident vanaf 20 opgeheven reizigerstreinen of langdurig rijden met vertraging waardoor het totaal aantal minuten vertraging boven de 680 uitkomt. Klanthinder wordt achteraf berekend in het aantal minuten vertraging die een verstoring veroorzaakt.\n\nVoor een opgeheven trein wordt 30 minuten gerekend en voor omgeleide treinen 15 minuten. Bij vertraagd rijden geldt de daadwerkelijke vertraging per trein.',
+                            "Klanthinder is een verstoring in de treindienst waardoor vertraging ontstaat. Onder vertraagde treinen worden ook opgeheven en omgeleide treinen verstaan. \n\nProRail heeft afspraken gemaakt met de overheid over prestaties die geleverd moeten worden op verschillende gebieden. Deze afspraken noemen we KPI's, Kritische Prestatie Indicatoren. Een van die KPI's is Klanthinder. De afspraken die ProRail hierover heeft gemaakt met de overheid gaan over hinderrijke incidenten. We spreken van een hinderrijk incident vanaf 20 opgeheven reizigerstreinen of langdurig rijden met vertraging waardoor het totaal aantal minuten vertraging boven de 680 uitkomt. Klanthinder wordt achteraf berekend in het aantal minuten vertraging die een verstoring veroorzaakt.\n\nVoor een opgeheven trein wordt 30 minuten gerekend en voor omgeleide treinen 15 minuten. Bij vertraagd rijden geldt de daadwerkelijke vertraging per trein.",
                       ),
                       SizedBoxH(),
-                      InsertImage(image: 'assets/images/achtergrond_info/aanpassen_plan/vertragingen/ai_klanthinder_1.jpg',),
+                      InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/aanpassen_plan/vertragingen/ai_klanthinder_1.jpg',
+                      ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
@@ -100,9 +112,17 @@ class AIKlanthinder extends StatelessWidget {
                             'Om hier een meetbare KPI van te maken, is klanthinder opgedeeld in 3 categorieën die hinderklassen worden genoemd:',
                       ),
                       SizedBoxH(),
-                      BodyText(indents: 1, text: '- HK1: >= 2400 min;\n\n- HK2: >= 680 < 2400 min;\n\n- HK3: >= 40 < 680 min.',),
+                      BodyText(
+                        indents: 1,
+                        text:
+                            '- HK1: >= 2400 min;\n\n- HK2: >= 680 < 2400 min;\n\n- HK3: >= 40 < 680 min.',
+                      ),
                       SizedBoxH(),
-                      BodyText(indents: 0, text: 'De afspraken met de overheid gaan over hinderrijke incidenten met hinderklasse 1 en 2 waarvoor ProRail verantwoordelijk is. Denk hierbij bijvoorbeeld aan storingen aan de infra.\n\nStoringen als defect materieel of afwezigheid personeel vallen niet onder de verantwoordelijkheid van ProRail maar van de vervoerder.\n\nDe KPI klanthinder staat voor ProRail op maximaal 610 hinderrijke incidenten per jaar. Als ProRail deze norm overschrijdt, kan daar een boete voor worden gegeven door de staatssecretaris. Doel van ProRail is om minimaal onder de 610 hinderrijke incidenten uit te komen, maar daarnaast heeft ProRail zelf als doel gesteld om in 2018 op maximaal 575 hinderrijke incidenten en in 2019 op maximaal 546 hinderrijke incidenten uit te komen.',),
+                      BodyText(
+                        indents: 0,
+                        text:
+                            'De afspraken met de overheid gaan over hinderrijke incidenten met hinderklasse 1 en 2 waarvoor ProRail verantwoordelijk is. Denk hierbij bijvoorbeeld aan storingen aan de infra.\n\nStoringen als defect materieel of afwezigheid personeel vallen niet onder de verantwoordelijkheid van ProRail maar van de vervoerder.\n\nDe KPI klanthinder staat voor ProRail op maximaal 610 hinderrijke incidenten per jaar. Als ProRail deze norm overschrijdt, kan daar een boete voor worden gegeven door de staatssecretaris. Doel van ProRail is om minimaal onder de 610 hinderrijke incidenten uit te komen, maar daarnaast heeft ProRail zelf als doel gesteld om in 2018 op maximaal 575 hinderrijke incidenten en in 2019 op maximaal 546 hinderrijke incidenten uit te komen.',
+                      ),
                     ],
                   ),
                 ),
@@ -113,7 +133,7 @@ class AIKlanthinder extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Maatregelen tegen klanthinder',
                       ),
@@ -127,11 +147,18 @@ class AIKlanthinder extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '1. AM introduceert \'kritische assets\' en implementeert verscherpte werkwijze op gebied van inspectie en onderhoud;\n\n2. AM stuurt actief op voorkomen van herhaling van incidenten (technische recidive);\n\n3. ICB introduceert interventieteams ter voorkoming van \'derdenstoringen\' (suïcide, spoorlopen, koperdiefstal);\n\n4. VL introduceert Alerteren;\n\n5. VL stuurt op het optimaal benutten van infra bij verstoringen;\n\n5b. Modern krukken;\n\n6. Optimaliseren versperringsmaatregelen;\n\n7. Geen (passende) versperringsmaatregel beschikbaar.',
+                            "1. AM introduceert 'kritische assets' en implementeert verscherpte werkwijze op gebied van inspectie en onderhoud;\n\n2. AM stuurt actief op voorkomen van herhaling van incidenten (technische recidive);\n\n3. ICB introduceert interventieteams ter voorkoming van 'derdenstoringen' (suïcide, spoorlopen, koperdiefstal);\n\n4. VL introduceert Alerteren;\n\n5. VL stuurt op het optimaal benutten van infra bij verstoringen;\n\n5b. Modern krukken;\n\n6. Optimaliseren versperringsmaatregelen;\n\n7. Geen (passende) versperringsmaatregel beschikbaar.",
                       ),
                       SizedBoxH(),
-                      InsertImage(image: 'assets/images/achtergrond_info/aanpassen_plan/vertragingen/ai_klanthinder_2.jpg',),
-                      BodyText(indents: 0, text: 'Het proces van een storing - waar bevindt zich welke maatregel',),
+                      InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/aanpassen_plan/vertragingen/ai_klanthinder_2.jpg',
+                      ),
+                      BodyText(
+                        indents: 0,
+                        text:
+                            'Het proces van een storing - waar bevindt zich welke maatregel',
+                      ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
@@ -148,18 +175,20 @@ class AIKlanthinder extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
-                      BoldText(indents: 0,
+                    children: const <Widget>[
+                      BoldText(
+                        indents: 0,
                         boldtext: '1. Kritische Assets',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'AM heeft een lijst met Kritische Assets samengesteld. Met kritische assets worden infra elementen als wissels en spoorstaven bedoeld die zich op strategisch kritische plekken bevinden in de verschillende regio\'s. Als hier een storing aan komt is de impact op het logistieke proces groot.\n\nDeze infra elementen worden extra scherp in de gaten gehouden en vaker gecontroleerd om eventuele storingen zoveel mogelijk te voorkomen of al vroegtijdig te kunnen herstellen.',
+                            "AM heeft een lijst met Kritische Assets samengesteld. Met kritische assets worden infra elementen als wissels en spoorstaven bedoeld die zich op strategisch kritische plekken bevinden in de verschillende regio's. Als hier een storing aan komt is de impact op het logistieke proces groot.\n\nDeze infra elementen worden extra scherp in de gaten gehouden en vaker gecontroleerd om eventuele storingen zoveel mogelijk te voorkomen of al vroegtijdig te kunnen herstellen.",
                       ),
                       SizedBoxH(),
-                      BoldText(indents: 0,
+                      BoldText(
+                        indents: 0,
                         boldtext: '2. Voorkomen van herhaling incidenten',
                       ),
                       SizedBoxH(),
@@ -169,8 +198,10 @@ class AIKlanthinder extends StatelessWidget {
                             'Storingen aan secties, spoorstaven en bovenleiding worden beter bijgehouden waardoor herhalende storingen sneller worden opgemerkt. Hierdoor kan er eerder worden gekozen om een element dat vaker storingen geeft bijvoorbeeld te vervangen of hier extra onderhoud aan te plegen.',
                       ),
                       SizedBoxH(),
-                      BoldText(indents: 0,
-                        boldtext: '3. Interventieteams ter voorkoming van \'derdenstoringen\'.',
+                      BoldText(
+                        indents: 0,
+                        boldtext:
+                            "3. Interventieteams ter voorkoming van 'derdenstoringen'.",
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -179,14 +210,15 @@ class AIKlanthinder extends StatelessWidget {
                             'In samenwerking met het programma Suïcide wordt gekeken waar nog aanscherping mogelijk is in de maatregelen met betrekking tot Klanthinder. Ook worden er maatregelen bedacht om bijvoorbeeld spoorlopers en koperdiefstal te voorkomen.',
                       ),
                       SizedBoxH(),
-                      BoldText(indents: 0,
+                      BoldText(
+                        indents: 0,
                         boldtext: '4. Alerteren.',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'De taak van het alerteren is bij de Verkeersleider CMBO belegd. Als de Verkeersleider CMBO gaat alerteren logt hij in Spoorweb: Let op: Deze logistieke afhandeling resulteert om xx.xx uur in een hinderklasse 2-storing.\n\nVervolgens informeert de Verkeersleider CMBO de Officier van Dienst Spoor. Naar aanleiding van deze alertering start de Officier van Dienst Spoor een challenge middels een \'motorkapoverleg\'.\n\nDit motorkapoverleg vindt plaats op het CMBO. Doel is om te onderzoeken of:',
+                            "De taak van het alerteren is bij de Verkeersleider CMBO belegd. Als de Verkeersleider CMBO gaat alerteren logt hij in Spoorweb: Let op: Deze logistieke afhandeling resulteert om xx.xx uur in een hinderklasse 2-storing.\n\nVervolgens informeert de Verkeersleider CMBO de Officier van Dienst Spoor. Naar aanleiding van deze alertering start de Officier van Dienst Spoor een challenge middels een 'motorkapoverleg'.\n\nDit motorkapoverleg vindt plaats op het CMBO. Doel is om te onderzoeken of:",
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -210,20 +242,23 @@ class AIKlanthinder extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'De uitkomsten van het motorkapoverleg worden door de MKS/BO doorgegeven aan de AL. De AL logt dan de nieuwe \'tenminste tot\' prognose in Spoorweb.',
+                            "De uitkomsten van het motorkapoverleg worden door de MKS/BO doorgegeven aan de AL. De AL logt dan de nieuwe 'tenminste tot' prognose in Spoorweb.",
                       ),
                       SizedBoxH(),
-                      BoldText(indents: 0,
-                        boldtext: '5. Optimaal benutten van infra bij verstoringen',
+                      BoldText(
+                        indents: 0,
+                        boldtext:
+                            '5. Optimaal benutten van infra bij verstoringen',
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Uit onderzoek is gebleken dat bij een aantal Hinderklasse 2 incidenten door andere keuzes te maken in het gebruik van de infra, de opgelopen Klanthinder aanzienlijk minder had kunnen zijn. Om in de toekomst dit soort situatie zo veel mogelijk te voorkomen, is een aantal stappen in het werkproces van de TRDL en de DVL aangescherpt.\n\nOp het moment dat je een melding binnen krijgt is het natuurlijk altijd al de bedoeling dat je een goede analyse maakt van de storing voor de veiligheid en voor het logistieke proces. Hierdoor kan je samen met de DVL een goed verdeelbesluit nemen.\n\nWat in deze fase verwacht wordt van jou is dat als bij het analyseren van de storing blijkt dat er mogelijk een incident met Hinderklasse 2 ontstaat, jij en de DVL eerst \'nadere beeldvorming\' toepassen. Dit kan door het 4-6 ogenprincipe toe te passen. Hierbij laat je bijvoorbeeld nog een andere TRDL meekijken naar de storing. Soms ziet een frisse blik toch nog andere mogelijkheden om bijvoorbeeld om de storing heen te rijden of een gedeelte van de treinen toch met een aanwijzing over de storing heen te laten rijden. Ook kan gebruik gemaakt worden van de rekentool \'Post focust op klanthinder\', om te berekenen wat bij verschillende scenario\'s de verwachte klanthinder is.\n\nVaak is het zo dat er voor het oplossen van een infrastoring meerdere opties zijn. Er kan gekozen worden om de storing direct te laten herstellen met een storingsWBI of met een tijdsafspraak voor de nacht of na de spits. Bij alle drie deze opties zijn er logistieke gevolgen. Als jij en DVL op een mogelijk hinderrijk incident uitkomen schakelen jullie de OvD-V in. De OvD-V voert nog een keer een challenge uit op de door jou en de DVL gekozen oplossing om te kijken of er geen andere mogelijkheden zijn. Met een challenge wordt een second opinion bedoeld. Het doel is om uit te sluiten dat er opties over het hoofd worden gezien die misschien minder klanthinder opleveren.\n\nNa deze challenge wordt de MKS-BO gealarmeerd. Het kan dus zo zijn dat je niet binnen 5 minuten alarmeert naar de MKS-BO. Als nadere beeldvorming noodzakelijk is, wordt dit geaccepteerd. Natuurlijk is zo snel mogelijk alarmeren naar MKS-BO nog steeds belangrijk, maar wel met een zo compleet mogelijk beeld. Je kan door de nadere beeldvorming ook meteen bij de MKS-BO aangeven dat er ook nog alternatieve mogelijkheden zouden kunnen zijn. Bijvoorbeeld bij een wisselstoring, het kan zo zijn dat de klanthinder kan worden gereduceerd door het krukken en klemmen van een wissel in een stand. Bij het alarmeren/informeren van de MKS-BO kan je dit samen met de prioritering van de storing doorgeven.\n\nTerwijl je aan het alarmeren bent naar MKS-BO, gaat de DVL met het concept verdeelbesluit en concept versperringsmaatregel naar de Verkeersleider CMBO. De DVL geeft bij de Verkeersleider CMBO aan dat er grote kans is op Hinderklasse 2. De Verkeersleider CMBO gaat met deze informatie nog een keer de rekentool invullen om te checken of er inderdaad risico is op een incident met Hinderklasse 2. Als blijkt dat er inderdaad sprake gaat zijn van een Hinderklasse 2 incident gaat de Verkeersleider CMBO Alerteren naar de OvD-S.',
+                            "Uit onderzoek is gebleken dat bij een aantal Hinderklasse 2 incidenten door andere keuzes te maken in het gebruik van de infra, de opgelopen Klanthinder aanzienlijk minder had kunnen zijn. Om in de toekomst dit soort situatie zo veel mogelijk te voorkomen, is een aantal stappen in het werkproces van de TRDL en de DVL aangescherpt.\n\nOp het moment dat je een melding binnen krijgt is het natuurlijk altijd al de bedoeling dat je een goede analyse maakt van de storing voor de veiligheid en voor het logistieke proces. Hierdoor kan je samen met de DVL een goed verdeelbesluit nemen.\n\nWat in deze fase verwacht wordt van jou is dat als bij het analyseren van de storing blijkt dat er mogelijk een incident met Hinderklasse 2 ontstaat, jij en de DVL eerst 'nadere beeldvorming' toepassen. Dit kan door het 4-6 ogenprincipe toe te passen. Hierbij laat je bijvoorbeeld nog een andere TRDL meekijken naar de storing. Soms ziet een frisse blik toch nog andere mogelijkheden om bijvoorbeeld om de storing heen te rijden of een gedeelte van de treinen toch met een aanwijzing over de storing heen te laten rijden. Ook kan gebruik gemaakt worden van de rekentool 'Post focust op klanthinder', om te berekenen wat bij verschillende scenario's de verwachte klanthinder is.\n\nVaak is het zo dat er voor het oplossen van een infrastoring meerdere opties zijn. Er kan gekozen worden om de storing direct te laten herstellen met een storingsWBI of met een tijdsafspraak voor de nacht of na de spits. Bij alle drie deze opties zijn er logistieke gevolgen. Als jij en DVL op een mogelijk hinderrijk incident uitkomen schakelen jullie de OvD-V in. De OvD-V voert nog een keer een challenge uit op de door jou en de DVL gekozen oplossing om te kijken of er geen andere mogelijkheden zijn. Met een challenge wordt een second opinion bedoeld. Het doel is om uit te sluiten dat er opties over het hoofd worden gezien die misschien minder klanthinder opleveren.\n\nNa deze challenge wordt de MKS-BO gealarmeerd. Het kan dus zo zijn dat je niet binnen 5 minuten alarmeert naar de MKS-BO. Als nadere beeldvorming noodzakelijk is, wordt dit geaccepteerd. Natuurlijk is zo snel mogelijk alarmeren naar MKS-BO nog steeds belangrijk, maar wel met een zo compleet mogelijk beeld. Je kan door de nadere beeldvorming ook meteen bij de MKS-BO aangeven dat er ook nog alternatieve mogelijkheden zouden kunnen zijn. Bijvoorbeeld bij een wisselstoring, het kan zo zijn dat de klanthinder kan worden gereduceerd door het krukken en klemmen van een wissel in een stand. Bij het alarmeren/informeren van de MKS-BO kan je dit samen met de prioritering van de storing doorgeven.\n\nTerwijl je aan het alarmeren bent naar MKS-BO, gaat de DVL met het concept verdeelbesluit en concept versperringsmaatregel naar de Verkeersleider CMBO. De DVL geeft bij de Verkeersleider CMBO aan dat er grote kans is op Hinderklasse 2. De Verkeersleider CMBO gaat met deze informatie nog een keer de rekentool invullen om te checken of er inderdaad risico is op een incident met Hinderklasse 2. Als blijkt dat er inderdaad sprake gaat zijn van een Hinderklasse 2 incident gaat de Verkeersleider CMBO Alerteren naar de OvD-S.",
                       ),
                       SizedBoxH(),
-                      BoldText(indents: 0,
+                      BoldText(
+                        indents: 0,
                         boldtext: '5b. Modern krukken',
                       ),
                       SizedBoxH(),
@@ -233,7 +268,8 @@ class AIKlanthinder extends StatelessWidget {
                             'Bij een wissel dat in Procesleiding als niet in de eindstand wordt gemeld, kan door middel van het nieuwe systeem wissel monitoring gecontroleerd worden of het wissel buiten wel in de eindstand en daardoor ook in de controle ligt. Er kan dan besloten worden of er toch door gereden kan worden op basis van deze informatie.\n\nVoor de uitleg van de verschillende maatregelen van verkeersleiding is het makkelijker om te beginnen met maatregel 5, Optimaal benutten van infra bij verstoringen. Dit omdat dit chronologisch meer op volgorde is.',
                       ),
                       SizedBoxH(),
-                      BoldText(indents: 0,
+                      BoldText(
+                        indents: 0,
                         boldtext: '6. Optimaliseren versperringsmaatregelen',
                       ),
                       SizedBoxH(),
@@ -243,8 +279,10 @@ class AIKlanthinder extends StatelessWidget {
                             'Versperringsmaatregelen zijn gemaakt om volledige versperringen van een spoor of meerdere sporen af te handelen. Er kan dan dus helemaal niet meer gereden worden of over minder sporen. Voor storingen waarbij nog wel gereden kan worden maar met vertraging is nu nog niets beschikbaar. Denk hierbij aan infrastoringen, het rijden met aanwijzingen of als er aanpassingen zijn aan de standaarddienstregeling door werkzaamheden of storingen elders.\n\nVoor deze situaties moet de DVL nu een voorstel versperringsmaatregel met aanpassingen voorleggen aan de Verkeersleider CMBO. De Verkeersleider CMBO checkt het voorstel van de DVL en maakt er een concept versperringsmaatregel van. De Verkeersleider CMBO kan hier nog aanpassingen aan doen, maar dit kan alleen een bijstelling naar beneden zijn.\n\nMet deze maatregel moeten er versperringsmaatregelen komen die voor dit soort situaties gemaakt zijn zodat er zo weinig mogelijk met aangepaste maatregelen gewerkt hoeft te worden.',
                       ),
                       SizedBoxH(),
-                      BoldText(indents: 0,
-                        boldtext: '7. Geen (passende) versperringsmaatregel beschikbaar',
+                      BoldText(
+                        indents: 0,
+                        boldtext:
+                            '7. Geen (passende) versperringsmaatregel beschikbaar',
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -262,7 +300,7 @@ class AIKlanthinder extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Monitoring en klanthinder',
                       ),

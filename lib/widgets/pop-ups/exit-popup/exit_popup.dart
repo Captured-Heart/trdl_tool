@@ -1,7 +1,7 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
-Future<bool> showExitPopup(context) async {
-  return await showDialog(
+Future<bool> showExitPopup(BuildContext context) async {
+  return showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
@@ -10,7 +10,7 @@ Future<bool> showExitPopup(context) async {
           height: MediaQuery.of(context).size.width * 0.50,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
+            children: <Widget>[
               const Text(
                 'Wil je de app verlaten?',
                 style: TextStyle(
@@ -21,7 +21,7 @@ Future<bool> showExitPopup(context) async {
                 height: 20,
               ),
               Row(
-                children: [
+                children: <Widget>[
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
@@ -60,5 +60,5 @@ Future<bool> showExitPopup(context) async {
         ),
       );
     },
-  );
+  ) as bool;
 }

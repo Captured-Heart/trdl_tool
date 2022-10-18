@@ -1,9 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIMonitoring {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_vertragingen,
+  // ignore: constant_identifier_names
   ai_vertragingen,
+  // ignore: constant_identifier_names
   ai_klanthinder,
 }
 
@@ -18,19 +22,19 @@ class AIMonitoring extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIMonitoring>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIMonitoring result) {
+            onSelected: (WhereToGoFromAIMonitoring result) async {
               if (result == WhereToGoFromAIMonitoring.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromAIMonitoring.ww_vertragingen) {
-                Navigator.pushNamed(context, 'ww_vertragingen');
+                await Navigator.pushNamed(context, 'ww_vertragingen');
               } else if (result == WhereToGoFromAIMonitoring.ai_vertragingen) {
-                Navigator.pushNamed(context, 'ai_vertragingen');
+                await Navigator.pushNamed(context, 'ai_vertragingen');
               } else if (result == WhereToGoFromAIMonitoring.ai_klanthinder) {
-                Navigator.pushNamed(context, 'ai_klanthinder');
+                await Navigator.pushNamed(context, 'ai_klanthinder');
               } else {
                 Navigator.pop(context);
               }
@@ -73,14 +77,14 @@ class AIMonitoring extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Card>[
               /*CARD #1*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       TitleText(
                         title: 'Vertragingen en Monitoring',
                       ),
@@ -88,13 +92,13 @@ class AIMonitoring extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Als TRDL en DVL maak je gebruik van Monitoring. Monitoring is een systeem waarin afwijkingen ten opzichte van het plan en veiligheidsrisico\'s worden verklaard en geregistreerd. Dit worden ook \'te verklaren treinafwijkingen\' genoemd oftewel TVTA\'s.\n\nHet systeem wordt gebruikt door alle betrokken partijen binnen het logistieke proces. Binnen ProRail zijn dit Verkeersleiding en Assetmanagement en daarnaast wordt Monitoring gebruikt door zowel Reizigers- als Goederenvervoerders.\n\nIn Monitoring verklaren we:',
+                            "Als TRDL en DVL maak je gebruik van Monitoring. Monitoring is een systeem waarin afwijkingen ten opzichte van het plan en veiligheidsrisico's worden verklaard en geregistreerd. Dit worden ook 'te verklaren treinafwijkingen' genoemd oftewel TVTA's.\n\nHet systeem wordt gebruikt door alle betrokken partijen binnen het logistieke proces. Binnen ProRail zijn dit Verkeersleiding en Assetmanagement en daarnaast wordt Monitoring gebruikt door zowel Reizigers- als Goederenvervoerders.\n\nIn Monitoring verklaren we:",
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 1,
                         text:
-                            '- Vertraging;\n\n- Planaanpassingen;\n\n- Veiligheidsrisico\'s.',
+                            "- Vertraging;\n\n- Planaanpassingen;\n\n- Veiligheidsrisico's.",
                       ),
                     ],
                   ),
@@ -106,7 +110,7 @@ class AIMonitoring extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Doel monitoring',
                       ),
@@ -131,7 +135,7 @@ class AIMonitoring extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Inzicht ontstaat over de hoeveelheid, de aard en de hinder van veiligheidsrisico\'s.',
+                            "- Inzicht ontstaat over de hoeveelheid, de aard en de hinder van veiligheidsrisico's.",
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -149,7 +153,7 @@ class AIMonitoring extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Wat verklaren we in Monitoring?',
                       ),
@@ -157,7 +161,7 @@ class AIMonitoring extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'In Monitoring verklaren we \'Te Verklaren Treinafwijkingen\', de TVTA, en veiligheidsrisico\'s. Hierover wordt verderop in dit document ingegaan onder het kopje \'Registratie, processtappen 1 en 2.\n\nMonitoring verschaft inzicht in de vervoersprestaties doordat data over vertragingssprongen (van meer dan 2:59 minuten) en planaanpassingen van treinen kunnen worden gekoppeld aan de primaire oorzaak die deze vertragingssprongen of planaanpassingen hebben veroorzaakt. Een TVTA m.b.t. een vertraging, gaat over een vertragingssprong tussen niet meer dan twee dienstregelpunten.\n\nEen \'primaire oorzaak\' is het veroorzakende incident. Bijv. \'defect materieel > tegel D3\'. Of \'wisselstoring > F5\'. De koppelingen zijn de TVTA\'s die hiervan het gevolg zijn. Ze dienen te worden gekoppeld aan deze primaire oorzaak. De primaire oorzaken zijn onderverdeeld in een aantal categorieën. Per categorie is er één verantwoordelijke partij aan te wijzen: ProRail Verkeersleiding, ProRail Assetmanagement, de vervoerder of derden. Verkeersleiding (E-kolom) is ook aanspreekpunt voor zaken die de afdeling Capaciteitsverdeling (CV) aangaan. Dit is de reden dat je CV niet in dit lijstje ziet staan ondanks dat je wel tegeltjes over dienstregeling tegenkomt. Zij hebben in Monitoring een gedeelde verantwoordelijkheid. Assetmanagement is op haar beurt aanspreekpunt voor ICT, Projecten en Derden. De actiehoudende partijen zijn op de achtergrond systeemtechnisch ingeregeld.',
+                            "In Monitoring verklaren we 'Te Verklaren Treinafwijkingen', de TVTA, en veiligheidsrisico's. Hierover wordt verderop in dit document ingegaan onder het kopje 'Registratie, processtappen 1 en 2.\n\nMonitoring verschaft inzicht in de vervoersprestaties doordat data over vertragingssprongen (van meer dan 2:59 minuten) en planaanpassingen van treinen kunnen worden gekoppeld aan de primaire oorzaak die deze vertragingssprongen of planaanpassingen hebben veroorzaakt. Een TVTA m.b.t. een vertraging, gaat over een vertragingssprong tussen niet meer dan twee dienstregelpunten.\n\nEen 'primaire oorzaak' is het veroorzakende incident. Bijv. 'defect materieel > tegel D3'. Of 'wisselstoring > F5'. De koppelingen zijn de TVTA's die hiervan het gevolg zijn. Ze dienen te worden gekoppeld aan deze primaire oorzaak. De primaire oorzaken zijn onderverdeeld in een aantal categorieën. Per categorie is er één verantwoordelijke partij aan te wijzen: ProRail Verkeersleiding, ProRail Assetmanagement, de vervoerder of derden. Verkeersleiding (E-kolom) is ook aanspreekpunt voor zaken die de afdeling Capaciteitsverdeling (CV) aangaan. Dit is de reden dat je CV niet in dit lijstje ziet staan ondanks dat je wel tegeltjes over dienstregeling tegenkomt. Zij hebben in Monitoring een gedeelde verantwoordelijkheid. Assetmanagement is op haar beurt aanspreekpunt voor ICT, Projecten en Derden. De actiehoudende partijen zijn op de achtergrond systeemtechnisch ingeregeld.",
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -175,14 +179,14 @@ class AIMonitoring extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Processtappen',
                       ),
                       BodyText(
                         indents: 0,
                         text:
-                            'Bij de ontwikkeling van Monitoring is ervoor gekozen de registratie van oorzaken van treinafwijkingen te beleggen bij de TRDL en DVL (processtap 1 en 2). Gezien de kerntaken van de TRDL en in het bijzonder de middelen, contacten en informatie waarover hij beschikt, ligt het voor de hand deze deelprocessen toe te wijzen aan deze functionaris. Bij die keuze werd opgemerkt dat de primaire taken van TRDL geen schade of hinder mogen ondervinden van eventuele nieuwe, aanvullende of zwaardere taakelementen op het vlak van Monitoring. Bij de ontwikkeling van Monitoring ging men er van uit dat TRDL op de meeste posten zowel in normale situaties als bij (grote) incidenten de hun toebedeelde taken op het vlak van Monitoring adequaat kunnen vervullen. Hun huidige primaire taken laten hiervoor voldoende ruimte. Monitoring registraties worden door de TRDL uitgevoerd in het \'nu-moment\'.',
+                            "Bij de ontwikkeling van Monitoring is ervoor gekozen de registratie van oorzaken van treinafwijkingen te beleggen bij de TRDL en DVL (processtap 1 en 2). Gezien de kerntaken van de TRDL en in het bijzonder de middelen, contacten en informatie waarover hij beschikt, ligt het voor de hand deze deelprocessen toe te wijzen aan deze functionaris. Bij die keuze werd opgemerkt dat de primaire taken van TRDL geen schade of hinder mogen ondervinden van eventuele nieuwe, aanvullende of zwaardere taakelementen op het vlak van Monitoring. Bij de ontwikkeling van Monitoring ging men er van uit dat TRDL op de meeste posten zowel in normale situaties als bij (grote) incidenten de hun toebedeelde taken op het vlak van Monitoring adequaat kunnen vervullen. Hun huidige primaire taken laten hiervoor voldoende ruimte. Monitoring registraties worden door de TRDL uitgevoerd in het 'nu-moment'.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -204,7 +208,7 @@ class AIMonitoring extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Moet je een vertraging verklaren? Dan geldt nog steeds: probeer zo goed mogelijk de oorzaak te verklaren en deze kort in het \'opmerkingen-veld\' in Monitoring te beschrijven. Dit helpt om goede analyses te maken. Op basis van deze input kan het Prestatie Analyse Bureau verdere verbeteringen voorstellen.',
+                            "Moet je een vertraging verklaren? Dan geldt nog steeds: probeer zo goed mogelijk de oorzaak te verklaren en deze kort in het 'opmerkingen-veld' in Monitoring te beschrijven. Dit helpt om goede analyses te maken. Op basis van deze input kan het Prestatie Analyse Bureau verdere verbeteringen voorstellen.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -219,7 +223,7 @@ class AIMonitoring extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Monitoring gebruikt een te verklaren treinafwijking (TVTA) en/of een veiligheidsrisico als startpunt. De TRDL of DVL registreren de TVTA\'s. Het registreren in Monitoring is verdeeld in verschillende processtappen; processtap 1 + 2. Hieronder kun je lezen wie welke processtap vervult:',
+                            "Monitoring gebruikt een te verklaren treinafwijking (TVTA) en/of een veiligheidsrisico als startpunt. De TRDL of DVL registreren de TVTA's. Het registreren in Monitoring is verdeeld in verschillende processtappen; processtap 1 + 2. Hieronder kun je lezen wie welke processtap vervult:",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -230,7 +234,7 @@ class AIMonitoring extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Activiteit: Het aanmaken van een melding en koppelen van TVTA\'s.\n\nIn monitoring maakt de TRDL of de DVL een concept melding aan waar TVTA\'s aan gekoppeld kunnen worden.\nDe melding moet een objectieve beschrijving zijn van de situatie. Het geven van alle beschikbare informatie is erg belangrijk om uiteindelijk een goede analyse te kunnen uitvoeren.\n\nDe TRDL en/of DVL koppelen TVTA\'s die een verband hebben met de eerder gemaakte concept melding. Ook kan in deze fase eventueel nog extra informatie worden toegevoegd.',
+                            "Activiteit: Het aanmaken van een melding en koppelen van TVTA's.\n\nIn monitoring maakt de TRDL of de DVL een concept melding aan waar TVTA's aan gekoppeld kunnen worden.\nDe melding moet een objectieve beschrijving zijn van de situatie. Het geven van alle beschikbare informatie is erg belangrijk om uiteindelijk een goede analyse te kunnen uitvoeren.\n\nDe TRDL en/of DVL koppelen TVTA's die een verband hebben met de eerder gemaakte concept melding. Ook kan in deze fase eventueel nog extra informatie worden toegevoegd.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -240,7 +244,7 @@ class AIMonitoring extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Activiteit: Controle aangemaakte verklaringen.\n\nDe DVL controleert bij deze stap of de compleet gemaakte meldingen ook echt compleet zijn en of de gekoppelde TVTA\'s terecht hieraan zijn gekoppeld. Als de melding gecheckt en in orde bevonden is, geeft de DVL de melding vrij.',
+                            "Activiteit: Controle aangemaakte verklaringen.\n\nDe DVL controleert bij deze stap of de compleet gemaakte meldingen ook echt compleet zijn en of de gekoppelde TVTA's terecht hieraan zijn gekoppeld. Als de melding gecheckt en in orde bevonden is, geeft de DVL de melding vrij.",
                       ),
                     ],
                   ),
@@ -252,7 +256,7 @@ class AIMonitoring extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Toelichting van alle processtappen',
                       ),
@@ -286,7 +290,7 @@ class AIMonitoring extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Het aanmaken van de primaire oorzaak;\n\n- Het koppelen van TVTA\'s aan de primaire oorzaak.',
+                            "- Het aanmaken van de primaire oorzaak;\n\n- Het koppelen van TVTA's aan de primaire oorzaak.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -308,13 +312,13 @@ class AIMonitoring extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Hierbij is er gekozen om vanaf een TVTA terug te redeneren;\n\n- Waar mogelijk zullen de vertragingen worden genormeerd, zodat de TVTA\'s automatisch verklaard worden door het systeem;\n\n- Vertragingssprongen worden gemeten en weergegeven op dienstregelpunten.',
+                            "- Hierbij is er gekozen om vanaf een TVTA terug te redeneren;\n\n- Waar mogelijk zullen de vertragingen worden genormeerd, zodat de TVTA's automatisch verklaard worden door het systeem;\n\n- Vertragingssprongen worden gemeten en weergegeven op dienstregelpunten.",
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Daarnaast wordt ook een veiligheidsrisico zonder TVTA\'s geregistreerd. Het afhandelen van een incident i.c.m. het afgeven van een aanwijzing leidt overigens altijd tot een registratie in Monitoring met veiligheidsrisico \'ja\'. Zelfs dus als er geen TVTA\'s gegenereerd zijn.',
+                            "Daarnaast wordt ook een veiligheidsrisico zonder TVTA's geregistreerd. Het afhandelen van een incident i.c.m. het afgeven van een aanwijzing leidt overigens altijd tot een registratie in Monitoring met veiligheidsrisico 'ja'. Zelfs dus als er geen TVTA's gegenereerd zijn.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -371,7 +375,7 @@ class AIMonitoring extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Processtap 5 is voor Arbitrage. Arbitrage gebeurt eveneens door de stafmedewerkers van VL. Tijdens arbitrage wordt de melding getoetst aan de richtlijnen. Indien deze richtlijnen uitsluitsel bieden, wordt de melding definitief toegewezen aan de actiehoudende partij.\n\nIndien de toewijzingsregels geen uitsluitsel bieden, wordt de arbitragecommissie - met vertegenwoordigers van ProRail en/of vervoerders - bijeen geroepen om over het dossier (en zo mogelijk een aantal vergelijkbare dossiers) een oordeel te vellen. Indien het een veelvuldig terugkerend voorval betreft, wordt hier een escalatie uitspraak over vastgelegd aanvullend op de bestaande spelregels. Deze escalatie uitspraken worden gepubliceerd op ICdoc.\n\nDe Staf VL verbetert continu de primaire Monitoringsprocessen, laat de ondersteunende processen optimaal werken en streeft naar een goede communicatie naar alle betrokkenen binnen Monitoring. De Staf VL heeft een aantal kerntaken, met als doel het treinproces \'buiten\' te verbeteren:',
+                            "Processtap 5 is voor Arbitrage. Arbitrage gebeurt eveneens door de stafmedewerkers van VL. Tijdens arbitrage wordt de melding getoetst aan de richtlijnen. Indien deze richtlijnen uitsluitsel bieden, wordt de melding definitief toegewezen aan de actiehoudende partij.\n\nIndien de toewijzingsregels geen uitsluitsel bieden, wordt de arbitragecommissie - met vertegenwoordigers van ProRail en/of vervoerders - bijeen geroepen om over het dossier (en zo mogelijk een aantal vergelijkbare dossiers) een oordeel te vellen. Indien het een veelvuldig terugkerend voorval betreft, wordt hier een escalatie uitspraak over vastgelegd aanvullend op de bestaande spelregels. Deze escalatie uitspraken worden gepubliceerd op ICdoc.\n\nDe Staf VL verbetert continu de primaire Monitoringsprocessen, laat de ondersteunende processen optimaal werken en streeft naar een goede communicatie naar alle betrokkenen binnen Monitoring. De Staf VL heeft een aantal kerntaken, met als doel het treinproces 'buiten' te verbeteren:",
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -415,7 +419,7 @@ class AIMonitoring extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Met de eerder genoemde resultaten worden meerdere acties uitgezet. Zo wordt de KPI Klanthinder berekend. Om deze berekening zo accuraat mogelijk te krijgen, is het van belang dat TVTA\'s bij incidenten op de juiste wijze worden geregistreerd. Als de Infra weer beschikbaar is, gelogd in SpoorWeb als \'opstart is mogelijk\' mogen de TVTA\'s die na deze tijd ontstaan niet meer aan het incident gekoppeld worden. Deze moeten worden gekoppeld aan de reden waardoor ze ontstaan. Dus als er geen personeel aanwezig is, moet de TVTA aan de tegel C1 afwezigheid Personeel gekoppeld worden.\n\nMeer informatie over Klanthinder vind je in de achtergrondinformatie Klanthinder.\n\nAssetmanagement gebruikt de informatie uit Monitoring onder andere om te kijken waar inzet van BOA\'s nodig is, of om extra inspecties in te zetten, of andere aanvullende acties uit te zetten.\n\nOok vervoerders gebruiken de gegevens uit Monitoring om verbeteringen door te voeren. Zo kunnen er aanpassingen aan het materieel gedaan worden zodat vertragingen in de toekomst minder voorkomen.\n\nOok veiligheidsincidenten moeten worden gelogd in Monitoring. Deze gegevens komen rechtstreeks in het systeem Promise terecht van de afdeling Veiligheid. Van deze meldingen wordt eerst gecheckt of de registratie terecht is. Daarna bepaald de afdeling Veiligheid of er een feitenrapportage moet worden opgesteld en of er een vervolgonderzoek moet worden ingesteld.\n\nOok zaken die niet hebben geleid tot een incident, maar wel een gevaarlijke situatie zijn of kunnen worden, zijn voor de afdeling Veiligheid belangrijk.',
+                            "Met de eerder genoemde resultaten worden meerdere acties uitgezet. Zo wordt de KPI Klanthinder berekend. Om deze berekening zo accuraat mogelijk te krijgen, is het van belang dat TVTA's bij incidenten op de juiste wijze worden geregistreerd. Als de Infra weer beschikbaar is, gelogd in SpoorWeb als 'opstart is mogelijk' mogen de TVTA's die na deze tijd ontstaan niet meer aan het incident gekoppeld worden. Deze moeten worden gekoppeld aan de reden waardoor ze ontstaan. Dus als er geen personeel aanwezig is, moet de TVTA aan de tegel C1 afwezigheid Personeel gekoppeld worden.\n\nMeer informatie over Klanthinder vind je in de achtergrondinformatie Klanthinder.\n\nAssetmanagement gebruikt de informatie uit Monitoring onder andere om te kijken waar inzet van BOA's nodig is, of om extra inspecties in te zetten, of andere aanvullende acties uit te zetten.\n\nOok vervoerders gebruiken de gegevens uit Monitoring om verbeteringen door te voeren. Zo kunnen er aanpassingen aan het materieel gedaan worden zodat vertragingen in de toekomst minder voorkomen.\n\nOok veiligheidsincidenten moeten worden gelogd in Monitoring. Deze gegevens komen rechtstreeks in het systeem Promise terecht van de afdeling Veiligheid. Van deze meldingen wordt eerst gecheckt of de registratie terecht is. Daarna bepaald de afdeling Veiligheid of er een feitenrapportage moet worden opgesteld en of er een vervolgonderzoek moet worden ingesteld.\n\nOok zaken die niet hebben geleid tot een incident, maar wel een gevaarlijke situatie zijn of kunnen worden, zijn voor de afdeling Veiligheid belangrijk.",
                       ),
                     ],
                   ),

@@ -1,10 +1,15 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIVertragingen {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_vertragingen,
+  // ignore: constant_identifier_names
   ai_aanpassen_plan_main,
+  // ignore: constant_identifier_names
   ai_monitoring,
+  // ignore: constant_identifier_names
   ai_klanthinder,
 }
 
@@ -19,23 +24,23 @@ class AIVertragingen extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIVertragingen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIVertragingen result) {
+            onSelected: (WhereToGoFromAIVertragingen result) async {
               if (result == WhereToGoFromAIVertragingen.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIVertragingen.ww_vertragingen) {
-                Navigator.pushNamed(context, 'ww_vertragingen');
+                await Navigator.pushNamed(context, 'ww_vertragingen');
               } else if (result ==
                   WhereToGoFromAIVertragingen.ai_aanpassen_plan_main) {
-                Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
+                await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
               } else if (result == WhereToGoFromAIVertragingen.ai_monitoring) {
-                Navigator.pushNamed(context, 'ai_monitoring');
+                await Navigator.pushNamed(context, 'ai_monitoring');
               } else if (result == WhereToGoFromAIVertragingen.ai_klanthinder) {
-                Navigator.pushNamed(context, 'ai_klanthinder');
+                await Navigator.pushNamed(context, 'ai_klanthinder');
               } else {
                 Navigator.pop(context);
               }
@@ -85,14 +90,14 @@ class AIVertragingen extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Card>[
               /*CARD #1*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       TitleText(
                         title: 'Vertragingen',
                       ),
@@ -128,7 +133,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Wanneer de vertragingssoort \'NB\' eenmaal is ingevoerd, mag de betrokken trein zijn rit pas vervolgen als je toestemming hebt van de DVL, want de DVL zal eerst een nieuw conflictvrij pad voor de betreffende trein moeten inplannen. Het oorspronkelijke (resterende) pad kan reeds vergeven zijn aan een andere vervoerder.',
+                            "Wanneer de vertragingssoort 'NB' eenmaal is ingevoerd, mag de betrokken trein zijn rit pas vervolgen als je toestemming hebt van de DVL, want de DVL zal eerst een nieuw conflictvrij pad voor de betreffende trein moeten inplannen. Het oorspronkelijke (resterende) pad kan reeds vergeven zijn aan een andere vervoerder.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -138,7 +143,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Wanneer je kan inschatten wanneer een trein gaat vertrekken, voer je een voorwaardelijke vertraging in.\n\nDe vertragingssoort \'Voorwaardelijke Vertraging\' kan op 3 manieren tot stand komen:',
+                            "Wanneer je kan inschatten wanneer een trein gaat vertrekken, voer je een voorwaardelijke vertraging in.\n\nDe vertragingssoort 'Voorwaardelijke Vertraging' kan op 3 manieren tot stand komen:",
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -154,7 +159,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            '\'Exact\' wordt door het systeem gemeten en derhalve niet gebruikt. Als je deze wel gebruikt, meet het systeem niet meer op het betreffende meetpunt.',
+                            "'Exact' wordt door het systeem gemeten en derhalve niet gebruikt. Als je deze wel gebruikt, meet het systeem niet meer op het betreffende meetpunt.",
                       ),
                     ],
                   ),
@@ -166,7 +171,7 @@ class AIVertragingen extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Verwerken van vertraging',
                       ),
@@ -216,7 +221,7 @@ class AIVertragingen extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle:
                             'Volgordewisseling in procesleiding a.g.v. vertraging verwerken (werking ARI)',
@@ -246,7 +251,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'ARI zal volgordewisseling op eindspoor zoveel mogelijk zelf voorkomen, tenzij ARI constateert dat volgordewisseling niet vermeden kan worden. In deze gevallen worden, zonder het procesplan te wijzigen, de planregels met melding teruggegeven aan de TRDL. Alle planregels die voorrang geven aan een planregel die wordt uitgezet voor of door ARI, worden ook uitgezet door ARI.\n\nBij gefaseerde rijweginstelling van planregels zal ARI de rijweg naar behoefte maximaal instellen tot vóór het conflictpunt. Pas als de rijweg weer beschikbaar is na het passeren van de voorrang krijgende trein(en) wordt de rijweginstelling voortgezet. Dit zou kunnen betekenen dat de melding \'volgordewisseling\' dus alleen zal verschijnen wanneer handmatig ingrijpen van een TRDL nodig is. Bij integrale rijweginstelling van planregels zal dit niet gebeuren. Hier wordt de planregel wel in behandeling genomen door ARI en zal er pas tot rijweginstelling worden overgegaan nadat de gehele rijweg beschikbaar komt.\n\nBij een volgordewisseling naar de vrije baan geef je een standaardmelding. Als de vertragingsmarge van een trein is overschreden en er geen afhandelingstrategie beschikbaar is of de strategie niet toepasbaar is, mag je de volgorde in de treindienst alleen wijzigen na toestemming van de DVL.',
+                            "ARI zal volgordewisseling op eindspoor zoveel mogelijk zelf voorkomen, tenzij ARI constateert dat volgordewisseling niet vermeden kan worden. In deze gevallen worden, zonder het procesplan te wijzigen, de planregels met melding teruggegeven aan de TRDL. Alle planregels die voorrang geven aan een planregel die wordt uitgezet voor of door ARI, worden ook uitgezet door ARI.\n\nBij gefaseerde rijweginstelling van planregels zal ARI de rijweg naar behoefte maximaal instellen tot vóór het conflictpunt. Pas als de rijweg weer beschikbaar is na het passeren van de voorrang krijgende trein(en) wordt de rijweginstelling voortgezet. Dit zou kunnen betekenen dat de melding 'volgordewisseling' dus alleen zal verschijnen wanneer handmatig ingrijpen van een TRDL nodig is. Bij integrale rijweginstelling van planregels zal dit niet gebeuren. Hier wordt de planregel wel in behandeling genomen door ARI en zal er pas tot rijweginstelling worden overgegaan nadat de gehele rijweg beschikbaar komt.\n\nBij een volgordewisseling naar de vrije baan geef je een standaardmelding. Als de vertragingsmarge van een trein is overschreden en er geen afhandelingstrategie beschikbaar is of de strategie niet toepasbaar is, mag je de volgorde in de treindienst alleen wijzigen na toestemming van de DVL.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -256,7 +261,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'De planregel blijft, totdat de voorrang krijgende planregel is ingesteld, in je plan staan en toont \'zeegroen\'. Indien om wat voor reden een planregel bovenin je plan staat met hetzelfde eindspoor (nader bericht of onverwerkte vertraging etc.) zullen de nog in te stellen planregels, indien deze aan de ARI voorwaarden voldoen, niet (geheel) worden ingesteld. Dit  betekent dat er geen rijwegen worden ingesteld naar het betrokken eindspoor van de bovenste planregel. Om dit te voorkomen is het belangrijk om je plan op orde te hebben. De stelregel is dat je moet zorgen dat de situatie in je plan overeenkomt met de situatie \'buiten\'. Om dit te realiseren is het belangrijk om regelmatig vertraging te verwerken en te plannen.',
+                            "De planregel blijft, totdat de voorrang krijgende planregel is ingesteld, in je plan staan en toont 'zeegroen'. Indien om wat voor reden een planregel bovenin je plan staat met hetzelfde eindspoor (nader bericht of onverwerkte vertraging etc.) zullen de nog in te stellen planregels, indien deze aan de ARI voorwaarden voldoen, niet (geheel) worden ingesteld. Dit  betekent dat er geen rijwegen worden ingesteld naar het betrokken eindspoor van de bovenste planregel. Om dit te voorkomen is het belangrijk om je plan op orde te hebben. De stelregel is dat je moet zorgen dat de situatie in je plan overeenkomt met de situatie 'buiten'. Om dit te realiseren is het belangrijk om regelmatig vertraging te verwerken en te plannen.",
                       ),
                     ],
                   ),
@@ -268,7 +273,7 @@ class AIVertragingen extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Afhandelingsafspraken',
                       ),
@@ -286,7 +291,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 2,
                         text:
-                            '* WRT (Wachttijden Reizigerstreinen);\n\n* Afhandelingsstrategieën per trein/treinserie;\n\n* If/Then scenario\'s.',
+                            "* WRT (Wachttijden Reizigerstreinen);\n\n* Afhandelingsstrategieën per trein/treinserie;\n\n* If/Then scenario's.",
                       ),
                       SizedBoxH(),
                       BodyText(
@@ -313,7 +318,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Om niet bij elke vertraging contact te doen plaatsvinden tussen TRDL, DVL en vervoerder zijn er van tevoren al afspraken gemaakt hoe te handelen bij bepaalde vertragingen. Deze afspraken zijn vastgelegd in het TAD.\n\nAls de vertraging van een trein binnen de grenzen van het TAD valt, voert de TRDL de hierbij genoemde afhandeling uit. Staat de afhandeling niet in de TAD dan is het aan de expertise van de TRDL en DVL hoe deze situatie op te lossen. Vaak zal er geen aansluiting overgenomen worden.\n\nIn een TAD zijn de WRT (wachtijden reizgerstreinen) en If/Then scenario\'s samengevoegd. Als de uitvoering van het TAD een volgordewisseling tot gevolg heeft, geef je dit door aan je buurTRDL. Als er geen goede oplossing voorhanden is overleg je met de DVL.',
+                            "Om niet bij elke vertraging contact te doen plaatsvinden tussen TRDL, DVL en vervoerder zijn er van tevoren al afspraken gemaakt hoe te handelen bij bepaalde vertragingen. Deze afspraken zijn vastgelegd in het TAD.\n\nAls de vertraging van een trein binnen de grenzen van het TAD valt, voert de TRDL de hierbij genoemde afhandeling uit. Staat de afhandeling niet in de TAD dan is het aan de expertise van de TRDL en DVL hoe deze situatie op te lossen. Vaak zal er geen aansluiting overgenomen worden.\n\nIn een TAD zijn de WRT (wachtijden reizgerstreinen) en If/Then scenario's samengevoegd. Als de uitvoering van het TAD een volgordewisseling tot gevolg heeft, geef je dit door aan je buurTRDL. Als er geen goede oplossing voorhanden is overleg je met de DVL.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -348,12 +353,12 @@ class AIVertragingen extends StatelessWidget {
                       SizedBoxH(),
                       BoldText(
                         indents: 0,
-                        boldtext: 'If/Then scenario\'s',
+                        boldtext: "If/Then scenario's",
                       ),
                       BodyText(
                         indents: 1,
                         text:
-                            '- If/Then-scenario\'s zijn bedoeld voor vertragingen in de treindienst die op de knoop ontstaan;\n\n- Ze worden van kracht als een trein een vooraf bepaalde vertragingsmarge overschrijdt;\n\n- De TRDL is bevoegd de treindienst op zijn knoop af te wikkelen volgens de if/then-scenario\'s.',
+                            "- If/Then-scenario's zijn bedoeld voor vertragingen in de treindienst die op de knoop ontstaan;\n\n- Ze worden van kracht als een trein een vooraf bepaalde vertragingsmarge overschrijdt;\n\n- De TRDL is bevoegd de treindienst op zijn knoop af te wikkelen volgens de if/then-scenario's.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -401,7 +406,7 @@ class AIVertragingen extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Bijsturings- en/of plannormen',
                       ),
@@ -495,7 +500,7 @@ class AIVertragingen extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Klaarmelding',
                       ),
@@ -531,7 +536,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Welke trein de klaarmelding moet ontvangen;\n\n- Waarom;\n\n- De prognose;\n\n- Wie er verantwoordelijk is voor het \'klaarmelden\' van de trein op het moment dat deze weer gereed is voor vertrek.',
+                            "- Welke trein de klaarmelding moet ontvangen;\n\n- Waarom;\n\n- De prognose;\n\n- Wie er verantwoordelijk is voor het 'klaarmelden' van de trein op het moment dat deze weer gereed is voor vertrek.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -547,7 +552,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- In je planscherm zoek je de planregel op van de betreffende trein. Deze muteer je naar het mutatievenster.\n\n- Klik in het mutatievenster op de \'K\' van Klaarmelding. Er opent zich nu een pop-up venster.',
+                            "- In je planscherm zoek je de planregel op van de betreffende trein. Deze muteer je naar het mutatievenster.\n\n- Klik in het mutatievenster op de 'K' van Klaarmelding. Er opent zich nu een pop-up venster.",
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -558,7 +563,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- In het venster kun je één of meerdere klaarmeldingen aan de planregel toevoegen. Vul de reden van de klaarmelding in en noteer welke functionaris verantwoordelijk is.\n\n- Als je de melding hebt toegevoegd, klik je op \'Voer In\'. De pop-up verdwijnt weer.',
+                            "- In het venster kun je één of meerdere klaarmeldingen aan de planregel toevoegen. Vul de reden van de klaarmelding in en noteer welke functionaris verantwoordelijk is.\n\n- Als je de melding hebt toegevoegd, klik je op 'Voer In'. De pop-up verdwijnt weer.",
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -569,7 +574,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Je kunt nu in het mutatiescherm zien dat de planregel een klaarmelding heeft, omdat de \'K\' dikgedrukt wordt weergegeven.\n\n- Je kunt de planregel nu weer invoeren in het plan met \'Voer in plan\' of \'Voer alles in plan\'.',
+                            "- Je kunt nu in het mutatiescherm zien dat de planregel een klaarmelding heeft, omdat de 'K' dikgedrukt wordt weergegeven.\n\n- Je kunt de planregel nu weer invoeren in het plan met 'Voer in plan' of 'Voer alles in plan'.",
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -580,7 +585,7 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'In het planscherm zal de planregel met de klaarmelding voorzien zijn van een \'K\'. Voer indien van toepassing nu de verwachte vertraging in en verwerk deze.',
+                            "In het planscherm zal de planregel met de klaarmelding voorzien zijn van een 'K'. Voer indien van toepassing nu de verwachte vertraging in en verwerk deze.",
                       ),
                       SizedBoxH(),
                       InsertImage(
@@ -601,13 +606,13 @@ class AIVertragingen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- Selecteer de betreffende planregel met de klaarmelding;\n\n- Ga nu naar de planmenubalk en klik op de functieknop \'Klaar\'. Er opent een zelfde pop-up als bij de waarschuwing;\n\n- Klik op elke klaarmelding die voor deze treinactiviteit is binnengekomen op het ruitje onder \'Ja\'.',
+                            "- Selecteer de betreffende planregel met de klaarmelding;\n\n- Ga nu naar de planmenubalk en klik op de functieknop 'Klaar'. Er opent een zelfde pop-up als bij de waarschuwing;\n\n- Klik op elke klaarmelding die voor deze treinactiviteit is binnengekomen op het ruitje onder 'Ja'.",
                       ),
                       SizedBoxH(),
                       BodyText(
                         indents: 0,
                         text:
-                            'Hierna kun je de pop-up sluiten door op \'Voer in\' te klikken.\n\nAls alle klaarmeldingen zijn afgevinkt zal de \'K\' in de planregel (in het planscherm) veranderen in een \'-\'.\n\nDoor op deze manier een klaarmelding af te handelen weet iedereen die met jou meekijkt ook dat de trein is klaargemeld. Als je de planregel zou instellen zonder de klaarmelding af te handelen, blijft de \'K\' ook in de historie achter de planregel staan.',
+                            "Hierna kun je de pop-up sluiten door op 'Voer in' te klikken.\n\nAls alle klaarmeldingen zijn afgevinkt zal de 'K' in de planregel (in het planscherm) veranderen in een '-'.\n\nDoor op deze manier een klaarmelding af te handelen weet iedereen die met jou meekijkt ook dat de trein is klaargemeld. Als je de planregel zou instellen zonder de klaarmelding af te handelen, blijft de 'K' ook in de historie achter de planregel staan.",
                       ),
                     ],
                   ),

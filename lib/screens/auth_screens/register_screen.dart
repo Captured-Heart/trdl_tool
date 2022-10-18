@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
@@ -34,7 +34,7 @@ class _RegisterState extends State<Register> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Widget>[
               const Padding(
                 padding: EdgeInsets.only(
                   top: 16.0,
@@ -53,9 +53,9 @@ class _RegisterState extends State<Register> {
                     padding: const EdgeInsets.all(24.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
+                      children: <Widget>[
                         Row(
-                          children: const [
+                          children: const <Expanded>[
                             Expanded(
                               child: TitleText(title: 'Registreer'),
                             ),
@@ -63,7 +63,7 @@ class _RegisterState extends State<Register> {
                         ),
                         const SizedBoxH(),
                         Row(
-                          children: [
+                          children: <Widget>[
                             Expanded(
                               /*EMAIL TEXTFIELD*/
                               child: TextField(
@@ -82,7 +82,7 @@ class _RegisterState extends State<Register> {
                         ),
                         const SizedBoxH(),
                         Row(
-                          children: [
+                          children: <Expanded>[
                             Expanded(
                               /*PASSWORD TEXTFIELD*/
                               child: TextField(
@@ -101,7 +101,7 @@ class _RegisterState extends State<Register> {
                         ),
                         const SizedBoxH(),
                         Row(
-                          children: [
+                          children: <Expanded>[
                             Expanded(
                               /*CHECK PASSWORD TEXTFIELD*/
                               child: TextField(
@@ -121,7 +121,7 @@ class _RegisterState extends State<Register> {
                         const SizedBoxH(),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
+                          children: <ElevatedButton>[
                             ElevatedButton(
                               onPressed: () async {
                                 /*SUPERUSER ACCOUNT*/
@@ -132,7 +132,7 @@ class _RegisterState extends State<Register> {
                                     password: _password1Ctrl.text,
                                   );
                                   if (mounted) {
-                                    Navigator.pushReplacementNamed(
+                                    await Navigator.pushReplacementNamed(
                                       context,
                                       'verify_screen',
                                     );
@@ -167,7 +167,7 @@ class _RegisterState extends State<Register> {
                                       password: _password1Ctrl.text,
                                     );
                                     if (mounted) {
-                                      Navigator.pushReplacementNamed(
+                                      await Navigator.pushReplacementNamed(
                                         context,
                                         'verify_screen',
                                       );
@@ -209,11 +209,11 @@ class _RegisterState extends State<Register> {
               const SizedBoxH(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
+                children: <TextButton>[
                   TextButton(
-                    onPressed: () {
-                      /*BACK TO LOGIN_SCREEN*/
-                      Navigator.pushNamed(context, 'login_screen');
+                    onPressed: () async {
+                      /// Back to loginscreen
+                      await Navigator.pushNamed(context, 'login_screen');
                     },
                     child: const Text(
                       Strings.registerAlEenAccount,

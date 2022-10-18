@@ -1,4 +1,4 @@
-import './all_imports.dart';
+import 'all_imports.dart';
 
 Future<void> main() async {
   //Make sure everything is in place, before running the app

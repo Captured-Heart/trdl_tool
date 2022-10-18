@@ -1,9 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIOngeplandWerkMaterieel {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_ongepland_werk_materieel,
+  // ignore: constant_identifier_names
   ai_infra_ter_beschikking,
+  // ignore: constant_identifier_names
   ai_ongepland_werk_main,
 }
 
@@ -18,25 +22,28 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIOngeplandWerkMaterieel>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIOngeplandWerkMaterieel result) {
+            onSelected: (WhereToGoFromAIOngeplandWerkMaterieel result) async {
               if (result == WhereToGoFromAIOngeplandWerkMaterieel.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIOngeplandWerkMaterieel
                       .ww_ongepland_werk_materieel) {
-                Navigator.pushNamed(context, 'ww_ongepland_werk_materieel');
+                await Navigator.pushNamed(
+                  context,
+                  'ww_ongepland_werk_materieel',
+                );
               } else if (result ==
                   WhereToGoFromAIOngeplandWerkMaterieel
                       .ai_infra_ter_beschikking) {
-                Navigator.pushNamed(context, 'ai_infra_ter_beschikking');
+                await Navigator.pushNamed(context, 'ai_infra_ter_beschikking');
               } else if (result ==
                   WhereToGoFromAIOngeplandWerkMaterieel
                       .ai_ongepland_werk_main) {
-                Navigator.pushNamed(context, 'ai_ongepland_werk_main');
+                await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
               } else {
                 Navigator.pop(context);
               }
@@ -82,14 +89,14 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Card>[
               /*CARD #1*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       TitleText(
                         title: 'Ongepland werk aan materieel',
                       ),
@@ -108,7 +115,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Storing aan het materieel',
                       ),
@@ -128,7 +135,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Bij een veiligheidsstoring aan het materieel zal een MCN eerst proberen om het gevaar te beheersen. Denk hierbij aan een defecte treeplank. Als de treeplank doormidden is gebroken, kan gevaar ontstaan bij het in- en uitstappen. De MCN zal in zo\'n geval de deur afsluiten, stickers \'defect\' op de deur plakken en dit doorgeven aan het MBN (Materieel Besturingscentrum NS Materieel) en aan jou. In dat geval kan de trein verder rijden en zal deze later hersteld worden.\n\nEr zijn echter ook veiligheidsstoringen aan het materieel die een MCN niet zelf kan oplossen. Ook dan heeft hij contact met het MBN. Een voorbeeld is dat een MCN in de cabine de melding \'deuren dicht\' krijgt, maar dat de deuren van de trein wel open staan. Als hij dit niet kan oplossen en het MBN kan de storing op afstand ook niet verhelpen, dan mag de trein niet vertrekken. Een MCN zal veiligheidsstoringen aan het materieel melden aan zijn eigen organisatie en aan jou. Je neemt die informatie ter kennisgeving aan.',
+                            "Bij een veiligheidsstoring aan het materieel zal een MCN eerst proberen om het gevaar te beheersen. Denk hierbij aan een defecte treeplank. Als de treeplank doormidden is gebroken, kan gevaar ontstaan bij het in- en uitstappen. De MCN zal in zo'n geval de deur afsluiten, stickers 'defect' op de deur plakken en dit doorgeven aan het MBN (Materieel Besturingscentrum NS Materieel) en aan jou. In dat geval kan de trein verder rijden en zal deze later hersteld worden.\n\nEr zijn echter ook veiligheidsstoringen aan het materieel die een MCN niet zelf kan oplossen. Ook dan heeft hij contact met het MBN. Een voorbeeld is dat een MCN in de cabine de melding 'deuren dicht' krijgt, maar dat de deuren van de trein wel open staan. Als hij dit niet kan oplossen en het MBN kan de storing op afstand ook niet verhelpen, dan mag de trein niet vertrekken. Een MCN zal veiligheidsstoringen aan het materieel melden aan zijn eigen organisatie en aan jou. Je neemt die informatie ter kennisgeving aan.",
                       ),
                     ],
                   ),
@@ -140,7 +147,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Herstel',
                       ),
@@ -160,7 +167,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       SubTitleText(
                         subtitle: 'Storingsmonteur (STMT)',
                       ),
@@ -168,7 +175,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Wanneer een MCN van NSR problemen ondervindt met zijn trein meldt hij het defect aan het MBN (Materieel Besturingscentrum NS Materieel). Het MBN schakelt de STMT van NS Materieel in, deze zal bij de eerste gelegenheid het defect herstellen. Niet alle vervoerders werken samen met NS Materieel, zij hebben een soort wegenwachtservice om storingen te verhelpen.\n\nAls er tijdens de dienst herstelwerkzaamheden aan de trein uitgevoerd moeten worden is het jouw taak het treinverkeer hier zo min mogelijk hinder van te laten ondervinden en ervoor te zorgen dat de veiligheid van het treinverkeer gehandhaafd blijft. Kleine defecten worden dan door een STMT hersteld. Denk hierbij aan vaste remmen, deuren die niet sluiten of lampen die vervangen moeten worden.\n\nDoor jouw veiligheidsmaatregelen en die van de STMT is een veilige werkplek dubbel gewaarborgd.\n\nRisico\'s die je uitsluit zijn bijvoorbeeld:',
+                            "Wanneer een MCN van NSR problemen ondervindt met zijn trein meldt hij het defect aan het MBN (Materieel Besturingscentrum NS Materieel). Het MBN schakelt de STMT van NS Materieel in, deze zal bij de eerste gelegenheid het defect herstellen. Niet alle vervoerders werken samen met NS Materieel, zij hebben een soort wegenwachtservice om storingen te verhelpen.\n\nAls er tijdens de dienst herstelwerkzaamheden aan de trein uitgevoerd moeten worden is het jouw taak het treinverkeer hier zo min mogelijk hinder van te laten ondervinden en ervoor te zorgen dat de veiligheid van het treinverkeer gehandhaafd blijft. Kleine defecten worden dan door een STMT hersteld. Denk hierbij aan vaste remmen, deuren die niet sluiten of lampen die vervangen moeten worden.\n\nDoor jouw veiligheidsmaatregelen en die van de STMT is een veilige werkplek dubbel gewaarborgd.\n\nRisico's die je uitsluit zijn bijvoorbeeld:",
                       ),
                       SizedBoxH(),
                       BodyText(
