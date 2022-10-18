@@ -1,8 +1,11 @@
 import '/all_imports.dart';
 
 enum WhereToGoFromAIStappenplanVersperringen {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_stappenplan_versperringen,
+  // ignore: constant_identifier_names
   ai_aanpassen_plan_main,
 }
 
@@ -17,7 +20,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIStappenplanVersperringen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
@@ -28,13 +31,14 @@ class AIStappenplanVersperringen extends StatelessWidget {
               } else if (result ==
                   WhereToGoFromAIStappenplanVersperringen
                       .ww_stappenplan_versperringen) {
-                await Navigator.pushNamed(context, 'ww_stappenplan_versperringen');
+                await Navigator.pushNamed(
+                    context, 'ww_stappenplan_versperringen');
               } else if (result ==
                   WhereToGoFromAIStappenplanVersperringen
                       .ai_aanpassen_plan_main) {
                 await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
               } else {
-                await Navigator.pop(context);
+                Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
@@ -77,7 +81,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       TitleText(
                         title: 'Stappenplan Versperringen Achtergrond',
                       ),

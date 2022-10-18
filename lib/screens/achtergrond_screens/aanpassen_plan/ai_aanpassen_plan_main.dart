@@ -1,7 +1,9 @@
 import '/all_imports.dart';
 
 enum WhereToGoFromAIAanpassenPlanMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_aanpassen_plan_main,
 }
 
@@ -16,7 +18,7 @@ class AIAanpassenPlanMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinfo',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIAanpassenPlanMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
@@ -81,7 +83,7 @@ class AIAanpassenPlanMain extends StatelessWidget {
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Aanpassen plan - basis',
                           destination: 'ai_aanpassen_plan',
