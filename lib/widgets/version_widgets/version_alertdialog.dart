@@ -46,8 +46,9 @@ Future<dynamic> showVersionUpdatePopup(BuildContext context) {
                   date: '2022-09-09: 0.2.8',
                 ),
                 ChangesMade(
-                    changes:
-                        '- Achtergrondinformatie verder uitgebreid (15);\n- Overflow bug aanpakt;\n- Gradle naar laatste versie;\n- Firebase opnieuw toegevoegd + json;\n- Flexcolorscheme aangepast.'),
+                  changes: '- Achtergrondinformatie verder uitgebreid (15);\n- '
+                      'Overflow bug aanpakt;\n- Gradle naar laatste versie;\n- Firebase opnieuw toegevoegd + json;\n- Flexcolorscheme aangepast.',
+                ),
                 SizedBoxH(),
                 DateChanged(
                   date: '2022-09-04: 0.2.7',
