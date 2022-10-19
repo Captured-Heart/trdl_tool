@@ -20,7 +20,7 @@ class WelcomeScreenState extends State<WelcomeScreen> {
                 fit: FlexFit.tight,
                 child: Image.asset(
                   /*IMAGE FROM WELCOME_ITEMS*/
-                  item['image'],
+                  item['image']!,
                   fit: BoxFit.fitWidth,
                   width: 220.0,
                   alignment: Alignment.bottomCenter,
@@ -35,7 +35,7 @@ class WelcomeScreenState extends State<WelcomeScreen> {
                     children: <Widget>[
                       Text(
                         /*HEADER FROM WELCOME_ITEMS*/
-                        item['header'],
+                        item['header']!,
                         style: TextStyle(
                           fontSize: 50.0,
                           color: greenMoneyColorsLight.primary,
@@ -43,7 +43,7 @@ class WelcomeScreenState extends State<WelcomeScreen> {
                       ),
                       Text(
                         /*DESCRIPTION FROM WELCOME_ITEMS*/
-                        item['description'],
+                        item['description']!,
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontSize: 16.0,

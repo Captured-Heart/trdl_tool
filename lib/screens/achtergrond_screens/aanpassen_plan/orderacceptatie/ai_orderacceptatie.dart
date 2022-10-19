@@ -1,7 +1,9 @@
 import '/all_imports.dart';
 
 enum WhereToGoFromAIOrderacceptatie {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_orderacceptatie,
 }
 
@@ -27,7 +29,7 @@ class AIOrderacceptatie extends StatelessWidget {
                   WhereToGoFromAIOrderacceptatie.ww_orderacceptatie) {
                 await Navigator.pushNamed(context, 'ww_orderacceptatie');
               } else {
-                await Navigator.pop(context);
+                Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
