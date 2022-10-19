@@ -836,3 +836,7 @@ linter:
     # VG Analysis    disabled : https://pub.dev/packages/very_good_analysis
     # RydMike        disabled : https://gist.github.com/rydmike/fdb53ddd933c37d20e6f3188a936cd4c
     unnecessary_final: false
+
+    # Addition plotsklapps, after Autoformat on Ctrl-S this gets deleted, so
+    # I don't want to use it anymore
+    eol_at_end_of_file: false
