@@ -11,31 +11,27 @@ Future<dynamic> showVersionUpdatePopup(BuildContext context) {
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
+              children: const <Widget>[
                 CurrentVersion(
                   versionNumber: '0.3.1',
                 ),
                 SizedBoxH(),
                 DateChanged(
-                  //TODO: Vul juiste naam in!
+                  //TODO: Vul juiste datum in!
                   date: '2022-10-??: 0.3.1',
                 ),
                 ChangesMade(
-                  changes:
-                      '- Routes naar apart bestand verplaatst;\n- Bestandspaden verkort;\n- Comments aangepast naar Markdown;',
+                  changes: '- Routes naar apart bestand verplaatst;\n- '
+                      'Bestandspaden verkort;\n- Comments aangepast naar '
+                      'DOC stijl;\n- Nieuwe linter gebruikt (STRENG);',
                 ),
                 SizedBoxH(),
                 DateChanged(
                   date: '2022-10-13: 0.3.0',
                 ),
                 ChangesMade(
-                  changes: '- Achtergrondinformatie verder uitgebreid (17);\n- '
-                      'IconButton in CircleAvatar gecentreerd;\n- App '
-                      'klaargestoomd voor Android 13;\n- Diverse '
-                      'dependency upgrades;\n- Diverse packages '
-                      'verwijderd;\n- Riverpod toegevoegd;\n- ThemeMode '
-                      'en ThemeColor aanpasbaar gemaakt;\n- AlertDialog '
-                      'gewijzigd naar Drawer.',
+                  changes:
+                      '- Achtergrondinformatie verder uitgebreid (17);\n- IconButton in CircleAvatar gecentreerd;\n- App klaargestoomd voor Android 13;\n- Diverse dependency upgrades;\n- Diverse packages verwijderd;\n- Riverpod toegevoegd;\n- ThemeMode en ThemeColor aanpasbaar gemaakt;\n- AlertDialog gewijzigd naar Drawer.',
                 ),
                 SizedBoxH(),
                 DateChanged(
@@ -50,9 +46,8 @@ Future<dynamic> showVersionUpdatePopup(BuildContext context) {
                   date: '2022-09-09: 0.2.8',
                 ),
                 ChangesMade(
-                  changes:
-                      '- Achtergrondinformatie verder uitgebreid (15);\n- Overflow bug aanpakt;\n- Gradle naar laatste versie;\n- Firebase opnieuw toegevoegd + json;\n- Flexcolorscheme aangepast.',
-                ),
+                    changes:
+                        '- Achtergrondinformatie verder uitgebreid (15);\n- Overflow bug aanpakt;\n- Gradle naar laatste versie;\n- Firebase opnieuw toegevoegd + json;\n- Flexcolorscheme aangepast.'),
                 SizedBoxH(),
                 DateChanged(
                   date: '2022-09-04: 0.2.7',
@@ -99,7 +94,7 @@ Future<dynamic> showVersionUpdatePopup(BuildContext context) {
                 ),
                 ChangesMade(
                   changes:
-                      '- Navigatie aangepast, nog niet alle pagina\'s klaar;\n- Kleuren minder groen, rustiger UI',
+                      "- Navigatie aangepast, nog niet alle pagina's klaar;\n- Kleuren minder groen, rustiger UI",
                 ),
                 SizedBoxH(),
                 DateChanged(
@@ -162,7 +157,7 @@ Future<dynamic> showVersionUpdatePopup(BuildContext context) {
                 ),
                 ChangesMade(
                   changes:
-                      '- Button aangepast naar \'VERDER\' ipv \'OVERSLAAN\' in welkomstscherm op laatste scherm (Bedankt, Gerrit!)\n - Achtergrondinformatie verder uitgebreid (7)',
+                      "- Button aangepast naar 'VERDER' ipv 'OVERSLAAN' in welkomstscherm op laatste scherm (Bedankt, Gerrit!)\n - Achtergrondinformatie verder uitgebreid (7)",
                 ),
                 SizedBoxH(),
                 DateChanged(
@@ -178,7 +173,7 @@ Future<dynamic> showVersionUpdatePopup(BuildContext context) {
                 ),
                 ChangesMade(
                   changes:
-                      '- Logo\'s en iconen aangepast\n - Achtergrondinformatie verder uitgebreid (5)',
+                      "- Logo's en iconen aangepast\n - Achtergrondinformatie verder uitgebreid (5)",
                 ),
                 SizedBoxH(),
                 DateChanged(

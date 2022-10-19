@@ -525,7 +525,7 @@ linter:
     # RydMike                 : https://gist.github.com/rydmike/fdb53ddd933c37d20e6f3188a936cd4c
     #   PACKAGE:     enabled  : By commenting it out. (Default, even if is not a package, we start with this.)
     #   APPLICATION: disabled : With false value. (When/if short lines become problematic. We sometimes like 100 chars.)
-    # lines_longer_than_80_chars: false
+    lines_longer_than_80_chars: false
 
     # DO define default behavior outside switch statements.
     #
@@ -840,3 +840,7 @@ linter:
     # Addition plotsklapps, after Autoformat on Ctrl-S this gets deleted, so
     # I don't want to use it anymore
     eol_at_end_of_file: false
+
+    # I'm a one-man-show, so I don't need to put my name everywhere or leave
+    # website information.
+    flutter_style_todos: false
