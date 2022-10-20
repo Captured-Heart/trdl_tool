@@ -32,7 +32,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                   WhereToGoFromAIStappenplanVersperringen
                       .ww_stappenplan_versperringen) {
                 await Navigator.pushNamed(
-                    context, 'ww_stappenplan_versperringen');
+                    context, 'ww_stappenplan_versperringen',);
               } else if (result ==
                   WhereToGoFromAIStappenplanVersperringen
                       .ai_aanpassen_plan_main) {
@@ -230,7 +230,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'De DVL neemt in overleg met de buurDVL en de VLC maatregelen om (verder) vollopen van de pplg\'s te voorkomen. De VLC kan aanvullende ontluchtingsmaatregelen nemen en buffert goederentreinen die onderweg zijn of leidt deze om.',
+                            "De DVL neemt in overleg met de buurDVL en de VLC maatregelen om (verder) vollopen van de pplg's te voorkomen. De VLC kan aanvullende ontluchtingsmaatregelen nemen en buffert goederentreinen die onderweg zijn of leidt deze om.",
                       ),
                       SizedBoxH(),
                       BoldText(
@@ -385,7 +385,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       BodyText(
                         indents: 1,
                         text:
-                            '- VLC logt \'opstarten mogelijk\';\n\n- VLC en DVL maken werkafspraken.',
+                            "- VLC logt 'opstarten mogelijk';\n\n- VLC en DVL maken werkafspraken.",
                       ),
                       SizedBoxH(),
                       BoldText(
