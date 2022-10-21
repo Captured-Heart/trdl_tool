@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIIncidentenMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_incidenten_main,
+  // ignore: constant_identifier_names
   ai_inzetten_railvoertuig,
 }
 
@@ -38,15 +41,24 @@ class AIIncidentenMain extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromAIIncidentenMain>>[
               const PopupMenuItem<WhereToGoFromAIIncidentenMain>(
                 value: WhereToGoFromAIIncidentenMain.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
               const PopupMenuItem<WhereToGoFromAIIncidentenMain>(
                 value: WhereToGoFromAIIncidentenMain.ww_incidenten_main,
-                child: MenuItemContent(icon: Icons.train, text: 'WW Incidenten',),
+                child: MenuItemContent(
+                  icon: Icons.train,
+                  text: 'WW Incidenten',
+                ),
               ),
               const PopupMenuItem<WhereToGoFromAIIncidentenMain>(
                 value: WhereToGoFromAIIncidentenMain.ai_inzetten_railvoertuig,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Inzetten ICB',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Inzetten ICB',
+                ),
               ),
             ],
           ),
