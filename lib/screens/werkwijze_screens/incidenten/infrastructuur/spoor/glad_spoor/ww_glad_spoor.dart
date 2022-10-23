@@ -71,13 +71,13 @@ class WWGladSpoor extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Wanneer je een melding krijgt van een glad spoor licht je de DVL.\n\nBij haltes op de vrije baan verander je de \'Stops\' in \'Doors\'.\n\nBij een stop-/doorschakeling in bediend gebied (uitgezonderd kruisingsstations op enkelsporige baanvakken):',
+                          "Wanneer je een melding krijgt van een glad spoor licht je de DVL.\n\nBij haltes op de vrije baan verander je de 'Stops' in 'Doors'.\n\nBij een stop-/doorschakeling in bediend gebied (uitgezonderd kruisingsstations op enkelsporige baanvakken):",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '- Voeg je opgedeelde rijwegen met \'D\' of \'K\' activiteit samen;\n\n- Verander je het \'naar\'-spoor van de aankomstregel in het \'naar\'-spoor van de vertrekregel;\n\n- Hef je de vertrekregel op;\n\n- Voeg je doorbediening toe aan de aankomstregel.',
+                          "- Voeg je opgedeelde rijwegen met 'D' of 'K' activiteit samen;\n\n- Verander je het 'naar'-spoor van de aankomstregel in het 'naar'-spoor van de vertrekregel;\n\n- Hef je de vertrekregel op;\n\n- Voeg je doorbediening toe aan de aankomstregel.",
                     ),
                     SizedBoxH(),
                     BodyText(

@@ -36,11 +36,15 @@ class AICommunicatieMain extends StatelessWidget {
               } else if (result ==
                   WhereToGoFromAICommunicatieMain.ww_mondelinge_communicatie) {
                 await Navigator.pushNamed(
-                    context, 'ww_mondelinge_communicatie');
+                  context,
+                  'ww_mondelinge_communicatie',
+                );
               } else if (result ==
                   WhereToGoFromAICommunicatieMain.ai_mondelinge_communicatie) {
                 await Navigator.pushNamed(
-                    context, 'ai_mondelinge_communicatie');
+                  context,
+                  'ai_mondelinge_communicatie',
+                );
               } else if (result ==
                   WhereToGoFromAICommunicatieMain.ai_communicatiemiddelen) {
                 await Navigator.pushNamed(context, 'ai_communicatiemiddelen');
@@ -173,7 +177,7 @@ class AICommunicatieMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     InsertImage(
                       image:

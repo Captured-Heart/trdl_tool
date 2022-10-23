@@ -118,7 +118,7 @@ class AIVervoersregeling extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Buitengewoon vervoer',
                     ),
@@ -181,7 +181,7 @@ class AIVervoersregeling extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Standaardvoorwaarden BP 1, 2 en 3',
                     ),

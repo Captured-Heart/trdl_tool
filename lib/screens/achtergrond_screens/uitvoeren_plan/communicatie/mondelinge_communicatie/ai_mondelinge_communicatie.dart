@@ -271,25 +271,25 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Komt het sein niet uit de stand \'stop\' dan ga je eerst de zogenaamde rijwegvoorwaarden handmatig bewerkstelligen en geef je een aanwijzing \'STS\' af. Hierop staat aangegeven wat de machinist moet doen.',
+                          "- Komt het sein niet uit de stand 'stop' dan ga je eerst de zogenaamde rijwegvoorwaarden handmatig bewerkstelligen en geef je een aanwijzing 'STS' af. Hierop staat aangegeven wat de machinist moet doen.",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '- Heb je te maken met een bekend gevaar (toestand baan, derden langs te baan etc.) geef je aanwijzing \'VR\' af. Je geeft aan van waar tot waar het zogenaamde gevaar zich bevindt en laat de machinist daar rijden met maximaal 40 km/h (of lager mocht dat nodig zijn). Mocht je aanvullende informatie nodig hebben kan je de machinist vragen te schouwen. Dan kruis je het vakje \'schouwen\' ook aan op de aanwijzing.',
+                          "- Heb je te maken met een bekend gevaar (toestand baan, derden langs te baan etc.) geef je aanwijzing 'VR' af. Je geeft aan van waar tot waar het zogenaamde gevaar zich bevindt en laat de machinist daar rijden met maximaal 40 km/h (of lager mocht dat nodig zijn). Mocht je aanvullende informatie nodig hebben kan je de machinist vragen te schouwen. Dan kruis je het vakje 'schouwen' ook aan op de aanwijzing.",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '- Is de snelheid die de machinist wel ergens mag rijden door een ter zake kundig iemand aangegeven en is deze lager dan de snelheid die de seinen of borden aangeven dan geef je een aanwijzing \'SB\' af.',
+                          "- Is de snelheid die de machinist wel ergens mag rijden door een ter zake kundig iemand aangegeven en is deze lager dan de snelheid die de seinen of borden aangeven dan geef je een aanwijzing 'SB' af.",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '- Bij een gestoorde of beschadigde overweg geef je dan nog een aanwijzing \'OVW\' af. Daarop staat hoe de machinist moet handelen bij een gestoorde overweg. Zit een overweg niet op de storingsmelder dan handelt de treindienstleider als aangegeven in de Plaatselijke Regelgeving',
+                          "- Bij een gestoorde of beschadigde overweg geef je dan nog een aanwijzing 'OVW' af. Daarop staat hoe de machinist moet handelen bij een gestoorde overweg. Zit een overweg niet op de storingsmelder dan handelt de treindienstleider als aangegeven in de Plaatselijke Regelgeving",
                     ),
                   ],
                 ),
@@ -581,17 +581,17 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     const BodyText(
                       indents: 2,
                       text:
-                          '* Elk herhaald bericht moet door de afzender worden gevolgd door de vaste dienstuitdrukking \'correct\' of \'fout ik herhaal\';',
+                          "* Elk herhaald bericht moet door de afzender worden gevolgd door de vaste dienstuitdrukking 'correct' of 'fout ik herhaal';",
                     ),
                     const BodyText(
                       indents: 2,
                       text:
-                          '* Elk bericht, behalve het laatste van een gesprek, wordt beëindigd met de uitdrukking: \'over\';',
+                          "* Elk bericht, behalve het laatste van een gesprek, wordt beëindigd met de uitdrukking: 'over';",
                     ),
                     const BodyText(
                       indents: 2,
                       text:
-                          '* Elk gesprek wordt beëindigd met de uitdrukking: \'sluiten\'.',
+                          "* Elk gesprek wordt beëindigd met de uitdrukking: 'sluiten'.",
                     ),
                     const SizedBoxH(),
                     const BoldText(
@@ -939,13 +939,13 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Indien de situatie het vereist dat meerdere bijzonderheden_trein tot stilstand moeten komen, wordt het volgende bericht gebruikt: \'Noodsituatie: stop alle bijzonderheden_trein\';',
+                          "- Indien de situatie het vereist dat meerdere bijzonderheden_trein tot stilstand moeten komen, wordt het volgende bericht gebruikt: 'Noodsituatie: stop alle bijzonderheden_trein';",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
                       text:
-                          'Indien de situatie het vereist dat één bepaalde trein tot stilstand moet komen, wordt het volgende bericht gebruikt: \'Trein ...(nummer)... Op spoor ...(stationsnaam/baanvak, spoornummer)... noodstop.\'',
+                          "Indien de situatie het vereist dat één bepaalde trein tot stilstand moet komen, wordt het volgende bericht gebruikt: 'Trein ...(nummer)... Op spoor ...(stationsnaam/baanvak, spoornummer)... noodstop.'",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -968,7 +968,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '\'Trein ...(nummer)... Hier treindienstleider ...(werkplek)... ...(aanwijzing)... voorbereiden over\'',
+                          "'Trein ...(nummer)... Hier treindienstleider ...(werkplek)... ...(aanwijzing)... voorbereiden over'",
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -1007,19 +1007,19 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Hier ...(functie)..., \'ik vraag toestemming om werkzaamheden op ...(spoor/gebied)... aan te mogen vangen, over.\'',
+                          "Hier ...(functie)..., 'ik vraag toestemming om werkzaamheden op ...(spoor/gebied)... aan te mogen vangen, over.'",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '\'Hier treindienstleider ...(werkplek)..., maatregelen treindienstleider ...(spoor/gebied)... aangebracht, ik geef aan ...(functie)..., om ...(tijd)... toestemming om werkzaamheden op ...(spoor/gebied)... aan te vangen, over.\'',
+                          "'Hier treindienstleider ...(werkplek)..., maatregelen treindienstleider ...(spoor/gebied)... aangebracht, ik geef aan ...(functie)..., om ...(tijd)... toestemming om werkzaamheden op ...(spoor/gebied)... aan te vangen, over.'",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '\'Hier ...(functie)..., ik krijg om ...(tijd)... toestemming om werkzaamheden op ...(spoor/gebied)... aan te vangen, over.\'',
+                          "'Hier ...(functie)..., ik krijg om ...(tijd)... toestemming om werkzaamheden op ...(spoor/gebied)... aan te vangen, over.'",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -1029,19 +1029,19 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '\'Hier ...(functie)..., WBI ...(nummer)..., werkplek ...(letter)... voorbereiden, over.\'',
+                          "'Hier ...(functie)..., WBI ...(nummer)..., werkplek ...(letter)... voorbereiden, over.'",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '\'Hier treindienstleider ...(werkplek)..., maatregelen treindienstleider volgens WBI ...(nummer)..., werkplek ...(letter)... aangebracht, ik geef om ...(tijd)..., ...(functie)... toestemming om werkzaamheden aan te vangen, over\'',
+                          "'Hier treindienstleider ...(werkplek)..., maatregelen treindienstleider volgens WBI ...(nummer)..., werkplek ...(letter)... aangebracht, ik geef om ...(tijd)..., ...(functie)... toestemming om werkzaamheden aan te vangen, over'",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '\'Hier ...(functie)..., WBI ...(nummer)..., werkplek ...(letter)..., ik krijg om ...(tijd)... toestemming van treindienstleider ...(werkplek)... om de werkzaamheden aan te vangen, over.\'',
+                          "'Hier ...(functie)..., WBI ...(nummer)..., werkplek ...(letter)..., ik krijg om ...(tijd)... toestemming van treindienstleider ...(werkplek)... om de werkzaamheden aan te vangen, over.'",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -1052,13 +1052,13 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '\'Hier ...(functie)..., ik meld werkzaamheden op ...(spoor/gebied/WBI)... gereed om ...(tijd)..., over.\'',
+                          "'Hier ...(functie)..., ik meld werkzaamheden op ...(spoor/gebied/WBI)... gereed om ...(tijd)..., over.'",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '\'Hier treindienstleider ...(werkplek)..., de werkzaamheden op ...(spoor/gebied/WBI)... zijn gereed om ...(tijd)..., over.\'',
+                          "'Hier treindienstleider ...(werkplek)..., de werkzaamheden op ...(spoor/gebied/WBI)... zijn gereed om ...(tijd)..., over.'",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -1128,7 +1128,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'geven de mogelijkheid tot een \'ja\' of \'nee\' antwoord. Deze kunnen zinvol zijn als de ander een langdradige spreker is en jij specifieke informatie wilt. Veel gesloten vragen achter elkaar geven het effect van een \'kruisverhoor\'.',
+                          "geven de mogelijkheid tot een 'ja' of 'nee' antwoord. Deze kunnen zinvol zijn als de ander een langdradige spreker is en jij specifieke informatie wilt. Veel gesloten vragen achter elkaar geven het effect van een 'kruisverhoor'.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -1138,7 +1138,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'bevatten al een mening en kunnen manipulatief zijn: \'Vind je ook niet dat...?\' of \'Het is toch zeker zo dat...?\' Dergelijke sturende vragen zetten een ander soms voor het blok.',
+                          "bevatten al een mening en kunnen manipulatief zijn: 'Vind je ook niet dat...?' of 'Het is toch zeker zo dat...?' Dergelijke sturende vragen zetten een ander soms voor het blok.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -1148,7 +1148,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'laten weinig ruimte voor alternatieven: \'Wil je hier eten of gaan we naar het eetcafé?\' Stimuleert de ander snel een beslissing te nemen.',
+                          "laten weinig ruimte voor alternatieven: 'Wil je hier eten of gaan we naar het eetcafé?' Stimuleert de ander snel een beslissing te nemen.",
                     ),
                   ],
                 ),

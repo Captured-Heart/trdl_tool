@@ -207,7 +207,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De benutting en alle wijzigingen in die benutting van het gebruik van het NCBG-gebied worden door jou geregistreerd. Registratie wordt gedaan op het sturingsniveau en op spoorbezetting.\n\nAls een TijdRuimte-slot is toegekend aan een infragebruiker vindt registratie plaats op het moment dat de infragebruiker het TijdRuimte-slot ingaat. Het volgende registratiemoment is wanneer de infragebruiker het Tijdruimte-slot weer verlaat. Op dat moment wordt de actuele spoorbezetting geregistreerd en eventuele bijzonderheden aan de infra (buiten dienst, storingen). Bij het terugkrijgen van een TijdRuimte-slot van een infragebruiker benoem je het exacte tijdstip van overdracht.\n\nAls gestuurd wordt op rijwegniveau registreer je voorafgaand aan de toestemming voor de lokale orderaanvraag de \'van - via - naar\' sporen. Je registreert direct na de uitvoering van de lokale orderaanvraag de actuele spoorbezetting. Wanneer een infragebruiker een specifieke route wenst, dan vraagt deze bij jou die aan middels een lokale orderaanvraag. Je kan aangeven (als gevolg van eerdere registratie) of de gewenste route vrij en bruikbaar is. Bijzonderheden aan de infra worden geregistreerd op spoorniveau in TRON.',
+                          "De benutting en alle wijzigingen in die benutting van het gebruik van het NCBG-gebied worden door jou geregistreerd. Registratie wordt gedaan op het sturingsniveau en op spoorbezetting.\n\nAls een TijdRuimte-slot is toegekend aan een infragebruiker vindt registratie plaats op het moment dat de infragebruiker het TijdRuimte-slot ingaat. Het volgende registratiemoment is wanneer de infragebruiker het Tijdruimte-slot weer verlaat. Op dat moment wordt de actuele spoorbezetting geregistreerd en eventuele bijzonderheden aan de infra (buiten dienst, storingen). Bij het terugkrijgen van een TijdRuimte-slot van een infragebruiker benoem je het exacte tijdstip van overdracht.\n\nAls gestuurd wordt op rijwegniveau registreer je voorafgaand aan de toestemming voor de lokale orderaanvraag de 'van - via - naar' sporen. Je registreert direct na de uitvoering van de lokale orderaanvraag de actuele spoorbezetting. Wanneer een infragebruiker een specifieke route wenst, dan vraagt deze bij jou die aan middels een lokale orderaanvraag. Je kan aangeven (als gevolg van eerdere registratie) of de gewenste route vrij en bruikbaar is. Bijzonderheden aan de infra worden geregistreerd op spoorniveau in TRON.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -273,7 +273,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'TRON staat voor \'Treindienstleiding op NCBG\'. TRON-webapplicatie heeft tot doel beter te kunnen registreren. TRON-webapplicatie is ook in staat deze registraties te visualiseren. Er verandert niets in de werkwijze van een TRDL. Alleen de manier van registreren wijkt sterk af van de gangbare hulpmiddelen.\n\nTRDL werken op dit moment met TRON om treinbewegingen en spoorbezetting te registreren in een NCBG. TRON is een extern programma (net zoals LOA-online).\n\nIn de toekomst zal TRON vervangen worden door een registratiesysteem dat geïntegreerd is met procesleiding. (Zoals SBG++ en TRR) Dit geïntegreerde systeem heet \'Feniks\'.',
+                          "TRON staat voor 'Treindienstleiding op NCBG'. TRON-webapplicatie heeft tot doel beter te kunnen registreren. TRON-webapplicatie is ook in staat deze registraties te visualiseren. Er verandert niets in de werkwijze van een TRDL. Alleen de manier van registreren wijkt sterk af van de gangbare hulpmiddelen.\n\nTRDL werken op dit moment met TRON om treinbewegingen en spoorbezetting te registreren in een NCBG. TRON is een extern programma (net zoals LOA-online).\n\nIn de toekomst zal TRON vervangen worden door een registratiesysteem dat geïntegreerd is met procesleiding. (Zoals SBG++ en TRR) Dit geïntegreerde systeem heet 'Feniks'.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -284,7 +284,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Om van TRON-webapplicatie gebruik te kunnen maken, moet je je eerst aanmelden.\n\nNa opstarten TRON-webapplicatie dien je eerst een locatie te kiezen. Na het kiezen van de locatie komen automatisch de mogelijke functies beschikbaar. Na kiezen van een functie komen automatisch de mogelijke gebruikers beschikbaar.\n\nKies een gebruikersnaam, voer het bijbehorende wachtwoord in en druk \'Enter\' of \'Return\' of klik op de knop \'Registreer\'.\n\nNa aanmelding verschijnt het venster met alle benodigde onderdelen om voor één of meerdere NCBG te kunnen registreren. Beheer je als TRDL meerdere NCBG\'s, kunnen deze in één functie worden samengevoegd. Middels de keuzelijst achter \'Gebieden:\' kun je snel wisselen tussen registratie/visualisatie van verschillende NCBG. Hebben twee NCBG raakvlakken met elkaar, zullen op deze raakvlakken de registraties/beeld gesynchroniseerd worden. Dit geldt ook als een NCBG in één of meer configuraties is opgedeeld.\n\nN.B.: In het aanmeldvenster is een extra optie beschikbaar gekomen om direct na aanmelden een intro van enkele minuten te kunnen zien (en horen). Enkel de intro starten kan middels de knop \'Intro\' linksonder op het aanmeldingsscherm. Wil je, terwijl je aangemeld bent, de intro (nogmaals) zien (en horen), toets dan in het formulierveld van \'Bediening\' de code SWA en druk de ENTER-toets, en de intro wordt (opnieuw) afgespeeld.',
+                          "Om van TRON-webapplicatie gebruik te kunnen maken, moet je je eerst aanmelden.\n\nNa opstarten TRON-webapplicatie dien je eerst een locatie te kiezen. Na het kiezen van de locatie komen automatisch de mogelijke functies beschikbaar. Na kiezen van een functie komen automatisch de mogelijke gebruikers beschikbaar.\n\nKies een gebruikersnaam, voer het bijbehorende wachtwoord in en druk 'Enter' of 'Return' of klik op de knop 'Registreer'.\n\nNa aanmelding verschijnt het venster met alle benodigde onderdelen om voor één of meerdere NCBG te kunnen registreren. Beheer je als TRDL meerdere NCBG's, kunnen deze in één functie worden samengevoegd. Middels de keuzelijst achter 'Gebieden:' kun je snel wisselen tussen registratie/visualisatie van verschillende NCBG. Hebben twee NCBG raakvlakken met elkaar, zullen op deze raakvlakken de registraties/beeld gesynchroniseerd worden. Dit geldt ook als een NCBG in één of meer configuraties is opgedeeld.\n\nN.B.: In het aanmeldvenster is een extra optie beschikbaar gekomen om direct na aanmelden een intro van enkele minuten te kunnen zien (en horen). Enkel de intro starten kan middels de knop 'Intro' linksonder op het aanmeldingsscherm. Wil je, terwijl je aangemeld bent, de intro (nogmaals) zien (en horen), toets dan in het formulierveld van 'Bediening' de code SWA en druk de ENTER-toets, en de intro wordt (opnieuw) afgespeeld.",
                     ),
                   ],
                 ),
@@ -330,7 +330,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 2,
                       text:
-                          'Van hieruit worden alle opdrachten uitgevoerd en verwerkt. Ook alle meldingen verschijnen binnen deze (zie \'Opdracht uitgevoerd\' in lichtblauwe balk).',
+                          "Van hieruit worden alle opdrachten uitgevoerd en verwerkt. Ook alle meldingen verschijnen binnen deze (zie 'Opdracht uitgevoerd' in lichtblauwe balk).",
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -340,32 +340,32 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 2,
                       text:
-                          '- Knop \'Help\' geeft een beknopte informatie over TRON en andere/overige informatie;\n\n- Knop \'Ged. bewegingen / TRS\'en\' (Tijd Ruimte Slot);\n\n- Knop \'Mijn wachtwoord wijzigen\' - indien toegestaan kan hier het eigen wachtwoord gewijzigd worden;\n\n- Knop \'Plangegevens importeren\' - Het installeren van een rangeerplan hier gestart worden;\n\n- Knop \'Sein-/Wisseladmin\' - Deze knop is alleen zichtbaar indien het een registratie voor een PPLG van een uitwijksituatie fase 3 betreft. Hiermee kunnen de statussen van seinen en standen van wissels geadministreerd worden.',
+                          "- Knop 'Help' geeft een beknopte informatie over TRON en andere/overige informatie;\n\n- Knop 'Ged. bewegingen / TRS'en' (Tijd Ruimte Slot);\n\n- Knop 'Mijn wachtwoord wijzigen' - indien toegestaan kan hier het eigen wachtwoord gewijzigd worden;\n\n- Knop 'Plangegevens importeren' - Het installeren van een rangeerplan hier gestart worden;\n\n- Knop 'Sein-/Wisseladmin' - Deze knop is alleen zichtbaar indien het een registratie voor een PPLG van een uitwijksituatie fase 3 betreft. Hiermee kunnen de statussen van seinen en standen van wissels geadministreerd worden.",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '4. Knop \'BDBG\' (Buiten Dienst/Buiten Gebruik)',
+                      text: "4. Knop 'BDBG' (Buiten Dienst/Buiten Gebruik)",
                     ),
                     BodyText(
                       indents: 2,
                       text:
-                          'Geeft een nieuw venster met alle binnen getoonde gebied(en) aanwezige BDBG\'s met eventueel hun omschrijvingen weer. Hier kunnen BDBG-omschrijvingen gewijzigd worden en kunnen BDBG-statussen verwijderd worden.',
+                          "Geeft een nieuw venster met alle binnen getoonde gebied(en) aanwezige BDBG's met eventueel hun omschrijvingen weer. Hier kunnen BDBG-omschrijvingen gewijzigd worden en kunnen BDBG-statussen verwijderd worden.",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '5. Keuzelijst \'NCBG/Gebied\'',
+                      text: "5. Keuzelijst 'NCBG/Gebied'",
                     ),
                     BodyText(
                       indents: 2,
                       text:
-                          'Een aangemelde functie kan uit meerdere NCBG\'s bestaan. Kies hier het NCBG waar je in wilt registreren.',
+                          "Een aangemelde functie kan uit meerdere NCBG's bestaan. Kies hier het NCBG waar je in wilt registreren.",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '6. Keuzelijst \'Bij einde TRS, omschr.\'',
+                      text: "6. Keuzelijst 'Bij einde TRS, omschr.'",
                     ),
                     BodyText(
                       indents: 2,
@@ -375,7 +375,7 @@ class AINcbg extends StatelessWidget {
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '7. Keuzelijst \'Tekengrootte visualisatie\'',
+                      text: "7. Keuzelijst 'Tekengrootte visualisatie'",
                     ),
                     BodyText(
                       indents: 2,
@@ -385,7 +385,7 @@ class AINcbg extends StatelessWidget {
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '8. Knop \'Status\'',
+                      text: "8. Knop 'Status'",
                     ),
                     BodyText(
                       indents: 2,
@@ -395,7 +395,7 @@ class AINcbg extends StatelessWidget {
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '9. Knop \'Vrijmaken\'',
+                      text: "9. Knop 'Vrijmaken'",
                     ),
                     BodyText(
                       indents: 2,
@@ -410,7 +410,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 2,
                       text:
-                          'Van uit dit visualisatievenster kunnen alle opdrachten gegenereerd worden naar \'Bediening\'. Alle uitgevoerde opdrachten worden in visualisatievenster weergegeven.',
+                          "Van uit dit visualisatievenster kunnen alle opdrachten gegenereerd worden naar 'Bediening'. Alle uitgevoerde opdrachten worden in visualisatievenster weergegeven.",
                     ),
                   ],
                 ),

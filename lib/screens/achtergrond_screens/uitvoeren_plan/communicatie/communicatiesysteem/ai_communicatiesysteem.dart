@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAICommunicatieSysteem {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_communicatie_main,
+  // ignore: constant_identifier_names
   ai_incidenten_basis,
 }
 

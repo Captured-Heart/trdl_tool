@@ -56,7 +56,7 @@ class HomeIndex0 extends StatelessWidget {
                             child: BodyText(
                               indents: 0,
                               text:
-                                  'Op momenten dat oplossingen ter plekke moeten worden bedacht, kan besloten worden een procedure niet geheel of anders uit te voeren. Het is het vakmanschap van de treindienstleider om te bepalen welke VKA\'s nodig zijn om de risico\'s te beheersen.',
+                                  "Op momenten dat oplossingen ter plekke moeten worden bedacht, kan besloten worden een procedure niet geheel of anders uit te voeren. Het is het vakmanschap van de treindienstleider om te bepalen welke VKA's nodig zijn om de risico's te beheersen.",
                             ),
                           ),
                         ],

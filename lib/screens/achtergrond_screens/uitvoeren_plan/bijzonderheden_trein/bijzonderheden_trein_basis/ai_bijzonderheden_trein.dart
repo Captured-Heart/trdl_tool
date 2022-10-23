@@ -888,20 +888,24 @@ class AIBijzonderhedenTrein extends StatelessWidget {
     );
   }
 
+  //TODO: Respect linter here, find out how to make an Exception class
   Future<void> launchTreinenVanNS() async {
     if (!await launchUrl(treinenVanNS)) {
+      // ignore: only_throw_errors
       throw 'Could not launch $treinenVanNS';
     }
   }
 
   Future<void> launchNLSpoorwegMaterieel() async {
     if (!await launchUrl(nlSpoorwegMaterieel)) {
+      // ignore: only_throw_errors
       throw 'Could not launch $nlSpoorwegMaterieel';
     }
   }
 
   Future<void> launchGoederenwagon() async {
     if (!await launchUrl(goederenWagon)) {
+      // ignore: only_throw_errors
       throw 'Could not launch $goederenWagon';
     }
   }

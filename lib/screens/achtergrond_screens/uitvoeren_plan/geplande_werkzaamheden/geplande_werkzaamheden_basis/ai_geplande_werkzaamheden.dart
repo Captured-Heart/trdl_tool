@@ -172,7 +172,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Deze werkplek wordt enkel toegevoegd op WBI/WECO\'s met daarin óók een vaste werkplek en is met name bedoeld voor het in- en uitzetten van voertuigen en/of het plaatsen of verwijderen van safety fence. Dit soort werkzaamheden vindt over het algemeen plaats aan het begin en aan het einde van de buitendienststelling en is zodoende alleen gegarandeerd in eerste en laatste 30 minuten van de buitendienststelling. Buiten deze periodes kan de werkplek door de LWB worden aangevraagd, maar heeft de treinenloop voorrang op de werkzaamheden. De genoemde tijdsperiode op de WBI dient altijd onverkort gegeven te worden.',
+                          "Deze werkplek wordt enkel toegevoegd op WBI/WECO's met daarin óók een vaste werkplek en is met name bedoeld voor het in- en uitzetten van voertuigen en/of het plaatsen of verwijderen van safety fence. Dit soort werkzaamheden vindt over het algemeen plaats aan het begin en aan het einde van de buitendienststelling en is zodoende alleen gegarandeerd in eerste en laatste 30 minuten van de buitendienststelling. Buiten deze periodes kan de werkplek door de LWB worden aangevraagd, maar heeft de treinenloop voorrang op de werkzaamheden. De genoemde tijdsperiode op de WBI dient altijd onverkort gegeven te worden.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -286,7 +286,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Infrabeschikbaarheid houdt zich bezig met het gepland niet-beschikbaar zijn van het spoor. Zij coördineert buitendienststellingen, schouwtreinen, mobiele werkplaatsen en tijdelijke snelheidsbeperkingen (TSB\'s). Hierdoor ontstaat er landelijk een zo optimaal mogelijke planning.\n\nVerder ontwikkelt IB samen met Capaciteitsverdeling (CV), vervoerders en aannemers een onderhoudsrooster. De aannemers gebruiken dit rooster voor hun planning.',
+                          "Infrabeschikbaarheid houdt zich bezig met het gepland niet-beschikbaar zijn van het spoor. Zij coördineert buitendienststellingen, schouwtreinen, mobiele werkplaatsen en tijdelijke snelheidsbeperkingen (TSB's). Hierdoor ontstaat er landelijk een zo optimaal mogelijke planning.\n\nVerder ontwikkelt IB samen met Capaciteitsverdeling (CV), vervoerders en aannemers een onderhoudsrooster. De aannemers gebruiken dit rooster voor hun planning.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -297,7 +297,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'In de WBI/WECO kun je worden aangewezen als communicerend TRDL. Je kunt je voorstellen dat werkzaamheden soms plaatsvinden op plekken die \'werkplekoverschrijdend\' zijn. Dit zou in de communicatie tot gevaar kunnen leiden, vandaar dat beslon is om in dit soort situaties één TRDL aan te wijzen die de communicatie met de LWB verzorgt. De communicerend TRDL verzorgt dan de communicatie met de andere betrokken TRDL. Communicatie tussen de MCN en de andere TRDL blijft wel mogelijk zonder tussenkomst.',
+                          "In de WBI/WECO kun je worden aangewezen als communicerend TRDL. Je kunt je voorstellen dat werkzaamheden soms plaatsvinden op plekken die 'werkplekoverschrijdend' zijn. Dit zou in de communicatie tot gevaar kunnen leiden, vandaar dat beslon is om in dit soort situaties één TRDL aan te wijzen die de communicatie met de LWB verzorgt. De communicerend TRDL verzorgt dan de communicatie met de andere betrokken TRDL. Communicatie tussen de MCN en de andere TRDL blijft wel mogelijk zonder tussenkomst.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -326,7 +326,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- In de WBI onder kolom \'Maatregelen Treindienstleider\' worden verhinderingen opgenomen die de grens van een buitendienststelling markeren. Hierbij wordt aangegeven in welke stand het element dient te worden vastgelegd. De elementen zullen worden verhinderd met een VHB;\n\n- Wissels met een in de BVS voorgeschreven stand mogen tijdens de werkzaamheden in een andere stand worden vastgelegd. Na de werkzaamheden moet het wissel weer in de voorgeschreven stand worden achtergelaten.',
+                          "- In de WBI onder kolom 'Maatregelen Treindienstleider' worden verhinderingen opgenomen die de grens van een buitendienststelling markeren. Hierbij wordt aangegeven in welke stand het element dient te worden vastgelegd. De elementen zullen worden verhinderd met een VHB;\n\n- Wissels met een in de BVS voorgeschreven stand mogen tijdens de werkzaamheden in een andere stand worden vastgelegd. Na de werkzaamheden moet het wissel weer in de voorgeschreven stand worden achtergelaten.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -337,7 +337,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Het komt voor dat een TRDL niet één, maar meerdere werkzaamheden tegelijkertijd moet uitvoeren. Dit hoeft geen probleem te zijn, als de werkdruk maar niet te hoog komt te liggen.\n\nTijdens de planning van werkzaamheden wordt gecontroleerd of de WBI-aanvragen het werkdrukniveau van de TRDL niet overschrijden. Er wordt hier gekeken naar het totaal aan WBI\'s op een bepaald tijdstip, waarna bepaald wordt of het haalbaar is of niet.\n\nMocht er door omstandigheden toch te veel werkdruk bij de TRDL komen te liggen, dan kan in overleg met de betrokken aannemers en verkeersleiding naar een oplossing worden gezocht.',
+                          "Het komt voor dat een TRDL niet één, maar meerdere werkzaamheden tegelijkertijd moet uitvoeren. Dit hoeft geen probleem te zijn, als de werkdruk maar niet te hoog komt te liggen.\n\nTijdens de planning van werkzaamheden wordt gecontroleerd of de WBI-aanvragen het werkdrukniveau van de TRDL niet overschrijden. Er wordt hier gekeken naar het totaal aan WBI's op een bepaald tijdstip, waarna bepaald wordt of het haalbaar is of niet.\n\nMocht er door omstandigheden toch te veel werkdruk bij de TRDL komen te liggen, dan kan in overleg met de betrokken aannemers en verkeersleiding naar een oplossing worden gezocht.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -367,7 +367,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Indien de vertraging op/voor het laatste knooppunt voor de werkzaamheden groter is dan 15 minuten dat wordt de trein opgeheven. Reizigers en Personeel worden tussen de laatste knooppunten vervoerd met taxi/bus;\n\n- Formule: Tijdligging voor de aanvangstijd WBI + 15 minuten = uiterste vertrektijd;\n\n- De vervoerders accepteren daarbij mogelijke consequenties voor de opstart treindienst van de volgende dag;\n\n- Indien de vertraging, groter dan 15 minuten, wordt opgelopen tussen het laatste knooppunt en de buitendienststelling is er sprake van een gestrande trein en is het aan de operatie (ORT = OCCR Regie Team) hiervoor een oplossing te vinden;\n\n- In alle andere denkbare scenario\'s is het operationele OvD-S besluit leidend;\n\n- Het staat vervoerders natuurlijk vrij om proactief bij te sturen op de laatste verbinding.',
+                          "- Indien de vertraging op/voor het laatste knooppunt voor de werkzaamheden groter is dan 15 minuten dat wordt de trein opgeheven. Reizigers en Personeel worden tussen de laatste knooppunten vervoerd met taxi/bus;\n\n- Formule: Tijdligging voor de aanvangstijd WBI + 15 minuten = uiterste vertrektijd;\n\n- De vervoerders accepteren daarbij mogelijke consequenties voor de opstart treindienst van de volgende dag;\n\n- Indien de vertraging, groter dan 15 minuten, wordt opgelopen tussen het laatste knooppunt en de buitendienststelling is er sprake van een gestrande trein en is het aan de operatie (ORT = OCCR Regie Team) hiervoor een oplossing te vinden;\n\n- In alle andere denkbare scenario's is het operationele OvD-S besluit leidend;\n\n- Het staat vervoerders natuurlijk vrij om proactief bij te sturen op de laatste verbinding.",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -392,7 +392,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Binnen het gebied waarop de werkplekbeveiliging van toepassing is, heeft de LWB voor het aspect veiligheid (aanrijd- en electrocutiegevaar) de leiding over al het personeel dat een veiligheidstaak uitoefent. Hij onderhoudt het contact met de TRDL, de CVB\'s, VHM en BBD en bij SL met ploegleider of WV conform regelgeving van de opdrachtgever.\n\nDe LWB heeft hierbij de volgende (kern)taken:',
+                          "Binnen het gebied waarop de werkplekbeveiliging van toepassing is, heeft de LWB voor het aspect veiligheid (aanrijd- en electrocutiegevaar) de leiding over al het personeel dat een veiligheidstaak uitoefent. Hij onderhoudt het contact met de TRDL, de CVB's, VHM en BBD en bij SL met ploegleider of WV conform regelgeving van de opdrachtgever.\n\nDe LWB heeft hierbij de volgende (kern)taken:",
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -418,7 +418,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Een zelfsignalerende kortsluitlans (ZKL) wordt gebruikt om bij werkzaamheden in een baanvak een veilige werkplek te creëren. Een tussen de rails geplaatste kortsluitlans beïnvloedt het spoorstroomloopsysteem zoals een trein dat doet, waardoor de seinen \'afvallen\'. De rijrichting op vrije baan sporen kan nu niet meer gekeerd worden. Hierdoor worden treinen gedwongen te stoppen en kan men veilig werken.\n\nDe ZKL is uitgerust met een veiligheidsidentificatie. De identificatie geeft aan of de lans zodanig is geplaatst, dat er inderdaad een kortsluiting tussen beide spoorstaven tot stand is gekomen.',
+                          "Een zelfsignalerende kortsluitlans (ZKL) wordt gebruikt om bij werkzaamheden in een baanvak een veilige werkplek te creëren. Een tussen de rails geplaatste kortsluitlans beïnvloedt het spoorstroomloopsysteem zoals een trein dat doet, waardoor de seinen 'afvallen'. De rijrichting op vrije baan sporen kan nu niet meer gekeerd worden. Hierdoor worden treinen gedwongen te stoppen en kan men veilig werken.\n\nDe ZKL is uitgerust met een veiligheidsidentificatie. De identificatie geeft aan of de lans zodanig is geplaatst, dat er inderdaad een kortsluiting tussen beide spoorstaven tot stand is gekomen.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -458,7 +458,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Op sommige baanvakken en emplacementen in NL voert men werkzaamheden uit binnen een vaste werkzone (werkzones). Dit zijn een soort vrijgavegebieden waarbinnen gewerkt wordt. Dus altijd met vaste veiligheidsmaatregelen.\n\nUitleg over werkzones en bijbehorende informatie vind je in de achtergrondinformatie bij \'Geplande werkzaamheden - verdieping: werkzones\'.',
+                          "Op sommige baanvakken en emplacementen in NL voert men werkzaamheden uit binnen een vaste werkzone (werkzones). Dit zijn een soort vrijgavegebieden waarbinnen gewerkt wordt. Dus altijd met vaste veiligheidsmaatregelen.\n\nUitleg over werkzones en bijbehorende informatie vind je in de achtergrondinformatie bij 'Geplande werkzaamheden - verdieping: werkzones'.",
                     ),
                     SizedBoxH(),
                     InsertImage(

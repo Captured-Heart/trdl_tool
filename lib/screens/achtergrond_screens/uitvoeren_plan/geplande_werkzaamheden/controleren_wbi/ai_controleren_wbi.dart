@@ -111,7 +111,7 @@ class AIControlerenWBI extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Niet onbedoeld een rijweg instelbaar is naar het gebied genoemd in de rubriek \'aanduiding van de buitendienststelling\';\n\n- De maatregelen van de LWB invloed hebben op jouw eigen maatregelen;\n\n- Bij werkplekbeveiliging met de zelfsignalerende kortsluitlans er geen rijweg ingesteld moet worden vanaf de vrije baan, tenzij de vrije baan onderdeel is van de buitendienststelling;\n\n- Ben jij in de WBI/WECO aangewezen als communicerend TRDL dan stel je vast of:',
+                          "- Niet onbedoeld een rijweg instelbaar is naar het gebied genoemd in de rubriek 'aanduiding van de buitendienststelling';\n\n- De maatregelen van de LWB invloed hebben op jouw eigen maatregelen;\n\n- Bij werkplekbeveiliging met de zelfsignalerende kortsluitlans er geen rijweg ingesteld moet worden vanaf de vrije baan, tenzij de vrije baan onderdeel is van de buitendienststelling;\n\n- Ben jij in de WBI/WECO aangewezen als communicerend TRDL dan stel je vast of:",
                     ),
                     SizedBoxH(),
                     BodyText(

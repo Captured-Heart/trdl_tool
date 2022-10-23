@@ -103,7 +103,7 @@ class AIWerkzones extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De bediening werkt volgens een geven-nemen principe waarbij de TRDL de werkzone via Post 21 geeft en de LWB de werkzone neemt door de schakelaar te draaien. Deze volgorde wordt door het systeem afgedwongen. Het is daardoor niet mogelijk een werkzone \'voortijdig\' te nemen of \'voortijdig\' terug te nemen. Indien de LWB voortijdig aan de werkzoneschakelaar heeft gedraaid, dan zal het systeem de geef-opdracht afwijzen. Deze situatie wordt uitsluitend gemeld als de geef-opdracht wordt afgewezen.\n\nAls je de werkzone geeft, wordt door Post 21 gecontroleerd op rijwegen leidend naar de werkzone. Als die er niet zijn, wordt de geef-opdracht uitgevoerd.',
+                          "De bediening werkt volgens een geven-nemen principe waarbij de TRDL de werkzone via Post 21 geeft en de LWB de werkzone neemt door de schakelaar te draaien. Deze volgorde wordt door het systeem afgedwongen. Het is daardoor niet mogelijk een werkzone 'voortijdig' te nemen of 'voortijdig' terug te nemen. Indien de LWB voortijdig aan de werkzoneschakelaar heeft gedraaid, dan zal het systeem de geef-opdracht afwijzen. Deze situatie wordt uitsluitend gemeld als de geef-opdracht wordt afgewezen.\n\nAls je de werkzone geeft, wordt door Post 21 gecontroleerd op rijwegen leidend naar de werkzone. Als die er niet zijn, wordt de geef-opdracht uitgevoerd.",
                     ),
                   ],
                 ),
@@ -140,13 +140,13 @@ class AIWerkzones extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De Handheld Terminal (HHT) heeft via een GSM-R telefoon verbinding met het centrale Bev21 beveiligingssysteem. De communicatie met het Bev21 systeem is beveiligd (op eenzelfde manier als de communicatie tussen trein en Bev21 beveiligd is). De HHT fungeert slechts als doorgeefluik voor de invoer van opdrachten en de weergave van statussen; alle veiligheid gerelateerde toestanden worden uitsluitend in het centrale Bev21 systeem bewaard.\n\nDe HHT is voorzien van een scherm, een touchscreen, meestal gebruikt voor de invoer van opdrachten, en een toetsenbord, vooral voor de invoer van werkzone-id\'s.\n\nDe menustructuur is zo eenvoudig mogelijk gehouden, de gebruiker wordt door middel van een aantal schermen door de opdrachten geleid. Het hoofdmenu toont de volgende mogelijkheden:',
+                          "De Handheld Terminal (HHT) heeft via een GSM-R telefoon verbinding met het centrale Bev21 beveiligingssysteem. De communicatie met het Bev21 systeem is beveiligd (op eenzelfde manier als de communicatie tussen trein en Bev21 beveiligd is). De HHT fungeert slechts als doorgeefluik voor de invoer van opdrachten en de weergave van statussen; alle veiligheid gerelateerde toestanden worden uitsluitend in het centrale Bev21 systeem bewaard.\n\nDe HHT is voorzien van een scherm, een touchscreen, meestal gebruikt voor de invoer van opdrachten, en een toetsenbord, vooral voor de invoer van werkzone-id's.\n\nDe menustructuur is zo eenvoudig mogelijk gehouden, de gebruiker wordt door middel van een aantal schermen door de opdrachten geleid. Het hoofdmenu toont de volgende mogelijkheden:",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '- Overzicht van de werkzones die de gebruiker in \'eigendom\' heeft en de blokkeringen die hij aangebracht heeft;\n\n- Opdrachten op een werkzone: nemen/teruggeven, blokkeren/deblokkeren, status opvragen, en eigendom overdragen/accepteren;\n\n- Opdrachten op een wissel: blokkeren/deblokkeren, opvragen toestand en bedienen van het wissel.',
+                          "- Overzicht van de werkzones die de gebruiker in 'eigendom' heeft en de blokkeringen die hij aangebracht heeft;\n\n- Opdrachten op een werkzone: nemen/teruggeven, blokkeren/deblokkeren, status opvragen, en eigendom overdragen/accepteren;\n\n- Opdrachten op een wissel: blokkeren/deblokkeren, opvragen toestand en bedienen van het wissel.",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -266,7 +266,7 @@ class AIWerkzones extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'die in een buiten dienst gestelde werkzone liggen, kunnen niet omlopen als gevolg van het instellen van een rijweg langs een werkzone. De rijweg-opdracht zal daarom worden afgewezen. Indien de rijweginstelling toch nodig is, moet het eiswissel d.m.v. \'gedelegeerd bedienen\' eerst in de gewenste stand worden gelegd.',
+                          "die in een buiten dienst gestelde werkzone liggen, kunnen niet omlopen als gevolg van het instellen van een rijweg langs een werkzone. De rijweg-opdracht zal daarom worden afgewezen. Indien de rijweginstelling toch nodig is, moet het eiswissel d.m.v. 'gedelegeerd bedienen' eerst in de gewenste stand worden gelegd.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -307,7 +307,7 @@ class AIWerkzones extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Het systeem zal een geef-opdracht afwijzen indien er zich minimaal één spoorbezetting bevindt in de werkzone. Ten behoeve van het kunnen geven van een werkzone bij aanwezigheid van een geloodste trein of sectiestoring in de werkzone is deze controle bij het geven van de werkzone eventueel uit te schakelen met een dwangparameter \'Negeer spoorbezetting\'. Hiernaast is dit weergegeven in de regelinvoer.\n\nEen geef-opdracht met \'Negeer spoorbezetting\' is ook succesvol als de bezetting is op de laatste sectie(s) in de werkzone van een afgereden rijweg, tenzij (tenminste één van) die sectie(s) een wissel bevat(ten).\n\nAls een rijweg zover is afgereden dat er alléén sprake is van gele lijnen in de werkzone en er géén wissel in een gele lijn ligt, kan \'Negeer spoorbezetting\' worden gebruikt.\n\nVoorbeelden met sectiestoringen waarbij \'Negeer spoorbezetting\' wel en niet succesvol zal zijn:',
+                          "Het systeem zal een geef-opdracht afwijzen indien er zich minimaal één spoorbezetting bevindt in de werkzone. Ten behoeve van het kunnen geven van een werkzone bij aanwezigheid van een geloodste trein of sectiestoring in de werkzone is deze controle bij het geven van de werkzone eventueel uit te schakelen met een dwangparameter 'Negeer spoorbezetting'. Hiernaast is dit weergegeven in de regelinvoer.\n\nEen geef-opdracht met 'Negeer spoorbezetting' is ook succesvol als de bezetting is op de laatste sectie(s) in de werkzone van een afgereden rijweg, tenzij (tenminste één van) die sectie(s) een wissel bevat(ten).\n\nAls een rijweg zover is afgereden dat er alléén sprake is van gele lijnen in de werkzone en er géén wissel in een gele lijn ligt, kan 'Negeer spoorbezetting' worden gebruikt.\n\nVoorbeelden met sectiestoringen waarbij 'Negeer spoorbezetting' wel en niet succesvol zal zijn:",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -317,7 +317,7 @@ class AIWerkzones extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Spontane sectiebezetting. In dit geval kan \'Negeer spoorbezetting\' worden gebruikt.',
+                          "Spontane sectiebezetting. In dit geval kan 'Negeer spoorbezetting' worden gebruikt.",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -327,7 +327,7 @@ class AIWerkzones extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Spontane sectiebezetting. In dit geval kan \'Negeer spoorbezetting\' worden gebruikt.',
+                          "Spontane sectiebezetting. In dit geval kan 'Negeer spoorbezetting' worden gebruikt.",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -337,7 +337,7 @@ class AIWerkzones extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Achtergebleven bezetting van trein. In dit geval kan \'Negeer spoorbezetting\' worden gebruikt',
+                          "Achtergebleven bezetting van trein. In dit geval kan 'Negeer spoorbezetting' worden gebruikt",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -347,7 +347,7 @@ class AIWerkzones extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Achtergebleven restrijweg van trein. Ook onder de \'gele\' secties zit nog een restrijweg. De restrijweg ligt in twee werkzones. De opdracht geef werkzone met \'Negeer spoorbezetting\' voor de werkzone waarin de wisselsecties liggen zal worden afgewezen, omdat sprake is van wisselsecties met een vastlegging onder de bezetting. De opdracht geef werkzone met \'Negeer spoorbezetting\' voor de werkzone waarin de \'groene\' sectie ligt wordt afgewezen omdat er sprake is van een vastlegging.',
+                          "Achtergebleven restrijweg van trein. Ook onder de 'gele' secties zit nog een restrijweg. De restrijweg ligt in twee werkzones. De opdracht geef werkzone met 'Negeer spoorbezetting' voor de werkzone waarin de wisselsecties liggen zal worden afgewezen, omdat sprake is van wisselsecties met een vastlegging onder de bezetting. De opdracht geef werkzone met 'Negeer spoorbezetting' voor de werkzone waarin de 'groene' sectie ligt wordt afgewezen omdat er sprake is van een vastlegging.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -420,7 +420,7 @@ class AIWerkzones extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'In de WBI moeten alle te geven werkzones worden opgenomen; dus ook die waar materieel staat opgesteld. De parameter \'negeer spoorbezetting\' kan niet worden opgenomen in de WBI.\n\nIn het WBI-bedienvenster worden alle maatregelen en werkzones getoond. De opdracht-regels die zijn uitgevoerd of die niet uitgevoerd hoeven te worden omdat het gewenste resultaat van opdracht al is bereikt, worden grijs weergegeven. De opdracht-regels die nog niet zijn uitgevoerd of die niet uitgevoerd konden worden, worden zwart weergegeven.\n\nAls vanuit het WBI-planvenster of WBI-bedienvenster een WBI wordt gestart en er is een werkzone waarin een trein staat opgesteld, dan verschijnt er een melding dat het geven van de werkzone niet kon worden uitgevoerd. Men kan het geven van de werkzone opnieuw proberen, met of zonder de parameter \'negeer spoorbezetting\'. De melding verschijnt iedere keer als het geven van een werkzone mislukt (door een trein of door een rijwegvastlegging).\n\nIndien men bij het geven van een van de werkzones voor \'Ga verder\' kiest, zal deze werkzone worden overgeslagen. Na de laatste geef opdracht, verschijnt er dan een \'Let op\' melding die aangeeft dat niet alle werkzones konden worden gegeven.',
+                          "In de WBI moeten alle te geven werkzones worden opgenomen; dus ook die waar materieel staat opgesteld. De parameter 'negeer spoorbezetting' kan niet worden opgenomen in de WBI.\n\nIn het WBI-bedienvenster worden alle maatregelen en werkzones getoond. De opdracht-regels die zijn uitgevoerd of die niet uitgevoerd hoeven te worden omdat het gewenste resultaat van opdracht al is bereikt, worden grijs weergegeven. De opdracht-regels die nog niet zijn uitgevoerd of die niet uitgevoerd konden worden, worden zwart weergegeven.\n\nAls vanuit het WBI-planvenster of WBI-bedienvenster een WBI wordt gestart en er is een werkzone waarin een trein staat opgesteld, dan verschijnt er een melding dat het geven van de werkzone niet kon worden uitgevoerd. Men kan het geven van de werkzone opnieuw proberen, met of zonder de parameter 'negeer spoorbezetting'. De melding verschijnt iedere keer als het geven van een werkzone mislukt (door een trein of door een rijwegvastlegging).\n\nIndien men bij het geven van een van de werkzones voor 'Ga verder' kiest, zal deze werkzone worden overgeslagen. Na de laatste geef opdracht, verschijnt er dan een 'Let op' melding die aangeeft dat niet alle werkzones konden worden gegeven.",
                     ),
                     InsertImage(
                       image:
@@ -440,13 +440,13 @@ class AIWerkzones extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Detaillering van de signalering en van de plaats van de werkzoneschakelaars is per werkzone aangegeven in de tabel hieronder.\n\nIn de kolom \'Opm.\' van de tabel worden de volgende begrippen gehanteerd:',
+                          "Detaillering van de signalering en van de plaats van de werkzoneschakelaars is per werkzone aangegeven in de tabel hieronder.\n\nIn de kolom 'Opm.' van de tabel worden de volgende begrippen gehanteerd:",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '- \'OF\': Dit betekent dat de betreffende werkzone meerdere schakelaars heeft;\n\n- \'GC\': Dit betekent dat de werkzone overdragen wordt volgens Gedwongen Concept.',
+                          "- 'OF': Dit betekent dat de betreffende werkzone meerdere schakelaars heeft;\n\n- 'GC': Dit betekent dat de werkzone overdragen wordt volgens Gedwongen Concept.",
                     ),
                     InsertImage(
                       image:

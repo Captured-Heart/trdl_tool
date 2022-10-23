@@ -217,13 +217,13 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
                     BodyText(
                       indents: 2,
                       text:
-                          'a. met geel knipperend seinbeeld - de LWB plaatst de ZKL in de eerste sectie achter het sein; of\n\nb. met normaal seinbeeld - de LWB plaatst de ZKL met remote control in de eerste sectie achter het sein en schakelt deze in de stand \'niet geleidend\';',
+                          "a. met geel knipperend seinbeeld - de LWB plaatst de ZKL in de eerste sectie achter het sein; of\n\nb. met normaal seinbeeld - de LWB plaatst de ZKL met remote control in de eerste sectie achter het sein en schakelt deze in de stand 'niet geleidend';",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '2. De LWB verlaat het spoor en stelt zich buiten PVR op met zicht op het sein;\n\n3. Je verhindert rijweginstelling naar het betrokken sein indien noodzakelijk;\n\n4. Je stelt vast, indien nodig met hulp van de LWB, of zich op het spoor voor het betrokken sein een trein of rangeerdeel met MCN bevindt. Als dit het geval is neem je, eventueel met hulp van de LWB, contact op met deze MCN. Je geeft de MCN de opdracht om stil te blijven staan;\n\n5. Je stelt op verzoek van de LWB de rijweg in;\n\n6. Indien van toepassing schakelt de LWB de ZKL met remote control in de stand \'geleidend\';\n\n7. Je herroept op verzoek van de LWB de rijweg;\n\n8. De LWB controleert de juiste stand van de wissels;\n\n9. Je verwijdert verhinderingen naar het betrokken sein als deze door jou zijn aangebracht;\n\n10. Je informeert indien van toepassing de MCN.',
+                          "2. De LWB verlaat het spoor en stelt zich buiten PVR op met zicht op het sein;\n\n3. Je verhindert rijweginstelling naar het betrokken sein indien noodzakelijk;\n\n4. Je stelt vast, indien nodig met hulp van de LWB, of zich op het spoor voor het betrokken sein een trein of rangeerdeel met MCN bevindt. Als dit het geval is neem je, eventueel met hulp van de LWB, contact op met deze MCN. Je geeft de MCN de opdracht om stil te blijven staan;\n\n5. Je stelt op verzoek van de LWB de rijweg in;\n\n6. Indien van toepassing schakelt de LWB de ZKL met remote control in de stand 'geleidend';\n\n7. Je herroept op verzoek van de LWB de rijweg;\n\n8. De LWB controleert de juiste stand van de wissels;\n\n9. Je verwijdert verhinderingen naar het betrokken sein als deze door jou zijn aangebracht;\n\n10. Je informeert indien van toepassing de MCN.",
                     ),
                   ],
                 ),

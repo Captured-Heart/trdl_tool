@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAICommmunicatieMiddelen {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_mondelinge_communicatie,
 }
 
@@ -16,17 +18,20 @@ class AICommmunicatieMiddelen extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAICommmunicatieMiddelen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAICommmunicatieMiddelen result) {
+            onSelected: (WhereToGoFromAICommmunicatieMiddelen result) async {
               if (result == WhereToGoFromAICommmunicatieMiddelen.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAICommmunicatieMiddelen
                       .ww_mondelinge_communicatie) {
-                Navigator.pushNamed(context, 'ww_mondelinge_communicatie');
+                await Navigator.pushNamed(
+                  context,
+                  'ww_mondelinge_communicatie',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -55,14 +60,14 @@ class AICommmunicatieMiddelen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Communicatiemiddelen - basisinformatie',
                     ),
@@ -127,23 +132,23 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '1. Druk in module 1 de \'Alarm\' lijntoets (1) van het gewenste oproepgebied.',
+                          "1. Druk in module 1 de 'Alarm' lijntoets (1) van het gewenste oproepgebied.",
                     ),
                     BodyText(
                       indents: 2,
                       text:
-                          'a. De \'Alarm\' lijntoets (1) brandt continu;\n\nb. De \'Bevestig\' toets (2) knippert en het label bij deze toets licht op en krijgt dubbel formaat. Het label bij deze toets toont \'Bevestig Alarm\' alsmede de gebiedsindicatie als in het label van de \'Alarm\' lijntoets (1).',
+                          "a. De 'Alarm' lijntoets (1) brandt continu;\n\nb. De 'Bevestig' toets (2) knippert en het label bij deze toets licht op en krijgt dubbel formaat. Het label bij deze toets toont 'Bevestig Alarm' alsmede de gebiedsindicatie als in het label van de 'Alarm' lijntoets (1).",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '2. Druk de \'Bevestig\' toets (2) om de oproep daadwerkelijk te initiëren.',
+                          "2. Druk de 'Bevestig' toets (2) om de oproep daadwerkelijk te initiëren.",
                     ),
                     BodyText(
                       indents: 2,
                       text:
-                          'a. Hierna brandt de \'Alarm\' lijntoets (1) continu en toont het label van de \'Bevestig\' toets (2) weer de rustsituatie (wit-op-grijs);\n\nb. In de telefoonhoorn is de wachttoon hoorbaar gedurende 7 seconden;\n\nc. Het label bij de \'Alarm\' lijntoets (1) krijgt een dubbel formaat in rood-op-wit de getoonde informatie blijft gelijk (alarm en gebiedsindicatie);\n\nd. Op het bij de gebruikte handset behorende functiedisplay verschijnt in dezelfde kleur dezelfde informatie als bij het label van de \'Alarm\' lijntoets (1);\n\ne. Het label van de \'Alarm Uit\' (3) lijntoets is niet langer wit-op-grijs, maar wordt (ter indicatie van bedienbaarheid) rood-op-wit, het label krijgt dubbel formaat en toont \'Alarm Uit\' alsmede de gebiedsindicatie zoals in het label van de staande \'Alarm\' lijntoets (1).',
+                          "a. Hierna brandt de 'Alarm' lijntoets (1) continu en toont het label van de 'Bevestig' toets (2) weer de rustsituatie (wit-op-grijs);\n\nb. In de telefoonhoorn is de wachttoon hoorbaar gedurende 7 seconden;\n\nc. Het label bij de 'Alarm' lijntoets (1) krijgt een dubbel formaat in rood-op-wit de getoonde informatie blijft gelijk (alarm en gebiedsindicatie);\n\nd. Op het bij de gebruikte handset behorende functiedisplay verschijnt in dezelfde kleur dezelfde informatie als bij het label van de 'Alarm' lijntoets (1);\n\ne. Het label van de 'Alarm Uit' (3) lijntoets is niet langer wit-op-grijs, maar wordt (ter indicatie van bedienbaarheid) rood-op-wit, het label krijgt dubbel formaat en toont 'Alarm Uit' alsmede de gebiedsindicatie zoals in het label van de staande 'Alarm' lijntoets (1).",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -154,7 +159,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Indien na selectie van een oproepgebied een ander oproepgebied geselecteerd wordt dan vervalt de selectie van het eerste oproepgebied;\n\n- Met het drukken op de \'Clear\' toets (5) alvorens op de \'Bevestig\' toets (2) gedrukt te hebben vervalt de selectie in het overzicht oproepgebieden en wordt de rustsituatie hersteld;\n\n- Een gekozen selectie blijft staan totdat de \'Clear\' toets (5) gedrukt wordt of een andere selectie gedaan wordt.',
+                          "- Indien na selectie van een oproepgebied een ander oproepgebied geselecteerd wordt dan vervalt de selectie van het eerste oproepgebied;\n\n- Met het drukken op de 'Clear' toets (5) alvorens op de 'Bevestig' toets (2) gedrukt te hebben vervalt de selectie in het overzicht oproepgebieden en wordt de rustsituatie hersteld;\n\n- Een gekozen selectie blijft staan totdat de 'Clear' toets (5) gedrukt wordt of een andere selectie gedaan wordt.",
                     ),
                   ],
                 ),
@@ -166,7 +171,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Handboek Machinist',
                     ),
@@ -180,7 +185,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- de boordomroep om de stationsnaam om te roepen;\n\n- de alarmoproep bij de portofoon en GSM-R;\n\n- de portofoon bij geduwd rangeren;\n\n- een GSM of portofoon als deze dient als beschermingsmiddel voor \'alleenwerkenden\'.',
+                          "- de boordomroep om de stationsnaam om te roepen;\n\n- de alarmoproep bij de portofoon en GSM-R;\n\n- de portofoon bij geduwd rangeren;\n\n- een GSM of portofoon als deze dient als beschermingsmiddel voor 'alleenwerkenden'.",
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -202,7 +207,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Daar waar door seingeving opgelegd wordt de snelheid te begrenzen tot 40 km/u of zoveel minder als nodig is om voor het eerstvolgende \'stop\' tonende sein te kunnen stoppen;\n\n- Daar waar door seingeving of een aanwijzing opgelegd wordt de snelheid te beperken tot snelheid van maximaal 40 km/u.',
+                          "- Daar waar door seingeving opgelegd wordt de snelheid te begrenzen tot 40 km/u of zoveel minder als nodig is om voor het eerstvolgende 'stop' tonende sein te kunnen stoppen;\n\n- Daar waar door seingeving of een aanwijzing opgelegd wordt de snelheid te beperken tot snelheid van maximaal 40 km/u.",
                     ),
                   ],
                 ),
@@ -214,7 +219,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Ontvangen van een alarmoproep',
                     ),
@@ -227,18 +232,18 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     BodyText(
                       indents: 2,
                       text:
-                          'a. In een van de eerste twee kolommen knippert een \'Alarm\' lijntoets (1). In het label wordt de initiator getoond: \'MCN\' + treinnummer of VL-post indicatie, alsmede de alarmgebiedsindicatie (wit-op-rood);\n\nb. Tevens is het alarmsignaal hoorbaar.',
+                          "a. In een van de eerste twee kolommen knippert een 'Alarm' lijntoets (1). In het label wordt de initiator getoond: 'MCN' + treinnummer of VL-post indicatie, alsmede de alarmgebiedsindicatie (wit-op-rood);\n\nb. Tevens is het alarmsignaal hoorbaar.",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '2. Druk op de desbetreffende \'Alarm\' lijntoets (1) om de alarmoproep aan te nemen',
+                          "2. Druk op de desbetreffende 'Alarm' lijntoets (1) om de alarmoproep aan te nemen",
                     ),
                     BodyText(
                       indents: 2,
                       text:
-                          'a. Het alarmsignaal stopt;\n\nb. De desbetreffende \'Alarm\' lijntoets (1) brandt continu;\n\nc. Het label verandert van kleur, wordt rood-op-wit;\n\nd. Op het bij de gebruikte handset behorende functiedisplay wordt in dezelfde kleur de bij de \'Alarm\' lijntoets (1) behorende labelinformatie getoond;\n\ne. Eventuele andere staande verbindingen anders dan alarmen worden automatisch op \'Hold\' gezet;\n\nf. Het label van de \'Alarm Uit\' lijntoets (3) is niet langer wit-op-grijs, maar wordt rood-op-wit (ter indicatie dat deze toets bedienbaar is), het label krijgt dubbel formaat en toont \'Alarm Uit\' alsmede de gebiedsindicatie als in het label van de staande \'Alarm\' lijntoets (1).',
+                          "a. Het alarmsignaal stopt;\n\nb. De desbetreffende 'Alarm' lijntoets (1) brandt continu;\n\nc. Het label verandert van kleur, wordt rood-op-wit;\n\nd. Op het bij de gebruikte handset behorende functiedisplay wordt in dezelfde kleur de bij de 'Alarm' lijntoets (1) behorende labelinformatie getoond;\n\ne. Eventuele andere staande verbindingen anders dan alarmen worden automatisch op 'Hold' gezet;\n\nf. Het label van de 'Alarm Uit' lijntoets (3) is niet langer wit-op-grijs, maar wordt rood-op-wit (ter indicatie dat deze toets bedienbaar is), het label krijgt dubbel formaat en toont 'Alarm Uit' alsmede de gebiedsindicatie als in het label van de staande 'Alarm' lijntoets (1).",
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -255,7 +260,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- De alarmtoon blijft hoorbaar totdat een (van de) ontvangende TRDL(\'s) het alarm heeft aangenomen, ongeacht op welke VL-post dat heeft plaatsgevonden;\n\n- Als er door de initiërende MCN geen treinnummer is ingevoerd, wordt het mobiele nummer getoond.',
+                          "- De alarmtoon blijft hoorbaar totdat een (van de) ontvangende TRDL('s) het alarm heeft aangenomen, ongeacht op welke VL-post dat heeft plaatsgevonden;\n\n- Als er door de initiërende MCN geen treinnummer is ingevoerd, wordt het mobiele nummer getoond.",
                     ),
                   ],
                 ),
@@ -267,7 +272,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Verlaten van een alarmoproep',
                     ),
@@ -275,12 +280,12 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '1. Druk op de \'Hold\' toets (6) van de desbetreffende handset, hierdoor wordt het gesprek verlaten. Het alarm \'buiten\' blijft gewoon actief. De \'Alarm\' lijntoets dooft.',
+                          "1. Druk op de 'Hold' toets (6) van de desbetreffende handset, hierdoor wordt het gesprek verlaten. Het alarm 'buiten' blijft gewoon actief. De 'Alarm' lijntoets dooft.",
                     ),
                     BodyText(
                       indents: 2,
                       text:
-                          'a. Het bij de desbetreffende \'Alarm\' lijntoets (1) behorende label geeft de indicatie dat het gesprek nog steeds actief is, maar in de wacht staat;\n\nb. Op het bij de gebruikte handset behorende functiedisplay wordt de bij het alarm behorende labelinformatie niet meer getoond;\n\nc. Het label van de \'Alarm Uit\' lijntoets (3) wordt rood-op-wit (ter indicatie dat deze toets bedienbaar is), krijgt weer enkel formaat en toont niet langer de gebiedsindicatie als in het label van de staande \'Alarm\' lijntoets (1).',
+                          "a. Het bij de desbetreffende 'Alarm' lijntoets (1) behorende label geeft de indicatie dat het gesprek nog steeds actief is, maar in de wacht staat;\n\nb. Op het bij de gebruikte handset behorende functiedisplay wordt de bij het alarm behorende labelinformatie niet meer getoond;\n\nc. Het label van de 'Alarm Uit' lijntoets (3) wordt rood-op-wit (ter indicatie dat deze toets bedienbaar is), krijgt weer enkel formaat en toont niet langer de gebiedsindicatie als in het label van de staande 'Alarm' lijntoets (1).",
                     ),
                   ],
                 ),
@@ -292,7 +297,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle:
                           'Deelname aan of terugkeren naar een alarmoproep',
@@ -301,12 +306,12 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '1. Druk op de \'Alarm\' lijntoets (1) van het desbetreffende alarm, hierdoor wordt de TRDL (weer) bij de alarmoproep betrokken.',
+                          "1. Druk op de 'Alarm' lijntoets (1) van het desbetreffende alarm, hierdoor wordt de TRDL (weer) bij de alarmoproep betrokken.",
                     ),
                     BodyText(
                       indents: 2,
                       text:
-                          'a. Het bij de desbetreffende \'Alarm\' lijntoets (1) behorende label blijft staan in rood-op-wit en geeft de indicatie dat het gesprek op de handset staat;\n\nb. De \'Alarm\' lijntoets (1) brandt continu;\n\nc. Op het bij de gebruikte handset behorende functiedisplay wordt in dezelfde kleur de bij de \'Alarm\' lijntoets (1) behorende labelinformatie getoond;\n\nd. Het label van de \'Alarm Uit\' lijntoets (3) is niet langer wit-op-grijs, maar rood-op-wit (ter indicatie dat deze toets bedienbaar is) en krijgt dubbel formaat en toont \'Alarm Uit\', alsmede de gebiedsindicatie als in het label van de staande \'Alarm\' lijntoets (1).',
+                          "a. Het bij de desbetreffende 'Alarm' lijntoets (1) behorende label blijft staan in rood-op-wit en geeft de indicatie dat het gesprek op de handset staat;\n\nb. De 'Alarm' lijntoets (1) brandt continu;\n\nc. Op het bij de gebruikte handset behorende functiedisplay wordt in dezelfde kleur de bij de 'Alarm' lijntoets (1) behorende labelinformatie getoond;\n\nd. Het label van de 'Alarm Uit' lijntoets (3) is niet langer wit-op-grijs, maar rood-op-wit (ter indicatie dat deze toets bedienbaar is) en krijgt dubbel formaat en toont 'Alarm Uit', alsmede de gebiedsindicatie als in het label van de staande 'Alarm' lijntoets (1).",
                     ),
                   ],
                 ),
@@ -318,7 +323,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Beëindigen alarmoproep',
                     ),
@@ -326,7 +331,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Als je een alarmoproep beëindigt, druk je op \'Alarm Uit\' en daarna bevestig je dit door middel van het indrukken van toets (2). Staat de alarmoproep op \'Hold\' dan moet je eerst de \'Alarm\' lijntoets (1) weer activeren.\n\nWil je meer weten over de bedieningsmogelijkheden van de Inttel console lees dan de gebruiksaanwijzing.',
+                          "Als je een alarmoproep beëindigt, druk je op 'Alarm Uit' en daarna bevestig je dit door middel van het indrukken van toets (2). Staat de alarmoproep op 'Hold' dan moet je eerst de 'Alarm' lijntoets (1) weer activeren.\n\nWil je meer weten over de bedieningsmogelijkheden van de Inttel console lees dan de gebruiksaanwijzing.",
                     ),
                   ],
                 ),
@@ -338,7 +343,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Voicelogger',
                     ),
@@ -358,7 +363,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'GSM-R noodtelefoon (handheld)',
                     ),
@@ -383,7 +388,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'GSM-R portofoon',
                     ),
@@ -391,7 +396,7 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De GSM-R portofoon maakt gebruik van het GSM-R netwerk van ProRail, dat deel uitmaakt van de spoorweginfrastructuur. De GSM-R portofoon stelt groepen medewerkers bij het spoor in staat op een veilige manier rechtstreeks met elkaar te communiceren. Daarnaast kan direct worden gesproken met TRDL, met eigen bijstuurders en met MCN van treinen. Deze nieuwe portofoons staan ook ter beschikking aan de PCA\'s.\n\nEen groep medewerkers van een vervoerder op een geografisch beperkt gebied (bijv. een rangeerterrein) communiceert met elkaar onderling. Een coördinator van de vervoerder (de zgn. bijstuurder) kan zo nodig worden opgeroepen voor bijvoorbeeld overleg en neemt dan ook deel aan de groepscommunicatie. Het is hierbij niet per sé noodzakelijk dat de bijstuurder beschikt over een GSM-R toestel.\n\nOok kan er gecommuniceerd worden met de TRDL.\n\nNaast de (geografisch beperkte) groepscommunicatie is het mogelijk elkaar rechtstreeks aan te roepen, zonder dat de collega\'s meeluisteren.\n\nBij incidenten kan er zowel door de TRDL als door de medewerkers alarm worden geslagen.\n\nVoor kritische toepassingen zoals rangeren, waarbij communicatie tussen rangeerder en MCN een must is, kan gebruik worden gemaakt van een bewaakte verbinding. De handhelds bewaken dan voortdurend dat ze beiden binnen bereik van het netwerk zijn en slaan zo nodig alarm als dat niet zo is.',
+                          "De GSM-R portofoon maakt gebruik van het GSM-R netwerk van ProRail, dat deel uitmaakt van de spoorweginfrastructuur. De GSM-R portofoon stelt groepen medewerkers bij het spoor in staat op een veilige manier rechtstreeks met elkaar te communiceren. Daarnaast kan direct worden gesproken met TRDL, met eigen bijstuurders en met MCN van treinen. Deze nieuwe portofoons staan ook ter beschikking aan de PCA's.\n\nEen groep medewerkers van een vervoerder op een geografisch beperkt gebied (bijv. een rangeerterrein) communiceert met elkaar onderling. Een coördinator van de vervoerder (de zgn. bijstuurder) kan zo nodig worden opgeroepen voor bijvoorbeeld overleg en neemt dan ook deel aan de groepscommunicatie. Het is hierbij niet per sé noodzakelijk dat de bijstuurder beschikt over een GSM-R toestel.\n\nOok kan er gecommuniceerd worden met de TRDL.\n\nNaast de (geografisch beperkte) groepscommunicatie is het mogelijk elkaar rechtstreeks aan te roepen, zonder dat de collega's meeluisteren.\n\nBij incidenten kan er zowel door de TRDL als door de medewerkers alarm worden geslagen.\n\nVoor kritische toepassingen zoals rangeren, waarbij communicatie tussen rangeerder en MCN een must is, kan gebruik worden gemaakt van een bewaakte verbinding. De handhelds bewaken dan voortdurend dat ze beiden binnen bereik van het netwerk zijn en slaan zo nodig alarm als dat niet zo is.",
                     ),
                     SizedBoxH(),
                     BoldText(
