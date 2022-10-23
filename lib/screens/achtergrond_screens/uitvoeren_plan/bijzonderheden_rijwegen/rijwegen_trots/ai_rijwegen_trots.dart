@@ -1,11 +1,17 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIRijwegenTrots {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_rijwegen_ari,
+  // ignore: constant_identifier_names
   ai_rijwegen_planscherm,
+  // ignore: constant_identifier_names
   ai_bijzonderheden_rijwegen_main,
+  // ignore: constant_identifier_names
   ai_rijwegen_planopbouw,
+  // ignore: constant_identifier_names
   ai_rijwegen_bedienscherm,
 }
 
@@ -20,29 +26,32 @@ class AIRijwegenTrots extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIRijwegenTrots>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIRijwegenTrots result) {
+            onSelected: (WhereToGoFromAIRijwegenTrots result) async {
               if (result == WhereToGoFromAIRijwegenTrots.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIRijwegenTrots.ai_rijwegen_ari) {
-                Navigator.pushNamed(context, 'ai_rijwegen_ari');
+                await Navigator.pushNamed(context, 'ai_rijwegen_ari');
               } else if (result ==
                   WhereToGoFromAIRijwegenTrots.ai_rijwegen_planscherm) {
-                Navigator.pushNamed(context, 'ai_rijwegen_planscherm');
+                await Navigator.pushNamed(context, 'ai_rijwegen_planscherm');
               } else if (result ==
                   WhereToGoFromAIRijwegenTrots
                       .ai_bijzonderheden_rijwegen_main) {
-                Navigator.pushNamed(context, 'ai_bijzonderheden_rijwegen_main');
+                await Navigator.pushNamed(
+                  context,
+                  'ai_bijzonderheden_rijwegen_main',
+                );
               } else if (result ==
                   WhereToGoFromAIRijwegenTrots.ai_rijwegen_planopbouw) {
-                Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
+                await Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
               } else if (result ==
                   WhereToGoFromAIRijwegenTrots.ai_rijwegen_bedienscherm) {
-                Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
+                await Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
               } else {
                 Navigator.pop(context);
               }
@@ -99,14 +108,14 @@ class AIRijwegenTrots extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title:
                           'Rijwegen - basisinformatie: Automatische Bediening TROTSnummers (ABT)',
@@ -131,7 +140,7 @@ class AIRijwegenTrots extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Automatisch omnummeren',
                     ),
@@ -139,7 +148,7 @@ class AIRijwegenTrots extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Het  invullen  van  treinnummers bij  materieelrelaties van  het  soort  \'splitsen\',  \'overgaan\'  en  \'combineren\' worden automatisch uitgevoerd. Bij splitsen en overgaan wordt direct bij aankomst omgenummerd. Bij combineren wordt met omnummeren gewacht tot het laatste deel van de materieelrelatie aangekomen is.',
+                          "Het  invullen  van  treinnummers bij  materieelrelaties van  het  soort  'splitsen',  'overgaan'  en  'combineren' worden automatisch uitgevoerd. Bij splitsen en overgaan wordt direct bij aankomst omgenummerd. Bij combineren wordt met omnummeren gewacht tot het laatste deel van de materieelrelatie aangekomen is.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -168,7 +177,7 @@ class AIRijwegenTrots extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '3. Als het aankomst- en vertrekspoor verschillend zijn: er moet een aaneensluitende sectiebezetting zijn op het vertrekspoor. Daarnaast mag er geen andere sectiebezetting op het vertrekspoor zijn;\n\n4. Bij overgaan en splitsen: de aanvoerende activiteit moet zijn \'aangekomen\'. Dit is het geval zodra het juiste treinnummer op het aankomstspoor aanwezig is en het aankomstspoor bezet wordt. Het aankomstspoor wordt bezet zodra de sectie na het laatste tegensein (in de richting van de aankomstactiviteit) bezet is. Is er geen tegensein aanwezig, of valt het tegensein qua positie samen met het beginsein van de laatste seinstap, dan geldt alleen de eis dat het juiste treinnummer aanwezig moet zijn;\n\n5. Bij combineren: de laatste aanvoerende activiteit  moet zijn \'aangekomen\'. Dit is het geval zodra het treinnummer op het aankomstspoor aanwezig is;\n\n6. Als er van een set bij elkaar horende planregels, één of meer materieelrelaties uit staan voor ABT, zal er geen enkele van de bij deze materieelrelaties behorende omnummeringen plaatsvinden.',
+                          "3. Als het aankomst- en vertrekspoor verschillend zijn: er moet een aaneensluitende sectiebezetting zijn op het vertrekspoor. Daarnaast mag er geen andere sectiebezetting op het vertrekspoor zijn;\n\n4. Bij overgaan en splitsen: de aanvoerende activiteit moet zijn 'aangekomen'. Dit is het geval zodra het juiste treinnummer op het aankomstspoor aanwezig is en het aankomstspoor bezet wordt. Het aankomstspoor wordt bezet zodra de sectie na het laatste tegensein (in de richting van de aankomstactiviteit) bezet is. Is er geen tegensein aanwezig, of valt het tegensein qua positie samen met het beginsein van de laatste seinstap, dan geldt alleen de eis dat het juiste treinnummer aanwezig moet zijn;\n\n5. Bij combineren: de laatste aanvoerende activiteit  moet zijn 'aangekomen'. Dit is het geval zodra het treinnummer op het aankomstspoor aanwezig is;\n\n6. Als er van een set bij elkaar horende planregels, één of meer materieelrelaties uit staan voor ABT, zal er geen enkele van de bij deze materieelrelaties behorende omnummeringen plaatsvinden.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -213,7 +222,7 @@ class AIRijwegenTrots extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Bediening',
                     ),
@@ -226,7 +235,7 @@ class AIRijwegenTrots extends StatelessWidget {
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
-                      text: '- De knop \'ABT\';\n\n- De knop \'ARI/ABT\'.',
+                      text: "- De knop 'ABT';\n\n- De knop 'ARI/ABT'.",
                     ),
                     SizedBoxH(),
                     SubTitleText(
@@ -236,7 +245,7 @@ class AIRijwegenTrots extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Voor een goede werking van ARI en reizigersinformatie systemen is het belangrijk dat treinnummers op het juiste moment en plaats naar een nieuw nummer worden omgenummerd. ABT doet dit op basis van materieelrelaties.\n\nOmdat de ABT-instellingen en -afhandelingen één op één samenhangen met de planregels op het procesplan rijwegen venster, worden ze gepresenteerd door middel van verschillende weergaves van de \'M\' in de betreffende planregels:',
+                          "Voor een goede werking van ARI en reizigersinformatie systemen is het belangrijk dat treinnummers op het juiste moment en plaats naar een nieuw nummer worden omgenummerd. ABT doet dit op basis van materieelrelaties.\n\nOmdat de ABT-instellingen en -afhandelingen één op één samenhangen met de planregels op het procesplan rijwegen venster, worden ze gepresenteerd door middel van verschillende weergaves van de 'M' in de betreffende planregels:",
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -252,8 +261,9 @@ class AIRijwegenTrots extends StatelessWidget {
                     ),
                     SizedBoxH(),
                     InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_trots/rijwegentrots1.png'),
+                      image:
+                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_trots/rijwegentrots1.png',
+                    ),
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
@@ -296,8 +306,9 @@ class AIRijwegenTrots extends StatelessWidget {
                     ),
                     SizedBoxH(),
                     InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_trots/rijwegentrots2.png'),
+                      image:
+                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_trots/rijwegentrots2.png',
+                    ),
                     SizedBoxH(),
                     BoldText(
                       indents: 0,
@@ -306,7 +317,7 @@ class AIRijwegenTrots extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Bij het verschijnen van deze pop-up wordt er slechts één treinnummer getoond. Pas als de TRDL op de knop \'Treinnummer\' drukt, verschijnt ook de lijst met alternatieve treinnummers, die gekozen worden op basis van het van-spoor en het plan. Hieruit kan dan een ander treinnummer gekozen worden. Handmatige bewerking van het voorgestelde treinnummer is ook mogelijk. De knoppen \'Volgend voorstel\' en \'Vorig voorstel\' maken het mogelijk om door de lijst met nog niet verwerkte bedienvoorstellen te lopen.',
+                          "Bij het verschijnen van deze pop-up wordt er slechts één treinnummer getoond. Pas als de TRDL op de knop 'Treinnummer' drukt, verschijnt ook de lijst met alternatieve treinnummers, die gekozen worden op basis van het van-spoor en het plan. Hieruit kan dan een ander treinnummer gekozen worden. Handmatige bewerking van het voorgestelde treinnummer is ook mogelijk. De knoppen 'Volgend voorstel' en 'Vorig voorstel' maken het mogelijk om door de lijst met nog niet verwerkte bedienvoorstellen te lopen.",
                     ),
                   ],
                 ),

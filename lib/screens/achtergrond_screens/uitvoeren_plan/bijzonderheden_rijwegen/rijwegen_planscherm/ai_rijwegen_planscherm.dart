@@ -1,10 +1,15 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIRijwegenPlanscherm {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_rijwegen_planopbouw,
+  // ignore: constant_identifier_names
   ai_rijwegen_ari,
+  // ignore: constant_identifier_names
   ai_rijwegen_trots,
+  // ignore: constant_identifier_names
   ai_rijwegen_bedienscherm,
 }
 
@@ -19,25 +24,25 @@ class AIRijwegenPlanscherm extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIRijwegenPlanscherm>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIRijwegenPlanscherm result) {
+            onSelected: (WhereToGoFromAIRijwegenPlanscherm result) async {
               if (result == WhereToGoFromAIRijwegenPlanscherm.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_planopbouw) {
-                Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
+                await Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
               } else if (result ==
                   WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_ari) {
-                Navigator.pushNamed(context, 'ai_rijwegen_ari');
+                await Navigator.pushNamed(context, 'ai_rijwegen_ari');
               } else if (result ==
                   WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_trots) {
-                Navigator.pushNamed(context, 'ai_rijwegen_trots');
+                await Navigator.pushNamed(context, 'ai_rijwegen_trots');
               } else if (result ==
                   WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_bedienscherm) {
-                Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
+                await Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
               } else {
                 Navigator.pop(context);
               }
@@ -87,14 +92,14 @@ class AIRijwegenPlanscherm extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title:
                           'Rijwegen - basisinformatie: werken met het plan(scherm)',
@@ -144,7 +149,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Het plan',
                     ),
@@ -206,7 +211,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Het instellen van rijwegen in procesleiding',
                     ),
@@ -249,7 +254,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Instellen van rijwegen vanuit het planscherm',
                     ),
@@ -277,7 +282,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Selecteer een regel uit één van de planvensters. De planregel krijgt nu een andere kleur;\n\n- Klik in de planmenubalk op \'Rijweg\';\n\n- Klik \'Stel direct in\' --> De rijweg wordt in zijn geheel in 1x ingesteld.',
+                          "- Selecteer een regel uit één van de planvensters. De planregel krijgt nu een andere kleur;\n\n- Klik in de planmenubalk op 'Rijweg';\n\n- Klik 'Stel direct in' --> De rijweg wordt in zijn geheel in 1x ingesteld.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -287,13 +292,13 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Selecteer een regel uit één van de planvensters. De planregel krijgt nu een andere kleur;\n\n- Klik in de planmenubalk op Rijweg;\n\n- Klik \'Stel eerste deel in\' --> Hierna wordt het eerste deel van de rijweg ingesteld. Voor de andere delen van de rijweg moet bovenstaande steeds worden herhaald.',
+                          "- Selecteer een regel uit één van de planvensters. De planregel krijgt nu een andere kleur;\n\n- Klik in de planmenubalk op Rijweg;\n\n- Klik 'Stel eerste deel in' --> Hierna wordt het eerste deel van de rijweg ingesteld. Voor de andere delen van de rijweg moet bovenstaande steeds worden herhaald.",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 0,
                       text:
-                          'N.B. Wanneer gekozen wordt voor \'Stel in voor aanpassing\', gaat de instelopdracht naar het bedienvenster. De opdracht kan daar eventueel worden aangepast.',
+                          "N.B. Wanneer gekozen wordt voor 'Stel in voor aanpassing', gaat de instelopdracht naar het bedienvenster. De opdracht kan daar eventueel worden aangepast.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -312,7 +317,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     ),
                     SizedBoxH(),
                     SubTitleText(
-                      subtitle: 'Andere \'Rijweg\' mogelijkheden',
+                      subtitle: "Andere 'Rijweg' mogelijkheden",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -327,7 +332,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Klik op de te herplaatsen regel in de historie. De regel licht op;\n\n- Ga naar de planmenubalk;\n\n- Klik op \'Rijweg\';\n\n- Klik op \'Herplaats\' --> Regel wordt vanuit de historie verplaatst naar het planvenster.',
+                          "- Klik op de te herplaatsen regel in de historie. De regel licht op;\n\n- Ga naar de planmenubalk;\n\n- Klik op 'Rijweg';\n\n- Klik op 'Herplaats' --> Regel wordt vanuit de historie verplaatst naar het planvenster.",
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -348,7 +353,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Klik in de planmenubalk op \'Rijweg\' en dan op \'Hef selecties op\': nu wordt in één keer de selectie van alle planregels ongedaan gemaakt.',
+                          "- Klik in de planmenubalk op 'Rijweg' en dan op 'Hef selecties op': nu wordt in één keer de selectie van alle planregels ongedaan gemaakt.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -370,7 +375,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Voorkeursroutes en dwangrijwegen',
                     ),
@@ -408,7 +413,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Selecteer de planregel in het mutatievenster en klik op de functieknop \'Rijweg\'.\n\nKies voor \'Dwangrijwegen\'. Er opent zich nu een pop-up venster met alle mogelijke dwangrijwegen van de betreffende trein:',
+                          "Selecteer de planregel in het mutatievenster en klik op de functieknop 'Rijweg'.\n\nKies voor 'Dwangrijwegen'. Er opent zich nu een pop-up venster met alle mogelijke dwangrijwegen van de betreffende trein:",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -418,13 +423,13 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De beschrijvingen van de dwangrijwegen komen overeen met de spoorbenamingen en mogelijk wisselnummers van je emplacement.\n\nKies de geschikte dwangrijweg en klik op \'Voer in\'.\n\nDe gemuteerde planregel heeft nu onder de letter \'D\' het cijfer staan van de dwangrijweg die je hebt gekozen. Als je de planregel in het plan invoert, zal bij de afhandeling hiervan de dwangrijweg worden gebruikt in plaats van de voorkeursroute.\n\nAls je bekend bent met het bediengebied en de verschillende routes, kan je een dwangrijweg sneller instellen:',
+                          "De beschrijvingen van de dwangrijwegen komen overeen met de spoorbenamingen en mogelijk wisselnummers van je emplacement.\n\nKies de geschikte dwangrijweg en klik op 'Voer in'.\n\nDe gemuteerde planregel heeft nu onder de letter 'D' het cijfer staan van de dwangrijweg die je hebt gekozen. Als je de planregel in het plan invoert, zal bij de afhandeling hiervan de dwangrijweg worden gebruikt in plaats van de voorkeursroute.\n\nAls je bekend bent met het bediengebied en de verschillende routes, kan je een dwangrijweg sneller instellen:",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '- Klik in de planregel op het venstertje onder de letter \'D\' en vul het cijfer in van de dwangrijweg die je wilt. Je slaat hiermee de stap van het pop-up venster over.',
+                          "- Klik in de planregel op het venstertje onder de letter 'D' en vul het cijfer in van de dwangrijweg die je wilt. Je slaat hiermee de stap van het pop-up venster over.",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -441,7 +446,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle:
                           'Gefaseerde, integrale & hoog groen rijweginstelling',
@@ -460,7 +465,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Bij gefaseerde rijweginstelling hoeft met het instellen van de rijweg niet te worden gewacht tot de gehele rijweg beschikbaar is. Dit heeft een gunstig effect op de opvolging van treinen en zal daarmee de punctualiteit verhogen. Ook blijft het nog niet benodigde deel van de rijweg beschikbaar voor andere rijwegen. Zo kunnen andere treinen nog voorlangs passeren. Om een minimale infracapaciteit te claimen, moet ARI bij gefaseerde rijweginstelling niet meer dan een geconfigureerd aantal seinstappen (enkelvoudige rijwegen) voor de trein uit instellen. Indien op een moment dit aantal niet mogelijk is, wordt met een kleiner aantal seinstappen voldaan. In de ARI-configuratie wordt per pplg het aantal in te stellen seinstappen vastgesteld. Default staat dit aantal op twee seinstappen ingesteld.\n\nHet gefaseerd instellen van een samengestelde rijweg gaat als volgt: telkens als ARI een volgende seinstap voor de trein wil instellen, bepaalt ARI de afstand tussen de actuele (TROTS-) positie van de trein en de in te stellen seinstap. Indien de trein het aantal seinstappen nog niet benut heeft, wacht ARI tot de trein een seinstap afrijdt. ARI constateert dit door een treinnummerverplaatsing in TROTS. Bij gefaseerde rijweginstelling wordt bij een \'tijdelijk niet beschikbare\' rijweg uitsluitend gewacht als deze zich binnen de marge van het aantal in te stellen seinstappen bevindt.\n\nBij uitvoering van rijweginstellingen geldt geen tijdbegrenzing. Dit betekent dat rijwegen eenmaal in behandeling genomen door ARI oneindig in behandeling worden gehouden (planregels zeegroen).',
+                          "Bij gefaseerde rijweginstelling hoeft met het instellen van de rijweg niet te worden gewacht tot de gehele rijweg beschikbaar is. Dit heeft een gunstig effect op de opvolging van treinen en zal daarmee de punctualiteit verhogen. Ook blijft het nog niet benodigde deel van de rijweg beschikbaar voor andere rijwegen. Zo kunnen andere treinen nog voorlangs passeren. Om een minimale infracapaciteit te claimen, moet ARI bij gefaseerde rijweginstelling niet meer dan een geconfigureerd aantal seinstappen (enkelvoudige rijwegen) voor de trein uit instellen. Indien op een moment dit aantal niet mogelijk is, wordt met een kleiner aantal seinstappen voldaan. In de ARI-configuratie wordt per pplg het aantal in te stellen seinstappen vastgesteld. Default staat dit aantal op twee seinstappen ingesteld.\n\nHet gefaseerd instellen van een samengestelde rijweg gaat als volgt: telkens als ARI een volgende seinstap voor de trein wil instellen, bepaalt ARI de afstand tussen de actuele (TROTS-) positie van de trein en de in te stellen seinstap. Indien de trein het aantal seinstappen nog niet benut heeft, wacht ARI tot de trein een seinstap afrijdt. ARI constateert dit door een treinnummerverplaatsing in TROTS. Bij gefaseerde rijweginstelling wordt bij een 'tijdelijk niet beschikbare' rijweg uitsluitend gewacht als deze zich binnen de marge van het aantal in te stellen seinstappen bevindt.\n\nBij uitvoering van rijweginstellingen geldt geen tijdbegrenzing. Dit betekent dat rijwegen eenmaal in behandeling genomen door ARI oneindig in behandeling worden gehouden (planregels zeegroen).",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -480,7 +485,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'In sommige gevallen, in het bijzonder (maar niet uitsluitend) bij goederentreinen, is instellen van de gehele samengestelde rijweg vereist. Om deze garantie af te dwingen is er een \'integrale\' instelwijze als optie. Deze optie wordt als expliciete aanduiding in de instelregel van het procesplan aan ARI opgedragen. Je kan de instelwijze wijzigen via het mutatievenster. De default instelwijze is \'gefaseerd\'.',
+                          "In sommige gevallen, in het bijzonder (maar niet uitsluitend) bij goederentreinen, is instellen van de gehele samengestelde rijweg vereist. Om deze garantie af te dwingen is er een 'integrale' instelwijze als optie. Deze optie wordt als expliciete aanduiding in de instelregel van het procesplan aan ARI opgedragen. Je kan de instelwijze wijzigen via het mutatievenster. De default instelwijze is 'gefaseerd'.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -490,7 +495,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- De instelwijze wordt in de menubalk van het mutatievenster getoond als \'F\' (geFaseerd) of \'I\'(Integraal) onder de kop \'I\'. De Instelwijze wordt links van het \'van-spoor\' getoond. In het planvenster wordt het van-spoor altijd oranje getoond als de instelwijze Integraal is, ongeacht of ARI wel of niet aan staat voor de planregel en/of de insteltijd is verstreken. Ook in het historievenster wordt bij een Integrale instelwijze het van-spoor oranje getoond.',
+                          "- De instelwijze wordt in de menubalk van het mutatievenster getoond als 'F' (geFaseerd) of 'I'(Integraal) onder de kop 'I'. De Instelwijze wordt links van het 'van-spoor' getoond. In het planvenster wordt het van-spoor altijd oranje getoond als de instelwijze Integraal is, ongeacht of ARI wel of niet aan staat voor de planregel en/of de insteltijd is verstreken. Ook in het historievenster wordt bij een Integrale instelwijze het van-spoor oranje getoond.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -500,13 +505,13 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Een planregel met een Goederencriterium moet Integraal worden ingesteld. De koppeling van \'Goederencriterium\' en \'Integraal\' wordt als volgt geborgd:',
+                          "Een planregel met een Goederencriterium moet Integraal worden ingesteld. De koppeling van 'Goederencriterium' en 'Integraal' wordt als volgt geborgd:",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 1,
                       text:
-                          '- Bij het inlezen van BLP-planregels wordt gewaarschuwd als het Goederencriterium geldt terwijl de instelwijze voor de rijweg niet integraal is. Je moet de regels waarop bij het inlezen vanuit BLP een waarschuwing is gegeven, handmatig aanpassen;\n\n- Na mutatie van een planregel wordt \'blokkerend\' gemeld (d.w.z. planregel kan niet in plan worden teruggezet) dat het Goederencriterium gelt, terwijl de instelwijze niet integraal is.',
+                          "- Bij het inlezen van BLP-planregels wordt gewaarschuwd als het Goederencriterium geldt terwijl de instelwijze voor de rijweg niet integraal is. Je moet de regels waarop bij het inlezen vanuit BLP een waarschuwing is gegeven, handmatig aanpassen;\n\n- Na mutatie van een planregel wordt 'blokkerend' gemeld (d.w.z. planregel kan niet in plan worden teruggezet) dat het Goederencriterium gelt, terwijl de instelwijze niet integraal is.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -544,7 +549,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De instelwijze \'H\' is in het procesplan herkenbaar doordat het van-spoor van de vertrekregel \'Hoog Groen\' is gekleurd.',
+                          "De instelwijze 'H' is in het procesplan herkenbaar doordat het van-spoor van de vertrekregel 'Hoog Groen' is gekleurd.",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -569,7 +574,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Je kan zelf via het mutatievenster de instelwijze \'H\' invoeren.',
+                          "Je kan zelf via het mutatievenster de instelwijze 'H' invoeren.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -617,7 +622,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle:
                           'Rijweg met geel knipperend seinbeeld (ROZ-rijweg)',
@@ -650,7 +655,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Planregel met klaarmelding',
                     ),
@@ -658,7 +663,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Een klaarmelding heeft als doel, dat een rijweg pas wordt ingesteld als een bevoegde functionaris te kennen heeft gegeven dat de trein \'klaar\' is.\n\nJe handelt als volgt:',
+                          "Een klaarmelding heeft als doel, dat een rijweg pas wordt ingesteld als een bevoegde functionaris te kennen heeft gegeven dat de trein 'klaar' is.\n\nJe handelt als volgt:",
                     ),
                     SizedBoxH(),
                     BodyText(
@@ -682,7 +687,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Foute planregels',
                     ),
@@ -706,7 +711,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De Veiligheid Kritische Activiteiten (VKA\'s) en de failsafe beveiliging in combinatie met adequate treinbesturing garanderen de veiligheid.',
+                          "De Veiligheid Kritische Activiteiten (VKA's) en de failsafe beveiliging in combinatie met adequate treinbesturing garanderen de veiligheid.",
                     ),
                     SizedBoxH(),
                     SubTitleText(

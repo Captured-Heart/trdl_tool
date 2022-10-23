@@ -1,9 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIRijwegenPlanopbouw {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_bijzonderheden_rijwegen_main,
+  // ignore: constant_identifier_names
   ai_bijzonderheden_rijwegen_main,
+  // ignore: constant_identifier_names
   ai_rijwegen_planscherm,
 }
 
@@ -18,17 +22,20 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIRijwegenPlanopbouw>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIRijwegenPlanopbouw result) {
+            onSelected: (WhereToGoFromAIRijwegenPlanopbouw result) async {
               if (result == WhereToGoFromAIRijwegenPlanopbouw.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIRijwegenPlanopbouw
                       .ww_bijzonderheden_rijwegen_main) {
-                Navigator.pushNamed(context, 'ww_bijzonderheden_rijwegen_main');
+                await Navigator.pushNamed(
+                  context,
+                  'ww_bijzonderheden_rijwegen_main',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -72,14 +79,14 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Rijwegen - basisinformatie: plan(regel)opbouw',
                     ),
@@ -129,7 +136,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Het plan',
                     ),
@@ -197,7 +204,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Opbouw planregel - planscherm',
                     ),
@@ -219,7 +226,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '! = Er is een nog niet afgehandelde vertraging;\n\n+ = Plan is gewijzigd door een treindienstleider;\n\n? = Er is voor deze trein een \'uitblijven seinpassage\' opgetreden.',
+                          "! = Er is een nog niet afgehandelde vertraging;\n\n+ = Plan is gewijzigd door een treindienstleider;\n\n? = Er is voor deze trein een 'uitblijven seinpassage' opgetreden.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -354,7 +361,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Als er voor deze treinactiviteit één of meer niet afgevinkte klaarmeldingen zijn, staat hier een \'K\'. Zijn alle klaarmeldingen afgevinkt verandert de \'K\' in een \'-\'.',
+                          "Als er voor deze treinactiviteit één of meer niet afgevinkte klaarmeldingen zijn, staat hier een 'K'. Zijn alle klaarmeldingen afgevinkt verandert de 'K' in een '-'.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -364,7 +371,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Als er voor deze treinactiviteit één of meer materieelrelaties zijn, staat hier een \'m\' of een \'M\'. De \'M\' kan verschillende kleuren hebben, waarmee de ABT status wordt aangeduid.',
+                          "Als er voor deze treinactiviteit één of meer materieelrelaties zijn, staat hier een 'm' of een 'M'. De 'M' kan verschillende kleuren hebben, waarmee de ABT status wordt aangeduid.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -374,7 +381,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'De bijzonderheden bij een treinactiviteit kunnen bestaan uit maximaal 2 codes en/of een vrije tekst. Aangezien er ruimte is voor 11 tekens op een 21 inch scherm kan maar een beperkt deel van deze informatie worden getoond. Deze ruimte wordt benut om eerst informatie over de standaard bijzonderheden te geven en pas daarna om de bijzonderheden-tekst te tonen, afgekapt op het beschikbare aantal tekenposities. Als laatste teken wordt een speciaal teken (\'>\') getoond om duidelijk te maken dat er meer informatie is die hier niet meer getoond kan worden.\n\nD.m.v. de knop \'Bijz. heden\' in de planmenubalk kan de volledige tekst worden bekeken.\n\nStandaard bijzonderheden zijn bijzonderheden die aan een trein kunnen worden toegekend, gekozen uit een standaardlijst:',
+                          "De bijzonderheden bij een treinactiviteit kunnen bestaan uit maximaal 2 codes en/of een vrije tekst. Aangezien er ruimte is voor 11 tekens op een 21 inch scherm kan maar een beperkt deel van deze informatie worden getoond. Deze ruimte wordt benut om eerst informatie over de standaard bijzonderheden te geven en pas daarna om de bijzonderheden-tekst te tonen, afgekapt op het beschikbare aantal tekenposities. Als laatste teken wordt een speciaal teken ('>') getoond om duidelijk te maken dat er meer informatie is die hier niet meer getoond kan worden.\n\nD.m.v. de knop 'Bijz. heden' in de planmenubalk kan de volledige tekst worden bekeken.\n\nStandaard bijzonderheden zijn bijzonderheden die aan een trein kunnen worden toegekend, gekozen uit een standaardlijst:",
                     ),
                     BodyText(
                       indents: 2,
@@ -391,7 +398,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Opbouw planregel - mutatiescherm',
                     ),
@@ -485,13 +492,13 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Instelwijze. Door op de \'I\' te klikken kan de instelwijze bij deze activiteit bekeken en/of gewijzigd worden. Met één van de tekens uit de reeks \'I, H, F, of 1 t/m 9\' kan de rijweg als volgt worden ingesteld:',
+                          "Instelwijze. Door op de 'I' te klikken kan de instelwijze bij deze activiteit bekeken en/of gewijzigd worden. Met één van de tekens uit de reeks 'I, H, F, of 1 t/m 9' kan de rijweg als volgt worden ingesteld:",
                     ),
                     SizedBoxH(),
                     BodyText(
                       indents: 2,
                       text:
-                          '- I = Integraal;\n\n- H = Hoog groen met het voor dat PPLG geconfigureerde aantal seinstappen;\n\n- F = Gefaseerd met het voor dat PPLG geconfigureerde aantal seinstappen;\n\n- 1 t/m 9 = Gefaseerd met het aantal seinstappen aangegeven door het cijfer;\n\n- Als de instelwijze integraal is, zal het VAN-spoor oranje worden getoond in het plan- en historievenster;\n\n- Als de instelwijze \'Hoog groen\' is, zal het VAN-spoor in een heldere groene kleur worden getoond in het plan- en historievenster.',
+                          "- I = Integraal;\n\n- H = Hoog groen met het voor dat PPLG geconfigureerde aantal seinstappen;\n\n- F = Gefaseerd met het voor dat PPLG geconfigureerde aantal seinstappen;\n\n- 1 t/m 9 = Gefaseerd met het aantal seinstappen aangegeven door het cijfer;\n\n- Als de instelwijze integraal is, zal het VAN-spoor oranje worden getoond in het plan- en historievenster;\n\n- Als de instelwijze 'Hoog groen' is, zal het VAN-spoor in een heldere groene kleur worden getoond in het plan- en historievenster.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -519,7 +526,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Laatste bezette spoorfase. Dit is van belang voor de Spoorbezettingsgrafiek: bij een lange trein (meer dan één spoorfase bezet) geeft het \'Naar\' spoor de plaats aan waar de kop van de trein staat; het \'t/m\' spoor geeft de plaats aan waar het achterste deel van de trein staat.',
+                          "Laatste bezette spoorfase. Dit is van belang voor de Spoorbezettingsgrafiek: bij een lange trein (meer dan één spoorfase bezet) geeft het 'Naar' spoor de plaats aan waar de kop van de trein staat; het 't/m' spoor geeft de plaats aan waar het achterste deel van de trein staat.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -539,7 +546,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Klaarmelding. Door op \'K\' te klikken kan deze activiteit bekeken en/of gewijzigd worden.',
+                          "Klaarmelding. Door op 'K' te klikken kan deze activiteit bekeken en/of gewijzigd worden.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -549,7 +556,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Materieelrelatie. Door op \'M\' te klikken kan deze activiteit bekeken en/of gewijzigd worden. Indien er een aantal planregels zijn geselecteerd in het mutatievenster en er wordt op de \'M\' geklikt dan wordt er een voorstel getoond voor een nieuwe of gewijzigde materieelrelatie. Dit voorstel kan direct ingevoerd worden.',
+                          "Materieelrelatie. Door op 'M' te klikken kan deze activiteit bekeken en/of gewijzigd worden. Indien er een aantal planregels zijn geselecteerd in het mutatievenster en er wordt op de 'M' geklikt dan wordt er een voorstel getoond voor een nieuwe of gewijzigde materieelrelatie. Dit voorstel kan direct ingevoerd worden.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -559,7 +566,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Bijzonderheid. Door op \'B\' te klikken kan deze activiteit bekeken en/of gewijzigd worden.',
+                          "Bijzonderheid. Door op 'B' te klikken kan deze activiteit bekeken en/of gewijzigd worden.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -589,7 +596,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Herfstcriterium. Als hier een \'H\' ingevuld wordt, worden alle stop/doors in de stand door gezet.',
+                          "Herfstcriterium. Als hier een 'H' ingevuld wordt, worden alle stop/doors in de stand door gezet.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -599,7 +606,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Goederentreincriterium. Bij goederentreinen die door een tunnel moeten rijden, wordt hier een \'G\' ingevuld.',
+                          "Goederentreincriterium. Bij goederentreinen die door een tunnel moeten rijden, wordt hier een 'G' ingevuld.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -609,7 +616,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Dieseltractie-indicator. Bij dieseltreinen die op of naar een spoor zonder bovenleiding rijden wordt hier een \'D\' ingevuld.',
+                          "Dieseltractie-indicator. Bij dieseltreinen die op of naar een spoor zonder bovenleiding rijden wordt hier een 'D' ingevuld.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -642,7 +649,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Samenstelling materieel. Door op \'S\' te klikken kan deze activiteit bekeken en/of gewijzigd worden. Samenstelling is op basis van jaarplan en kan afwijken van de actuele inzet. Wijzigingen worden alleen op de werkplek opgeslagen.',
+                          "Samenstelling materieel. Door op 'S' te klikken kan deze activiteit bekeken en/of gewijzigd worden. Samenstelling is op basis van jaarplan en kan afwijken van de actuele inzet. Wijzigingen worden alleen op de werkplek opgeslagen.",
                     ),
                   ],
                 ),
