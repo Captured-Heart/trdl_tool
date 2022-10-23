@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIBijzondereAandacht {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_bijzonderheden_trein_main,
 }
 
@@ -16,17 +18,20 @@ class AIBijzondereAandacht extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIBijzondereAandacht>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIBijzondereAandacht result) {
+            onSelected: (WhereToGoFromAIBijzondereAandacht result) async {
               if (result == WhereToGoFromAIBijzondereAandacht.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIBijzondereAandacht
                       .ai_bijzonderheden_trein_main) {
-                Navigator.pushNamed(context, 'ai_bijzonderheden_trein_main');
+                await Navigator.pushNamed(
+                  context,
+                  'ai_bijzonderheden_trein_main',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -55,14 +60,14 @@ class AIBijzondereAandacht extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Treinen met bijzondere aandacht',
                     ),
@@ -92,7 +97,7 @@ class AIBijzondereAandacht extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Wie kan een melding doen?',
                     ),

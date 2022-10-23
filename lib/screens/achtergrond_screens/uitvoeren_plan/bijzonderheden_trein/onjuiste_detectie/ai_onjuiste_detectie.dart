@@ -1,9 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIOnjuisteDetectie {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_onjuiste_detectie,
+  // ignore: constant_identifier_names
   ai_bijzonderheden_trein,
+  // ignore: constant_identifier_names
   ai_vervoersregeling,
 }
 

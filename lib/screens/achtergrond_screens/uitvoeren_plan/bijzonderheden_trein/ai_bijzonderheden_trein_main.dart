@@ -30,7 +30,9 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
                   WhereToGoFromAIBijzonderhedenTreinMain
                       .ww_bijzonderheden_trein_main) {
                 await Navigator.pushNamed(
-                    context, 'ww_bijzonderheden_trein_main');
+                  context,
+                  'ww_bijzonderheden_trein_main',
+                );
               } else {
                 Navigator.pop(context);
               }
