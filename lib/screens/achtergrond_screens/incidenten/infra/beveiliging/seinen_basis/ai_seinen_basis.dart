@@ -11,7 +11,7 @@ class AISeinenBasis extends StatelessWidget {
         title: const AppBarText(
           title: 'Seinen - basisinformatie',
         ),
-        actions: const [
+        actions: const <HomeButton>[
           HomeButton(),
         ],
       ),
@@ -89,7 +89,7 @@ class AISeinenBasis extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          '- Rood: betekent \'Stop\'. Voorbijrijden is niet toegestaan;\n\n- Geel: Voorbijrijden toegestaan, afremmen tot 40 km/u en rekenen op stop;\n\n- Groen: Voorbijrijden toegestaan met de plaatselijk geldende maximum snelheid;\n\n- Wit: Voorbijrijden toegestaan onder met name genoemde voorwaarden. Dit is een door een bedieningshandeling uitgeschakeld sein dat geen opdracht, toestemming of beveiligingsgarantie geeft.',
+                          "- Rood: betekent 'Stop'. Voorbijrijden is niet toegestaan;\n\n- Geel: Voorbijrijden toegestaan, afremmen tot 40 km/u en rekenen op stop;\n\n- Groen: Voorbijrijden toegestaan met de plaatselijk geldende maximum snelheid;\n\n- Wit: Voorbijrijden toegestaan onder met name genoemde voorwaarden. Dit is een door een bedieningshandeling uitgeschakeld sein dat geen opdracht, toestemming of beveiligingsgarantie geeft.",
                     ),
                     SizedBoxH(),
                     SubTitleText(
@@ -110,7 +110,7 @@ class AISeinenBasis extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De seinbeelden volgen elkaar zo op, dat de MCN de opdracht van een seinbeeld kan opvolgen. Het seinbeeld \'snelheid begrenzen\' wordt op een zodanige afstand gegeven, dat een verlaging van de snelheid tijdig kan zijn uitgevoerd. Tijdig betekent dat de beschikbare remweg voldoende is om een opgelegde lagere snelheid te bereiken.\n\nDoor toepassing van cijferbakken en knipperende lampen kan een lichtsein nog meer seinbeelden tonen. Kijk voor een uitgebreid overzicht van lichtseinen en seinbeelden in het seinenboek.',
+                          "De seinbeelden volgen elkaar zo op, dat de MCN de opdracht van een seinbeeld kan opvolgen. Het seinbeeld 'snelheid begrenzen' wordt op een zodanige afstand gegeven, dat een verlaging van de snelheid tijdig kan zijn uitgevoerd. Tijdig betekent dat de beschikbare remweg voldoende is om een opgelegde lagere snelheid te bereiken.\n\nDoor toepassing van cijferbakken en knipperende lampen kan een lichtsein nog meer seinbeelden tonen. Kijk voor een uitgebreid overzicht van lichtseinen en seinbeelden in het seinenboek.",
                     ),
                   ],
                 ),
@@ -129,7 +129,7 @@ class AISeinenBasis extends StatelessWidget {
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <NavButton>[
                         NavButton(
                           buttontext: 'Beveiliging',
                           destination: 'ai_incidenten_beveiliging_main',
@@ -156,8 +156,9 @@ class AISeinenBasis extends StatelessWidget {
                 child: Column(
                   children: const <InsertImage>[
                     InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/ai_seinen_basis1.png'),
+                      image:
+                          'assets/images/achtergrond_info/incidenten/ai_seinen_basis1.png',
+                    ),
                   ],
                 ),
               ),

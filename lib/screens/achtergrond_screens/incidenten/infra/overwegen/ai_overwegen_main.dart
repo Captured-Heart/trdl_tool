@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class AIOverwegenMain extends StatelessWidget {
   const AIOverwegenMain({Key? key}) : super(key: key);
@@ -11,20 +11,20 @@ class AIOverwegenMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Overwegen',
         ),
-        actions: const [
+        actions: const <HomeButton>[
           HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Overwegen',
                     ),
@@ -44,14 +44,14 @@ class AIOverwegenMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <NavButton>[
                         NavButton(
                           buttontext: 'Werkwijze - Overwegen',
                           destination: 'overwegen',

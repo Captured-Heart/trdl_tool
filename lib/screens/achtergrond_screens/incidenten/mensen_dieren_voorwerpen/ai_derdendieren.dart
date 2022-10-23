@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class AIDerdenDieren extends StatelessWidget {
   const AIDerdenDieren({Key? key}) : super(key: key);
@@ -11,21 +11,21 @@ class AIDerdenDieren extends StatelessWidget {
         title: const AppBarText(
           title: 'Derden en/of Dieren',
         ),
-        actions: const [
+        actions: const <HomeButton>[
           HomeButton(),
         ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Card>[
               /*PROCEDURE CARD*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       TitleText(
                         title: 'Derden en/of dieren langs de baan',
                       ),
@@ -33,7 +33,7 @@ class AIDerdenDieren extends StatelessWidget {
                       BodyText(
                         indents: 0,
                         text:
-                            'Het treinverkeer heeft in toenemende mate last van mensen die onbevoegd langs het spoor lopen. \'Spoorlopers\' zorgen elke dag weer voor ruim drie uur treinvertraging. Het is bovendien levensgevaarlijk. Veel mensen realiseren zich niet hoe gevaarlijk hun gedrag is en hoeveel overlast ze MCN en treinreizigers bezorgen als ze \'alleen maar de hond uitlaten\'.',
+                            "Het treinverkeer heeft in toenemende mate last van mensen die onbevoegd langs het spoor lopen. 'Spoorlopers' zorgen elke dag weer voor ruim drie uur treinvertraging. Het is bovendien levensgevaarlijk. Veel mensen realiseren zich niet hoe gevaarlijk hun gedrag is en hoeveel overlast ze MCN en treinreizigers bezorgen als ze 'alleen maar de hond uitlaten'.",
                       ),
                       InsertImage(
                         image:
@@ -50,14 +50,14 @@ class AIDerdenDieren extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: [
+                    children: <Widget>[
                       const TitleText(
                         title: 'Ga snel naar',
                       ),
                       const SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
+                        children: const <Widget>[
                           NavButton(
                             buttontext: 'Derden en/of dieren - Werkwijze',
                             destination: 'ww_derden_dieren',

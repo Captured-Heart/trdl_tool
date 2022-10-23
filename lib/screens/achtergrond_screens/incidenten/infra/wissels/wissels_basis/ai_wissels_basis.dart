@@ -1,9 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIWisselsBasis {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_wissel_eindstand,
+  // ignore: constant_identifier_names
   ai_gestoord_wissel,
+  // ignore: constant_identifier_names
   ai_opengereden_wissel,
 }
 
@@ -18,22 +22,22 @@ class AIWisselsBasis extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIWisselsBasis>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIWisselsBasis result) {
+            onSelected: (WhereToGoFromAIWisselsBasis result) async {
               if (result == WhereToGoFromAIWisselsBasis.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIWisselsBasis.ai_wissel_eindstand) {
-                Navigator.pushNamed(context, 'ai_wissel_eindstand');
+                await Navigator.pushNamed(context, 'ai_wissel_eindstand');
               } else if (result ==
                   WhereToGoFromAIWisselsBasis.ai_gestoord_wissel) {
-                Navigator.pushNamed(context, 'ai_gestoord_wissel');
+                await Navigator.pushNamed(context, 'ai_gestoord_wissel');
               } else if (result ==
                   WhereToGoFromAIWisselsBasis.ai_opengereden_wissel) {
-                Navigator.pushNamed(context, 'ai_opengereden_wissel');
+                await Navigator.pushNamed(context, 'ai_opengereden_wissel');
               } else {
                 Navigator.pop(context);
               }
@@ -74,14 +78,14 @@ class AIWisselsBasis extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Wissels - basisinformatie',
                     ),
@@ -106,7 +110,7 @@ class AIWisselsBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Onderdelen van een wissel',
                     ),
@@ -163,7 +167,7 @@ class AIWisselsBasis extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Bij centraal bediende wissels zorgt een wisselsteller voor de omlegging van de wisseltongen. In deze wisselsteller zit behalve de motor, ook het mechanisme dat controleert of de wisseltongen in een goede \'eindstand\' liggen. Op onderstaande foto zijn de contactvingers (in het blauw) van de stellerkast goed te zien.',
+                          "Bij centraal bediende wissels zorgt een wisselsteller voor de omlegging van de wisseltongen. In deze wisselsteller zit behalve de motor, ook het mechanisme dat controleert of de wisseltongen in een goede 'eindstand' liggen. Op onderstaande foto zijn de contactvingers (in het blauw) van de stellerkast goed te zien.",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -203,7 +207,7 @@ class AIWisselsBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Wisselstanden',
                     ),
@@ -259,7 +263,7 @@ class AIWisselsBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const SubTitleText(
                       subtitle: 'Hoekverhouding',
                     ),
@@ -267,58 +271,58 @@ class AIWisselsBasis extends StatelessWidget {
                     const BodyText(
                       indents: 0,
                       text:
-                          'Een wissel bevat minimaal één stand waarin de trein afbuigt van zijn oorspronkelijke richting, een \'bocht\' dus. Standaard wissels zijn er in verschillende maten. Hoe scherper de bocht, hoe lager de maximum snelheid waarmee een trein de bocht mag berijden. De afbuiging van een wissel wordt uitgedrukt in een hoekverhouding. Een wissel 1 : 9 (spreek uit: één op negen) wijkt een meter uit per negen meter doorgaand spoor. De hoekverhouding geeft aan hoeveel meter een trein het wissel op rijdt en een zijdelingse verplaatsing van een meter bereikt heeft. Dit wil zeggen dat na 9 meter de verplaatsing zijdelings 1 meter is.\n\nAls er in de BVS niets bij het wissel staat aangegeven hebben we te maken met een 1 : 9 wissel en geldt de maximale snelheid van 40 km/h in de omgelegde stand.\n\nMaximum snelheden gerelateerd aan de hoekverhouding:',
+                          "Een wissel bevat minimaal één stand waarin de trein afbuigt van zijn oorspronkelijke richting, een 'bocht' dus. Standaard wissels zijn er in verschillende maten. Hoe scherper de bocht, hoe lager de maximum snelheid waarmee een trein de bocht mag berijden. De afbuiging van een wissel wordt uitgedrukt in een hoekverhouding. Een wissel 1 : 9 (spreek uit: één op negen) wijkt een meter uit per negen meter doorgaand spoor. De hoekverhouding geeft aan hoeveel meter een trein het wissel op rijdt en een zijdelingse verplaatsing van een meter bereikt heeft. Dit wil zeggen dat na 9 meter de verplaatsing zijdelings 1 meter is.\n\nAls er in de BVS niets bij het wissel staat aangegeven hebben we te maken met een 1 : 9 wissel en geldt de maximale snelheid van 40 km/h in de omgelegde stand.\n\nMaximum snelheden gerelateerd aan de hoekverhouding:",
                     ),
                     const SizedBoxH(),
                     Table(
                       border: TableBorder.all(),
                       defaultVerticalAlignment:
                           TableCellVerticalAlignment.middle,
-                      children: const [
+                      children: const <TableRow>[
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: '1:9'),
                             TableText(text: '40 km/u'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: '1:12'),
                             TableText(text: '60 km/u'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: '1:15'),
                             TableText(text: '80 km/u'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: '1:15 (Symmetrisch)'),
                             TableText(text: '100 km/u'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: '1:18'),
                             TableText(text: '80 km/u'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: '1:20 (Symmetrisch)'),
                             TableText(text: '125 km/u'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: '1:29'),
                             TableText(text: '140 km/u'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: '1:34,7'),
                             TableText(text: '140 km/u'),
                           ],
@@ -335,7 +339,7 @@ class AIWisselsBasis extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Soorten wissels - NCBG',
                     ),

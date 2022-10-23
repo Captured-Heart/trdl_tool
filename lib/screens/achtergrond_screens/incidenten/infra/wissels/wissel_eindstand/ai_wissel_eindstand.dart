@@ -1,6 +1,7 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIWisselEindstand {
+  // ignore: constant_identifier_names
   home_screen,
 }
 
@@ -15,13 +16,13 @@ class AIWisselEindstand extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIWisselEindstand>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIWisselEindstand result) {
+            onSelected: (WhereToGoFromAIWisselEindstand result) async {
               if (result == WhereToGoFromAIWisselEindstand.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else {
                 Navigator.pop(context);
               }
@@ -42,14 +43,14 @@ class AIWisselEindstand extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Card>[
               /*PROCEDURE CARD*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <TitleText>[
                       TitleText(
                         title: 'Work In Progress...',
                       ),

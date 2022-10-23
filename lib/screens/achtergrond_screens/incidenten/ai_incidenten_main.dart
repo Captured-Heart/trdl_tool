@@ -20,19 +20,19 @@ class AIIncidentenMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIIncidentenMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIIncidentenMain result) {
+            onSelected: (WhereToGoFromAIIncidentenMain result) async {
               if (result == WhereToGoFromAIIncidentenMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIIncidentenMain.ww_incidenten_main) {
-                Navigator.pushNamed(context, 'ww_incidenten_main');
+                await Navigator.pushNamed(context, 'ww_incidenten_main');
               } else if (result ==
                   WhereToGoFromAIIncidentenMain.ai_inzetten_railvoertuig) {
-                Navigator.pushNamed(context, 'ai_inzetten_railvoertuig');
+                await Navigator.pushNamed(context, 'ai_inzetten_railvoertuig');
               } else {
                 Navigator.pop(context);
               }
@@ -67,14 +67,14 @@ class AIIncidentenMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Incidenten',
                     ),
@@ -94,14 +94,14 @@ class AIIncidentenMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         SizedBoxH(),
                         NavButton(
                           buttontext: 'Incidenten - basisinformatie',

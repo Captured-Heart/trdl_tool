@@ -1,6 +1,7 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIATB {
+  // ignore: constant_identifier_names
   home_screen,
 }
 
@@ -15,13 +16,13 @@ class AIATB extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIATB>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIATB result) {
+            onSelected: (WhereToGoFromAIATB result) async {
               if (result == WhereToGoFromAIATB.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else {
                 Navigator.pop(context);
               }
@@ -41,14 +42,14 @@ class AIATB extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Automatische TreinBeïnvloeding (ATB)',
                     ),
@@ -63,7 +64,7 @@ class AIATB extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Work In Progress...',
                     ),

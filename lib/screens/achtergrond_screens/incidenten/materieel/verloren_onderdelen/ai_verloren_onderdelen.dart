@@ -1,6 +1,7 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIVerlorenOnderdelen {
+  // ignore: constant_identifier_names
   home_screen,
 }
 
@@ -15,13 +16,13 @@ class AIVerlorenOnderdelen extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIVerlorenOnderdelen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIVerlorenOnderdelen result) {
+            onSelected: (WhereToGoFromAIVerlorenOnderdelen result) async {
               if (result == WhereToGoFromAIVerlorenOnderdelen.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else {
                 Navigator.pop(context);
               }
@@ -41,14 +42,14 @@ class AIVerlorenOnderdelen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Verloren Onderdelen',
                     ),
@@ -63,7 +64,7 @@ class AIVerlorenOnderdelen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Work In Progress...',
                     ),

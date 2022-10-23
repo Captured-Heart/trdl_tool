@@ -11,7 +11,7 @@ class AIBeveiligingMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Beveiliging',
         ),
-        actions: const [
+        actions: const <HomeButton>[
           HomeButton(),
         ],
       ),

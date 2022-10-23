@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIWisselsMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_wissels_main,
+  // ignore: constant_identifier_names
   ai_overige_infra_elementen,
 }
 
@@ -17,18 +20,21 @@ class AIWisselsMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIWisselsMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIWisselsMain result) {
+            onSelected: (WhereToGoFromAIWisselsMain result) async {
               if (result == WhereToGoFromAIWisselsMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromAIWisselsMain.ww_wissels_main) {
-                Navigator.pushNamed(context, 'ww_wissels_main');
+                await Navigator.pushNamed(context, 'ww_wissels_main');
               } else if (result ==
                   WhereToGoFromAIWisselsMain.ai_overige_infra_elementen) {
-                Navigator.pushNamed(context, 'ai_overige_infra_elementen');
+                await Navigator.pushNamed(
+                  context,
+                  'ai_overige_infra_elementen',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -62,14 +68,14 @@ class AIWisselsMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Wissels',
                     ),
@@ -89,14 +95,14 @@ class AIWisselsMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Wissels - basisinformatie',
                           destination: 'ai_wissels_basis',

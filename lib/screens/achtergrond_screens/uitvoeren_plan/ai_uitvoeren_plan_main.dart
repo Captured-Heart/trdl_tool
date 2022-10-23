@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIUitvoerenPlanMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_uitvoeren_plan_main,
+  // ignore: constant_identifier_names
   ai_rijwegen_ari,
 }
 
@@ -17,19 +20,19 @@ class AIUitvoerenPlanMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIUitvoerenPlanMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIUitvoerenPlanMain result) {
+            onSelected: (WhereToGoFromAIUitvoerenPlanMain result) async {
               if (result == WhereToGoFromAIUitvoerenPlanMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIUitvoerenPlanMain.ww_uitvoeren_plan_main) {
-                Navigator.pushNamed(context, 'ww_uitvoeren_plan_main');
+                await Navigator.pushNamed(context, 'ww_uitvoeren_plan_main');
               } else if (result ==
                   WhereToGoFromAIUitvoerenPlanMain.ai_rijwegen_ari) {
-                Navigator.pushNamed(context, 'ai_rijwegen_ari');
+                await Navigator.pushNamed(context, 'ai_rijwegen_ari');
               } else {
                 Navigator.pop(context);
               }
@@ -64,14 +67,14 @@ class AIUitvoerenPlanMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*TITLE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Uitvoeren Plan',
                     ),
@@ -85,14 +88,14 @@ class AIUitvoerenPlanMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Uitvoeren plan - basis',
                           destination: 'ai_uitvoeren_plan',
@@ -140,7 +143,7 @@ class AIUitvoerenPlanMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     InsertImage(
                       image:

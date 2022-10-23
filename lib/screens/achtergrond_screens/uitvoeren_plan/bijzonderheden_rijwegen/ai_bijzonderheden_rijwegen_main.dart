@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIBijzonderhedenRijwegenMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_bijzonderheden_rijwegen_main,
+  // ignore: constant_identifier_names
   ww_kop_van_trein_voorbij_sein,
 }
 
@@ -17,22 +20,29 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIBijzonderhedenRijwegenMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIBijzonderhedenRijwegenMain result) {
+            onSelected:
+                (WhereToGoFromAIBijzonderhedenRijwegenMain result) async {
               if (result ==
                   WhereToGoFromAIBijzonderhedenRijwegenMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIBijzonderhedenRijwegenMain
                       .ww_bijzonderheden_rijwegen_main) {
-                Navigator.pushNamed(context, 'ww_bijzonderheden_rijwegen_main');
+                await Navigator.pushNamed(
+                  context,
+                  'ww_bijzonderheden_rijwegen_main',
+                );
               } else if (result ==
                   WhereToGoFromAIBijzonderhedenRijwegenMain
                       .ww_kop_van_trein_voorbij_sein) {
-                Navigator.pushNamed(context, 'ww_kop_van_trein_voorbij_sein');
+                await Navigator.pushNamed(
+                  context,
+                  'ww_kop_van_trein_voorbij_sein',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -69,14 +79,14 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             //*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <SubTitleText>[
                     SubTitleText(
                       subtitle: 'Bijzonderheden Rijwegen',
                     ),
@@ -90,14 +100,14 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Inzetten railvoertuig (ICB)',
                           destination: 'ai_inzetten_icb',
@@ -145,7 +155,7 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     InsertImage(
                       image:

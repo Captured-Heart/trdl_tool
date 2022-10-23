@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class AIBovenleidingMain extends StatelessWidget {
   const AIBovenleidingMain({Key? key}) : super(key: key);
@@ -11,21 +11,21 @@ class AIBovenleidingMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const [
+        actions: const <HomeButton>[
           HomeButton(),
         ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Card>[
               /*PROCEDURE CARD*/
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       TitleText(
                         title: 'Bovenleiding',
                       ),
@@ -45,14 +45,14 @@ class AIBovenleidingMain extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: [
+                    children: <Widget>[
                       const TitleText(
                         title: 'Ga snel naar',
                       ),
                       const SizedBoxH(),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: const [
+                        children: const <NavButton>[
                           NavButton(
                             buttontext: 'Werkwijze - Bovenleiding',
                             destination: 'bovenleiding',
