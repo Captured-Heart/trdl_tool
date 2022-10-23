@@ -72,7 +72,7 @@ class WWDienstovergave extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Om de dienst over te dragen/over te nemen maak je gebruik van het \'dienstovergave formulier\'. Door het invullen van dit formulier borg je een uniforme manier van dienstovergave of dienstovername.\n\nJe draagt of neemt de dienst persoonlijk over na elke onderbreking van je reguliere dienst. Je spreekt samen de bijzonderheden door en tekent het formulier voor overgave of overname.',
+                          "Om de dienst over te dragen/over te nemen maak je gebruik van het 'dienstovergave formulier'. Door het invullen van dit formulier borg je een uniforme manier van dienstovergave of dienstovername.\n\nJe draagt of neemt de dienst persoonlijk over na elke onderbreking van je reguliere dienst. Je spreekt samen de bijzonderheden door en tekent het formulier voor overgave of overname.",
                     ),
                   ],
                 ),

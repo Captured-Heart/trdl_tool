@@ -20,12 +20,12 @@ class WWVertragingen extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWVertragingen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWVertragingen result) {
+            onSelected: (WhereToGoFromWWVertragingen result) async {
               if (result == WhereToGoFromWWVertragingen.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWVertragingen.ai_vertragingen) {
-                Navigator.pushNamed(context, 'ai_vertragingen');
+                await Navigator.pushNamed(context, 'ai_vertragingen');
               } else {
                 Navigator.pop(context);
               }

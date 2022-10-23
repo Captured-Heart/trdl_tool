@@ -20,12 +20,12 @@ class WWVervoersregeling extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWVervoersregeling>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWVervoersregeling result) {
+            onSelected: (WhereToGoFromWWVervoersregeling result) async {
               if (result == WhereToGoFromWWVervoersregeling.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWVervoersregeling.ai_vervoersregeling) {
-                Navigator.pushNamed(context, 'ai_vervoersregeling');
+                await Navigator.pushNamed(context, 'ai_vervoersregeling');
               } else {
                 Navigator.pop(context);
               }

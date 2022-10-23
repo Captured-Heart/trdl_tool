@@ -20,13 +20,14 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWVeiligheidsstoringSein>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWVeiligheidsstoringSein result) {
+            onSelected: (WhereToGoFromWWVeiligheidsstoringSein result) async {
               if (result == WhereToGoFromWWVeiligheidsstoringSein.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWVeiligheidsstoringSein
                       .ai_veiligheidsstoring_sein) {
-                Navigator.pushNamed(context, 'ai_veiligheidsstoring_sein');
+                await Navigator.pushNamed(
+                    context, 'ai_veiligheidsstoring_sein');
               } else {
                 Navigator.pop(context);
               }

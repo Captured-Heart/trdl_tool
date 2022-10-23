@@ -117,7 +117,7 @@ class WWWisselsVrijmaken extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'De communicatie tussen de beveiliging en de bediening is als gevolg van een stroomonderbreking niet meer betrouwbaar. Met de opdracht \'wissels vrijmaken\' breng je de beveiligingsapparatuur na deze stroomonderbreking in de ruststand van de bediening terug.',
+                          "De communicatie tussen de beveiliging en de bediening is als gevolg van een stroomonderbreking niet meer betrouwbaar. Met de opdracht 'wissels vrijmaken' breng je de beveiligingsapparatuur na deze stroomonderbreking in de ruststand van de bediening terug.",
                     ),
                   ],
                 ),

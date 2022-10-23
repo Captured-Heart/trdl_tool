@@ -20,12 +20,12 @@ class WWOrderAcceptatie extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWOrderAcceptatie>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWOrderAcceptatie result) {
+            onSelected: (WhereToGoFromWWOrderAcceptatie result) async {
               if (result == WhereToGoFromWWOrderAcceptatie.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWOrderAcceptatie.ai_orderacceptatie) {
-                Navigator.pushNamed(context, 'ai_orderacceptatie');
+                await Navigator.pushNamed(context, 'ai_orderacceptatie');
               } else {
                 Navigator.pop(context);
               }

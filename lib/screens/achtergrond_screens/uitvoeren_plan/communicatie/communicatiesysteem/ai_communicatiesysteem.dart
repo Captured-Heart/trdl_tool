@@ -153,7 +153,7 @@ class AICommunicatieSysteem extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Het GSM-R netwerk in Nederland heeft momenteel de beschikking over ongeveer 360 BTS\'n  en zendmasten. Een BTS is een zender die zich langs de spoorbaan bevindt en die via een zendmast draadloze spraak- en datacommunicatie mogelijk maakt over het GSM-R netwerk van ProRail. Het GSM-R netwerk bestaat uit cellen. Binnen de operatie spreken we van een cel als we het hebben over een combinatie van deze twee techniekvelden.',
+                          "Het GSM-R netwerk in Nederland heeft momenteel de beschikking over ongeveer 360 BTS'n  en zendmasten. Een BTS is een zender die zich langs de spoorbaan bevindt en die via een zendmast draadloze spraak- en datacommunicatie mogelijk maakt over het GSM-R netwerk van ProRail. Het GSM-R netwerk bestaat uit cellen. Binnen de operatie spreken we van een cel als we het hebben over een combinatie van deze twee techniekvelden.",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -168,7 +168,7 @@ class AICommunicatieSysteem extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Zendmasten hebben maximaal 3 sectoren, elk met een bereik van 120 graden. Elke BTS heeft 1 tot 3 sectoren die zo optimaal mogelijk gericht worden zodat er +/- maximaal 7 km spoorbaan \'gevoed\' wordt door één cel.',
+                          "Zendmasten hebben maximaal 3 sectoren, elk met een bereik van 120 graden. Elke BTS heeft 1 tot 3 sectoren die zo optimaal mogelijk gericht worden zodat er +/- maximaal 7 km spoorbaan 'gevoed' wordt door één cel.",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -266,7 +266,7 @@ class AICommunicatieSysteem extends StatelessWidget {
                     const BodyText(
                       indents: 0,
                       text:
-                          'In samenspraak met de posten zijn de alarmgebieden op de volgende wijze geconfigureerd. Een alarmgebied is het gebied PPLG - vrije baan - PPLG. Het in het label genoemde gebied staat gegarandeerd in alarm (inclusief beide PPLG\'s).',
+                          "In samenspraak met de posten zijn de alarmgebieden op de volgende wijze geconfigureerd. Een alarmgebied is het gebied PPLG - vrije baan - PPLG. Het in het label genoemde gebied staat gegarandeerd in alarm (inclusief beide PPLG's).",
                     ),
                     const SizedBoxH(),
                     const InsertImage(
@@ -285,7 +285,7 @@ class AICommunicatieSysteem extends StatelessWidget {
                     const BodyText(
                       indents: 0,
                       text:
-                          'Bij het plaatsen van een alarmoproep door de TRDL worden het baanvak en de aangrenzende PPLG\'s in alarm gezet.\n\nVoorbeeld: als de TRDL de knop Ehv-Hm indrukt, wordt de vrije baan tussen Eindhoven en Helmond in alarm gezet en de PPLG\'s Eindhoven en Helmond.\n\nEen PPLG kan op meerdere manieren in alarm gezet worden. In het voorbeeld Eindhoven kan dat op 3 manieren:',
+                          "Bij het plaatsen van een alarmoproep door de TRDL worden het baanvak en de aangrenzende PPLG's in alarm gezet.\n\nVoorbeeld: als de TRDL de knop Ehv-Hm indrukt, wordt de vrije baan tussen Eindhoven en Helmond in alarm gezet en de PPLG's Eindhoven en Helmond.\n\nEen PPLG kan op meerdere manieren in alarm gezet worden. In het voorbeeld Eindhoven kan dat op 3 manieren:",
                     ),
                     const SizedBoxH(),
                     const BodyText(
@@ -381,7 +381,7 @@ class AICommunicatieSysteem extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Wanneer een gebied door een alarmoproep van een MCN of TRDL in een alarmstatus is gebracht, blijft deze \'staan\'. Dit betekent dat het alarm blijft alarmeren tot de TRDL deze status heeft afgebroken. Het grote voordeel hiervan is dat alle treinen die het gebied binnenrijden alsnog een alarmoproep ontvangen.',
+                          "Wanneer een gebied door een alarmoproep van een MCN of TRDL in een alarmstatus is gebracht, blijft deze 'staan'. Dit betekent dat het alarm blijft alarmeren tot de TRDL deze status heeft afgebroken. Het grote voordeel hiervan is dat alle treinen die het gebied binnenrijden alsnog een alarmoproep ontvangen.",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -392,7 +392,7 @@ class AICommunicatieSysteem extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Zolang het alarm \'staat\' kan de TRDL informatie geven aan de MCN die in dit gebied rijden. Als het alarm op \'hold\' staat, doe je dit door het gesprek weer actief te maken. Hiervoor druk je op de lijnknop van het alarmgebied.',
+                          "Zolang het alarm 'staat' kan de TRDL informatie geven aan de MCN die in dit gebied rijden. Als het alarm op 'hold' staat, doe je dit door het gesprek weer actief te maken. Hiervoor druk je op de lijnknop van het alarmgebied.",
                     ),
                     SizedBoxH(),
                     SubTitleText(
@@ -402,7 +402,7 @@ class AICommunicatieSysteem extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'In het onderstaande schema is aangeven hoe de \'workflow\' bij een alarmoproep verloopt. In dit voorbeeld kan het alarm opgezet worden door zowel de MCN als de TRDL.',
+                          "In het onderstaande schema is aangeven hoe de 'workflow' bij een alarmoproep verloopt. In dit voorbeeld kan het alarm opgezet worden door zowel de MCN als de TRDL.",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -448,7 +448,7 @@ class AICommunicatieSysteem extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          'Trein 4 krijgt een aanrijding in cel d en plaatst een alarmoproep (1 in schema workflow). De cellen die benodigd zijn om het gebied voldoende af te dekken komen in alarm.\n\nOmdat cel e ook behoort tot het TRDLgebied van de TRDL B zullen ook de cellen die horen bij dat deel van het baanvak in alarm gaan (2 in schema workflow). Dit betekent dat zowel TRDL A als TRDL B een alarmoproep binnen krijgen op hun Inttel-console (3 in schema workflow alarmeren).\n\nAlle treinen binnen het alarmgebied krijgen een alarmoproep (4 in schema workflow). Zolang het alarm blijft \'staan\' zullen alle treinen die het gebied inrijden met de alarmstatus een alarmoproep ontvangen (5 in schema workflow en trein 10 op het baanvak).\n\nAan de hand van het treinnummer gaan TRDL A en B na binnen wiens gebied deze trein zich bevindt (6 in schema workflow). Beide TRDL kunnen het gesprek aannemen en ze moeten op basis van het treinnummer of informatie van de MCN bepalen wie het gesprek verder voert. Als de andere TRDL het gesprek wil verlaten, moet hij dat doen door op de \'hold\' toets te drukken.\n\nTRDL A neemt het alarm aan en vraagt uit. Gedurende de tijd dat een gebied in alarm staat, zijn de gevoerde gesprekken voor iedereen binnen het gebied te beluisteren. Dat geldt dus ook voor de buurTRDL.\n\nDe TRDL kan zolang het gebied in de alarmstatus is, binnen dit gebied alle MCN van informatie voorzien (7 in workflowschema). Dit doet hij door in te schakelen in het alarm.\n\nTRDL A neemt veiligheidsmaatregelen en vraagt of TRDL B dit ook heeft gedaan (8 in schema workflow). Pas wanneer beide TRDL veiligheidsmaatregelen hebben genomen, heft TRDL A de alarmstatus op van het gebied door het drukken van de alarm-uit knop (9 in schema workflow).',
+                          "Trein 4 krijgt een aanrijding in cel d en plaatst een alarmoproep (1 in schema workflow). De cellen die benodigd zijn om het gebied voldoende af te dekken komen in alarm.\n\nOmdat cel e ook behoort tot het TRDLgebied van de TRDL B zullen ook de cellen die horen bij dat deel van het baanvak in alarm gaan (2 in schema workflow). Dit betekent dat zowel TRDL A als TRDL B een alarmoproep binnen krijgen op hun Inttel-console (3 in schema workflow alarmeren).\n\nAlle treinen binnen het alarmgebied krijgen een alarmoproep (4 in schema workflow). Zolang het alarm blijft 'staan' zullen alle treinen die het gebied inrijden met de alarmstatus een alarmoproep ontvangen (5 in schema workflow en trein 10 op het baanvak).\n\nAan de hand van het treinnummer gaan TRDL A en B na binnen wiens gebied deze trein zich bevindt (6 in schema workflow). Beide TRDL kunnen het gesprek aannemen en ze moeten op basis van het treinnummer of informatie van de MCN bepalen wie het gesprek verder voert. Als de andere TRDL het gesprek wil verlaten, moet hij dat doen door op de 'hold' toets te drukken.\n\nTRDL A neemt het alarm aan en vraagt uit. Gedurende de tijd dat een gebied in alarm staat, zijn de gevoerde gesprekken voor iedereen binnen het gebied te beluisteren. Dat geldt dus ook voor de buurTRDL.\n\nDe TRDL kan zolang het gebied in de alarmstatus is, binnen dit gebied alle MCN van informatie voorzien (7 in workflowschema). Dit doet hij door in te schakelen in het alarm.\n\nTRDL A neemt veiligheidsmaatregelen en vraagt of TRDL B dit ook heeft gedaan (8 in schema workflow). Pas wanneer beide TRDL veiligheidsmaatregelen hebben genomen, heft TRDL A de alarmstatus op van het gebied door het drukken van de alarm-uit knop (9 in schema workflow).",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -501,7 +501,7 @@ class AICommunicatieSysteem extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Je beëindigt de alarmstatus van een gebied dat in alarm staat, nadat je je ervan overtuigd hebt dat de veiligheidsmaatregelen door zowel jou als jouw eventuele buurTRDL zijn genomen en de betreffend treinen van de baan zijn of voorzien van een aanwijzing.\n\nAls je ingeschakeld bent in een gesprek van een buurTRDL en je wilt er niet meer aan deelnemen, dan plaats je de oproep in \'hold\'. Als de buurTRDL de oproep beëindigd heeft, verdwijnt de oproep van jouw console. Het is ongewenst dat jij het gesprek van de buurTRDL beëindigt, omdat je hiermee de gehele alarmoproep beëindigt.',
+                          "Je beëindigt de alarmstatus van een gebied dat in alarm staat, nadat je je ervan overtuigd hebt dat de veiligheidsmaatregelen door zowel jou als jouw eventuele buurTRDL zijn genomen en de betreffend treinen van de baan zijn of voorzien van een aanwijzing.\n\nAls je ingeschakeld bent in een gesprek van een buurTRDL en je wilt er niet meer aan deelnemen, dan plaats je de oproep in 'hold'. Als de buurTRDL de oproep beëindigd heeft, verdwijnt de oproep van jouw console. Het is ongewenst dat jij het gesprek van de buurTRDL beëindigt, omdat je hiermee de gehele alarmoproep beëindigt.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -512,7 +512,7 @@ class AICommunicatieSysteem extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Als een alarm op \'hold\' wordt gezet, blijven de cellen in alarm staan. De verbinding wordt opnieuw opgebouwd als de TRDL opnieuw deel wil nemen aan het alarm;\n\n- Als de TRDL meerdere gebieden in alarm wil zetten, moeten deze gebieden één voor één geactiveerd worden. De boodschap moet dan ook per gebied ingesproken worden. Dit kan niet met één boodschap gebeuren;\n\n- Alleen de TRDL kan een alarmoproep beëindigen;\n\n- Als een MCN een alarmoproep plaatst, worden een aantal cellen in alarm gezet. Als je nu als TRDL de binnengekomen alarmoproep op \'hold\' zet en je besluit het gehele baanvak (PPLG - vrije baan - PPLG) in alarm te zetten, dan zal deze alarmoproep niet binnenkomen in het gebied dat al in alarm stond. Ook een boodschap die je inspreekt zal niet binnenkomen in dat gebied. Hier kan dus een gevaarlijke situatie ontstaan.',
+                          "- Als een alarm op 'hold' wordt gezet, blijven de cellen in alarm staan. De verbinding wordt opnieuw opgebouwd als de TRDL opnieuw deel wil nemen aan het alarm;\n\n- Als de TRDL meerdere gebieden in alarm wil zetten, moeten deze gebieden één voor één geactiveerd worden. De boodschap moet dan ook per gebied ingesproken worden. Dit kan niet met één boodschap gebeuren;\n\n- Alleen de TRDL kan een alarmoproep beëindigen;\n\n- Als een MCN een alarmoproep plaatst, worden een aantal cellen in alarm gezet. Als je nu als TRDL de binnengekomen alarmoproep op 'hold' zet en je besluit het gehele baanvak (PPLG - vrije baan - PPLG) in alarm te zetten, dan zal deze alarmoproep niet binnenkomen in het gebied dat al in alarm stond. Ook een boodschap die je inspreekt zal niet binnenkomen in dat gebied. Hier kan dus een gevaarlijke situatie ontstaan.",
                     ),
                     SizedBoxH(),
                     InsertImage(
@@ -528,7 +528,7 @@ class AICommunicatieSysteem extends StatelessWidget {
                     BodyText(
                       indents: 1,
                       text:
-                          '- Bij een alarmoproep de luidspreker van de treinradio automatisch wordt aangezet;\n\n- De MCN in het alarmgebied zo alle gesprekken kunnen volgen;\n\n- Om rondzingen te voorkomen de microfoons in de cabines uitgeschakeld zijn;\n\n- De MCN de spreeksleutel gebruikt om de luidspreker uit en zijn microfoon aan te zetten;\n\n- Er op de display van de treinradio staat dat de spreeksleutel gebruikt dient te worden;\n\n- Als de MCN geen antwoord geeft het kan zijn dat hij/zij de spreeksleutel niet gebruikt;\n\n- Een \'Meester, wilt u de spreeksleutel gebruiken\' van jou kan helpen om hem hieraan te herinneren;\n\n- Een point-to-point gesprek niet mogelijk is met MCN die in het alarmgebied zitten;\n\n- Desondanks er wel een gesprek met deze MCN mogelijk is, ook als je het alarm verlaten hebt;\n\n- Hiervoor je de alarmoproep weer moet bijschakelen;\n\n- Je hiervoor op de lijnknop van het alarmgebied moet drukken;\n\n- Je dan dezelfde mogelijkheden hebt als voor het verlaten van de alarmoproep, dus ook het toespreken van de MCNen;\n\n- Dit heel goed geoefend kan worden met de Flash instructie ITS Netrix console, die op de post aanwezig is;\n\n- Als er bij een alarmoproep twee posten betrokken zijn je dit kunt zien aan het label;\n\n- Er dan niet alleen het gebiedsnummer en eventueel het treinnummer staat maar ook de naam van de buurpost.',
+                          "- Bij een alarmoproep de luidspreker van de treinradio automatisch wordt aangezet;\n\n- De MCN in het alarmgebied zo alle gesprekken kunnen volgen;\n\n- Om rondzingen te voorkomen de microfoons in de cabines uitgeschakeld zijn;\n\n- De MCN de spreeksleutel gebruikt om de luidspreker uit en zijn microfoon aan te zetten;\n\n- Er op de display van de treinradio staat dat de spreeksleutel gebruikt dient te worden;\n\n- Als de MCN geen antwoord geeft het kan zijn dat hij/zij de spreeksleutel niet gebruikt;\n\n- Een 'Meester, wilt u de spreeksleutel gebruiken' van jou kan helpen om hem hieraan te herinneren;\n\n- Een point-to-point gesprek niet mogelijk is met MCN die in het alarmgebied zitten;\n\n- Desondanks er wel een gesprek met deze MCN mogelijk is, ook als je het alarm verlaten hebt;\n\n- Hiervoor je de alarmoproep weer moet bijschakelen;\n\n- Je hiervoor op de lijnknop van het alarmgebied moet drukken;\n\n- Je dan dezelfde mogelijkheden hebt als voor het verlaten van de alarmoproep, dus ook het toespreken van de MCNen;\n\n- Dit heel goed geoefend kan worden met de Flash instructie ITS Netrix console, die op de post aanwezig is;\n\n- Als er bij een alarmoproep twee posten betrokken zijn je dit kunt zien aan het label;\n\n- Er dan niet alleen het gebiedsnummer en eventueel het treinnummer staat maar ook de naam van de buurpost.",
                     ),
                     SizedBoxH(),
                     InsertImage(

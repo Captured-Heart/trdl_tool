@@ -20,14 +20,15 @@ class WWStappenplanVersperringen extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWStappenplanVersperringen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWStappenplanVersperringen result) {
+            onSelected: (WhereToGoFromWWStappenplanVersperringen result) async {
               if (result ==
                   WhereToGoFromWWStappenplanVersperringen.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWStappenplanVersperringen
                       .ai_stappenplan_versperringen) {
-                Navigator.pushNamed(context, 'ai_stappenplan_versperringen');
+                await Navigator.pushNamed(
+                    context, 'ai_stappenplan_versperringen');
               } else {
                 Navigator.pop(context);
               }
