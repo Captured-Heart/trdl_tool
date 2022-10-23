@@ -20,12 +20,12 @@ class WWBeschadigdWissel extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWBeschadigdWissel>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWBeschadigdWissel result) {
+            onSelected: (WhereToGoFromWWBeschadigdWissel result) async {
               if (result == WhereToGoFromWWBeschadigdWissel.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWBeschadigdWissel.ai_beschadigd_wissel) {
-                Navigator.pushNamed(context, 'ai_beschadigd_wissel');
+                await Navigator.pushNamed(context, 'ai_beschadigd_wissel');
               } else {
                 Navigator.pop(context);
               }
@@ -34,11 +34,17 @@ class WWBeschadigdWissel extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWBeschadigdWissel>>[
               const PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
                 value: WhereToGoFromWWBeschadigdWissel.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
               const PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
                 value: WhereToGoFromWWBeschadigdWissel.ai_beschadigd_wissel,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Beschadigd Wissel',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Beschadigd Wissel',
+                ),
               ),
             ],
           ),

@@ -20,12 +20,12 @@ class WWAanpassenPlanMain extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWAanpassenPlanMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWAanpassenPlanMain result) {
+            onSelected: (WhereToGoFromWWAanpassenPlanMain result) async {
               if (result == WhereToGoFromWWAanpassenPlanMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWAanpassenPlanMain.ai_aanpassen_plan) {
-                Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
+                await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
               } else {
                 Navigator.pop(context);
               }

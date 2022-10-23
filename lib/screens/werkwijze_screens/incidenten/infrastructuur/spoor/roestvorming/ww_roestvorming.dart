@@ -22,18 +22,18 @@ class WWRoestvorming extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWRoestvorming>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWRoestvorming result) {
+            onSelected: (WhereToGoFromWWRoestvorming result) async {
               if (result == WhereToGoFromWWRoestvorming.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWRoestvorming.ai_roestvorming) {
-                Navigator.pushNamed(context, 'ai_roestvorming');
+                await Navigator.pushNamed(context, 'ai_roestvorming');
               } else if (result ==
                   WhereToGoFromWWRoestvorming.ai_beveiliging_basis1) {
-                Navigator.pushNamed(context, 'ai_beveiliging_basis1');
+                await Navigator.pushNamed(context, 'ai_beveiliging_basis1');
               } else if (result ==
                   WhereToGoFromWWRoestvorming.ai_beveiliging_basis2) {
-                Navigator.pushNamed(context, 'ai_beveiliging_basis2');
+                await Navigator.pushNamed(context, 'ai_beveiliging_basis2');
               } else {
                 Navigator.pop(context);
               }

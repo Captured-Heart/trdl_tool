@@ -22,18 +22,18 @@ class WWBovenleidingMain extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWBovenleidingMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWBovenleidingMain result) {
+            onSelected: (WhereToGoFromWWBovenleidingMain result) async {
               if (result == WhereToGoFromWWBovenleidingMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWBovenleidingMain.ai_incidenten_main) {
-                Navigator.pushNamed(context, 'ai_incidenten_main');
+                await Navigator.pushNamed(context, 'ai_incidenten_main');
               } else if (result ==
                   WhereToGoFromWWBovenleidingMain.ai_infra_main) {
-                Navigator.pushNamed(context, 'ai_infra_main');
+                await Navigator.pushNamed(context, 'ai_infra_main');
               } else if (result ==
                   WhereToGoFromWWBovenleidingMain.ai_bovenleiding_main) {
-                Navigator.pushNamed(context, 'ai_bovenleiding_main');
+                await Navigator.pushNamed(context, 'ai_bovenleiding_main');
               } else {
                 Navigator.pop(context);
               }

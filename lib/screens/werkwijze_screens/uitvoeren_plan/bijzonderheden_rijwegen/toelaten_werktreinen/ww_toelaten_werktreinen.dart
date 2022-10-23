@@ -22,20 +22,22 @@ class WWToelatenWerktreinen extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWToelatenWerktreinen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWToelatenWerktreinen result) {
+            onSelected: (WhereToGoFromWWToelatenWerktreinen result) async {
               if (result == WhereToGoFromWWToelatenWerktreinen.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWToelatenWerktreinen
                       .ww_geplande_werkzaamheden_main) {
-                Navigator.pushNamed(context, 'ww_geplande_werkzaamheden_main');
+                await Navigator.pushNamed(
+                    context, 'ww_geplande_werkzaamheden_main');
               } else if (result ==
                   WhereToGoFromWWToelatenWerktreinen.ai_toelaten_werktreinen) {
-                Navigator.pushNamed(context, 'ai_toelaten_werktreinen');
+                await Navigator.pushNamed(context, 'ai_toelaten_werktreinen');
               } else if (result ==
                   WhereToGoFromWWToelatenWerktreinen
                       .ai_geplande_werkzaamheden_main) {
-                Navigator.pushNamed(context, 'ai_geplande_werkzaamheden_main');
+                await Navigator.pushNamed(
+                    context, 'ai_geplande_werkzaamheden_main');
               } else {
                 Navigator.pop(context);
               }

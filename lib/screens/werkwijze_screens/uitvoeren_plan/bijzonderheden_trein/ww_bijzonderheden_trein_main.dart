@@ -20,14 +20,15 @@ class WWBijzonderhedenTreinMain extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWBijzonderhedenTreinMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWBijzonderhedenTreinMain result) {
+            onSelected: (WhereToGoFromWWBijzonderhedenTreinMain result) async {
               if (result ==
                   WhereToGoFromWWBijzonderhedenTreinMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWBijzonderhedenTreinMain
                       .ai_bijzonderheden_trein_main) {
-                Navigator.pushNamed(context, 'ai_bijzonderheden_trein_main');
+                await Navigator.pushNamed(
+                    context, 'ai_bijzonderheden_trein_main');
               } else {
                 Navigator.pop(context);
               }

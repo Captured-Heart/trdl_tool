@@ -21,15 +21,15 @@ class WWWeersomstandigheden extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWWeersomstandigheden>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWWeersomstandigheden result) {
+            onSelected: (WhereToGoFromWWWeersomstandigheden result) async {
               if (result == WhereToGoFromWWWeersomstandigheden.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWWeersomstandigheden.ai_weersomstandigheden) {
-                Navigator.pushNamed(context, 'ai_weersomstandigheden');
+                await Navigator.pushNamed(context, 'ai_weersomstandigheden');
               } else if (result ==
                   WhereToGoFromWWWeersomstandigheden.ai_overige_incidenten) {
-                Navigator.pushNamed(context, 'ai_overige_incidenten');
+                await Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }

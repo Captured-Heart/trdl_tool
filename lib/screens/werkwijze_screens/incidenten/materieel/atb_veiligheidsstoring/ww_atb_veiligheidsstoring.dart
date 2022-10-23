@@ -20,12 +20,12 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
           PopupMenuButton<WhereToGoFromWWAtbVeiligheidsstoring>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWAtbVeiligheidsstoring result) {
+            onSelected: (WhereToGoFromWWAtbVeiligheidsstoring result) async {
               if (result == WhereToGoFromWWAtbVeiligheidsstoring.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWAtbVeiligheidsstoring.ai_atb) {
-                Navigator.pushNamed(context, 'ai_atb');
+                await Navigator.pushNamed(context, 'ai_atb');
               } else {
                 Navigator.pop(context);
               }
