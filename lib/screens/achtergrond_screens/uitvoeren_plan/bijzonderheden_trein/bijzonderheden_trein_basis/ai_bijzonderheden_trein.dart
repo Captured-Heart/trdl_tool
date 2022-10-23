@@ -840,7 +840,7 @@ class AIBijzonderhedenTrein extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const SubTitleText(
                       subtitle: 'Railwegvoertuigen',
                     ),
@@ -853,10 +853,7 @@ class AIBijzonderhedenTrein extends StatelessWidget {
                           autoPlayCurve: Curves.easeInOutBack,
                           enlargeCenterPage: true,
                         ),
-                        items: [
-                          1,
-                          2,
-                        ].map((i) {
+                        items: <int>[1, 2].map((int i) {
                           return Builder(
                             builder: (BuildContext context) {
                               return SizedBox(
@@ -864,7 +861,7 @@ class AIBijzonderhedenTrein extends StatelessWidget {
                                 child: Column(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceAround,
-                                  children: [
+                                  children: <Expanded>[
                                     Expanded(
                                       child: Padding(
                                         padding: const EdgeInsets.all(16.0),
@@ -891,19 +888,19 @@ class AIBijzonderhedenTrein extends StatelessWidget {
     );
   }
 
-  void launchTreinenVanNS() async {
+  Future<void> launchTreinenVanNS() async {
     if (!await launchUrl(treinenVanNS)) {
       throw 'Could not launch $treinenVanNS';
     }
   }
 
-  void launchNLSpoorwegMaterieel() async {
+  Future<void> launchNLSpoorwegMaterieel() async {
     if (!await launchUrl(nlSpoorwegMaterieel)) {
       throw 'Could not launch $nlSpoorwegMaterieel';
     }
   }
 
-  void launchGoederenwagon() async {
+  Future<void> launchGoederenwagon() async {
     if (!await launchUrl(goederenWagon)) {
       throw 'Could not launch $goederenWagon';
     }

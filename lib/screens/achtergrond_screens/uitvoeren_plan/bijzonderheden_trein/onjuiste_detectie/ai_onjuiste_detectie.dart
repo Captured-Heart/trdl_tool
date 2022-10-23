@@ -22,22 +22,22 @@ class AIOnjuisteDetectie extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIOnjuisteDetectie>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIOnjuisteDetectie result) {
+            onSelected: (WhereToGoFromAIOnjuisteDetectie result) async {
               if (result == WhereToGoFromAIOnjuisteDetectie.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIOnjuisteDetectie.ww_onjuiste_detectie) {
-                Navigator.pushNamed(context, 'ww_onjuiste_detectie');
+                await Navigator.pushNamed(context, 'ww_onjuiste_detectie');
               } else if (result ==
                   WhereToGoFromAIOnjuisteDetectie.ai_bijzonderheden_trein) {
-                Navigator.pushNamed(context, 'ai_bijzonderheden_trein');
+                await Navigator.pushNamed(context, 'ai_bijzonderheden_trein');
               } else if (result ==
                   WhereToGoFromAIOnjuisteDetectie.ai_vervoersregeling) {
-                Navigator.pushNamed(context, 'ai_vervoersregeling');
+                await Navigator.pushNamed(context, 'ai_vervoersregeling');
               } else {
                 Navigator.pop(context);
               }
@@ -79,14 +79,14 @@ class AIOnjuisteDetectie extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Voertuigen zonder juiste detectie',
                     ),
@@ -112,7 +112,7 @@ class AIOnjuisteDetectie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Toegang tot het spoor',
                     ),
@@ -132,7 +132,7 @@ class AIOnjuisteDetectie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Detectie op niet aangepaste baanvakken',
                     ),
@@ -152,7 +152,7 @@ class AIOnjuisteDetectie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle:
                           'Voertuigen zonder juiste detectie i.c.m. overwegen',

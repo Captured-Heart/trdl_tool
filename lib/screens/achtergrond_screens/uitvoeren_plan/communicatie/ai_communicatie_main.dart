@@ -1,11 +1,17 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAICommunicatieMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_mondelinge_communicatie,
+  // ignore: constant_identifier_names
   ai_mondelinge_communicatie,
+  // ignore: constant_identifier_names
   ai_communicatiemiddelen,
+  // ignore: constant_identifier_names
   ai_communicatiesysteem,
+  // ignore: constant_identifier_names
   ai_ketenpartners
 }
 
@@ -20,28 +26,30 @@ class AICommunicatieMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAICommunicatieMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAICommunicatieMain result) {
+            onSelected: (WhereToGoFromAICommunicatieMain result) async {
               if (result == WhereToGoFromAICommunicatieMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAICommunicatieMain.ww_mondelinge_communicatie) {
-                Navigator.pushNamed(context, 'ww_mondelinge_communicatie');
+                await Navigator.pushNamed(
+                    context, 'ww_mondelinge_communicatie');
               } else if (result ==
                   WhereToGoFromAICommunicatieMain.ai_mondelinge_communicatie) {
-                Navigator.pushNamed(context, 'ai_mondelinge_communicatie');
+                await Navigator.pushNamed(
+                    context, 'ai_mondelinge_communicatie');
               } else if (result ==
                   WhereToGoFromAICommunicatieMain.ai_communicatiemiddelen) {
-                Navigator.pushNamed(context, 'ai_communicatiemiddelen');
+                await Navigator.pushNamed(context, 'ai_communicatiemiddelen');
               } else if (result ==
                   WhereToGoFromAICommunicatieMain.ai_communicatiesysteem) {
-                Navigator.pushNamed(context, 'ai_communicatiesysteem');
+                await Navigator.pushNamed(context, 'ai_communicatiesysteem');
               } else if (result ==
                   WhereToGoFromAICommunicatieMain.ai_ketenpartners) {
-                Navigator.pushNamed(context, 'ai_ketenpartners');
+                await Navigator.pushNamed(context, 'ai_ketenpartners');
               } else {
                 Navigator.pop(context);
               }
@@ -99,14 +107,14 @@ class AICommunicatieMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*TITLE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Communicatie',
                     ),
@@ -120,14 +128,14 @@ class AICommunicatieMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Communicatie - Werkwijze',
                           destination: 'ww_communicatie_main',
