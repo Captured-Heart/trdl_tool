@@ -1,4 +1,6 @@
 import '/all_imports.dart';
+import 'screens/achtergrond_screens/incidenten/infra/beveiliging/detectie_basis/ai_detectie_basis.dart';
+import 'screens/achtergrond_screens/incidenten/infra/beveiliging/veiligheidsstoring_sein/ai_veiligheidsstoring_sein.dart';
 
 Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   /// Landing page routes
@@ -205,6 +207,12 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
       const AIBeveiligingBasis1(),
   'ai_beveiliging_basis2': (BuildContext context) =>
       const AIBeveiligingBasis2(),
+  'ai_detectie_basis': (BuildContext context) => const AIDetectie(),
+  'ai_seinen_basis1': (BuildContext context) => const AISeinenBasis1(),
+  'ai_seinen_basis2': (BuildContext context) => const AISeinenBasis2(),
+  'ai_tegen_rijrichting': (BuildContext context) => const AITegenRijrichting(),
+  'ai_veiligheidsstoring_sein': (BuildContext context) =>
+      const AIVeiligheidsstoringSein(),
   'ai_bovenleiding_main': (BuildContext context) => const AIBovenleidingMain(),
   'ai_kunstwerken_main': (BuildContext context) => const AIKunstwerkenMain(),
   'ai_overwegen_main': (BuildContext context) => const AIOverwegenMain(),

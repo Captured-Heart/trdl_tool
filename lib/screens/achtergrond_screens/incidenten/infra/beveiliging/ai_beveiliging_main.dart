@@ -27,33 +27,34 @@ class AIBeveiligingMain extends StatelessWidget {
           PopupMenuButton<WhereToGoFromAIBeveiligingMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIBeveiligingMain result) {
+            onSelected: (WhereToGoFromAIBeveiligingMain result) async {
               if (result == WhereToGoFromAIBeveiligingMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIBeveiligingMain.ww_beveiliging_main) {
-                Navigator.pushNamed(context, 'ww_beveiliging_main');
+                await Navigator.pushNamed(context, 'ww_beveiliging_main');
               } else if (result ==
                   WhereToGoFromAIBeveiligingMain.ai_seinen_basis1) {
-                Navigator.pushNamed(context, 'ai_seinen_basis1');
+                await Navigator.pushNamed(context, 'ai_seinen_basis1');
               } else if (result ==
                   WhereToGoFromAIBeveiligingMain.ai_seinen_basis2) {
-                Navigator.pushNamed(context, 'ai_seinen_basis2');
+                await Navigator.pushNamed(context, 'ai_seinen_basis2');
               } else if (result ==
                   WhereToGoFromAIBeveiligingMain.ai_detectie_basis) {
-                Navigator.pushNamed(context, 'ai_detectie_basis');
+                await Navigator.pushNamed(context, 'ai_detectie_basis');
               } else if (result ==
                   WhereToGoFromAIBeveiligingMain.ai_beveiliging_basis1) {
-                Navigator.pushNamed(context, 'ai_beveiliging_basis1');
+                await Navigator.pushNamed(context, 'ai_beveiliging_basis1');
               } else if (result ==
                   WhereToGoFromAIBeveiligingMain.ai_beveiliging_basis2) {
-                Navigator.pushNamed(context, 'ai_beveiliging_basis2');
+                await Navigator.pushNamed(context, 'ai_beveiliging_basis2');
               } else if (result ==
                   WhereToGoFromAIBeveiligingMain.ai_tegen_rijrichting) {
-                Navigator.pushNamed(context, 'ai_tegen_rijrichting');
+                await Navigator.pushNamed(context, 'ai_tegen_rijrichting');
               } else if (result ==
                   WhereToGoFromAIBeveiligingMain.ai_veiligheidsstoring_sein) {
-                Navigator.pushNamed(context, 'ai_veiligheidsstoring_sein');
+                await Navigator.pushNamed(
+                    context, 'ai_veiligheidsstoring_sein');
               } else {
                 Navigator.pop(context);
               }
