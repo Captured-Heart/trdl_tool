@@ -43,6 +43,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/incidenten/incidenten_basi
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/ai_infrastructuur_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/beveiliging/ai_beveiliging_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/beveiliging/beveiliging_basis/ai_beveiliging_basis1.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/beveiliging/beveiliging_basis/ai_beveiliging_basis2.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/bovenleiding/ai_bovenleiding_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/kunstwerken/ai_kunstwerken_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/overwegen/ai_overwegen_main.dart';

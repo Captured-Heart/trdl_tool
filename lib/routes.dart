@@ -203,6 +203,8 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   'ai_beveiliging_main': (BuildContext context) => const AIBeveiligingMain(),
   'ai_beveiliging_basis1': (BuildContext context) =>
       const AIBeveiligingBasis1(),
+  'ai_beveiliging_basis2': (BuildContext context) =>
+      const AIBeveiligingBasis2(),
   'ai_bovenleiding_main': (BuildContext context) => const AIBovenleidingMain(),
   'ai_kunstwerken_main': (BuildContext context) => const AIKunstwerkenMain(),
   'ai_overwegen_main': (BuildContext context) => const AIOverwegenMain(),

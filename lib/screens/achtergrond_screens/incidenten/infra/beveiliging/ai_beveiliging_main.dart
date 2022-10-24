@@ -117,7 +117,8 @@ class AIBeveiligingMain extends StatelessWidget {
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
-                value: WhereToGoFromAIBeveiligingMain.ai_veiligheidsstoring_sein,
+                value:
+                    WhereToGoFromAIBeveiligingMain.ai_veiligheidsstoring_sein,
                 child: MenuItemContent(
                   icon: Icons.menu_book,
                   text: 'AI Veiligheidsstoring Sein',
@@ -126,7 +127,6 @@ class AIBeveiligingMain extends StatelessWidget {
             ],
           ),
           const HomeButton(),
-        ],
         ],
       ),
       body: SafeArea(
@@ -184,8 +184,7 @@ class AIBeveiligingMain extends StatelessWidget {
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Detectie - Basis',
-                            destination:
-                                'ai_detectie_basis',
+                            destination: 'ai_detectie_basis',
                           ),
                           SizedBoxH(),
                           NavButton(
@@ -195,20 +194,17 @@ class AIBeveiligingMain extends StatelessWidget {
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Beveiliging - Basis 2',
-                            destination:
-                                'ai_beveiliging_basis2',
+                            destination: 'ai_beveiliging_basis2',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Tegen de rijrichting',
-                            destination:
-                                'ai_tegen_rijrichting',
+                            destination: 'ai_tegen_rijrichting',
                           ),
                           SizedBoxH(),
                           NavButton(
                             buttontext: 'Veiligheidsstoring sein',
-                            destination:
-                                'ai_veiligheidsstoring_sein',
+                            destination: 'ai_veiligheidsstoring_sein',
                           ),
                         ],
                       ),
