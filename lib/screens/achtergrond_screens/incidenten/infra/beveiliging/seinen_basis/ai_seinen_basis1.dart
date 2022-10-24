@@ -1,5 +1,15 @@
 import '/all_imports.dart';
 
+enum WhereToGoFromAISeinenBasis1 {
+  // ignore: constant_identifier_names
+  home_screen,
+  ai_beveiliging_main,
+  ai_beveiliging_basis1,
+  ai_beveiliging_basis2,
+}
+
+//TODO: Toevoegen externe link naar https://www.seinenspel.nl
+
 class AISeinenBasis1 extends StatelessWidget {
   const AISeinenBasis1({Key? key}) : super(key: key);
 
@@ -9,10 +19,39 @@ class AISeinenBasis1 extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Seinen - basisinformatie 1',
+          title: 'Achtergrondinformatie',
         ),
-        actions: const <HomeButton>[
-          HomeButton(),
+        actions: const <Widget>[
+          PopupMenuButton<WhereToGoFromAISeinenBasis1>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAISeinenBasis1 result) async {
+              if (result == WhereToGoFromAISeinenBasis1.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if {
+                (result == WhereToGoFromAISeinenBasis1.ai_beveiliging_main) {
+                await Navigator.pushNamed(context, 'ai_beveiliging_main');
+              } else if {
+                (result == WhereToGoFromAISeinenBasis1.ai_beveiliging_basis1) {
+                await Navigator.pushNamed(context, 'ai_beveiliging_basis1');
+              } else if {
+                (result == WhereToGoFromAISeinenBasis1.ai_beveiliging_basis2) {
+                await Navigator.pushNamed(context, 'ai_beveiliging_basis2');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAISeinenBasis1>>[
+              const PopupMenuItem<WhereToGoFromAISeinenBasis1>(
+                value: WhereToGoFromAISeinenBasis1.home_screen,
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+              ),
+            ],
+          ),
         ],
       ),
       body: SingleChildScrollView(
@@ -25,6 +64,8 @@ class AISeinenBasis1 extends StatelessWidget {
                 padding: kCardPadding,
                 child: Column(
                   children: const <Widget>[
+                    TitleText('Seinen Basisinformatie 1'),
+                    SizedBoxH(),
                     SubTitleText(
                       subtitle: 'Seinstelsel',
                     ),
@@ -112,39 +153,6 @@ class AISeinenBasis1 extends StatelessWidget {
                       text:
                           "De seinbeelden volgen elkaar zo op, dat de MCN de opdracht van een seinbeeld kan opvolgen. Het seinbeeld 'snelheid begrenzen' wordt op een zodanige afstand gegeven, dat een verlaging van de snelheid tijdig kan zijn uitgevoerd. Tijdig betekent dat de beschikbare remweg voldoende is om een opgelegde lagere snelheid te bereiken.\n\nDoor toepassing van cijferbakken en knipperende lampen kan een lichtsein nog meer seinbeelden tonen. Kijk voor een uitgebreid overzicht van lichtseinen en seinbeelden in het seinenboek.",
                     ),
-                  ],
-                ),
-              ),
-            ),
-            /*ACHTERGROND CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: <Widget>[
-                    const TitleText(
-                      title: 'Ga snel naar',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const <NavButton>[
-                        NavButton(
-                          buttontext: 'Beveiliging',
-                          destination: 'ai_incidenten_beveiliging_main',
-                        ),
-                        NavButton(
-                          buttontext: 'Beveiliging - Basis 1',
-                          destination: 'ai_incidenten_beveiliging_basis1',
-                        ),
-                        NavButton(
-                          buttontext: 'Beveiliging - Basis 2',
-                          destination: 'ai_incidenten_beveiliging_basis2',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
                   ],
                 ),
               ),
