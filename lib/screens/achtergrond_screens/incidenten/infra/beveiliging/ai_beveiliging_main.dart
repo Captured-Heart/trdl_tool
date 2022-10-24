@@ -179,7 +179,7 @@ class AIBeveiligingMain extends StatelessWidget {
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Seinen - Basis 1',
+                            buttontext: 'Seinen - Basis 2',
                             destination: 'ai_seinen_basis2',
                           ),
                           SizedBoxH(),
