@@ -1,7 +1,7 @@
 import '/all_imports.dart';
 
-class AISeinenBasis extends StatelessWidget {
-  const AISeinenBasis({Key? key}) : super(key: key);
+class AISeinenBasis1 extends StatelessWidget {
+  const AISeinenBasis1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class AISeinenBasis extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Seinen - basisinformatie',
+          title: 'Seinen - basisinformatie 1',
         ),
         actions: const <HomeButton>[
           HomeButton(),

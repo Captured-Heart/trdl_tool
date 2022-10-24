@@ -1,5 +1,5 @@
-/// Export of all packages, to import them via all_imports.dart.
-/// Sorted alphabetically.
+//Export of all packages, to import them via all_imports.dart.
+//Sorted by linter rules.
 export 'dart:io';
 export 'dart:math';
 export 'package:carousel_slider/carousel_slider.dart';

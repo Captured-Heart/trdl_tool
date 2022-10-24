@@ -1,5 +1,7 @@
 import 'package:trdl_tool/all_imports.dart';
 
+//TODO: To use as template for all other AI screens
+
 enum WhereToGoFromAIUitvoerenPlan {
   home_screen,
   ai_aanpassen_plan,
@@ -17,7 +19,7 @@ class AIUitvoerenPlan extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIUitvoerenPlan>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',

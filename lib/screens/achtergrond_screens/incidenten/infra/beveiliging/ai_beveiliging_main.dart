@@ -1,5 +1,17 @@
 import '/all_imports.dart';
 
+enum WhereToGoFromAIBeveiligingMain {
+  home_screen,
+  ww_beveiliging_main,
+  ai_seinen_basis1,
+  ai_seinen_basis2,
+  ai_detectie_basis,
+  ai_beveiliging_basis1,
+  ai_beveiliging_basis2,
+  ai_tegen_rijrichting,
+  ai_veiligheidsstoring_sein,
+}
+
 class AIBeveiligingMain extends StatelessWidget {
   const AIBeveiligingMain({Key? key}) : super(key: key);
 
@@ -11,8 +23,110 @@ class AIBeveiligingMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Beveiliging',
         ),
-        actions: const <HomeButton>[
-          HomeButton(),
+        actions: <Widget>[
+          PopupMenuButton<WhereToGoFromAIBeveiligingMain>(
+            icon: const Icon(Icons.info_outlined),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIBeveiligingMain result) {
+              if (result == WhereToGoFromAIBeveiligingMain.home_screen) {
+                Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIBeveiligingMain.ww_beveiliging_main) {
+                Navigator.pushNamed(context, 'ww_beveiliging_main');
+              } else if (result ==
+                  WhereToGoFromAIBeveiligingMain.ai_seinen_basis1) {
+                Navigator.pushNamed(context, 'ai_seinen_basis1');
+              } else if (result ==
+                  WhereToGoFromAIBeveiligingMain.ai_seinen_basis2) {
+                Navigator.pushNamed(context, 'ai_seinen_basis2');
+              } else if (result ==
+                  WhereToGoFromAIBeveiligingMain.ai_detectie_basis) {
+                Navigator.pushNamed(context, 'ai_detectie_basis');
+              } else if (result ==
+                  WhereToGoFromAIBeveiligingMain.ai_beveiliging_basis1) {
+                Navigator.pushNamed(context, 'ai_beveiliging_basis1');
+              } else if (result ==
+                  WhereToGoFromAIBeveiligingMain.ai_beveiliging_basis2) {
+                Navigator.pushNamed(context, 'ai_beveiliging_basis2');
+              } else if (result ==
+                  WhereToGoFromAIBeveiligingMain.ai_tegen_rijrichting) {
+                Navigator.pushNamed(context, 'ai_tegen_rijrichting');
+              } else if (result ==
+                  WhereToGoFromAIBeveiligingMain.ai_veiligheidsstoring_sein) {
+                Navigator.pushNamed(context, 'ai_veiligheidsstoring_sein');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIBeveiligingMain>>[
+              const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
+                value: WhereToGoFromAIBeveiligingMain.home_screen,
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
+                value: WhereToGoFromAIBeveiligingMain.ww_beveiliging_main,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'WW Beveiliging',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
+                value: WhereToGoFromAIBeveiligingMain.ai_seinen_basis1,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Seinen Basis 1',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
+                value: WhereToGoFromAIBeveiligingMain.ai_seinen_basis2,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Seinen Basis 2',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
+                value: WhereToGoFromAIBeveiligingMain.ai_detectie_basis,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Detectie',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
+                value: WhereToGoFromAIBeveiligingMain.ai_beveiliging_basis1,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Beveiliging Basis 1',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
+                value: WhereToGoFromAIBeveiligingMain.ai_beveiliging_basis2,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Beveiliging Basis 2',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
+                value: WhereToGoFromAIBeveiligingMain.ai_tegen_rijrichting,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Tegen Rijrichting',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
+                value: WhereToGoFromAIBeveiligingMain.ai_veiligheidsstoring_sein,
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Veiligheidsstoring Sein',
+                ),
+              ),
+            ],
+          ),
+          const HomeButton(),
+        ],
         ],
       ),
       body: SafeArea(
@@ -59,25 +173,42 @@ class AIBeveiligingMain extends StatelessWidget {
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Seinen - basisinformatie',
-                            destination: 'ai_seinen_basis',
+                            buttontext: 'Seinen - Basis 1',
+                            destination: 'ai_seinen_basis1',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Wissel niet in eindstand',
+                            buttontext: 'Seinen - Basis 1',
+                            destination: 'ai_seinen_basis2',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Detectie - Basis',
                             destination:
-                                'wisselnietineindstandincidentenachtergrond',
+                                'ai_detectie_basis',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Gestoord wissel',
-                            destination: 'gestoordwisselincidentenachtergrond',
+                            buttontext: 'Beveiliging - Basis 1',
+                            destination: 'ai_beveiliging_basis1',
                           ),
                           SizedBoxH(),
                           NavButton(
-                            buttontext: 'Opengereden wissel',
+                            buttontext: 'Beveiliging - Basis 2',
                             destination:
-                                'opengeredenwisselincidentenachtergrond',
+                                'ai_beveiliging_basis2',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Tegen de rijrichting',
+                            destination:
+                                'ai_tegen_rijrichting',
+                          ),
+                          SizedBoxH(),
+                          NavButton(
+                            buttontext: 'Veiligheidsstoring sein',
+                            destination:
+                                'ai_veiligheidsstoring_sein',
                           ),
                         ],
                       ),

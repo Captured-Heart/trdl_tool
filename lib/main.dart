@@ -19,9 +19,9 @@ Future<void> main() async {
   );
 }
 
-/// ConsumerWidget makes providers reachable
+//ConsumerWidget makes providers reachable
 class MainEntry extends ConsumerWidget {
-  /// MainEntry constructor
+  //MainEntry constructor
   const MainEntry({Key? key}) : super(key: key);
 
   @override
