@@ -1,3 +1,4 @@
+import '../../../../../../widgets/image_widgets/insert_image.dart';
 import '/all_imports.dart';
 
 enum WhereToGoFromAISeinenBasis2 {
@@ -147,6 +148,59 @@ class AISeinenBasis2 extends StatelessWidget {
                       text:
                           "Hij mag alle daarna komende opeenvolgende stoptonende seinen met 'P' op zicht voorbijrijden, waarbij hij rekening dient te houden met het niet of niet juist functioneren van eventueel achter de P-seinen gelegen automatische overwegbeveiligingen, totdat hij een hoofdsein tegenkomt dat een beter seinbeeld dan stop toont.\nKan de MCN geen contact met de TRDL krijgen dan mag hij een stoptonend sein met 'P' voorbijrijden. De letter P staat immers voor 'Permissief'. Ook in dit geval mag hij alle daarna komende opeenvolgende stoptonende seinen met 'P' op zicht voorbijrijden.\nEen stoptonend bediend sein of een stoptonend automatisch sein niet gemerkt met 'P' mag de MCN NOOIT passeren, zonder overleg met de TRDL.",
                     ),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const <Widget>[
+                    SubTitleText(
+                      subtitle: 'Codegever',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'De codegever is een apparaat ingebouwd in de beveiliging dat er voor zorgt dat seinen een knipperend seinbeeld en cijfer kunnen tonen (alleen bij relaisbeveiliging). Als je als TRDL de melding krijgt van een gestoorde codegever is het niet meer mogelijk om seinen te laten knipperen.',
+                    ),
+                    BoldText(
+                      indents: 0,
+                      boldtext: 'Gestoorde codegever',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Een gestoorde codegever betekent dat de beveiliging niet meer in staat is een knipperend seinbeeld te tonen of een knipperend cijfer in een cijferbak. Je krijgt op het overzichtsscherm in het statusblok en in het systeemmeldingenvenster een melding van een defecte codegever.\nBij een defecte codegever zorgt het fail-safe-principe er dan voor dat de seinbeelden als volgt vervangen worden:',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 1,
+                      text:
+                          '- Een sein dat groenknipper moet tonen, toont geel;\n- Een sein dat geelknipper moet tonen, toont rood;\n- Een sein met knipperend cijfer in de cijferbak valt weg.',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Laat via het MKS-BO de codegever herstellen. Tot die tijd neemt de beveiliging het gewoon over. Alleen in het geval van geelknipper moet je een aanwijzing STS afgeven, omdat de beveiliging terugvalt op het seinbeeld rood.',
+                    ),
+                    SizedBoxH(),
+                    InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/incidenten/ai_seinen_basis2_1.png'),
+                    SizedBoxH(),
+                    InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/incidenten/ai_seinen_basis2_2.png'),
+                    SizedBoxH(),
+                    InsertImage(
+                        image:
+                            'assets/images/achtergrond_info/incidenten/ai_seinen_basis2_3.png'),
                   ],
                 ),
               ),
