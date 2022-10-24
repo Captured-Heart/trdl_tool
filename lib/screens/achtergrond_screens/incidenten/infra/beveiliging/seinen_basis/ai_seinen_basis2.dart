@@ -205,6 +205,92 @@ class AISeinenBasis2 extends StatelessWidget {
                 ),
               ),
             ),
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const <Widget>[
+                    SubTitleText(
+                      subtitle:
+                          'Onjuist seinbeeld / Gedoofd sein / Slecht zichtbaar sein',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          "Als TRDL ben je verantwoordelijk voor de bediening van de seinen in jouw TRDLgebied. Deze kunnen onverwacht gedoofd zijn, een onjuist seinbeeld tonen of slecht zichtbaar zijn. Als dat eenmaal bekend is, moeten de MCN weten dat zij zo'n gedoofd, onjuist of slecht zichtbaar sein naderen. Zij zullen bij het naderen van het sein extra alert zijn om vervolgens te handelen volgens de bepalingen in het Handboek Machinist. Het failsafe principe zorgt ervoor dat de systemen die zorgen voor de seinbeelden veilig functioneren.\nAls een sein langs de baan niet het juiste seinbeeld toont, is gedoofd of slecht zichtbaar is, wordt de MCN niet goed geïnformeerd over de toestand in het volgende spoorgedeelte.\nBij een gedoofd lichtsein kunnen in sommige situaties te grote risico's ontstaan; Om eventuele hieruit voortvloeiende ongelukken te voorkomen moet je maatregelen nemen. Deze bestaan uit het controleren van het aangestuurde seinbeeld, het signaleren van gedoofde seinen en eventueel het tonen van restrictiever seinbeeld in het betreffende sein of een ander sein.\nJe handelt als volgt:",
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 1,
+                      text:
+                          '- Neem risico reducerende maatregelen;\n- Informeer de MCN over de toestand van het sein, vóórdat je een rijweg instelt naar het betrokken sein;\n- Geef na rijweginstelling de MCN toestemming het sein te passeren;\n- Verbied het voorbijrijden van een gedoofd P-sein als je weet van concreet gevaar en/of blokbezetting achter het sein;\n- Meld dit in alle gevallen aan de MKS-BO.',
+                    ),
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/incidenten/ai_seinen_basis2_4.png',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle: 'Slecht zichbaar sein',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          "Als TRDL zorg je ervoor dat de seinverlichting wordt aangepast aan de diverse omstandigheden. Vaak zet je deze 's nachts in de lage stand, maar je kunt je voorstellen dat dat niet handig is bij dichte mist.\nEen sein kan ook slecht zichtbaar zijn door bijvoorbeeld weersomstandigheden. Hieronder zie je een voorbeeld van sneeuw die het sein slecht zichtbaar maken. Als dit het geval is, meld je dit aan het MKS/BO. Na rijweginstelling geef je de MCN toestemming om het sein te passeren.",
+                    ),
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrondinfo/incidenten/ai_seinen_basis2_5.png',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle: 'Gedoofd sein',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Een defecte lamp of relais kan een oorzaak zijn van een gedoofd sein. Vaak zal een MCN of een derde melding doen van een seinstoring, want in de signalering op jouw beeldscherm is niets van deze storing te zien.',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle: 'Handboek Machinist',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Als een MCN een gedoofd hoofdsein of een hoofdsein met een onjuist seinbeeld tegenkomt, meldt hij dit onmiddellijk aan jou en handelt hij volgens het volgende schema.',
+                    ),
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/incidenten/ai_seinen_basis2_6.png',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle: 'Onjuist seinbeeld',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Een onjuist sein is een sein, dat een seinbeeld toont dat niet in het Seinenboek voorkomt; Bijv. een sein waarvan twee lampen tegelijk branden.',
+                    ),
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/incidenten/ai_seinen_basis2_7.png',
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
