@@ -11,7 +11,7 @@ class WelcomeScreenState extends State<WelcomeScreen> {
 
   List<Widget> slides = items
       .map(
-        (item) => Container(
+        (Map<String, String> item) => Container(
           padding: const EdgeInsets.symmetric(horizontal: 18.0),
           child: Column(
             children: <Flexible>[

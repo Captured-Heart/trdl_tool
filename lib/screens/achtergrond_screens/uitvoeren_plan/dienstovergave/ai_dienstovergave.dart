@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIDienstovergave {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_dienstovergave,
 }
 
@@ -16,16 +18,16 @@ class AIDienstovergave extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIDienstovergave>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIDienstovergave result) {
+            onSelected: (WhereToGoFromAIDienstovergave result) async {
               if (result == WhereToGoFromAIDienstovergave.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIDienstovergave.ww_dienstovergave) {
-                Navigator.pushNamed(context, 'ww_dienstovergave');
+                await Navigator.pushNamed(context, 'ww_dienstovergave');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class AIDienstovergave extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(title: 'Dienstovergave'),
                     SizedBoxH(),
                     BodyText(

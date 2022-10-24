@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 late User loggedInUser;
@@ -20,6 +20,12 @@ class ChatScreenState extends State<ChatScreen> {
   void initState() {
     super.initState();
     getCurrentUser();
+  }
+
+  @override
+  void dispose() {
+    messageTextController.dispose();
+    super.dispose();
   }
 
   void getCurrentUser() {
@@ -44,11 +50,11 @@ class ChatScreenState extends State<ChatScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
+        children: <Widget>[
           const MessagesStream(),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
+            children: <Widget>[
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(
@@ -67,7 +73,7 @@ class ChatScreenState extends State<ChatScreen> {
               TextButton(
                 onPressed: () async {
                   messageTextController.clear();
-                  await _firestore.collection('messages').add({
+                  await _firestore.collection('messages').add(<String, dynamic>{
                     'sender': loggedInUser.email,
                     'text': messageText,
                     'timestamp': FieldValue.serverTimestamp(),
@@ -91,11 +97,13 @@ class MessagesStream extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<QuerySnapshot>(
+    return StreamBuilder<QuerySnapshot<Object?>>(
       stream:
           _firestore.collection('messages').orderBy('timestamp').snapshots(),
-      builder: (BuildContext context,
-          AsyncSnapshot<QuerySnapshot<Object?>> snapshot) {
+      builder: (
+        BuildContext context,
+        AsyncSnapshot<QuerySnapshot<Object?>> snapshot,
+      ) {
         if (!snapshot.hasData) {
           return Center(
             child: CircularProgressIndicator(
@@ -151,7 +159,7 @@ class MessageBubble extends StatelessWidget {
       child: Column(
         crossAxisAlignment:
             isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
-        children: [
+        children: <Widget>[
           Text(
             sender,
             style: const TextStyle(

@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIWerkzones {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_geplande_werkzaamheden_main,
+  // ignore: constant_identifier_names
   ai_aanvang_werkzaamheden,
 }
 
@@ -17,19 +20,22 @@ class AIWerkzones extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIWerkzones>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIWerkzones result) {
+            onSelected: (WhereToGoFromAIWerkzones result) async {
               if (result == WhereToGoFromAIWerkzones.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIWerkzones.ai_geplande_werkzaamheden_main) {
-                Navigator.pushNamed(context, 'ai_geplande_werkzaamheden_main');
+                await Navigator.pushNamed(
+                  context,
+                  'ai_geplande_werkzaamheden_main',
+                );
               } else if (result ==
                   WhereToGoFromAIWerkzones.ai_aanvang_werkzaamheden) {
-                Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
+                await Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
               } else {
                 Navigator.pop(context);
               }
@@ -64,14 +70,14 @@ class AIWerkzones extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Werkzones',
                     ),
@@ -95,7 +101,7 @@ class AIWerkzones extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Werkzoneschakelaar',
                     ),
@@ -115,7 +121,7 @@ class AIWerkzones extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Signalering voor LWB',
                     ),
@@ -169,7 +175,7 @@ class AIWerkzones extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Signalering voor TRDL',
                     ),
@@ -248,7 +254,7 @@ class AIWerkzones extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Wisselsturing',
                     ),
@@ -299,7 +305,7 @@ class AIWerkzones extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Bezettingen in de werkzone',
                     ),
@@ -412,7 +418,7 @@ class AIWerkzones extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'WBI Uitvoeren',
                     ),

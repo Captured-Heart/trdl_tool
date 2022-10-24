@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int _selectedIndex = 0;
   late PageController _pageController;
 
-  void _onItemTapped(int index) {
+  Future<void> _onItemTapped(int index) async {
     setState(() {
       _selectedIndex = index;
       /*SET CURVE TO CHOOSE ANIMATION STYLE*/
@@ -58,7 +58,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
         appBar: AppBar(
           centerTitle: true,
           title: const AppBarText(title: 'TRDLtool'),
-          actions: const [
+          actions: const <Widget>[
             SearchButton(),
             LogOutButton(),
           ],
@@ -67,10 +67,10 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
         body: Center(
           child: PageView(
             controller: _pageController,
-            onPageChanged: (index) {
+            onPageChanged: (int index) {
               setState(() => _selectedIndex = index);
             },
-            children: const [
+            children: const <Widget>[
               HomeIndex0(),
               HomeIndex1(),
               HomeIndex2(),

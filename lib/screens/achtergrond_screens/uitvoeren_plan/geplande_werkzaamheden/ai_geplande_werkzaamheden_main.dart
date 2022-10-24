@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIGeplandeWerkzaamhedenMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_geplande_werkzaamheden_main,
 }
 
@@ -16,18 +18,22 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIGeplandeWerkzaamhedenMain result) {
+            onSelected:
+                (WhereToGoFromAIGeplandeWerkzaamhedenMain result) async {
               if (result ==
                   WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIGeplandeWerkzaamhedenMain
                       .ww_geplande_werkzaamheden_main) {
-                Navigator.pushNamed(context, 'ww_geplande_werkzaamheden_main');
+                await Navigator.pushNamed(
+                  context,
+                  'ww_geplande_werkzaamheden_main',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -56,14 +62,14 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             //*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Geplande Werkzaamheden',
                     ),
@@ -77,14 +83,14 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Geplande werkzaamheden - Basis',
                           destination: 'ai_geplande_werkzaamheden',
@@ -127,7 +133,7 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     InsertImage(
                       image:

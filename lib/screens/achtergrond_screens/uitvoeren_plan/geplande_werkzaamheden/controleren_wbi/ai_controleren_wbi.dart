@@ -1,10 +1,15 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIControlerenWBI {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_controleren_wbi,
+  // ignore: constant_identifier_names
   ai_fouten_wbi,
+  // ignore: constant_identifier_names
   ai_geplande_werkzaamheden,
+  // ignore: constant_identifier_names
   ai_aanvang_werkzaamheden,
 }
 
@@ -19,25 +24,25 @@ class AIControlerenWBI extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIControlerenWBI>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIControlerenWBI result) {
+            onSelected: (WhereToGoFromAIControlerenWBI result) async {
               if (result == WhereToGoFromAIControlerenWBI.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIControlerenWBI.ww_controleren_wbi) {
-                Navigator.pushNamed(context, 'ww_controleren_wbi');
+                await Navigator.pushNamed(context, 'ww_controleren_wbi');
               } else if (result ==
                   WhereToGoFromAIControlerenWBI.ai_fouten_wbi) {
-                Navigator.pushNamed(context, 'ai_fouten_wbi');
+                await Navigator.pushNamed(context, 'ai_fouten_wbi');
               } else if (result ==
                   WhereToGoFromAIControlerenWBI.ai_geplande_werkzaamheden) {
-                Navigator.pushNamed(context, 'ai_geplande_werkzaamheden');
+                await Navigator.pushNamed(context, 'ai_geplande_werkzaamheden');
               } else if (result ==
                   WhereToGoFromAIControlerenWBI.ai_aanvang_werkzaamheden) {
-                Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
+                await Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
               } else {
                 Navigator.pop(context);
               }
@@ -86,14 +91,14 @@ class AIControlerenWBI extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Controleren WBI',
                     ),

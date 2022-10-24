@@ -1,11 +1,17 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIAanvangWerkzaamheden {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_aanvang_werkzaamheden,
+  // ignore: constant_identifier_names
   ai_geplande_werkzaamheden,
+  // ignore: constant_identifier_names
   ai_controleren_wbi,
+  // ignore: constant_identifier_names
   ai_fouten_wbi,
+  // ignore: constant_identifier_names
   ai_bovenleiding_main,
 }
 
@@ -20,30 +26,30 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIAanvangWerkzaamheden>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIAanvangWerkzaamheden result) {
+            onSelected: (WhereToGoFromAIAanvangWerkzaamheden result) async {
               if (result == WhereToGoFromAIAanvangWerkzaamheden.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIAanvangWerkzaamheden
                       .ww_aanvang_werkzaamheden) {
-                Navigator.pushNamed(context, 'ww_aanvang_werkzaamheden');
+                await Navigator.pushNamed(context, 'ww_aanvang_werkzaamheden');
               } else if (result ==
                   WhereToGoFromAIAanvangWerkzaamheden
                       .ai_geplande_werkzaamheden) {
-                Navigator.pushNamed(context, 'ai_geplande_werkzaamheden');
+                await Navigator.pushNamed(context, 'ai_geplande_werkzaamheden');
               } else if (result ==
                   WhereToGoFromAIAanvangWerkzaamheden.ai_controleren_wbi) {
-                Navigator.pushNamed(context, 'ai_controleren_wbi');
+                await Navigator.pushNamed(context, 'ai_controleren_wbi');
               } else if (result ==
                   WhereToGoFromAIAanvangWerkzaamheden.ai_fouten_wbi) {
-                Navigator.pushNamed(context, 'ai_fouten_wbi');
+                await Navigator.pushNamed(context, 'ai_fouten_wbi');
               } else if (result ==
                   WhereToGoFromAIAanvangWerkzaamheden.ai_bovenleiding_main) {
-                Navigator.pushNamed(context, 'ai_bovenleiding_main');
+                await Navigator.pushNamed(context, 'ai_bovenleiding_main');
               } else {
                 Navigator.pop(context);
               }
@@ -51,11 +57,12 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
             itemBuilder: (BuildContext context) =>
                 <PopupMenuEntry<WhereToGoFromAIAanvangWerkzaamheden>>[
               const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-                  value: WhereToGoFromAIAanvangWerkzaamheden.home_screen,
-                  child: MenuItemContent(
-                    icon: Icons.home,
-                    text: 'Home',
-                  )),
+                value: WhereToGoFromAIAanvangWerkzaamheden.home_screen,
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
+              ),
               const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
                 value: WhereToGoFromAIAanvangWerkzaamheden
                     .ww_aanvang_werkzaamheden,
@@ -100,14 +107,14 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Aanvang werkzaamheden',
                     ),
@@ -139,7 +146,7 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Buiten dienst stellen',
                     ),
@@ -164,7 +171,7 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle:
                           'Werkplekbeveiliging met zelfsignalerende kortsluitlans (ZKL) i.c.m. rijweginstelling',
@@ -235,7 +242,7 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Beproeven infra-elementen',
                     ),

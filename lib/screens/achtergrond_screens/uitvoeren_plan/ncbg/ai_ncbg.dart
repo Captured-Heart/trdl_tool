@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAINcbg {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_ncbg,
 }
 
@@ -16,15 +18,15 @@ class AINcbg extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAINcbg>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAINcbg result) {
+            onSelected: (WhereToGoFromAINcbg result) async {
               if (result == WhereToGoFromAINcbg.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromAINcbg.ww_ncbg) {
-                Navigator.pushNamed(context, 'ww_ncbg');
+                await Navigator.pushNamed(context, 'ww_ncbg');
               } else {
                 Navigator.pop(context);
               }
@@ -52,14 +54,14 @@ class AINcbg extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             //*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'NCBG - Niet Centraal Bediend Gebied',
                     ),
@@ -85,7 +87,7 @@ class AINcbg extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle:
@@ -264,7 +266,7 @@ class AINcbg extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'TRON',
@@ -296,7 +298,7 @@ class AINcbg extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'TRON-webapplicatie na aanmelding',
@@ -422,7 +424,7 @@ class AINcbg extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'Seinen specifiek voor NCBG',
@@ -568,7 +570,7 @@ class AINcbg extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'Kijfhoek',
@@ -636,7 +638,7 @@ class AINcbg extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'CTB baanvakken',
@@ -685,7 +687,7 @@ class AINcbg extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'Amersfoort',
@@ -697,7 +699,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Niet toegestaan spoorvoertuigen naar of over de heuvel te duwen.​​​​​​',
+                          'Niet toegestaan spoorvoertuigen naar of over de heuvel te duwen.',
                     ),
                     InsertImage(
                       image:
@@ -718,7 +720,7 @@ class AINcbg extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'Rangeerseinen',
@@ -730,7 +732,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Rangeren staken en de spoorvoertuigen vrij opstellen van de andere sporen. Geldt alleen voor de aangegeven sporen.​​​​​​',
+                          'Rangeren staken en de spoorvoertuigen vrij opstellen van de andere sporen. Geldt alleen voor de aangegeven sporen.',
                     ),
                     InsertImage(
                       image:

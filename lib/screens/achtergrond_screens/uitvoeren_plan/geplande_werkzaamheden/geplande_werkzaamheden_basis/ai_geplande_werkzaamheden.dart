@@ -1,12 +1,19 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIGeplandeWerkzaamheden {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_geplande_werkzaamheden_main,
+  // ignore: constant_identifier_names
   ai_controleren_wbi,
+  // ignore: constant_identifier_names
   ai_fouten_wbi,
+  // ignore: constant_identifier_names
   ai_aanvang_werkzaamheden,
+  // ignore: constant_identifier_names
   ai_werkzones,
+  // ignore: constant_identifier_names
   ai_toelaten_werktreinen,
 }
 
@@ -21,34 +28,37 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIGeplandeWerkzaamheden>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIGeplandeWerkzaamheden result) {
+            onSelected: (WhereToGoFromAIGeplandeWerkzaamheden result) async {
               if (result == WhereToGoFromAIGeplandeWerkzaamheden.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIGeplandeWerkzaamheden
                       .ww_geplande_werkzaamheden_main) {
-                Navigator.pushNamed(context, 'ww_geplande_werkzaamheden_main');
+                await Navigator.pushNamed(
+                  context,
+                  'ww_geplande_werkzaamheden_main',
+                );
               } else if (result ==
                   WhereToGoFromAIGeplandeWerkzaamheden.ai_controleren_wbi) {
-                Navigator.pushNamed(context, 'ai_controleren_wbi');
+                await Navigator.pushNamed(context, 'ai_controleren_wbi');
               } else if (result ==
                   WhereToGoFromAIGeplandeWerkzaamheden.ai_fouten_wbi) {
-                Navigator.pushNamed(context, 'ai_fouten_wbi');
+                await Navigator.pushNamed(context, 'ai_fouten_wbi');
               } else if (result ==
                   WhereToGoFromAIGeplandeWerkzaamheden
                       .ai_aanvang_werkzaamheden) {
-                Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
+                await Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
               } else if (result ==
                   WhereToGoFromAIGeplandeWerkzaamheden.ai_werkzones) {
-                Navigator.pushNamed(context, 'ai_werkzones');
+                await Navigator.pushNamed(context, 'ai_werkzones');
               } else if (result ==
                   WhereToGoFromAIGeplandeWerkzaamheden
                       .ai_toelaten_werktreinen) {
-                Navigator.pushNamed(context, 'ai_toelaten_werktreinen');
+                await Navigator.pushNamed(context, 'ai_toelaten_werktreinen');
               } else {
                 Navigator.pop(context);
               }
@@ -114,14 +124,14 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Geplande werkzaamheden - basisinformatie',
                     ),
@@ -141,7 +151,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'WBI/WECO bij geplande werkzaamheden',
                     ),
@@ -213,7 +223,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Werkzaamheden zonder gevolgen voor de TRDL',
                     ),
@@ -262,7 +272,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'De werkplekbeveiligingsinstructie (WBI)',
                     ),
@@ -384,7 +394,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'LWB',
                     ),
@@ -410,7 +420,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'ZKL',
                     ),
@@ -475,7 +485,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Werktreinen',
                     ),

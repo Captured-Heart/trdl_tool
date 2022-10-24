@@ -75,7 +75,7 @@ class MySearchDelegate extends SearchDelegate {
   Widget buildResults(BuildContext context) {
     final String namedRoute = query;
 
-    WidgetsBinding.instance!.addPostFrameCallback(
+    WidgetsBinding.instance.addPostFrameCallback(
       (_) async {
         await Navigator.pushReplacementNamed(
           context,

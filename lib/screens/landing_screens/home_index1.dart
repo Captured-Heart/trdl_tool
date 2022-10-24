@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class HomeIndex1 extends StatelessWidget {
   const HomeIndex1({Key? key}) : super(key: key);
@@ -9,13 +9,13 @@ class HomeIndex1 extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: [
+            children: <Card>[
               Card(
                 elevation: kCardElevation,
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: const [
+                    children: const <Widget>[
                       TitleText(
                         title: 'Achtergrondinformatie Treindienstleider',
                       ),
@@ -47,7 +47,7 @@ class HomeIndex1 extends StatelessWidget {
                 child: Padding(
                   padding: kCardPadding,
                   child: Column(
-                    children: [
+                    children: <Widget>[
                       const TitleText(
                         title: 'Ga snel naar',
                       ),
@@ -56,7 +56,7 @@ class HomeIndex1 extends StatelessWidget {
                         fit: BoxFit.cover,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: const [
+                          children: const <Widget>[
                             NavButton(
                               buttontext: 'Uitvoeren',
                               destination: 'ai_uitvoeren_plan_main',

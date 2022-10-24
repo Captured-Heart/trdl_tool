@@ -190,16 +190,19 @@ class AISeinenBasis2 extends StatelessWidget {
                     ),
                     SizedBoxH(),
                     InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/ai_seinen_basis2_1.png'),
+                      image:
+                          'assets/images/achtergrond_info/incidenten/ai_seinen_basis2_1.png',
+                    ),
                     SizedBoxH(),
                     InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/ai_seinen_basis2_2.png'),
+                      image:
+                          'assets/images/achtergrond_info/incidenten/ai_seinen_basis2_2.png',
+                    ),
                     SizedBoxH(),
                     InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/ai_seinen_basis2_3.png'),
+                      image:
+                          'assets/images/achtergrond_info/incidenten/ai_seinen_basis2_3.png',
+                    ),
                   ],
                 ),
               ),

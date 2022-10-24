@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIMondelingeCommunicatie {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_mondelinge_communicatie,
 }
 
@@ -16,17 +18,20 @@ class AIMondelingeCommunicatie extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIMondelingeCommunicatie>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIMondelingeCommunicatie result) {
+            onSelected: (WhereToGoFromAIMondelingeCommunicatie result) async {
               if (result == WhereToGoFromAIMondelingeCommunicatie.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIMondelingeCommunicatie
                       .ww_mondelinge_communicatie) {
-                Navigator.pushNamed(context, 'ww_mondelinge_communicatie');
+                await Navigator.pushNamed(
+                  context,
+                  'ww_mondelinge_communicatie',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -55,14 +60,14 @@ class AIMondelingeCommunicatie extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Mondelinge communicatie',
                     ),
@@ -257,7 +262,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Schriftelijke opdrachten',
                     ),
@@ -301,7 +306,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const SubTitleText(
                       subtitle: 'Veiligheidscommunicatie TRDL',
                     ),
@@ -322,101 +327,109 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                       border: TableBorder.all(),
                       defaultVerticalAlignment:
                           TableCellVerticalAlignment.middle,
-                      children: const [
+                      children: const <TableRow>[
                         TableRow(
-                          children: [
+                          children: <TableTextBold>[
                             TableTextBold(text: 'Functionaris'),
                             TableTextBold(text: 'Communicatie over'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: '(Buur)TRDL'),
                             TableText(text: 'Alle veiligheidszaken'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Machinist (MCN)'),
                             TableText(
-                                text:
-                                    'Plaatsbepaling, toestand materieel, toestand infra'),
+                              text:
+                                  'Plaatsbepaling, toestand materieel, toestand infra',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Medewerker OBI'),
                             TableText(text: 'Functioneren van de infra'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Storingsdienst'),
                             TableText(text: 'Functioneren van de infra'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Rangeerder'),
                             TableText(text: 'Toestand van de infra'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(
-                                text: 'Veiligheidsverantwoordelijke buiten'),
+                              text: 'Veiligheidsverantwoordelijke buiten',
+                            ),
                             TableText(text: 'Functioneren van de infra'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Algemeen Leider (AL)'),
                             TableText(
-                                text:
-                                    'Beperkingen bij hervatten van de treindienst'),
+                              text:
+                                  'Beperkingen bij hervatten van de treindienst',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Medewerker BackOffice (MKS-BO)'),
                             TableText(
-                                text: 'Gegevens van hulpverlenende instanties'),
+                              text: 'Gegevens van hulpverlenende instanties',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Verkeersleider'),
                             TableText(text: 'Orderaanvragen'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Storingsmonteur (STMT)'),
                             TableText(text: 'Functioneren materieel'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Medewerker Rangeren (KNOCO)'),
                             TableText(text: 'Lokale orderaanvragen (LOA)'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(
-                                text: 'Medewerker Werkplekbeveiliging (WPB)'),
+                              text: 'Medewerker Werkplekbeveiliging (WPB)',
+                            ),
                             TableText(
-                                text: 'Aanpassen veiligheidsmaatregelen WBI'),
+                              text: 'Aanpassen veiligheidsmaatregelen WBI',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(
-                                text:
-                                    'Inspecteur Inspectie Leefomgeving & Transport (IL&T)'),
+                              text:
+                                  'Inspecteur Inspectie Leefomgeving & Transport (IL&T)',
+                            ),
                             TableText(
-                                text:
-                                    'Plaatsbepaling, inspectie materieel of infra'),
+                              text:
+                                  'Plaatsbepaling, inspectie materieel of infra',
+                            ),
                           ],
                         ),
                       ],
@@ -609,9 +622,9 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                       border: TableBorder.all(),
                       defaultVerticalAlignment:
                           TableCellVerticalAlignment.middle,
-                      children: const [
+                      children: const <TableRow>[
                         TableRow(
-                          children: [
+                          children: <TableTextBold>[
                             TableTextBold(
                               text: 'Dienstuitdrukking',
                             ),
@@ -621,111 +634,121 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Over'),
                             TableText(
-                                text:
-                                    'Term om de andere partij het woord te geven'),
+                              text:
+                                  'Term om de andere partij het woord te geven',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Ontvangen'),
                             TableText(
-                                text:
-                                    'Term om aan te geven dat het bericht is ontvangen'),
+                              text:
+                                  'Term om aan te geven dat het bericht is ontvangen',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Herhaal bericht'),
                             TableText(
-                                text:
-                                    'Uitdrukking om aan te geven dat het bericht slecht ontvangen of moeilijk te begrijpen is en moet worden herhaald'),
+                              text:
+                                  'Uitdrukking om aan te geven dat het bericht slecht ontvangen of moeilijk te begrijpen is en moet worden herhaald',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Correct'),
                             TableText(
-                                text:
-                                    'Uitdrukking om aan te geven dat het ontvangen bericht nauwkeurig overeenstemt met het uitgezonden bericht'),
+                              text:
+                                  'Uitdrukking om aan te geven dat het ontvangen bericht nauwkeurig overeenstemt met het uitgezonden bericht',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Toegestaan'),
                             TableText(text: 'U hebt toestemming tot...'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Stoppen'),
                             TableText(
-                                text:
-                                    'U heeft geen toestemming tot... / Stoppen'),
+                              text: 'U heeft geen toestemming tot... / Stoppen',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Herstel'),
                             TableText(
-                                text:
-                                    'Ik maakte een fout. Ik begin weer bij het laatste uitgesproken woord'),
+                              text:
+                                  'Ik maakte een fout. Ik begin weer bij het laatste uitgesproken woord',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Fout (+ ik herhaal)'),
                             TableText(
-                                text:
-                                    'Uitdrukking om aan te geven dat het ontvangen bericht niet overeenstemt met het uitgezonden bericht'),
+                              text:
+                                  'Uitdrukking om aan te geven dat het ontvangen bericht niet overeenstemt met het uitgezonden bericht',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Sluiten'),
                             TableText(text: 'Wanneer het gesprek is beëindigd'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Wacht'),
                             TableText(
-                                text:
-                                    'Uitdrukking om de ander te laten wachten'),
+                              text: 'Uitdrukking om de ander te laten wachten',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Ik roep u later opnieuw op'),
                             TableText(
-                                text:
-                                    'Uitdrukking om aan te geven dat de verbinding wordt verbroken, maar later wordt hervat'),
+                              text:
+                                  'Uitdrukking om aan te geven dat de verbinding wordt verbroken, maar later wordt hervat',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Aanwijzing ... voorbereiden'),
                             TableText(
-                                text:
-                                    'Uitdrukking voor de voorbereiding van een toepassing van een procedure (aanwijzing) uit het Formulierenboek'),
+                              text:
+                                  'Uitdrukking voor de voorbereiding van een toepassing van een procedure (aanwijzing) uit het Formulierenboek',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Aanwijzing ... annuleren'),
                             TableText(
-                                text:
-                                    'Uitdrukking voor het annuleren van een lopende procedure (aanwijzing) uit het Formulierenboek'),
+                              text:
+                                  'Uitdrukking voor het annuleren van een lopende procedure (aanwijzing) uit het Formulierenboek',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Ik spel...'),
                             TableText(
-                                text:
-                                    'Aankondiging dat er gespeld gaat worden (letters en/of cijfers)'),
+                              text:
+                                  'Aankondiging dat er gespeld gaat worden (letters en/of cijfers)',
+                            ),
                           ],
                         ),
                       ],
@@ -746,9 +769,9 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                       border: TableBorder.all(),
                       defaultVerticalAlignment:
                           TableCellVerticalAlignment.middle,
-                      children: const [
+                      children: const <TableRow>[
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'A'),
                             TableText(text: 'Alpha'),
                             TableText(text: 'H'),
@@ -760,7 +783,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'B'),
                             TableText(text: 'Bravo'),
                             TableText(text: 'I'),
@@ -772,7 +795,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'C'),
                             TableText(text: 'Charlie'),
                             TableText(text: 'J'),
@@ -784,7 +807,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'D'),
                             TableText(text: 'Delta'),
                             TableText(text: 'K'),
@@ -796,7 +819,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'E'),
                             TableText(text: 'Echo'),
                             TableText(text: 'L'),
@@ -808,7 +831,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'F'),
                             TableText(text: 'Foxtrot'),
                             TableText(text: 'M'),
@@ -820,7 +843,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'G'),
                             TableText(text: 'Golf'),
                             TableText(text: 'N'),
@@ -894,7 +917,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Berichtenstructuur',
                     ),

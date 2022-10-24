@@ -1,6 +1,5 @@
 import 'dart:async';
-
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 bool showSpinner = false;
 bool timerRunning = false;
@@ -24,7 +23,7 @@ class ProQuizScreen extends StatefulWidget {
 
 class ProQuizScreenState extends State<ProQuizScreen> {
   /*SET TIMER*/
-  void startTimer() {
+  Future<void> startTimer() async {
     timer = Timer.periodic(
       const Duration(
         seconds: 1,
@@ -56,7 +55,7 @@ class ProQuizScreenState extends State<ProQuizScreen> {
   }
 
   /*SCOREKEEPER LIST*/
-  List<Widget> scoreKeeper = [
+  List<Icon> scoreKeeper = <Icon>[
     const Icon(
       Icons.railway_alert,
     ),
@@ -64,7 +63,7 @@ class ProQuizScreenState extends State<ProQuizScreen> {
 
   /*CHECK THE ANSWER, FILL THE SCOREKEEPER AND GO TO NEXQUESTION*/
   void checkAnswer(bool userPickedAnswer) {
-    bool correctAnswer =
+    final bool correctAnswer =
         QuestionBank().questionBank[questionNumber].questionAnswer;
     setState(() {
       if (userPickedAnswer == correctAnswer) {
@@ -92,21 +91,21 @@ class ProQuizScreenState extends State<ProQuizScreen> {
 
   /*NEXT QUESTION IS FROM SHUFFLED QUESTIONBANK LIST, THEN ADDS +1*/
   void nextQuestion() {
-    Random randomNumber = Random();
+    final Random randomNumber = Random();
     questionNumber =
         randomNumber.nextInt(QuestionBank().questionBank.length - 1) + 1;
   }
 
   /*RESETS QUIZ, CANCELS TIMER, CREATES POPUP, RESETS VARIABLES TO STARTING POSITION*/
-  void quizReset() {
+  Future<void> quizReset() async {
     timer.cancel();
     lastTenSeconds = false;
     timerRunning = false;
-    finishQuizPopup(context);
+    await finishQuizPopup(context);
     seconds = 60;
     questionNumber = 0;
     firstPressToStartTimer = 0;
-    scoreKeeper = [
+    scoreKeeper = <Icon>[
       const Icon(
         Icons.railway_alert,
       ),
@@ -121,8 +120,7 @@ class ProQuizScreenState extends State<ProQuizScreen> {
     } else {
       doubleScorePercentage =
           (100 * correctAmount) / accumulatedPoints.toDouble();
-      scorePercentage = doubleScorePercentage.toStringAsFixed(2);
-      return scorePercentage;
+      return scorePercentage = doubleScorePercentage.toStringAsFixed(2);
     }
   }
 
@@ -132,7 +130,7 @@ class ProQuizScreenState extends State<ProQuizScreen> {
       onWillPop: () async {
         /*PRESSING BACK ON PHONE SHOULD RESET QUIZ*/
         if (firstPressToStartTimer != 0) {
-          quizReset();
+          await quizReset();
         }
         return true;
       },
@@ -144,12 +142,12 @@ class ProQuizScreenState extends State<ProQuizScreen> {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Column(
-            children: [
+            children: <Widget>[
               Padding(
                 padding: const EdgeInsets.only(top: 24.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
+                  children: <SizedBox>[
                     SizedBox(
                       height: 125.0,
                       width: 125.0,
@@ -174,7 +172,7 @@ class ProQuizScreenState extends State<ProQuizScreen> {
                 height: 10.0,
               ),
               Row(
-                children: [
+                children: <Expanded>[
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(
@@ -187,7 +185,7 @@ class ProQuizScreenState extends State<ProQuizScreen> {
                         width: double.infinity,
                         height: 80.0,
                         child: ElevatedButton(
-                          onPressed: () {
+                          onPressed: () async {
                             setState(() {
                               /*ONLY THE FIRST PRESS STARTS TIMER*/
                               if (firstPressToStartTimer == 0) {
@@ -222,9 +220,9 @@ class ProQuizScreenState extends State<ProQuizScreen> {
                         height: 80.0,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.red,
+                            backgroundColor: Colors.red,
                           ),
-                          onPressed: () {
+                          onPressed: () async {
                             setState(() {
                               /*FIRST PRESS QUITS QUIZ*/
                               if (firstPressToStartTimer == 0) {
@@ -262,17 +260,18 @@ class ProQuizScreenState extends State<ProQuizScreen> {
 Widget countDownTimerRunning() {
   return Stack(
     fit: StackFit.expand,
-    children: [
+    children: <Widget>[
       /*TIMER LAST 10 SECONDS CHANGE COLOR TO RED*/
-      lastTenSeconds
-          ? const SpinKitDoubleBounce(
-              color: Colors.red,
-              size: 125.0,
-            )
-          : SpinKitDoubleBounce(
-              color: greenMoneyColorsLight.primary,
-              size: 125.0,
-            ),
+      if (lastTenSeconds)
+        const SpinKitDoubleBounce(
+          color: Colors.red,
+          size: 125.0,
+        )
+      else
+        SpinKitDoubleBounce(
+          color: greenMoneyColorsLight.primary,
+          size: 125.0,
+        ),
       CircularProgressIndicator(
         backgroundColor: Colors.red,
         value: seconds.toDouble() / maxSeconds.toDouble(),
@@ -295,7 +294,7 @@ Widget countDownTimerRunning() {
 Widget countDownTimerStopped() {
   return Stack(
     fit: StackFit.expand,
-    children: [
+    children: <Widget>[
       CircularProgressIndicator(
         backgroundColor: Colors.red,
         value: seconds.toDouble() / maxSeconds.toDouble(),

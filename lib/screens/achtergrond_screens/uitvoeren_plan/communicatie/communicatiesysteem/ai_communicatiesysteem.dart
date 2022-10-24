@@ -20,19 +20,19 @@ class AICommunicatieSysteem extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAICommunicatieSysteem>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAICommunicatieSysteem result) {
+            onSelected: (WhereToGoFromAICommunicatieSysteem result) async {
               if (result == WhereToGoFromAICommunicatieSysteem.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAICommunicatieSysteem.ww_communicatie_main) {
-                Navigator.pushNamed(context, 'ww_communicatie_main');
+                await Navigator.pushNamed(context, 'ww_communicatie_main');
               } else if (result ==
                   WhereToGoFromAICommunicatieSysteem.ai_incidenten_basis) {
-                Navigator.pushNamed(context, 'ai_incidenten_basis');
+                await Navigator.pushNamed(context, 'ai_incidenten_basis');
               } else {
                 Navigator.pop(context);
               }
@@ -67,14 +67,14 @@ class AICommunicatieSysteem extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Communicatiesysteem GSM-R - basisinformatie',
                     ),
@@ -145,7 +145,7 @@ class AICommunicatieSysteem extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Opbouw GSM-R',
                     ),
@@ -202,7 +202,7 @@ class AICommunicatieSysteem extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const SubTitleText(
                       subtitle: 'Werking cel',
                     ),
@@ -217,42 +217,47 @@ class AICommunicatieSysteem extends StatelessWidget {
                       border: TableBorder.all(),
                       defaultVerticalAlignment:
                           TableCellVerticalAlignment.middle,
-                      children: const [
+                      children: const <TableRow>[
                         TableRow(
-                          children: [
+                          children: <TableTextBold>[
                             TableTextBold(text: 'Cel in alarm'),
                             TableTextBold(text: 'Cel niet in alarm'),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(
-                                text: 'Geen point to point oproep mogelijk'),
+                              text: 'Geen point to point oproep mogelijk',
+                            ),
                             TableText(
-                                text: 'Wel point to point oproep mogelijk'),
+                              text: 'Wel point to point oproep mogelijk',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(text: 'Geen algemene oproep mogelijk'),
                             TableText(
-                                text:
-                                    'Algemene oproep mogelijk, deze wordt door een ieder die zich in het gebied bevindt gehoord'),
+                              text:
+                                  'Algemene oproep mogelijk, deze wordt door een ieder die zich in het gebied bevindt gehoord',
+                            ),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(
-                                text:
-                                    'Gesprek mogelijk via de alarmknop, het gesprek is voor een ieder die zich in het gebied bevindt te horen'),
+                              text:
+                                  'Gesprek mogelijk via de alarmknop, het gesprek is voor een ieder die zich in het gebied bevindt te horen',
+                            ),
                             TableText(text: ''),
                           ],
                         ),
                         TableRow(
-                          children: [
+                          children: <TableText>[
                             TableText(
-                                text:
-                                    'De luide toon alarm wordt in de trein en/of op de post hoorbaar'),
+                              text:
+                                  'De luide toon alarm wordt in de trein en/of op de post hoorbaar',
+                            ),
                             TableText(text: ''),
                           ],
                         ),
@@ -348,7 +353,7 @@ class AICommunicatieSysteem extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Werkwijze point to point oproep',
                     ),
@@ -373,7 +378,7 @@ class AICommunicatieSysteem extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Werking alarmoproepen binnen GSM-R',
                     ),

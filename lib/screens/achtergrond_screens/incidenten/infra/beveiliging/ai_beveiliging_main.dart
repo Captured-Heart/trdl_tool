@@ -1,14 +1,23 @@
 import '/all_imports.dart';
 
 enum WhereToGoFromAIBeveiligingMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_beveiliging_main,
+  // ignore: constant_identifier_names
   ai_seinen_basis1,
+  // ignore: constant_identifier_names
   ai_seinen_basis2,
+  // ignore: constant_identifier_names
   ai_detectie_basis,
+  // ignore: constant_identifier_names
   ai_beveiliging_basis1,
+  // ignore: constant_identifier_names
   ai_beveiliging_basis2,
+  // ignore: constant_identifier_names
   ai_tegen_rijrichting,
+  // ignore: constant_identifier_names
   ai_veiligheidsstoring_sein,
 }
 
@@ -54,7 +63,9 @@ class AIBeveiligingMain extends StatelessWidget {
               } else if (result ==
                   WhereToGoFromAIBeveiligingMain.ai_veiligheidsstoring_sein) {
                 await Navigator.pushNamed(
-                    context, 'ai_veiligheidsstoring_sein');
+                  context,
+                  'ai_veiligheidsstoring_sein',
+                );
               } else {
                 Navigator.pop(context);
               }

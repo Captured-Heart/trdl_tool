@@ -1,6 +1,4 @@
 import '/all_imports.dart';
-import 'screens/achtergrond_screens/incidenten/infra/beveiliging/detectie_basis/ai_detectie_basis.dart';
-import 'screens/achtergrond_screens/incidenten/infra/beveiliging/veiligheidsstoring_sein/ai_veiligheidsstoring_sein.dart';
 
 Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   /// Landing page routes

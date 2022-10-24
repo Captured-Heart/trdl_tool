@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIKetenpartners {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_mondelinge_communicatie,
 }
 
@@ -16,16 +18,19 @@ class AIKetenpartners extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIKetenpartners>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIKetenpartners result) {
+            onSelected: (WhereToGoFromAIKetenpartners result) async {
               if (result == WhereToGoFromAIKetenpartners.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIKetenpartners.ww_mondelinge_communicatie) {
-                Navigator.pushNamed(context, 'ww_mondelinge_communicatie');
+                await Navigator.pushNamed(
+                  context,
+                  'ww_mondelinge_communicatie',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +58,14 @@ class AIKetenpartners extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Externe ketenpartners',
                     ),

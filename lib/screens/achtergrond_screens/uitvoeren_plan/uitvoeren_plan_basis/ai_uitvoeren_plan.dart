@@ -1,10 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
-
-//TODO: To use as template for all other AI screens
+import '/all_imports.dart';
 
 enum WhereToGoFromAIUitvoerenPlan {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_aanpassen_plan,
+  // ignore: constant_identifier_names
   ai_bovenleiding_main,
 }
 
@@ -23,15 +24,15 @@ class AIUitvoerenPlan extends StatelessWidget {
           PopupMenuButton<WhereToGoFromAIUitvoerenPlan>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIUitvoerenPlan result) {
+            onSelected: (WhereToGoFromAIUitvoerenPlan result) async {
               if (result == WhereToGoFromAIUitvoerenPlan.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIUitvoerenPlan.ai_aanpassen_plan) {
-                Navigator.pushNamed(context, 'ai_aanpassen_plan');
+                await Navigator.pushNamed(context, 'ai_aanpassen_plan');
               } else if (result ==
                   WhereToGoFromAIUitvoerenPlan.ai_bovenleiding_main) {
-                Navigator.pushNamed(context, 'ai_bovenleiding_main');
+                await Navigator.pushNamed(context, 'ai_bovenleiding_main');
               } else {
                 Navigator.pop(context);
               }
@@ -66,14 +67,14 @@ class AIUitvoerenPlan extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Uitvoeren plan - basisinformatie',
                     ),
@@ -167,7 +168,7 @@ class AIUitvoerenPlan extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: 'Planmatig werken',
                     ),
@@ -220,7 +221,7 @@ class AIUitvoerenPlan extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle:
                           "Werkplekinformatie - Bedienvoorschriften (BVS) en bovenleiding schema's",

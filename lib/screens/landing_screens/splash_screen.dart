@@ -1,8 +1,7 @@
 import 'dart:async';
+import '/all_imports.dart';
 
-import 'package:trdl_tool/all_imports.dart';
-
-final alreadySignedInUser = FirebaseAuth.instance.currentUser;
+final User? alreadySignedInUser = FirebaseAuth.instance.currentUser;
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -21,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
       timer = Timer(
         /*SET TIMER TO ... SECONDS*/
         const Duration(seconds: 3),
-        () => Navigator.pushReplacementNamed(
+        () async => Navigator.pushReplacementNamed(
           context,
           'home_screen',
         ),
@@ -31,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
     else {
       timer = Timer(
         const Duration(seconds: 5),
-        () => Navigator.pushReplacementNamed(
+        () async => Navigator.pushReplacementNamed(
           context,
           'welcome_screen',
         ),
@@ -53,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen> {
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: <Widget>[
             const Padding(
               padding: EdgeInsets.only(
                 top: 16.0,

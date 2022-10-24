@@ -1,11 +1,17 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromAIToelatenWerktreinen {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ww_toelaten_werktreinen,
+  // ignore: constant_identifier_names
   ai_bijzonderheden_rijwegen_main,
+  // ignore: constant_identifier_names
   ai_geplande_werkzaamheden_main,
+  // ignore: constant_identifier_names
   ai_inzetten_icb,
+  // ignore: constant_identifier_names
   ai_onjuiste_detectie,
 }
 
@@ -20,30 +26,36 @@ class AIToelatenWerktreinen extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIToelatenWerktreinen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIToelatenWerktreinen result) {
+            onSelected: (WhereToGoFromAIToelatenWerktreinen result) async {
               if (result == WhereToGoFromAIToelatenWerktreinen.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromAIToelatenWerktreinen.ww_toelaten_werktreinen) {
-                Navigator.pushNamed(context, 'ww_toelaten_werktreinen');
+                await Navigator.pushNamed(context, 'ww_toelaten_werktreinen');
               } else if (result ==
                   WhereToGoFromAIToelatenWerktreinen
                       .ai_bijzonderheden_rijwegen_main) {
-                Navigator.pushNamed(context, 'ai_bijzonderheden_rijwegen_main');
+                await Navigator.pushNamed(
+                  context,
+                  'ai_bijzonderheden_rijwegen_main',
+                );
               } else if (result ==
                   WhereToGoFromAIToelatenWerktreinen
                       .ai_geplande_werkzaamheden_main) {
-                Navigator.pushNamed(context, 'ai_geplande_werkzaamheden_main');
+                await Navigator.pushNamed(
+                  context,
+                  'ai_geplande_werkzaamheden_main',
+                );
               } else if (result ==
                   WhereToGoFromAIToelatenWerktreinen.ai_inzetten_icb) {
-                Navigator.pushNamed(context, 'ai_inzetten_icb');
+                await Navigator.pushNamed(context, 'ai_inzetten_icb');
               } else if (result ==
                   WhereToGoFromAIToelatenWerktreinen.ai_onjuiste_detectie) {
-                Navigator.pushNamed(context, 'ai_onjuiste_detectie');
+                await Navigator.pushNamed(context, 'ai_onjuiste_detectie');
               } else {
                 Navigator.pop(context);
               }
@@ -102,14 +114,14 @@ class AIToelatenWerktreinen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*CARD #1*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Toelaten werktreinen',
                     ),
@@ -152,7 +164,7 @@ class AIToelatenWerktreinen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle:
                           'Toelating (werk)trein tot in dienst gesteld gebied',
