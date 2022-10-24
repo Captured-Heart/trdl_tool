@@ -222,7 +222,7 @@ class ProQuizScreenState extends State<ProQuizScreen> {
                         height: 80.0,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.red,
+                            primary: Colors.red,
                           ),
                           onPressed: () {
                             setState(() {

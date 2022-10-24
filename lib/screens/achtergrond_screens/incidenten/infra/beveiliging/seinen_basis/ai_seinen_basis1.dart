@@ -3,8 +3,11 @@ import '/all_imports.dart';
 enum WhereToGoFromAISeinenBasis1 {
   // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_beveiliging_main,
+  // ignore: constant_identifier_names
   ai_beveiliging_basis1,
+  // ignore: constant_identifier_names
   ai_beveiliging_basis2,
 }
 
@@ -21,21 +24,21 @@ class AISeinenBasis1 extends StatelessWidget {
         title: const AppBarText(
           title: 'Achtergrondinformatie',
         ),
-        actions: const <Widget>[
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromAISeinenBasis1>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAISeinenBasis1 result) async {
               if (result == WhereToGoFromAISeinenBasis1.home_screen) {
                 await Navigator.pushNamed(context, 'home_screen');
-              } else if {
-                (result == WhereToGoFromAISeinenBasis1.ai_beveiliging_main) {
+              } else if (result ==
+                  WhereToGoFromAISeinenBasis1.ai_beveiliging_main) {
                 await Navigator.pushNamed(context, 'ai_beveiliging_main');
-              } else if {
-                (result == WhereToGoFromAISeinenBasis1.ai_beveiliging_basis1) {
+              } else if (result ==
+                  WhereToGoFromAISeinenBasis1.ai_beveiliging_basis1) {
                 await Navigator.pushNamed(context, 'ai_beveiliging_basis1');
-              } else if {
-                (result == WhereToGoFromAISeinenBasis1.ai_beveiliging_basis2) {
+              } else if (result ==
+                  WhereToGoFromAISeinenBasis1.ai_beveiliging_basis2) {
                 await Navigator.pushNamed(context, 'ai_beveiliging_basis2');
               } else {
                 Navigator.pop(context);
@@ -64,7 +67,7 @@ class AISeinenBasis1 extends StatelessWidget {
                 padding: kCardPadding,
                 child: Column(
                   children: const <Widget>[
-                    TitleText('Seinen Basisinformatie 1'),
+                    TitleText(title: 'Seinen Basisinformatie 1'),
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'Seinstelsel',

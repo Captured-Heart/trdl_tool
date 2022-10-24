@@ -17,20 +17,20 @@ class AIVeiligheidsstoringSein extends StatelessWidget {
           title: 'Achtergrondinformatie',
         ),
         actions: <Widget>[
-          PopupMenuButton<AIVeiligheidsstoringSein>(
+          PopupMenuButton<WhereToGoFromAIVeiligheidsstoringSein>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (AIVeiligheidsstoringSein result) async {
-              if (result == AIVeiligheidsstoringSein.home_screen) {
+            onSelected: (WhereToGoFromAIVeiligheidsstoringSein result) async {
+              if (result == WhereToGoFromAIVeiligheidsstoringSein.home_screen) {
                 await Navigator.pushNamed(context, 'home_screen');
               } else {
                 Navigator.pop(context);
               }
             },
             itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<AIVeiligheidsstoringSein>>[
-              const PopupMenuItem<AIVeiligheidsstoringSein>(
-                value: AIVeiligheidsstoringSein.home_screen,
+                <PopupMenuEntry<WhereToGoFromAIVeiligheidsstoringSein>>[
+              const PopupMenuItem<WhereToGoFromAIVeiligheidsstoringSein>(
+                value: WhereToGoFromAIVeiligheidsstoringSein.home_screen,
                 child: MenuItemContent(
                   icon: Icons.home,
                   text: 'Home',
