@@ -1,10 +1,15 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWAfhandelenSysteemstoringen {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_systeemstoringen,
+  // ignore: constant_identifier_names
   ai_systemen,
+  // ignore: constant_identifier_names
   ai_systeemstoring_gsmr,
+  // ignore: constant_identifier_names
   ai_overige_incidenten,
 }
 
@@ -19,29 +24,30 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWAfhandelenSysteemstoringen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWAfhandelenSysteemstoringen result) {
+            onSelected:
+                (WhereToGoFromWWAfhandelenSysteemstoringen result) async {
               if (result ==
                   WhereToGoFromWWAfhandelenSysteemstoringen.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWAfhandelenSysteemstoringen
                       .ai_systeemstoringen) {
-                Navigator.pushNamed(context, 'ai_systeemstoringen');
+                await Navigator.pushNamed(context, 'ai_systeemstoringen');
               } else if (result ==
                   WhereToGoFromWWAfhandelenSysteemstoringen.ai_systemen) {
-                Navigator.pushNamed(context, 'ai_systemen');
+                await Navigator.pushNamed(context, 'ai_systemen');
               } else if (result ==
                   WhereToGoFromWWAfhandelenSysteemstoringen
                       .ai_systeemstoring_gsmr) {
-                Navigator.pushNamed(context, 'ai_systeemstoring_gsmr');
+                await Navigator.pushNamed(context, 'ai_systeemstoring_gsmr');
               } else if (result ==
                   WhereToGoFromWWAfhandelenSysteemstoringen
                       .ai_overige_incidenten) {
-                Navigator.pushNamed(context, 'ai_overige_incidenten');
+                await Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -93,14 +99,14 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Afhandelen systeemstoringen',
                     ),
@@ -130,7 +136,7 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -150,7 +156,7 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

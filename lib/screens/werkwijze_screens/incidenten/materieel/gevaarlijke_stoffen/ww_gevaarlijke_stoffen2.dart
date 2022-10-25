@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWGevaarlijkeStoffen2 {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_gevaarlijke_stoffen,
 }
 
@@ -16,16 +18,16 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWGevaarlijkeStoffen2>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWGevaarlijkeStoffen2 result) {
+            onSelected: (WhereToGoFromWWGevaarlijkeStoffen2 result) async {
               if (result == WhereToGoFromWWGevaarlijkeStoffen2.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWGevaarlijkeStoffen2.ai_gevaarlijke_stoffen) {
-                Navigator.pushNamed(context, 'ai_gevaarlijke_stoffen');
+                await Navigator.pushNamed(context, 'ai_gevaarlijke_stoffen');
               } else {
                 Navigator.pop(context);
               }
@@ -54,14 +56,14 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Gevaarlijke stoffen',
                     ),
@@ -113,7 +115,7 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -133,7 +135,7 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

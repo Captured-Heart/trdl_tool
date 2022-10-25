@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWOnregelmatighedenBaan {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_onregelmatigheden_baan,
 }
 
@@ -16,17 +18,17 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWOnregelmatighedenBaan>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWOnregelmatighedenBaan result) {
+            onSelected: (WhereToGoFromWWOnregelmatighedenBaan result) async {
               if (result == WhereToGoFromWWOnregelmatighedenBaan.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWOnregelmatighedenBaan
                       .ai_onregelmatigheden_baan) {
-                Navigator.pushNamed(context, 'ai_onregelmatigheden_baan');
+                await Navigator.pushNamed(context, 'ai_onregelmatigheden_baan');
               } else {
                 Navigator.pop(context);
               }
@@ -55,14 +57,14 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Onregelmatigheden aan de baan',
                     ),
@@ -86,7 +88,7 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -106,7 +108,7 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

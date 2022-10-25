@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWStappenplanVersperringen {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_stappenplan_versperringen,
 }
 
@@ -16,7 +18,7 @@ class WWStappenplanVersperringen extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWStappenplanVersperringen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
@@ -28,7 +30,9 @@ class WWStappenplanVersperringen extends StatelessWidget {
                   WhereToGoFromWWStappenplanVersperringen
                       .ai_stappenplan_versperringen) {
                 await Navigator.pushNamed(
-                    context, 'ai_stappenplan_versperringen');
+                  context,
+                  'ai_stappenplan_versperringen',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -57,14 +61,14 @@ class WWStappenplanVersperringen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(title: 'Stappenplan Versperringen'),
                     SizedBoxH(),
                     SubTitleText(
@@ -86,7 +90,7 @@ class WWStappenplanVersperringen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -105,7 +109,7 @@ class WWStappenplanVersperringen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

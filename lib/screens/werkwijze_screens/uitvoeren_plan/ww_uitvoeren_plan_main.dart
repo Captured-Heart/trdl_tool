@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWUitvoerenPlanMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_uitvoeren_plan_main,
 }
 
@@ -16,16 +18,16 @@ class WWUitvoerenPlanMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWUitvoerenPlanMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWUitvoerenPlanMain result) {
+            onSelected: (WhereToGoFromWWUitvoerenPlanMain result) async {
               if (result == WhereToGoFromWWUitvoerenPlanMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWUitvoerenPlanMain.ai_uitvoeren_plan_main) {
-                Navigator.pushNamed(context, 'ai_uitvoeren_plan_main');
+                await Navigator.pushNamed(context, 'ai_uitvoeren_plan_main');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWUitvoerenPlanMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Uitvoeren Plan',
                     ),
@@ -80,14 +82,14 @@ class WWUitvoerenPlanMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Geplande Werkzaamheden',
                           destination: 'ww_geplande_werkzaamheden_main',

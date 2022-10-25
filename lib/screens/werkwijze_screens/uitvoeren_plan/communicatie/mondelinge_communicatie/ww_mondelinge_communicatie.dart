@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWMondelingeCommunicatie {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_mondelinge_communicatie,
 }
 
@@ -16,17 +18,20 @@ class WWMondelingeCommunicatie extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWMondelingeCommunicatie>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWMondelingeCommunicatie result) {
+            onSelected: (WhereToGoFromWWMondelingeCommunicatie result) async {
               if (result == WhereToGoFromWWMondelingeCommunicatie.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWMondelingeCommunicatie
                       .ai_mondelinge_communicatie) {
-                Navigator.pushNamed(context, 'ai_mondelinge_communicatie');
+                await Navigator.pushNamed(
+                  context,
+                  'ai_mondelinge_communicatie',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -55,14 +60,14 @@ class WWMondelingeCommunicatie extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Mondelinge Communicatie',
                     ),
@@ -86,7 +91,7 @@ class WWMondelingeCommunicatie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -106,7 +111,7 @@ class WWMondelingeCommunicatie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

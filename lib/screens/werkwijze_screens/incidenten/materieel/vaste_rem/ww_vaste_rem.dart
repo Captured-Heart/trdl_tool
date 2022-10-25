@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWVasteRem {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_materieel_main,
+  // ignore: constant_identifier_names
   ai_vaste_rem,
 }
 
@@ -17,17 +20,17 @@ class WWVasteRem extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWVasteRem>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWVasteRem result) {
+            onSelected: (WhereToGoFromWWVasteRem result) async {
               if (result == WhereToGoFromWWVasteRem.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWVasteRem.ai_materieel_main) {
-                Navigator.pushNamed(context, 'ai_materieel_main');
+                await Navigator.pushNamed(context, 'ai_materieel_main');
               } else if (result == WhereToGoFromWWVasteRem.ai_vaste_rem) {
-                Navigator.pushNamed(context, 'ai_vaste_rem');
+                await Navigator.pushNamed(context, 'ai_vaste_rem');
               } else {
                 Navigator.pop(context);
               }
@@ -62,14 +65,14 @@ class WWVasteRem extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Vaste rem',
                     ),
@@ -99,7 +102,7 @@ class WWVasteRem extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -119,7 +122,7 @@ class WWVasteRem extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

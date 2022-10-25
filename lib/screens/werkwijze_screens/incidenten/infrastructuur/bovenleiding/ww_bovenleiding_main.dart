@@ -1,9 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWBovenleidingMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_incidenten_main,
+  // ignore: constant_identifier_names
   ai_infra_main,
+  // ignore: constant_identifier_names
   ai_bovenleiding_main,
 }
 
@@ -18,7 +22,7 @@ class WWBovenleidingMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWBovenleidingMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
@@ -75,14 +79,14 @@ class WWBovenleidingMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Bovenleiding',
                     ),
@@ -96,14 +100,14 @@ class WWBovenleidingMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Schouwen bovenleiding',
                           destination: 'ww_schouwen_bovenleiding',

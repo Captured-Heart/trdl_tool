@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWOngeplandWerkInfra {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_ongepland_werk_infra,
+  // ignore: constant_identifier_names
   ai_infra_ter_beschikking,
 }
 
@@ -17,19 +20,19 @@ class WWOngeplandWerkInfra extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWOngeplandWerkInfra>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWOngeplandWerkInfra result) {
+            onSelected: (WhereToGoFromWWOngeplandWerkInfra result) async {
               if (result == WhereToGoFromWWOngeplandWerkInfra.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWOngeplandWerkInfra.ai_ongepland_werk_infra) {
-                Navigator.pushNamed(context, 'ai_ongepland_werk_infra');
+                await Navigator.pushNamed(context, 'ai_ongepland_werk_infra');
               } else if (result ==
                   WhereToGoFromWWOngeplandWerkInfra.ai_infra_ter_beschikking) {
-                Navigator.pushNamed(context, 'ai_infra_ter_beschikking');
+                await Navigator.pushNamed(context, 'ai_infra_ter_beschikking');
               } else {
                 Navigator.pop(context);
               }
@@ -66,14 +69,14 @@ class WWOngeplandWerkInfra extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Infra (ongepland werk)',
                     ),
@@ -123,7 +126,7 @@ class WWOngeplandWerkInfra extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -143,7 +146,7 @@ class WWOngeplandWerkInfra extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

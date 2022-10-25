@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWInfraMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_infra_main,
+  // ignore: constant_identifier_names
   ai_incidenten_main,
 }
 
@@ -17,18 +20,18 @@ class WWInfraMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWInfraMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWInfraMain result) {
+            onSelected: (WhereToGoFromWWInfraMain result) async {
               if (result == WhereToGoFromWWInfraMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWInfraMain.ai_infra_main) {
-                Navigator.pushNamed(context, 'ai_infra_main');
+                await Navigator.pushNamed(context, 'ai_infra_main');
               } else if (result ==
                   WhereToGoFromWWInfraMain.ai_incidenten_main) {
-                Navigator.pushNamed(context, 'ai_incidenten_main');
+                await Navigator.pushNamed(context, 'ai_incidenten_main');
               } else {
                 Navigator.pop(context);
               }
@@ -63,14 +66,14 @@ class WWInfraMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Infra',
                     ),
@@ -106,14 +109,14 @@ class WWInfraMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Wissels',
                           destination: 'ww_wissels_main',
@@ -161,7 +164,7 @@ class WWInfraMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -180,7 +183,7 @@ class WWInfraMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

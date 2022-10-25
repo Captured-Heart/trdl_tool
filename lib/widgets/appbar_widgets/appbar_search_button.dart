@@ -50,16 +50,16 @@ class MySearchDelegate extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    List<String> suggestions = searchResults.where((searchResult) {
-      final result = searchResult.toLowerCase();
-      final input = query.toLowerCase();
+    final List<String> suggestions = searchResults.where((String searchResult) {
+      final String result = searchResult.toLowerCase();
+      final String input = query.toLowerCase();
 
       return result.contains(input);
     }).toList();
     return ListView.builder(
       itemCount: suggestions.length,
-      itemBuilder: (context, index) {
-        final suggestion = suggestions[index];
+      itemBuilder: (BuildContext context, int index) {
+        final String suggestion = suggestions[index];
         return ListTile(
           title: Text(suggestion),
           onTap: () {
@@ -75,7 +75,7 @@ class MySearchDelegate extends SearchDelegate {
   Widget buildResults(BuildContext context) {
     final String namedRoute = query;
 
-    WidgetsBinding.instance.addPostFrameCallback(
+    WidgetsBinding.instance?.addPostFrameCallback(
       (_) async {
         await Navigator.pushReplacementNamed(
           context,

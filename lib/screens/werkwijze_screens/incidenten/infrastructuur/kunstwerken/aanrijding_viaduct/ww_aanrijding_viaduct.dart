@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWAanrijdingViaduct {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_aanrijding_viaduct,
 }
 
@@ -16,16 +18,16 @@ class WWAanrijdingViaduct extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWAanrijdingViaduct>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWAanrijdingViaduct result) {
+            onSelected: (WhereToGoFromWWAanrijdingViaduct result) async {
               if (result == WhereToGoFromWWAanrijdingViaduct.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWAanrijdingViaduct.ai_aanrijding_viaduct) {
-                Navigator.pushNamed(context, 'ai_aanrijding_viaduct');
+                await Navigator.pushNamed(context, 'ai_aanrijding_viaduct');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWAanrijdingViaduct extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Aanrijding/aanvaring brug/viaduct',
                     ),
@@ -90,7 +92,7 @@ class WWAanrijdingViaduct extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -110,15 +112,16 @@ class WWAanrijdingViaduct extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),
                     SizedBoxH(),
                     BodyText(
-                        indents: 0,
-                        text:
-                            'Na een aanvaring of aanrijding van een brug of viaduct kan de TRDL er niet meer vanuit gaan dat deze infra nog veilig bereden kan worden.\n\nDe MKS/BO beschikt over informatie van iedere brug of viaduct en kan aangeven onder welke voorwaarden de infra wel of niet bereden mag worden. Een storingsmonteur kan de situatie ter plaatse beoordelen.'),
+                      indents: 0,
+                      text:
+                          'Na een aanvaring of aanrijding van een brug of viaduct kan de TRDL er niet meer vanuit gaan dat deze infra nog veilig bereden kan worden.\n\nDe MKS/BO beschikt over informatie van iedere brug of viaduct en kan aangeven onder welke voorwaarden de infra wel of niet bereden mag worden. Een storingsmonteur kan de situatie ter plaatse beoordelen.',
+                    ),
                   ],
                 ),
               ),

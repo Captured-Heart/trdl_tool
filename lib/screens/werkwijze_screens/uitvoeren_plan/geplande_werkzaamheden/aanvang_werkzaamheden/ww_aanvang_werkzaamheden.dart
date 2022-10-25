@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWAanvangWerkzaamheden {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_aanvang_werkzaamheden,
 }
 
@@ -16,17 +18,17 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWAanvangWerkzaamheden>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWAanvangWerkzaamheden result) {
+            onSelected: (WhereToGoFromWWAanvangWerkzaamheden result) async {
               if (result == WhereToGoFromWWAanvangWerkzaamheden.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWAanvangWerkzaamheden
                       .ai_aanvang_werkzaamheden) {
-                Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
+                await Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
               } else {
                 Navigator.pop(context);
               }
@@ -55,14 +57,14 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Aanvang Werkzaamheden',
                     ),
@@ -86,7 +88,7 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -106,7 +108,7 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

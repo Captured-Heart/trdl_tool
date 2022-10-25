@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWOpengeredenWissel {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_opengereden_wissel,
 }
 
@@ -16,16 +18,16 @@ class WWOpengeredenWissel extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWOpengeredenWissel>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWOpengeredenWissel result) {
+            onSelected: (WhereToGoFromWWOpengeredenWissel result) async {
               if (result == WhereToGoFromWWOpengeredenWissel.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWOpengeredenWissel.ai_opengereden_wissel) {
-                Navigator.pushNamed(context, 'ai_opengereden_wissel');
+                await Navigator.pushNamed(context, 'ai_opengereden_wissel');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWOpengeredenWissel extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Opengereden wissel',
                     ),
@@ -90,7 +92,7 @@ class WWOpengeredenWissel extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -110,7 +112,7 @@ class WWOpengeredenWissel extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

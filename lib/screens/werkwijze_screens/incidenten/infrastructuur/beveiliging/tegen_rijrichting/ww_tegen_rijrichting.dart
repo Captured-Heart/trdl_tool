@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWTegenRijrichting {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_tegen_rijrichting,
 }
 
@@ -16,16 +18,16 @@ class WWTegenRijrichting extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWTegenRijrichting>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWTegenRijrichting result) {
+            onSelected: (WhereToGoFromWWTegenRijrichting result) async {
               if (result == WhereToGoFromWWTegenRijrichting.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWTegenRijrichting.ai_tegen_rijrichting) {
-                Navigator.pushNamed(context, 'ai_tegen_rijrichting');
+                await Navigator.pushNamed(context, 'ai_tegen_rijrichting');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWTegenRijrichting extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Tegen de rijrichting rijden',
                     ),
@@ -116,7 +118,7 @@ class WWTegenRijrichting extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -136,7 +138,7 @@ class WWTegenRijrichting extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

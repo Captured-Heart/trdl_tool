@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWHotBox {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_hotbox,
+  // ignore: constant_identifier_names
   ai_materieel_main,
 }
 
@@ -17,17 +20,17 @@ class WWHotBox extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWHotBox>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWHotBox result) {
+            onSelected: (WhereToGoFromWWHotBox result) async {
               if (result == WhereToGoFromWWHotBox.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWHotBox.ai_hotbox) {
-                Navigator.pushNamed(context, 'ai_hotbox');
+                await Navigator.pushNamed(context, 'ai_hotbox');
               } else if (result == WhereToGoFromWWHotBox.ai_materieel_main) {
-                Navigator.pushNamed(context, 'ai_materieel_main');
+                await Navigator.pushNamed(context, 'ai_materieel_main');
               } else {
                 Navigator.pop(context);
               }
@@ -62,14 +65,14 @@ class WWHotBox extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Hotbox & Quo Vadis',
                     ),
@@ -99,7 +102,7 @@ class WWHotBox extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -119,7 +122,7 @@ class WWHotBox extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

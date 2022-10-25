@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWGeplandeWerkzaamhedenMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_geplande_werkzaamheden_main
 }
 
@@ -16,18 +18,20 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWGeplandeWerkzaamhedenMain result) {
+            onSelected:
+                (WhereToGoFromWWGeplandeWerkzaamhedenMain result) async {
               if (result ==
                   WhereToGoFromWWGeplandeWerkzaamhedenMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWGeplandeWerkzaamhedenMain
                       .ai_geplande_werkzaamheden_main) {
-                Navigator.pushNamed(context, 'ai_geplande_werkzaamheden_main');
+                await Navigator.pushNamed(
+                    context, 'ai_geplande_werkzaamheden_main');
               } else {
                 Navigator.pop(context);
               }
@@ -56,14 +60,14 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Geplande Werkzaamheden',
                     ),
@@ -83,14 +87,14 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Aanvang Werkzaamheden',
                           destination: 'ww_aanvang_werkzaamheden',

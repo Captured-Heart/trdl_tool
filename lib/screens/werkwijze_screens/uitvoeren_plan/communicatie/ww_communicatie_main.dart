@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWCommunicatieMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_communicatie_main,
 }
 
@@ -16,16 +18,16 @@ class WWCommunicatieMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWCommunicatieMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWCommunicatieMain result) {
+            onSelected: (WhereToGoFromWWCommunicatieMain result) async {
               if (result == WhereToGoFromWWCommunicatieMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWCommunicatieMain.ai_communicatie_main) {
-                Navigator.pushNamed(context, 'ai_communicatie_main');
+                await Navigator.pushNamed(context, 'ai_communicatie_main');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWCommunicatieMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Communicatie',
                     ),
@@ -74,14 +76,14 @@ class WWCommunicatieMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <NavButton>[
                         NavButton(
                           buttontext: 'Mondelinge Communicatie',
                           destination: 'ww_mondelinge_communicatie',
