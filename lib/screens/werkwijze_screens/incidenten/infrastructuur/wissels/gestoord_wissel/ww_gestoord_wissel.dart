@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWGestoordWissel {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_gestoord_wissel,
 }
 
@@ -16,16 +18,16 @@ class WWGestoordWissel extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWGestoordWissel>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWGestoordWissel result) {
+            onSelected: (WhereToGoFromWWGestoordWissel result) async {
               if (result == WhereToGoFromWWGestoordWissel.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWGestoordWissel.ai_gestoord_wissel) {
-                Navigator.pushNamed(context, 'ai_gestoord_wissel');
+                await Navigator.pushNamed(context, 'ai_gestoord_wissel');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWGestoordWissel extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Gestoord wissel',
                     ),
@@ -100,7 +102,7 @@ class WWGestoordWissel extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -120,7 +122,7 @@ class WWGestoordWissel extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

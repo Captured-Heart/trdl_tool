@@ -18,15 +18,15 @@ class WWFoutenWBI extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWFoutenWBI>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWFoutenWBI result) {
+            onSelected: (WhereToGoFromWWFoutenWBI result) async {
               if (result == WhereToGoFromWWFoutenWBI.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWFoutenWBI.ai_fouten_wbi) {
-                Navigator.pushNamed(context, 'ai_fouten_wbi');
+                await Navigator.pushNamed(context, 'ai_fouten_wbi');
               } else {
                 Navigator.pop(context);
               }
@@ -54,14 +54,14 @@ class WWFoutenWBI extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Fouten in de WBI',
                     ),
@@ -85,7 +85,7 @@ class WWFoutenWBI extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -105,7 +105,7 @@ class WWFoutenWBI extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

@@ -1,9 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWWisselsMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_wissels_main,
+  // ignore: constant_identifier_names
   ai_infra_overig,
+  // ignore: constant_identifier_names
   ai_incidenten_main,
 }
 
@@ -18,20 +22,20 @@ class WWWisselsMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWWisselsMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWWisselsMain result) {
+            onSelected: (WhereToGoFromWWWisselsMain result) async {
               if (result == WhereToGoFromWWWisselsMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWWisselsMain.ai_wissels_main) {
-                Navigator.pushNamed(context, 'ai_wissels_main');
+                await Navigator.pushNamed(context, 'ai_wissels_main');
               } else if (result == WhereToGoFromWWWisselsMain.ai_infra_overig) {
-                Navigator.pushNamed(context, 'ai_infra_overig');
+                await Navigator.pushNamed(context, 'ai_infra_overig');
               } else if (result ==
                   WhereToGoFromWWWisselsMain.ai_incidenten_main) {
-                Navigator.pushNamed(context, 'ai_incidenten_main');
+                await Navigator.pushNamed(context, 'ai_incidenten_main');
               } else {
                 Navigator.pop(context);
               }
@@ -74,14 +78,14 @@ class WWWisselsMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Wissels',
                     ),
@@ -95,14 +99,14 @@ class WWWisselsMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Wissel niet in eindstand',
                           destination: 'ww_wissel_eindstand',

@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWBijzonderhedenRijwegenMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_bijzonderheden_rijwegen_main,
 }
 
@@ -16,18 +18,20 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWBijzonderhedenRijwegenMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWBijzonderhedenRijwegenMain result) {
+            onSelected:
+                (WhereToGoFromWWBijzonderhedenRijwegenMain result) async {
               if (result ==
                   WhereToGoFromWWBijzonderhedenRijwegenMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWBijzonderhedenRijwegenMain
                       .ai_bijzonderheden_rijwegen_main) {
-                Navigator.pushNamed(context, 'ai_bijzonderheden_rijwegen_main');
+                await Navigator.pushNamed(
+                    context, 'ai_bijzonderheden_rijwegen_main');
               } else {
                 Navigator.pop(context);
               }
@@ -56,14 +60,14 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Bijzonderheden Rijwegen',
                     ),
@@ -77,14 +81,14 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Sporen buiten exploitatie',
                           destination: 'ww_rijwegen_exploitatie',

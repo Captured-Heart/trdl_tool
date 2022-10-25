@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWDerdenDieren {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_derden_dieren,
 }
 
@@ -16,16 +18,16 @@ class WWDerdenDieren extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWDerdenDieren>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWDerdenDieren result) {
+            onSelected: (WhereToGoFromWWDerdenDieren result) async {
               if (result == WhereToGoFromWWDerdenDieren.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWDerdenDieren.ai_derden_dieren) {
-                Navigator.pushNamed(context, 'ai_derden_dieren');
+                await Navigator.pushNamed(context, 'ai_derden_dieren');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWDerdenDieren extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Derden en/of dieren langs de baan',
                     ),
@@ -96,7 +98,7 @@ class WWDerdenDieren extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -116,7 +118,7 @@ class WWDerdenDieren extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWGestrandeTrein {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_gestrande_trein,
+  // ignore: constant_identifier_names
   ai_overige_incidenten,
 }
 
@@ -17,19 +20,19 @@ class WWGestrandeTrein extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWGestrandeTrein>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWGestrandeTrein result) {
+            onSelected: (WhereToGoFromWWGestrandeTrein result) async {
               if (result == WhereToGoFromWWGestrandeTrein.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWGestrandeTrein.ai_gestrande_trein) {
-                Navigator.pushNamed(context, 'ai_gestrande_trein');
+                await Navigator.pushNamed(context, 'ai_gestrande_trein');
               } else if (result ==
                   WhereToGoFromWWGestrandeTrein.ai_overige_incidenten) {
-                Navigator.pushNamed(context, 'ai_overige_incidenten');
+                await Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -64,14 +67,14 @@ class WWGestrandeTrein extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Gestrande trein',
                     ),
@@ -101,7 +104,7 @@ class WWGestrandeTrein extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -121,7 +124,7 @@ class WWGestrandeTrein extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

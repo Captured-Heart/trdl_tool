@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWOnjuisteDetectie {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_onjuiste_detectie,
 }
 
@@ -16,16 +18,16 @@ class WWOnjuisteDetectie extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWOnjuisteDetectie>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWOnjuisteDetectie result) {
+            onSelected: (WhereToGoFromWWOnjuisteDetectie result) async {
               if (result == WhereToGoFromWWOnjuisteDetectie.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWOnjuisteDetectie.ai_onjuiste_detectie) {
-                Navigator.pushNamed(context, 'ai_onjuiste_detectie');
+                await Navigator.pushNamed(context, 'ai_onjuiste_detectie');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWOnjuisteDetectie extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Voertuigen zonder juiste detectie',
                     ),
@@ -90,7 +92,7 @@ class WWOnjuisteDetectie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -110,7 +112,7 @@ class WWOnjuisteDetectie extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

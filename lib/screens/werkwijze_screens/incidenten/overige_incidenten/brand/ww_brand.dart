@@ -1,10 +1,15 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWBrand {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_brand,
+  // ignore: constant_identifier_names
   ai_ruclu,
+  // ignore: constant_identifier_names
   ai_schakelen_bovenleiding,
+  // ignore: constant_identifier_names
   ai_overige_incidenten,
 }
 
@@ -19,22 +24,22 @@ class WWBrand extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWBrand>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWBrand result) {
+            onSelected: (WhereToGoFromWWBrand result) async {
               if (result == WhereToGoFromWWBrand.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWBrand.ai_brand) {
-                Navigator.pushNamed(context, 'ai_brand');
+                await Navigator.pushNamed(context, 'ai_brand');
               } else if (result == WhereToGoFromWWBrand.ai_ruclu) {
-                Navigator.pushNamed(context, 'ai_ruclu');
+                await Navigator.pushNamed(context, 'ai_ruclu');
               } else if (result ==
                   WhereToGoFromWWBrand.ai_schakelen_bovenleiding) {
-                Navigator.pushNamed(context, 'ai_schakelen_bovenleiding');
+                await Navigator.pushNamed(context, 'ai_schakelen_bovenleiding');
               } else if (result == WhereToGoFromWWBrand.ai_overige_incidenten) {
-                Navigator.pushNamed(context, 'ai_overige_incidenten');
+                await Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -83,14 +88,14 @@ class WWBrand extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Brand',
                     ),
@@ -126,7 +131,7 @@ class WWBrand extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -146,7 +151,7 @@ class WWBrand extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

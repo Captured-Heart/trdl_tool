@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWOverigeIncidentenMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_overige_incidenten,
 }
 
@@ -16,16 +18,16 @@ class WWOverigeIncidentenMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWOverigeIncidentenMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWOverigeIncidentenMain result) {
+            onSelected: (WhereToGoFromWWOverigeIncidentenMain result) async {
               if (result == WhereToGoFromWWOverigeIncidentenMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWOverigeIncidentenMain.ai_overige_incidenten) {
-                Navigator.pushNamed(context, 'ai_overige_incidenten');
+                await Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -54,14 +56,14 @@ class WWOverigeIncidentenMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Overige Incidenten',
                     ),
@@ -75,14 +77,14 @@ class WWOverigeIncidentenMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Gestrande Trein',
                           destination: 'ww_gestrande_trein',

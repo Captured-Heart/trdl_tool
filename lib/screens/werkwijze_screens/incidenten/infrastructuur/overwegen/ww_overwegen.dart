@@ -1,9 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWOverwegen {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_overwegen_main,
+  // ignore: constant_identifier_names
   ai_overwegen_storing,
+  // ignore: constant_identifier_names
   ai_incidenten_main,
 }
 
@@ -18,21 +22,21 @@ class WWOverwegen extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWOverwegen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWOverwegen result) {
+            onSelected: (WhereToGoFromWWOverwegen result) async {
               if (result == WhereToGoFromWWOverwegen.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWOverwegen.ai_overwegen_main) {
-                Navigator.pushNamed(context, 'ai_overwegen_main');
+                await Navigator.pushNamed(context, 'ai_overwegen_main');
               } else if (result ==
                   WhereToGoFromWWOverwegen.ai_overwegen_storing) {
-                Navigator.pushNamed(context, 'ai_overwegen_storing');
+                await Navigator.pushNamed(context, 'ai_overwegen_storing');
               } else if (result ==
                   WhereToGoFromWWOverwegen.ai_incidenten_main) {
-                Navigator.pushNamed(context, 'ai_incidenten_main');
+                await Navigator.pushNamed(context, 'ai_incidenten_main');
               } else {
                 Navigator.pop(context);
               }
@@ -74,14 +78,14 @@ class WWOverwegen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Overwegen / overwegstoring',
                     ),
@@ -133,7 +137,7 @@ class WWOverwegen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -153,15 +157,16 @@ class WWOverwegen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),
                     SizedBoxH(),
                     BodyText(
-                        indents: 0,
-                        text:
-                            'Wanneer een overweg langdurig dicht ligt, kunnen weggebruikers ongewenst gedrag vertonen (slalommen). Bij een beschadigde of niet goed functionerende overweg toont de overweg onjuiste beelden naar het wegverkeer.\n\nDe storingsmonteur kan de veilige berijdbaarheid ter plaatse vaststellen. De storingsmonteur bepaalt of en hoe je het betrokken wissel weer mag laten berijden.'),
+                      indents: 0,
+                      text:
+                          'Wanneer een overweg langdurig dicht ligt, kunnen weggebruikers ongewenst gedrag vertonen (slalommen). Bij een beschadigde of niet goed functionerende overweg toont de overweg onjuiste beelden naar het wegverkeer.\n\nDe storingsmonteur kan de veilige berijdbaarheid ter plaatse vaststellen. De storingsmonteur bepaalt of en hoe je het betrokken wissel weer mag laten berijden.',
+                    ),
                   ],
                 ),
               ),

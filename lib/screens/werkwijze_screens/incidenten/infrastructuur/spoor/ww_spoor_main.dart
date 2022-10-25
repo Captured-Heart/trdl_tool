@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWSpoorMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_infra_main,
+  // ignore: constant_identifier_names
   ai_spoor_main,
 }
 
@@ -17,17 +20,17 @@ class WWSpoorMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWSpoorMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWSpoorMain result) {
+            onSelected: (WhereToGoFromWWSpoorMain result) async {
               if (result == WhereToGoFromWWSpoorMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWSpoorMain.ai_infra_main) {
-                Navigator.pushNamed(context, 'ai_infra_main');
+                await Navigator.pushNamed(context, 'ai_infra_main');
               } else if (result == WhereToGoFromWWSpoorMain.ai_spoor_main) {
-                Navigator.pushNamed(context, 'ai_spoor_main');
+                await Navigator.pushNamed(context, 'ai_spoor_main');
               } else {
                 Navigator.pop(context);
               }
@@ -36,15 +39,24 @@ class WWSpoorMain extends StatelessWidget {
                 <PopupMenuEntry<WhereToGoFromWWSpoorMain>>[
               const PopupMenuItem<WhereToGoFromWWSpoorMain>(
                 value: WhereToGoFromWWSpoorMain.home_screen,
-                child: MenuItemContent(icon: Icons.home, text: 'Home',),
+                child: MenuItemContent(
+                  icon: Icons.home,
+                  text: 'Home',
+                ),
               ),
               const PopupMenuItem<WhereToGoFromWWSpoorMain>(
                 value: WhereToGoFromWWSpoorMain.ai_infra_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Infra',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Infra',
+                ),
               ),
               const PopupMenuItem<WhereToGoFromWWSpoorMain>(
                 value: WhereToGoFromWWSpoorMain.ai_spoor_main,
-                child: MenuItemContent(icon: Icons.menu_book, text: 'AI Spoor',),
+                child: MenuItemContent(
+                  icon: Icons.menu_book,
+                  text: 'AI Spoor',
+                ),
               ),
             ],
           ),
@@ -53,14 +65,14 @@ class WWSpoorMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Spoor',
                     ),
@@ -74,14 +86,14 @@ class WWSpoorMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Glad spoor',
                           destination: 'ww_glad_spoor',

@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWWisselEindstand {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_wissel_eindstand,
 }
 
@@ -16,16 +18,16 @@ class WWWisselEindstand extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWWisselEindstand>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWWisselEindstand result) {
+            onSelected: (WhereToGoFromWWWisselEindstand result) async {
               if (result == WhereToGoFromWWWisselEindstand.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWWisselEindstand.ai_wissel_eindstand) {
-                Navigator.pushNamed(context, 'ai_wissel_eindstand');
+                await Navigator.pushNamed(context, 'ai_wissel_eindstand');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWWisselEindstand extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Wissel komt niet in de gevraagde eindstand',
                     ),
@@ -84,7 +86,7 @@ class WWWisselEindstand extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -103,7 +105,7 @@ class WWWisselEindstand extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

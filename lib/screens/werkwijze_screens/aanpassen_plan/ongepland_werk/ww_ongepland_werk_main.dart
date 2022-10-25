@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWOngeplandWerkMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_ongepland_werk_main,
 }
 
@@ -16,16 +18,16 @@ class WWOngeplandWerkMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWOngeplandWerkMain>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWOngeplandWerkMain result) {
+            onSelected: (WhereToGoFromWWOngeplandWerkMain result) async {
               if (result == WhereToGoFromWWOngeplandWerkMain.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWOngeplandWerkMain.ai_ongepland_werk_main) {
-                Navigator.pushNamed(context, 'ai_ongepland_werk_main');
+                await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWOngeplandWerkMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Ongepland Werk',
                     ),
@@ -74,14 +76,14 @@ class WWOngeplandWerkMain extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar:',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Materieel',
                           destination: 'ww_ongepland_werk_materieel',

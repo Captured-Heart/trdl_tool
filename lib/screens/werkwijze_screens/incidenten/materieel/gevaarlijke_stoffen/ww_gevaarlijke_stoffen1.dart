@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWGevaarlijkeStoffen1 {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_ruclu,
+  // ignore: constant_identifier_names
   ai_gevaarlijke_stoffen,
 }
 
@@ -17,19 +20,19 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWGevaarlijkeStoffen1>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWGevaarlijkeStoffen1 result) {
+            onSelected: (WhereToGoFromWWGevaarlijkeStoffen1 result) async {
               if (result == WhereToGoFromWWGevaarlijkeStoffen1.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWGevaarlijkeStoffen1.ai_ruclu) {
-                Navigator.pushNamed(context, 'ai_ruclu');
+                await Navigator.pushNamed(context, 'ai_ruclu');
               } else if (result ==
                   WhereToGoFromWWGevaarlijkeStoffen1.ai_gevaarlijke_stoffen) {
-                Navigator.pushNamed(context, 'ai_gevaarlijke_stoffen');
+                await Navigator.pushNamed(context, 'ai_gevaarlijke_stoffen');
               } else {
                 Navigator.pop(context);
               }
@@ -65,14 +68,14 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Gevaarlijke stoffen en milieu',
                     ),
@@ -86,14 +89,14 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Gevaarlijke stoffen',
                           destination: 'ww_gevaarlijke_stoffen2',

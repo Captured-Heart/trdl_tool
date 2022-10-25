@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWStsPassage {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_sts_passage,
+  // ignore: constant_identifier_names
   ai_overige_incidenten,
 }
 
@@ -17,18 +20,18 @@ class WWStsPassage extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWStsPassage>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWStsPassage result) {
+            onSelected: (WhereToGoFromWWStsPassage result) async {
               if (result == WhereToGoFromWWStsPassage.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWStsPassage.ai_sts_passage) {
-                Navigator.pushNamed(context, 'ai_sts_passage');
+                await Navigator.pushNamed(context, 'ai_sts_passage');
               } else if (result ==
                   WhereToGoFromWWStsPassage.ai_overige_incidenten) {
-                Navigator.pushNamed(context, 'ai_overige_incidenten');
+                await Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -63,14 +66,14 @@ class WWStsPassage extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'STS passage',
                     ),
@@ -133,7 +136,7 @@ class WWStsPassage extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -153,7 +156,7 @@ class WWStsPassage extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

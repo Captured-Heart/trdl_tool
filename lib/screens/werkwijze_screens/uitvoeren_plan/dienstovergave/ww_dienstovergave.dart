@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWDienstovergave {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_dienstovergave,
 }
 
@@ -16,16 +18,16 @@ class WWDienstovergave extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWDienstovergave>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWDienstovergave result) {
+            onSelected: (WhereToGoFromWWDienstovergave result) async {
               if (result == WhereToGoFromWWDienstovergave.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWDienstovergave.ai_dienstovergave) {
-                Navigator.pushNamed(context, 'ai_dienstovergave');
+                await Navigator.pushNamed(context, 'ai_dienstovergave');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWDienstovergave extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Dienstovergave',
                     ),
@@ -84,7 +86,7 @@ class WWDienstovergave extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -104,7 +106,7 @@ class WWDienstovergave extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

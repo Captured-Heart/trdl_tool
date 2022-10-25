@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWMilieuMeldingen {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_gevaarlijke_stoffen,
 }
 
@@ -16,16 +18,16 @@ class WWMilieuMeldingen extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWMilieuMeldingen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWMilieuMeldingen result) {
+            onSelected: (WhereToGoFromWWMilieuMeldingen result) async {
               if (result == WhereToGoFromWWMilieuMeldingen.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWMilieuMeldingen.ai_gevaarlijke_stoffen) {
-                Navigator.pushNamed(context, 'ai_gevaarlijke_stoffen');
+                await Navigator.pushNamed(context, 'ai_gevaarlijke_stoffen');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWMilieuMeldingen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Meldingen met betrekking tot het milieu',
                     ),
@@ -84,7 +86,7 @@ class WWMilieuMeldingen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -103,7 +105,7 @@ class WWMilieuMeldingen extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

@@ -1,9 +1,13 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWOntruimenPost {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_ontruimen_post,
+  // ignore: constant_identifier_names
   ai_stilleggen_treindienst,
+  // ignore: constant_identifier_names
   ai_overige_incidenten,
 }
 
@@ -18,22 +22,22 @@ class WWOntruimenPost extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWOntruimenPost>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWOntruimenPost result) {
+            onSelected: (WhereToGoFromWWOntruimenPost result) async {
               if (result == WhereToGoFromWWOntruimenPost.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWOntruimenPost.ai_ontruimen_post) {
-                Navigator.pushNamed(context, 'ai_ontruimen_post');
+                await Navigator.pushNamed(context, 'ai_ontruimen_post');
               } else if (result ==
                   WhereToGoFromWWOntruimenPost.ai_stilleggen_treindienst) {
-                Navigator.pushNamed(context, 'ai_stilleggen_treindienst');
+                await Navigator.pushNamed(context, 'ai_stilleggen_treindienst');
               } else if (result ==
                   WhereToGoFromWWOntruimenPost.ai_overige_incidenten) {
-                Navigator.pushNamed(context, 'ai_overige_incidenten');
+                await Navigator.pushNamed(context, 'ai_overige_incidenten');
               } else {
                 Navigator.pop(context);
               }
@@ -75,14 +79,14 @@ class WWOntruimenPost extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Ontruimen post',
                     ),
@@ -131,7 +135,7 @@ class WWOntruimenPost extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -151,7 +155,7 @@ class WWOntruimenPost extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

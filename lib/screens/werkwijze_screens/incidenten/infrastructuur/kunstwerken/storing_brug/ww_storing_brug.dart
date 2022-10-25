@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWStoringBrug {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_storing_brug,
 }
 
@@ -16,15 +18,15 @@ class WWStoringBrug extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWStoringBrug>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWStoringBrug result) {
+            onSelected: (WhereToGoFromWWStoringBrug result) async {
               if (result == WhereToGoFromWWStoringBrug.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWStoringBrug.ai_storing_brug) {
-                Navigator.pushNamed(context, 'ai_storing_brug');
+                await Navigator.pushNamed(context, 'ai_storing_brug');
               } else {
                 Navigator.pop(context);
               }
@@ -52,14 +54,14 @@ class WWStoringBrug extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Storing beweegbare brug',
                     ),
@@ -83,7 +85,7 @@ class WWStoringBrug extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -103,7 +105,7 @@ class WWStoringBrug extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

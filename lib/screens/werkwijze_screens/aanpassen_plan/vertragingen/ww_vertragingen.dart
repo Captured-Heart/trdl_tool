@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWVertragingen {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_vertragingen,
 }
 
@@ -16,7 +18,7 @@ class WWVertragingen extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWVertragingen>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
@@ -53,14 +55,14 @@ class WWVertragingen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(title: 'Vertragingen'),
                     SizedBoxH(),
                     SubTitleText(

@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWSchakelenBovenleiding {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_schakelen_bovenleiding,
 }
 
@@ -16,17 +18,17 @@ class WWSchakelenBovenleiding extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWSchakelenBovenleiding>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWSchakelenBovenleiding result) {
+            onSelected: (WhereToGoFromWWSchakelenBovenleiding result) async {
               if (result == WhereToGoFromWWSchakelenBovenleiding.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWSchakelenBovenleiding
                       .ai_schakelen_bovenleiding) {
-                Navigator.pushNamed(context, 'ai_schakelen_bovenleiding');
+                await Navigator.pushNamed(context, 'ai_schakelen_bovenleiding');
               } else {
                 Navigator.pop(context);
               }
@@ -55,14 +57,14 @@ class WWSchakelenBovenleiding extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Schakelen bovenleiding',
                     ),
@@ -86,7 +88,7 @@ class WWSchakelenBovenleiding extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -106,7 +108,7 @@ class WWSchakelenBovenleiding extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

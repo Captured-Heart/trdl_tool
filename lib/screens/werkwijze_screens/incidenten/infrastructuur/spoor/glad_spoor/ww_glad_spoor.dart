@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWGladSpoor {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_glad_spoor,
 }
 
@@ -16,15 +18,15 @@ class WWGladSpoor extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWGladSpoor>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWGladSpoor result) {
+            onSelected: (WhereToGoFromWWGladSpoor result) async {
               if (result == WhereToGoFromWWGladSpoor.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWGladSpoor.ai_glad_spoor) {
-                Navigator.pushNamed(context, 'ai_glad_spoor');
+                await Navigator.pushNamed(context, 'ai_glad_spoor');
               } else {
                 Navigator.pop(context);
               }
@@ -52,14 +54,14 @@ class WWGladSpoor extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Glad Spoor',
                     ),
@@ -95,7 +97,7 @@ class WWGladSpoor extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -115,7 +117,7 @@ class WWGladSpoor extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

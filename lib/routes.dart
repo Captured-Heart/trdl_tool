@@ -1,7 +1,7 @@
 import '/all_imports.dart';
 
 Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
-  /// Landing page routes
+  //Landing page routes
   '/': (BuildContext context) => const SplashScreen(),
   'welcome_screen': (BuildContext context) => const WelcomeScreen(),
   'login_screen': (BuildContext context) => const Login(),
@@ -10,13 +10,13 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   'verify_screen': (BuildContext context) => const VerifyScreen(),
   'home_screen': (BuildContext context) => const HomeScreen(),
 
-  /// Homepage routes
+  //Homepage routes
   'home_index0': (BuildContext context) => const HomeIndex0(),
   'home_index1': (BuildContext context) => const HomeIndex1(),
   'home_index2': (BuildContext context) => const HomeIndex2(),
   'home_index3': (BuildContext context) => const HomeIndex3(),
 
-  /// Werkwijze uitvoeren plan routes
+  //Werkwijze uitvoeren plan routes
   'ww_uitvoeren_plan_main': (BuildContext context) =>
       const WWUitvoerenPlanMain(),
   'ww_geplande_werkzaamheden_main': (BuildContext context) =>
@@ -44,7 +44,7 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   'ww_ncbg': (BuildContext context) => const WWNcbg(),
   'ww_dienstovergave': (BuildContext context) => const WWDienstovergave(),
 
-  /// Werkwijze aanpassen plan routes
+  //Werkwijze aanpassen plan routes
   'ww_aanpassenplan_main': (BuildContext context) =>
       const WWAanpassenPlanMain(),
   'ww_ongepland_werk_main': (BuildContext context) =>
@@ -58,7 +58,7 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
       const WWStappenplanVersperringen(),
   'ww_vertragingen': (BuildContext context) => const WWVertragingen(),
 
-  /// Werkwijze incidenten routes
+  //Werkwijze incidenten routes
   'ww_incidenten_main': (BuildContext context) => const WWIncidentenMain(),
   'ww_derden_dieren': (BuildContext context) => const WWDerdenDieren(),
   'ww_herroepen_sein': (BuildContext context) => const WWHerroepenSein(),
@@ -116,7 +116,7 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
       const WWWeersomstandigheden(),
   'ww_wissels_vrijmaken': (BuildContext context) => const WWWisselsVrijmaken(),
 
-  /// Achtergrondinfo uitvoeren plan routes
+  //Achtergrondinfo uitvoeren plan routes
   'ai_uitvoeren_plan_main': (BuildContext context) =>
       const AIUitvoerenPlanMain(),
   'ai_bijzonderheden_rijwegen_main': (BuildContext context) =>
@@ -161,7 +161,7 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   'ai_uitvoeren_plan': (BuildContext context) => const AIUitvoerenPlan(),
   'ai_dienstovergave': (BuildContext context) => const AIDienstovergave(),
 
-  /// Achtergrondinfo aanpassen plan routes
+  //Achtergrondinfo aanpassen plan routes
   'ai_aanpassen_plan_main': (BuildContext context) =>
       const AIAanpassenPlanMain(),
   'ai_aanpassen_plan': (BuildContext context) => const AIAanpassenPlan(),
@@ -180,7 +180,7 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   'ai_stappenplan_versperringen': (BuildContext context) =>
       const AIStappenplanVersperringen(),
 
-  /// Achtergrondinfo incidenten routes
+  //Achtergrondinfo incidenten routes
   'ai_incidenten_main': (BuildContext context) => const AIIncidentenMain(),
   'ai_incidenten_basis': (BuildContext context) => const AIIncidentenBasis(),
   'ai_incidenten_derdendieren': (BuildContext context) =>
@@ -216,11 +216,11 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   'ai_overwegen_main': (BuildContext context) => const AIOverwegenMain(),
   'ai_spoor_main': (BuildContext context) => const AISpoorMain(),
 
-  /// ProQuiz routes
+  //ProQuiz routes
   'proquiz_main': (BuildContext context) => const ProQuiz(),
 
-  /// ProChat routes
+  //ProChat routes
   'prochat_main': (BuildContext context) => const ProChat(),
 
-  /// Adding more routes? Add to constants/all_search_string.dart as well!
+  //Adding more routes? Add to constants/all_search_string.dart as well!
 };

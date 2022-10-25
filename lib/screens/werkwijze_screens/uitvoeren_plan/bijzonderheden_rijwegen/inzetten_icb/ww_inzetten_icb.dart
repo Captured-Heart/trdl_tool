@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWInzettenICB {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_inzetten_railvoertuig,
 }
 
@@ -16,16 +18,16 @@ class WWInzettenICB extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWInzettenICB>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWInzettenICB result) {
+            onSelected: (WhereToGoFromWWInzettenICB result) async {
               if (result == WhereToGoFromWWInzettenICB.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWInzettenICB.ai_inzetten_railvoertuig) {
-                Navigator.pushNamed(context, 'ai_inzetten_railvoertuig');
+                await Navigator.pushNamed(context, 'ai_inzetten_railvoertuig');
               } else {
                 Navigator.pop(context);
               }
@@ -53,14 +55,14 @@ class WWInzettenICB extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Inzetten railvoertuig ICB',
                     ),
@@ -107,7 +109,7 @@ class WWInzettenICB extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -127,7 +129,7 @@ class WWInzettenICB extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),

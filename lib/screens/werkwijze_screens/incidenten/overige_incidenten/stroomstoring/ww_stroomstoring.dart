@@ -1,8 +1,11 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWStroomstoring {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_stroomstoring,
+  // ignore: constant_identifier_names
   ai_overige_incidenten,
 }
 
@@ -17,19 +20,22 @@ class WWStroomstoring extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWStroomstoring>(
             icon: const Icon(Icons.info_outlined),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWStroomstoring result) {
+            onSelected: (WhereToGoFromWWStroomstoring result) async {
               if (result == WhereToGoFromWWStroomstoring.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result ==
                   WhereToGoFromWWStroomstoring.ai_stroomstoring) {
-                Navigator.pushNamed(context, 'ai_stroomstoring');
+                await Navigator.pushNamed(context, 'ai_stroomstoring');
               } else if (result ==
                   WhereToGoFromWWStroomstoring.ai_overige_incidenten) {
-                Navigator.pushNamed(context, 'ai_overige_incidenten');
+                await Navigator.pushNamed(
+                  context,
+                  'ai_overige_incidenten',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -64,14 +70,14 @@ class WWStroomstoring extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
               elevation: kCardElevation,
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'Stroomstoring',
                     ),
@@ -101,7 +107,7 @@ class WWStroomstoring extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.risico,
                     ),
@@ -121,7 +127,7 @@ class WWStroomstoring extends StatelessWidget {
               child: Padding(
                 padding: kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     SubTitleText(
                       subtitle: Strings.context,
                     ),
