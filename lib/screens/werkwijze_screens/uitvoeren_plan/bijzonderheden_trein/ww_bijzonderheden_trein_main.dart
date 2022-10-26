@@ -85,7 +85,7 @@ class WWBijzonderhedenTreinMain extends StatelessWidget {
                     const SizedBoxH(),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: const <Widget>[
                         NavButton(
                           buttontext: 'Treinen met Vervoersregeling',
                           destination: 'ww_vervoersregeling',
