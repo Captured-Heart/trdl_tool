@@ -31,7 +31,9 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
                   WhereToGoFromWWBijzonderhedenRijwegenMain
                       .ai_bijzonderheden_rijwegen_main) {
                 await Navigator.pushNamed(
-                    context, 'ai_bijzonderheden_rijwegen_main');
+                  context,
+                  'ai_bijzonderheden_rijwegen_main',
+                );
               } else {
                 Navigator.pop(context);
               }

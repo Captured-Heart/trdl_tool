@@ -293,6 +293,22 @@ class AISeinenBasis2 extends StatelessWidget {
                 ),
               ),
             ),
+            Card(
+              elevation: kCardElevation,
+              child: Padding(
+                padding: kCardPadding,
+                child: Column(
+                  children: const <Widget>[
+                    SubTitleText(subtitle: 'Overzicht Seinenblad'),
+                    SizedBoxH(),
+                    BodyText(
+                        indents: 0,
+                        text:
+                            "Het kan zijn dat de MCN belt met de vraag of het getoonde seinbeeld juist is. Met behulp van het 'Overzicht Seinen blad' (OS-blad ofwel seinbeeldenkaart) uit de BVS kun je controleren of het seinbeeld dat de MCN opgeeft juist is. Op het OS-blad wordt namelijk schematisch het verband tussen seinbeelden van opeenvolgende seinen van één richting aangegeven. In een rechthoek staan de seinen aangegeven door het nummer van het sein. Daaronder staan de seinbeelden opgesomd die het sein kan tonen. Staat naast de rechthoek een getal, dan geeft dit de afstand tot het volgende sein aan."),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),

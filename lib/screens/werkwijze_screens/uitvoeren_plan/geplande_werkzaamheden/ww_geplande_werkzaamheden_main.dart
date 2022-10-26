@@ -31,7 +31,9 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
                   WhereToGoFromWWGeplandeWerkzaamhedenMain
                       .ai_geplande_werkzaamheden_main) {
                 await Navigator.pushNamed(
-                    context, 'ai_geplande_werkzaamheden_main');
+                  context,
+                  'ai_geplande_werkzaamheden_main',
+                );
               } else {
                 Navigator.pop(context);
               }
