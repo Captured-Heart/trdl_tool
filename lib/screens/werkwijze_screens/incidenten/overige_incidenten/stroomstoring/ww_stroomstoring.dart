@@ -22,7 +22,7 @@ class WWStroomstoring extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWStroomstoring>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWStroomstoring result) async {
               if (result == WhereToGoFromWWStroomstoring.home_screen) {
@@ -45,21 +45,21 @@ class WWStroomstoring extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWStroomstoring>(
                 value: WhereToGoFromWWStroomstoring.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWStroomstoring>(
                 value: WhereToGoFromWWStroomstoring.ai_stroomstoring,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Stroomstoring',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWStroomstoring>(
                 value: WhereToGoFromWWStroomstoring.ai_overige_incidenten,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Overige Incidenten',
                 ),
               ),
@@ -73,9 +73,9 @@ class WWStroomstoring extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -103,9 +103,9 @@ class WWStroomstoring extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -123,9 +123,9 @@ class WWStroomstoring extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

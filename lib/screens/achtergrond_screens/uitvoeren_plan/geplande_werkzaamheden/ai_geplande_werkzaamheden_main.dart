@@ -20,7 +20,7 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected:
                 (WhereToGoFromAIGeplandeWerkzaamhedenMain result) async {
@@ -43,7 +43,7 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
                 value: WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -51,7 +51,7 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
                 value: WhereToGoFromAIGeplandeWerkzaamhedenMain
                     .ww_geplande_werkzaamheden_main,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Geplande Werkzaamheden',
                 ),
               ),
@@ -65,9 +65,9 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
           children: <Card>[
             //*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(
@@ -79,9 +79,9 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(
@@ -129,9 +129,9 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
             ),
             /*IMAGE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SizedBoxH(),

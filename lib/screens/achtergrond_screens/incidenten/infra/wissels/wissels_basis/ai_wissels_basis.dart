@@ -24,7 +24,7 @@ class AIWisselsBasis extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIWisselsBasis>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIWisselsBasis result) async {
               if (result == WhereToGoFromAIWisselsBasis.home_screen) {
@@ -47,28 +47,28 @@ class AIWisselsBasis extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIWisselsBasis>(
                 value: WhereToGoFromAIWisselsBasis.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIWisselsBasis>(
                 value: WhereToGoFromAIWisselsBasis.ai_wissel_eindstand,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Wissel Eindstand',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIWisselsBasis>(
                 value: WhereToGoFromAIWisselsBasis.ai_gestoord_wissel,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Gestoord Wissel',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIWisselsBasis>(
                 value: WhereToGoFromAIWisselsBasis.ai_opengereden_wissel,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Opengereden Wissel',
                 ),
               ),
@@ -81,9 +81,9 @@ class AIWisselsBasis extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -106,9 +106,9 @@ class AIWisselsBasis extends StatelessWidget {
             ),
             //CARD #2
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -203,9 +203,9 @@ class AIWisselsBasis extends StatelessWidget {
             ),
             //CARD #3
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -259,9 +259,9 @@ class AIWisselsBasis extends StatelessWidget {
             ),
             //CARD #4
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const SubTitleText(
@@ -335,9 +335,9 @@ class AIWisselsBasis extends StatelessWidget {
             ),
             //CARD #5
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

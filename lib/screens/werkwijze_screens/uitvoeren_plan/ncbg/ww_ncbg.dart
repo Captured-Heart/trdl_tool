@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWNcbg {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_ncbg,
 }
 
@@ -16,15 +18,15 @@ class WWNcbg extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWNcbg>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWNcbg result) {
+            onSelected: (WhereToGoFromWWNcbg result) async {
               if (result == WhereToGoFromWWNcbg.home_screen) {
-                Navigator.pushNamed(context, 'home_screen');
+                await Navigator.pushNamed(context, 'home_screen');
               } else if (result == WhereToGoFromWWNcbg.ai_ncbg) {
-                Navigator.pushNamed(context, 'ai_ncbg');
+                await Navigator.pushNamed(context, 'ai_ncbg');
               } else {
                 Navigator.pop(context);
               }
@@ -34,14 +36,14 @@ class WWNcbg extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWNcbg>(
                 value: WhereToGoFromWWNcbg.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconInfo,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWNcbg>(
                 value: WhereToGoFromWWNcbg.ai_ncbg,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI NCBG',
                 ),
               ),
@@ -52,14 +54,14 @@ class WWNcbg extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <Widget>[
                     TitleText(
                       title: 'NCBG',
                     ),

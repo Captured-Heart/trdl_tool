@@ -20,7 +20,7 @@ class WWBeschadigdWissel extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWBeschadigdWissel>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWBeschadigdWissel result) async {
               if (result == WhereToGoFromWWBeschadigdWissel.home_screen) {
@@ -37,14 +37,14 @@ class WWBeschadigdWissel extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
                 value: WhereToGoFromWWBeschadigdWissel.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
                 value: WhereToGoFromWWBeschadigdWissel.ai_beschadigd_wissel,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Beschadigd Wissel',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWBeschadigdWissel extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -88,9 +88,9 @@ class WWBeschadigdWissel extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -108,9 +108,9 @@ class WWBeschadigdWissel extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

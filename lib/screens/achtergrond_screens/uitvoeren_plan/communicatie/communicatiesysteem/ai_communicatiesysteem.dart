@@ -22,7 +22,7 @@ class AICommunicatieSysteem extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAICommunicatieSysteem>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAICommunicatieSysteem result) async {
               if (result == WhereToGoFromAICommunicatieSysteem.home_screen) {
@@ -42,21 +42,21 @@ class AICommunicatieSysteem extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
                 value: WhereToGoFromAICommunicatieSysteem.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
                 value: WhereToGoFromAICommunicatieSysteem.ww_communicatie_main,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Communicatie',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
                 value: WhereToGoFromAICommunicatieSysteem.ai_incidenten_basis,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Incidenten',
                 ),
               ),
@@ -70,9 +70,9 @@ class AICommunicatieSysteem extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -141,9 +141,9 @@ class AICommunicatieSysteem extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -198,9 +198,9 @@ class AICommunicatieSysteem extends StatelessWidget {
             ),
             /*CARD #3*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const SubTitleText(
@@ -349,9 +349,9 @@ class AICommunicatieSysteem extends StatelessWidget {
             ),
             /*CARD #4*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -374,9 +374,9 @@ class AICommunicatieSysteem extends StatelessWidget {
             ),
             /*CARD #5*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

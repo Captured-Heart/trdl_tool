@@ -22,7 +22,7 @@ class WWWeersomstandigheden extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWWeersomstandigheden>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWWeersomstandigheden result) async {
               if (result == WhereToGoFromWWWeersomstandigheden.home_screen) {
@@ -42,7 +42,7 @@ class WWWeersomstandigheden extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
                 value: WhereToGoFromWWWeersomstandigheden.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -50,14 +50,14 @@ class WWWeersomstandigheden extends StatelessWidget {
                 value:
                     WhereToGoFromWWWeersomstandigheden.ai_weersomstandigheden,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Weersomstandigheden',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
                 value: WhereToGoFromWWWeersomstandigheden.ai_overige_incidenten,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Overige Incidenten',
                 ),
               ),
@@ -71,9 +71,9 @@ class WWWeersomstandigheden extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -95,9 +95,9 @@ class WWWeersomstandigheden extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -115,9 +115,9 @@ class WWWeersomstandigheden extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

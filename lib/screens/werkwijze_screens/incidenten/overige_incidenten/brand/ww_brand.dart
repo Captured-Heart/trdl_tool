@@ -26,7 +26,7 @@ class WWBrand extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWBrand>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWBrand result) async {
               if (result == WhereToGoFromWWBrand.home_screen) {
@@ -49,35 +49,35 @@ class WWBrand extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.ai_brand,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Brand',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.ai_ruclu,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Procedure RU/CLU',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.ai_schakelen_bovenleiding,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Schakelen Bovenleiding',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWBrand>(
                 value: WhereToGoFromWWBrand.ai_overige_incidenten,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Overige Incidenten',
                 ),
               ),
@@ -91,9 +91,9 @@ class WWBrand extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -127,9 +127,9 @@ class WWBrand extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -147,9 +147,9 @@ class WWBrand extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

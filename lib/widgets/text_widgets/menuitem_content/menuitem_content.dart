@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class MenuItemContent extends StatelessWidget {
   const MenuItemContent({
@@ -14,10 +14,9 @@ class MenuItemContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
+      children: <Widget>[
         Icon(
           icon,
-          color: greenMoneyColorsLight.primary,
         ),
         Expanded(
           child: FittedBox(

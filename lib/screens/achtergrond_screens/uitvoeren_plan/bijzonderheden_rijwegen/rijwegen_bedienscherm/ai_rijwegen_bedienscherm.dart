@@ -24,7 +24,7 @@ class AIRijwegenBedienscherm extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIRijwegenBedienscherm>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIRijwegenBedienscherm result) async {
               if (result == WhereToGoFromAIRijwegenBedienscherm.home_screen) {
@@ -47,7 +47,7 @@ class AIRijwegenBedienscherm extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
                 value: WhereToGoFromAIRijwegenBedienscherm.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -55,7 +55,7 @@ class AIRijwegenBedienscherm extends StatelessWidget {
                 value:
                     WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_planopbouw,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen Planopbouw',
                 ),
               ),
@@ -63,14 +63,14 @@ class AIRijwegenBedienscherm extends StatelessWidget {
                 value:
                     WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_planscherm,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen Planscherm',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
                 value: WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_ari,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen ARI',
                 ),
               ),
@@ -84,9 +84,9 @@ class AIRijwegenBedienscherm extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(

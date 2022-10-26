@@ -20,7 +20,7 @@ class AIInfraMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIInfraMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIInfraMain result) async {
               if (result == WhereToGoFromAIInfraMain.home_screen) {
@@ -37,14 +37,14 @@ class AIInfraMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIInfraMain>(
                 value: WhereToGoFromAIInfraMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIInfraMain>(
                 value: WhereToGoFromAIInfraMain.ww_infrastructuur_main,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Infra',
                 ),
               ),
@@ -58,9 +58,9 @@ class AIInfraMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -78,9 +78,9 @@ class AIInfraMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(

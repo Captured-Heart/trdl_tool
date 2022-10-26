@@ -188,6 +188,7 @@ export 'package:trdl_tool/widgets/appbar_widgets/appbar_search_button.dart';
 export 'package:trdl_tool/widgets/appbar_widgets/appbar_title.dart';
 export 'package:trdl_tool/widgets/buttons/nav_button.dart';
 export 'package:trdl_tool/widgets/buttons/rounded_button.dart';
+export 'package:trdl_tool/widgets/card_widgets/textcard_widget.dart';
 export 'package:trdl_tool/widgets/drawer_widgets/drawer_widget.dart';
 export 'package:trdl_tool/widgets/image_widgets/insert_image.dart';
 export 'package:trdl_tool/widgets/pop-ups/avatar-popup/avatar_popup.dart';

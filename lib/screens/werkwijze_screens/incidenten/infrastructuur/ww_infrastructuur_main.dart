@@ -22,7 +22,7 @@ class WWInfraMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWInfraMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWInfraMain result) async {
               if (result == WhereToGoFromWWInfraMain.home_screen) {
@@ -41,21 +41,21 @@ class WWInfraMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWInfraMain>(
                 value: WhereToGoFromWWInfraMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWInfraMain>(
                 value: WhereToGoFromWWInfraMain.ai_infra_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Infra',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWInfraMain>(
                 value: WhereToGoFromWWInfraMain.ai_incidenten_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Incidenten',
                 ),
               ),
@@ -69,9 +69,9 @@ class WWInfraMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -105,9 +105,9 @@ class WWInfraMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(
@@ -160,9 +160,9 @@ class WWInfraMain extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -179,9 +179,9 @@ class WWInfraMain extends StatelessWidget {
               ),
             ),
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

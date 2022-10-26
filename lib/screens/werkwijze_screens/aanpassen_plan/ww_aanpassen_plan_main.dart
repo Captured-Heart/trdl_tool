@@ -20,7 +20,7 @@ class WWAanpassenPlanMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWAanpassenPlanMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWAanpassenPlanMain result) async {
               if (result == WhereToGoFromWWAanpassenPlanMain.home_screen) {
@@ -37,14 +37,14 @@ class WWAanpassenPlanMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWAanpassenPlanMain>(
                 value: WhereToGoFromWWAanpassenPlanMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWAanpassenPlanMain>(
                 value: WhereToGoFromWWAanpassenPlanMain.ai_aanpassen_plan,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Aanpassen Plan',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWAanpassenPlanMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -78,9 +78,9 @@ class WWAanpassenPlanMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(

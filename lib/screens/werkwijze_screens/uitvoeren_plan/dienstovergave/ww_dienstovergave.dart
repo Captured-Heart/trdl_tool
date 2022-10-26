@@ -20,7 +20,7 @@ class WWDienstovergave extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWDienstovergave>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWDienstovergave result) async {
               if (result == WhereToGoFromWWDienstovergave.home_screen) {
@@ -37,14 +37,14 @@ class WWDienstovergave extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWDienstovergave>(
                 value: WhereToGoFromWWDienstovergave.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconInfo,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWDienstovergave>(
                 value: WhereToGoFromWWDienstovergave.ai_dienstovergave,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Dienstovergave',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWDienstovergave extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -82,9 +82,9 @@ class WWDienstovergave extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -102,9 +102,9 @@ class WWDienstovergave extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

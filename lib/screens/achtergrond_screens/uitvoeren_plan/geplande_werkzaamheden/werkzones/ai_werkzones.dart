@@ -22,7 +22,7 @@ class AIWerkzones extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIWerkzones>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIWerkzones result) async {
               if (result == WhereToGoFromAIWerkzones.home_screen) {
@@ -45,21 +45,21 @@ class AIWerkzones extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIWerkzones>(
                 value: WhereToGoFromAIWerkzones.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIWerkzones>(
                 value: WhereToGoFromAIWerkzones.ai_geplande_werkzaamheden_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Geplande Werkzaamheden',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIWerkzones>(
                 value: WhereToGoFromAIWerkzones.ai_aanvang_werkzaamheden,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Aanvang Werkzaamheden',
                 ),
               ),
@@ -73,9 +73,9 @@ class AIWerkzones extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -97,9 +97,9 @@ class AIWerkzones extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -117,9 +117,9 @@ class AIWerkzones extends StatelessWidget {
             ),
             /*CARD #3*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -171,9 +171,9 @@ class AIWerkzones extends StatelessWidget {
             ),
             /*CARD #4*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -250,9 +250,9 @@ class AIWerkzones extends StatelessWidget {
             ),
             /*CARD #5*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -301,9 +301,9 @@ class AIWerkzones extends StatelessWidget {
             ),
             /*CARD #6*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -414,9 +414,9 @@ class AIWerkzones extends StatelessWidget {
             ),
             /*CARD #7*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

@@ -24,7 +24,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIOngeplandWerkMaterieel>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIOngeplandWerkMaterieel result) async {
               if (result == WhereToGoFromAIOngeplandWerkMaterieel.home_screen) {
@@ -53,7 +53,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIOngeplandWerkMaterieel>(
                 value: WhereToGoFromAIOngeplandWerkMaterieel.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -61,7 +61,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                 value: WhereToGoFromAIOngeplandWerkMaterieel
                     .ww_ongepland_werk_materieel,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Ongepland Werk - Materieel',
                 ),
               ),
@@ -69,7 +69,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                 value: WhereToGoFromAIOngeplandWerkMaterieel
                     .ai_infra_ter_beschikking,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Infra ter beschikking stellen',
                 ),
               ),
@@ -77,7 +77,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                 value: WhereToGoFromAIOngeplandWerkMaterieel
                     .ai_ongepland_werk_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Ongepland Werk',
                 ),
               ),
@@ -92,9 +92,9 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
             children: <Card>[
               /*CARD #1*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       TitleText(
@@ -111,9 +111,9 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
               ),
               /*CARD #2*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -143,9 +143,9 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
               ),
               /*CARD #3*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -163,9 +163,9 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
               ),
               /*CARD #4*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(

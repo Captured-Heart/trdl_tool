@@ -26,7 +26,7 @@ class AIFoutenWBI extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIFoutenWBI>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIFoutenWBI result) async {
               if (result == WhereToGoFromAIFoutenWBI.home_screen) {
@@ -52,35 +52,35 @@ class AIFoutenWBI extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIFoutenWBI>(
                 value: WhereToGoFromAIFoutenWBI.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIFoutenWBI>(
                 value: WhereToGoFromAIFoutenWBI.ww_fouten_in_de_wbi,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Fouten in de WBI',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIFoutenWBI>(
                 value: WhereToGoFromAIFoutenWBI.ai_geplande_werkzaamheden,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Geplande Werkzaamheden',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIFoutenWBI>(
                 value: WhereToGoFromAIFoutenWBI.ai_controleren_wbi,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Controleren WBI',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIFoutenWBI>(
                 value: WhereToGoFromAIFoutenWBI.ai_aanvang_werkzaamheden,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Aanvang Werkzaamheden',
                 ),
               ),
@@ -94,9 +94,9 @@ class AIFoutenWBI extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(

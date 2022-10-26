@@ -18,7 +18,7 @@ class AITegenRijrichting extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAITegenRijrichting>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAITegenRijrichting result) async {
               if (result == WhereToGoFromAITegenRijrichting.home_screen) {
@@ -32,7 +32,7 @@ class AITegenRijrichting extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAITegenRijrichting>(
                 value: WhereToGoFromAITegenRijrichting.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -45,9 +45,9 @@ class AITegenRijrichting extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -60,9 +60,9 @@ class AITegenRijrichting extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(

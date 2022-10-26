@@ -10,7 +10,7 @@ Future<dynamic> showAvatarPopup(BuildContext context) {
         ),
         content: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: <Widget>[
             const CircleAvatar(
               radius: 100.0,
               child: Icon(

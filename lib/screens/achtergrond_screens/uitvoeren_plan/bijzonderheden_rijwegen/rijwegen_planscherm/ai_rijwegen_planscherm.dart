@@ -26,7 +26,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIRijwegenPlanscherm>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIRijwegenPlanscherm result) async {
               if (result == WhereToGoFromAIRijwegenPlanscherm.home_screen) {
@@ -52,28 +52,28 @@ class AIRijwegenPlanscherm extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
                 value: WhereToGoFromAIRijwegenPlanscherm.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
                 value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_planopbouw,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen Planopbouw',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
                 value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_ari,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen ARI',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
                 value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_trots,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen TROTS',
                 ),
               ),
@@ -81,7 +81,7 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                 value:
                     WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_bedienscherm,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen Bedienscherm',
                 ),
               ),
@@ -95,9 +95,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -145,9 +145,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -207,9 +207,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
             ),
             /*CARD #3*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -250,9 +250,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
             ),
             /*CARD #4*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -371,9 +371,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
             ),
             /*CARD #5*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -442,9 +442,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
             ),
             /*CARD #6*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -618,9 +618,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
             ),
             /*CARD #7*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -651,9 +651,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
             ),
             /*CARD #8*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -683,9 +683,9 @@ class AIRijwegenPlanscherm extends StatelessWidget {
             ),
             /*CARD #9*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

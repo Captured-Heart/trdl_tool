@@ -1,7 +1,9 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 enum WhereToGoFromWWBijzonderhedenTreinMain {
+  // ignore: constant_identifier_names
   home_screen,
+  // ignore: constant_identifier_names
   ai_bijzonderheden_trein_main,
 }
 
@@ -16,9 +18,9 @@ class WWBijzonderhedenTreinMain extends StatelessWidget {
         title: const AppBarText(
           title: 'Werkwijze',
         ),
-        actions: [
+        actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWBijzonderhedenTreinMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWBijzonderhedenTreinMain result) async {
               if (result ==
@@ -28,7 +30,9 @@ class WWBijzonderhedenTreinMain extends StatelessWidget {
                   WhereToGoFromWWBijzonderhedenTreinMain
                       .ai_bijzonderheden_trein_main) {
                 await Navigator.pushNamed(
-                    context, 'ai_bijzonderheden_trein_main');
+                  context,
+                  'ai_bijzonderheden_trein_main',
+                );
               } else {
                 Navigator.pop(context);
               }
@@ -38,7 +42,7 @@ class WWBijzonderhedenTreinMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWBijzonderhedenTreinMain>(
                 value: WhereToGoFromWWBijzonderhedenTreinMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconInfo,
                   text: 'Home',
                 ),
               ),
@@ -46,7 +50,7 @@ class WWBijzonderhedenTreinMain extends StatelessWidget {
                 value: WhereToGoFromWWBijzonderhedenTreinMain
                     .ai_bijzonderheden_trein_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Bijzonderheden Trein',
                 ),
               ),
@@ -57,14 +61,14 @@ class WWBijzonderhedenTreinMain extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
-                  children: const [
+                  children: const <TitleText>[
                     TitleText(
                       title: 'Bijzonderheden Trein',
                     ),
@@ -74,11 +78,11 @@ class WWBijzonderhedenTreinMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
-                  children: [
+                  children: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),

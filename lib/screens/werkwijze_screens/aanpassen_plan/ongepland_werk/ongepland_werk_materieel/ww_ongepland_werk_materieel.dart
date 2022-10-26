@@ -20,7 +20,7 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWOngeplandWerkMaterieel>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWOngeplandWerkMaterieel result) async {
               if (result == WhereToGoFromWWOngeplandWerkMaterieel.home_screen) {
@@ -41,7 +41,7 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWOngeplandWerkMaterieel>(
                 value: WhereToGoFromWWOngeplandWerkMaterieel.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -49,7 +49,7 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
                 value: WhereToGoFromWWOngeplandWerkMaterieel
                     .ai_ongepland_werk_materieel,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Ongepland Werk (Materieel)',
                 ),
               ),
@@ -63,9 +63,9 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -87,9 +87,9 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -107,9 +107,9 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

@@ -22,7 +22,7 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIBijzonderhedenRijwegenMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected:
                 (WhereToGoFromAIBijzonderhedenRijwegenMain result) async {
@@ -52,7 +52,7 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
                 value: WhereToGoFromAIBijzonderhedenRijwegenMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -60,7 +60,7 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
                 value: WhereToGoFromAIBijzonderhedenRijwegenMain
                     .ww_bijzonderheden_rijwegen_main,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Bijzonderheden Rijwegen',
                 ),
               ),
@@ -68,7 +68,7 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
                 value: WhereToGoFromAIBijzonderhedenRijwegenMain
                     .ww_kop_van_trein_voorbij_sein,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Kop van Trein Voorbij Sein',
                 ),
               ),
@@ -82,9 +82,9 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
           children: <Card>[
             //*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <SubTitleText>[
                     SubTitleText(
@@ -96,9 +96,9 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(
@@ -151,9 +151,9 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
             ),
             /*IMAGE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SizedBoxH(),

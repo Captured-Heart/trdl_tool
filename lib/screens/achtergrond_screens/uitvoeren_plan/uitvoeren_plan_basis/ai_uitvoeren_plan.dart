@@ -22,7 +22,7 @@ class AIUitvoerenPlan extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIUitvoerenPlan>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIUitvoerenPlan result) async {
               if (result == WhereToGoFromAIUitvoerenPlan.home_screen) {
@@ -42,21 +42,21 @@ class AIUitvoerenPlan extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
                 value: WhereToGoFromAIUitvoerenPlan.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
                 value: WhereToGoFromAIUitvoerenPlan.ai_aanpassen_plan,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Aanpassen Plan',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
                 value: WhereToGoFromAIUitvoerenPlan.ai_bovenleiding_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Bovenleiding',
                 ),
               ),
@@ -70,9 +70,9 @@ class AIUitvoerenPlan extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -164,9 +164,9 @@ class AIUitvoerenPlan extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -217,9 +217,9 @@ class AIUitvoerenPlan extends StatelessWidget {
             ),
             //WERKPLEKINFORMATIE CARD
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

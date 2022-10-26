@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class TitleText extends StatelessWidget {
   const TitleText({
@@ -11,7 +11,7 @@ class TitleText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [
+      children: <Expanded>[
         Expanded(
           child: Text(
             title,

@@ -26,7 +26,7 @@ class AIVertragingen extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIVertragingen>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIVertragingen result) async {
               if (result == WhereToGoFromAIVertragingen.home_screen) {
@@ -50,35 +50,35 @@ class AIVertragingen extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIVertragingen>(
                 value: WhereToGoFromAIVertragingen.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIVertragingen>(
                 value: WhereToGoFromAIVertragingen.ww_vertragingen,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Vertragingen',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIVertragingen>(
                 value: WhereToGoFromAIVertragingen.ai_aanpassen_plan_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Aanpassen Plan',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIVertragingen>(
                 value: WhereToGoFromAIVertragingen.ai_monitoring,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Vertraging en Monitoring',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIVertragingen>(
                 value: WhereToGoFromAIVertragingen.ai_klanthinder,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Klanthinder',
                 ),
               ),
@@ -93,9 +93,9 @@ class AIVertragingen extends StatelessWidget {
             children: <Card>[
               /*CARD #1*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       TitleText(
@@ -167,9 +167,9 @@ class AIVertragingen extends StatelessWidget {
               ),
               /*CARD #2*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -217,9 +217,9 @@ class AIVertragingen extends StatelessWidget {
               ),
               /*CARD #3*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -269,9 +269,9 @@ class AIVertragingen extends StatelessWidget {
               ),
               /*CARD #4*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -402,9 +402,9 @@ class AIVertragingen extends StatelessWidget {
               ),
               /*CARD #5*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -496,9 +496,9 @@ class AIVertragingen extends StatelessWidget {
               ),
               /*CARD #6*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(

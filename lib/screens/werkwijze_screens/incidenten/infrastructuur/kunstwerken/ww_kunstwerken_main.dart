@@ -22,7 +22,7 @@ class WWKunstwerkenMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWKunstwerkenMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWKunstwerkenMain result) async {
               if (result == WhereToGoFromWWKunstwerkenMain.home_screen) {
@@ -42,21 +42,21 @@ class WWKunstwerkenMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
                 value: WhereToGoFromWWKunstwerkenMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
                 value: WhereToGoFromWWKunstwerkenMain.ai_kunstwerken_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Kunstwerken',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
                 value: WhereToGoFromWWKunstwerkenMain.ai_infra_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Infra',
                 ),
               ),
@@ -70,9 +70,9 @@ class WWKunstwerkenMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(
@@ -84,9 +84,9 @@ class WWKunstwerkenMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(

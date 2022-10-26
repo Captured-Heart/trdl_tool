@@ -18,7 +18,7 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWKopVanTreinVoorbijSein>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWKopVanTreinVoorbijSein result) async {
               if (result == WhereToGoFromWWKopVanTreinVoorbijSein.home_screen) {
@@ -32,7 +32,7 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWKopVanTreinVoorbijSein>(
                 value: WhereToGoFromWWKopVanTreinVoorbijSein.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -46,9 +46,9 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -70,9 +70,9 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -90,9 +90,9 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

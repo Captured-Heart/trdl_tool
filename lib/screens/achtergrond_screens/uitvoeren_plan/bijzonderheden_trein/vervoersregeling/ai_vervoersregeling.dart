@@ -24,7 +24,7 @@ class AIVervoersregeling extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIVervoersregeling>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIVervoersregeling result) async {
               if (result == WhereToGoFromAIVervoersregeling.home_screen) {
@@ -47,28 +47,28 @@ class AIVervoersregeling extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
                 value: WhereToGoFromAIVervoersregeling.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
                 value: WhereToGoFromAIVervoersregeling.ww_vervoersregeling,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Vervoersregeling',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
                 value: WhereToGoFromAIVervoersregeling.ai_bijzonderheden_trein,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Bijzonderheden Trein',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
                 value: WhereToGoFromAIVervoersregeling.ai_onjuiste_detectie,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Onjuiste Detectie',
                 ),
               ),
@@ -82,9 +82,9 @@ class AIVervoersregeling extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -114,9 +114,9 @@ class AIVervoersregeling extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -177,9 +177,9 @@ class AIVervoersregeling extends StatelessWidget {
             ),
             /*CARD #3*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -208,9 +208,9 @@ class AIVervoersregeling extends StatelessWidget {
             ),
             /*CARD #4*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const SubTitleText(

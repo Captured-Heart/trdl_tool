@@ -20,7 +20,7 @@ class WWDerdenDieren extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWDerdenDieren>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWDerdenDieren result) async {
               if (result == WhereToGoFromWWDerdenDieren.home_screen) {
@@ -37,14 +37,14 @@ class WWDerdenDieren extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWDerdenDieren>(
                 value: WhereToGoFromWWDerdenDieren.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWDerdenDieren>(
                 value: WhereToGoFromWWDerdenDieren.ai_derden_dieren,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Derden / Dieren',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWDerdenDieren extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -94,9 +94,9 @@ class WWDerdenDieren extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -114,9 +114,9 @@ class WWDerdenDieren extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

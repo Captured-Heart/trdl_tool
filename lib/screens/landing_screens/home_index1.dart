@@ -11,9 +11,9 @@ class HomeIndex1 extends StatelessWidget {
           child: Column(
             children: <Card>[
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       TitleText(
@@ -43,9 +43,9 @@ class HomeIndex1 extends StatelessWidget {
               ),
               //NAVIGATION CARD
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: <Widget>[
                       const TitleText(

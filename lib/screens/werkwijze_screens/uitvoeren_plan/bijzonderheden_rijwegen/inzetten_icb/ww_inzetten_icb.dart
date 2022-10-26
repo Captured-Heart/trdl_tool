@@ -20,7 +20,7 @@ class WWInzettenICB extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWInzettenICB>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWInzettenICB result) async {
               if (result == WhereToGoFromWWInzettenICB.home_screen) {
@@ -37,14 +37,14 @@ class WWInzettenICB extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWInzettenICB>(
                 value: WhereToGoFromWWInzettenICB.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWInzettenICB>(
                 value: WhereToGoFromWWInzettenICB.ai_inzetten_railvoertuig,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Inzetten ICB',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWInzettenICB extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -105,9 +105,9 @@ class WWInzettenICB extends StatelessWidget {
             ),
             /*RISIO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -125,9 +125,9 @@ class WWInzettenICB extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

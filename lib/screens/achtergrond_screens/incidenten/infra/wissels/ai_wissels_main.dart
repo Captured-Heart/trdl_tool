@@ -22,7 +22,7 @@ class AIWisselsMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIWisselsMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIWisselsMain result) async {
               if (result == WhereToGoFromAIWisselsMain.home_screen) {
@@ -44,21 +44,21 @@ class AIWisselsMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIWisselsMain>(
                 value: WhereToGoFromAIWisselsMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIWisselsMain>(
                 value: WhereToGoFromAIWisselsMain.ww_wissels_main,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Wissels',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIWisselsMain>(
                 value: WhereToGoFromAIWisselsMain.ai_overige_infra_elementen,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Overige Infra',
                 ),
               ),
@@ -71,9 +71,9 @@ class AIWisselsMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -91,9 +91,9 @@ class AIWisselsMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(

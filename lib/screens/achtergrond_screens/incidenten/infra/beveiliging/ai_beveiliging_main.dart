@@ -34,7 +34,7 @@ class AIBeveiligingMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIBeveiligingMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIBeveiligingMain result) async {
               if (result == WhereToGoFromAIBeveiligingMain.home_screen) {
@@ -75,56 +75,56 @@ class AIBeveiligingMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
                 value: WhereToGoFromAIBeveiligingMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
                 value: WhereToGoFromAIBeveiligingMain.ww_beveiliging_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'WW Beveiliging',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
                 value: WhereToGoFromAIBeveiligingMain.ai_seinen_basis1,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Seinen Basis 1',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
                 value: WhereToGoFromAIBeveiligingMain.ai_seinen_basis2,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Seinen Basis 2',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
                 value: WhereToGoFromAIBeveiligingMain.ai_detectie_basis,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Detectie',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
                 value: WhereToGoFromAIBeveiligingMain.ai_beveiliging_basis1,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Beveiliging Basis 1',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
                 value: WhereToGoFromAIBeveiligingMain.ai_beveiliging_basis2,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Beveiliging Basis 2',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIBeveiligingMain>(
                 value: WhereToGoFromAIBeveiligingMain.ai_tegen_rijrichting,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Tegen Rijrichting',
                 ),
               ),
@@ -132,7 +132,7 @@ class AIBeveiligingMain extends StatelessWidget {
                 value:
                     WhereToGoFromAIBeveiligingMain.ai_veiligheidsstoring_sein,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Veiligheidsstoring Sein',
                 ),
               ),
@@ -147,9 +147,9 @@ class AIBeveiligingMain extends StatelessWidget {
             children: <Card>[
               /*PROCEDURE CARD*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       TitleText(
@@ -167,9 +167,9 @@ class AIBeveiligingMain extends StatelessWidget {
               ),
               /*NAVIGATION CARD*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: <Widget>[
                       const TitleText(

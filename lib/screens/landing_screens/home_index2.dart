@@ -11,9 +11,9 @@ class HomeIndex2 extends StatelessWidget {
           child: Column(
             children: <Card>[
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       TitleText(

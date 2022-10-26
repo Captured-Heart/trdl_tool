@@ -1,6 +1,6 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
-final snackBarRegisterEmailWrong = SnackBar(
+final SnackBar snackBarRegisterEmailWrong = SnackBar(
   content: const Text(
     'Controleer het emailadres. LET OP: Het emailadres móet eindigen op @prorail.nl',
     style: TextStyle(

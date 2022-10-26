@@ -20,7 +20,7 @@ class WWCommunicatieMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWCommunicatieMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWCommunicatieMain result) async {
               if (result == WhereToGoFromWWCommunicatieMain.home_screen) {
@@ -37,14 +37,14 @@ class WWCommunicatieMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
                 value: WhereToGoFromWWCommunicatieMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconInfo,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
                 value: WhereToGoFromWWCommunicatieMain.ai_communicatie_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Communicatie',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWCommunicatieMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(
@@ -72,9 +72,9 @@ class WWCommunicatieMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(

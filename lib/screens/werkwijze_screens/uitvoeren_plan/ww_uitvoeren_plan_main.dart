@@ -20,7 +20,7 @@ class WWUitvoerenPlanMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWUitvoerenPlanMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWUitvoerenPlanMain result) async {
               if (result == WhereToGoFromWWUitvoerenPlanMain.home_screen) {
@@ -37,14 +37,14 @@ class WWUitvoerenPlanMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
                 value: WhereToGoFromWWUitvoerenPlanMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconInfo,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
                 value: WhereToGoFromWWUitvoerenPlanMain.ai_uitvoeren_plan_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Uitvoeren Plan',
                 ),
               ),
@@ -53,80 +53,70 @@ class WWUitvoerenPlanMain extends StatelessWidget {
           const HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Card>[
-            /*PROCEDURE CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    TitleText(
-                      title: 'Uitvoeren Plan',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'De TRDL voert het actuele plan uit en stelt infra ter beschikking volgens vooraf gemaakte afspraken.',
-                    ),
-                  ],
-                ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <TextCard>[
+              /*PROCEDURE CARD*/
+              const TextCard(
+                widgetList: <Widget>[
+                  TitleText(
+                    title: 'Uitvoeren Plan',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'De TRDL voert het actuele plan uit en stelt infra ter beschikking volgens vooraf gemaakte afspraken.',
+                  ),
+                ],
               ),
-            ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: kCardElevation,
-              child: Padding(
-                padding: kCardPadding,
-                child: Column(
-                  children: <Widget>[
-                    const TitleText(
-                      title: 'Ga snel naar',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const <Widget>[
-                        NavButton(
-                          buttontext: 'Geplande Werkzaamheden',
-                          destination: 'ww_geplande_werkzaamheden_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Bijzonderheden Rijwegen',
-                          destination: 'ww_bijzonderheden_rijwegen_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Bijzonderheden Trein',
-                          destination: 'ww_bijzonderheden_trein_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Communicatie',
-                          destination: 'ww_communicatie_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'NCBG',
-                          destination: 'ww_ncbg',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Dienstovergave',
-                          destination: 'ww_dienstovergave',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
-                  ],
-                ),
+              /*NAVIGATION CARD*/
+              TextCard(
+                widgetList: <Widget>[
+                  const TitleText(
+                    title: 'Ga snel naar',
+                  ),
+                  const SizedBoxH(),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const <Widget>[
+                      NavButton(
+                        buttontext: 'Geplande Werkzaamheden',
+                        destination: 'ww_geplande_werkzaamheden_main',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Bijzonderheden Rijwegen',
+                        destination: 'ww_bijzonderheden_rijwegen_main',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Bijzonderheden Trein',
+                        destination: 'ww_bijzonderheden_trein_main',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Communicatie',
+                        destination: 'ww_communicatie_main',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'NCBG',
+                        destination: 'ww_ncbg',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Dienstovergave',
+                        destination: 'ww_dienstovergave',
+                      ),
+                    ],
+                  ),
+                  const SizedBoxH(),
+                ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

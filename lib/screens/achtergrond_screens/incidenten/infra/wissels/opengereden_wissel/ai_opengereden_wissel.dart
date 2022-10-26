@@ -18,7 +18,7 @@ class AIOpengeredenWissel extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIOpengeredenWissel>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIOpengeredenWissel result) async {
               if (result == WhereToGoFromAIOpengeredenWissel.home_screen) {
@@ -32,7 +32,7 @@ class AIOpengeredenWissel extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIOpengeredenWissel>(
                 value: WhereToGoFromAIOpengeredenWissel.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -46,9 +46,9 @@ class AIOpengeredenWissel extends StatelessWidget {
             children: <Card>[
               /*PROCEDURE CARD*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <TitleText>[
                       TitleText(

@@ -1,98 +1,100 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 Widget drawerWidget =
 //Wrap the Drawer in a Consumer() to get access to refs,
 //it needs a builder: (BuildContext, WidgetRef, Widget?)
-    Consumer(builder: (context, ref, child) {
-  return Drawer(
-    child: Padding(
-      padding: const EdgeInsets.only(left: 8.0, top: 8.0, right: 8.0),
-      child: Column(
-        children: [
-          const CircleAvatar(
-            radius: 100.0,
-            child: Icon(
-              Icons.person,
-              size: 78.0,
+    Consumer(
+  builder: (BuildContext context, WidgetRef ref, Widget? child) {
+    return Drawer(
+      child: Padding(
+        padding: const EdgeInsets.only(left: 8.0, top: 8.0, right: 8.0),
+        child: Column(
+          children: <Widget>[
+            const CircleAvatar(
+              radius: 100.0,
+              child: Icon(
+                Icons.person,
+                size: 78.0,
+              ),
             ),
-          ),
-          const SizedBox(height: 10.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text('Huidige gebruiker:'),
-                  Text('$emailCurrentUser'),
-                ],
-              ),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      showLogOutPopup(context);
-                    },
-                    icon: const Icon(Icons.logout),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          const SizedBox(height: 10.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              //WATCH the themeModeStringProvider here, it
-              //returns the current String for the themeMode
-              Text('Theme: ${ref.watch(themeModeStringProvider)}'),
-              //Look down
-              const ThemeModeSwitch(),
-            ],
-          ),
-          const SizedBox(height: 10.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              //WATCH the themeColorStringProvider here, it
-              //returns the current String for the themeColor
-              Expanded(
-                flex: 1,
-                child: Text('Color: ${ref.watch(themeColorStringProvider)}'),
-              ),
-              //Look down
-              const ThemeColorSwitch(),
-            ],
-          ),
-          const SizedBox(height: 10.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text('Versie & Updates:'),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      showVersionUpdatePopup(context);
-                    },
-                    icon: const Icon(Icons.help),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ],
+            const SizedBox(height: 10.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Text>[
+                    const Text('Huidige gebruiker:'),
+                    Text('$emailCurrentUser'),
+                  ],
+                ),
+                Row(
+                  children: <IconButton>[
+                    IconButton(
+                      onPressed: () {
+                        showLogOutPopup(context);
+                      },
+                      icon: const Icon(Icons.logout),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 10.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                //WATCH the themeModeStringProvider here, it
+                //returns the current String for the themeMode
+                Text('Theme: ${ref.watch(themeModeStringProvider)}'),
+                //Look down
+                const ThemeModeSwitch(),
+              ],
+            ),
+            const SizedBox(height: 10.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                //WATCH the themeColorStringProvider here, it
+                //returns the current String for the themeColor
+                Expanded(
+                  flex: 1,
+                  child: Text('Color: ${ref.watch(themeColorStringProvider)}'),
+                ),
+                //Look down
+                const ThemeColorSwitch(),
+              ],
+            ),
+            const SizedBox(height: 10.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                const Text('Versie & Updates:'),
+                Row(
+                  children: <IconButton>[
+                    IconButton(
+                      onPressed: () {
+                        showVersionUpdatePopup(context);
+                      },
+                      icon: const Icon(Icons.help),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
-    ),
-  );
-});
+    );
+  },
+);
 
 class ThemeModeSwitch extends ConsumerWidget {
   const ThemeModeSwitch({Key? key}) : super(key: key);
 
   @override
-  Widget build(context, ref) {
-    final List<bool> isSelected = [
+  Widget build(BuildContext context, WidgetRef ref) {
+    final List<bool> isSelected = <bool>[
       ref.watch(themeModeProvider) == ThemeMode.light,
       ref.watch(themeModeProvider) == ThemeMode.system,
       ref.watch(themeModeProvider) == ThemeMode.dark,
@@ -124,7 +126,7 @@ class ThemeModeSwitch extends ConsumerWidget {
           ref.read(themeModeStringProvider.notifier).setThemeModeStringDark();
         }
       },
-      children: const [
+      children: const <Icon>[
         Icon(Icons.light_mode),
         Icon(Icons.phone_android),
         Icon(Icons.dark_mode),
@@ -138,7 +140,7 @@ class ThemeColorSwitch extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final List<bool> isSelected = [
+    final List<bool> isSelected = <bool>[
       ref.watch(themeColorProvider) == FlexScheme.outerSpace,
       ref.watch(themeColorProvider) == FlexScheme.blue,
       ref.watch(themeColorProvider) == FlexScheme.money,
@@ -184,7 +186,7 @@ class ThemeColorSwitch extends ConsumerWidget {
               .setThemeColorStringRedWine();
         }
       },
-      children: const [
+      children: const <Icon>[
         Icon(
           Icons.rocket_launch,
           color: Colors.grey,

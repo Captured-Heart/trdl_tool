@@ -20,7 +20,7 @@ class WWOpengeredenWissel extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWOpengeredenWissel>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWOpengeredenWissel result) async {
               if (result == WhereToGoFromWWOpengeredenWissel.home_screen) {
@@ -37,14 +37,14 @@ class WWOpengeredenWissel extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWOpengeredenWissel>(
                 value: WhereToGoFromWWOpengeredenWissel.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWOpengeredenWissel>(
                 value: WhereToGoFromWWOpengeredenWissel.ai_opengereden_wissel,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Opengereden Wissel',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWOpengeredenWissel extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -88,9 +88,9 @@ class WWOpengeredenWissel extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -108,9 +108,9 @@ class WWOpengeredenWissel extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

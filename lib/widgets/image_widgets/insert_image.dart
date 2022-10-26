@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class InsertImage extends StatelessWidget {
   const InsertImage({
@@ -12,7 +12,7 @@ class InsertImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: <SizedBox>[
         SizedBox(
           width: MediaQuery.of(context).size.width * 0.75,
           child: Image.asset(

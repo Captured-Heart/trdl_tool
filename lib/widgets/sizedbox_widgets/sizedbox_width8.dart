@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class SizedBoxW extends StatelessWidget {
   const SizedBoxW({Key? key}) : super(key: key);

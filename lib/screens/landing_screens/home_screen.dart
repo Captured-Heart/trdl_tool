@@ -23,12 +23,12 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   Future<void> _onItemTapped(int index) async {
     setState(() {
       _selectedIndex = index;
-      /*SET CURVE TO CHOOSE ANIMATION STYLE*/
       _pageController.animateToPage(
         index,
         duration: const Duration(
-          seconds: 2,
+          seconds: 1,
         ),
+        //Set curve to choose animationstyle
         curve: Curves.easeInOutCubicEmphasized,
       );
     });
@@ -82,27 +82,19 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(
-                Icons.train,
-              ),
+              icon: Icon(Utils.iconWW),
               label: 'Werkwijze',
             ),
             BottomNavigationBarItem(
-              icon: Icon(
-                Icons.menu_book,
-              ),
+              icon: Icon(Utils.iconAI),
               label: 'Achtergrond',
             ),
             BottomNavigationBarItem(
-              icon: Icon(
-                Icons.sports_esports,
-              ),
+              icon: Icon(Utils.iconGame),
               label: 'ProQuiz',
             ),
             BottomNavigationBarItem(
-              icon: Icon(
-                Icons.forum,
-              ),
+              icon: Icon(Utils.iconChat),
               label: 'ProChat',
             ),
           ],

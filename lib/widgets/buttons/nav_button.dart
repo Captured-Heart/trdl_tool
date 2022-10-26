@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class NavButton extends StatelessWidget {
   const NavButton({
@@ -12,8 +12,8 @@ class NavButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-        Navigator.pushNamed(context, destination);
+      onPressed: () async {
+        await Navigator.pushNamed(context, destination);
       },
       child: Text(
         buttontext,

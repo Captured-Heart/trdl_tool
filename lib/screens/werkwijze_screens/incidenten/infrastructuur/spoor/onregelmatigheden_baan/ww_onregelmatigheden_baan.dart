@@ -20,7 +20,7 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWOnregelmatighedenBaan>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWOnregelmatighedenBaan result) async {
               if (result == WhereToGoFromWWOnregelmatighedenBaan.home_screen) {
@@ -38,7 +38,7 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWOnregelmatighedenBaan>(
                 value: WhereToGoFromWWOnregelmatighedenBaan.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -46,7 +46,7 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
                 value: WhereToGoFromWWOnregelmatighedenBaan
                     .ai_onregelmatigheden_baan,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Onregelmatigheden Baan',
                 ),
               ),
@@ -60,9 +60,9 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -84,9 +84,9 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -104,9 +104,9 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

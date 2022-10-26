@@ -24,7 +24,7 @@ class AIKlanthinder extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIKlanthinder>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIKlanthinder result) async {
               if (result == WhereToGoFromAIKlanthinder.home_screen) {
@@ -46,28 +46,28 @@ class AIKlanthinder extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIKlanthinder>(
                 value: WhereToGoFromAIKlanthinder.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIKlanthinder>(
                 value: WhereToGoFromAIKlanthinder.ai_ongepland_werk_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Ongepland Werk',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIKlanthinder>(
                 value: WhereToGoFromAIKlanthinder.ai_aanpassen_plan_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Aanpassen Plan',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIKlanthinder>(
                 value: WhereToGoFromAIKlanthinder.ai_vertragingen,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Vertragingen',
                 ),
               ),
@@ -82,9 +82,9 @@ class AIKlanthinder extends StatelessWidget {
             children: <Card>[
               /*CARD #1*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       TitleText(
@@ -129,9 +129,9 @@ class AIKlanthinder extends StatelessWidget {
               ),
               /*CARD #2*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -171,9 +171,9 @@ class AIKlanthinder extends StatelessWidget {
               ),
               /*CARD #3*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       BoldText(
@@ -296,9 +296,9 @@ class AIKlanthinder extends StatelessWidget {
               ),
               /*CARD #4*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(

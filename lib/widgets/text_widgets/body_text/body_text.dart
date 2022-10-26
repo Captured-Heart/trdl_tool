@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class BodyText extends StatelessWidget {
   const BodyText({required this.indents, required this.text, Key? key})
@@ -10,7 +10,7 @@ class BodyText extends StatelessWidget {
   Widget build(BuildContext context) {
     if (indents == 0) {
       return Row(
-        children: [
+        children: <Expanded>[
           Expanded(
             child: Text(
               text,
@@ -23,7 +23,7 @@ class BodyText extends StatelessWidget {
       );
     } else if (indents == 1) {
       return Row(
-        children: [
+        children: <Widget>[
           const SizedBoxW(),
           Expanded(
             child: Text(
@@ -37,7 +37,7 @@ class BodyText extends StatelessWidget {
       );
     } else if (indents == 2) {
       return Row(
-        children: [
+        children: <Widget>[
           const SizedBoxW(),
           const SizedBoxW(),
           Expanded(
@@ -52,7 +52,7 @@ class BodyText extends StatelessWidget {
       );
     } else if (indents == 3) {
       return Row(
-        children: [
+        children: <Widget>[
           const SizedBoxW(),
           const SizedBoxW(),
           const SizedBoxW(),
@@ -68,7 +68,7 @@ class BodyText extends StatelessWidget {
       );
     } else {
       return Row(
-        children: [
+        children: <Expanded>[
           Expanded(
             child: Text(
               text,

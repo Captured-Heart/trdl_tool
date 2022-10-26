@@ -26,7 +26,7 @@ class AISeinenBasis1 extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAISeinenBasis1>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAISeinenBasis1 result) async {
               if (result == WhereToGoFromAISeinenBasis1.home_screen) {
@@ -49,26 +49,32 @@ class AISeinenBasis1 extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAISeinenBasis1>(
                 value: WhereToGoFromAISeinenBasis1.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
             ],
           ),
+          const HomeButton(),
         ],
       ),
       body: SingleChildScrollView(
         child: Column(
           children: <Card>[
+            const Card(
+              elevation: Utils.kCardElevation,
+              child: Padding(
+                padding: Utils.kCardPadding,
+                child: TitleText(title: 'Seinen Basisinformatie 1'),
+              ),
+            ),
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
-                    TitleText(title: 'Seinen Basisinformatie 1'),
-                    SizedBoxH(),
                     SubTitleText(
                       subtitle: 'Seinstelsel',
                     ),
@@ -161,9 +167,9 @@ class AISeinenBasis1 extends StatelessWidget {
               ),
             ),
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <InsertImage>[
                     InsertImage(

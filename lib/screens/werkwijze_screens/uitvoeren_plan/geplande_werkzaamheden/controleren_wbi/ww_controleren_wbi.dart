@@ -22,7 +22,7 @@ class WWControlerenWBI extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWControlerenWBI>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWControlerenWBI result) async {
               if (result == WhereToGoFromWWControlerenWBI.home_screen) {
@@ -42,21 +42,21 @@ class WWControlerenWBI extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
                 value: WhereToGoFromWWControlerenWBI.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconInfo,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
                 value: WhereToGoFromWWControlerenWBI.ai_controleren_wbi,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Controleren WBI',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
                 value: WhereToGoFromWWControlerenWBI.ai_fouten_wbi,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Fouten WBI',
                 ),
               ),
@@ -70,9 +70,9 @@ class WWControlerenWBI extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -100,9 +100,9 @@ class WWControlerenWBI extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -120,9 +120,9 @@ class WWControlerenWBI extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

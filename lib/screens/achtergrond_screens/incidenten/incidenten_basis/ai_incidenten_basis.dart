@@ -30,7 +30,7 @@ class AIIncidentenBasis extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIIncidentenBasis>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIIncidentenBasis result) async {
               if (result == WhereToGoFromAIIncidentenBasis.home_screen) {
@@ -62,21 +62,21 @@ class AIIncidentenBasis extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
                 value: WhereToGoFromAIIncidentenBasis.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
                 value: WhereToGoFromAIIncidentenBasis.ww_incidenten_main,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Incidenten',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
                 value: WhereToGoFromAIIncidentenBasis.ai_infra_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Infra',
                 ),
               ),
@@ -84,21 +84,21 @@ class AIIncidentenBasis extends StatelessWidget {
                 value:
                     WhereToGoFromAIIncidentenBasis.ai_mensen_dieren_voorwerpen,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Mensen, Dieren, Voorwerpen',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
                 value: WhereToGoFromAIIncidentenBasis.ai_materieel_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Materieel',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
                 value: WhereToGoFromAIIncidentenBasis.ai_overige_incidenten,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Overige Incidenten',
                 ),
               ),
@@ -112,9 +112,9 @@ class AIIncidentenBasis extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -137,9 +137,9 @@ class AIIncidentenBasis extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(title: 'Alarmeren'),
@@ -202,9 +202,9 @@ class AIIncidentenBasis extends StatelessWidget {
             ),
             /*CARD #4*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -351,9 +351,9 @@ class AIIncidentenBasis extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(
@@ -386,9 +386,9 @@ class AIIncidentenBasis extends StatelessWidget {
             ),
             /*CARD #6*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(subtitle: 'Herroepen van een sein'),
@@ -437,9 +437,9 @@ class AIIncidentenBasis extends StatelessWidget {
             ),
             /*CARD INSERTED*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(subtitle: 'Alarmeer- en informeerformulier'),
@@ -461,9 +461,9 @@ class AIIncidentenBasis extends StatelessWidget {
             ),
             /*CARD #7*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(subtitle: 'Alarmeer- en informeerformulier'),
@@ -491,9 +491,9 @@ class AIIncidentenBasis extends StatelessWidget {
             ),
             /*CARD #8*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(subtitle: 'Aanwijzingen'),
@@ -618,9 +618,9 @@ class AIIncidentenBasis extends StatelessWidget {
             ),
             /*CARD #9*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(subtitle: 'Spoorweb'),
@@ -641,9 +641,9 @@ class AIIncidentenBasis extends StatelessWidget {
             ),
             /*CARD #10*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(title: 'Treinincidentscenario'),

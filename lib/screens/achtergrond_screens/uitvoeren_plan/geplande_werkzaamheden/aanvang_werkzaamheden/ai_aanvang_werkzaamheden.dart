@@ -28,7 +28,7 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIAanvangWerkzaamheden>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIAanvangWerkzaamheden result) async {
               if (result == WhereToGoFromAIAanvangWerkzaamheden.home_screen) {
@@ -59,7 +59,7 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
                 value: WhereToGoFromAIAanvangWerkzaamheden.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -67,7 +67,7 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
                 value: WhereToGoFromAIAanvangWerkzaamheden
                     .ww_aanvang_werkzaamheden,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Aanvang Werkzaamheden',
                 ),
               ),
@@ -75,28 +75,28 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
                 value: WhereToGoFromAIAanvangWerkzaamheden
                     .ai_geplande_werkzaamheden,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Geplande Werkzaamheden',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
                 value: WhereToGoFromAIAanvangWerkzaamheden.ai_controleren_wbi,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Controleren WBI',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
                 value: WhereToGoFromAIAanvangWerkzaamheden.ai_fouten_wbi,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Fouten WBI',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
                 value: WhereToGoFromAIAanvangWerkzaamheden.ai_bovenleiding_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Bovenleiding',
                 ),
               ),
@@ -110,9 +110,9 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -142,9 +142,9 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -167,9 +167,9 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
             ),
             /*CARD #3*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -238,9 +238,9 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
             ),
             /*CARD #4*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

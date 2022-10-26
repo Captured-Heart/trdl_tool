@@ -20,7 +20,7 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWAtbVeiligheidsstoring>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWAtbVeiligheidsstoring result) async {
               if (result == WhereToGoFromWWAtbVeiligheidsstoring.home_screen) {
@@ -37,14 +37,14 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWAtbVeiligheidsstoring>(
                 value: WhereToGoFromWWAtbVeiligheidsstoring.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWAtbVeiligheidsstoring>(
                 value: WhereToGoFromWWAtbVeiligheidsstoring.ai_atb,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI ATB',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -82,9 +82,9 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -101,9 +101,9 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

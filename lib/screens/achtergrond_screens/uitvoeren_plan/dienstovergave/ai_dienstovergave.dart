@@ -20,7 +20,7 @@ class AIDienstovergave extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIDienstovergave>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIDienstovergave result) async {
               if (result == WhereToGoFromAIDienstovergave.home_screen) {
@@ -37,14 +37,14 @@ class AIDienstovergave extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIDienstovergave>(
                 value: WhereToGoFromAIDienstovergave.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIDienstovergave>(
                 value: WhereToGoFromAIDienstovergave.ww_dienstovergave,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Dienstovergave',
                 ),
               ),
@@ -58,9 +58,9 @@ class AIDienstovergave extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(title: 'Dienstovergave'),

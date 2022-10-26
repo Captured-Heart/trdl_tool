@@ -20,7 +20,7 @@ class AIBijzondereAandacht extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIBijzondereAandacht>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIBijzondereAandacht result) async {
               if (result == WhereToGoFromAIBijzondereAandacht.home_screen) {
@@ -41,7 +41,7 @@ class AIBijzondereAandacht extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIBijzondereAandacht>(
                 value: WhereToGoFromAIBijzondereAandacht.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -49,7 +49,7 @@ class AIBijzondereAandacht extends StatelessWidget {
                 value: WhereToGoFromAIBijzondereAandacht
                     .ai_bijzonderheden_trein_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Bijzonderheden Trein',
                 ),
               ),
@@ -63,9 +63,9 @@ class AIBijzondereAandacht extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -93,9 +93,9 @@ class AIBijzondereAandacht extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

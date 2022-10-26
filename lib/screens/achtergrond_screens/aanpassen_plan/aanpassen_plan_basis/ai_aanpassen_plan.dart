@@ -28,7 +28,7 @@ class AIAanpassenPlan extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIAanpassenPlan>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIAanpassenPlan result) async {
               if (result == WhereToGoFromAIAanpassenPlan.home_screen) {
@@ -60,35 +60,35 @@ class AIAanpassenPlan extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
                 value: WhereToGoFromAIAanpassenPlan.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
                 value: WhereToGoFromAIAanpassenPlan.ww_aanpassen_plan_main,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Aanpassen Plan',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
                 value: WhereToGoFromAIAanpassenPlan.ai_orderacceptatie,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Orderacceptatie',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
                 value: WhereToGoFromAIAanpassenPlan.ai_vertragingen,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Vertragingen',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
                 value: WhereToGoFromAIAanpassenPlan.ai_ongepland_werk_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Ongepland Werk',
                 ),
               ),
@@ -96,7 +96,7 @@ class AIAanpassenPlan extends StatelessWidget {
                 value:
                     WhereToGoFromAIAanpassenPlan.ai_stappenplan_versperringen,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Stappenplan Versperringen',
                 ),
               ),
@@ -110,9 +110,9 @@ class AIAanpassenPlan extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -143,9 +143,9 @@ uitvoeringsmoment.\n\nBij aanpassing van rijwegen voor rangeerbewegingen, schouw
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -194,9 +194,9 @@ Bij evenementen kan er, op last van de overheidshulpdiensten in het kader van cr
             ),
             /*CARD #3*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -235,9 +235,9 @@ Bij evenementen kan er, op last van de overheidshulpdiensten in het kader van cr
             ),
             /*CARD #4*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -279,9 +279,9 @@ Het plannen van een pad voor een goederen- of reizigerstrein gebeurt in een same
             ),
             /*CARD #5*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -326,9 +326,9 @@ Het plannen van een pad voor een goederen- of reizigerstrein gebeurt in een same
             ),
             /*CARD #6*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -420,9 +420,9 @@ Het plannen van een pad voor een goederen- of reizigerstrein gebeurt in een same
             ),
             /*CARD #7*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const SubTitleText(

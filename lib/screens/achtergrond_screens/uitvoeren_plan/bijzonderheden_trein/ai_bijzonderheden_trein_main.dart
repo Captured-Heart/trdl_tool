@@ -20,7 +20,7 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIBijzonderhedenTreinMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIBijzonderhedenTreinMain result) async {
               if (result ==
@@ -42,7 +42,7 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIBijzonderhedenTreinMain>(
                 value: WhereToGoFromAIBijzonderhedenTreinMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -50,7 +50,7 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
                 value: WhereToGoFromAIBijzonderhedenTreinMain
                     .ww_bijzonderheden_trein_main,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Bijzonderheden Trein',
                 ),
               ),
@@ -64,9 +64,9 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(
@@ -78,9 +78,9 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(
@@ -118,9 +118,9 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
             ),
             /*IMAGE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SizedBoxH(),

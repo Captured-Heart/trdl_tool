@@ -24,7 +24,7 @@ class AIMonitoring extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIMonitoring>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIMonitoring result) async {
               if (result == WhereToGoFromAIMonitoring.home_screen) {
@@ -44,28 +44,28 @@ class AIMonitoring extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIMonitoring>(
                 value: WhereToGoFromAIMonitoring.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIMonitoring>(
                 value: WhereToGoFromAIMonitoring.ww_vertragingen,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Vertragingen',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIMonitoring>(
                 value: WhereToGoFromAIMonitoring.ai_vertragingen,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Vertragingen',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIMonitoring>(
                 value: WhereToGoFromAIMonitoring.ai_klanthinder,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Klanthinder',
                 ),
               ),
@@ -80,9 +80,9 @@ class AIMonitoring extends StatelessWidget {
             children: <Card>[
               /*CARD #1*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       TitleText(
@@ -106,9 +106,9 @@ class AIMonitoring extends StatelessWidget {
               ),
               /*CARD #2*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -149,9 +149,9 @@ class AIMonitoring extends StatelessWidget {
               ),
               /*CARD #3*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -175,9 +175,9 @@ class AIMonitoring extends StatelessWidget {
               ),
               /*CARD #4*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -252,9 +252,9 @@ class AIMonitoring extends StatelessWidget {
               ),
               /*CARD #5*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(

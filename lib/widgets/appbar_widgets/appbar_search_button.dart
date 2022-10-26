@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class SearchButton extends StatelessWidget {
   const SearchButton({Key? key}) : super(key: key);
@@ -6,8 +6,8 @@ class SearchButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      onPressed: () {
-        showSearch(
+      onPressed: () async {
+        await showSearch(
           context: context,
           delegate: MySearchDelegate(),
         );
@@ -17,7 +17,7 @@ class SearchButton extends StatelessWidget {
   }
 }
 
-class MySearchDelegate extends SearchDelegate {
+class MySearchDelegate extends SearchDelegate<String?> {
   /*CAN BE FOUND IN ALL_SEARCH_STRINGS.DART*/
   List<String> searchResults = searchStringsList;
 
@@ -34,7 +34,7 @@ class MySearchDelegate extends SearchDelegate {
 
   @override
   List<Widget> buildActions(BuildContext context) {
-    return [
+    return <IconButton>[
       IconButton(
         icon: const Icon(Icons.clear),
         onPressed: () {
@@ -75,7 +75,7 @@ class MySearchDelegate extends SearchDelegate {
   Widget buildResults(BuildContext context) {
     final String namedRoute = query;
 
-    WidgetsBinding.instance?.addPostFrameCallback(
+    WidgetsBinding.instance.addPostFrameCallback(
       (_) async {
         await Navigator.pushReplacementNamed(
           context,

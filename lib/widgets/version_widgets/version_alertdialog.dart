@@ -22,8 +22,7 @@ Future<dynamic> showVersionUpdatePopup(BuildContext context) {
                 ),
                 ChangesMade(
                   changes: '- Routes naar apart bestand verplaatst;\n- '
-                      'Bestandspaden verkort;\n- Comments aangepast naar '
-                      'DOC stijl;\n- Nieuwe linter gebruikt (STRENG);',
+                      'Bestandspaden verkort;\n- Nieuwe linter gebruikt (STRENG);\n- Widgets verkort;\n- Constants naar Utils class verplaatst;',
                 ),
                 SizedBoxH(),
                 DateChanged(

@@ -20,7 +20,7 @@ class WWSchakelenBovenleiding extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWSchakelenBovenleiding>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWSchakelenBovenleiding result) async {
               if (result == WhereToGoFromWWSchakelenBovenleiding.home_screen) {
@@ -38,7 +38,7 @@ class WWSchakelenBovenleiding extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
                 value: WhereToGoFromWWSchakelenBovenleiding.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -46,7 +46,7 @@ class WWSchakelenBovenleiding extends StatelessWidget {
                 value: WhereToGoFromWWSchakelenBovenleiding
                     .ai_schakelen_bovenleiding,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Schakelen Bovenleiding',
                 ),
               ),
@@ -60,9 +60,9 @@ class WWSchakelenBovenleiding extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -84,9 +84,9 @@ class WWSchakelenBovenleiding extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -104,9 +104,9 @@ class WWSchakelenBovenleiding extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

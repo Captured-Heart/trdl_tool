@@ -20,7 +20,7 @@ class WWTegenRijrichting extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWTegenRijrichting>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWTegenRijrichting result) async {
               if (result == WhereToGoFromWWTegenRijrichting.home_screen) {
@@ -37,14 +37,14 @@ class WWTegenRijrichting extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWTegenRijrichting>(
                 value: WhereToGoFromWWTegenRijrichting.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWTegenRijrichting>(
                 value: WhereToGoFromWWTegenRijrichting.ai_tegen_rijrichting,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Tegen de Rijrichting',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWTegenRijrichting extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -114,9 +114,9 @@ class WWTegenRijrichting extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -134,9 +134,9 @@ class WWTegenRijrichting extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

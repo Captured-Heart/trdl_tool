@@ -28,7 +28,7 @@ class AIToelatenWerktreinen extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIToelatenWerktreinen>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIToelatenWerktreinen result) async {
               if (result == WhereToGoFromAIToelatenWerktreinen.home_screen) {
@@ -65,7 +65,7 @@ class AIToelatenWerktreinen extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
                 value: WhereToGoFromAIToelatenWerktreinen.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -73,7 +73,7 @@ class AIToelatenWerktreinen extends StatelessWidget {
                 value:
                     WhereToGoFromAIToelatenWerktreinen.ww_toelaten_werktreinen,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Toelaten Werktreinen',
                 ),
               ),
@@ -81,7 +81,7 @@ class AIToelatenWerktreinen extends StatelessWidget {
                 value: WhereToGoFromAIToelatenWerktreinen
                     .ai_bijzonderheden_rijwegen_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Bijzonderheden Rijwegen',
                 ),
               ),
@@ -89,21 +89,21 @@ class AIToelatenWerktreinen extends StatelessWidget {
                 value: WhereToGoFromAIToelatenWerktreinen
                     .ai_geplande_werkzaamheden_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Geplande Werkzaamheden',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
                 value: WhereToGoFromAIToelatenWerktreinen.ai_inzetten_icb,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Inzetten ICB',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
                 value: WhereToGoFromAIToelatenWerktreinen.ai_onjuiste_detectie,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Onjuiste Detectie',
                 ),
               ),
@@ -117,9 +117,9 @@ class AIToelatenWerktreinen extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -160,9 +160,9 @@ class AIToelatenWerktreinen extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

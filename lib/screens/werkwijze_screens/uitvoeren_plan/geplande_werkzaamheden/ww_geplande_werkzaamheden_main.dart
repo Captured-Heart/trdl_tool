@@ -20,7 +20,7 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected:
                 (WhereToGoFromWWGeplandeWerkzaamhedenMain result) async {
@@ -43,7 +43,7 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
                 value: WhereToGoFromWWGeplandeWerkzaamhedenMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconInfo,
                   text: 'Home',
                 ),
               ),
@@ -51,7 +51,7 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
                 value: WhereToGoFromWWGeplandeWerkzaamhedenMain
                     .ai_geplande_werkzaamheden_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Geplande Werkzaamheden',
                 ),
               ),
@@ -65,9 +65,9 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -85,9 +85,9 @@ class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(

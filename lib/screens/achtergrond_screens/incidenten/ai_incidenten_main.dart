@@ -22,7 +22,7 @@ class AIIncidentenMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIIncidentenMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIIncidentenMain result) async {
               if (result == WhereToGoFromAIIncidentenMain.home_screen) {
@@ -42,21 +42,21 @@ class AIIncidentenMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIIncidentenMain>(
                 value: WhereToGoFromAIIncidentenMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIIncidentenMain>(
                 value: WhereToGoFromAIIncidentenMain.ww_incidenten_main,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Incidenten',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIIncidentenMain>(
                 value: WhereToGoFromAIIncidentenMain.ai_inzetten_railvoertuig,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Inzetten ICB',
                 ),
               ),
@@ -70,9 +70,9 @@ class AIIncidentenMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -90,9 +90,9 @@ class AIIncidentenMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(

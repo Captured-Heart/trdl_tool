@@ -20,7 +20,7 @@ class WWVertragingen extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWVertragingen>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWVertragingen result) async {
               if (result == WhereToGoFromWWVertragingen.home_screen) {
@@ -37,14 +37,14 @@ class WWVertragingen extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWVertragingen>(
                 value: WhereToGoFromWWVertragingen.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWVertragingen>(
                 value: WhereToGoFromWWVertragingen.ai_vertragingen,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Vertragingen',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWVertragingen extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(title: 'Vertragingen'),

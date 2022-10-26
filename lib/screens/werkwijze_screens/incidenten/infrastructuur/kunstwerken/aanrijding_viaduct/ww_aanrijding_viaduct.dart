@@ -20,7 +20,7 @@ class WWAanrijdingViaduct extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWAanrijdingViaduct>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWAanrijdingViaduct result) async {
               if (result == WhereToGoFromWWAanrijdingViaduct.home_screen) {
@@ -37,14 +37,14 @@ class WWAanrijdingViaduct extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWAanrijdingViaduct>(
                 value: WhereToGoFromWWAanrijdingViaduct.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWAanrijdingViaduct>(
                 value: WhereToGoFromWWAanrijdingViaduct.ai_aanrijding_viaduct,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Aanrijding Viaduct',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWAanrijdingViaduct extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -88,9 +88,9 @@ class WWAanrijdingViaduct extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -108,9 +108,9 @@ class WWAanrijdingViaduct extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

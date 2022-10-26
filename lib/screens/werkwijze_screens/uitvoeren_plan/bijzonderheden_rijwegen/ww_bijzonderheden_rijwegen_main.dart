@@ -20,7 +20,7 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWBijzonderhedenRijwegenMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected:
                 (WhereToGoFromWWBijzonderhedenRijwegenMain result) async {
@@ -43,7 +43,7 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
                 value: WhereToGoFromWWBijzonderhedenRijwegenMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -51,7 +51,7 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
                 value: WhereToGoFromWWBijzonderhedenRijwegenMain
                     .ai_bijzonderheden_rijwegen_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Bijzonderheden Rijwegen',
                 ),
               ),
@@ -65,9 +65,9 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(
@@ -79,9 +79,9 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(

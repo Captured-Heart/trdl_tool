@@ -30,7 +30,7 @@ class AIRijwegenARI extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIRijwegenARI>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIRijwegenARI result) async {
               if (result == WhereToGoFromAIRijwegenARI.home_screen) {
@@ -65,49 +65,49 @@ class AIRijwegenARI extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ww_uitvoeren_plan_main,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Uitvoeren Plan',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_rijwegen_trots,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen TROTS',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_bijzonderheden_rijwegen,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Bijzonderheden Rijwegen',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planopbouw,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen Planopbouw',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planscherm,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen Planscherm',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
                 value: WhereToGoFromAIRijwegenARI.ai_rijwegen_bedienscherm,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen Bedienscherm',
                 ),
               ),
@@ -121,9 +121,9 @@ class AIRijwegenARI extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -148,9 +148,9 @@ class AIRijwegenARI extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -168,9 +168,9 @@ class AIRijwegenARI extends StatelessWidget {
             ),
             /*CARD #3*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -240,9 +240,9 @@ class AIRijwegenARI extends StatelessWidget {
             ),
             /*CARD #4*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -307,9 +307,9 @@ class AIRijwegenARI extends StatelessWidget {
             ),
             /*CARD #5*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -377,9 +377,9 @@ class AIRijwegenARI extends StatelessWidget {
             ),
             /*CARD #6*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -488,9 +488,9 @@ class AIRijwegenARI extends StatelessWidget {
             ),
             /*CARD #7*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -548,9 +548,9 @@ class AIRijwegenARI extends StatelessWidget {
             ),
             /*CARD #8*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -584,9 +584,9 @@ class AIRijwegenARI extends StatelessWidget {
             ),
             /*CARD #9*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -671,9 +671,9 @@ class AIRijwegenARI extends StatelessWidget {
             ),
             /*CARD #10*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -728,9 +728,9 @@ class AIRijwegenARI extends StatelessWidget {
             ),
             /*CARD #11*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -806,9 +806,9 @@ class AIRijwegenARI extends StatelessWidget {
             ),
             /*CARD #12*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -843,9 +843,9 @@ class AIRijwegenARI extends StatelessWidget {
             ),
             /*CARD #13*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

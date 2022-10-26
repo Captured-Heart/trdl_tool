@@ -18,7 +18,7 @@ class AIBeveiligingBasis2 extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIBeveiligingBasis2>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIBeveiligingBasis2 result) async {
               if (result == WhereToGoFromAIBeveiligingBasis2.home_screen) {
@@ -32,7 +32,7 @@ class AIBeveiligingBasis2 extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIBeveiligingBasis2>(
                 value: WhereToGoFromAIBeveiligingBasis2.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -45,9 +45,9 @@ class AIBeveiligingBasis2 extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -60,9 +60,9 @@ class AIBeveiligingBasis2 extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(

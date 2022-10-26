@@ -20,7 +20,7 @@ class WWWisselEindstand extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWWisselEindstand>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWWisselEindstand result) async {
               if (result == WhereToGoFromWWWisselEindstand.home_screen) {
@@ -37,14 +37,14 @@ class WWWisselEindstand extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWWisselEindstand>(
                 value: WhereToGoFromWWWisselEindstand.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWWisselEindstand>(
                 value: WhereToGoFromWWWisselEindstand.ai_wissel_eindstand,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Wissel Eindstand',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWWisselEindstand extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -82,9 +82,9 @@ class WWWisselEindstand extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -101,9 +101,9 @@ class WWWisselEindstand extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

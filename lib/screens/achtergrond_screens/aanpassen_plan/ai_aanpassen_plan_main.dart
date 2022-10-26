@@ -20,7 +20,7 @@ class AIAanpassenPlanMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIAanpassenPlanMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIAanpassenPlanMain result) async {
               if (result == WhereToGoFromAIAanpassenPlanMain.home_screen) {
@@ -37,14 +37,14 @@ class AIAanpassenPlanMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIAanpassenPlanMain>(
                 value: WhereToGoFromAIAanpassenPlanMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIAanpassenPlanMain>(
                 value: WhereToGoFromAIAanpassenPlanMain.ww_aanpassen_plan_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'WW Aanpassen Plan',
                 ),
               ),
@@ -58,9 +58,9 @@ class AIAanpassenPlanMain extends StatelessWidget {
           children: <Card>[
             /*TITLE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(
@@ -72,9 +72,9 @@ class AIAanpassenPlanMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(
@@ -117,9 +117,9 @@ class AIAanpassenPlanMain extends StatelessWidget {
             ),
             /*IMAGE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SizedBoxH(),

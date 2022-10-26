@@ -20,7 +20,7 @@ class WWProcedureRuClu extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWProcedureRuClu>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWProcedureRuClu result) async {
               if (result == WhereToGoFromWWProcedureRuClu.home_screen) {
@@ -37,14 +37,14 @@ class WWProcedureRuClu extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWProcedureRuClu>(
                 value: WhereToGoFromWWProcedureRuClu.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWProcedureRuClu>(
                 value: WhereToGoFromWWProcedureRuClu.ai_procedure_ruclu,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Procedure RU/CLU',
                 ),
               ),
@@ -58,9 +58,9 @@ class WWProcedureRuClu extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -94,9 +94,9 @@ class WWProcedureRuClu extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -114,9 +114,9 @@ class WWProcedureRuClu extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

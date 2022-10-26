@@ -22,7 +22,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIStappenplanVersperringen>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIStappenplanVersperringen result) async {
               if (result ==
@@ -32,7 +32,9 @@ class AIStappenplanVersperringen extends StatelessWidget {
                   WhereToGoFromAIStappenplanVersperringen
                       .ww_stappenplan_versperringen) {
                 await Navigator.pushNamed(
-                    context, 'ww_stappenplan_versperringen',);
+                  context,
+                  'ww_stappenplan_versperringen',
+                );
               } else if (result ==
                   WhereToGoFromAIStappenplanVersperringen
                       .ai_aanpassen_plan_main) {
@@ -46,7 +48,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
                 value: WhereToGoFromAIStappenplanVersperringen.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -54,7 +56,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                 value: WhereToGoFromAIStappenplanVersperringen
                     .ww_stappenplan_versperringen,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Stappenplan Versperringen',
                 ),
               ),
@@ -62,7 +64,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
                 value: WhereToGoFromAIStappenplanVersperringen
                     .ai_aanpassen_plan_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Aanpassen Plan',
                 ),
               ),
@@ -77,9 +79,9 @@ class AIStappenplanVersperringen extends StatelessWidget {
             children: <Card>[
               /*CARD #1*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       TitleText(
@@ -114,9 +116,9 @@ class AIStappenplanVersperringen extends StatelessWidget {
               ),
               /*CARD #2*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -152,9 +154,9 @@ class AIStappenplanVersperringen extends StatelessWidget {
               ),
               /*CARD #3*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -172,9 +174,9 @@ class AIStappenplanVersperringen extends StatelessWidget {
               ),
               /*CARD #4*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(

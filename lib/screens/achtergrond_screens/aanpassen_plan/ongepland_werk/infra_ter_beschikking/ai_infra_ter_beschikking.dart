@@ -24,7 +24,7 @@ class AIInfraTerBeschikking extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIInfraTerBeschikking>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIInfraTerBeschikking result) async {
               if (result == WhereToGoFromAIInfraTerBeschikking.home_screen) {
@@ -51,7 +51,7 @@ class AIInfraTerBeschikking extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIInfraTerBeschikking>(
                 value: WhereToGoFromAIInfraTerBeschikking.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -59,7 +59,7 @@ class AIInfraTerBeschikking extends StatelessWidget {
                 value:
                     WhereToGoFromAIInfraTerBeschikking.ww_ongepland_werk_infra,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Ongepland Werk',
                 ),
               ),
@@ -67,7 +67,7 @@ class AIInfraTerBeschikking extends StatelessWidget {
                 value:
                     WhereToGoFromAIInfraTerBeschikking.ai_ongepland_werk_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Ongepland Werk',
                 ),
               ),
@@ -75,7 +75,7 @@ class AIInfraTerBeschikking extends StatelessWidget {
                 value: WhereToGoFromAIInfraTerBeschikking
                     .ai_ongepland_werk_materieel,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Ongepland Werk - Materieel',
                 ),
               ),
@@ -89,9 +89,9 @@ class AIInfraTerBeschikking extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -109,9 +109,9 @@ class AIInfraTerBeschikking extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

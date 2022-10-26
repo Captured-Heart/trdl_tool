@@ -22,7 +22,7 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWGevaarlijkeStoffen1>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWGevaarlijkeStoffen1 result) async {
               if (result == WhereToGoFromWWGevaarlijkeStoffen1.home_screen) {
@@ -42,14 +42,14 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen1>(
                 value: WhereToGoFromWWGevaarlijkeStoffen1.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen1>(
                 value: WhereToGoFromWWGevaarlijkeStoffen1.ai_ruclu,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Procedure RU/CLU',
                 ),
               ),
@@ -57,7 +57,7 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
                 value:
                     WhereToGoFromWWGevaarlijkeStoffen1.ai_gevaarlijke_stoffen,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Gevaarlijke Stoffen',
                 ),
               ),
@@ -71,9 +71,9 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(
@@ -85,9 +85,9 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(

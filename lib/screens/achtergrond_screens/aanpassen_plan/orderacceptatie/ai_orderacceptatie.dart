@@ -20,7 +20,7 @@ class AIOrderacceptatie extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIOrderacceptatie>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIOrderacceptatie result) async {
               if (result == WhereToGoFromAIOrderacceptatie.home_screen) {
@@ -37,14 +37,14 @@ class AIOrderacceptatie extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIOrderacceptatie>(
                 value: WhereToGoFromAIOrderacceptatie.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIOrderacceptatie>(
                 value: WhereToGoFromAIOrderacceptatie.ww_orderacceptatie,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Orderacceptatie',
                 ),
               ),
@@ -58,9 +58,9 @@ class AIOrderacceptatie extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -100,9 +100,9 @@ N.B.: In alle fasen van capaciteitsverdeling en -planning gelden de plannormen. 
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -138,9 +138,9 @@ De LOA moet bij voorkeur 15 minuten voor uitvoering worden ingediend, zodat je h
             ),
             /*CARD #3*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -158,9 +158,9 @@ De LOA moet bij voorkeur 15 minuten voor uitvoering worden ingediend, zodat je h
             ),
             /*CARD #4*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -184,9 +184,9 @@ De LOA moet bij voorkeur 15 minuten voor uitvoering worden ingediend, zodat je h
             ),
             /*CARD #5*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -215,9 +215,9 @@ De LOA moet bij voorkeur 15 minuten voor uitvoering worden ingediend, zodat je h
             ),
             /*CARD #6*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -247,9 +247,9 @@ De LOA moet bij voorkeur 15 minuten voor uitvoering worden ingediend, zodat je h
             ),
             /*CARD #7*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -278,9 +278,9 @@ Voor het plannen van goederentreinen in de fase van Verkeersleiding zijn in de d
             ),
             /*CARD #8*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

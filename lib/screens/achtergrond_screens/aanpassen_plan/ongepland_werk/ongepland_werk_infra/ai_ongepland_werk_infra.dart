@@ -24,7 +24,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIOngeplandWerkInfra>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIOngeplandWerkInfra result) async {
               if (result == WhereToGoFromAIOngeplandWerkInfra.home_screen) {
@@ -47,7 +47,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIOngeplandWerkInfra>(
                 value: WhereToGoFromAIOngeplandWerkInfra.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -55,7 +55,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                 value:
                     WhereToGoFromAIOngeplandWerkInfra.ww_ongepland_werk_infra,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Ongepland Werk - Infra',
                 ),
               ),
@@ -63,14 +63,14 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                 value:
                     WhereToGoFromAIOngeplandWerkInfra.ai_infra_ter_beschikking,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Infra ter beschikking stellen',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIOngeplandWerkInfra>(
                 value: WhereToGoFromAIOngeplandWerkInfra.ai_aanpassen_plan_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Aanpassen Plan',
                 ),
               ),
@@ -85,9 +85,9 @@ class AIOngeplandWerkInfra extends StatelessWidget {
             children: <Card>[
               /*CARD #1*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       TitleText(
@@ -131,9 +131,9 @@ class AIOngeplandWerkInfra extends StatelessWidget {
               ),
               /*CARD #2*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -158,9 +158,9 @@ class AIOngeplandWerkInfra extends StatelessWidget {
               ),
               /*CARD #3*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -195,9 +195,9 @@ class AIOngeplandWerkInfra extends StatelessWidget {
               ),
               /*CARD #4*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(
@@ -266,9 +266,9 @@ class AIOngeplandWerkInfra extends StatelessWidget {
               ),
               /*CARD #5*/
               Card(
-                elevation: kCardElevation,
+                elevation: Utils.kCardElevation,
                 child: Padding(
-                  padding: kCardPadding,
+                  padding: Utils.kCardPadding,
                   child: Column(
                     children: const <Widget>[
                       SubTitleText(

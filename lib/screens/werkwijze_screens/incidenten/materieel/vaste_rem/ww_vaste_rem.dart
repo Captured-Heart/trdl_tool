@@ -22,7 +22,7 @@ class WWVasteRem extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWVasteRem>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWVasteRem result) async {
               if (result == WhereToGoFromWWVasteRem.home_screen) {
@@ -40,21 +40,21 @@ class WWVasteRem extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWVasteRem>(
                 value: WhereToGoFromWWVasteRem.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWVasteRem>(
                 value: WhereToGoFromWWVasteRem.ai_materieel_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Materieel',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWVasteRem>(
                 value: WhereToGoFromWWVasteRem.ai_vaste_rem,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Vaste Rem',
                 ),
               ),
@@ -68,9 +68,9 @@ class WWVasteRem extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -98,9 +98,9 @@ class WWVasteRem extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -118,9 +118,9 @@ class WWVasteRem extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

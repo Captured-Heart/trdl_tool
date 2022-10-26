@@ -1,4 +1,4 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
 class LogOutButton extends StatelessWidget {
   const LogOutButton({Key? key}) : super(key: key);
@@ -6,8 +6,8 @@ class LogOutButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      onPressed: () {
-        showLogOutPopup(context);
+      onPressed: () async {
+        await showLogOutPopup(context);
       },
       icon: const Icon(Icons.logout),
     );

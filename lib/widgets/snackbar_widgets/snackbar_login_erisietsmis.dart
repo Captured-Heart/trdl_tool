@@ -1,6 +1,6 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
-final snackBarLoginErIsIetsMis = SnackBar(
+final SnackBar snackBarLoginErIsIetsMis = SnackBar(
   content: const Text(
     'Er is iets mis!\nBen je al geregistreerd of is je wachtwoord misschien onjuist?',
     style: TextStyle(

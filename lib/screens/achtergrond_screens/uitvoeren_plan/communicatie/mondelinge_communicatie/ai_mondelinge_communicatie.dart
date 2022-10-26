@@ -20,7 +20,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIMondelingeCommunicatie>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIMondelingeCommunicatie result) async {
               if (result == WhereToGoFromAIMondelingeCommunicatie.home_screen) {
@@ -41,7 +41,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIMondelingeCommunicatie>(
                 value: WhereToGoFromAIMondelingeCommunicatie.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -49,7 +49,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                 value: WhereToGoFromAIMondelingeCommunicatie
                     .ww_mondelinge_communicatie,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Mondelinge Communicatie',
                 ),
               ),
@@ -63,9 +63,9 @@ class AIMondelingeCommunicatie extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -258,9 +258,9 @@ class AIMondelingeCommunicatie extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -302,9 +302,9 @@ class AIMondelingeCommunicatie extends StatelessWidget {
             ),
             /*CARD #3*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const SubTitleText(
@@ -913,9 +913,9 @@ class AIMondelingeCommunicatie extends StatelessWidget {
             ),
             /*CARD #4*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

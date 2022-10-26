@@ -28,7 +28,7 @@ class AIRijwegenTrots extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIRijwegenTrots>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIRijwegenTrots result) async {
               if (result == WhereToGoFromAIRijwegenTrots.home_screen) {
@@ -61,21 +61,21 @@ class AIRijwegenTrots extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
                 value: WhereToGoFromAIRijwegenTrots.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
                 value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_ari,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen ARI',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
                 value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planscherm,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen Planscherm',
                 ),
               ),
@@ -83,21 +83,21 @@ class AIRijwegenTrots extends StatelessWidget {
                 value: WhereToGoFromAIRijwegenTrots
                     .ai_bijzonderheden_rijwegen_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Bijzonderheden Rijwegen',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
                 value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planopbouw,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen Planopbouw',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
                 value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_bedienscherm,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Rijwegen Bedienscherm',
                 ),
               ),
@@ -111,9 +111,9 @@ class AIRijwegenTrots extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -136,9 +136,9 @@ class AIRijwegenTrots extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -218,9 +218,9 @@ class AIRijwegenTrots extends StatelessWidget {
             ),
             /*CARD #3*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

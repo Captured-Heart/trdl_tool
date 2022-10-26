@@ -20,7 +20,7 @@ class WWStappenplanVersperringen extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWStappenplanVersperringen>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWStappenplanVersperringen result) async {
               if (result ==
@@ -42,7 +42,7 @@ class WWStappenplanVersperringen extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWStappenplanVersperringen>(
                 value: WhereToGoFromWWStappenplanVersperringen.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -50,7 +50,7 @@ class WWStappenplanVersperringen extends StatelessWidget {
                 value: WhereToGoFromWWStappenplanVersperringen
                     .ai_stappenplan_versperringen,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Stappenplan Versperringen',
                 ),
               ),
@@ -64,9 +64,9 @@ class WWStappenplanVersperringen extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(title: 'Stappenplan Versperringen'),
@@ -86,9 +86,9 @@ class WWStappenplanVersperringen extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -105,9 +105,9 @@ class WWStappenplanVersperringen extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

@@ -12,7 +12,7 @@ Future<dynamic> showLogOutPopup(BuildContext context) {
           height: MediaQuery.of(context).size.width * 0.50,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
+            children: <Widget>[
               const Text(
                 'Wil je uitloggen?',
                 style: TextStyle(
@@ -23,7 +23,7 @@ Future<dynamic> showLogOutPopup(BuildContext context) {
                 height: 20,
               ),
               Row(
-                children: [
+                children: <Widget>[
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {

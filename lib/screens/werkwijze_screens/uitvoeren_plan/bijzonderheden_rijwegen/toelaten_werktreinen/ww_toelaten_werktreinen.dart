@@ -24,7 +24,7 @@ class WWToelatenWerktreinen extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWToelatenWerktreinen>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWToelatenWerktreinen result) async {
               if (result == WhereToGoFromWWToelatenWerktreinen.home_screen) {
@@ -55,7 +55,7 @@ class WWToelatenWerktreinen extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
                 value: WhereToGoFromWWToelatenWerktreinen.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -63,7 +63,7 @@ class WWToelatenWerktreinen extends StatelessWidget {
                 value: WhereToGoFromWWToelatenWerktreinen
                     .ww_geplande_werkzaamheden_main,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Geplande Werkzaamheden',
                 ),
               ),
@@ -71,7 +71,7 @@ class WWToelatenWerktreinen extends StatelessWidget {
                 value:
                     WhereToGoFromWWToelatenWerktreinen.ai_toelaten_werktreinen,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Toelaten Werktreinen',
                 ),
               ),
@@ -79,7 +79,7 @@ class WWToelatenWerktreinen extends StatelessWidget {
                 value: WhereToGoFromWWToelatenWerktreinen
                     .ai_geplande_werkzaamheden_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Geplande Werkzaamheden',
                 ),
               ),
@@ -93,9 +93,9 @@ class WWToelatenWerktreinen extends StatelessWidget {
           children: <Widget>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -117,9 +117,9 @@ class WWToelatenWerktreinen extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -137,9 +137,9 @@ class WWToelatenWerktreinen extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

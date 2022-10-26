@@ -24,7 +24,7 @@ class AIOnjuisteDetectie extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIOnjuisteDetectie>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIOnjuisteDetectie result) async {
               if (result == WhereToGoFromAIOnjuisteDetectie.home_screen) {
@@ -47,28 +47,28 @@ class AIOnjuisteDetectie extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
                 value: WhereToGoFromAIOnjuisteDetectie.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
                 value: WhereToGoFromAIOnjuisteDetectie.ww_onjuiste_detectie,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Onjuiste Detectie',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
                 value: WhereToGoFromAIOnjuisteDetectie.ai_bijzonderheden_trein,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Bijzonderheden Trein',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
                 value: WhereToGoFromAIOnjuisteDetectie.ai_vervoersregeling,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Vervoersregeling',
                 ),
               ),
@@ -82,9 +82,9 @@ class AIOnjuisteDetectie extends StatelessWidget {
           children: <Card>[
             /*CARD #1*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -108,9 +108,9 @@ class AIOnjuisteDetectie extends StatelessWidget {
             ),
             /*CARD #2*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -128,9 +128,9 @@ class AIOnjuisteDetectie extends StatelessWidget {
             ),
             /*CARD #3*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -148,9 +148,9 @@ class AIOnjuisteDetectie extends StatelessWidget {
             ),
             /*CARD #4*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

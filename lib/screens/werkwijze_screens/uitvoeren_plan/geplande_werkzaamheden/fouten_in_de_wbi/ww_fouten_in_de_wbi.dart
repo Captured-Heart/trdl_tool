@@ -20,7 +20,7 @@ class WWFoutenWBI extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWFoutenWBI>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWFoutenWBI result) async {
               if (result == WhereToGoFromWWFoutenWBI.home_screen) {
@@ -36,14 +36,14 @@ class WWFoutenWBI extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWFoutenWBI>(
                 value: WhereToGoFromWWFoutenWBI.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconInfo,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWFoutenWBI>(
                 value: WhereToGoFromWWFoutenWBI.ai_fouten_wbi,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Fouten WBI',
                 ),
               ),
@@ -57,9 +57,9 @@ class WWFoutenWBI extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -81,9 +81,9 @@ class WWFoutenWBI extends StatelessWidget {
             ),
             /*RISICO CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(
@@ -101,9 +101,9 @@ class WWFoutenWBI extends StatelessWidget {
             ),
             /*CONTEXT CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SubTitleText(

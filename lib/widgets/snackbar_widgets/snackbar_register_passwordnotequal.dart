@@ -1,6 +1,6 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
-final snackBarRegisterPasswordNotEqual = SnackBar(
+final SnackBar snackBarRegisterPasswordNotEqual = SnackBar(
   content: const Text(
     'De ingevulde wachtwoorden komen niet overeen',
     style: TextStyle(

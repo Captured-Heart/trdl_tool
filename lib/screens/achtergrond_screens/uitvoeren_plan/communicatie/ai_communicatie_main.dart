@@ -28,7 +28,7 @@ class AICommunicatieMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAICommunicatieMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAICommunicatieMain result) async {
               if (result == WhereToGoFromAICommunicatieMain.home_screen) {
@@ -63,7 +63,7 @@ class AICommunicatieMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
                 value: WhereToGoFromAICommunicatieMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -71,7 +71,7 @@ class AICommunicatieMain extends StatelessWidget {
                 value:
                     WhereToGoFromAICommunicatieMain.ww_mondelinge_communicatie,
                 child: MenuItemContent(
-                  icon: Icons.train,
+                  icon: Utils.iconWW,
                   text: 'WW Mondelinge Communicatie',
                 ),
               ),
@@ -79,28 +79,28 @@ class AICommunicatieMain extends StatelessWidget {
                 value:
                     WhereToGoFromAICommunicatieMain.ai_mondelinge_communicatie,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Mondelinge Communicatie',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
                 value: WhereToGoFromAICommunicatieMain.ai_communicatiemiddelen,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Communicatiemiddelen',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
                 value: WhereToGoFromAICommunicatieMain.ai_communicatiesysteem,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Communicatiesysteem',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
                 value: WhereToGoFromAICommunicatieMain.ai_ketenpartners,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Ketenpartners',
                 ),
               ),
@@ -114,9 +114,9 @@ class AICommunicatieMain extends StatelessWidget {
           children: <Card>[
             /*TITLE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(
@@ -128,9 +128,9 @@ class AICommunicatieMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(
@@ -173,9 +173,9 @@ class AICommunicatieMain extends StatelessWidget {
             ),
             /*IMAGE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     SizedBoxH(),

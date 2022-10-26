@@ -18,7 +18,7 @@ class AIVeiligheidsstoringSein extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIVeiligheidsstoringSein>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIVeiligheidsstoringSein result) async {
               if (result == WhereToGoFromAIVeiligheidsstoringSein.home_screen) {
@@ -32,7 +32,7 @@ class AIVeiligheidsstoringSein extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIVeiligheidsstoringSein>(
                 value: WhereToGoFromAIVeiligheidsstoringSein.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -45,9 +45,9 @@ class AIVeiligheidsstoringSein extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <Widget>[
                     TitleText(
@@ -60,9 +60,9 @@ class AIVeiligheidsstoringSein extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(

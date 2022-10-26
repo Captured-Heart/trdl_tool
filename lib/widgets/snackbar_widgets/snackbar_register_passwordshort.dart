@@ -1,6 +1,6 @@
-import 'package:trdl_tool/all_imports.dart';
+import '/all_imports.dart';
 
-final snackBarRegisterPasswordShort = SnackBar(
+final SnackBar snackBarRegisterPasswordShort = SnackBar(
   content: const Text(
     'Kies een wachtwoord van minimaal 6 tekens',
     style: TextStyle(

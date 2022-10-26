@@ -24,7 +24,7 @@ class WWWisselsMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWWisselsMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWWisselsMain result) async {
               if (result == WhereToGoFromWWWisselsMain.home_screen) {
@@ -45,14 +45,14 @@ class WWWisselsMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWWisselsMain>(
                 value: WhereToGoFromWWWisselsMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWWisselsMain>(
                 value: WhereToGoFromWWWisselsMain.ai_wissels_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Wissels',
                 ),
               ),
@@ -60,14 +60,14 @@ class WWWisselsMain extends StatelessWidget {
                 value: WhereToGoFromWWWisselsMain.ai_infra_overig,
                 //TODO: Pagina ai_infra_overig.dart toevoegen!
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Infra Overig',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWWisselsMain>(
                 value: WhereToGoFromWWWisselsMain.ai_incidenten_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Incidenten',
                 ),
               ),
@@ -81,9 +81,9 @@ class WWWisselsMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(
@@ -95,9 +95,9 @@ class WWWisselsMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(

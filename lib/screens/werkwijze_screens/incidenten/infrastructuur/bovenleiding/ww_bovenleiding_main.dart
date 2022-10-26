@@ -24,7 +24,7 @@ class WWBovenleidingMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromWWBovenleidingMain>(
-            icon: const Icon(Icons.info_outlined),
+            icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromWWBovenleidingMain result) async {
               if (result == WhereToGoFromWWBovenleidingMain.home_screen) {
@@ -47,28 +47,28 @@ class WWBovenleidingMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
                 value: WhereToGoFromWWBovenleidingMain.home_screen,
                 child: MenuItemContent(
-                  icon: Icons.home,
+                  icon: Utils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
                 value: WhereToGoFromWWBovenleidingMain.ai_incidenten_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Incidenten',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
                 value: WhereToGoFromWWBovenleidingMain.ai_infra_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Infra',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
                 value: WhereToGoFromWWBovenleidingMain.ai_bovenleiding_main,
                 child: MenuItemContent(
-                  icon: Icons.menu_book,
+                  icon: Utils.iconAI,
                   text: 'AI Bovenleiding',
                 ),
               ),
@@ -82,9 +82,9 @@ class WWBovenleidingMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: const <TitleText>[
                     TitleText(
@@ -96,9 +96,9 @@ class WWBovenleidingMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: kCardElevation,
+              elevation: Utils.kCardElevation,
               child: Padding(
-                padding: kCardPadding,
+                padding: Utils.kCardPadding,
                 child: Column(
                   children: <Widget>[
                     const TitleText(

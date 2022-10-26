@@ -10,9 +10,9 @@ Future<dynamic> finishQuizPopup(BuildContext context) {
           height: MediaQuery.of(context).size.width * 0.50,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
+            children: <Widget>[
               Row(
-                children: [
+                children: <Expanded>[
                   Expanded(
                     child: Text(
                       /*GET ANSWER VARIABLES AND SHOW HERE*/
@@ -27,7 +27,7 @@ Future<dynamic> finishQuizPopup(BuildContext context) {
               ),
               const SizedBoxH(),
               Row(
-                children: [
+                children: <Expanded>[
                   Expanded(
                     child: Text(
                       scorePercentage,
@@ -42,7 +42,7 @@ Future<dynamic> finishQuizPopup(BuildContext context) {
               ),
               const SizedBoxH(),
               Row(
-                children: const [
+                children: const <Expanded>[
                   Expanded(
                     child: Text(
                       'Wil je de quiz opnieuw doen?',
@@ -58,7 +58,7 @@ Future<dynamic> finishQuizPopup(BuildContext context) {
                 height: 20.0,
               ),
               Row(
-                children: [
+                children: <Widget>[
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
