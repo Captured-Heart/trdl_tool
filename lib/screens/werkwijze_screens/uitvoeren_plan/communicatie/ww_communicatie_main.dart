@@ -16,88 +16,88 @@ class WWCommunicatieMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Werkwijze',
+          title: Utils.appBarTitleWW,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromWWCommunicatieMain>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWCommunicatieMain result) async {
-              if (result == WhereToGoFromWWCommunicatieMain.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromWWCommunicatieMain.ai_communicatie_main) {
-                await Navigator.pushNamed(context, 'ai_communicatie_main');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromWWCommunicatieMain>>[
-              const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
-                value: WhereToGoFromWWCommunicatieMain.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconInfo,
-                  text: 'Home',
-                ),
+        actions: const <Widget>[
+          WWCommunicatieNavigation(),
+          HomeButton(),
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <TextCard>[
+              /*PROCEDURE CARD*/
+              const TextCard(
+                widgetList: <TitleText>[
+                  TitleText(
+                    title: 'Communicatie',
+                  ),
+                ],
               ),
-              const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
-                value: WhereToGoFromWWCommunicatieMain.ai_communicatie_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Communicatie',
-                ),
+              TextCard(
+                widgetList: <Widget>[
+                  const TitleText(
+                    title: 'Ga snel naar',
+                  ),
+                  const SizedBoxH(),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const <NavButton>[
+                      NavButton(
+                        buttontext: 'Mondelinge Communicatie',
+                        destination: 'ww_mondelinge_communicatie',
+                      ),
+                    ],
+                  ),
+                  const SizedBoxH(),
+                ],
               ),
             ],
           ),
-          const HomeButton(),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Card>[
-            /*PROCEDURE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <TitleText>[
-                    TitleText(
-                      title: 'Communicatie',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
-                    const TitleText(
-                      title: 'Ga snel naar',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const <NavButton>[
-                        NavButton(
-                          buttontext: 'Mondelinge Communicatie',
-                          destination: 'ww_mondelinge_communicatie',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
-                  ],
-                ),
-              ),
-            ),
-          ],
         ),
       ),
+    );
+  }
+}
+
+class WWCommunicatieNavigation extends StatelessWidget {
+  const WWCommunicatieNavigation({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromWWCommunicatieMain>(
+      icon: const Icon(Utils.iconInfo),
+      tooltip: 'Meer informatie',
+      onSelected: (WhereToGoFromWWCommunicatieMain result) async {
+        if (result == WhereToGoFromWWCommunicatieMain.home_screen) {
+          await Navigator.pushNamed(context, 'home_screen');
+        } else if (result ==
+            WhereToGoFromWWCommunicatieMain.ai_communicatie_main) {
+          await Navigator.pushNamed(context, 'ai_communicatie_main');
+        } else {
+          Navigator.pop(context);
+        }
+      },
+      itemBuilder: (BuildContext context) =>
+          <PopupMenuEntry<WhereToGoFromWWCommunicatieMain>>[
+        const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
+          value: WhereToGoFromWWCommunicatieMain.home_screen,
+          child: MenuItemContent(
+            icon: Utils.iconInfo,
+            text: 'Home',
+          ),
+        ),
+        const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
+          value: WhereToGoFromWWCommunicatieMain.ai_communicatie_main,
+          child: MenuItemContent(
+            icon: Utils.iconAI,
+            text: 'AI Communicatie',
+          ),
+        ),
+      ],
     );
   }
 }

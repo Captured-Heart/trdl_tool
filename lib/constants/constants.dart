@@ -43,5 +43,6 @@ class Utils {
   static const double kCardElevation = 8.0;
   static const EdgeInsets kCardPadding = EdgeInsets.all(12.0);
 
-  static PreferredSizeWidget appBarWidget = AppBar();
+  static const String appBarTitleWW = 'Werkwijze';
+  static const String appBarTitleAI = 'Achtergrondinformatie';
 }

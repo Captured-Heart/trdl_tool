@@ -16,41 +16,11 @@ class WWUitvoerenPlanMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Werkwijze',
+          title: Utils.appBarTitleWW,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromWWUitvoerenPlanMain>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWUitvoerenPlanMain result) async {
-              if (result == WhereToGoFromWWUitvoerenPlanMain.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromWWUitvoerenPlanMain.ai_uitvoeren_plan_main) {
-                await Navigator.pushNamed(context, 'ai_uitvoeren_plan_main');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromWWUitvoerenPlanMain>>[
-              const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
-                value: WhereToGoFromWWUitvoerenPlanMain.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconInfo,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
-                value: WhereToGoFromWWUitvoerenPlanMain.ai_uitvoeren_plan_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Uitvoeren Plan',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          WWUitvoerenPlanMainNavigation(),
+          HomeButton(),
         ],
       ),
       body: SafeArea(
@@ -119,6 +89,47 @@ class WWUitvoerenPlanMain extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class WWUitvoerenPlanMainNavigation extends StatelessWidget {
+  const WWUitvoerenPlanMainNavigation({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromWWUitvoerenPlanMain>(
+      icon: const Icon(Utils.iconInfo),
+      tooltip: 'Meer informatie',
+      onSelected: (WhereToGoFromWWUitvoerenPlanMain result) async {
+        if (result == WhereToGoFromWWUitvoerenPlanMain.home_screen) {
+          await Navigator.pushNamed(context, 'home_screen');
+        } else if (result ==
+            WhereToGoFromWWUitvoerenPlanMain.ai_uitvoeren_plan_main) {
+          await Navigator.pushNamed(context, 'ai_uitvoeren_plan_main');
+        } else {
+          Navigator.pop(context);
+        }
+      },
+      itemBuilder: (BuildContext context) =>
+          <PopupMenuEntry<WhereToGoFromWWUitvoerenPlanMain>>[
+        const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
+          value: WhereToGoFromWWUitvoerenPlanMain.home_screen,
+          child: MenuItemContent(
+            icon: Utils.iconInfo,
+            text: 'Home',
+          ),
+        ),
+        const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
+          value: WhereToGoFromWWUitvoerenPlanMain.ai_uitvoeren_plan_main,
+          child: MenuItemContent(
+            icon: Utils.iconAI,
+            text: 'AI Uitvoeren Plan',
+          ),
+        ),
+      ],
     );
   }
 }

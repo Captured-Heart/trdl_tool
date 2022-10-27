@@ -1,5 +1,7 @@
 import '/all_imports.dart';
 
+//TODO: Hier verder met refactor, zie TRDLtool TODO in Notion!
+
 enum WhereToGoFromWWVervoersregeling {
   // ignore: constant_identifier_names
   home_screen,
