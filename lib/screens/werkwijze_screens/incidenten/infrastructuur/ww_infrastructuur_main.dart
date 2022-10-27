@@ -1,5 +1,7 @@
 import '/all_imports.dart';
 
+//TODO: Hier verder met refactor Card() naar TextCard()
+
 enum WhereToGoFromWWInfraMain {
   // ignore: constant_identifier_names
   home_screen,
