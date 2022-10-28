@@ -16,112 +16,101 @@ class WWStoringBrug extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Werkwijze',
+          title: Utils.appBarTitleWW,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromWWStoringBrug>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWStoringBrug result) async {
-              if (result == WhereToGoFromWWStoringBrug.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result == WhereToGoFromWWStoringBrug.ai_storing_brug) {
-                await Navigator.pushNamed(context, 'ai_storing_brug');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromWWStoringBrug>>[
-              const PopupMenuItem<WhereToGoFromWWStoringBrug>(
-                value: WhereToGoFromWWStoringBrug.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
+        actions: const <Widget>[
+          WWStoringBrugNavigation(),
+          HomeButton(),
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: const <TextCard>[
+              TextCard(
+                widgetList: <Widget>[
+                  TitleText(
+                    title: 'Storing beweegbare brug',
+                  ),
+                  SizedBoxH(),
+                  SubTitleText(
+                    subtitle: Strings.procedure,
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Je mag een gestoorde beweegbare brug alleen laten berijden na toestemming van de storingsdienst.',
+                  ),
+                ],
               ),
-              const PopupMenuItem<WhereToGoFromWWStoringBrug>(
-                value: WhereToGoFromWWStoringBrug.ai_storing_brug,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Storing Brug',
-                ),
+              TextCard(
+                widgetList: <Widget>[
+                  SubTitleText(
+                    subtitle: Strings.risico,
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
+                  ),
+                ],
+              ),
+              TextCard(
+                widgetList: <Widget>[
+                  SubTitleText(
+                    subtitle: Strings.context,
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Wanneer een beweegbare brug door een storing niet in de vergrendeling ligt, is het beweegbare gedeelte van de brug niet veilig berijdbaar. Een storingsmonteur kan ter plaatse beoordelen of en onder welke voorwaarden de brug bereden kan worden.',
+                  ),
+                ],
               ),
             ],
           ),
-          const HomeButton(),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Card>[
-            /*PROCEDURE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    TitleText(
-                      title: 'Storing beweegbare brug',
-                    ),
-                    SizedBoxH(),
-                    SubTitleText(
-                      subtitle: Strings.procedure,
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Je mag een gestoorde beweegbare brug alleen laten berijden na toestemming van de storingsdienst.',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            /*RISICO CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    SubTitleText(
-                      subtitle: Strings.risico,
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Treinen komen niet tijdig tot stilstand voor het gevaarpunt, of de snelheid van treinen wordt niet tijdig teruggebracht voor het gevaarpunt.',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            /*CONTEXT CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    SubTitleText(
-                      subtitle: Strings.context,
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Wanneer een beweegbare brug door een storing niet in de vergrendeling ligt, is het beweegbare gedeelte van de brug niet veilig berijdbaar. Een storingsmonteur kan ter plaatse beoordelen of en onder welke voorwaarden de brug bereden kan worden.',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
         ),
       ),
+    );
+  }
+}
+
+class WWStoringBrugNavigation extends StatelessWidget {
+  const WWStoringBrugNavigation({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromWWStoringBrug>(
+      icon: const Icon(Utils.iconInfo),
+      tooltip: 'Meer informatie',
+      onSelected: (WhereToGoFromWWStoringBrug result) async {
+        if (result == WhereToGoFromWWStoringBrug.home_screen) {
+          await Navigator.pushNamed(context, 'home_screen');
+        } else if (result == WhereToGoFromWWStoringBrug.ai_storing_brug) {
+          await Navigator.pushNamed(context, 'ai_storing_brug');
+        } else {
+          Navigator.pop(context);
+        }
+      },
+      itemBuilder: (BuildContext context) =>
+          <PopupMenuEntry<WhereToGoFromWWStoringBrug>>[
+        const PopupMenuItem<WhereToGoFromWWStoringBrug>(
+          value: WhereToGoFromWWStoringBrug.home_screen,
+          child: MenuItemContent(
+            icon: Utils.iconHome,
+            text: 'Home',
+          ),
+        ),
+        const PopupMenuItem<WhereToGoFromWWStoringBrug>(
+          value: WhereToGoFromWWStoringBrug.ai_storing_brug,
+          child: MenuItemContent(
+            icon: Utils.iconAI,
+            text: 'AI Storing Brug',
+          ),
+        ),
+      ],
     );
   }
 }

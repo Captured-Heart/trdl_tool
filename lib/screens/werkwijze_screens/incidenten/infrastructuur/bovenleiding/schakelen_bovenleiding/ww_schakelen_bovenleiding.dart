@@ -16,115 +16,102 @@ class WWSchakelenBovenleiding extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Werkwijze',
+          title: Utils.appBarTitleWW,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromWWSchakelenBovenleiding>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWSchakelenBovenleiding result) async {
-              if (result == WhereToGoFromWWSchakelenBovenleiding.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromWWSchakelenBovenleiding
-                      .ai_schakelen_bovenleiding) {
-                await Navigator.pushNamed(context, 'ai_schakelen_bovenleiding');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromWWSchakelenBovenleiding>>[
-              const PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
-                value: WhereToGoFromWWSchakelenBovenleiding.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
+        actions: const <Widget>[
+          WWSchakelenBovenleidingNavigation(),
+          HomeButton(),
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: const <TextCard>[
+              TextCard(
+                widgetList: <Widget>[
+                  TitleText(
+                    title: 'Schakelen bovenleiding',
+                  ),
+                  SizedBoxH(),
+                  SubTitleText(
+                    subtitle: Strings.procedure,
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Het OBI meldt welke groepen geschakeld zijn/gaan worden. Je maakt een WECO op.',
+                  ),
+                ],
               ),
-              const PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
-                value: WhereToGoFromWWSchakelenBovenleiding
-                    .ai_schakelen_bovenleiding,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Schakelen Bovenleiding',
-                ),
+              TextCard(
+                widgetList: <Widget>[
+                  SubTitleText(
+                    subtitle: Strings.risico,
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
+                  ),
+                ],
+              ),
+              TextCard(
+                widgetList: <Widget>[
+                  SubTitleText(
+                    subtitle: Strings.context,
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'De bedieningsdeskundige van het OBI is installatieverantwoordelijke voor de bovenleiding. Wanneer de bovenleiding ongepland geschakeld wordt heeft dit gevolgen voor het kunnen rijden met elektrische tractie. De treinen in het betrokken gebied moeten de stroomafnemers laten zakken, omdat er problemen kunnen ontstaan wanneer het OBI de groepen weer onder spanning brengt.',
+                  ),
+                ],
               ),
             ],
           ),
-          const HomeButton(),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Card>[
-            /*PROCEDURE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    TitleText(
-                      title: 'Schakelen bovenleiding',
-                    ),
-                    SizedBoxH(),
-                    SubTitleText(
-                      subtitle: Strings.procedure,
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Het OBI meldt welke groepen geschakeld zijn/gaan worden. Je maakt een WECO op.',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            /*RISICO CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    SubTitleText(
-                      subtitle: Strings.risico,
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Trein komt op voor werkzaamheden beschikbaar gesteld spoor.',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            /*CONTEXT CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    SubTitleText(
-                      subtitle: Strings.context,
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'De bedieningsdeskundige van het OBI is installatieverantwoordelijke voor de bovenleiding. Wanneer de bovenleiding ongepland geschakeld wordt heeft dit gevolgen voor het kunnen rijden met elektrische tractie. De treinen in het betrokken gebied moeten de stroomafnemers laten zakken, omdat er problemen kunnen ontstaan wanneer het OBI de groepen weer onder spanning brengt.',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
         ),
       ),
+    );
+  }
+}
+
+class WWSchakelenBovenleidingNavigation extends StatelessWidget {
+  const WWSchakelenBovenleidingNavigation({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromWWSchakelenBovenleiding>(
+      icon: const Icon(Utils.iconInfo),
+      tooltip: 'Meer informatie',
+      onSelected: (WhereToGoFromWWSchakelenBovenleiding result) async {
+        if (result == WhereToGoFromWWSchakelenBovenleiding.home_screen) {
+          await Navigator.pushNamed(context, 'home_screen');
+        } else if (result ==
+            WhereToGoFromWWSchakelenBovenleiding.ai_schakelen_bovenleiding) {
+          await Navigator.pushNamed(context, 'ai_schakelen_bovenleiding');
+        } else {
+          Navigator.pop(context);
+        }
+      },
+      itemBuilder: (BuildContext context) =>
+          <PopupMenuEntry<WhereToGoFromWWSchakelenBovenleiding>>[
+        const PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
+          value: WhereToGoFromWWSchakelenBovenleiding.home_screen,
+          child: MenuItemContent(
+            icon: Utils.iconHome,
+            text: 'Home',
+          ),
+        ),
+        const PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
+          value: WhereToGoFromWWSchakelenBovenleiding.ai_schakelen_bovenleiding,
+          child: MenuItemContent(
+            icon: Utils.iconAI,
+            text: 'AI Schakelen Bovenleiding',
+          ),
+        ),
+      ],
     );
   }
 }
