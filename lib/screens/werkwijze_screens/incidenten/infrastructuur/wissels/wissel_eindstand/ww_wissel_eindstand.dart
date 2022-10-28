@@ -16,112 +16,101 @@ class WWWisselEindstand extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Werkwijze',
+          title: Utils.appBarTitleWW,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromWWWisselEindstand>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWWisselEindstand result) async {
-              if (result == WhereToGoFromWWWisselEindstand.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromWWWisselEindstand.ai_wissel_eindstand) {
-                await Navigator.pushNamed(context, 'ai_wissel_eindstand');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromWWWisselEindstand>>[
-              const PopupMenuItem<WhereToGoFromWWWisselEindstand>(
-                value: WhereToGoFromWWWisselEindstand.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
+        actions: const <Widget>[
+          WWWisselEindstandNavigation(),
+          HomeButton(),
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: const <TextCard>[
+              TextCard(
+                widgetList: <Widget>[
+                  TitleText(
+                    title: 'Wissel komt niet in de gevraagde eindstand',
+                  ),
+                  SizedBoxH(),
+                  SubTitleText(
+                    subtitle: Strings.procedure,
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Probeer het wissel meerdere keren om te leggen. Wanneer het wissel maar in één stand in de controle komt, leg je het wissel in die stand vast.',
+                  ),
+                ],
               ),
-              const PopupMenuItem<WhereToGoFromWWWisselEindstand>(
-                value: WhereToGoFromWWWisselEindstand.ai_wissel_eindstand,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Wissel Eindstand',
-                ),
+              TextCard(
+                widgetList: <Widget>[
+                  SubTitleText(
+                    subtitle: Strings.risico,
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text: 'Logistiek risico.',
+                  ),
+                ],
+              ),
+              TextCard(
+                widgetList: <Widget>[
+                  SubTitleText(
+                    subtitle: Strings.context,
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Wanneer een wissel niet in de gevraagde eindstand komt, probeert het wissel gedurende 1 minuut alsnog in de eindstand te komen. Lukt dit niet, dan stopt in de meeste gevallen de wisselmotor. De communicatie met het wissel is niet gestoord en het wissel kan dus nog steeds een opdracht aannemen.',
+                  ),
+                ],
               ),
             ],
           ),
-          const HomeButton(),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Card>[
-            /*PROCEDURE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    TitleText(
-                      title: 'Wissel komt niet in de gevraagde eindstand',
-                    ),
-                    SizedBoxH(),
-                    SubTitleText(
-                      subtitle: Strings.procedure,
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Probeer het wissel meerdere keren om te leggen. Wanneer het wissel maar in één stand in de controle komt, leg je het wissel in die stand vast.',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            /*RISICO CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    SubTitleText(
-                      subtitle: Strings.risico,
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text: 'Logistiek risico.',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            /*CONTEXT CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    SubTitleText(
-                      subtitle: Strings.context,
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Wanneer een wissel niet in de gevraagde eindstand komt, probeert het wissel gedurende 1 minuut alsnog in de eindstand te komen. Lukt dit niet, dan stopt in de meeste gevallen de wisselmotor. De communicatie met het wissel is niet gestoord en het wissel kan dus nog steeds een opdracht aannemen.',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
         ),
       ),
+    );
+  }
+}
+
+class WWWisselEindstandNavigation extends StatelessWidget {
+  const WWWisselEindstandNavigation({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromWWWisselEindstand>(
+      icon: const Icon(Utils.iconInfo),
+      tooltip: 'Meer informatie',
+      onSelected: (WhereToGoFromWWWisselEindstand result) async {
+        if (result == WhereToGoFromWWWisselEindstand.home_screen) {
+          await Navigator.pushNamed(context, 'home_screen');
+        } else if (result ==
+            WhereToGoFromWWWisselEindstand.ai_wissel_eindstand) {
+          await Navigator.pushNamed(context, 'ai_wissel_eindstand');
+        } else {
+          Navigator.pop(context);
+        }
+      },
+      itemBuilder: (BuildContext context) =>
+          <PopupMenuEntry<WhereToGoFromWWWisselEindstand>>[
+        const PopupMenuItem<WhereToGoFromWWWisselEindstand>(
+          value: WhereToGoFromWWWisselEindstand.home_screen,
+          child: MenuItemContent(
+            icon: Utils.iconHome,
+            text: 'Home',
+          ),
+        ),
+        const PopupMenuItem<WhereToGoFromWWWisselEindstand>(
+          value: WhereToGoFromWWWisselEindstand.ai_wissel_eindstand,
+          child: MenuItemContent(
+            icon: Utils.iconAI,
+            text: 'AI Wissel Eindstand',
+          ),
+        ),
+      ],
     );
   }
 }

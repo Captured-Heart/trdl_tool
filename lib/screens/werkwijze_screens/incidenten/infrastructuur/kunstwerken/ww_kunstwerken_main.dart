@@ -18,103 +18,98 @@ class WWKunstwerkenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Werkwijze',
+          title: Utils.appBarTitleWW,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromWWKunstwerkenMain>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromWWKunstwerkenMain result) async {
-              if (result == WhereToGoFromWWKunstwerkenMain.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromWWKunstwerkenMain.ai_kunstwerken_main) {
-                await Navigator.pushNamed(context, 'ai_kunstwerken_main');
-              } else if (result ==
-                  WhereToGoFromWWKunstwerkenMain.ai_infra_main) {
-                await Navigator.pushNamed(context, 'ai_infra_main');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromWWKunstwerkenMain>>[
-              const PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
-                value: WhereToGoFromWWKunstwerkenMain.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
+        actions: const <Widget>[
+          WWKunstWerkenMainNavigation(),
+          HomeButton(),
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <TextCard>[
+              const TextCard(
+                widgetList: <TitleText>[
+                  TitleText(
+                    title: 'Kunstwerken',
+                  ),
+                ],
               ),
-              const PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
-                value: WhereToGoFromWWKunstwerkenMain.ai_kunstwerken_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Kunstwerken',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
-                value: WhereToGoFromWWKunstwerkenMain.ai_infra_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Infra',
-                ),
+              TextCard(
+                widgetList: <Widget>[
+                  const TitleText(
+                    title: 'Ga snel naar',
+                  ),
+                  const SizedBoxH(),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const <Widget>[
+                      NavButton(
+                        buttontext: 'Aanrijding viaduct',
+                        destination: 'ww_aanrijding_viaduct',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Storing brug',
+                        destination: 'ww_storing_brug',
+                      ),
+                    ],
+                  ),
+                  const SizedBoxH(),
+                ],
               ),
             ],
           ),
-          const HomeButton(),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Card>[
-            /*PROCEDURE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <TitleText>[
-                    TitleText(
-                      title: 'Kunstwerken',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
-                    const TitleText(
-                      title: 'Ga snel naar',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const <Widget>[
-                        NavButton(
-                          buttontext: 'Aanrijding viaduct',
-                          destination: 'ww_aanrijding_viaduct',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Storing brug',
-                          destination: 'ww_storing_brug',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
-                  ],
-                ),
-              ),
-            ),
-          ],
         ),
       ),
+    );
+  }
+}
+
+class WWKunstWerkenMainNavigation extends StatelessWidget {
+  const WWKunstWerkenMainNavigation({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromWWKunstwerkenMain>(
+      icon: const Icon(Utils.iconInfo),
+      tooltip: 'Meer informatie',
+      onSelected: (WhereToGoFromWWKunstwerkenMain result) async {
+        if (result == WhereToGoFromWWKunstwerkenMain.home_screen) {
+          await Navigator.pushNamed(context, 'home_screen');
+        } else if (result ==
+            WhereToGoFromWWKunstwerkenMain.ai_kunstwerken_main) {
+          await Navigator.pushNamed(context, 'ai_kunstwerken_main');
+        } else if (result == WhereToGoFromWWKunstwerkenMain.ai_infra_main) {
+          await Navigator.pushNamed(context, 'ai_infra_main');
+        } else {
+          Navigator.pop(context);
+        }
+      },
+      itemBuilder: (BuildContext context) =>
+          <PopupMenuEntry<WhereToGoFromWWKunstwerkenMain>>[
+        const PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
+          value: WhereToGoFromWWKunstwerkenMain.home_screen,
+          child: MenuItemContent(
+            icon: Utils.iconHome,
+            text: 'Home',
+          ),
+        ),
+        const PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
+          value: WhereToGoFromWWKunstwerkenMain.ai_kunstwerken_main,
+          child: MenuItemContent(
+            icon: Utils.iconAI,
+            text: 'AI Kunstwerken',
+          ),
+        ),
+        const PopupMenuItem<WhereToGoFromWWKunstwerkenMain>(
+          value: WhereToGoFromWWKunstwerkenMain.ai_infra_main,
+          child: MenuItemContent(
+            icon: Utils.iconAI,
+            text: 'AI Infra',
+          ),
+        ),
+      ],
     );
   }
 }
