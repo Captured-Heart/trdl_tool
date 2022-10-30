@@ -14,7 +14,7 @@ class AIBeveiligingBasis2 extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.appBarTitleAI,
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIBeveiligingBasis2>(

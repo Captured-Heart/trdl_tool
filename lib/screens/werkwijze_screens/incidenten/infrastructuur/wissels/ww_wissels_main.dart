@@ -117,7 +117,6 @@ class WWWisselsMainNavigation extends StatelessWidget {
         ),
         const PopupMenuItem<WhereToGoFromWWWisselsMain>(
           value: WhereToGoFromWWWisselsMain.ai_infra_overig,
-          //TODO: Pagina ai_infra_overig.dart toevoegen!
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Infra Overig',
