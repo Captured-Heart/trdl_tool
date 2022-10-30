@@ -17,7 +17,6 @@ Future<dynamic> showVersionUpdatePopup(BuildContext context) {
                 ),
                 SizedBoxH(),
                 DateChanged(
-                  //TODO: Vul juiste datum in!
                   date: '2022-10-??: 0.3.1',
                 ),
                 ChangesMade(
