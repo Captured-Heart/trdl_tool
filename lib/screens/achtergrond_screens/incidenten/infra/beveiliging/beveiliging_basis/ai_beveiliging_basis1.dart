@@ -1,5 +1,7 @@
 import '/all_imports.dart';
 
+//TODO: Hier verder met toevoegen info!
+
 enum WhereToGoFromAIBeveiligingBasis1 {
   // ignore: constant_identifier_names
   home_screen,
@@ -29,8 +31,8 @@ class AIBeveiligingBasis1 extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: <TextCard>[
-              TextCard(
-                widgetList: const <Widget>[
+              const TextCard(
+                widgetList: <Widget>[
                   TitleText(
                     title: 'Beveiliging - basisinformatie deel 1',
                   ),
@@ -50,7 +52,10 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                         '- Linkerspoorbeveiliging;\n- Enkelspoorbeveiliging;\n- Dubbel- enkelspoorbeveiliging.',
                   ),
                   SizedBoxH(),
-                  BoldText(indents: 0, boldtext: 'Linkerspoorbeveiliging',),
+                  BoldText(
+                    indents: 0,
+                    boldtext: 'Linkerspoorbeveiliging',
+                  ),
                   BodyText(
                     indents: 0,
                     text:
@@ -137,235 +142,207 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   SizedBoxH(),
                 ],
               ),
-              /*CARD #2*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
-                      SubTitleText(
-                        subtitle: 'Emplacementsbeveiliging',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            "Op de vrije baan, het spoorgedeelte tussen de stations, werkt de beveiliging voor een groot deel automatisch. Door het ruststroomprincipe is het sein dat een blok dekt rood als in dat blok spoorbezetting is. Deze P-seinen kan de TRDL niet bedienen.\n\nOp een station moet de TRDL een blok 'maken'. Hij moet d.m.v. wissels de trein leiden naar het perronspoor dat in zijn planregel vermeld staat, om reizigers en treinen op het juiste tijdstip op de juiste plaats te doen zijn. Het beveiligingssysteem zorgt ervoor dat:",
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- De rijrichting tot het eerstvolgende bedienbare sein wordt gecontroleerd, zo mogelijk ingesteld en vastgelegd;\n\n- De beveiligingsinrichtingen worden gecontroleerd, gestuurd en vastgelegd;\n\nDe rijweg (het blok) wordt gecontroleerd op spoorbezetting.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            "Als aan alle voorwaarden wordt voldaan komt het sein 'veilig'.\n\nEr zijn verschillende emplacementsbeveiligingen:",
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- NX - ENtrance / Exit beveiligingssysteem met relais;\n\n- EBS - Elektronisch beveiligingssysteem SIMIS;\n\n- VPI - Vital Process Interlocking. Een beveiligingssysteem dat op dezelfde manier werkt als NX, maar dan elektronisch.',
-                      ),
-                      SizedBoxH(),
-                      SubTitleText(
-                        subtitle: 'NX',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            "NX is een relaisbeveiligingssysteem dat d.m.v. relaisstanden de spoorbezettingen aangeeft en daarmee de beveiliging regelt.\n\nKort na WOII was van het Nederlands spoorwegnet, evenals van dat van de rest van Europa, weinig of niets meer over. Het was zaak alles zo snel mogelijk te herstellen en Nederland weer op te bouwen, een goed functionerend spoorwegnet was hierbij natuurlijk belangrijk. Met financiële hulp van Amerika werd het spoorwegnet herbouwd.\n\nEen aantal hooggeplaatste Nederlandse spoorfunctionarissen reisde kort na de oorlog af naar Amerika om een nieuw beveiligingssysteem te bezichtigen. Ze hadden namelijk gehoord dat in Amerika een modern systeem was ingevoerd dat snel werkte en de bedoeling was dat dit ook in Nederland ingevoerd ging worden.\n\nTijdens dit bezoek spraken de Amerikanen over het systeem, afgekort, als het 'EN/EX' systeem. De 'tolk' vertelde: als je in het Engels het alfabet opnoemt zeggen ze bij de letter 'N' net als wij 'EN', maar bij de letter 'X' zeggen ze niet 'IX' zoals wij maar 'EX', dus ze zeggen eigenlijk NX, en dat is dus de naam van de beveiliging. Zo was het en zo is het nu nog steeds.\n\nWat de Amerikanen echter afgekort hadden was ENtrance/EXit. Of zoals wij zouden zeggen begin/eind. De kracht van het systeem is namelijk dat een TRDL het begin en het eind van een rijweg moet aangeven, terwijl het systeem dan alle beveiligingselementen controleert, aanstuurt en vergrendelt. Men hoeft dus niet meer alle elementen afzonderlijk te bedienen en dat werkt vele malen sneller dan de toen 'klassiek' geworden beveiliging.",
-                      ),
-                    ],
+              const TextCard(
+                widgetList: <Widget>[
+                  SubTitleText(
+                    subtitle: 'Emplacementsbeveiliging',
                   ),
-                ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        "Op de vrije baan, het spoorgedeelte tussen de stations, werkt de beveiliging voor een groot deel automatisch. Door het ruststroomprincipe is het sein dat een blok dekt rood als in dat blok spoorbezetting is. Deze P-seinen kan de TRDL niet bedienen.\n\nOp een station moet de TRDL een blok 'maken'. Hij moet d.m.v. wissels de trein leiden naar het perronspoor dat in zijn planregel vermeld staat, om reizigers en treinen op het juiste tijdstip op de juiste plaats te doen zijn. Het beveiligingssysteem zorgt ervoor dat:",
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 1,
+                    text:
+                        '- De rijrichting tot het eerstvolgende bedienbare sein wordt gecontroleerd, zo mogelijk ingesteld en vastgelegd;\n\n- De beveiligingsinrichtingen worden gecontroleerd, gestuurd en vastgelegd;\n\nDe rijweg (het blok) wordt gecontroleerd op spoorbezetting.',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        "Als aan alle voorwaarden wordt voldaan komt het sein 'veilig'.\n\nEr zijn verschillende emplacementsbeveiligingen:",
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 1,
+                    text:
+                        '- NX - ENtrance / Exit beveiligingssysteem met relais;\n\n- EBS - Elektronisch beveiligingssysteem SIMIS;\n\n- VPI - Vital Process Interlocking. Een beveiligingssysteem dat op dezelfde manier werkt als NX, maar dan elektronisch.',
+                  ),
+                  SizedBoxH(),
+                  SubTitleText(
+                    subtitle: 'NX',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        "NX is een relaisbeveiligingssysteem dat d.m.v. relaisstanden de spoorbezettingen aangeeft en daarmee de beveiliging regelt.\n\nKort na WOII was van het Nederlands spoorwegnet, evenals van dat van de rest van Europa, weinig of niets meer over. Het was zaak alles zo snel mogelijk te herstellen en Nederland weer op te bouwen, een goed functionerend spoorwegnet was hierbij natuurlijk belangrijk. Met financiële hulp van Amerika werd het spoorwegnet herbouwd.\n\nEen aantal hooggeplaatste Nederlandse spoorfunctionarissen reisde kort na de oorlog af naar Amerika om een nieuw beveiligingssysteem te bezichtigen. Ze hadden namelijk gehoord dat in Amerika een modern systeem was ingevoerd dat snel werkte en de bedoeling was dat dit ook in Nederland ingevoerd ging worden.\n\nTijdens dit bezoek spraken de Amerikanen over het systeem, afgekort, als het 'EN/EX' systeem. De 'tolk' vertelde: als je in het Engels het alfabet opnoemt zeggen ze bij de letter 'N' net als wij 'EN', maar bij de letter 'X' zeggen ze niet 'IX' zoals wij maar 'EX', dus ze zeggen eigenlijk NX, en dat is dus de naam van de beveiliging. Zo was het en zo is het nu nog steeds.\n\nWat de Amerikanen echter afgekort hadden was ENtrance/EXit. Of zoals wij zouden zeggen begin/eind. De kracht van het systeem is namelijk dat een TRDL het begin en het eind van een rijweg moet aangeven, terwijl het systeem dan alle beveiligingselementen controleert, aanstuurt en vergrendelt. Men hoeft dus niet meer alle elementen afzonderlijk te bedienen en dat werkt vele malen sneller dan de toen 'klassiek' geworden beveiliging.",
+                  ),
+                ],
               ),
-              /*BEVEILIGING 2 CARD*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: <Widget>[
-                      const TitleText(
-                        title: 'Ga snel naar',
+              TextCard(
+                widgetList: <Widget>[
+                  const TitleText(
+                    title: 'Ga snel naar',
+                  ),
+                  const SizedBoxH(),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const <NavButton>[
+                      NavButton(
+                        buttontext: 'EBS en VPI',
+                        destination: 'ai_beveiliging_basis2',
                       ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const <NavButton>[
-                          NavButton(
-                            buttontext: 'EBS en VPI',
-                            destination: 'ai_beveiliging_basis2',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
                     ],
                   ),
-                ),
+                  const SizedBoxH(),
+                ],
               ),
-              /*CARD #3*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
-                      SubTitleText(
-                        subtitle: 'Cascadeschakeling en Two Track Pick Up',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Rijwegen worden ingesteld door de TRDL. Hij maakt hierbij gebruik van procesleiding en kan daarvoor ARI (automatische rijweginstelling) gebruiken.\n\nAls de TRDL een rijweg gaat instellen in procesleiding gebeurt er het volgende:',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 1,
-                        text:
-                            '- De rijweg wordt gecontroleerd op tegengestelde bewegingen en indien mogelijk wordt de rijrichting ingesteld en vergrendeld. Een tegengestelde rijweg wordt hierdoor uitgesloten;\n\n- De wissels in de rijweg worden in de juiste stand gestuurd en daarna vergrendeld. Ook eventuele andere inrichtingen die in de ingestelde rijweg liggen worden vergrendeld (bruggen, grendels, etc.);\n\n- De rijweg is nu vastgelegd;\n\n- De rijweg wordt gecontroleerd op spoorbezetting;\n\n- Het sein komt uit de stand stop.',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            "Wanneer de rijweg wordt ingesteld met het seinbeeld 'geel knipper', vindt er geen controle plaats op eventuele spoorbezetting.",
-                      ),
-                      SizedBoxH(),
-                      SubTitleText(
-                        subtitle: 'Cascadeschakeling',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            "Als een rijweg wordt ingesteld wordt deze vergrendeld. Wanneer het sein uit de stand stop komt wordt de rijweg vastgehouden door het sein dat veilig staat. Passeert een trein het sein, dan dooft binnen het seinsymbool en komt buiten het sein terug in de stand stop. Vanaf dat moment wordt de rijwegvasthouding overgenomen door de spoorbezetting. Achter de spoorbezetting (trein) komen de secties (met de daarin gelegen wissels en eventuele andere inrichtingen) om de beurt weer vrij. Deze secties zijn voor dit proces 'cascade' geschakeld.\n\nDit betekent dat een sectie pas vrijkomt nadat deze gecontroleerd heeft of de voorgaande sectie ook is vrijgekomen. Herroept men het sein dan wordt deze rijwegvasthouding pas opgeheven na minimaal 120 seconden. Dit heeft als voordeel wanneer er een trein door dit sein heen zou schieten de inrichtingen in ieder geval nog vastgelegd zijn waardoor de inrichtingen geen deel uit kunnen gaan maken van een andere rijweg.",
-                      ),
-                      SizedBoxH(),
-                      SubTitleText(
-                        subtitle: 'Werking cascadeschakeling',
-                      ),
-                      InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/cascadeschakeling1.png',
-                      ),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'De TRDL heeft een rijweg ingesteld van spoor 1 (sein 108) naar spoor 62 (sein 210).',
-                      ),
-                      SizedBoxH(),
-                      InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/cascadeschakeling2.png',
-                      ),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Nadat trein 828 sein 108 gepasseerd is, komen de secties achter elkaar vrij.',
-                      ),
-                      SizedBoxH(),
-                      InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/cascadeschakeling3.png',
-                      ),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Veronderstel dat sectie 3 niet vrijkomt. Dan zal, door de cascadeschakeling, ook sectie 4 niet vrijkomen en blijft de rijweg tussen sectie 3 en 5 er in staan.\n\nDe cascadeschakeling houdt hier de rijweg vast in sectie 4, omdat sectie 3 niet vrijgekomen is.',
-                      ),
-                      SizedBoxH(),
-                      SubTitleText(
-                        subtitle: 'Two Track Pick Up (TTPU)',
-                      ),
-                      SizedBoxH(),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Is er een rijweg ingesteld, dan is de eerste sectie achter het sein de afrijdsectie. Dit wil zeggen dat deze sectie de basis vormt voor het afbreken van de rijweg.\n\nBij TTPU heeft men het afbreken van de rijweg afhankelijk gemaakt van de bezetting van zowel de eerste als tweede sectie achter het sein. Dit om te voorkomen dat een rijweg ten onrechte vrijkomt als de eerste sectie achter het sein (afrijdsectie) even bezet raakt en dan weer vrijkomt. Door het even bezet zijn van de afrijdsectie na rijweginstelling kan dan de gehele rijweg vrijkomen. Dit kan aanleiding zijn tot een gevaarlijke situatie.',
-                      ),
-                      SizedBoxH(),
-                      SubTitleText(
-                        subtitle: 'Werking TTPU',
-                      ),
-                      SizedBoxH(),
-                      InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/ttpu1.png',
-                      ),
-                      BodyText(
-                        indents: 0,
-                        text: 'Stel dat sein 458 niet is uitgerust met TTPU...',
-                      ),
-                      SizedBoxH(),
-                      InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/ttpu2.png',
-                      ),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Als er nu spoorbezetting ontstaat achter sein 458 in wisselsectie 457B en/of de sectie daarachter, dan valt sein 458 op rood en de overweg - die achter sein 458 ligt - blijft dicht liggen.',
-                      ),
-                      SizedBoxH(),
-                      InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/ttpu3.png',
-                      ),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            'Als de spoorbezetting in de wisselsectie 457B weg valt, gaat de overweg achter sein 458 weer open, blijft sein 458 rood tonen en komen wissels in de rijweg meteen weer vrij.\n\nDit is een gevaarlijke situatie! Omdat trein 1928 eerst een groen seinbeeld heeft gehad is de kans groot dat er niet meer voor stoptonend sein 458 gestopt kan worden. Als trein 1928 door stoptonend sein rijdt, rijdt deze over een open overweg en over wissels die niet meer vastliggen.',
-                      ),
-                      SizedBoxH(),
-                      InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/ttpu4.png',
-                      ),
-                      BodyText(
-                        indents: 0,
-                        text:
-                            "Om dit te voorkomen zijn seinen die toegang geven richting bijv. een overweg uitgerust met TTPU. Dit betekent dat wanneer zich een dergelijke situatie voordoet, de wissels nog minimaal 120 seconden vergrendeld blijven liggen. Ook blijft de overweg nog minimaal 120 seconden aankondigen. Mocht de trein ondertussen voorbij het sein zijn, dan blijft de overweg normaal aankondigen. Pas wanneer de sectie achter het sein en de volgende sectie bezet geweest zijn vindt er normale 'afbraak' van de rijweg plaats.\n\nRisico blijft nog wel dat wanneer de eerste 2 secties achter het sein tegelijk bezet worden en de spoorbezetting er daarna weer uitvalt, de rijweg in één keer helemaal vrij komt. Dit risico is echter aanvaardbaar klein.",
-                      ),
-                    ],
+              const TextCard(
+                widgetList: <Widget>[
+                  SubTitleText(
+                    subtitle: 'Cascadeschakeling en Two Track Pick Up',
                   ),
-                ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Rijwegen worden ingesteld door de TRDL. Hij maakt hierbij gebruik van procesleiding en kan daarvoor ARI (automatische rijweginstelling) gebruiken.\n\nAls de TRDL een rijweg gaat instellen in procesleiding gebeurt er het volgende:',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 1,
+                    text:
+                        '- De rijweg wordt gecontroleerd op tegengestelde bewegingen en indien mogelijk wordt de rijrichting ingesteld en vergrendeld. Een tegengestelde rijweg wordt hierdoor uitgesloten;\n\n- De wissels in de rijweg worden in de juiste stand gestuurd en daarna vergrendeld. Ook eventuele andere inrichtingen die in de ingestelde rijweg liggen worden vergrendeld (bruggen, grendels, etc.);\n\n- De rijweg is nu vastgelegd;\n\n- De rijweg wordt gecontroleerd op spoorbezetting;\n\n- Het sein komt uit de stand stop.',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        "Wanneer de rijweg wordt ingesteld met het seinbeeld 'geel knipper', vindt er geen controle plaats op eventuele spoorbezetting.",
+                  ),
+                  SizedBoxH(),
+                  SubTitleText(
+                    subtitle: 'Cascadeschakeling',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        "Als een rijweg wordt ingesteld wordt deze vergrendeld. Wanneer het sein uit de stand stop komt wordt de rijweg vastgehouden door het sein dat veilig staat. Passeert een trein het sein, dan dooft binnen het seinsymbool en komt buiten het sein terug in de stand stop. Vanaf dat moment wordt de rijwegvasthouding overgenomen door de spoorbezetting. Achter de spoorbezetting (trein) komen de secties (met de daarin gelegen wissels en eventuele andere inrichtingen) om de beurt weer vrij. Deze secties zijn voor dit proces 'cascade' geschakeld.\n\nDit betekent dat een sectie pas vrijkomt nadat deze gecontroleerd heeft of de voorgaande sectie ook is vrijgekomen. Herroept men het sein dan wordt deze rijwegvasthouding pas opgeheven na minimaal 120 seconden. Dit heeft als voordeel wanneer er een trein door dit sein heen zou schieten de inrichtingen in ieder geval nog vastgelegd zijn waardoor de inrichtingen geen deel uit kunnen gaan maken van een andere rijweg.",
+                  ),
+                  SizedBoxH(),
+                  SubTitleText(
+                    subtitle: 'Werking cascadeschakeling',
+                  ),
+                  InsertImage(
+                    image:
+                        'assets/images/achtergrond_info/incidenten/cascadeschakeling1.png',
+                  ),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'De TRDL heeft een rijweg ingesteld van spoor 1 (sein 108) naar spoor 62 (sein 210).',
+                  ),
+                  SizedBoxH(),
+                  InsertImage(
+                    image:
+                        'assets/images/achtergrond_info/incidenten/cascadeschakeling2.png',
+                  ),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Nadat trein 828 sein 108 gepasseerd is, komen de secties achter elkaar vrij.',
+                  ),
+                  SizedBoxH(),
+                  InsertImage(
+                    image:
+                        'assets/images/achtergrond_info/incidenten/cascadeschakeling3.png',
+                  ),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Veronderstel dat sectie 3 niet vrijkomt. Dan zal, door de cascadeschakeling, ook sectie 4 niet vrijkomen en blijft de rijweg tussen sectie 3 en 5 er in staan.\n\nDe cascadeschakeling houdt hier de rijweg vast in sectie 4, omdat sectie 3 niet vrijgekomen is.',
+                  ),
+                  SizedBoxH(),
+                  SubTitleText(
+                    subtitle: 'Two Track Pick Up (TTPU)',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Is er een rijweg ingesteld, dan is de eerste sectie achter het sein de afrijdsectie. Dit wil zeggen dat deze sectie de basis vormt voor het afbreken van de rijweg.\n\nBij TTPU heeft men het afbreken van de rijweg afhankelijk gemaakt van de bezetting van zowel de eerste als tweede sectie achter het sein. Dit om te voorkomen dat een rijweg ten onrechte vrijkomt als de eerste sectie achter het sein (afrijdsectie) even bezet raakt en dan weer vrijkomt. Door het even bezet zijn van de afrijdsectie na rijweginstelling kan dan de gehele rijweg vrijkomen. Dit kan aanleiding zijn tot een gevaarlijke situatie.',
+                  ),
+                  SizedBoxH(),
+                  SubTitleText(
+                    subtitle: 'Werking TTPU',
+                  ),
+                  SizedBoxH(),
+                  InsertImage(
+                    image:
+                        'assets/images/achtergrond_info/incidenten/ttpu1.png',
+                  ),
+                  BodyText(
+                    indents: 0,
+                    text: 'Stel dat sein 458 niet is uitgerust met TTPU...',
+                  ),
+                  SizedBoxH(),
+                  InsertImage(
+                    image:
+                        'assets/images/achtergrond_info/incidenten/ttpu2.png',
+                  ),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Als er nu spoorbezetting ontstaat achter sein 458 in wisselsectie 457B en/of de sectie daarachter, dan valt sein 458 op rood en de overweg - die achter sein 458 ligt - blijft dicht liggen.',
+                  ),
+                  SizedBoxH(),
+                  InsertImage(
+                    image:
+                        'assets/images/achtergrond_info/incidenten/ttpu3.png',
+                  ),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Als de spoorbezetting in de wisselsectie 457B weg valt, gaat de overweg achter sein 458 weer open, blijft sein 458 rood tonen en komen wissels in de rijweg meteen weer vrij.\n\nDit is een gevaarlijke situatie! Omdat trein 1928 eerst een groen seinbeeld heeft gehad is de kans groot dat er niet meer voor stoptonend sein 458 gestopt kan worden. Als trein 1928 door stoptonend sein rijdt, rijdt deze over een open overweg en over wissels die niet meer vastliggen.',
+                  ),
+                  SizedBoxH(),
+                  InsertImage(
+                    image:
+                        'assets/images/achtergrond_info/incidenten/ttpu4.png',
+                  ),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        "Om dit te voorkomen zijn seinen die toegang geven richting bijv. een overweg uitgerust met TTPU. Dit betekent dat wanneer zich een dergelijke situatie voordoet, de wissels nog minimaal 120 seconden vergrendeld blijven liggen. Ook blijft de overweg nog minimaal 120 seconden aankondigen. Mocht de trein ondertussen voorbij het sein zijn, dan blijft de overweg normaal aankondigen. Pas wanneer de sectie achter het sein en de volgende sectie bezet geweest zijn vindt er normale 'afbraak' van de rijweg plaats.\n\nRisico blijft nog wel dat wanneer de eerste 2 secties achter het sein tegelijk bezet worden en de spoorbezetting er daarna weer uitvalt, de rijweg in één keer helemaal vrij komt. Dit risico is echter aanvaardbaar klein.",
+                  ),
+                ],
               ),
-              /*ACHTERGROND CARD*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: <Widget>[
-                      const TitleText(
-                        title: 'Ga snel naar',
+              TextCard(
+                widgetList: <Widget>[
+                  const TitleText(
+                    title: 'Ga snel naar',
+                  ),
+                  const SizedBoxH(),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const <NavButton>[
+                      NavButton(
+                        buttontext: 'Beveiliging Werkwijze',
+                        destination: 'ww_beveiliging_main',
                       ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const <NavButton>[
-                          NavButton(
-                            buttontext: 'Beveiliging Werkwijze',
-                            destination: 'ww_beveiliging_main',
-                          ),
-                          NavButton(
-                            buttontext: 'Beveiliging - Basis 2',
-                            destination: 'ai_incidenten_beveiliging_basis2',
-                          ),
-                        ],
+                      NavButton(
+                        buttontext: 'Beveiliging - Basis 2',
+                        destination: 'ai_incidenten_beveiliging_basis2',
                       ),
-                      const SizedBoxH(),
                     ],
                   ),
-                ),
+                  const SizedBoxH(),
+                ],
               ),
             ],
           ),
