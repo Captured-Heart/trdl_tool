@@ -16,11 +16,11 @@ class AINcbg extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.titleAI,
+          title: Utils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AINcbgNavigation(),
-           HomeButton(),
+          HomeButton(),
         ],
       ),
       //TODO: Hier verder met refactor!
@@ -580,7 +580,7 @@ class AINcbg extends StatelessWidget {
                     ),
                     BodyText(
                       indents: 0,
-                      text: 'Rangeren toegestaan.​​​​​​',
+                      text: 'Rangeren toegestaan.',
                     ),
                     InsertImage(
                       image:
@@ -589,7 +589,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Aanduiding van de afstand tussen het voorste spoorvoertuig en het einde van het spoor die minder dan 200m en meer dan 50m bedraagt.​​​​​​',
+                          'Aanduiding van de afstand tussen het voorste spoorvoertuig en het einde van het spoor die minder dan 200m en meer dan 50m bedraagt.',
                     ),
                     InsertImage(
                       image:
@@ -598,7 +598,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Aanduiding van de afstand tussen het voorste spoorvoertuig en het einde van het spoor die minder dan 50m bedraagt.​​​​​​',
+                          'Aanduiding van de afstand tussen het voorste spoorvoertuig en het einde van het spoor die minder dan 50m bedraagt.',
                     ),
                   ],
                 ),
@@ -622,7 +622,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Snelheid zodanig begrenzen om voor de aangegeven overweg(en) te kunnen stoppen.​​​​​​',
+                          'Snelheid zodanig begrenzen om voor de aangegeven overweg(en) te kunnen stoppen.',
                     ),
                     InsertImage(
                       image:
@@ -647,7 +647,7 @@ class AINcbg extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Stoppen voor het sein, tenzij de TRDL toestemming heeft gegeven om het sein voorbij te rijden.​​​​​​',
+                          'Stoppen voor het sein, tenzij de TRDL toestemming heeft gegeven om het sein voorbij te rijden.',
                     ),
                   ],
                 ),
@@ -745,38 +745,39 @@ class AINcbg extends StatelessWidget {
 }
 
 class AINcbgNavigation extends StatelessWidget {
-  const AINcbgNavigation({Key? key}) : (key: key);
+  const AINcbgNavigation({Key? key}) : super(key: key);
 
+  @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAINcbg>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAINcbg result) async {
-              if (result == WhereToGoFromAINcbg.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result == WhereToGoFromAINcbg.ww_ncbg) {
-                await Navigator.pushNamed(context, 'ww_ncbg');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAINcbg>>[
-              const PopupMenuItem<WhereToGoFromAINcbg>(
-                value: WhereToGoFromAINcbg.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAINcbg>(
-                value: WhereToGoFromAINcbg.ww_ncbg,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW NCBG',
-                ),
-              ),
-            ],
-          );
+      icon: const Icon(Utils.iconInfo),
+      tooltip: 'Meer informatie',
+      onSelected: (WhereToGoFromAINcbg result) async {
+        if (result == WhereToGoFromAINcbg.home_screen) {
+          await Navigator.pushNamed(context, 'home_screen');
+        } else if (result == WhereToGoFromAINcbg.ww_ncbg) {
+          await Navigator.pushNamed(context, 'ww_ncbg');
+        } else {
+          Navigator.pop(context);
+        }
+      },
+      itemBuilder: (BuildContext context) =>
+          <PopupMenuEntry<WhereToGoFromAINcbg>>[
+        const PopupMenuItem<WhereToGoFromAINcbg>(
+          value: WhereToGoFromAINcbg.home_screen,
+          child: MenuItemContent(
+            icon: Utils.iconHome,
+            text: 'Home',
+          ),
+        ),
+        const PopupMenuItem<WhereToGoFromAINcbg>(
+          value: WhereToGoFromAINcbg.ww_ncbg,
+          child: MenuItemContent(
+            icon: Utils.iconWW,
+            text: 'WW NCBG',
+          ),
+        ),
+      ],
+    );
   }
 }

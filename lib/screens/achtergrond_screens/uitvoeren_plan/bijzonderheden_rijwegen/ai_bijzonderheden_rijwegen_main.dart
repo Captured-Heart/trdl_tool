@@ -18,84 +18,86 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.titleAI,
+          title: Utils.appBarTitleAI,
         ),
-        actions: const<Widget>[
+        actions: const <Widget>[
           AIBijzonderhedenRijwegenMainNavigation(),
           HomeButton(),
         ],
       ),
-      body: SafeArea(child: SingleChildScrollView(
-        child: Column(
-          children: <TextCard>[
-TextCard(
-                  widgetList: const <SubTitleText>[
-                    SubTitleText(
-                      subtitle: 'Bijzonderheden Rijwegen',
-                    ),
-                  ],
-                ),
-TextCard(
-                  widgetList: <Widget>[
-                    const TitleText(
-                      title: 'Ga snel naar',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const <Widget>[
-                        NavButton(
-                          buttontext: 'Inzetten railvoertuig (ICB)',
-                          destination: 'ai_inzetten_icb',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Toelaten werktreinen',
-                          destination: 'ai_toelaten_werktreinen',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen - Planopbouw',
-                          destination: 'ai_rijwegen_planopbouw',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen - Planscherm',
-                          destination: 'ai_rijwegen_planscherm',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen - ARI',
-                          destination: 'ai_rijwegen_ari',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen - TROTS en ABT',
-                          destination: 'ai_rijwegen_trots',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen - Bedienscherm',
-                          destination: 'ai_rijwegen_bedienscherm',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
-                  ],
-                ),
-TextCard(
-                  widgetList: const <Widget>[
-                    SizedBoxH(),
-                    InsertImage(
-                      image:
-                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/icbVoertuig.jpg',
-                    ),
-                  ],
-            ),
-          ],
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <TextCard>[
+              const TextCard(
+                widgetList: <SubTitleText>[
+                  SubTitleText(
+                    subtitle: 'Bijzonderheden Rijwegen',
+                  ),
+                ],
+              ),
+              TextCard(
+                widgetList: <Widget>[
+                  const TitleText(
+                    title: 'Ga snel naar',
+                  ),
+                  const SizedBoxH(),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const <Widget>[
+                      NavButton(
+                        buttontext: 'Inzetten railvoertuig (ICB)',
+                        destination: 'ai_inzetten_icb',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Toelaten werktreinen',
+                        destination: 'ai_toelaten_werktreinen',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Rijwegen - Planopbouw',
+                        destination: 'ai_rijwegen_planopbouw',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Rijwegen - Planscherm',
+                        destination: 'ai_rijwegen_planscherm',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Rijwegen - ARI',
+                        destination: 'ai_rijwegen_ari',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Rijwegen - TROTS en ABT',
+                        destination: 'ai_rijwegen_trots',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Rijwegen - Bedienscherm',
+                        destination: 'ai_rijwegen_bedienscherm',
+                      ),
+                    ],
+                  ),
+                  const SizedBoxH(),
+                ],
+              ),
+              const TextCard(
+                widgetList: <Widget>[
+                  SizedBoxH(),
+                  InsertImage(
+                    image:
+                        'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/icbVoertuig.jpg',
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
-    ),);
+    );
   }
 }
 
@@ -105,57 +107,55 @@ class AIBijzonderhedenRijwegenMainNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIBijzonderhedenRijwegenMain>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected:
-                (WhereToGoFromAIBijzonderhedenRijwegenMain result) async {
-              if (result ==
-                  WhereToGoFromAIBijzonderhedenRijwegenMain.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIBijzonderhedenRijwegenMain
-                      .ww_bijzonderheden_rijwegen_main) {
-                await Navigator.pushNamed(
-                  context,
-                  'ww_bijzonderheden_rijwegen_main',
-                );
-              } else if (result ==
-                  WhereToGoFromAIBijzonderhedenRijwegenMain
-                      .ww_kop_van_trein_voorbij_sein) {
-                await Navigator.pushNamed(
-                  context,
-                  'ww_kop_van_trein_voorbij_sein',
-                );
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIBijzonderhedenRijwegenMain>>[
-              const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
-                value: WhereToGoFromAIBijzonderhedenRijwegenMain.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
-                value: WhereToGoFromAIBijzonderhedenRijwegenMain
-                    .ww_bijzonderheden_rijwegen_main,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Bijzonderheden Rijwegen',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
-                value: WhereToGoFromAIBijzonderhedenRijwegenMain
-                    .ww_kop_van_trein_voorbij_sein,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Kop van Trein Voorbij Sein',
-                ),
-              ),
-            ],
+      icon: const Icon(Utils.iconInfo),
+      tooltip: 'Meer informatie',
+      onSelected: (WhereToGoFromAIBijzonderhedenRijwegenMain result) async {
+        if (result == WhereToGoFromAIBijzonderhedenRijwegenMain.home_screen) {
+          await Navigator.pushNamed(context, 'home_screen');
+        } else if (result ==
+            WhereToGoFromAIBijzonderhedenRijwegenMain
+                .ww_bijzonderheden_rijwegen_main) {
+          await Navigator.pushNamed(
+            context,
+            'ww_bijzonderheden_rijwegen_main',
           );
+        } else if (result ==
+            WhereToGoFromAIBijzonderhedenRijwegenMain
+                .ww_kop_van_trein_voorbij_sein) {
+          await Navigator.pushNamed(
+            context,
+            'ww_kop_van_trein_voorbij_sein',
+          );
+        } else {
+          Navigator.pop(context);
+        }
+      },
+      itemBuilder: (BuildContext context) =>
+          <PopupMenuEntry<WhereToGoFromAIBijzonderhedenRijwegenMain>>[
+        const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
+          value: WhereToGoFromAIBijzonderhedenRijwegenMain.home_screen,
+          child: MenuItemContent(
+            icon: Utils.iconHome,
+            text: 'Home',
+          ),
+        ),
+        const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
+          value: WhereToGoFromAIBijzonderhedenRijwegenMain
+              .ww_bijzonderheden_rijwegen_main,
+          child: MenuItemContent(
+            icon: Utils.iconWW,
+            text: 'WW Bijzonderheden Rijwegen',
+          ),
+        ),
+        const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
+          value: WhereToGoFromAIBijzonderhedenRijwegenMain
+              .ww_kop_van_trein_voorbij_sein,
+          child: MenuItemContent(
+            icon: Utils.iconWW,
+            text: 'WW Kop van Trein Voorbij Sein',
+          ),
+        ),
+      ],
+    );
   }
 }

@@ -17,11 +17,11 @@ Future<dynamic> showVersionUpdatePopup(BuildContext context) {
                 ),
                 SizedBoxH(),
                 DateChanged(
-                  date: '2022-10-??: 0.3.1',
+                  date: '2022-10-31: 0.3.1',
                 ),
                 ChangesMade(
                   changes: '- Routes naar apart bestand verplaatst;\n- '
-                      'Bestandspaden verkort;\n- Nieuwe linter gebruikt (STRENG);\n- Widgets verkort;\n- Constants naar Utils class verplaatst;',
+                      'Bestandspaden verkort;\n- Nieuwe linter gebruikt (STRENG);\n- Widgets verkort;\n- Constants naar Utils class verplaatst;\n- Refactor van Card() naar TextCard();\n- SafeArea() toegevoegd aan SingleChildScrollView().',
                 ),
                 SizedBoxH(),
                 DateChanged(
