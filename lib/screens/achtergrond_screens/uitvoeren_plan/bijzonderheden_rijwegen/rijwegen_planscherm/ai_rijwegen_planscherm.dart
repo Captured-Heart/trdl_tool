@@ -22,84 +22,19 @@ class AIRijwegenPlanscherm extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIRijwegenPlanscherm>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIRijwegenPlanscherm result) async {
-              if (result == WhereToGoFromAIRijwegenPlanscherm.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_planopbouw) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_ari) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_ari');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_trots) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_trots');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_bedienscherm) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIRijwegenPlanscherm>>[
-              const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
-                value: WhereToGoFromAIRijwegenPlanscherm.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
-                value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_planopbouw,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen Planopbouw',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
-                value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_ari,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen ARI',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
-                value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_trots,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen TROTS',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
-                value:
-                    WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_bedienscherm,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen Bedienscherm',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const<Widget>[
+          AIRijwegenPlanschermNavigation(),
+           HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title:
                           'Rijwegen - basisinformatie: werken met het plan(scherm)',
@@ -141,15 +76,8 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Het plan',
                     ),
@@ -203,15 +131,8 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Het instellen van rijwegen in procesleiding',
                     ),
@@ -246,15 +167,8 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Instellen van rijwegen vanuit het planscherm',
                     ),
@@ -367,15 +281,8 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #5*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Voorkeursroutes en dwangrijwegen',
                     ),
@@ -438,15 +345,8 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #6*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle:
                           'Gefaseerde, integrale & hoog groen rijweginstelling',
@@ -614,15 +514,8 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #7*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle:
                           'Rijweg met geel knipperend seinbeeld (ROZ-rijweg)',
@@ -647,15 +540,8 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #8*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Planregel met klaarmelding',
                     ),
@@ -679,15 +565,8 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #9*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Foute planregels',
                     ),
@@ -735,12 +614,80 @@ class AIRijwegenPlanscherm extends StatelessWidget {
                           'Je gebruikt verhinderingen om te voorkomen dat er onbedoeld een rijweg ingesteld kan worden.',
                     ),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AIRijwegenPlanschermNavigation extends StatelessWidget {
+  const AIRijwegenPlanschermNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIRijwegenPlanscherm>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIRijwegenPlanscherm result) async {
+              if (result == WhereToGoFromAIRijwegenPlanscherm.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_planopbouw) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_ari) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_ari');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_trots) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_trots');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_bedienscherm) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIRijwegenPlanscherm>>[
+              const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
+                value: WhereToGoFromAIRijwegenPlanscherm.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
+                value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_planopbouw,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen Planopbouw',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
+                value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_ari,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen ARI',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
+                value: WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_trots,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen TROTS',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenPlanscherm>(
+                value:
+                    WhereToGoFromAIRijwegenPlanscherm.ai_rijwegen_bedienscherm,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen Bedienscherm',
+                ),
+              ),
+            ],
+          );
   }
 }

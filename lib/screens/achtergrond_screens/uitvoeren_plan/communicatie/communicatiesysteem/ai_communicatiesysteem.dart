@@ -18,63 +18,19 @@ class AICommunicatieSysteem extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAICommunicatieSysteem>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAICommunicatieSysteem result) async {
-              if (result == WhereToGoFromAICommunicatieSysteem.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAICommunicatieSysteem.ww_communicatie_main) {
-                await Navigator.pushNamed(context, 'ww_communicatie_main');
-              } else if (result ==
-                  WhereToGoFromAICommunicatieSysteem.ai_incidenten_basis) {
-                await Navigator.pushNamed(context, 'ai_incidenten_basis');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAICommunicatieSysteem>>[
-              const PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
-                value: WhereToGoFromAICommunicatieSysteem.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
-                value: WhereToGoFromAICommunicatieSysteem.ww_communicatie_main,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Communicatie',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
-                value: WhereToGoFromAICommunicatieSysteem.ai_incidenten_basis,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Incidenten',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AICommunicatieSysteemNavigation(),
+           HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title: 'Communicatiesysteem GSM-R - basisinformatie',
                     ),
@@ -137,15 +93,8 @@ class AICommunicatieSysteem extends StatelessWidget {
                     SizedBoxH(),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Opbouw GSM-R',
                     ),
@@ -194,15 +143,8 @@ class AICommunicatieSysteem extends StatelessWidget {
                     SizedBoxH(),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+            TextCard(
+                  widgetList: <Widget>[
                     const SubTitleText(
                       subtitle: 'Werking cel',
                     ),
@@ -345,15 +287,8 @@ class AICommunicatieSysteem extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Werkwijze point to point oproep',
                     ),
@@ -370,15 +305,8 @@ class AICommunicatieSysteem extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #5*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Werking alarmoproepen binnen GSM-R',
                     ),
@@ -552,12 +480,59 @@ class AICommunicatieSysteem extends StatelessWidget {
                     ),
                     SizedBoxH(),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AICommunicatieSysteemNavigation extends StatelessWidget {
+  const AICommunicatieSysteemNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAICommunicatieSysteem>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAICommunicatieSysteem result) async {
+              if (result == WhereToGoFromAICommunicatieSysteem.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAICommunicatieSysteem.ww_communicatie_main) {
+                await Navigator.pushNamed(context, 'ww_communicatie_main');
+              } else if (result ==
+                  WhereToGoFromAICommunicatieSysteem.ai_incidenten_basis) {
+                await Navigator.pushNamed(context, 'ai_incidenten_basis');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAICommunicatieSysteem>>[
+              const PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
+                value: WhereToGoFromAICommunicatieSysteem.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
+                value: WhereToGoFromAICommunicatieSysteem.ww_communicatie_main,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Communicatie',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
+                value: WhereToGoFromAICommunicatieSysteem.ai_incidenten_basis,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Incidenten',
+                ),
+              ),
+            ],
+          );
   }
 }

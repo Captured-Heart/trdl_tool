@@ -20,75 +20,19 @@ class AIRijwegenBedienscherm extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIRijwegenBedienscherm>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIRijwegenBedienscherm result) async {
-              if (result == WhereToGoFromAIRijwegenBedienscherm.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_planopbouw) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_planscherm) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_planscherm');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_ari) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_ari');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIRijwegenBedienscherm>>[
-              const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
-                value: WhereToGoFromAIRijwegenBedienscherm.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
-                value:
-                    WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_planopbouw,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen Planopbouw',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
-                value:
-                    WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_planscherm,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen Planscherm',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
-                value: WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_ari,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen ARI',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIRijwegenBedienschermNavigation(),
+           HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title:
                           'Rijwegen - basisinformatie: Rijweg instellen in het bedienscherm',
@@ -218,12 +162,71 @@ class AIRijwegenBedienscherm extends StatelessWidget {
                           "Kies 'Voer in' of 'Buffer'. Je kunt nu de planregel direct laten uitvoeren door Procesleiding met 'Voer in', of in de 'Buffer' zetten als je deze op een later tijdstip nodig hebt.",
                     ),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AIRijwegenBedienschermNavigation extends StatelessWidget {
+  const AIRijwegenBedienschermNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIRijwegenBedienscherm>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIRijwegenBedienscherm result) async {
+              if (result == WhereToGoFromAIRijwegenBedienscherm.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_planopbouw) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_planscherm) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_planscherm');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_ari) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_ari');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIRijwegenBedienscherm>>[
+              const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
+                value: WhereToGoFromAIRijwegenBedienscherm.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
+                value:
+                    WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_planopbouw,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen Planopbouw',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
+                value:
+                    WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_planscherm,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen Planscherm',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
+                value: WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_ari,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen ARI',
+                ),
+              ),
+            ],
+          );
   }
 }

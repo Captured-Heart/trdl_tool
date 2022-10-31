@@ -16,53 +16,19 @@ class AIDienstovergave extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIDienstovergave>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIDienstovergave result) async {
-              if (result == WhereToGoFromAIDienstovergave.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIDienstovergave.ww_dienstovergave) {
-                await Navigator.pushNamed(context, 'ww_dienstovergave');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIDienstovergave>>[
-              const PopupMenuItem<WhereToGoFromAIDienstovergave>(
-                value: WhereToGoFromAIDienstovergave.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIDienstovergave>(
-                value: WhereToGoFromAIDienstovergave.ww_dienstovergave,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Dienstovergave',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIDienstovergaveNavigation(),
+          HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(title: 'Dienstovergave'),
                     SizedBoxH(),
                     BodyText(
@@ -111,12 +77,48 @@ class AIDienstovergave extends StatelessWidget {
                           'In de procesleiding werkverdeling heeft iedere TRDL een eigen account om in te loggen op de werkplekken waarvoor hij bevoegd is.\n\nDoor het in- of omloggen wordt in het systeem geregistreerd dat een andere TRDL vanaf dat moment verantwoordelijk is voor de werkplek. Zo is achteraf altijd te herleiden wie er op welk moment verantwoordelijk was voor dat specifieke bediengebied.',
                     ),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AIDienstovergaveNavigation extends StatelessWidget {
+  const AIDienstovergaveNavigation({Key? key}) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIDienstovergave>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIDienstovergave result) async {
+              if (result == WhereToGoFromAIDienstovergave.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIDienstovergave.ww_dienstovergave) {
+                await Navigator.pushNamed(context, 'ww_dienstovergave');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIDienstovergave>>[
+              const PopupMenuItem<WhereToGoFromAIDienstovergave>(
+                value: WhereToGoFromAIDienstovergave.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIDienstovergave>(
+                value: WhereToGoFromAIDienstovergave.ww_dienstovergave,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Dienstovergave',
+                ),
+              ),
+            ],
+          );
   }
 }

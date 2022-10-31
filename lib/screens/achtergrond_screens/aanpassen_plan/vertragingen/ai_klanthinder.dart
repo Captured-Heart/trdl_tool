@@ -20,73 +20,19 @@ class AIKlanthinder extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIKlanthinder>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIKlanthinder result) async {
-              if (result == WhereToGoFromAIKlanthinder.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIKlanthinder.ai_ongepland_werk_main) {
-                await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
-              } else if (result ==
-                  WhereToGoFromAIKlanthinder.ai_aanpassen_plan_main) {
-                await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
-              } else if (result == WhereToGoFromAIKlanthinder.ai_vertragingen) {
-                await Navigator.pushNamed(context, 'ai_vertragingen');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIKlanthinder>>[
-              const PopupMenuItem<WhereToGoFromAIKlanthinder>(
-                value: WhereToGoFromAIKlanthinder.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIKlanthinder>(
-                value: WhereToGoFromAIKlanthinder.ai_ongepland_werk_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Ongepland Werk',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIKlanthinder>(
-                value: WhereToGoFromAIKlanthinder.ai_aanpassen_plan_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Aanpassen Plan',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIKlanthinder>(
-                value: WhereToGoFromAIKlanthinder.ai_vertragingen,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Vertragingen',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIKlanthinderNavigation(),
+          HomeButton(),
         ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: <Card>[
-              /*CARD #1*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+            children: <TextCard>[
+              TextCard(
+                    widgetList: const <Widget>[
                       TitleText(
                         title: 'Klanthinder',
                       ),
@@ -125,15 +71,8 @@ class AIKlanthinder extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #2*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+              TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Maatregelen tegen klanthinder',
                       ),
@@ -167,15 +106,8 @@ class AIKlanthinder extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #3*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+              TextCard(
+                    widgetList: const <Widget>[
                       BoldText(
                         indents: 0,
                         boldtext: '1. Kritische Assets',
@@ -292,15 +224,8 @@ class AIKlanthinder extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #4*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+              TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Monitoring en klanthinder',
                       ),
@@ -311,12 +236,68 @@ class AIKlanthinder extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
             ],
           ),
         ),
       ),
     );
+  }
+}
+
+class AIKlanthinderNavigation extends StatelessWidget {
+  const AIKlanthinderNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIKlanthinder>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIKlanthinder result) async {
+              if (result == WhereToGoFromAIKlanthinder.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIKlanthinder.ai_ongepland_werk_main) {
+                await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
+              } else if (result ==
+                  WhereToGoFromAIKlanthinder.ai_aanpassen_plan_main) {
+                await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
+              } else if (result == WhereToGoFromAIKlanthinder.ai_vertragingen) {
+                await Navigator.pushNamed(context, 'ai_vertragingen');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIKlanthinder>>[
+              const PopupMenuItem<WhereToGoFromAIKlanthinder>(
+                value: WhereToGoFromAIKlanthinder.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIKlanthinder>(
+                value: WhereToGoFromAIKlanthinder.ai_ongepland_werk_main,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Ongepland Werk',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIKlanthinder>(
+                value: WhereToGoFromAIKlanthinder.ai_aanpassen_plan_main,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Aanpassen Plan',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIKlanthinder>(
+                value: WhereToGoFromAIKlanthinder.ai_vertragingen,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Vertragingen',
+                ),
+              ),
+            ],
+          );
   }
 }

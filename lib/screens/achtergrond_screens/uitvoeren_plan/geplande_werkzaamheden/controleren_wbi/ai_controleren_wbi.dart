@@ -22,10 +22,70 @@ class AIControlerenWBI extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIControlerenWBI>(
+        actions: const <Widget>[
+          AIControlerenWBINavigation(),
+           HomeButton(),
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+        child: Column(
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
+                    TitleText(
+                      title: 'Controleren WBI',
+                    ),
+                    SizedBoxH(),
+                    SubTitleText(
+                      subtitle: 'Toetscriteria WBI/WECO',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Voor aanvang van de werkzaamheden controleer je of:',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 1,
+                      text:
+                          "- Niet onbedoeld een rijweg instelbaar is naar het gebied genoemd in de rubriek 'aanduiding van de buitendienststelling';\n\n- De maatregelen van de LWB invloed hebben op jouw eigen maatregelen;\n\n- Bij werkplekbeveiliging met de zelfsignalerende kortsluitlans er geen rijweg ingesteld moet worden vanaf de vrije baan, tenzij de vrije baan onderdeel is van de buitendienststelling;\n\n- Ben jij in de WBI/WECO aangewezen als communicerend TRDL dan stel je vast of:",
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 2,
+                      text:
+                          '* De betrokken TRDL(s) in het bezit is (zijn) van de juiste WBI/WECO;\n\n* Er geen factoren zijn die de aanvang van de werkzaamheden kunnen beïnvloeden.',
+                    ),
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/wbiOverzicht.png',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          "Je hebt in procesleiding de beschikking over een koppeling met het WBI kantoor. Dit helpt met het controleren van de WBI.\n\nVia de database zijn de te keuren WBI's terug te vinden. Deze hebben de status 'niet gekeurd'.  Alle maatregelen die al zijn ingevoerd zijn terug te vinden en door middel van de preview functie zijn alle periodes van een WBI van tevoren te bekijken via een voorbeeld in een oranje kleur.\n\nAls een WBI/WECO gekeurd is, krijgt deze de status 'goedgekeurd' of 'afgekeurd' door jou toegewezen in procesleiding.",
+                    ),
+                  ],
+            ),
+          ],
+        ),
+      ),
+    ),);
+  }
+}
+
+class AIControlerenWBINavigation extends StatelessWidget {
+  const AIControlerenWBINavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIControlerenWBI>(
             icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIControlerenWBI result) async {
@@ -85,63 +145,6 @@ class AIControlerenWBI extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-          const HomeButton(),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    TitleText(
-                      title: 'Controleren WBI',
-                    ),
-                    SizedBoxH(),
-                    SubTitleText(
-                      subtitle: 'Toetscriteria WBI/WECO',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Voor aanvang van de werkzaamheden controleer je of:',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 1,
-                      text:
-                          "- Niet onbedoeld een rijweg instelbaar is naar het gebied genoemd in de rubriek 'aanduiding van de buitendienststelling';\n\n- De maatregelen van de LWB invloed hebben op jouw eigen maatregelen;\n\n- Bij werkplekbeveiliging met de zelfsignalerende kortsluitlans er geen rijweg ingesteld moet worden vanaf de vrije baan, tenzij de vrije baan onderdeel is van de buitendienststelling;\n\n- Ben jij in de WBI/WECO aangewezen als communicerend TRDL dan stel je vast of:",
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 2,
-                      text:
-                          '* De betrokken TRDL(s) in het bezit is (zijn) van de juiste WBI/WECO;\n\n* Er geen factoren zijn die de aanvang van de werkzaamheden kunnen beïnvloeden.',
-                    ),
-                    SizedBoxH(),
-                    InsertImage(
-                      image:
-                          'assets/images/achtergrond_info/uitvoeren_plan/geplande_werkzaamheden/wbiOverzicht.png',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Je hebt in procesleiding de beschikking over een koppeling met het WBI kantoor. Dit helpt met het controleren van de WBI.\n\nVia de database zijn de te keuren WBI’s terug te vinden. Deze hebben de status ‘niet gekeurd’.  Alle maatregelen die al zijn ingevoerd zijn terug te vinden en door middel van de preview functie zijn alle periodes van een WBI van tevoren te bekijken via een voorbeeld in een oranje kleur.\n\nAls een WBI/WECO gekeurd is, krijgt deze de status ‘goedgekeurd’ of ‘afgekeurd’ door jou toegewezen in procesleiding.',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+          );
   }
 }

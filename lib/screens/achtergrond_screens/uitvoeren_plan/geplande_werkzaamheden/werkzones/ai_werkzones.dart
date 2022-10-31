@@ -18,66 +18,19 @@ class AIWerkzones extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIWerkzones>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIWerkzones result) async {
-              if (result == WhereToGoFromAIWerkzones.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIWerkzones.ai_geplande_werkzaamheden_main) {
-                await Navigator.pushNamed(
-                  context,
-                  'ai_geplande_werkzaamheden_main',
-                );
-              } else if (result ==
-                  WhereToGoFromAIWerkzones.ai_aanvang_werkzaamheden) {
-                await Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIWerkzones>>[
-              const PopupMenuItem<WhereToGoFromAIWerkzones>(
-                value: WhereToGoFromAIWerkzones.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIWerkzones>(
-                value: WhereToGoFromAIWerkzones.ai_geplande_werkzaamheden_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Geplande Werkzaamheden',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIWerkzones>(
-                value: WhereToGoFromAIWerkzones.ai_aanvang_werkzaamheden,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Aanvang Werkzaamheden',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIWerkzonesNavigation(),
+           HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title: 'Werkzones',
                     ),
@@ -93,15 +46,8 @@ class AIWerkzones extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Werkzoneschakelaar',
                     ),
@@ -113,15 +59,8 @@ class AIWerkzones extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Signalering voor LWB',
                     ),
@@ -167,15 +106,8 @@ class AIWerkzones extends StatelessWidget {
                     SizedBoxH(),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Signalering voor TRDL',
                     ),
@@ -246,15 +178,8 @@ class AIWerkzones extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #5*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Wisselsturing',
                     ),
@@ -262,7 +187,7 @@ class AIWerkzones extends StatelessWidget {
                     BodyText(
                       indents: 0,
                       text:
-                          'Er vindt geen wisselsturing plaats wanneer een werkzone wordt gegeven. Wissels in een werkzone kunnen niet worden bediend als de werkzone gegeven is (en niet genomen). Wissels in een buiten dienst gestelde werkzone kunnen uitsluitend d.m.v.  ‘gedelegeerd bedienen’ TRDL worden bediend. Bij gedelegeerd bedienen, bedient je het wissel op verzoek van de LWB. Dit principe geldt ook voor een inliggend grendel, bedienbaar kruis en Rijrichtingkering. Het gevraagde Overdracht ID is de naam van de werkzone. Hieronder is dit weergegeven in het bedienscherm en de regelinvoer.',
+                          "Er vindt geen wisselsturing plaats wanneer een werkzone wordt gegeven. Wissels in een werkzone kunnen niet worden bediend als de werkzone gegeven is (en niet genomen). Wissels in een buiten dienst gestelde werkzone kunnen uitsluitend d.m.v.  'gedelegeerd bedienen' TRDL worden bediend. Bij gedelegeerd bedienen, bedient je het wissel op verzoek van de LWB. Dit principe geldt ook voor een inliggend grendel, bedienbaar kruis en Rijrichtingkering. Het gevraagde Overdracht ID is de naam van de werkzone. Hieronder is dit weergegeven in het bedienscherm en de regelinvoer.",
                     ),
                     SizedBoxH(),
                     BoldText(
@@ -297,15 +222,8 @@ class AIWerkzones extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #6*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Bezettingen in de werkzone',
                     ),
@@ -410,15 +328,8 @@ class AIWerkzones extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #7*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'WBI Uitvoeren',
                     ),
@@ -470,12 +381,62 @@ class AIWerkzones extends StatelessWidget {
                           'Werkzones staan ook vermeld op het WZO-blad. De to-build en as-built versie van het WZO-blad zal worden beheerd in Raildocs.',
                     ),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AIWerkzonesNavigation extends StatelessWidget {
+  const AIWerkzonesNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIWerkzones>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIWerkzones result) async {
+              if (result == WhereToGoFromAIWerkzones.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIWerkzones.ai_geplande_werkzaamheden_main) {
+                await Navigator.pushNamed(
+                  context,
+                  'ai_geplande_werkzaamheden_main',
+                );
+              } else if (result ==
+                  WhereToGoFromAIWerkzones.ai_aanvang_werkzaamheden) {
+                await Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIWerkzones>>[
+              const PopupMenuItem<WhereToGoFromAIWerkzones>(
+                value: WhereToGoFromAIWerkzones.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIWerkzones>(
+                value: WhereToGoFromAIWerkzones.ai_geplande_werkzaamheden_main,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Geplande Werkzaamheden',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIWerkzones>(
+                value: WhereToGoFromAIWerkzones.ai_aanvang_werkzaamheden,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Aanvang Werkzaamheden',
+                ),
+              ),
+            ],
+          );
   }
 }

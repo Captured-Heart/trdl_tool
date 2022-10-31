@@ -16,56 +16,19 @@ class AIKetenpartners extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIKetenpartners>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIKetenpartners result) async {
-              if (result == WhereToGoFromAIKetenpartners.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIKetenpartners.ww_mondelinge_communicatie) {
-                await Navigator.pushNamed(
-                  context,
-                  'ww_mondelinge_communicatie',
-                );
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIKetenpartners>>[
-              const PopupMenuItem<WhereToGoFromAIKetenpartners>(
-                value: WhereToGoFromAIKetenpartners.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIKetenpartners>(
-                value: WhereToGoFromAIKetenpartners.ww_mondelinge_communicatie,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Mondelinge Communicatie',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIKetenpartnersNavigation(),
+          HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title: 'Externe ketenpartners',
                     ),
@@ -121,11 +84,50 @@ class AIKetenpartners extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AIKetenpartnersNavigation extends StatelessWidget {
+  const AIKetenpartnersNavigation({Key? key}) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIKetenpartners>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIKetenpartners result) async {
+              if (result == WhereToGoFromAIKetenpartners.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIKetenpartners.ww_mondelinge_communicatie) {
+                await Navigator.pushNamed(
+                  context,
+                  'ww_mondelinge_communicatie',
+                );
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIKetenpartners>>[
+              const PopupMenuItem<WhereToGoFromAIKetenpartners>(
+                value: WhereToGoFromAIKetenpartners.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIKetenpartners>(
+                value: WhereToGoFromAIKetenpartners.ww_mondelinge_communicatie,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Mondelinge Communicatie',
+                ),
+              ),
+            ],
+          );
   }
 }

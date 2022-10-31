@@ -26,106 +26,19 @@ class AIRijwegenARI extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIRijwegenARI>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIRijwegenARI result) async {
-              if (result == WhereToGoFromAIRijwegenARI.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenARI.ww_uitvoeren_plan_main) {
-                await Navigator.pushNamed(context, 'ww_uitvoeren_plan_main');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenARI.ai_rijwegen_trots) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_trots');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenARI.ai_bijzonderheden_rijwegen) {
-                await Navigator.pushNamed(
-                  context,
-                  'ai_bijzonderheden_rijwegen',
-                );
-              } else if (result ==
-                  WhereToGoFromAIRijwegenARI.ai_rijwegen_planopbouw) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenARI.ai_rijwegen_planscherm) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_planscherm');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenARI.ai_rijwegen_bedienscherm) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIRijwegenARI>>[
-              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-                value: WhereToGoFromAIRijwegenARI.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-                value: WhereToGoFromAIRijwegenARI.ww_uitvoeren_plan_main,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Uitvoeren Plan',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-                value: WhereToGoFromAIRijwegenARI.ai_rijwegen_trots,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen TROTS',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-                value: WhereToGoFromAIRijwegenARI.ai_bijzonderheden_rijwegen,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Bijzonderheden Rijwegen',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-                value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planopbouw,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen Planopbouw',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-                value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planscherm,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen Planscherm',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-                value: WhereToGoFromAIRijwegenARI.ai_rijwegen_bedienscherm,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen Bedienscherm',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIRijwegenARINavigation(),
+           HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+           TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title:
                           'Rijwegen - basisinformatie: Automatische Rijweg Instelling (ARI)',
@@ -144,15 +57,8 @@ class AIRijwegenARI extends StatelessWidget {
                     SizedBoxH(),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Historie',
                     ),
@@ -164,15 +70,8 @@ class AIRijwegenARI extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Wat is ARI',
                     ),
@@ -236,15 +135,8 @@ class AIRijwegenARI extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'ARI tijd- en wachtvenster',
                     ),
@@ -303,15 +195,8 @@ class AIRijwegenARI extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #5*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'ARI-triggers',
                     ),
@@ -373,15 +258,8 @@ class AIRijwegenARI extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #6*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+           TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Kleuren planregels',
                     ),
@@ -484,15 +362,8 @@ class AIRijwegenARI extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #7*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Rijden op zicht in ARI',
                     ),
@@ -544,15 +415,8 @@ class AIRijwegenARI extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #8*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'ARI instelwijze',
                     ),
@@ -580,15 +444,8 @@ class AIRijwegenARI extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #9*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Deadlock',
                     ),
@@ -667,15 +524,8 @@ class AIRijwegenARI extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #10*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Lange Kerende Treinen (LKT)',
                     ),
@@ -724,15 +574,8 @@ class AIRijwegenARI extends StatelessWidget {
                     SizedBoxH(),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #11*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Instelvoorschrift',
                     ),
@@ -802,15 +645,8 @@ class AIRijwegenARI extends StatelessWidget {
                     SizedBoxH(),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #12*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'PBH++',
                     ),
@@ -839,15 +675,8 @@ class AIRijwegenARI extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #13*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'ARI-noodstop',
                     ),
@@ -885,12 +714,102 @@ class AIRijwegenARI extends StatelessWidget {
                           'Je hebt nu ARI uitgezet voor de betreffende werkplek. Je kan nu zelf het moment kiezen om ARI weer aan te zetten op deze werkplek.\n\nMeld de storing aan bij het OBI.',
                     ),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AIRijwegenARINavigation extends StatelessWidget {
+  const AIRijwegenARINavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIRijwegenARI>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIRijwegenARI result) async {
+              if (result == WhereToGoFromAIRijwegenARI.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenARI.ww_uitvoeren_plan_main) {
+                await Navigator.pushNamed(context, 'ww_uitvoeren_plan_main');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenARI.ai_rijwegen_trots) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_trots');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenARI.ai_bijzonderheden_rijwegen) {
+                await Navigator.pushNamed(
+                  context,
+                  'ai_bijzonderheden_rijwegen',
+                );
+              } else if (result ==
+                  WhereToGoFromAIRijwegenARI.ai_rijwegen_planopbouw) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenARI.ai_rijwegen_planscherm) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_planscherm');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenARI.ai_rijwegen_bedienscherm) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIRijwegenARI>>[
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.ww_uitvoeren_plan_main,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Uitvoeren Plan',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.ai_rijwegen_trots,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen TROTS',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.ai_bijzonderheden_rijwegen,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Bijzonderheden Rijwegen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planopbouw,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen Planopbouw',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planscherm,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen Planscherm',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
+                value: WhereToGoFromAIRijwegenARI.ai_rijwegen_bedienscherm,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen Bedienscherm',
+                ),
+              ),
+            ],
+          );
   }
 }

@@ -16,58 +16,19 @@ class AICommmunicatieMiddelen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAICommmunicatieMiddelen>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAICommmunicatieMiddelen result) async {
-              if (result == WhereToGoFromAICommmunicatieMiddelen.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAICommmunicatieMiddelen
-                      .ww_mondelinge_communicatie) {
-                await Navigator.pushNamed(
-                  context,
-                  'ww_mondelinge_communicatie',
-                );
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAICommmunicatieMiddelen>>[
-              const PopupMenuItem<WhereToGoFromAICommmunicatieMiddelen>(
-                value: WhereToGoFromAICommmunicatieMiddelen.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAICommmunicatieMiddelen>(
-                value: WhereToGoFromAICommmunicatieMiddelen
-                    .ww_mondelinge_communicatie,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Mondelinge Communicatie',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AICommmunicatieMiddelenNavigation(),
+           HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title: 'Communicatiemiddelen - basisinformatie',
                     ),
@@ -163,15 +124,8 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Handboek Machinist',
                     ),
@@ -211,15 +165,8 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Ontvangen van een alarmoproep',
                     ),
@@ -264,15 +211,8 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Verlaten van een alarmoproep',
                     ),
@@ -289,15 +229,8 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #5*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle:
                           'Deelname aan of terugkeren naar een alarmoproep',
@@ -315,15 +248,8 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #6*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Beëindigen alarmoproep',
                     ),
@@ -335,15 +261,8 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #7*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Voicelogger',
                     ),
@@ -355,15 +274,8 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #8*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'GSM-R noodtelefoon (handheld)',
                     ),
@@ -380,15 +292,8 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #9*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'GSM-R portofoon',
                     ),
@@ -449,12 +354,54 @@ class AICommmunicatieMiddelen extends StatelessWidget {
                     ),
                     SizedBoxH(),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AICommmunicatieMiddelenNavigation extends StatelessWidget {
+  const AICommmunicatieMiddelenNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAICommmunicatieMiddelen>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAICommmunicatieMiddelen result) async {
+              if (result == WhereToGoFromAICommmunicatieMiddelen.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAICommmunicatieMiddelen
+                      .ww_mondelinge_communicatie) {
+                await Navigator.pushNamed(
+                  context,
+                  'ww_mondelinge_communicatie',
+                );
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAICommmunicatieMiddelen>>[
+              const PopupMenuItem<WhereToGoFromAICommmunicatieMiddelen>(
+                value: WhereToGoFromAICommmunicatieMiddelen.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAICommmunicatieMiddelen>(
+                value: WhereToGoFromAICommmunicatieMiddelen
+                    .ww_mondelinge_communicatie,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Mondelinge Communicatie',
+                ),
+              ),
+            ],
+          );
   }
 }

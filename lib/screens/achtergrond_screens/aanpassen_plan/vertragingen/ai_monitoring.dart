@@ -20,71 +20,19 @@ class AIMonitoring extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
         actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIMonitoring>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIMonitoring result) async {
-              if (result == WhereToGoFromAIMonitoring.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result == WhereToGoFromAIMonitoring.ww_vertragingen) {
-                await Navigator.pushNamed(context, 'ww_vertragingen');
-              } else if (result == WhereToGoFromAIMonitoring.ai_vertragingen) {
-                await Navigator.pushNamed(context, 'ai_vertragingen');
-              } else if (result == WhereToGoFromAIMonitoring.ai_klanthinder) {
-                await Navigator.pushNamed(context, 'ai_klanthinder');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIMonitoring>>[
-              const PopupMenuItem<WhereToGoFromAIMonitoring>(
-                value: WhereToGoFromAIMonitoring.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIMonitoring>(
-                value: WhereToGoFromAIMonitoring.ww_vertragingen,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Vertragingen',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIMonitoring>(
-                value: WhereToGoFromAIMonitoring.ai_vertragingen,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Vertragingen',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIMonitoring>(
-                value: WhereToGoFromAIMonitoring.ai_klanthinder,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Klanthinder',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+          AIMonitoringNavigation(),
+          HomeButton(),
         ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: <Card>[
-              /*CARD #1*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+            children: <TextCard>[
+              TextCard(
+                    widgetList: const <Widget>[
                       TitleText(
                         title: 'Vertragingen en Monitoring',
                       ),
@@ -102,15 +50,8 @@ class AIMonitoring extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #2*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+              TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Doel monitoring',
                       ),
@@ -145,15 +86,8 @@ class AIMonitoring extends StatelessWidget {
                       SizedBoxH(),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #3*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+              TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Wat verklaren we in Monitoring?',
                       ),
@@ -171,15 +105,8 @@ class AIMonitoring extends StatelessWidget {
                       SizedBoxH(),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #4*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+              TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Processtappen',
                       ),
@@ -248,15 +175,8 @@ class AIMonitoring extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #5*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+              TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Toelichting van alle processtappen',
                       ),
@@ -423,12 +343,65 @@ class AIMonitoring extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
             ],
           ),
         ),
       ),
     );
+  }
+}
+
+class AIMonitoringNavigation extends StatelessWidget {
+  const AIMonitoringNavigation({Key? key}) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIMonitoring>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIMonitoring result) async {
+              if (result == WhereToGoFromAIMonitoring.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromAIMonitoring.ww_vertragingen) {
+                await Navigator.pushNamed(context, 'ww_vertragingen');
+              } else if (result == WhereToGoFromAIMonitoring.ai_vertragingen) {
+                await Navigator.pushNamed(context, 'ai_vertragingen');
+              } else if (result == WhereToGoFromAIMonitoring.ai_klanthinder) {
+                await Navigator.pushNamed(context, 'ai_klanthinder');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIMonitoring>>[
+              const PopupMenuItem<WhereToGoFromAIMonitoring>(
+                value: WhereToGoFromAIMonitoring.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIMonitoring>(
+                value: WhereToGoFromAIMonitoring.ww_vertragingen,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Vertragingen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIMonitoring>(
+                value: WhereToGoFromAIMonitoring.ai_vertragingen,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Vertragingen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIMonitoring>(
+                value: WhereToGoFromAIMonitoring.ai_klanthinder,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Klanthinder',
+                ),
+              ),
+            ],
+          );
   }
 }

@@ -20,73 +20,19 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIRijwegenPlanopbouw>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIRijwegenPlanopbouw result) async {
-              if (result == WhereToGoFromAIRijwegenPlanopbouw.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenPlanopbouw
-                      .ww_bijzonderheden_rijwegen_main) {
-                await Navigator.pushNamed(
-                  context,
-                  'ww_bijzonderheden_rijwegen_main',
-                );
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIRijwegenPlanopbouw>>[
-              const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
-                value: WhereToGoFromAIRijwegenPlanopbouw.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
-                value: WhereToGoFromAIRijwegenPlanopbouw
-                    .ww_bijzonderheden_rijwegen_main,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Bijzonderheden Rijwegen',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
-                value: WhereToGoFromAIRijwegenPlanopbouw
-                    .ai_bijzonderheden_rijwegen_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Bijzonderheden Rijwegen',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
-                value: WhereToGoFromAIRijwegenPlanopbouw.ai_rijwegen_planscherm,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen Planscherm',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIRijwegenPlanopbouwNavigation(),
+           HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title: 'Rijwegen - basisinformatie: plan(regel)opbouw',
                     ),
@@ -128,15 +74,8 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Het plan',
                     ),
@@ -196,15 +135,8 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Opbouw planregel - planscherm',
                     ),
@@ -390,15 +322,8 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Opbouw planregel - mutatiescherm',
                     ),
@@ -653,11 +578,68 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AIRijwegenPlanopbouwNavigation extends StatelessWidget {
+  const AIRijwegenPlanopbouwNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIRijwegenPlanopbouw>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIRijwegenPlanopbouw result) async {
+              if (result == WhereToGoFromAIRijwegenPlanopbouw.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenPlanopbouw
+                      .ww_bijzonderheden_rijwegen_main) {
+                await Navigator.pushNamed(
+                  context,
+                  'ww_bijzonderheden_rijwegen_main',
+                );
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIRijwegenPlanopbouw>>[
+              const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
+                value: WhereToGoFromAIRijwegenPlanopbouw.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
+                value: WhereToGoFromAIRijwegenPlanopbouw
+                    .ww_bijzonderheden_rijwegen_main,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Bijzonderheden Rijwegen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
+                value: WhereToGoFromAIRijwegenPlanopbouw
+                    .ai_bijzonderheden_rijwegen_main,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Bijzonderheden Rijwegen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
+                value: WhereToGoFromAIRijwegenPlanopbouw.ai_rijwegen_planscherm,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen Planscherm',
+                ),
+              ),
+            ],
+          );
   }
 }

@@ -16,42 +16,14 @@ class AINcbg extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAINcbg>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAINcbg result) async {
-              if (result == WhereToGoFromAINcbg.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result == WhereToGoFromAINcbg.ww_ncbg) {
-                await Navigator.pushNamed(context, 'ww_ncbg');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAINcbg>>[
-              const PopupMenuItem<WhereToGoFromAINcbg>(
-                value: WhereToGoFromAINcbg.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAINcbg>(
-                value: WhereToGoFromAINcbg.ww_ncbg,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW NCBG',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AINcbgNavigation(),
+           HomeButton(),
         ],
       ),
+      //TODO: Hier verder met refactor!
       body: SingleChildScrollView(
         child: Column(
           children: <Card>[
@@ -769,5 +741,42 @@ class AINcbg extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+class AINcbgNavigation extends StatelessWidget {
+  const AINcbgNavigation({Key? key}) : (key: key);
+
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAINcbg>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAINcbg result) async {
+              if (result == WhereToGoFromAINcbg.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromAINcbg.ww_ncbg) {
+                await Navigator.pushNamed(context, 'ww_ncbg');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAINcbg>>[
+              const PopupMenuItem<WhereToGoFromAINcbg>(
+                value: WhereToGoFromAINcbg.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAINcbg>(
+                value: WhereToGoFromAINcbg.ww_ncbg,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW NCBG',
+                ),
+              ),
+            ],
+          );
   }
 }

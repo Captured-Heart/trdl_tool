@@ -16,54 +16,19 @@ class AIOngeplandWerkMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIOngeplandWerkMain>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIOngeplandWerkMain result) async {
-              if (result == WhereToGoFromAIOngeplandWerkMain.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIOngeplandWerkMain.ww_ongepland_werk) {
-                await Navigator.pushNamed(context, 'ww_ongepland_werk');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIOngeplandWerkMain>>[
-              const PopupMenuItem<WhereToGoFromAIOngeplandWerkMain>(
-                value: WhereToGoFromAIOngeplandWerkMain.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIOngeplandWerkMain>(
-                value: WhereToGoFromAIOngeplandWerkMain.ww_ongepland_werk,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Ongepland Werk',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIOngeplandWerkMainNavigation(),
+          HomeButton(),
         ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: <Card>[
-              /*TITLE CARD*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <TitleText>[
+            children: <TextCard>[
+TextCard(
+                    widgetList: const <TitleText>[
                       TitleText(
                         title: 'Ongepland Werk',
                       ),
@@ -71,13 +36,8 @@ class AIOngeplandWerkMain extends StatelessWidget {
                   ),
                 ),
               ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: <Widget>[
+TextCard(
+                    widgetList: <Widget>[
                       const TitleText(
                         title: 'Ga snel naar',
                       ),
@@ -116,13 +76,8 @@ class AIOngeplandWerkMain extends StatelessWidget {
                   ),
                 ),
               ),
-              /*IMAGE CARD*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+              TextCard(
+                    widgetList: const <Widget>[
                       SizedBoxH(),
                       InsertImage(
                         image:
@@ -139,4 +94,44 @@ class AIOngeplandWerkMain extends StatelessWidget {
       ),
     );
   }
+}
+
+class AIOngeplandWerkMainNavigation extends StatelessWidget{
+  const AIOngeplandWerkMainNavigation({Key?: key}) : super(key: key)
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIOngeplandWerkMain>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIOngeplandWerkMain result) async {
+              if (result == WhereToGoFromAIOngeplandWerkMain.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIOngeplandWerkMain.ww_ongepland_werk) {
+                await Navigator.pushNamed(context, 'ww_ongepland_werk');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIOngeplandWerkMain>>[
+              const PopupMenuItem<WhereToGoFromAIOngeplandWerkMain>(
+                value: WhereToGoFromAIOngeplandWerkMain.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIOngeplandWerkMain>(
+                value: WhereToGoFromAIOngeplandWerkMain.ww_ongepland_werk,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Ongepland Werk',
+                ),
+              ),
+            ],
+          );
+  } 
+
 }

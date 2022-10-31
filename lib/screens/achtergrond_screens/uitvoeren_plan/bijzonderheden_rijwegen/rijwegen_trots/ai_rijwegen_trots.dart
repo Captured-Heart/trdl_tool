@@ -24,98 +24,19 @@ class AIRijwegenTrots extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIRijwegenTrots>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIRijwegenTrots result) async {
-              if (result == WhereToGoFromAIRijwegenTrots.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenTrots.ai_rijwegen_ari) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_ari');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenTrots.ai_rijwegen_planscherm) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_planscherm');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenTrots
-                      .ai_bijzonderheden_rijwegen_main) {
-                await Navigator.pushNamed(
-                  context,
-                  'ai_bijzonderheden_rijwegen_main',
-                );
-              } else if (result ==
-                  WhereToGoFromAIRijwegenTrots.ai_rijwegen_planopbouw) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
-              } else if (result ==
-                  WhereToGoFromAIRijwegenTrots.ai_rijwegen_bedienscherm) {
-                await Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIRijwegenTrots>>[
-              const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-                value: WhereToGoFromAIRijwegenTrots.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-                value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_ari,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen ARI',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-                value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planscherm,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen Planscherm',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-                value: WhereToGoFromAIRijwegenTrots
-                    .ai_bijzonderheden_rijwegen_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Bijzonderheden Rijwegen',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-                value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planopbouw,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen Planopbouw',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-                value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_bedienscherm,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Rijwegen Bedienscherm',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIRijwegenTrotsNavigation(),
+           HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title:
                           'Rijwegen - basisinformatie: Automatische Bediening TROTSnummers (ABT)',
@@ -132,15 +53,8 @@ class AIRijwegenTrots extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Automatisch omnummeren',
                     ),
@@ -214,15 +128,8 @@ class AIRijwegenTrots extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Bediening',
                     ),
@@ -320,12 +227,94 @@ class AIRijwegenTrots extends StatelessWidget {
                           "Bij het verschijnen van deze pop-up wordt er slechts één treinnummer getoond. Pas als de TRDL op de knop 'Treinnummer' drukt, verschijnt ook de lijst met alternatieve treinnummers, die gekozen worden op basis van het van-spoor en het plan. Hieruit kan dan een ander treinnummer gekozen worden. Handmatige bewerking van het voorgestelde treinnummer is ook mogelijk. De knoppen 'Volgend voorstel' en 'Vorig voorstel' maken het mogelijk om door de lijst met nog niet verwerkte bedienvoorstellen te lopen.",
                     ),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
     );
+  }
+}
+
+class AIRijwegenTrotsNavigation extends StatelessWidget {
+  const AIRijwegenTrotsNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIRijwegenTrots>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIRijwegenTrots result) async {
+              if (result == WhereToGoFromAIRijwegenTrots.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenTrots.ai_rijwegen_ari) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_ari');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenTrots.ai_rijwegen_planscherm) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_planscherm');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenTrots
+                      .ai_bijzonderheden_rijwegen_main) {
+                await Navigator.pushNamed(
+                  context,
+                  'ai_bijzonderheden_rijwegen_main',
+                );
+              } else if (result ==
+                  WhereToGoFromAIRijwegenTrots.ai_rijwegen_planopbouw) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
+              } else if (result ==
+                  WhereToGoFromAIRijwegenTrots.ai_rijwegen_bedienscherm) {
+                await Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIRijwegenTrots>>[
+              const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_ari,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen ARI',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planscherm,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen Planscherm',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots
+                    .ai_bijzonderheden_rijwegen_main,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Bijzonderheden Rijwegen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planopbouw,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen Planopbouw',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
+                value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_bedienscherm,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Rijwegen Bedienscherm',
+                ),
+              ),
+            ],
+          ),);
   }
 }

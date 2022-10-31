@@ -18,10 +18,93 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIBijzonderhedenRijwegenMain>(
+        actions: const<Widget>[
+          AIBijzonderhedenRijwegenMainNavigation(),
+          HomeButton(),
+        ],
+      ),
+      body: SafeArea(child: SingleChildScrollView(
+        child: Column(
+          children: <TextCard>[
+TextCard(
+                  widgetList: const <SubTitleText>[
+                    SubTitleText(
+                      subtitle: 'Bijzonderheden Rijwegen',
+                    ),
+                  ],
+                ),
+TextCard(
+                  widgetList: <Widget>[
+                    const TitleText(
+                      title: 'Ga snel naar',
+                    ),
+                    const SizedBoxH(),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        NavButton(
+                          buttontext: 'Inzetten railvoertuig (ICB)',
+                          destination: 'ai_inzetten_icb',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Toelaten werktreinen',
+                          destination: 'ai_toelaten_werktreinen',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Rijwegen - Planopbouw',
+                          destination: 'ai_rijwegen_planopbouw',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Rijwegen - Planscherm',
+                          destination: 'ai_rijwegen_planscherm',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Rijwegen - ARI',
+                          destination: 'ai_rijwegen_ari',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Rijwegen - TROTS en ABT',
+                          destination: 'ai_rijwegen_trots',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Rijwegen - Bedienscherm',
+                          destination: 'ai_rijwegen_bedienscherm',
+                        ),
+                      ],
+                    ),
+                    const SizedBoxH(),
+                  ],
+                ),
+TextCard(
+                  widgetList: const <Widget>[
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/icbVoertuig.jpg',
+                    ),
+                  ],
+            ),
+          ],
+        ),
+      ),
+    ),);
+  }
+}
+
+class AIBijzonderhedenRijwegenMainNavigation extends StatelessWidget {
+  const AIBijzonderhedenRijwegenMainNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIBijzonderhedenRijwegenMain>(
             icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected:
@@ -73,101 +156,6 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-          const HomeButton(),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Card>[
-            //*PROCEDURE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <SubTitleText>[
-                    SubTitleText(
-                      subtitle: 'Bijzonderheden Rijwegen',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
-                    const TitleText(
-                      title: 'Ga snel naar',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const <Widget>[
-                        NavButton(
-                          buttontext: 'Inzetten railvoertuig (ICB)',
-                          destination: 'ai_inzetten_icb',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Toelaten werktreinen',
-                          destination: 'ai_toelaten_werktreinen',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen - Planopbouw',
-                          destination: 'ai_rijwegen_planopbouw',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen - Planscherm',
-                          destination: 'ai_rijwegen_planscherm',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen - ARI',
-                          destination: 'ai_rijwegen_ari',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen - TROTS en ABT',
-                          destination: 'ai_rijwegen_trots',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Rijwegen - Bedienscherm',
-                          destination: 'ai_rijwegen_bedienscherm',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
-                  ],
-                ),
-              ),
-            ),
-            /*IMAGE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    SizedBoxH(),
-                    InsertImage(
-                      image:
-                          'assets/images/achtergrond_info/uitvoeren_plan/bijzonderheden_rijwegen/icbVoertuig.jpg',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+          );
   }
 }

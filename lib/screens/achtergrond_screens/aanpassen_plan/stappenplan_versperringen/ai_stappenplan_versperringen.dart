@@ -18,72 +18,19 @@ class AIStappenplanVersperringen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIStappenplanVersperringen>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIStappenplanVersperringen result) async {
-              if (result ==
-                  WhereToGoFromAIStappenplanVersperringen.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIStappenplanVersperringen
-                      .ww_stappenplan_versperringen) {
-                await Navigator.pushNamed(
-                  context,
-                  'ww_stappenplan_versperringen',
-                );
-              } else if (result ==
-                  WhereToGoFromAIStappenplanVersperringen
-                      .ai_aanpassen_plan_main) {
-                await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIStappenplanVersperringen>>[
-              const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
-                value: WhereToGoFromAIStappenplanVersperringen.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
-                value: WhereToGoFromAIStappenplanVersperringen
-                    .ww_stappenplan_versperringen,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Stappenplan Versperringen',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
-                value: WhereToGoFromAIStappenplanVersperringen
-                    .ai_aanpassen_plan_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Aanpassen Plan',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIStappenplanVersperringenNavigation(),
+          HomeButton(),
         ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: <Card>[
-              /*CARD #1*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+            children: <TextCard>[
+              TextCard(
+                    widgetList: const <Widget>[
                       TitleText(
                         title: 'Stappenplan Versperringen Achtergrond',
                       ),
@@ -112,15 +59,8 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #2*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Verdelingsbesluit',
                       ),
@@ -150,15 +90,8 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #3*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Rol van de TRDL',
                       ),
@@ -170,15 +103,8 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #4*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Werkwijze bij versperring',
                       ),
@@ -401,12 +327,64 @@ class AIStappenplanVersperringen extends StatelessWidget {
                       ),
                     ],
                   ),
+            ],
+          ),
+        );
+  }
+}
+
+class AIStappenplanVersperringenNavigation extends StatelessWidget {
+  const AIStappenplanVersperringenNavigation({Key? key}) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIStappenplanVersperringen>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIStappenplanVersperringen result) async {
+              if (result ==
+                  WhereToGoFromAIStappenplanVersperringen.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIStappenplanVersperringen
+                      .ww_stappenplan_versperringen) {
+                await Navigator.pushNamed(
+                  context,
+                  'ww_stappenplan_versperringen',
+                );
+              } else if (result ==
+                  WhereToGoFromAIStappenplanVersperringen
+                      .ai_aanpassen_plan_main) {
+                await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIStappenplanVersperringen>>[
+              const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
+                value: WhereToGoFromAIStappenplanVersperringen.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
+                value: WhereToGoFromAIStappenplanVersperringen
+                    .ww_stappenplan_versperringen,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Stappenplan Versperringen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
+                value: WhereToGoFromAIStappenplanVersperringen
+                    .ai_aanpassen_plan_main,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Aanpassen Plan',
                 ),
               ),
             ],
-          ),
-        ),
-      ),
-    );
+          );
   }
 }

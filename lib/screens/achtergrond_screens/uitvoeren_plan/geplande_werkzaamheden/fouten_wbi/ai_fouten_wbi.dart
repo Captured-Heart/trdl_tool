@@ -22,10 +22,63 @@ class AIFoutenWBI extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIFoutenWBI>(
+        actions: const <Widget>[
+          AIFoutenWBINavigation(),
+           HomeButton(),
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+        child: Column(
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
+                    TitleText(
+                      title: 'Fouten in de WBI',
+                    ),
+                    SizedBoxH(),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Wanneer er een fout in de WBI is geconstateerd zijn er twee mogelijkheden:',
+                    ),
+                    SizedBoxH(),
+                    BoldText(
+                      indents: 0,
+                      boldtext: 'Meer dan 72 uur voor uitvoering:',
+                    ),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Bij meer dan 72 uur voor uitvoering neem je contact op met de afdeling Werkplekbeveiliging van uw regio. TRDL en medewerker Werkplekbeveiliging stemmen de vereiste wijzigingen af, waarna de medewerker Werkplekbeveiliging de WBI aanpast in overleg met de betrokken aannemer.\n\nVoorwaarde daarbij is dat de gewijzigde WBI na aanlevering door de TRDL in overleg met de medewerker Werkplekbeveiliging wordt gecontroleerd.',
+                    ),
+                    SizedBoxH(),
+                    BoldText(
+                      indents: 0,
+                      boldtext: 'Binnen 72 uur voor uitvoering:',
+                    ),
+                    BodyText(
+                      indents: 0,
+                      text:
+                          'Binnen 72 uur voor uitvoering neem je contact op met de medewerker 24/7 werkplekbeveiliging. De medewerker 24/7 Werkplekbeveiliging bepaalt of er een versieophoging of een penwijziging noodzakelijk is. Een versieophoging of penwijziging kan slechts plaatsvinden indien zowel TRDL als medewerker 24/7 Werkplekbeveiliging hier mee instemmen.\n\nAls er geen overeenstemming wordt bereikt over een penwijziging/versieophoging of een penwijziging/versieophoging geen oplossing biedt en daardoor werkzaamheden dreigen te worden afgeblazen, dan wordt via de medewerker 24/7 werkplekbeveiliging naar de OvD-S geëscaleerd.',
+                    ),
+                  ],
+            ),
+          ],
+        ),
+      ),
+    ),);
+  }
+}
+
+class AIFoutenWBINavigation extends StatelessWidget {
+  const AIFoutenWBINavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIFoutenWBI>(
             icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIFoutenWBI result) async {
@@ -85,56 +138,6 @@ class AIFoutenWBI extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-          const HomeButton(),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    TitleText(
-                      title: 'Fouten in de WBI',
-                    ),
-                    SizedBoxH(),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Wanneer er een fout in de WBI is geconstateerd zijn er twee mogelijkheden:',
-                    ),
-                    SizedBoxH(),
-                    BoldText(
-                      indents: 0,
-                      boldtext: 'Meer dan 72 uur voor uitvoering:',
-                    ),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Bij meer dan 72 uur voor uitvoering neem je contact op met de afdeling Werkplekbeveiliging van uw regio. TRDL en medewerker Werkplekbeveiliging stemmen de vereiste wijzigingen af, waarna de medewerker Werkplekbeveiliging de WBI aanpast in overleg met de betrokken aannemer.\n\nVoorwaarde daarbij is dat de gewijzigde WBI na aanlevering door de TRDL in overleg met de medewerker Werkplekbeveiliging wordt gecontroleerd.',
-                    ),
-                    SizedBoxH(),
-                    BoldText(
-                      indents: 0,
-                      boldtext: 'Binnen 72 uur voor uitvoering:',
-                    ),
-                    BodyText(
-                      indents: 0,
-                      text:
-                          'Binnen 72 uur voor uitvoering neem je contact op met de medewerker 24/7 werkplekbeveiliging. De medewerker 24/7 Werkplekbeveiliging bepaalt of er een versieophoging of een penwijziging noodzakelijk is. Een versieophoging of penwijziging kan slechts plaatsvinden indien zowel TRDL als medewerker 24/7 Werkplekbeveiliging hier mee instemmen.\n\nAls er geen overeenstemming wordt bereikt over een penwijziging/versieophoging of een penwijziging/versieophoging geen oplossing biedt en daardoor werkzaamheden dreigen te worden afgeblazen, dan wordt via de medewerker 24/7 werkplekbeveiliging naar de OvD-S geëscaleerd.',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+          );
   }
 }

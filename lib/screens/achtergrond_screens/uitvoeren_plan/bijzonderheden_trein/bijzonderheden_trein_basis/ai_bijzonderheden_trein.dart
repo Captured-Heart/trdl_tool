@@ -39,78 +39,19 @@ class AIBijzonderhedenTrein extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
         actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIBijzonderhedenTrein>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIBijzonderhedenTrein result) async {
-              if (result == WhereToGoFromAIBijzonderhedenTrein.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIBijzonderhedenTrein
-                      .ww_bijzonderheden_trein_main) {
-                await Navigator.pushNamed(
-                  context,
-                  'ww_bijzonderheden_trein_main',
-                );
-              } else if (result ==
-                  WhereToGoFromAIBijzonderhedenTrein.ai_vervoersregeling) {
-                await Navigator.pushNamed(context, 'ai_vervoersregeling');
-              } else if (result ==
-                  WhereToGoFromAIBijzonderhedenTrein.ai_onjuiste_detectie) {
-                await Navigator.pushNamed(context, 'ai_onjuiste_detectie');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIBijzonderhedenTrein>>[
-              const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
-                value: WhereToGoFromAIBijzonderhedenTrein.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
-                value: WhereToGoFromAIBijzonderhedenTrein
-                    .ww_bijzonderheden_trein_main,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Bijzonderheden Trein',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
-                value: WhereToGoFromAIBijzonderhedenTrein.ai_vervoersregeling,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Vervoersregeling',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
-                value: WhereToGoFromAIBijzonderhedenTrein.ai_onjuiste_detectie,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Onjuiste Detectie',
-                ),
-              ),
-            ],
-          ),
+          AIBijzonderhedenTreinNavigation(),
           const HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: <Widget>[
                     const TitleText(
                       title: 'Bijzonderheden trein - basisinformatie',
                     ),
@@ -188,15 +129,8 @@ class AIBijzonderhedenTrein extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+            TextCard(
+                  widgetList: <Widget>[
                     const SubTitleText(
                       subtitle: 'Elektrische locomotieven',
                     ),
@@ -288,15 +222,8 @@ class AIBijzonderhedenTrein extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+            TextCard(
+                  widgetList: <Widget>[
                     const SubTitleText(
                       subtitle: 'Diesel locomotieven',
                     ),
@@ -455,15 +382,8 @@ class AIBijzonderhedenTrein extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+            TextCard(
+                  widgetList: <Widget>[
                     const SubTitleText(
                       subtitle: 'Elektrische treinstellen',
                     ),
@@ -602,15 +522,8 @@ class AIBijzonderhedenTrein extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #5*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+            TextCard(
+                  widgetList: <Widget>[
                     const SubTitleText(
                       subtitle: 'Diesel treinstellen',
                     ),
@@ -693,15 +606,8 @@ class AIBijzonderhedenTrein extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #6*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+            TextCard(
+                  widgetList: <Widget>[
                     const SubTitleText(
                       subtitle: 'Rijtuigen',
                     ),
@@ -784,15 +690,8 @@ class AIBijzonderhedenTrein extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #7*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+            TextCard(
+                  widgetList: <Widget>[
                     const SubTitleText(
                       subtitle: 'Onderhoudsmachines',
                     ),
@@ -832,15 +731,8 @@ class AIBijzonderhedenTrein extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #8*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+            TextCard(
+                  widgetList: <Widget>[
                     const SubTitleText(
                       subtitle: 'Railwegvoertuigen',
                     ),
@@ -879,13 +771,75 @@ class AIBijzonderhedenTrein extends StatelessWidget {
                       ),
                     ),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+
+  class AIBijzonderhedenTreinNavigation extends StatelessWidget {
+    const AIBijzonderhedenTreinNavigation({Key? key}) : super(key: key);
+
+    @override
+    Widget build(BuildContext context) {
+      return PopupMenuButton<WhereToGoFromAIBijzonderhedenTrein>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIBijzonderhedenTrein result) async {
+              if (result == WhereToGoFromAIBijzonderhedenTrein.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIBijzonderhedenTrein
+                      .ww_bijzonderheden_trein_main) {
+                await Navigator.pushNamed(
+                  context,
+                  'ww_bijzonderheden_trein_main',
+                );
+              } else if (result ==
+                  WhereToGoFromAIBijzonderhedenTrein.ai_vervoersregeling) {
+                await Navigator.pushNamed(context, 'ai_vervoersregeling');
+              } else if (result ==
+                  WhereToGoFromAIBijzonderhedenTrein.ai_onjuiste_detectie) {
+                await Navigator.pushNamed(context, 'ai_onjuiste_detectie');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIBijzonderhedenTrein>>[
+              const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
+                value: WhereToGoFromAIBijzonderhedenTrein.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
+                value: WhereToGoFromAIBijzonderhedenTrein
+                    .ww_bijzonderheden_trein_main,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Bijzonderheden Trein',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
+                value: WhereToGoFromAIBijzonderhedenTrein.ai_vervoersregeling,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Vervoersregeling',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
+                value: WhereToGoFromAIBijzonderhedenTrein.ai_onjuiste_detectie,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Onjuiste Detectie',
+                ),
+              ),
+            ],
+          );
+    }
   }
 
   //TODO: Respect linter here, find out how to make an Exception class

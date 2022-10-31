@@ -24,97 +24,19 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIAanvangWerkzaamheden>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIAanvangWerkzaamheden result) async {
-              if (result == WhereToGoFromAIAanvangWerkzaamheden.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIAanvangWerkzaamheden
-                      .ww_aanvang_werkzaamheden) {
-                await Navigator.pushNamed(context, 'ww_aanvang_werkzaamheden');
-              } else if (result ==
-                  WhereToGoFromAIAanvangWerkzaamheden
-                      .ai_geplande_werkzaamheden) {
-                await Navigator.pushNamed(context, 'ai_geplande_werkzaamheden');
-              } else if (result ==
-                  WhereToGoFromAIAanvangWerkzaamheden.ai_controleren_wbi) {
-                await Navigator.pushNamed(context, 'ai_controleren_wbi');
-              } else if (result ==
-                  WhereToGoFromAIAanvangWerkzaamheden.ai_fouten_wbi) {
-                await Navigator.pushNamed(context, 'ai_fouten_wbi');
-              } else if (result ==
-                  WhereToGoFromAIAanvangWerkzaamheden.ai_bovenleiding_main) {
-                await Navigator.pushNamed(context, 'ai_bovenleiding_main');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIAanvangWerkzaamheden>>[
-              const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-                value: WhereToGoFromAIAanvangWerkzaamheden.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-                value: WhereToGoFromAIAanvangWerkzaamheden
-                    .ww_aanvang_werkzaamheden,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Aanvang Werkzaamheden',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-                value: WhereToGoFromAIAanvangWerkzaamheden
-                    .ai_geplande_werkzaamheden,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Geplande Werkzaamheden',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-                value: WhereToGoFromAIAanvangWerkzaamheden.ai_controleren_wbi,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Controleren WBI',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-                value: WhereToGoFromAIAanvangWerkzaamheden.ai_fouten_wbi,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Fouten WBI',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-                value: WhereToGoFromAIAanvangWerkzaamheden.ai_bovenleiding_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Bovenleiding',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIAanvangWerkzaamhedenNavigation(),
+           HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title: 'Aanvang werkzaamheden',
                     ),
@@ -138,15 +60,8 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Buiten dienst stellen',
                     ),
@@ -163,15 +78,8 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle:
                           'Werkplekbeveiliging met zelfsignalerende kortsluitlans (ZKL) i.c.m. rijweginstelling',
@@ -234,15 +142,8 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Beproeven infra-elementen',
                     ),
@@ -334,12 +235,93 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
                           'Op het moment dat de werkzaamheden zijn afgerond, zorgt de LWB ervoor dat het buitendienst gestelde spoor helemaal vrij is van personen en materieel. Daarna verwijdert hij de door hem geplaatste veiligheidsmaatregelen. Hij neemt contact op met je, deelt mede dat de infra van de buitendienststelling weer vrij en onbelemmerd is, en meldt dat de werkzaamheden gereed zijn.\n\nNa beëindiging van de werkzaamheden trekt de LWB in overleg met jou het WBI/WECO in en samen tekenen jullie de WBI/WECO af.\n\nJe heft de door jou geplaatste veiligheidsmaatregelen op, en neemt indien nodig contact op met betrokken buurTRDL om ook hun maatregelen op te heffen.\n\nNu is het spoor weer in dienst en kan het treinverkeer weer normaal hervat worden.',
                     ),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AIAanvangWerkzaamhedenNavigation extends StatelessWidget {
+  const AIAanvangWerkzaamhedenNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIAanvangWerkzaamheden>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIAanvangWerkzaamheden result) async {
+              if (result == WhereToGoFromAIAanvangWerkzaamheden.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIAanvangWerkzaamheden
+                      .ww_aanvang_werkzaamheden) {
+                await Navigator.pushNamed(context, 'ww_aanvang_werkzaamheden');
+              } else if (result ==
+                  WhereToGoFromAIAanvangWerkzaamheden
+                      .ai_geplande_werkzaamheden) {
+                await Navigator.pushNamed(context, 'ai_geplande_werkzaamheden');
+              } else if (result ==
+                  WhereToGoFromAIAanvangWerkzaamheden.ai_controleren_wbi) {
+                await Navigator.pushNamed(context, 'ai_controleren_wbi');
+              } else if (result ==
+                  WhereToGoFromAIAanvangWerkzaamheden.ai_fouten_wbi) {
+                await Navigator.pushNamed(context, 'ai_fouten_wbi');
+              } else if (result ==
+                  WhereToGoFromAIAanvangWerkzaamheden.ai_bovenleiding_main) {
+                await Navigator.pushNamed(context, 'ai_bovenleiding_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIAanvangWerkzaamheden>>[
+              const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
+                value: WhereToGoFromAIAanvangWerkzaamheden.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
+                value: WhereToGoFromAIAanvangWerkzaamheden
+                    .ww_aanvang_werkzaamheden,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Aanvang Werkzaamheden',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
+                value: WhereToGoFromAIAanvangWerkzaamheden
+                    .ai_geplande_werkzaamheden,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Geplande Werkzaamheden',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
+                value: WhereToGoFromAIAanvangWerkzaamheden.ai_controleren_wbi,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Controleren WBI',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
+                value: WhereToGoFromAIAanvangWerkzaamheden.ai_fouten_wbi,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Fouten WBI',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
+                value: WhereToGoFromAIAanvangWerkzaamheden.ai_bovenleiding_main,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Bovenleiding',
+                ),
+              ),
+            ],
+          );
   }
 }

@@ -16,58 +16,19 @@ class AIMondelingeCommunicatie extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
         actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIMondelingeCommunicatie>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIMondelingeCommunicatie result) async {
-              if (result == WhereToGoFromAIMondelingeCommunicatie.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIMondelingeCommunicatie
-                      .ww_mondelinge_communicatie) {
-                await Navigator.pushNamed(
-                  context,
-                  'ww_mondelinge_communicatie',
-                );
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIMondelingeCommunicatie>>[
-              const PopupMenuItem<WhereToGoFromAIMondelingeCommunicatie>(
-                value: WhereToGoFromAIMondelingeCommunicatie.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIMondelingeCommunicatie>(
-                value: WhereToGoFromAIMondelingeCommunicatie
-                    .ww_mondelinge_communicatie,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Mondelinge Communicatie',
-                ),
-              ),
-            ],
-          ),
+          AIMondelingeCommunicatieNavigation(),
           const HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title: 'Mondelinge communicatie',
                     ),
@@ -254,15 +215,8 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Schriftelijke opdrachten',
                     ),
@@ -298,15 +252,8 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+            TextCard(
+                  widgetList: <Widget>[
                     const SubTitleText(
                       subtitle: 'Veiligheidscommunicatie TRDL',
                     ),
@@ -909,15 +856,8 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Berichtenstructuur',
                     ),
@@ -1174,12 +1114,54 @@ class AIMondelingeCommunicatie extends StatelessWidget {
                           "laten weinig ruimte voor alternatieven: 'Wil je hier eten of gaan we naar het eetcafé?' Stimuleert de ander snel een beslissing te nemen.",
                     ),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
     );
+  }
+}
+
+class AIMondelingeCommunicatieNavigation extends StatelessWidget {
+  const AIMondelingeCommunicatieNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIMondelingeCommunicatie>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIMondelingeCommunicatie result) async {
+              if (result == WhereToGoFromAIMondelingeCommunicatie.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIMondelingeCommunicatie
+                      .ww_mondelinge_communicatie) {
+                await Navigator.pushNamed(
+                  context,
+                  'ww_mondelinge_communicatie',
+                );
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIMondelingeCommunicatie>>[
+              const PopupMenuItem<WhereToGoFromAIMondelingeCommunicatie>(
+                value: WhereToGoFromAIMondelingeCommunicatie.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIMondelingeCommunicatie>(
+                value: WhereToGoFromAIMondelingeCommunicatie
+                    .ww_mondelinge_communicatie,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Mondelinge Communicatie',
+                ),
+              ),
+            ],
+          );
   }
 }

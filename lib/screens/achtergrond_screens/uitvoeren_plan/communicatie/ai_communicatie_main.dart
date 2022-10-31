@@ -24,10 +24,85 @@ class AICommunicatieMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
         actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAICommunicatieMain>(
+          AICommunicatieMainNavigation(),
+          const HomeButton(),
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+        child: Column(
+          children: <Card>[
+            TextCard(
+                  widgetList: const <TitleText>[
+                    TitleText(
+                      title: 'Communicatie',
+                    ),
+                  ],
+                ),
+            TextCard(
+                  widgetList: <Widget>[
+                    const TitleText(
+                      title: 'Ga snel naar',
+                    ),
+                    const SizedBoxH(),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const <Widget>[
+                        NavButton(
+                          buttontext: 'Communicatie - Werkwijze',
+                          destination: 'ww_communicatie_main',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Mondelinge (veiligheids)communicatie',
+                          destination: 'ai_mondelinge_communicatie',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Communicatiemiddelen - Basis',
+                          destination: 'ai_communicatiemiddelen',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Communicatiesysteem GSM-R - Basis',
+                          destination: 'ai_communicatiesysteem',
+                        ),
+                        SizedBoxH(),
+                        NavButton(
+                          buttontext: 'Externe ketenpartners',
+                          destination: 'ai_ketenpartners',
+                        ),
+                      ],
+                    ),
+                    const SizedBoxH(),
+                  ],
+                ),
+            TextCard(
+                  widgetList: const <Widget>[
+                    SizedBoxH(),
+                    InsertImage(
+                      image:
+                          'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_main.jpg',
+                    ),
+                    SizedBoxH(),
+                  ],
+            ),
+          ],
+        ),
+      ),
+    ),);
+  }
+}
+
+class AICommunicatieMainNavigation extends StatelessWidget {
+  const AICommunicatieMainNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAICommunicatieMain>(
             icon: const Icon(Utils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAICommunicatieMain result) async {
@@ -105,92 +180,6 @@ class AICommunicatieMain extends StatelessWidget {
                 ),
               ),
             ],
-          ),
-          const HomeButton(),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Card>[
-            /*TITLE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <TitleText>[
-                    TitleText(
-                      title: 'Communicatie',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
-                    const TitleText(
-                      title: 'Ga snel naar',
-                    ),
-                    const SizedBoxH(),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: const <Widget>[
-                        NavButton(
-                          buttontext: 'Communicatie - Werkwijze',
-                          destination: 'ww_communicatie_main',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Mondelinge (veiligheids)communicatie',
-                          destination: 'ai_mondelinge_communicatie',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Communicatiemiddelen - Basis',
-                          destination: 'ai_communicatiemiddelen',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Communicatiesysteem GSM-R - Basis',
-                          destination: 'ai_communicatiesysteem',
-                        ),
-                        SizedBoxH(),
-                        NavButton(
-                          buttontext: 'Externe ketenpartners',
-                          destination: 'ai_ketenpartners',
-                        ),
-                      ],
-                    ),
-                    const SizedBoxH(),
-                  ],
-                ),
-              ),
-            ),
-            /*IMAGE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    SizedBoxH(),
-                    InsertImage(
-                      image:
-                          'assets/images/achtergrond_info/uitvoeren_plan/communicatie/communicatie_main.jpg',
-                    ),
-                    SizedBoxH(),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+          );
   }
 }

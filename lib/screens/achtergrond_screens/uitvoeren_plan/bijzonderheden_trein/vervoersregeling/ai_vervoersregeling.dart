@@ -20,73 +20,19 @@ class AIVervoersregeling extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIVervoersregeling>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIVervoersregeling result) async {
-              if (result == WhereToGoFromAIVervoersregeling.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIVervoersregeling.ww_vervoersregeling) {
-                await Navigator.pushNamed(context, 'ww_vervoersregeling');
-              } else if (result ==
-                  WhereToGoFromAIVervoersregeling.ai_bijzonderheden_trein) {
-                await Navigator.pushNamed(context, 'ai_bijzonderheden_trein');
-              } else if (result ==
-                  WhereToGoFromAIVervoersregeling.ai_onjuiste_detectie) {
-                await Navigator.pushNamed(context, 'ai_onjuiste_detectie');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIVervoersregeling>>[
-              const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
-                value: WhereToGoFromAIVervoersregeling.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
-                value: WhereToGoFromAIVervoersregeling.ww_vervoersregeling,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Vervoersregeling',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
-                value: WhereToGoFromAIVervoersregeling.ai_bijzonderheden_trein,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Bijzonderheden Trein',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
-                value: WhereToGoFromAIVervoersregeling.ai_onjuiste_detectie,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Onjuiste Detectie',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIVervoersregelingNavigation(),
+           HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+           TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title: 'Treinen met een vervoersregeling',
                     ),
@@ -110,15 +56,8 @@ class AIVervoersregeling extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Buitengewoon vervoer',
                     ),
@@ -173,15 +112,8 @@ class AIVervoersregeling extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Standaardvoorwaarden BP 1, 2 en 3',
                     ),
@@ -204,15 +136,8 @@ class AIVervoersregeling extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+            TextCard(
+                  widgetList: <Widget>[
                     const SubTitleText(
                       subtitle:
                           'Afhandeling treinen met toevoeging BP 1, 2 en 3',
@@ -348,12 +273,69 @@ class AIVervoersregeling extends StatelessWidget {
                       ],
                     ),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AIVervoersregelingNavigation extends StatelessWidget {
+  const AIVervoersregelingNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIVervoersregeling>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIVervoersregeling result) async {
+              if (result == WhereToGoFromAIVervoersregeling.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIVervoersregeling.ww_vervoersregeling) {
+                await Navigator.pushNamed(context, 'ww_vervoersregeling');
+              } else if (result ==
+                  WhereToGoFromAIVervoersregeling.ai_bijzonderheden_trein) {
+                await Navigator.pushNamed(context, 'ai_bijzonderheden_trein');
+              } else if (result ==
+                  WhereToGoFromAIVervoersregeling.ai_onjuiste_detectie) {
+                await Navigator.pushNamed(context, 'ai_onjuiste_detectie');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIVervoersregeling>>[
+              const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
+                value: WhereToGoFromAIVervoersregeling.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
+                value: WhereToGoFromAIVervoersregeling.ww_vervoersregeling,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Vervoersregeling',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
+                value: WhereToGoFromAIVervoersregeling.ai_bijzonderheden_trein,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Bijzonderheden Trein',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
+                value: WhereToGoFromAIVervoersregeling.ai_onjuiste_detectie,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Onjuiste Detectie',
+                ),
+              ),
+            ],
+          );
   }
 }

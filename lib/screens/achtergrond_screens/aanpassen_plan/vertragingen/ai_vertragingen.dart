@@ -22,81 +22,18 @@ class AIVertragingen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIVertragingen>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIVertragingen result) async {
-              if (result == WhereToGoFromAIVertragingen.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIVertragingen.ww_vertragingen) {
-                await Navigator.pushNamed(context, 'ww_vertragingen');
-              } else if (result ==
-                  WhereToGoFromAIVertragingen.ai_aanpassen_plan_main) {
-                await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
-              } else if (result == WhereToGoFromAIVertragingen.ai_monitoring) {
-                await Navigator.pushNamed(context, 'ai_monitoring');
-              } else if (result == WhereToGoFromAIVertragingen.ai_klanthinder) {
-                await Navigator.pushNamed(context, 'ai_klanthinder');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIVertragingen>>[
-              const PopupMenuItem<WhereToGoFromAIVertragingen>(
-                value: WhereToGoFromAIVertragingen.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIVertragingen>(
-                value: WhereToGoFromAIVertragingen.ww_vertragingen,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Vertragingen',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIVertragingen>(
-                value: WhereToGoFromAIVertragingen.ai_aanpassen_plan_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Aanpassen Plan',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIVertragingen>(
-                value: WhereToGoFromAIVertragingen.ai_monitoring,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Vertraging en Monitoring',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIVertragingen>(
-                value: WhereToGoFromAIVertragingen.ai_klanthinder,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Klanthinder',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIVertragingenNavigation(),
+          HomeButton(),
         ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: <Card>[
-              /*CARD #1*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
+            children: <TextCard>[
+              TextCard(
                     children: const <Widget>[
                       TitleText(
                         title: 'Vertragingen',
@@ -163,15 +100,8 @@ class AIVertragingen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #2*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Verwerken van vertraging',
                       ),
@@ -213,15 +143,8 @@ class AIVertragingen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #3*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle:
                             'Volgordewisseling in procesleiding a.g.v. vertraging verwerken (werking ARI)',
@@ -265,15 +188,8 @@ class AIVertragingen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #4*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Afhandelingsafspraken',
                       ),
@@ -398,15 +314,8 @@ class AIVertragingen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #5*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Bijsturings- en/of plannormen',
                       ),
@@ -492,15 +401,8 @@ class AIVertragingen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-              ),
-              /*CARD #6*/
-              Card(
-                elevation: Utils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
+TextCard(
+                    widgetList: const <Widget>[
                       SubTitleText(
                         subtitle: 'Klaarmelding',
                       ),
@@ -615,13 +517,77 @@ class AIVertragingen extends StatelessWidget {
                             "Hierna kun je de pop-up sluiten door op 'Voer in' te klikken.\n\nAls alle klaarmeldingen zijn afgevinkt zal de 'K' in de planregel (in het planscherm) veranderen in een '-'.\n\nDoor op deze manier een klaarmelding af te handelen weet iedereen die met jou meekijkt ook dat de trein is klaargemeld. Als je de planregel zou instellen zonder de klaarmelding af te handelen, blijft de 'K' ook in de historie achter de planregel staan.",
                       ),
                     ],
-                  ),
-                ),
               ),
             ],
           ),
         ),
       ),
     );
+  }
+}
+
+class AIVertragingenNavigation extends StatelessWidget {
+  const AIVertragingenNavigation({Key key}) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIVertragingen>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIVertragingen result) async {
+              if (result == WhereToGoFromAIVertragingen.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIVertragingen.ww_vertragingen) {
+                await Navigator.pushNamed(context, 'ww_vertragingen');
+              } else if (result ==
+                  WhereToGoFromAIVertragingen.ai_aanpassen_plan_main) {
+                await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
+              } else if (result == WhereToGoFromAIVertragingen.ai_monitoring) {
+                await Navigator.pushNamed(context, 'ai_monitoring');
+              } else if (result == WhereToGoFromAIVertragingen.ai_klanthinder) {
+                await Navigator.pushNamed(context, 'ai_klanthinder');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIVertragingen>>[
+              const PopupMenuItem<WhereToGoFromAIVertragingen>(
+                value: WhereToGoFromAIVertragingen.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIVertragingen>(
+                value: WhereToGoFromAIVertragingen.ww_vertragingen,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Vertragingen',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIVertragingen>(
+                value: WhereToGoFromAIVertragingen.ai_aanpassen_plan_main,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Aanpassen Plan',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIVertragingen>(
+                value: WhereToGoFromAIVertragingen.ai_monitoring,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Vertraging en Monitoring',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIVertragingen>(
+                value: WhereToGoFromAIVertragingen.ai_klanthinder,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Klanthinder',
+                ),
+              ),
+            ],
+          );
   }
 }

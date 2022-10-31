@@ -16,52 +16,18 @@ class AIAanpassenPlanMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinfo',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIAanpassenPlanMain>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIAanpassenPlanMain result) async {
-              if (result == WhereToGoFromAIAanpassenPlanMain.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIAanpassenPlanMain.ww_aanpassen_plan_main) {
-                await Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIAanpassenPlanMain>>[
-              const PopupMenuItem<WhereToGoFromAIAanpassenPlanMain>(
-                value: WhereToGoFromAIAanpassenPlanMain.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIAanpassenPlanMain>(
-                value: WhereToGoFromAIAanpassenPlanMain.ww_aanpassen_plan_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'WW Aanpassen Plan',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const<Widget>[
+          AIAanpassenPlanMainNavigation(),
+          HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*TITLE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
+          children: <TextCard>[
+            TextCard(
                   children: const <TitleText>[
                     TitleText(
                       title: 'Aanpassen Plan',
@@ -70,13 +36,8 @@ class AIAanpassenPlanMain extends StatelessWidget {
                 ),
               ),
             ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+            TextCard(
+                  widgetList: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
@@ -115,13 +76,8 @@ class AIAanpassenPlanMain extends StatelessWidget {
                 ),
               ),
             ),
-            /*IMAGE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SizedBoxH(),
                     InsertImage(
                       image:
@@ -129,12 +85,46 @@ class AIAanpassenPlanMain extends StatelessWidget {
                     ),
                     SizedBoxH(),
                   ],
+                ),),
+          ],
+    ),);
+  }
+}
+
+class AIAanpassenPlanMainNavigation extends StatelessWidget {
+  const AIAanpassenPlanMainNavigation({Key? key}) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIAanpassenPlanMain>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIAanpassenPlanMain result) async {
+              if (result == WhereToGoFromAIAanpassenPlanMain.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIAanpassenPlanMain.ww_aanpassen_plan_main) {
+                await Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIAanpassenPlanMain>>[
+              const PopupMenuItem<WhereToGoFromAIAanpassenPlanMain>(
+                value: WhereToGoFromAIAanpassenPlanMain.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
                 ),
               ),
-            ),
-          ],
-        ),
-      ),
-    );
+              const PopupMenuItem<WhereToGoFromAIAanpassenPlanMain>(
+                value: WhereToGoFromAIAanpassenPlanMain.ww_aanpassen_plan_main,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'WW Aanpassen Plan',
+                ),
+              ),
+            ],
+          );
   }
 }

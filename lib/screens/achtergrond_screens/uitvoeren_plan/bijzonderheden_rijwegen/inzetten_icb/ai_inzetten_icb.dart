@@ -18,66 +18,19 @@ class AIInzettenICB extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIInzettenICB>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIInzettenICB result) async {
-              if (result == WhereToGoFromAIInzettenICB.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result == WhereToGoFromAIInzettenICB.ww_inzetten_icb) {
-                await Navigator.pushNamed(context, 'ww_inzetten_icb');
-              } else if (result ==
-                  WhereToGoFromAIInzettenICB.ai_bijzonderheden_rijwegen_main) {
-                await Navigator.pushNamed(
-                  context,
-                  'ai_bijzonderheden_rijwegen_main',
-                );
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIInzettenICB>>[
-              const PopupMenuItem<WhereToGoFromAIInzettenICB>(
-                value: WhereToGoFromAIInzettenICB.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIInzettenICB>(
-                value: WhereToGoFromAIInzettenICB.ww_inzetten_icb,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Inzetten ICB',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIInzettenICB>(
-                value:
-                    WhereToGoFromAIInzettenICB.ai_bijzonderheden_rijwegen_main,
-                child: MenuItemContent(
-                  icon: Utils.iconAI,
-                  text: 'AI Bijzonderheden Rijwegen',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIInzettenICBNavigation(),
+           HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title: 'Inzetten railvoertuig (incl. ICB)',
                     ),
@@ -99,15 +52,8 @@ class AIInzettenICB extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Railvoertuig Incidentenbestrijding',
                     ),
@@ -160,15 +106,8 @@ class AIInzettenICB extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Wat',
                     ),
@@ -215,15 +154,8 @@ class AIInzettenICB extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SubTitleText(
                       subtitle: 'Langstransport',
                     ),
@@ -241,11 +173,61 @@ class AIInzettenICB extends StatelessWidget {
                     SizedBoxH(),
                   ],
                 ),
-              ),
-            ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AIInzettenICBNavigation extends StatelessWidget {
+  const AIInzettenICBNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIInzettenICB>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected: (WhereToGoFromAIInzettenICB result) async {
+              if (result == WhereToGoFromAIInzettenICB.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result == WhereToGoFromAIInzettenICB.ww_inzetten_icb) {
+                await Navigator.pushNamed(context, 'ww_inzetten_icb');
+              } else if (result ==
+                  WhereToGoFromAIInzettenICB.ai_bijzonderheden_rijwegen_main) {
+                await Navigator.pushNamed(
+                  context,
+                  'ai_bijzonderheden_rijwegen_main',
+                );
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIInzettenICB>>[
+              const PopupMenuItem<WhereToGoFromAIInzettenICB>(
+                value: WhereToGoFromAIInzettenICB.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIInzettenICB>(
+                value: WhereToGoFromAIInzettenICB.ww_inzetten_icb,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Inzetten ICB',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIInzettenICB>(
+                value:
+                    WhereToGoFromAIInzettenICB.ai_bijzonderheden_rijwegen_main,
+                child: MenuItemContent(
+                  icon: Utils.iconAI,
+                  text: 'AI Bijzonderheden Rijwegen',
+                ),
+              ),
+            ],
+          );
   }
 }

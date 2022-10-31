@@ -16,74 +16,26 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: Utils.titleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
-            icon: const Icon(Utils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected:
-                (WhereToGoFromAIGeplandeWerkzaamhedenMain result) async {
-              if (result ==
-                  WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else if (result ==
-                  WhereToGoFromAIGeplandeWerkzaamhedenMain
-                      .ww_geplande_werkzaamheden_main) {
-                await Navigator.pushNamed(
-                  context,
-                  'ww_geplande_werkzaamheden_main',
-                );
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIGeplandeWerkzaamhedenMain>>[
-              const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
-                value: WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen,
-                child: MenuItemContent(
-                  icon: Utils.iconHome,
-                  text: 'Home',
-                ),
-              ),
-              const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
-                value: WhereToGoFromAIGeplandeWerkzaamhedenMain
-                    .ww_geplande_werkzaamheden_main,
-                child: MenuItemContent(
-                  icon: Utils.iconWW,
-                  text: 'WW Geplande Werkzaamheden',
-                ),
-              ),
-            ],
-          ),
-          const HomeButton(),
+        actions: const <Widget>[
+          AIGeplandeWerkzaamhedenMainNavigation(),
+           HomeButton(),
         ],
       ),
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            //*PROCEDURE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <TitleText>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <TitleText>[
                     TitleText(
                       title: 'Geplande Werkzaamheden',
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: <Widget>[
+            TextCard(
+                  widgetList: <Widget>[
                     const TitleText(
                       title: 'Ga snel naar',
                     ),
@@ -125,15 +77,8 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
                     const SizedBoxH(),
                   ],
                 ),
-              ),
-            ),
-            /*IMAGE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+            TextCard(
+                  widgetList: const <Widget>[
                     SizedBoxH(),
                     InsertImage(
                       image:
@@ -141,12 +86,55 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
                     ),
                     SizedBoxH(),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
-    );
+    ),);
+  }
+}
+
+class AIGeplandeWerkzaamhedenMainNavigation extends StatelessWidget {
+  const AIGeplandeWerkzaamhedenMainNavigation({Key? key}) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return PopupMenuButton<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
+            icon: const Icon(Utils.iconInfo),
+            tooltip: 'Meer informatie',
+            onSelected:
+                (WhereToGoFromAIGeplandeWerkzaamhedenMain result) async {
+              if (result ==
+                  WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen) {
+                await Navigator.pushNamed(context, 'home_screen');
+              } else if (result ==
+                  WhereToGoFromAIGeplandeWerkzaamhedenMain
+                      .ww_geplande_werkzaamheden_main) {
+                await Navigator.pushNamed(
+                  context,
+                  'ww_geplande_werkzaamheden_main',
+                );
+              } else {
+                Navigator.pop(context);
+              }
+            },
+            itemBuilder: (BuildContext context) =>
+                <PopupMenuEntry<WhereToGoFromAIGeplandeWerkzaamhedenMain>>[
+              const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
+                value: WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen,
+                child: MenuItemContent(
+                  icon: Utils.iconHome,
+                  text: 'Home',
+                ),
+              ),
+              const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
+                value: WhereToGoFromAIGeplandeWerkzaamhedenMain
+                    .ww_geplande_werkzaamheden_main,
+                child: MenuItemContent(
+                  icon: Utils.iconWW,
+                  text: 'WW Geplande Werkzaamheden',
+                ),
+              ),
+            ],
+          );
   }
 }
