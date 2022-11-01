@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWUitvoerenPlanMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_uitvoeren_plan_main,
-}
-
 class WWUitvoerenPlanMain extends StatelessWidget {
   const WWUitvoerenPlanMain({Key? key}) : super(key: key);
 
@@ -100,30 +93,28 @@ class WWUitvoerenPlanMainNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWUitvoerenPlanMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWUitvoerenPlanMain result) async {
-        if (result == WhereToGoFromWWUitvoerenPlanMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWUitvoerenPlanMain.ai_uitvoeren_plan_main) {
+        } else if (result == PopupNavigation.ai_uitvoeren_plan_main) {
           await Navigator.pushNamed(context, 'ai_uitvoeren_plan_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWUitvoerenPlanMain>>[
-        const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
-          value: WhereToGoFromWWUitvoerenPlanMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconInfo,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWUitvoerenPlanMain>(
-          value: WhereToGoFromWWUitvoerenPlanMain.ai_uitvoeren_plan_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_uitvoeren_plan_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Uitvoeren Plan',

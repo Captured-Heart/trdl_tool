@@ -65,29 +65,28 @@ class WWNCBGNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWNcbg>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWNcbg result) async {
-        if (result == WhereToGoFromWWNcbg.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWNcbg.ai_ncbg) {
+        } else if (result == PopupNavigation.ai_ncbg) {
           await Navigator.pushNamed(context, 'ai_ncbg');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWNcbg>>[
-        const PopupMenuItem<WhereToGoFromWWNcbg>(
-          value: WhereToGoFromWWNcbg.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconInfo,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWNcbg>(
-          value: WhereToGoFromWWNcbg.ai_ncbg,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_ncbg,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI NCBG',
