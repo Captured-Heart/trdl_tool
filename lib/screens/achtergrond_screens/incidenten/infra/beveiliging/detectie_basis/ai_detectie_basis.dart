@@ -475,7 +475,7 @@ class AIDetectie extends StatelessWidget {
                     SizedBoxH(),
                     InsertImage(
                       image:
-                          'assets/images/ac"tergrond_info/incidenten/ai_detectie_basis_8.png',
+                          'assets/images/achtergrond_info/incidenten/ai_detectie_basis_8.png',
                     ),
                     BodyText(
                       indents: 0,
@@ -572,7 +572,6 @@ class AIDetectie extends StatelessWidget {
                       text:
                           'Aansluitkast en de WDD (dubbele wieldetector) gemonteerd aan de spoorstaaf. De dubbele wieldetector samen met de AK vormen het telpunt (ADP).',
                     ),
-                    SizedBoxH(),
                     InsertImage(
                       image:
                           'assets/images/achtergrond_info/incidenten/ai_detectie_basis_11.png',
@@ -582,7 +581,6 @@ class AIDetectie extends StatelessWidget {
                       text:
                           'Geopende aansluitkast met daarin twee aansluitblokken (BJ50 en BJ39). De dubbele wieldetector en de aansluitblokken samen vormen het ADP (Axle counter Detection Point).',
                     ),
-                    SizedBoxH(),
                     InsertImage(
                       image:
                           'assets/images/achtergrond_info/incidenten/ai_detectie_basis_12.png',

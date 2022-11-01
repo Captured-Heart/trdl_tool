@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import '/all_imports.dart';
 
 Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
@@ -227,10 +229,9 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
 
 // Enum that shows all Strings used for all navigation for PopupMenuButton()
 enum PopupNavigation {
-  // ignore: constant_identifier_names
   home_screen,
-  // ignore: constant_identifier_names
+  ai_beveiliging_basis2,
   ai_uitvoeren_plan_main,
-  // ignore: constant_identifier_names
   ai_ncbg,
+  ww_beveiliging_main,
 }

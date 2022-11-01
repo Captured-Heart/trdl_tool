@@ -1,16 +1,5 @@
 import '/all_imports.dart';
 
-//TODO: Hier verder met toevoegen info!
-
-enum WhereToGoFromAIBeveiligingBasis1 {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_beveiliging_main,
-  // ignore: constant_identifier_names
-  ai_beveiliging_basis2,
-}
-
 class AIBeveiligingBasis1 extends StatelessWidget {
   const AIBeveiligingBasis1({Key? key}) : super(key: key);
 
@@ -30,8 +19,8 @@ class AIBeveiligingBasis1 extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: <TextCard>[
-              const TextCard(
+            children: const <TextCard>[
+              TextCard(
                 widgetList: <Widget>[
                   TitleText(
                     title: 'Beveiliging - basisinformatie deel 1',
@@ -44,44 +33,19 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   BodyText(
                     indents: 0,
                     text:
-                        'De vrije baan wordt door lichtseinen verdeeld in blokken, emplacementen worden verdeeld in secties. De controle op het bezet zijn van een blok of sectie geschiedt door middel van geïsoleerd spoor (ruststroomprincipe).\nOp de vrije baan zijn automatisch werkende beveiligingen toegepast. We noemen dit ook wel automatisch blokstelsel. Bij het automatisch blokstelsel worden de seinen door de trein zelf bediend. Het berust op het principe van een spoorstroomloop. Een linker spoorstaaf is geïsoleerd. Op beide spoorstaven wordt een elektrische spanning aangesloten. Het gevolg is dat er een relais wordt bekrachtigd. Rijdt er nu een trein over dit geïsoleerde deel, dan worden de beide spoorstaven door de wielassen van de trein kortgesloten met als gevolg dat het relais afvalt.\nHet geïsoleerde deel van het spoor vormt een blok, Het spoorrelais bepaalt de stand van het sein aan het begin van het blok. Bij onbezet spoor is het relais aangetrokken en bij bezet spoor afgevallen. Dit ruststroomprincipe heeft als voordeel dat bij storing het relais afvalt, waardoor het bloksein in de stoptonende stand komt. Wanneer men een aantal van deze geïsoleerde stukken achter elkaar plaatst, dan heeft men een automatisch werkend blokstelsel. In normale situaties (wanneer het blok niet bezet is) staat het sein in de veilige stand, dit in tegenstelling tot bijvoorbeeld inrijseinen bij stations, die normaliter de stoptonende stand tonen.\nIn Nederland hebben we de volgende vrije baan beveiligingen:',
+                        'De vrije baan wordt door lichtseinen verdeeld in blokken, emplacementen worden verdeeld in secties. De controle op het bezet zijn van een blok of sectie geschiedt door middel van geïsoleerd spoor (ruststroomprincipe).\nOp de vrije baan zijn automatisch werkende beveiligingen toegepast. We noemen dit ook wel automatisch blokstelsel. Bij het automatisch blokstelsel worden de seinen door de trein zelf bediend. Het berust op het principe van een spoorstroomloop. Een linker spoorstaaf is geïsoleerd. Op beide spoorstaven wordt een elektrische spanning aangesloten. Het gevolg is dat er een relais wordt bekrachtigd. Rijdt er nu een trein over dit geïsoleerde deel, dan worden de beide spoorstaven door de wielassen van de trein kortgesloten met als gevolg dat het relais afvalt.\n\nHet geïsoleerde deel van het spoor vormt een blok, het spoorrelais bepaalt de stand van het sein aan het begin van het blok. Bij onbezet spoor is het relais aangetrokken en bij bezet spoor afgevallen. Dit ruststroomprincipe heeft als voordeel dat bij storing het relais afvalt, waardoor het bloksein in de stoptonende stand komt. Wanneer men een aantal van deze geïsoleerde stukken achter elkaar plaatst, dan heeft men een automatisch werkend blokstelsel. In normale situaties (wanneer het blok niet bezet is) staat het sein in de veilige stand, dit in tegenstelling tot bijvoorbeeld inrijseinen bij stations, die normaliter de stoptonende stand tonen.\nIn Nederland hebben we de volgende vrije baan beveiligingen:',
                   ),
+                  SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
                         '- Linkerspoorbeveiliging;\n- Enkelspoorbeveiliging;\n- Dubbel- enkelspoorbeveiliging.',
                   ),
                   SizedBoxH(),
-                  BoldText(
-                    indents: 0,
-                    boldtext: 'Linkerspoorbeveiliging',
-                  ),
-                  BodyText(
-                    indents: 0,
-                    text:
-                        "Bij linkerspoor beveiliging is het baanvak ingericht en beveiligd voor rechts rijden. Ook is er een mogelijkheid gecreëerd om met één trein tegelijk beveiligd te rijden over het linkerspoor. Het linkerspoor is dan één blok geworden. Om links te kunnen rijden is het noodzakelijk om de rijrichting te keren. Het dubbele pijltje in de BVS-tekening geeft aan dat er meerdere treinen in die richting kunnen rijden. Het enkele pijltje geeft aan dat ook in de tegengestelde rijrichting op veilige seinen op stationsafstand kan worden gereden. Stationsafstand betekent dat de eerste trein binnen moet zijn op het volgende station voordat de volgende trein hetzelfde spoor in dezelfde richting op kan rijden. De rijrichting wordt gewisseld door de TRDL die toegang geeft tot het linkerspoor.\nStoring van een geïsoleerd spoorgedeelte van de vrije baan heeft tot gevolg dat de rijrichting op dat spoor niet meer gewisseld kan worden. De zijde vanwaar de aankondigingssectie van overwegen werkt, is afhankelijk van de ingestelde rijrichting. Indien het sein dat toegang geeft tot de vrije baan, uit de stand 'stop' is gekomen, bestaat de zekerheid, dat aankondigingssecties op de juiste wijze zijn ingeschakeld.\nHet sein op het linkerspoor heeft een vierkant achtergrondscherm en we noemen dit sein een voorsein. Dit voorsein zegt alleen iets over de kleur van het eerst volgende inrijsein en dit voorsein kan nooit rood tonen. Door het voorsein te plaatsen, kan een trein op beter seinbeeld dan geel vertrekken en wordt dus een hogere snelheid mogelijk op het linkerspoor. Bij het linkerspoor rijden is de afstand van station tot station dus maar 1 blok.\nVoor het rechts rijden is het baanvak verdeeld in blokken en kunnen er dus meerdere treinen rijden. Voor het links rijden is het baanvak meestal niet verdeeld in blokken. Men rijdt dan op stationsafstand.\nAls de rijrichting wordt gekeerd voor links rijden dan zullen aanwezige P-seinen voor rechts rijden rood tonen. Op druk bereden baanvakken wordt bij beveiligd linkerspoor ook wel gebruik gemaakt van meerdere blokken. Op het linkerspoor wordt dan een of meerdere P-seinen geplaatst, we spreken dan van 'beveiligd linkerspoor met tussensein'.",
-                  ),
-                  SizedBoxH(),
-                  InsertImage(
-                    image:
-                        'assets/images/achtergrond_info/incidenten/beveiliging_basis1_relais.png',
-                  ),
-                  SubTitleText(
-                    subtitle: 'Vrije baan beveiliging',
-                  ),
-                  SizedBoxH(),
-                  BodyText(
-                    indents: 0,
-                    text:
-                        'Op de vrije baan zijn automatisch werkende beveiligingen toegepast. We noemen dit automatisch blokstelsel. De vrije baan wordt door lichtseinen verdeeld in blokken, emplacementen worden verdeeld in secties. De controle op het bezet zijn van een blok of sectie gebeurt door middel van geïsoleerd spoor (ruststroomprincipe).\n\nIn Nederland hebben we de volgende vrije baan beveiligingen:',
-                  ),
-                  SizedBoxH(),
-                  BodyText(
-                    indents: 1,
-                    text:
-                        '- Linkerspoorbeveiliging;\n\n- Enkelspoorbeveiliging\n\n- Dubbel-enkelspoorbeveiliging.',
-                  ),
-                  SizedBoxH(),
+                ],
+              ),
+              TextCard(
+                widgetList: <Widget>[
                   BoldText(
                     indents: 0,
                     boldtext: 'Linkerspoorbeveiliging',
@@ -95,7 +59,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   SizedBoxH(),
                   InsertImage(
                     image:
-                        'assets/images/achtergrond_info/incidenten/beveiliging_basis1_linkerspoorbeveiliging.png',
+                        'assets/images/achtergrond_info/incidenten/ai_beveiliging_basis1_1.png',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -106,8 +70,12 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   SizedBoxH(),
                   InsertImage(
                     image:
-                        'assets/images/achtergrond_info/incidenten/beveiliging_basis1_linkerspoorbeveiliging2.png',
+                        'assets/images/achtergrond_info/incidenten/ai_beveiliging_basis1_1.png',
                   ),
+                ],
+              ),
+              TextCard(
+                widgetList: <Widget>[
                   BoldText(
                     indents: 0,
                     boldtext: 'Enkelspoorbeveiliging',
@@ -121,9 +89,12 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   SizedBoxH(),
                   InsertImage(
                     image:
-                        'assets/images/achtergrond_info/incidenten/beveiliging_basis1_enkelspoorbeveiliging.png',
+                        'assets/images/achtergrond_info/incidenten/ai_beveiliging_basis1_3.png',
                   ),
-                  SizedBoxH(),
+                ],
+              ),
+              TextCard(
+                widgetList: <Widget>[
                   BoldText(
                     indents: 0,
                     boldtext: 'Dubbel-enkelspoorbeveiliging',
@@ -137,12 +108,11 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   SizedBoxH(),
                   InsertImage(
                     image:
-                        'assets/images/achtergrond_info/incidenten/beveiliging_basis1_dubbelenkelspoorbeveiliging.png',
+                        'assets/images/achtergrond_info/incidenten/ai_beveiliging_basis1_4.png',
                   ),
-                  SizedBoxH(),
                 ],
               ),
-              const TextCard(
+              TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
                     subtitle: 'Emplacementsbeveiliging',
@@ -157,19 +127,19 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- De rijrichting tot het eerstvolgende bedienbare sein wordt gecontroleerd, zo mogelijk ingesteld en vastgelegd;\n\n- De beveiligingsinrichtingen worden gecontroleerd, gestuurd en vastgelegd;\n\nDe rijweg (het blok) wordt gecontroleerd op spoorbezetting.',
+                        '- De rijrichting tot het eerstvolgende bedienbare sein wordt gecontroleerd, zo mogelijk ingesteld en vastgelegd;\n- De beveiligingsinrichtingen worden gecontroleerd, gestuurd en vastgelegd;\n- De rijweg (het blok) wordt gecontroleerd op spoorbezetting.',
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 0,
                     text:
-                        "Als aan alle voorwaarden wordt voldaan komt het sein 'veilig'.\n\nEr zijn verschillende emplacementsbeveiligingen:",
+                        "Als aan alle voorwaarden wordt voldaan komt het sein 'veilig'.\nEr zijn verschillende emplacementsbeveiligingen:",
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
-                        '- NX - ENtrance / Exit beveiligingssysteem met relais;\n\n- EBS - Elektronisch beveiligingssysteem SIMIS;\n\n- VPI - Vital Process Interlocking. Een beveiligingssysteem dat op dezelfde manier werkt als NX, maar dan elektronisch.',
+                        '- NX - ENtrance / Exit beveiligingssysteem met relais;\n- EBS - Elektronisch beveiligingssysteem SIMIS;\n- VPI - Vital Process Interlocking. Een beveiligingssysteem dat op dezelfde manier werkt als NX, maar dan elektronisch.',
                   ),
                   SizedBoxH(),
                   SubTitleText(
@@ -185,24 +155,6 @@ class AIBeveiligingBasis1 extends StatelessWidget {
               ),
               TextCard(
                 widgetList: <Widget>[
-                  const TitleText(
-                    title: 'Ga snel naar',
-                  ),
-                  const SizedBoxH(),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const <NavButton>[
-                      NavButton(
-                        buttontext: 'EBS en VPI',
-                        destination: 'ai_beveiliging_basis2',
-                      ),
-                    ],
-                  ),
-                  const SizedBoxH(),
-                ],
-              ),
-              const TextCard(
-                widgetList: <Widget>[
                   SubTitleText(
                     subtitle: 'Cascadeschakeling en Two Track Pick Up',
                   ),
@@ -216,7 +168,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- De rijweg wordt gecontroleerd op tegengestelde bewegingen en indien mogelijk wordt de rijrichting ingesteld en vergrendeld. Een tegengestelde rijweg wordt hierdoor uitgesloten;\n\n- De wissels in de rijweg worden in de juiste stand gestuurd en daarna vergrendeld. Ook eventuele andere inrichtingen die in de ingestelde rijweg liggen worden vergrendeld (bruggen, grendels, etc.);\n\n- De rijweg is nu vastgelegd;\n\n- De rijweg wordt gecontroleerd op spoorbezetting;\n\n- Het sein komt uit de stand stop.',
+                        '- De rijweg wordt gecontroleerd op tegengestelde bewegingen en indien mogelijk wordt de rijrichting ingesteld en vergrendeld. Een tegengestelde rijweg wordt hierdoor uitgesloten;\n- De wissels in de rijweg worden in de juiste stand gestuurd en daarna vergrendeld. Ook eventuele andere inrichtingen die in de ingestelde rijweg liggen worden vergrendeld (bruggen, grendels, etc.);\n- De rijweg is nu vastgelegd;\n- De rijweg wordt gecontroleerd op spoorbezetting;\n- Het sein komt uit de stand stop.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -240,7 +192,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   ),
                   InsertImage(
                     image:
-                        'assets/images/achtergrond_info/incidenten/cascadeschakeling1.png',
+                        'assets/images/achtergrond_info/incidenten/ai_beveiliging_basis1_5.png',
                   ),
                   BodyText(
                     indents: 0,
@@ -250,7 +202,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   SizedBoxH(),
                   InsertImage(
                     image:
-                        'assets/images/achtergrond_info/incidenten/cascadeschakeling2.png',
+                        'assets/images/achtergrond_info/incidenten/ai_beveiliging_basis1_6.png',
                   ),
                   BodyText(
                     indents: 0,
@@ -260,7 +212,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   SizedBoxH(),
                   InsertImage(
                     image:
-                        'assets/images/achtergrond_info/incidenten/cascadeschakeling3.png',
+                        'assets/images/achtergrond_info/incidenten/ai_beveiliging_basis1_7.png',
                   ),
                   BodyText(
                     indents: 0,
@@ -284,7 +236,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   SizedBoxH(),
                   InsertImage(
                     image:
-                        'assets/images/achtergrond_info/incidenten/ttpu1.png',
+                        'assets/images/achtergrond_info/incidenten/ai_beveiliging_basis1_8.png',
                   ),
                   BodyText(
                     indents: 0,
@@ -293,7 +245,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   SizedBoxH(),
                   InsertImage(
                     image:
-                        'assets/images/achtergrond_info/incidenten/ttpu2.png',
+                        'assets/images/achtergrond_info/incidenten/ai_beveiliging_basis1_9.png',
                   ),
                   BodyText(
                     indents: 0,
@@ -303,7 +255,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   SizedBoxH(),
                   InsertImage(
                     image:
-                        'assets/images/achtergrond_info/incidenten/ttpu3.png',
+                        'assets/images/achtergrond_info/incidenten/ai_beveiliging_basis1_10.png',
                   ),
                   BodyText(
                     indents: 0,
@@ -313,35 +265,13 @@ class AIBeveiligingBasis1 extends StatelessWidget {
                   SizedBoxH(),
                   InsertImage(
                     image:
-                        'assets/images/achtergrond_info/incidenten/ttpu4.png',
+                        'assets/images/achtergrond_info/incidenten/ai_beveiliging_basis1_11.png',
                   ),
                   BodyText(
                     indents: 0,
                     text:
                         "Om dit te voorkomen zijn seinen die toegang geven richting bijv. een overweg uitgerust met TTPU. Dit betekent dat wanneer zich een dergelijke situatie voordoet, de wissels nog minimaal 120 seconden vergrendeld blijven liggen. Ook blijft de overweg nog minimaal 120 seconden aankondigen. Mocht de trein ondertussen voorbij het sein zijn, dan blijft de overweg normaal aankondigen. Pas wanneer de sectie achter het sein en de volgende sectie bezet geweest zijn vindt er normale 'afbraak' van de rijweg plaats.\n\nRisico blijft nog wel dat wanneer de eerste 2 secties achter het sein tegelijk bezet worden en de spoorbezetting er daarna weer uitvalt, de rijweg in één keer helemaal vrij komt. Dit risico is echter aanvaardbaar klein.",
                   ),
-                ],
-              ),
-              TextCard(
-                widgetList: <Widget>[
-                  const TitleText(
-                    title: 'Ga snel naar',
-                  ),
-                  const SizedBoxH(),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: const <NavButton>[
-                      NavButton(
-                        buttontext: 'Beveiliging Werkwijze',
-                        destination: 'ww_beveiliging_main',
-                      ),
-                      NavButton(
-                        buttontext: 'Beveiliging - Basis 2',
-                        destination: 'ai_incidenten_beveiliging_basis2',
-                      ),
-                    ],
-                  ),
-                  const SizedBoxH(),
                 ],
               ),
             ],
@@ -356,40 +286,37 @@ class AIBeveiligingBasis1Navigation extends StatelessWidget {
   const AIBeveiligingBasis1Navigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIBeveiligingBasis1>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIBeveiligingBasis1 result) async {
-        if (result == WhereToGoFromAIBeveiligingBasis1.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIBeveiligingBasis1.ww_beveiliging_main) {
+        } else if (result == PopupNavigation.ww_beveiliging_main) {
           await Navigator.pushNamed(context, 'ww_beveiliging_main');
-        } else if (result ==
-            WhereToGoFromAIBeveiligingBasis1.ai_beveiliging_basis2) {
+        } else if (result == PopupNavigation.ai_beveiliging_basis2) {
           await Navigator.pushNamed(context, 'ai_beveiliging_basis2');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIBeveiligingBasis1>>[
-        const PopupMenuItem<WhereToGoFromAIBeveiligingBasis1>(
-          value: WhereToGoFromAIBeveiligingBasis1.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIBeveiligingBasis1>(
-          value: WhereToGoFromAIBeveiligingBasis1.ww_beveiliging_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_beveiliging_main,
           child: MenuItemContent(
             icon: Utils.iconWW,
             text: 'WW Beveiliging',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIBeveiligingBasis1>(
-          value: WhereToGoFromAIBeveiligingBasis1.ai_beveiliging_basis2,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_beveiliging_basis2,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Beveiliging Basis 2',
