@@ -9,6 +9,8 @@ enum WhereToGoFromAIUitvoerenPlan {
   ai_bovenleiding_main,
 }
 
+//TODO: Hier verder met refactor!
+
 class AIUitvoerenPlan extends StatelessWidget {
   const AIUitvoerenPlan({Key? key}) : super(key: key);
 
