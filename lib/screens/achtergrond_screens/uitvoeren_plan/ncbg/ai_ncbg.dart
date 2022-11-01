@@ -23,17 +23,12 @@ class AINcbg extends StatelessWidget {
           HomeButton(),
         ],
       ),
-      //TODO: Hier verder met refactor!
-      body: SingleChildScrollView(
+      body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
-          children: <Card>[
-            //*PROCEDURE CARD*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+          children: <TextCard>[
+            TextCard(
+                  widgetList: const <Widget>[
                     TitleText(
                       title: 'NCBG - Niet Centraal Bediend Gebied',
                     ),
@@ -51,15 +46,8 @@ class AINcbg extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #1*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+TextCard(
+                  widgetList: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle:
@@ -230,15 +218,8 @@ class AINcbg extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #2*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+TextCard(
+                  widgetList: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'TRON',
@@ -262,15 +243,8 @@ class AINcbg extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #3*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+TextCard(
+                  widgetList: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'TRON-webapplicatie na aanmelding',
@@ -388,15 +362,8 @@ class AINcbg extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #4*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+TextCard(
+                  widgetList: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'Seinen specifiek voor NCBG',
@@ -534,15 +501,8 @@ class AINcbg extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #5*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+TextCard(
+                  widgetList: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'Kijfhoek',
@@ -602,15 +562,8 @@ class AINcbg extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #6*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+TextCard(
+                  widgetList: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'CTB baanvakken',
@@ -651,15 +604,8 @@ class AINcbg extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #7*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+TextCard(
+                  widgetList: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'Amersfoort',
@@ -684,15 +630,8 @@ class AINcbg extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
-            ),
-            /*CARD #8*/
-            Card(
-              elevation: Utils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
+TextCard(
+                  widgetList: const <Widget>[
                     SizedBoxH(),
                     SubTitleText(
                       subtitle: 'Rangeerseinen',
@@ -734,13 +673,11 @@ class AINcbg extends StatelessWidget {
                           'Voorbijrijden toegestaan na ontvangst van de rangeeropdracht.',
                     ),
                   ],
-                ),
-              ),
             ),
           ],
         ),
       ),
-    );
+    ),);
   }
 }
 
