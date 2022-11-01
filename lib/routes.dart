@@ -224,3 +224,13 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
 
   //Adding more routes? Add to constants/all_search_string.dart as well!
 };
+
+// Enum that shows all Strings used for all navigation for PopupMenuButton()
+enum PopupNavigation {
+  // ignore: constant_identifier_names
+  home_screen,
+  // ignore: constant_identifier_names
+  ai_uitvoeren_plan_main,
+  // ignore: constant_identifier_names
+  ai_ncbg,
+}

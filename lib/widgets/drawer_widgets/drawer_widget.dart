@@ -112,17 +112,17 @@ class ThemeModeSwitch extends ConsumerWidget {
         if (newIndex == 0) {
           //Set the state of themeModeProvider to ThemeMode.light
           //and set the String of themeModeStringProvider
-          ref.read(themeModeProvider.state).state = ThemeMode.light;
+          ref.read(themeModeProvider.notifier).state = ThemeMode.light;
           ref.read(themeModeStringProvider.notifier).setThemeModeStringLight();
         } else if (newIndex == 1) {
           //Set the state of themeModeProvider to ThemeMode.system
           //and set the String of themeModeStringProvider
-          ref.read(themeModeProvider.state).state = ThemeMode.system;
+          ref.read(themeModeProvider.notifier).state = ThemeMode.system;
           ref.read(themeModeStringProvider.notifier).setThemeModeStringSystem();
         } else {
           //Set the state of themeModeProvider to ThemeMode.dark
           //and set the String of themeModeStringProvider
-          ref.read(themeModeProvider.state).state = ThemeMode.dark;
+          ref.read(themeModeProvider.notifier).state = ThemeMode.dark;
           ref.read(themeModeStringProvider.notifier).setThemeModeStringDark();
         }
       },
