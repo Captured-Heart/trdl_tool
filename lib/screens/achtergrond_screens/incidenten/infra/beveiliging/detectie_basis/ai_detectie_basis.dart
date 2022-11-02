@@ -73,7 +73,7 @@ class AIDetectieBasis extends StatelessWidget {
                   ),
                   InsertImage(
                     image:
-                        'assets/images/achtergrond_info/incidenten/ai_detectie_basis_1.png',
+                        'assets/images/achtergrond_info/incidenten/ai_detectie_basis_2.gif',
                   ),
                   BodyText(
                     indents: 0,
@@ -85,13 +85,13 @@ class AIDetectieBasis extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: 'Prikspanningspoorstroomlo"p',
+                    subtitle: 'Prikspanningspoorstroomloop',
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 0,
                     text:
-                        'Bij een spoorstroomloop helpt de retourstroom van elektrisch materieel mee bij een goede treindetectie. Niet-elektrisch materieel met een lage asdruk en goede loopeigenschappen kan echter detetieproblemn veroorzaken op sporen met een roestlaagje. Op de spoorstroomloop wordt dan een pulserende hogere spanning gezet (ongeveer zoals bij schrikdraad), die door het roestlaagje \'heenprikt\'.\nEen prikspanningspoorstroomloop (PSSSL) wordt voornamelijk gebruikt bij stations. Het systeem is te herkennen aan witte, rechthoekige kastjes bij het spoor. PSSSL wordt ook vaakgebruikt om de spoorstroomloop op weinig bereden sporen e verbeteren (bijv. emplacementen). Bij Nederlandse overwegen in PSSSL-gebieden stonden gele waarschuwingsbordjes met de tekst \'Dierbegeleiders opgelet: spoor kan onder spanning staa"\'.Inmiddels is PSSSL bij overwegen verwijderd om schrikreacties bij dieren te voorkomen. Let op: bij roestvorming op PSSSL-spoor geldt een afwijkende afhandeling.\nZie AI Roestvorming',
+                        'Bij een spoorstroomloop helpt de retourstroom van elektrisch materieel mee bij een goede treindetectie. Niet-elektrisch materieel met een lage asdruk en goede loopeigenschappen kan echter detetieproblemn veroorzaken op sporen met een roestlaagje. Op de spoorstroomloop wordt dan een pulserende hogere spanning gezet (ongeveer zoals bij schrikdraad), die door het roestlaagje \'heenprikt\'.\n\nEen prikspanningspoorstroomloop (PSSSL) wordt voornamelijk gebruikt bij stations. Het systeem is te herkennen aan witte, rechthoekige kastjes bij het spoor. PSSSL wordt ook vaakgebruikt om de spoorstroomloop op weinig bereden sporen e verbeteren (bijv. emplacementen). Bij Nederlandse overwegen in PSSSL-gebieden stonden gele waarschuwingsbordjes met de tekst \'Dierbegeleiders opgelet: spoor kan onder spanning staa"\'.Inmiddels is PSSSL bij overwegen verwijderd om schrikreacties bij dieren te voorkomen. Let op: bij roestvorming op PSSSL-spoor geldt een afwijkende afhandeling.',
                   ),
                   SizedBoxH(),
                   InsertImage(
@@ -101,7 +101,7 @@ class AIDetectieBasis extends StatelessWidget {
                   BodyText(
                     indents: 0,
                     text:
-                        'PSSSL-kastje. Van de prikspanningspoorstroomloop is slechts het witte kastje als fysiek object buiten waar te nemen.',
+                        'PSSSL-kastje\n\nVan de prikspanningspoorstroomloop is slechts het witte kastje als fysiek object buiten waar te nemen.',
                   ),
                   SizedBoxH(),
                 ],
@@ -117,6 +117,7 @@ class AIDetectieBasis extends StatelessWidget {
                     text:
                         'Assentellers zijn apparaten die worden toegepast voor treindetectie. Een zwak punt van de treindetectie met behulp van spoorstroomlopen is dat externe factoren, zoals de elektrische weerstand van de ballast en verontreiniging van het railoppervlak, een nadelige invloed kunnen hebben op de werking van het systeem. Hierdoor ontstaan o.a. de noodzaak van het roestrijdrgime en de probleen in de herfst als gevolg van bladval. Het systeem kan falen, wanneer de treinwielen onvoldoende kortsluiting veroorzaken tussen de twee spoorstaven. Dit is steeds vaker het geval bij het nieuwe \'lichte materieel\' wat gebruikt wordt voor personenvervoer op zowel het hoofdnet als de nevenlijnen. Een ander punt is dat het systeem niet werkt bij toepassing van 25 kV wisselspanning voor de tractievoeding en de noodzaak voor toepassing van ES-lassen om secties elektrisch van elkaar te scheiden.\nHet assentelsysteem gebruikt het aantal treinwielen dat zich in een sectie bevindt als maat voor het vrij of bezet zijn van een sectie. Daartoe bevind" zich aan het begin en einde van elke sectie een telpunt dat met behulp van een magnetisch veld het aantal wielen telt dat een sectie in- of uitrijdt.\nVoordelen zijn dat de treindetectie niet wordt beïnvloed door:',
                   ),
+                  SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
@@ -127,6 +128,7 @@ class AIDetectieBasis extends StatelessWidget {
                     indents: 0,
                     text: 'Nadelen zijn:',
                   ),
+                  SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
@@ -178,11 +180,13 @@ class AIDetectieBasis extends StatelessWidget {
                     text:
                         'Het assentellersysteem bestaat uit de volgende componenten.',
                   ),
+                  SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
                         '- Telpunt. Bestaat uit een dubbel railcontact of dubbele wieldetector die aan de spoorstaaf bevestigd zijn;\n- Aansluitkast (AK). Geel electronicakastje naast het spoor.',
                   ),
+                  SizedBoxH(),
                   BodyText(
                     indents: 0,
                     text:
@@ -204,8 +208,9 @@ class AIDetectieBasis extends StatelessWidget {
                   BodyText(
                     indents: 0,
                     text:
-                        'Eén telpunt of wieldetector wordt veelal gebruikt voor twee (de voorgaande en de opvolgende) of meerdere secties. De telcomputer houdt voor alle geconfigureerde secties het aantal ingereden en uitgereden wielen bij. Afhankelijk van de rijrichting van de trein ten opzichte van een van tevoren gedefinieerde rijrichting (assentelreferentierichting) wordt de telstand van de sectie opgehoogd of verlaagd. Rijdt de trein in de andere richting over het railcontact, dan wordt andersom geteld. In de telcomputer is per sectie vastgelegd of een ophoging of een verlaging van de telstand in het telpunt overeenkomt met het inrijden van een treinwiel of met het uitrijden.\nDe telcomputer van het assentelsysteem bepaalt continu de status van alle geconfigureerde secties aan de hand van een telstand per sectie en gegevens over d" werking van de installatie.nDe mgelijk" statussen zijn:',
+                        'Eén telpunt of wieldetector wordt veelal gebruikt voor twee (de voorgaande en de opvolgende) of meerdere secties. De telcomputer houdt voor alle geconfigureerde secties het aantal ingereden en uitgereden wielen bij. Afhankelijk van de rijrichting van de trein ten opzichte van een van tevoren gedefinieerde rijrichting (assentelreferentierichting) wordt de telstand van de sectie opgehoogd of verlaagd. Rijdt de trein in de andere richting over het railcontact, dan wordt andersom geteld. In de telcomputer is per sectie vastgelegd of een ophoging of een verlaging van de telstand in het telpunt overeenkomt met het inrijden van een treinwiel of met het uitrijden.\nDe telcomputer van het assentelsysteem bepaalt continu de status van alle geconfigureerde secties aan de hand van een telstand per sectie en gegevens over de werking van de installatie. De mogelijke statussen zijn:',
                   ),
+                  SizedBoxH(),
                   BoldText(
                     indents: 0,
                     boldtext: 'Vrij',
@@ -231,7 +236,7 @@ class AIDetectieBasis extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Het aantal treinwielen dat zich volgens de telcomputer in de sectie bevindt groter i" dan nul;\n- Er geen storingn zijn wargenom"n.',
+                        '- Het aantal treinwielen dat zich volgens de telcomputer in de sectie bevindt groter is dan nul;\n- Er geen storingen zijn wargenomen.',
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -264,6 +269,7 @@ class AIDetectieBasis extends StatelessWidget {
                     text:
                         'De telcomputers zijn uitgerust met een diagnoseprogramma, dat in de systeemsoftware is opgenomen. Het diagnoseprogramma kan gebruikt worden voor:',
                   ),
+                  SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
@@ -314,30 +320,33 @@ class AIDetectieBasis extends StatelessWidget {
                     text:
                         'In een normale situatie (geen storingen, geen telfouten) gedraagt de treindetectie met assentellers zich in principe zoals treindetectie met spoorstroomlopen.\nStoringen veroorzaakt door defecte apparatuur:',
                   ),
+                  SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
-                        'Een telpunt of wieldetector is defect of de communicatie tussen de telcomputer(AZA, ACU of ACE) en telpunt of wieldetector valt weg. Hierdoor tonen er in de regel twee of meerdere secties tegelijk bezet (TOBS). In het assentelsysteem hebben deze secties de status gestoord;\n- Bij een defect aan de telcomputer AZA, ACU of ACE zullen er vele secties tegelijk bezet tonen (TOBS), dit komt echter bijna niet voor;\n- Storingen in de voeding van het assentelsysteem worden automatisch aan het OBI gemeld. Het is belangrijk dat deze tijdig verholpen worden, als de telcomputer AZA, ACU of ACE uitvalt zullen alle secties tegelijk bezet tonen en na herstel van de voeding gereset moeten worden;\n- De FWS is defect. Geen gevolgen voor het treinverkeer. Het is alleen niet mogelijk om een voorwaardelijke reset uit te voeren;\n- De RCS is defect. Geen gevolgen voor het treinverkeer. Het is alleen niet mogelijk om een voorbereidende reset uit te voeren.',
+                        '- Een telpunt of wieldetector is defect of de communicatie tussen de telcomputer(AZA, ACU of ACE) en telpunt of wieldetector valt weg. Hierdoor tonen er in de regel twee of meerdere secties tegelijk bezet (TOBS). In het assentelsysteem hebben deze secties de status gestoord;\n- Bij een defect aan de telcomputer AZA, ACU of ACE zullen er vele secties tegelijk bezet tonen (TOBS), dit komt echter bijna niet voor;\n- Storingen in de voeding van het assentelsysteem worden automatisch aan het OBI gemeld. Het is belangrijk dat deze tijdig verholpen worden, als de telcomputer AZA, ACU of ACE uitvalt zullen alle secties tegelijk bezet tonen en na herstel van de voeding gereset moeten worden;\n- De FWS is defect. Geen gevolgen voor het treinverkeer. Het is alleen niet mogelijk om een voorwaardelijke reset uit te voeren;\n- De RCS is defect. Geen gevolgen voor het treinverkeer. Het is alleen niet mogelijk om een voorbereidende reset uit te voeren.',
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 0,
                     text: 'Storingen rondom werkzaamheden:',
                   ),
+                  SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
-                        'Bij werkzaamheden waarbij met railvoertuigen ter hoogte van een telpunt of wieldetector gewerkt wordt, kan het voorkomen dat er telfouten ontstaan of telpunten in de storing raken. Ook het losnemen van een telpunt zal resulteren in een storingssituatie;\n- De TRDL moet op de hoogte zijn van alle werkzaamheden waarbij zich verstoringen in het assentelsysteem kunnen voordoen. Na storingen t.g.v. werkzaamheden is het noodzakelijk om een voorwaardelijke of harde reset uit te voeren.',
+                        '- Bij werkzaamheden waarbij met railvoertuigen ter hoogte van een telpunt of wieldetector gewerkt wordt, kan het voorkomen dat er telfouten ontstaan of telpunten in de storing raken. Ook het losnemen van een telpunt zal resulteren in een storingssituatie;\n- De TRDL moet op de hoogte zijn van alle werkzaamheden waarbij zich verstoringen in het assentelsysteem kunnen voordoen. Na storingen t.g.v. werkzaamheden is het noodzakelijk om een voorwaardelijke of harde reset uit te voeren.',
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 0,
                     text: 'Reset van secties in het assentellersysteem',
                   ),
+                  SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
-                        'Voorwaardelijke of voorbereidende reset: Deze reset is altijd veilig. Door de voorwaardelijke reset kijkt het systeem of een bij volgende trein wel het juiste aantal assen wordt gemeten;\n- Harde reset: Deze reset is een veiligheidshandeling en dient niet ingezet te worden als diagnosemiddel bij een storing of na een reparatie. Hij wordt door een monteur ter plaatse uitgevoerd. De storing wordt hiermee direct opgeheven. De sectie moet voor het uitvoeren van een harde reset altijd gegarandeerd treinvrij zijn.',
+                        '- Voorwaardelijke of voorbereidende reset: Deze reset is altijd veilig. Door de voorwaardelijke reset kijkt het systeem of een bij volgende trein wel het juiste aantal assen wordt gemeten;\n- Harde reset: Deze reset is een veiligheidshandeling en dient niet ingezet te worden als diagnosemiddel bij een storing of na een reparatie. Hij wordt door een monteur ter plaatse uitgevoerd. De storing wordt hiermee direct opgeheven. De sectie moet voor het uitvoeren van een harde reset altijd gegarandeerd treinvrij zijn.',
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -404,10 +413,11 @@ class AIDetectieBasis extends StatelessWidget {
                     indents: 0,
                     text: 'Het assentellersysteem Az L90-4 kent:',
                   ),
+                  SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
-                        'Voorwaardelijke reset met kwitering door de TRDL;\n- Voorwaardelijke reset door seinwezen monteur;\n- Harde reset (onvoorwaardelijk) door seinwezen monteur.',
+                        '- Voorwaardelijke reset met kwitering door de TRDL;\n- Voorwaardelijke reset door seinwezen monteur;\n- Harde reset (onvoorwaardelijk) door seinwezen monteur.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -423,17 +433,17 @@ class AIDetectieBasis extends StatelessWidget {
                   BodyText(
                     indents: 0,
                     text:
-                        'Voor deze uitvoeringsvorm staat er op diverse verkeersleidinsposten ee FWS-VL (FernWikSchnttstelle), dit is een terminal die vanuit de verkeersleidingspost de functie van meerdere assentelsystemen kan monitoren. Op het beeldscherm van de FWS-VL kan de TRDL in één oogopslag zien wat de status van alle secties in een compleet baanvak is. Bij een eventuele afwijking van de normale werking kan de TRDL passende maatregelen nemen. Als er een storing optreedt ten gevolge van een telfout, dan kan de TRDL met behulp van de FWS-VL een voorwaardelijke reset met kwitering geven om de \'gestoorde\' secties weer \'vrij\' te krijgen. De "RDL reset als eerste op zijn terminal de gestoorde sectie. Na deze reset uitgevoerd te hebben dient een veegtrein de geresette sectie volledig en correct in- en uit te rijden, waardoor in- en uitrijd telpunt het gelijke aantal wielen van de veegtrein hebben geteld. De telstand voor de sectie is dan weer nul. Pas dan kan de TRDL op de FWS-VL "erminal de sectie kwiteren, waarna de sectie status door het assentelsysteem aangepast wordt naar vrij. De voorwaardelijke reset met kwitering is de meest veilige vorm van reset.',
+                        'Voor deze uitvoeringsvorm staat er op diverse verkeersleidinsposten ee FWS-VL (FernWikSchnttstelle), dit is een terminal die vanuit de verkeersleidingspost de functie van meerdere assentelsystemen kan monitoren. Op het beeldscherm van de FWS-VL kan de TRDL in één oogopslag zien wat de status van alle secties in een compleet baanvak is. Bij een eventuele afwijking van de normale werking kan de TRDL passende maatregelen nemen. Als er een storing optreedt ten gevolge van een telfout, dan kan de TRDL met behulp van de FWS-VL een voorwaardelijke reset met kwitering geven om de \'gestoorde\' secties weer \'vrij\' te krijgen. De "RDL reset als eerste op zijn terminal de gestoorde sectie. Na deze reset uitgevoerd te hebben dient een veegtrein de geresette sectie volledig en correct in- en uit te rijden, waardoor in- en uitrijd telpunt het gelijke aantal wielen van de veegtrein hebben geteld. De telstand voor de sectie is dan weer nul. Pas dan kan de TRDL op de FWS-VL terminal de sectie kwiteren, waarna de sectie status door het assentelsysteem aangepast wordt naar vrij. De voorwaardelijke reset met kwitering is de meest veilige vorm van reset.',
                   ),
                   SizedBoxH(),
                   BoldText(
                     indents: 0,
-                    boldtext: 'Voorwaardelijke reset oor seinween monteur',
+                    boldtext: 'Voorwaardelijke reset door seinwezen monteur',
                   ),
                   BodyText(
                     indents: 0,
                     text:
-                        'Voor deze uitvoeringsvorm heeft de aannemer een diagnosesysteem in het relaishuis of de straatkast nodig die hij gebruikt voor diagnose, de FWS-lokaal, en waarmee hij een voorwaardelijke reset kan uitvoeren. Wanneer er een storing optreedt ten gevolge van een telfout, kan de seinwezen monteur met behulp van de FWS-Lokaal een voorwaardelijke reset geven om de \'gesto"rde\' secties weer \'vrij\' te krijgen. De monteur reset als eerste de gestoorde sectie. Dit houdt in dat het aantal getelde wielen in de sectie, verschil tussen in- en uitrijd telpunt, op nul wordt gezet. Na deze reset uitgevoerd te hebben dient een veegtrein de geresette sectie volledig en correct in- en uit te rijden, waardoor in- "n uitrijd telpunt het gelijke aantal wielen van de veegtrein hebben geteld. De telstan voor de sectie is dan weer nul, waarna de sectie status door het assentelsysteem aangepast wordt naar vrij.',
+                        'Voor deze uitvoeringsvorm heeft de aannemer een diagnosesysteem in het relaishuis of de straatkast nodig die hij gebruikt voor diagnose, de FWS-lokaal, en waarmee hij een voorwaardelijke reset kan uitvoeren. Wanneer er een storing optreedt ten gevolge van een telfout, kan de seinwezen monteur met behulp van de FWS-Lokaal een voorwaardelijke reset geven om de \'gesto"rde\' secties weer \'vrij\' te krijgen. De monteur reset als eerste de gestoorde sectie. Dit houdt in dat het aantal getelde wielen in de sectie, verschil tussen in- en uitrijd telpunt, op nul wordt gezet. Na deze reset uitgevoerd te hebben dient een veegtrein de geresette sectie volledig en correct in- en uit te rijden, waardoor in- en uitrijd telpunt het gelijke aantal wielen van de veegtrein hebben geteld. De telstan voor de sectie is dan weer nul, waarna de sectie status door het assentelsysteem aangepast wordt naar vrij.',
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -443,12 +453,13 @@ class AIDetectieBasis extends StatelessWidget {
                   BodyText(
                     indents: 0,
                     text:
-                        'Voor deze uitvoeringsvorm is er een resetpaneel aanwezig in de kast tussen de twee AZA\'s waarmee de seinwezen monteur een harde reset kan uitvoeren. Door het uitvoeren van een harde reset, draaien aan de sleutelschakelaar voor een sectie op het resetpaneel, wordt de "ectie direct vrij gemeld, dit geldt zowel voor secties die gestoord gemeld zijn als gevolg van een storing in het assentelsysteem, alsook voor secties die bezet gemeld zijn door een trein. Dit houdt in dat het aantal getelde wielen in een sectie, verschil tussen in- en uitrijd telpunt, direct op nul wordt gezet waarna de sectie status door het assentelsysteem aangepast wordt naar vrij. De harde reset mag alleen onder strikte voorwaarden worden uitgevoerd. Voor de onderstaande situaties zijn afzonderl"jke reset procedures van toepassing:',
+                        'Voor deze uitvoeringsvorm is er een resetpaneel aanwezig in de kast tussen de twee AZA\'s waarmee de seinwezen monteur een harde reset kan uitvoeren. Door het uitvoeren van een harde reset, draaien aan de sleutelschakelaar voor een sectie op het resetpaneel, wordt de "ectie direct vrij gemeld, dit geldt zowel voor secties die gestoord gemeld zijn als gevolg van een storing in het assentelsysteem, alsook voor secties die bezet gemeld zijn door een trein. Dit houdt in dat het aantal getelde wielen in een sectie, verschil tussen in- en uitrijd telpunt, direct op nul wordt gezet waarna de sectie status door het assentelsysteem aangepast wordt naar vrij. De harde reset mag alleen onder strikte voorwaarden worden uitgevoerd. Voor de onderstaande situaties zijn afzonderlijke reset procedures van toepassing:',
                   ),
+                  SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
-                        '- Storingsherstel zonder noodzaak tot werkzaamheden binnen de gevaarzone;\n- Storingsherstel waarbij binnen de gevaarzone gewerkt moet worden;\n- Harde reset na ge"lande werkzaamheden.',
+                        '- Storingsherstel zonder noodzaak tot werkzaamheden binnen de gevaarzone;\n- Storingsherstel waarbij binnen de gevaarzone gewerkt moet worden;\n- Harde reset na geplande werkzaamheden.',
                   ),
                   SizedBoxH(),
                   BodyText(
