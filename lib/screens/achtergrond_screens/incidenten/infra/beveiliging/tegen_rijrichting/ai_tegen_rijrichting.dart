@@ -143,7 +143,66 @@ class AITegenRijrichting extends StatelessWidget {
                   ),
                 ],
               ),
-              //TODO Hier verder met nieuwe TextCard(Enkelspoor Beveiliging!)
+              TextCard(
+                widgetList: [
+                  SubTitleText(
+                    subtitle: 'Enkelspoorbeveiliging',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Bij enkelspoorbeveiliging is het spoor in beide richtingen gelijkwaardig beveiligd. De rijrichting keert automatisch door middel van rijweginstelling. In onderstaande tekening is er een rijweg ingesteld van A naar B.',
+                  ),
+                  InsertImage(
+                    image:
+                        'assets/images/achtergrond_info/incidenten/ai_tegen_rijrichting_5.png',
+                  ),
+                ],
+              ),
+              TextCard(
+                widgetList: [
+                  SubTitleText(
+                    subtitle: 'Dubbel enkelspoorbeveiliging',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Als enkelspoorbeveiliging op twee of meer sporen is toegepast dan hebben we dubbel enkelspoor beveiliging. De werking van de beveiliging is hetzelfde. Als het mogelijk is worden de seinen voor het linkerspoor ook aan de linkerkant van het spoor geplaatst (beide sporen zijn dus in beide richtingen gelijkwaardig ingericht. Dubbel enkelspoor beveiliging kenmerkt zich door de groepjes van seinen langs de baan).\n\nOp onderstaande tekening op het bovenste spoor staat de situatie als er geen rijweg instelling heeft plaatsgevonden. De situatie is in rust. Als vanaf een van beide stations een rijweg ingesteld wordt over het rechter- of linkerspoor vallen de seinen in de tegengestelde rijrichting op rood. Het is dan niet mogelijk om hier tegengesteld een rijweg in te stellen. Na het passeren van de trein komt het sein dat de andere richting beveiligt weer uit de stand stop. Een trein kan dus in tegengestelde richting weer op veilig sein terugkeren.',
+                  ),
+                  InsertImage(
+                    image:
+                        'assets/images/achtergrond_info/incidenten/ai_tegen_rijrichting_6.png',
+                  ),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Stel nu dat er een probleem ontstaat op het spoor waardoor de trein tegen de rijrichting in moet rijden. Bijv. door een trein die defect gaat en die moet worden teruggehaald. Dan zijn er zaken om rekening mee te houden. Bij dubbel enkelspoor is de werking van de overwegen op de vrije baan niet afhankelijk van rijrichting, de wipwapschakeling of middensectie is altijd actief.\n\nEnige uitzondering hierop is het terug laten rijden van een trein over hetzelfde spoor.',
+                  ),
+                  SizedBoxH(),
+                  BoldText(
+                    indents: 0,
+                    boldtext:
+                        '(Dubbel) enkelspoorbeveiliging - terug laten rijden van een trein over hetzelfde spoor met overweg(en)',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'De trein is tot stilstand gekomen tussen B en A en moet terug rijden. De aankondiging A-B is uitgeschakeld en de trein rijdt pas bij B de OVW aan. De middensectie is immers altijd actief. Voordat de TRDL toestemming geeft om terug te rijden, moet de MCN in het bezit zijn van een aanwijzing OVW.',
+                  ),
+                  InsertImage(
+                    image:
+                        'assets/images/achtergrond_info/incidenten/ai_tegen_rijrichting_7.png',
+                  ),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'N.B.: Het kan zijn dat de trein zich bevindt in de aankondigingssectie van meerdere overwegen. Een marge van 1500 meter wordt hiervoor aangehouden. De TRDL geeft een aanwijzing OVW af voor alle overwegen die zich 1500 meter vanaf de trein bevinden.',
+                  ),
+                ],
+              ),
             ],
           ),
         ),
