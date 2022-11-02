@@ -238,6 +238,7 @@ enum PopupNavigation {
   ai_ncbg,
   ai_roestvorming,
   ai_seinen_basis1,
+  ai_seinen_basis2,
   ai_tegen_rijrichting,
   ai_uitvoeren_plan_main,
   ai_veiligheidsstoring_sein,
