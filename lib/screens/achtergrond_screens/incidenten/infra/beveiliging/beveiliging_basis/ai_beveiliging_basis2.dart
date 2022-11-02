@@ -1,16 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIBeveiligingBasis2 {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_detectie_basis,
-  // ignore: constant_identifier_names
-  ai_beveiliging_basis1,
-  ai_beveiliging_main,
-  ai_seinen_basis1,
-}
-
 class AIBeveiligingBasis2 extends StatelessWidget {
   const AIBeveiligingBasis2({Key? key}) : super(key: key);
 
@@ -127,60 +116,55 @@ class AIBeveiligingBasis2Navigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIBeveiligingBasis2>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIBeveiligingBasis2 result) async {
-        if (result == WhereToGoFromAIBeveiligingBasis2.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIBeveiligingBasis2.ai_detectie_basis) {
+        } else if (result == PopupNavigation.ai_detectie_basis) {
           await Navigator.pushNamed(context, 'ai_detectie_basis');
-        } else if (result ==
-            WhereToGoFromAIBeveiligingBasis2.ai_beveiliging_basis1) {
+        } else if (result == PopupNavigation.ai_beveiliging_basis1) {
           await Navigator.pushNamed(context, 'ai_beveiliging_basis1');
-        } else if (result ==
-            WhereToGoFromAIBeveiligingBasis2.ai_beveiliging_main) {
+        } else if (result == PopupNavigation.ai_beveiliging_main) {
           await Navigator.pushNamed(context, 'ai_beveiliging_main');
-        } else if (result ==
-            WhereToGoFromAIBeveiligingBasis2.ai_seinen_basis1) {
+        } else if (result == PopupNavigation.ai_seinen_basis1) {
           await Navigator.pushNamed(context, 'ai_seinen_basis1');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIBeveiligingBasis2>>[
-        const PopupMenuItem<WhereToGoFromAIBeveiligingBasis2>(
-          value: WhereToGoFromAIBeveiligingBasis2.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIBeveiligingBasis2>(
-          value: WhereToGoFromAIBeveiligingBasis2.ai_detectie_basis,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_detectie_basis,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Detectie',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIBeveiligingBasis2>(
-          value: WhereToGoFromAIBeveiligingBasis2.ai_beveiliging_basis1,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_beveiliging_basis1,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Beveiliging Basis 1',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIBeveiligingBasis2>(
-          value: WhereToGoFromAIBeveiligingBasis2.ai_beveiliging_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_beveiliging_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Beveiliging',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIBeveiligingBasis2>(
-          value: WhereToGoFromAIBeveiligingBasis2.ai_seinen_basis1,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_seinen_basis1,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Seinen',

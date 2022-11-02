@@ -207,7 +207,7 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
       const AIBeveiligingBasis1(),
   'ai_beveiliging_basis2': (BuildContext context) =>
       const AIBeveiligingBasis2(),
-  'ai_detectie_basis': (BuildContext context) => const AIDetectie(),
+  'ai_detectie_basis': (BuildContext context) => const AIDetectieBasis(),
   'ai_seinen_basis1': (BuildContext context) => const AISeinenBasis1(),
   'ai_seinen_basis2': (BuildContext context) => const AISeinenBasis2(),
   'ai_tegen_rijrichting': (BuildContext context) => const AITegenRijrichting(),
@@ -230,8 +230,14 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
 // Enum that shows all Strings used for all navigation for PopupMenuButton()
 enum PopupNavigation {
   home_screen,
+  ai_beveiliging_basis1,
   ai_beveiliging_basis2,
+  ai_beveiliging_main,
+  ai_detectie_basis,
+  ai_roestvorming,
+  ai_seinen_basis1,
   ai_uitvoeren_plan_main,
   ai_ncbg,
   ww_beveiliging_main,
+  ww_reset_assenteller,
 }
