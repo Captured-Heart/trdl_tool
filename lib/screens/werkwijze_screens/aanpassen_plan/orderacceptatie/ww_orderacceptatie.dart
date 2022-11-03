@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWOrderAcceptatie {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_orderacceptatie,
-}
-
 class WWOrderAcceptatie extends StatelessWidget {
   const WWOrderAcceptatie({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWOrderAcceptatie extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +40,7 @@ class WWOrderAcceptatie extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -59,7 +52,7 @@ class WWOrderAcceptatie extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -81,30 +74,28 @@ class WWOrderacceptatieNavigation extends StatelessWidget {
   const WWOrderacceptatieNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWOrderAcceptatie>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWOrderAcceptatie result) async {
-        if (result == WhereToGoFromWWOrderAcceptatie.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWOrderAcceptatie.ai_orderacceptatie) {
+        } else if (result == PopupNavigation.ai_orderacceptatie) {
           await Navigator.pushNamed(context, 'ai_orderacceptatie');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWOrderAcceptatie>>[
-        const PopupMenuItem<WhereToGoFromWWOrderAcceptatie>(
-          value: WhereToGoFromWWOrderAcceptatie.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOrderAcceptatie>(
-          value: WhereToGoFromWWOrderAcceptatie.ai_orderacceptatie,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_orderacceptatie,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Orderacceptatie',

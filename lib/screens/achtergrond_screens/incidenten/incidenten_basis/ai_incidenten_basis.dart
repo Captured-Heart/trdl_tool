@@ -1,20 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIIncidentenBasis {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_incidenten_main,
-  // ignore: constant_identifier_names
-  ai_infra_main,
-  // ignore: constant_identifier_names
-  ai_mensen_dieren_voorwerpen,
-  // ignore: constant_identifier_names
-  ai_materieel_main,
-  // ignore: constant_identifier_names
-  ai_overige_incidenten,
-}
-
 class AIIncidentenBasis extends StatelessWidget {
   const AIIncidentenBasis({Key? key}) : super(key: key);
 
@@ -1138,71 +1123,67 @@ class AIIncidentenBasisNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIIncidentenBasis>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIIncidentenBasis result) async {
-        if (result == WhereToGoFromAIIncidentenBasis.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIIncidentenBasis.ww_incidenten_main) {
+        } else if (result == PopupNavigation.ww_incidenten_main) {
           await Navigator.pushNamed(context, 'ww_incidenten_main');
-        } else if (result == WhereToGoFromAIIncidentenBasis.ai_infra_main) {
+        } else if (result == PopupNavigation.ai_infra_main) {
           await Navigator.pushNamed(context, 'ai_infra_main');
-        } else if (result ==
-            WhereToGoFromAIIncidentenBasis.ai_mensen_dieren_voorwerpen) {
+        } else if (result == PopupNavigation.ai_derden_dieren) {
           await Navigator.pushNamed(
             context,
             'ai_mensen_dieren_voorwerpen',
           );
-        } else if (result == WhereToGoFromAIIncidentenBasis.ai_materieel_main) {
+        } else if (result == PopupNavigation.ai_materieel_main) {
           await Navigator.pushNamed(context, 'ai_materieel_main');
-        } else if (result ==
-            WhereToGoFromAIIncidentenBasis.ai_overige_incidenten) {
+        } else if (result == PopupNavigation.ai_overige_incidenten) {
           await Navigator.pushNamed(context, 'ai_overige_incidenten');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIIncidentenBasis>>[
-        const PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
-          value: WhereToGoFromAIIncidentenBasis.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
-          value: WhereToGoFromAIIncidentenBasis.ww_incidenten_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_incidenten_main,
           child: MenuItemContent(
             icon: Utils.iconWW,
             text: 'WW Incidenten',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
-          value: WhereToGoFromAIIncidentenBasis.ai_infra_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_infra_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Infra',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
-          value: WhereToGoFromAIIncidentenBasis.ai_mensen_dieren_voorwerpen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_derden_dieren,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Mensen, Dieren, Voorwerpen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
-          value: WhereToGoFromAIIncidentenBasis.ai_materieel_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_materieel_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Materieel',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIIncidentenBasis>(
-          value: WhereToGoFromAIIncidentenBasis.ai_overige_incidenten,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_overige_incidenten,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Overige Incidenten',

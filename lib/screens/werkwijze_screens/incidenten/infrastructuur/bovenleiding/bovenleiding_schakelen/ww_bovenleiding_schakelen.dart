@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWSchakelenBovenleiding {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_schakelen_bovenleiding,
-}
-
 class WWSchakelenBovenleiding extends StatelessWidget {
   const WWSchakelenBovenleiding({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWSchakelenBovenleiding extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +40,7 @@ class WWSchakelenBovenleiding extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -60,7 +53,7 @@ class WWSchakelenBovenleiding extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -82,30 +75,28 @@ class WWSchakelenBovenleidingNavigation extends StatelessWidget {
   const WWSchakelenBovenleidingNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWSchakelenBovenleiding>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWSchakelenBovenleiding result) async {
-        if (result == WhereToGoFromWWSchakelenBovenleiding.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWSchakelenBovenleiding.ai_schakelen_bovenleiding) {
-          await Navigator.pushNamed(context, 'ai_schakelen_bovenleiding');
+        } else if (result == PopupNavigation.ai_bovenleiding_schakelen) {
+          await Navigator.pushNamed(context, 'ai_bovenleiding_schakelen');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWSchakelenBovenleiding>>[
-        const PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
-          value: WhereToGoFromWWSchakelenBovenleiding.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWSchakelenBovenleiding>(
-          value: WhereToGoFromWWSchakelenBovenleiding.ai_schakelen_bovenleiding,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bovenleiding_schakelen,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Schakelen Bovenleiding',

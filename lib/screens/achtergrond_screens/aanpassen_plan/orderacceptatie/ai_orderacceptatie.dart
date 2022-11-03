@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIOrderacceptatie {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_orderacceptatie,
-}
-
 class AIOrderacceptatie extends StatelessWidget {
   const AIOrderacceptatie({Key? key}) : super(key: key);
 
@@ -272,30 +265,28 @@ class AIOrderAcceptatieNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIOrderacceptatie>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIOrderacceptatie result) async {
-        if (result == WhereToGoFromAIOrderacceptatie.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIOrderacceptatie.ww_orderacceptatie) {
+        } else if (result == PopupNavigation.ww_orderacceptatie) {
           await Navigator.pushNamed(context, 'ww_orderacceptatie');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIOrderacceptatie>>[
-        const PopupMenuItem<WhereToGoFromAIOrderacceptatie>(
-          value: WhereToGoFromAIOrderacceptatie.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIOrderacceptatie>(
-          value: WhereToGoFromAIOrderacceptatie.ww_orderacceptatie,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_orderacceptatie,
           child: MenuItemContent(
             icon: Utils.iconWW,
             text: 'WW Orderacceptatie',

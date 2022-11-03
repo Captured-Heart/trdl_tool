@@ -1,14 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWBeveiligingMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_infra_main,
-  // ignore: constant_identifier_names
-  ai_beveiliging_main,
-}
-
 class WWBeveiligingMain extends StatelessWidget {
   const WWBeveiligingMain({Key? key}) : super(key: key);
 
@@ -76,39 +67,37 @@ class WWBeveiligingMainNavigation extends StatelessWidget {
   const WWBeveiligingMainNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWBeveiligingMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWBeveiligingMain result) async {
-        if (result == WhereToGoFromWWBeveiligingMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWBeveiligingMain.ai_infra_main) {
+        } else if (result == PopupNavigation.ai_infra_main) {
           await Navigator.pushNamed(context, 'ai_infra_main');
-        } else if (result ==
-            WhereToGoFromWWBeveiligingMain.ai_beveiliging_main) {
+        } else if (result == PopupNavigation.ai_beveiliging_main) {
           await Navigator.pushNamed(context, 'ai_beveiliging_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWBeveiligingMain>>[
-        const PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
-          value: WhereToGoFromWWBeveiligingMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
-          value: WhereToGoFromWWBeveiligingMain.ai_infra_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_infra_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Infra',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWBeveiligingMain>(
-          value: WhereToGoFromWWBeveiligingMain.ai_beveiliging_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_beveiliging_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Beveiliging',

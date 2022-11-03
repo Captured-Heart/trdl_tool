@@ -1,16 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIMonitoring {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_vertragingen,
-  // ignore: constant_identifier_names
-  ai_vertragingen,
-  // ignore: constant_identifier_names
-  ai_klanthinder,
-}
-
 class AIMonitoring extends StatelessWidget {
   const AIMonitoring({Key? key}) : super(key: key);
 
@@ -356,47 +345,46 @@ class AIMonitoringNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIMonitoring>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIMonitoring result) async {
-        if (result == WhereToGoFromAIMonitoring.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromAIMonitoring.ww_vertragingen) {
+        } else if (result == PopupNavigation.ww_vertragingen) {
           await Navigator.pushNamed(context, 'ww_vertragingen');
-        } else if (result == WhereToGoFromAIMonitoring.ai_vertragingen) {
+        } else if (result == PopupNavigation.ai_vertragingen) {
           await Navigator.pushNamed(context, 'ai_vertragingen');
-        } else if (result == WhereToGoFromAIMonitoring.ai_klanthinder) {
+        } else if (result == PopupNavigation.ai_klanthinder) {
           await Navigator.pushNamed(context, 'ai_klanthinder');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIMonitoring>>[
-        const PopupMenuItem<WhereToGoFromAIMonitoring>(
-          value: WhereToGoFromAIMonitoring.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIMonitoring>(
-          value: WhereToGoFromAIMonitoring.ww_vertragingen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_vertragingen,
           child: MenuItemContent(
             icon: Utils.iconWW,
             text: 'WW Vertragingen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIMonitoring>(
-          value: WhereToGoFromAIMonitoring.ai_vertragingen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_vertragingen,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Vertragingen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIMonitoring>(
-          value: WhereToGoFromAIMonitoring.ai_klanthinder,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_klanthinder,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Klanthinder',

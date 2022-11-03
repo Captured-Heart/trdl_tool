@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWVeiligheidsstoringSein {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_veiligheidsstoring_sein,
-}
-
 class WWVeiligheidsstoringSein extends StatelessWidget {
   const WWVeiligheidsstoringSein({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +40,7 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -60,7 +53,7 @@ class WWVeiligheidsstoringSein extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -82,14 +75,13 @@ class WWVeiligheidsstoringSeinNavigation extends StatelessWidget {
   const WWVeiligheidsstoringSeinNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWVeiligheidsstoringSein>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWVeiligheidsstoringSein result) async {
-        if (result == WhereToGoFromWWVeiligheidsstoringSein.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWVeiligheidsstoringSein.ai_veiligheidsstoring_sein) {
+        } else if (result == PopupNavigation.ai_veiligheidsstoring_sein) {
           await Navigator.pushNamed(
             context,
             'ai_veiligheidsstoring_sein',
@@ -98,18 +90,16 @@ class WWVeiligheidsstoringSeinNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWVeiligheidsstoringSein>>[
-        const PopupMenuItem<WhereToGoFromWWVeiligheidsstoringSein>(
-          value: WhereToGoFromWWVeiligheidsstoringSein.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWVeiligheidsstoringSein>(
-          value:
-              WhereToGoFromWWVeiligheidsstoringSein.ai_veiligheidsstoring_sein,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_veiligheidsstoring_sein,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Veiligheidsstoring Sein',

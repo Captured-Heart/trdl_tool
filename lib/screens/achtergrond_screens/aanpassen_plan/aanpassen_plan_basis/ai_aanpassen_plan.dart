@@ -1,20 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIAanpassenPlan {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_aanpassen_plan_main,
-  // ignore: constant_identifier_names
-  ai_orderacceptatie,
-  // ignore: constant_identifier_names
-  ai_vertragingen,
-  // ignore: constant_identifier_names
-  ai_ongepland_werk_main,
-  // ignore: constant_identifier_names
-  ai_stappenplan_versperringen,
-}
-
 class AIAanpassenPlan extends StatelessWidget {
   const AIAanpassenPlan({Key? key}) : super(key: key);
 
@@ -547,24 +532,21 @@ class AIAanpassenPlanNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIAanpassenPlan>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIAanpassenPlan result) async {
-        if (result == WhereToGoFromAIAanpassenPlan.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIAanpassenPlan.ww_aanpassen_plan_main) {
+        } else if (result == PopupNavigation.ww_aanpassen_plan_main) {
           await Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
-        } else if (result == WhereToGoFromAIAanpassenPlan.ai_orderacceptatie) {
+        } else if (result == PopupNavigation.ai_orderacceptatie) {
           await Navigator.pushNamed(context, 'ai_orderacceptatie');
-        } else if (result == WhereToGoFromAIAanpassenPlan.ai_vertragingen) {
+        } else if (result == PopupNavigation.ai_vertragingen) {
           await Navigator.pushNamed(context, 'ai_vertragingen');
-        } else if (result ==
-            WhereToGoFromAIAanpassenPlan.ai_ongepland_werk_main) {
+        } else if (result == PopupNavigation.ai_ongepland_werk_main) {
           await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
-        } else if (result ==
-            WhereToGoFromAIAanpassenPlan.ai_stappenplan_versperringen) {
+        } else if (result == PopupNavigation.ai_stappenplan_versperringen) {
           await Navigator.pushNamed(
             context,
             'ai_stappenplan_versperringen',
@@ -573,45 +555,44 @@ class AIAanpassenPlanNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIAanpassenPlan>>[
-        const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
-          value: WhereToGoFromAIAanpassenPlan.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
-          value: WhereToGoFromAIAanpassenPlan.ww_aanpassen_plan_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_aanpassen_plan_main,
           child: MenuItemContent(
             icon: Utils.iconWW,
             text: 'WW Aanpassen Plan',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
-          value: WhereToGoFromAIAanpassenPlan.ai_orderacceptatie,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_orderacceptatie,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Orderacceptatie',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
-          value: WhereToGoFromAIAanpassenPlan.ai_vertragingen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_vertragingen,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Vertragingen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
-          value: WhereToGoFromAIAanpassenPlan.ai_ongepland_werk_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_ongepland_werk_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Ongepland Werk',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIAanpassenPlan>(
-          value: WhereToGoFromAIAanpassenPlan.ai_stappenplan_versperringen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_stappenplan_versperringen,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Stappenplan Versperringen',

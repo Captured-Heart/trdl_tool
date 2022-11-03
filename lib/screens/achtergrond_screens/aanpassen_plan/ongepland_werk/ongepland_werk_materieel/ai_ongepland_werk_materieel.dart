@@ -1,16 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIOngeplandWerkMaterieel {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_ongepland_werk_materieel,
-  // ignore: constant_identifier_names
-  ai_infra_ter_beschikking,
-  // ignore: constant_identifier_names
-  ai_ongepland_werk_main,
-}
-
 class AIOngeplandWerkMaterieel extends StatelessWidget {
   const AIOngeplandWerkMaterieel({Key? key}) : super(key: key);
 
@@ -131,54 +120,49 @@ class AIOngeplandWerkMaterieelNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIOngeplandWerkMaterieel>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIOngeplandWerkMaterieel result) async {
-        if (result == WhereToGoFromAIOngeplandWerkMaterieel.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIOngeplandWerkMaterieel.ww_ongepland_werk_materieel) {
+        } else if (result == PopupNavigation.ww_ongepland_werk_materieel) {
           await Navigator.pushNamed(
             context,
             'ww_ongepland_werk_materieel',
           );
-        } else if (result ==
-            WhereToGoFromAIOngeplandWerkMaterieel.ai_infra_ter_beschikking) {
+        } else if (result == PopupNavigation.ai_infra_ter_beschikking) {
           await Navigator.pushNamed(context, 'ai_infra_ter_beschikking');
-        } else if (result ==
-            WhereToGoFromAIOngeplandWerkMaterieel.ai_ongepland_werk_main) {
+        } else if (result == PopupNavigation.ai_ongepland_werk_main) {
           await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIOngeplandWerkMaterieel>>[
-        const PopupMenuItem<WhereToGoFromAIOngeplandWerkMaterieel>(
-          value: WhereToGoFromAIOngeplandWerkMaterieel.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIOngeplandWerkMaterieel>(
-          value:
-              WhereToGoFromAIOngeplandWerkMaterieel.ww_ongepland_werk_materieel,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_ongepland_werk_materieel,
           child: MenuItemContent(
             icon: Utils.iconWW,
             text: 'WW Ongepland Werk - Materieel',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIOngeplandWerkMaterieel>(
-          value: WhereToGoFromAIOngeplandWerkMaterieel.ai_infra_ter_beschikking,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_infra_ter_beschikking,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Infra ter beschikking stellen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIOngeplandWerkMaterieel>(
-          value: WhereToGoFromAIOngeplandWerkMaterieel.ai_ongepland_werk_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_ongepland_werk_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Ongepland Werk',

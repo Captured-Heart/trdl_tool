@@ -1,14 +1,7 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWAanrijdingViaduct {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_aanrijding_viaduct,
-}
-
-class WWAanrijdingViaduct extends StatelessWidget {
-  const WWAanrijdingViaduct({Key? key}) : super(key: key);
+class WWOpengeredenWissel extends StatelessWidget {
+  const WWOpengeredenWissel({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +12,7 @@ class WWAanrijdingViaduct extends StatelessWidget {
           title: Utils.appBarTitleWW,
         ),
         actions: const <Widget>[
-          WWAanrijdingViaductNavigation(),
+          WWOpengeredenWisselNavigation(),
           HomeButton(),
         ],
       ),
@@ -30,30 +23,30 @@ class WWAanrijdingViaduct extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   TitleText(
-                    title: 'Aanrijding/aanvaring brug/viaduct',
+                    title: 'Opengereden wissel',
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 0,
                     text:
-                        'Na een melding van een aanrijding viaduct of aanvaring brug:',
+                        'Stel vast of het wissel eendelig, meerdelig of EBI-switch is.',
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
-                        '- Staak je het verkeer over de betrokken railinfra;\n\n- De MKS/BO geeft aan of de betrokken railinfra bereden mag worden, inclusief de eventuele beperkingen.',
+                        '- Eendelig: laat het wissel alleen met de punt mee vrijmaken wanneer er geen uiterlijke beschadigingen zijn. Je mag het wissel weer laten berijden na de constatering dat de tongen in de juiste stand liggen en aansluiten. Dit laat je doen met maximaal 10 km/h, tenzij anders wordt aangegeven door de storingsdienst;\n\n- Meerdelig: laat het wissel alleen met de punt mee vrijmaken met maximaal 10 km/h na toestemming van de storingsdienst;\n\n- EBI-switch: laat het wissel alleen met de punt mee vrijmaken met maximaal 10 km/h en behandel het als een beschadigd wissel.',
                   ),
                 ],
               ),
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -66,13 +59,13 @@ class WWAanrijdingViaduct extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 0,
                     text:
-                        'Na een aanvaring of aanrijding van een brug of viaduct kan de TRDL er niet meer vanuit gaan dat deze infra nog veilig bereden kan worden.\n\nDe MKS/BO beschikt over informatie van iedere brug of viaduct en kan aangeven onder welke voorwaarden de infra wel of niet bereden mag worden. Een storingsmonteur kan de situatie ter plaatse beoordelen.',
+                        'Een trein kan een wissel met de punt mee in de verkeerde stand berijden. De wisseltongen worden dan open gereden en het wissel is daardoor niet meer veilig berijdbaar. Van een open gereden wissel moet de afstelling gecontroleerd worden.',
                   ),
                 ],
               ),
@@ -84,37 +77,35 @@ class WWAanrijdingViaduct extends StatelessWidget {
   }
 }
 
-class WWAanrijdingViaductNavigation extends StatelessWidget {
-  const WWAanrijdingViaductNavigation({Key? key}) : super(key: key);
+class WWOpengeredenWisselNavigation extends StatelessWidget {
+  const WWOpengeredenWisselNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWAanrijdingViaduct>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWAanrijdingViaduct result) async {
-        if (result == WhereToGoFromWWAanrijdingViaduct.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWAanrijdingViaduct.ai_aanrijding_viaduct) {
-          await Navigator.pushNamed(context, 'ai_aanrijding_viaduct');
+        } else if (result == PopupNavigation.ai_wissel_opengereden) {
+          await Navigator.pushNamed(context, 'ai_wissel_opengereden');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWAanrijdingViaduct>>[
-        const PopupMenuItem<WhereToGoFromWWAanrijdingViaduct>(
-          value: WhereToGoFromWWAanrijdingViaduct.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWAanrijdingViaduct>(
-          value: WhereToGoFromWWAanrijdingViaduct.ai_aanrijding_viaduct,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_wissel_opengereden,
           child: MenuItemContent(
             icon: Utils.iconAI,
-            text: 'AI Aanrijding Viaduct',
+            text: 'AI Opengereden Wissel',
           ),
         ),
       ],

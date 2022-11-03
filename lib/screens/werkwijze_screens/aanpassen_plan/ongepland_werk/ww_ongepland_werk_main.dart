@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWOngeplandWerkMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_ongepland_werk_main,
-}
-
 class WWOngeplandWerkMain extends StatelessWidget {
   const WWOngeplandWerkMain({Key? key}) : super(key: key);
 
@@ -69,30 +62,28 @@ class WWOngeplandWerkNavigation extends StatelessWidget {
   const WWOngeplandWerkNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWOngeplandWerkMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWOngeplandWerkMain result) async {
-        if (result == WhereToGoFromWWOngeplandWerkMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWOngeplandWerkMain.ai_ongepland_werk_main) {
+        } else if (result == PopupNavigation.ai_ongepland_werk_main) {
           await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWOngeplandWerkMain>>[
-        const PopupMenuItem<WhereToGoFromWWOngeplandWerkMain>(
-          value: WhereToGoFromWWOngeplandWerkMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOngeplandWerkMain>(
-          value: WhereToGoFromWWOngeplandWerkMain.ai_ongepland_werk_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_ongepland_werk_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Ongepland Werk',

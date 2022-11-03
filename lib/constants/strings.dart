@@ -28,9 +28,4 @@ class Strings {
   static const String registerPasswordHintCheck =
       'Wachtwoord dient hetzelfde te zijn';
   static const String registerAlEenAccount = 'Heb je al een account?';
-
-  /*WERKWIJZE strings*/
-  static const String procedure = 'Procedure';
-  static const String risico = 'Risico';
-  static const String context = 'Context';
 }

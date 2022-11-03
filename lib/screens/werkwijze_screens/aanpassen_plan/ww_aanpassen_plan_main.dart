@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWAanpassenPlanMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_aanpassen_plan,
-}
-
 class WWAanpassenPlanMain extends StatelessWidget {
   const WWAanpassenPlanMain({Key? key}) : super(key: key);
 
@@ -90,30 +83,28 @@ class WWAanpassenPlanMainNavigation extends StatelessWidget {
   const WWAanpassenPlanMainNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWAanpassenPlanMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWAanpassenPlanMain result) async {
-        if (result == WhereToGoFromWWAanpassenPlanMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWAanpassenPlanMain.ai_aanpassen_plan) {
+        } else if (result == PopupNavigation.ai_aanpassen_plan_main) {
           await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWAanpassenPlanMain>>[
-        const PopupMenuItem<WhereToGoFromWWAanpassenPlanMain>(
-          value: WhereToGoFromWWAanpassenPlanMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWAanpassenPlanMain>(
-          value: WhereToGoFromWWAanpassenPlanMain.ai_aanpassen_plan,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_aanpassen_plan_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Aanpassen Plan',

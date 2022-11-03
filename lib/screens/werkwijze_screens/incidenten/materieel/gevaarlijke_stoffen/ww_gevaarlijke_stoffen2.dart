@@ -34,7 +34,7 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -75,7 +75,7 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -88,7 +88,7 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(

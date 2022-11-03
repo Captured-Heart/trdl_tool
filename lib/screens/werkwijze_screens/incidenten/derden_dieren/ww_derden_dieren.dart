@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWDerdenDieren {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_derden_dieren,
-}
-
 class WWDerdenDieren extends StatelessWidget {
   const WWDerdenDieren({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWDerdenDieren extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -59,7 +52,7 @@ class WWDerdenDieren extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -72,7 +65,7 @@ class WWDerdenDieren extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -94,29 +87,28 @@ class WWDerdenDierenNavigation extends StatelessWidget {
   const WWDerdenDierenNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWDerdenDieren>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWDerdenDieren result) async {
-        if (result == WhereToGoFromWWDerdenDieren.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWDerdenDieren.ai_derden_dieren) {
+        } else if (result == PopupNavigation.ai_derden_dieren) {
           await Navigator.pushNamed(context, 'ai_derden_dieren');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWDerdenDieren>>[
-        const PopupMenuItem<WhereToGoFromWWDerdenDieren>(
-          value: WhereToGoFromWWDerdenDieren.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWDerdenDieren>(
-          value: WhereToGoFromWWDerdenDieren.ai_derden_dieren,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_derden_dieren,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Derden / Dieren',

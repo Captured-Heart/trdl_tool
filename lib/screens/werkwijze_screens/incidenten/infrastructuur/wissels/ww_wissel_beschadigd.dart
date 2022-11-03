@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWBeschadigdWissel {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_beschadigd_wissel,
-}
-
 class WWBeschadigdWissel extends StatelessWidget {
   const WWBeschadigdWissel({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWBeschadigdWissel extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -53,7 +46,7 @@ class WWBeschadigdWissel extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -66,7 +59,7 @@ class WWBeschadigdWissel extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -88,30 +81,28 @@ class WWBeschadigdWisselNavigation extends StatelessWidget {
   const WWBeschadigdWisselNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWBeschadigdWissel>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWBeschadigdWissel result) async {
-        if (result == WhereToGoFromWWBeschadigdWissel.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWBeschadigdWissel.ai_beschadigd_wissel) {
-          await Navigator.pushNamed(context, 'ai_beschadigd_wissel');
+        } else if (result == PopupNavigation.ai_wissel_beschadigd) {
+          await Navigator.pushNamed(context, 'ai_wissel_beschadigd');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWBeschadigdWissel>>[
-        const PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
-          value: WhereToGoFromWWBeschadigdWissel.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWBeschadigdWissel>(
-          value: WhereToGoFromWWBeschadigdWissel.ai_beschadigd_wissel,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_wissel_beschadigd,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Beschadigd Wissel',

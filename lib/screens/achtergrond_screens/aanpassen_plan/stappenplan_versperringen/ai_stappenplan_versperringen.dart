@@ -1,14 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIStappenplanVersperringen {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_stappenplan_versperringen,
-  // ignore: constant_identifier_names
-  ai_aanpassen_plan_main,
-}
-
 class AIStappenplanVersperringen extends StatelessWidget {
   const AIStappenplanVersperringen({Key? key}) : super(key: key);
 
@@ -340,45 +331,40 @@ class AIStappenplanVersperringenNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIStappenplanVersperringen>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIStappenplanVersperringen result) async {
-        if (result == WhereToGoFromAIStappenplanVersperringen.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIStappenplanVersperringen
-                .ww_stappenplan_versperringen) {
+        } else if (result == PopupNavigation.ww_stappenplan_versperringen) {
           await Navigator.pushNamed(
             context,
             'ww_stappenplan_versperringen',
           );
-        } else if (result ==
-            WhereToGoFromAIStappenplanVersperringen.ai_aanpassen_plan_main) {
+        } else if (result == PopupNavigation.ai_aanpassen_plan_main) {
           await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIStappenplanVersperringen>>[
-        const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
-          value: WhereToGoFromAIStappenplanVersperringen.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
-          value: WhereToGoFromAIStappenplanVersperringen
-              .ww_stappenplan_versperringen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_stappenplan_versperringen,
           child: MenuItemContent(
             icon: Utils.iconWW,
             text: 'WW Stappenplan Versperringen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIStappenplanVersperringen>(
-          value: WhereToGoFromAIStappenplanVersperringen.ai_aanpassen_plan_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_aanpassen_plan_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Aanpassen Plan',

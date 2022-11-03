@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWOngeplandWerkMaterieel {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_ongepland_werk_materieel,
-}
-
 class WWOngeplandWerkMaterieel extends StatelessWidget {
   const WWOngeplandWerkMaterieel({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +40,7 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -60,7 +53,7 @@ class WWOngeplandWerkMaterieel extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -82,14 +75,13 @@ class WWOngeplandWerkMaterieelNavigation extends StatelessWidget {
   const WWOngeplandWerkMaterieelNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWOngeplandWerkMaterieel>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWOngeplandWerkMaterieel result) async {
-        if (result == WhereToGoFromWWOngeplandWerkMaterieel.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWOngeplandWerkMaterieel.ai_ongepland_werk_materieel) {
+        } else if (result == PopupNavigation.ai_ongepland_werk_materieel) {
           await Navigator.pushNamed(
             context,
             'ai_ongepland_werk_materieel',
@@ -98,18 +90,16 @@ class WWOngeplandWerkMaterieelNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWOngeplandWerkMaterieel>>[
-        const PopupMenuItem<WhereToGoFromWWOngeplandWerkMaterieel>(
-          value: WhereToGoFromWWOngeplandWerkMaterieel.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOngeplandWerkMaterieel>(
-          value:
-              WhereToGoFromWWOngeplandWerkMaterieel.ai_ongepland_werk_materieel,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_ongepland_werk_materieel,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Ongepland Werk (Materieel)',

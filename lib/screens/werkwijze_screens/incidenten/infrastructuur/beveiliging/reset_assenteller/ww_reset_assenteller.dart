@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWResetAssenteller {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_assenteller,
-}
-
 class WWResetAssenteller extends StatelessWidget {
   const WWResetAssenteller({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWResetAssenteller extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -69,7 +62,7 @@ class WWResetAssenteller extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -82,7 +75,7 @@ class WWResetAssenteller extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -105,29 +98,28 @@ class WWResetAssetellerNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWResetAssenteller>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWResetAssenteller result) async {
-        if (result == WhereToGoFromWWResetAssenteller.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWResetAssenteller.ai_assenteller) {
+        } else if (result == PopupNavigation.ai_assenteller) {
           await Navigator.pushNamed(context, 'ai_assenteller');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWResetAssenteller>>[
-        const PopupMenuItem<WhereToGoFromWWResetAssenteller>(
-          value: WhereToGoFromWWResetAssenteller.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWResetAssenteller>(
-          value: WhereToGoFromWWResetAssenteller.ai_assenteller,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_assenteller,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Assenteller',

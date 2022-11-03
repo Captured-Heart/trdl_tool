@@ -51,7 +51,7 @@ class AITegenRijrichting extends StatelessWidget {
                 ],
               ),
               TextCard(
-                widgetList: [
+                widgetList: <Widget>[
                   SubTitleText(
                     subtitle: 'Links rijden tegen de rijrichting',
                   ),
@@ -73,7 +73,7 @@ class AITegenRijrichting extends StatelessWidget {
                 ],
               ),
               TextCard(
-                widgetList: [
+                widgetList: <Widget>[
                   SubTitleText(
                     subtitle: 'Rechts rijden tegen de rijrichting',
                   ),
@@ -144,7 +144,7 @@ class AITegenRijrichting extends StatelessWidget {
                 ],
               ),
               TextCard(
-                widgetList: [
+                widgetList: <Widget>[
                   SubTitleText(
                     subtitle: 'Enkelspoorbeveiliging',
                   ),
@@ -161,7 +161,7 @@ class AITegenRijrichting extends StatelessWidget {
                 ],
               ),
               TextCard(
-                widgetList: [
+                widgetList: <Widget>[
                   SubTitleText(
                     subtitle: 'Dubbel enkelspoorbeveiliging',
                   ),

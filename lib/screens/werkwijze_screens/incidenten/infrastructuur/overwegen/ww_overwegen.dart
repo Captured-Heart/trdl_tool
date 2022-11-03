@@ -1,16 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWOverwegen {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_overwegen_main,
-  // ignore: constant_identifier_names
-  ai_overwegen_storing,
-  // ignore: constant_identifier_names
-  ai_incidenten_main,
-}
-
 class WWOverwegen extends StatelessWidget {
   const WWOverwegen({Key? key}) : super(key: key);
 
@@ -38,7 +27,7 @@ class WWOverwegen extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -79,7 +68,7 @@ class WWOverwegen extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -92,7 +81,7 @@ class WWOverwegen extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -114,47 +103,46 @@ class WWOverwegenNavigation extends StatelessWidget {
   const WWOverwegenNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWOverwegen>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWOverwegen result) async {
-        if (result == WhereToGoFromWWOverwegen.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWOverwegen.ai_overwegen_main) {
+        } else if (result == PopupNavigation.ai_overwegen_main) {
           await Navigator.pushNamed(context, 'ai_overwegen_main');
-        } else if (result == WhereToGoFromWWOverwegen.ai_overwegen_storing) {
+        } else if (result == PopupNavigation.ai_overwegen_storing) {
           await Navigator.pushNamed(context, 'ai_overwegen_storing');
-        } else if (result == WhereToGoFromWWOverwegen.ai_incidenten_main) {
+        } else if (result == PopupNavigation.ai_incidenten_main) {
           await Navigator.pushNamed(context, 'ai_incidenten_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWOverwegen>>[
-        const PopupMenuItem<WhereToGoFromWWOverwegen>(
-          value: WhereToGoFromWWOverwegen.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOverwegen>(
-          value: WhereToGoFromWWOverwegen.ai_overwegen_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_overwegen_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Overwegen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOverwegen>(
-          value: WhereToGoFromWWOverwegen.ai_overwegen_storing,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_overwegen_storing,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Overwegen Storing',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOverwegen>(
-          value: WhereToGoFromWWOverwegen.ai_incidenten_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_incidenten_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Incidenten',

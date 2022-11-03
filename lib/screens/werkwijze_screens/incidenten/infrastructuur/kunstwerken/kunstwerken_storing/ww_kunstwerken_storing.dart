@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWStoringBrug {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_storing_brug,
-}
-
 class WWStoringBrug extends StatelessWidget {
   const WWStoringBrug({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWStoringBrug extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +40,7 @@ class WWStoringBrug extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -60,7 +53,7 @@ class WWStoringBrug extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -82,29 +75,28 @@ class WWStoringBrugNavigation extends StatelessWidget {
   const WWStoringBrugNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWStoringBrug>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWStoringBrug result) async {
-        if (result == WhereToGoFromWWStoringBrug.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWStoringBrug.ai_storing_brug) {
-          await Navigator.pushNamed(context, 'ai_storing_brug');
+        } else if (result == PopupNavigation.ai_kunstwerken_storing) {
+          await Navigator.pushNamed(context, 'ai_kunstwerken_storing');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWStoringBrug>>[
-        const PopupMenuItem<WhereToGoFromWWStoringBrug>(
-          value: WhereToGoFromWWStoringBrug.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWStoringBrug>(
-          value: WhereToGoFromWWStoringBrug.ai_storing_brug,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_kunstwerken_storing,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Storing Brug',

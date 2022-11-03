@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWWisselEindstand {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_wissel_eindstand,
-}
-
 class WWWisselEindstand extends StatelessWidget {
   const WWWisselEindstand({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWWisselEindstand extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +40,7 @@ class WWWisselEindstand extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -59,7 +52,7 @@ class WWWisselEindstand extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -81,30 +74,28 @@ class WWWisselEindstandNavigation extends StatelessWidget {
   const WWWisselEindstandNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWWisselEindstand>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWWisselEindstand result) async {
-        if (result == WhereToGoFromWWWisselEindstand.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWWisselEindstand.ai_wissel_eindstand) {
+        } else if (result == PopupNavigation.ai_wissel_eindstand) {
           await Navigator.pushNamed(context, 'ai_wissel_eindstand');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWWisselEindstand>>[
-        const PopupMenuItem<WhereToGoFromWWWisselEindstand>(
-          value: WhereToGoFromWWWisselEindstand.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWWisselEindstand>(
-          value: WhereToGoFromWWWisselEindstand.ai_wissel_eindstand,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_wissel_eindstand,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Wissel Eindstand',

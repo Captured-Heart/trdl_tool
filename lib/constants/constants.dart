@@ -45,4 +45,8 @@ class Utils {
 
   static const String appBarTitleWW = 'Werkwijze';
   static const String appBarTitleAI = 'Achtergrondinformatie';
+
+  static const String textCardTitleProcedure = 'Procedure';
+  static const String textCardTitleRisico = "Risico('s)";
+  static const String textCardTitleContext = 'Context';
 }

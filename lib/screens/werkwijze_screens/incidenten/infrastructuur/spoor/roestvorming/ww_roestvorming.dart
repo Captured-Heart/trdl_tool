@@ -1,16 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWRoestvorming {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_roestvorming,
-  // ignore: constant_identifier_names
-  ai_beveiliging_basis1,
-  // ignore: constant_identifier_names
-  ai_beveiliging_basis2,
-}
-
 class WWRoestvorming extends StatelessWidget {
   const WWRoestvorming({Key? key}) : super(key: key);
 
@@ -38,7 +27,7 @@ class WWRoestvorming extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -57,7 +46,7 @@ class WWRoestvorming extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -70,7 +59,7 @@ class WWRoestvorming extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -92,49 +81,46 @@ class WWRoestvormingNavigation extends StatelessWidget {
   const WWRoestvormingNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWRoestvorming>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWRoestvorming result) async {
-        if (result == WhereToGoFromWWRoestvorming.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWRoestvorming.ai_roestvorming) {
+        } else if (result == PopupNavigation.ai_roestvorming) {
           await Navigator.pushNamed(context, 'ai_roestvorming');
-        } else if (result ==
-            WhereToGoFromWWRoestvorming.ai_beveiliging_basis1) {
+        } else if (result == PopupNavigation.ai_beveiliging_basis1) {
           await Navigator.pushNamed(context, 'ai_beveiliging_basis1');
-        } else if (result ==
-            WhereToGoFromWWRoestvorming.ai_beveiliging_basis2) {
+        } else if (result == PopupNavigation.ai_beveiliging_basis2) {
           await Navigator.pushNamed(context, 'ai_beveiliging_basis2');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWRoestvorming>>[
-        const PopupMenuItem<WhereToGoFromWWRoestvorming>(
-          value: WhereToGoFromWWRoestvorming.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWRoestvorming>(
-          value: WhereToGoFromWWRoestvorming.ai_roestvorming,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_roestvorming,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Roestvorming',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWRoestvorming>(
-          value: WhereToGoFromWWRoestvorming.ai_beveiliging_basis1,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_beveiliging_basis1,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Beveiliging Basis 1',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWRoestvorming>(
-          value: WhereToGoFromWWRoestvorming.ai_beveiliging_basis2,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_beveiliging_basis2,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Beveiliging Basis 2',

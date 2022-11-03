@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWProcedureRuClu {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_procedure_ruclu,
-}
-
 class WWProcedureRuClu extends StatelessWidget {
   const WWProcedureRuClu({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWProcedureRuClu extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -59,7 +52,7 @@ class WWProcedureRuClu extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -72,7 +65,7 @@ class WWProcedureRuClu extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -94,29 +87,28 @@ class WWProcedureRuCluNavigation extends StatelessWidget {
   const WWProcedureRuCluNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWProcedureRuClu>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWProcedureRuClu result) async {
-        if (result == WhereToGoFromWWProcedureRuClu.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWProcedureRuClu.ai_procedure_ruclu) {
-          await Navigator.pushNamed(context, 'ai_procedure_ruclu');
+        } else if (result == PopupNavigation.ai_bovenleiding_ruclu) {
+          await Navigator.pushNamed(context, 'ai_bovenleiding_ruclu');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWProcedureRuClu>>[
-        const PopupMenuItem<WhereToGoFromWWProcedureRuClu>(
-          value: WhereToGoFromWWProcedureRuClu.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWProcedureRuClu>(
-          value: WhereToGoFromWWProcedureRuClu.ai_procedure_ruclu,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bovenleiding_ruclu,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Procedure RU/CLU',

@@ -1,14 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWSectieStoring {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_infra_main,
-  // ignore: constant_identifier_names
-  ai_sectie,
-}
-
 class WWSectieStoring extends StatelessWidget {
   const WWSectieStoring({Key? key}) : super(key: key);
 
@@ -36,7 +27,7 @@ class WWSectieStoring extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -49,7 +40,7 @@ class WWSectieStoring extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -62,7 +53,7 @@ class WWSectieStoring extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -84,38 +75,37 @@ class WWSectiestoringNavigation extends StatelessWidget {
   const WWSectiestoringNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWSectieStoring>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWSectieStoring result) async {
-        if (result == WhereToGoFromWWSectieStoring.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWSectieStoring.ai_infra_main) {
+        } else if (result == PopupNavigation.ai_infra_main) {
           await Navigator.pushNamed(context, 'ai_infra_main');
-        } else if (result == WhereToGoFromWWSectieStoring.ai_sectie) {
-          await Navigator.pushNamed(context, 'ai_sectie');
+        } else if (result == PopupNavigation.ai_sectie_main) {
+          await Navigator.pushNamed(context, 'ai_sectie_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWSectieStoring>>[
-        const PopupMenuItem<WhereToGoFromWWSectieStoring>(
-          value: WhereToGoFromWWSectieStoring.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWSectieStoring>(
-          value: WhereToGoFromWWSectieStoring.ai_infra_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_infra_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Infra',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWSectieStoring>(
-          value: WhereToGoFromWWSectieStoring.ai_sectie,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_sectie_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Sectie',

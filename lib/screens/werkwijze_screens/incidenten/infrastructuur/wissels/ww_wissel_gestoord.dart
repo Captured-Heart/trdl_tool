@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWGestoordWissel {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_gestoord_wissel,
-}
-
 class WWGestoordWissel extends StatelessWidget {
   const WWGestoordWissel({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWGestoordWissel extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -63,7 +56,7 @@ class WWGestoordWissel extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -76,7 +69,7 @@ class WWGestoordWissel extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -98,29 +91,28 @@ class WWGestoordWisselNavigation extends StatelessWidget {
   const WWGestoordWisselNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWGestoordWissel>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWGestoordWissel result) async {
-        if (result == WhereToGoFromWWGestoordWissel.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWGestoordWissel.ai_gestoord_wissel) {
-          await Navigator.pushNamed(context, 'ai_gestoord_wissel');
+        } else if (result == PopupNavigation.ai_wissel_gestoord) {
+          await Navigator.pushNamed(context, 'ai_wissel_gestoord');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWGestoordWissel>>[
-        const PopupMenuItem<WhereToGoFromWWGestoordWissel>(
-          value: WhereToGoFromWWGestoordWissel.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWGestoordWissel>(
-          value: WhereToGoFromWWGestoordWissel.ai_gestoord_wissel,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_wissel_gestoord,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Gestoord Wissel',

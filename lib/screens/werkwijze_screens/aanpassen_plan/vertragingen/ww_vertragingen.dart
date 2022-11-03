@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWVertragingen {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_vertragingen,
-}
-
 class WWVertragingen extends StatelessWidget {
   const WWVertragingen({Key? key}) : super(key: key);
 
@@ -32,7 +25,7 @@ class WWVertragingen extends StatelessWidget {
                   TitleText(title: 'Vertragingen'),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -59,29 +52,28 @@ class WWVertragingenNavigation extends StatelessWidget {
   const WWVertragingenNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWVertragingen>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWVertragingen result) async {
-        if (result == WhereToGoFromWWVertragingen.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWVertragingen.ai_vertragingen) {
+        } else if (result == PopupNavigation.ai_vertragingen) {
           await Navigator.pushNamed(context, 'ai_vertragingen');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWVertragingen>>[
-        const PopupMenuItem<WhereToGoFromWWVertragingen>(
-          value: WhereToGoFromWWVertragingen.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWVertragingen>(
-          value: WhereToGoFromWWVertragingen.ai_vertragingen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_vertragingen,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Vertragingen',

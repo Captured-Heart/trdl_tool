@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWOnregelmatighedenBaan {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_onregelmatigheden_baan,
-}
-
 class WWOnregelmatighedenBaan extends StatelessWidget {
   const WWOnregelmatighedenBaan({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +40,7 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -60,7 +53,7 @@ class WWOnregelmatighedenBaan extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -82,30 +75,28 @@ class WWOnregelmatighedenBaanNavigation extends StatelessWidget {
   const WWOnregelmatighedenBaanNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWOnregelmatighedenBaan>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWOnregelmatighedenBaan result) async {
-        if (result == WhereToGoFromWWOnregelmatighedenBaan.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWOnregelmatighedenBaan.ai_onregelmatigheden_baan) {
+        } else if (result == PopupNavigation.ai_onregelmatigheden_baan) {
           await Navigator.pushNamed(context, 'ai_onregelmatigheden_baan');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWOnregelmatighedenBaan>>[
-        const PopupMenuItem<WhereToGoFromWWOnregelmatighedenBaan>(
-          value: WhereToGoFromWWOnregelmatighedenBaan.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOnregelmatighedenBaan>(
-          value: WhereToGoFromWWOnregelmatighedenBaan.ai_onregelmatigheden_baan,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_onregelmatigheden_baan,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Onregelmatigheden Baan',

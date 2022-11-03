@@ -1,16 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWBovenleidingMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_incidenten_main,
-  // ignore: constant_identifier_names
-  ai_infra_main,
-  // ignore: constant_identifier_names
-  ai_bovenleiding_main,
-}
-
 class WWBovenleidingMain extends StatelessWidget {
   const WWBovenleidingMain({Key? key}) : super(key: key);
 
@@ -78,49 +67,46 @@ class WWBovenleidingMainNavigation extends StatelessWidget {
   const WWBovenleidingMainNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWBovenleidingMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWBovenleidingMain result) async {
-        if (result == WhereToGoFromWWBovenleidingMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWBovenleidingMain.ai_incidenten_main) {
+        } else if (result == PopupNavigation.ai_incidenten_main) {
           await Navigator.pushNamed(context, 'ai_incidenten_main');
-        } else if (result == WhereToGoFromWWBovenleidingMain.ai_infra_main) {
+        } else if (result == PopupNavigation.ai_infra_main) {
           await Navigator.pushNamed(context, 'ai_infra_main');
-        } else if (result ==
-            WhereToGoFromWWBovenleidingMain.ai_bovenleiding_main) {
+        } else if (result == PopupNavigation.ai_bovenleiding_main) {
           await Navigator.pushNamed(context, 'ai_bovenleiding_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWBovenleidingMain>>[
-        const PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
-          value: WhereToGoFromWWBovenleidingMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
-          value: WhereToGoFromWWBovenleidingMain.ai_incidenten_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_incidenten_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Incidenten',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
-          value: WhereToGoFromWWBovenleidingMain.ai_infra_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_infra_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Infra',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWBovenleidingMain>(
-          value: WhereToGoFromWWBovenleidingMain.ai_bovenleiding_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bovenleiding_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Bovenleiding',

@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWTegenRijrichting {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_tegen_rijrichting,
-}
-
 class WWTegenRijrichting extends StatelessWidget {
   const WWTegenRijrichting({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWTegenRijrichting extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -79,7 +72,7 @@ class WWTegenRijrichting extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -92,7 +85,7 @@ class WWTegenRijrichting extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -115,30 +108,28 @@ class WWTegenRijrichtingNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWTegenRijrichting>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWTegenRijrichting result) async {
-        if (result == WhereToGoFromWWTegenRijrichting.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWTegenRijrichting.ai_tegen_rijrichting) {
+        } else if (result == PopupNavigation.ai_tegen_rijrichting) {
           await Navigator.pushNamed(context, 'ai_tegen_rijrichting');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWTegenRijrichting>>[
-        const PopupMenuItem<WhereToGoFromWWTegenRijrichting>(
-          value: WhereToGoFromWWTegenRijrichting.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWTegenRijrichting>(
-          value: WhereToGoFromWWTegenRijrichting.ai_tegen_rijrichting,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_tegen_rijrichting,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Tegen de Rijrichting',

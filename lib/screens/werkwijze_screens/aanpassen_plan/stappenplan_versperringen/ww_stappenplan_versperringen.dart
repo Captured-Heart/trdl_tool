@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWStappenplanVersperringen {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_stappenplan_versperringen,
-}
-
 class WWStappenplanVersperringen extends StatelessWidget {
   const WWStappenplanVersperringen({Key? key}) : super(key: key);
 
@@ -32,7 +25,7 @@ class WWStappenplanVersperringen extends StatelessWidget {
                   TitleText(title: 'Stappenplan Versperringen'),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -45,7 +38,7 @@ class WWStappenplanVersperringen extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -57,7 +50,7 @@ class WWStappenplanVersperringen extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -79,15 +72,13 @@ class WWStappenplanVersperringenNavigation extends StatelessWidget {
   const WWStappenplanVersperringenNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWStappenplanVersperringen>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWStappenplanVersperringen result) async {
-        if (result == WhereToGoFromWWStappenplanVersperringen.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWStappenplanVersperringen
-                .ai_stappenplan_versperringen) {
+        } else if (result == PopupNavigation.ai_stappenplan_versperringen) {
           await Navigator.pushNamed(
             context,
             'ai_stappenplan_versperringen',
@@ -96,18 +87,16 @@ class WWStappenplanVersperringenNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWStappenplanVersperringen>>[
-        const PopupMenuItem<WhereToGoFromWWStappenplanVersperringen>(
-          value: WhereToGoFromWWStappenplanVersperringen.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWStappenplanVersperringen>(
-          value: WhereToGoFromWWStappenplanVersperringen
-              .ai_stappenplan_versperringen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_stappenplan_versperringen,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Stappenplan Versperringen',

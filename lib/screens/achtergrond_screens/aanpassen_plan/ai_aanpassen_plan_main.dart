@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIAanpassenPlanMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_aanpassen_plan_main,
-}
-
 class AIAanpassenPlanMain extends StatelessWidget {
   const AIAanpassenPlanMain({Key? key}) : super(key: key);
 
@@ -95,30 +88,28 @@ class AIAanpassenPlanMainNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIAanpassenPlanMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIAanpassenPlanMain result) async {
-        if (result == WhereToGoFromAIAanpassenPlanMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIAanpassenPlanMain.ww_aanpassen_plan_main) {
+        } else if (result == PopupNavigation.ww_aanpassen_plan_main) {
           await Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIAanpassenPlanMain>>[
-        const PopupMenuItem<WhereToGoFromAIAanpassenPlanMain>(
-          value: WhereToGoFromAIAanpassenPlanMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIAanpassenPlanMain>(
-          value: WhereToGoFromAIAanpassenPlanMain.ww_aanpassen_plan_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_aanpassen_plan_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'WW Aanpassen Plan',

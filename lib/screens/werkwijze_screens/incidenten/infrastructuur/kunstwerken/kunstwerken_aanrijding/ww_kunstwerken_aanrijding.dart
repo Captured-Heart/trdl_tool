@@ -1,14 +1,7 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWSchouwenBovenleiding {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_schouwen_bovenleiding,
-}
-
-class WWSchouwenBovenleiding extends StatelessWidget {
-  const WWSchouwenBovenleiding({Key? key}) : super(key: key);
+class WWAanrijdingViaduct extends StatelessWidget {
+  const WWAanrijdingViaduct({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +12,7 @@ class WWSchouwenBovenleiding extends StatelessWidget {
           title: Utils.appBarTitleWW,
         ),
         actions: const <Widget>[
-          WWSchouwenBovenleidingNavigation(),
+          WWAanrijdingViaductNavigation(),
           HomeButton(),
         ],
       ),
@@ -30,24 +23,30 @@ class WWSchouwenBovenleiding extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   TitleText(
-                    title: 'Schouwen bovenleiding',
+                    title: 'Aanrijding/aanvaring brug/viaduct',
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 0,
                     text:
-                        'Op advies van het OBI laat je de bovenleiding schouwen, indien mogelijk vanaf het nevenspoor. Schouwen op het betrokken spoor doe je met een trein zonder reizigers. De MCN moet wel aangeven of deze in staat is om te schouwen.',
+                        'Na een melding van een aanrijding viaduct of aanvaring brug:',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 1,
+                    text:
+                        '- Staak je het verkeer over de betrokken railinfra;\n\n- De MKS/BO geeft aan of de betrokken railinfra bereden mag worden, inclusief de eventuele beperkingen.',
                   ),
                 ],
               ),
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -60,13 +59,13 @@ class WWSchouwenBovenleiding extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 0,
                     text:
-                        'Bij een onregelmatigheid aan de bovenleiding kan het gewenst zijn de situatie buiten te laten beoordelen door een MCN. De mogelijkheid bestaat dat de schouwtrein vastloopt op de locatie van de onregelmatigheid, waarbij eventuele reizigers niet meer handelingsvrij zijn.',
+                        'Na een aanvaring of aanrijding van een brug of viaduct kan de TRDL er niet meer vanuit gaan dat deze infra nog veilig bereden kan worden.\n\nDe MKS/BO beschikt over informatie van iedere brug of viaduct en kan aangeven onder welke voorwaarden de infra wel of niet bereden mag worden. Een storingsmonteur kan de situatie ter plaatse beoordelen.',
                   ),
                 ],
               ),
@@ -78,37 +77,35 @@ class WWSchouwenBovenleiding extends StatelessWidget {
   }
 }
 
-class WWSchouwenBovenleidingNavigation extends StatelessWidget {
-  const WWSchouwenBovenleidingNavigation({Key? key}) : super(key: key);
+class WWAanrijdingViaductNavigation extends StatelessWidget {
+  const WWAanrijdingViaductNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWSchouwenBovenleiding>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWSchouwenBovenleiding result) async {
-        if (result == WhereToGoFromWWSchouwenBovenleiding.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWSchouwenBovenleiding.ai_schouwen_bovenleiding) {
-          await Navigator.pushNamed(context, 'ai_schouwen_bovenleiding');
+        } else if (result == PopupNavigation.ai_kunstwerken_aanrijding) {
+          await Navigator.pushNamed(context, 'ai_kunstwerken_aanrijding');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWSchouwenBovenleiding>>[
-        const PopupMenuItem<WhereToGoFromWWSchouwenBovenleiding>(
-          value: WhereToGoFromWWSchouwenBovenleiding.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWSchouwenBovenleiding>(
-          value: WhereToGoFromWWSchouwenBovenleiding.ai_schouwen_bovenleiding,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_kunstwerken_aanrijding,
           child: MenuItemContent(
             icon: Utils.iconAI,
-            text: 'AI Schouwen Bovenleiding',
+            text: 'AI Aanrijding Viaduct',
           ),
         ),
       ],

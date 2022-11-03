@@ -1,14 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWSpoorMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_infra_main,
-  // ignore: constant_identifier_names
-  ai_spoor_main,
-}
-
 class WWSpoorMain extends StatelessWidget {
   const WWSpoorMain({Key? key}) : super(key: key);
 
@@ -73,38 +64,37 @@ class WWSpoorMainNavigation extends StatelessWidget {
   const WWSpoorMainNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWSpoorMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWSpoorMain result) async {
-        if (result == WhereToGoFromWWSpoorMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWSpoorMain.ai_infra_main) {
+        } else if (result == PopupNavigation.ai_infra_main) {
           await Navigator.pushNamed(context, 'ai_infra_main');
-        } else if (result == WhereToGoFromWWSpoorMain.ai_spoor_main) {
+        } else if (result == PopupNavigation.ai_spoor_main) {
           await Navigator.pushNamed(context, 'ai_spoor_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWSpoorMain>>[
-        const PopupMenuItem<WhereToGoFromWWSpoorMain>(
-          value: WhereToGoFromWWSpoorMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWSpoorMain>(
-          value: WhereToGoFromWWSpoorMain.ai_infra_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_infra_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Infra',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWSpoorMain>(
-          value: WhereToGoFromWWSpoorMain.ai_spoor_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_spoor_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Spoor',

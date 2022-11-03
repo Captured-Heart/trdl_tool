@@ -1,14 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWOngeplandWerkInfra {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_ongepland_werk_infra,
-  // ignore: constant_identifier_names
-  ai_infra_ter_beschikking,
-}
-
 class WWOngeplandWerkInfra extends StatelessWidget {
   const WWOngeplandWerkInfra({Key? key}) : super(key: key);
 
@@ -36,7 +27,7 @@ class WWOngeplandWerkInfra extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -75,7 +66,7 @@ class WWOngeplandWerkInfra extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -88,7 +79,7 @@ class WWOngeplandWerkInfra extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -110,40 +101,37 @@ class WWOngeplandWerkInfraNavigation extends StatelessWidget {
   const WWOngeplandWerkInfraNavigation({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWOngeplandWerkInfra>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWOngeplandWerkInfra result) async {
-        if (result == WhereToGoFromWWOngeplandWerkInfra.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWOngeplandWerkInfra.ai_ongepland_werk_infra) {
+        } else if (result == PopupNavigation.ai_ongepland_werk_infra) {
           await Navigator.pushNamed(context, 'ai_ongepland_werk_infra');
-        } else if (result ==
-            WhereToGoFromWWOngeplandWerkInfra.ai_infra_ter_beschikking) {
+        } else if (result == PopupNavigation.ai_infra_ter_beschikking) {
           await Navigator.pushNamed(context, 'ai_infra_ter_beschikking');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWOngeplandWerkInfra>>[
-        const PopupMenuItem<WhereToGoFromWWOngeplandWerkInfra>(
-          value: WhereToGoFromWWOngeplandWerkInfra.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOngeplandWerkInfra>(
-          value: WhereToGoFromWWOngeplandWerkInfra.ai_ongepland_werk_infra,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_ongepland_werk_infra,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Ongepland Werk (Infra)',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOngeplandWerkInfra>(
-          value: WhereToGoFromWWOngeplandWerkInfra.ai_infra_ter_beschikking,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_infra_ter_beschikking,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'Infra ter beschikking stellen',

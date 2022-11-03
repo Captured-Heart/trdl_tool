@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWHerroepenSein {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_incidenten_main,
-}
-
 class WWHerroepenSein extends StatelessWidget {
   const WWHerroepenSein({Key? key}) : super(key: key);
 
@@ -34,7 +27,7 @@ class WWHerroepenSein extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Strings.procedure,
+                    subtitle: Utils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +40,7 @@ class WWHerroepenSein extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.risico,
+                    subtitle: Utils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -59,7 +52,7 @@ class WWHerroepenSein extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Strings.context,
+                    subtitle: Utils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -82,29 +75,28 @@ class WWHerroepenSeinNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWHerroepenSein>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(Utils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWHerroepenSein result) async {
-        if (result == WhereToGoFromWWHerroepenSein.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWHerroepenSein.ai_incidenten_main) {
+        } else if (result == PopupNavigation.ai_incidenten_main) {
           await Navigator.pushNamed(context, 'ai_incidenten_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWHerroepenSein>>[
-        const PopupMenuItem<WhereToGoFromWWHerroepenSein>(
-          value: WhereToGoFromWWHerroepenSein.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: Utils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWHerroepenSein>(
-          value: WhereToGoFromWWHerroepenSein.ai_incidenten_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_incidenten_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Incidenten',
