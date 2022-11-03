@@ -103,7 +103,7 @@ List<String> searchStringsList = <String>[
   'ai_stappenplan_versperringen',
   'ai_incidenten_main',
   'ai_incidenten_basis',
-  'ai_infra_main',
+  'ai_infrastructuur_main',
   'ai_materieel_main',
   'ai_verloren_onderdelen',
   'ai_vaste_rem',

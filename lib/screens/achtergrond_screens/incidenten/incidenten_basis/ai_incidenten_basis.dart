@@ -1131,12 +1131,12 @@ class AIIncidentenBasisNavigation extends StatelessWidget {
           await Navigator.pushNamed(context, 'home_screen');
         } else if (result == PopupNavigation.ww_incidenten_main) {
           await Navigator.pushNamed(context, 'ww_incidenten_main');
-        } else if (result == PopupNavigation.ai_infra_main) {
-          await Navigator.pushNamed(context, 'ai_infra_main');
+        } else if (result == PopupNavigation.ai_infrastructuur_main) {
+          await Navigator.pushNamed(context, 'ai_infrastructuur_main');
         } else if (result == PopupNavigation.ai_derden_dieren) {
           await Navigator.pushNamed(
             context,
-            'ai_mensen_dieren_voorwerpen',
+            'ai_derden_dieren',
           );
         } else if (result == PopupNavigation.ai_materieel_main) {
           await Navigator.pushNamed(context, 'ai_materieel_main');
@@ -1162,10 +1162,10 @@ class AIIncidentenBasisNavigation extends StatelessWidget {
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
-          value: PopupNavigation.ai_infra_main,
+          value: PopupNavigation.ai_infrastructuur_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
-            text: 'AI Infra',
+            text: 'AI Infrastructuur',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(

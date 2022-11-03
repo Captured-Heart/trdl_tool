@@ -141,8 +141,8 @@ class WWInfrastructuurMainNavigation extends StatelessWidget {
       onSelected: (PopupNavigation result) async {
         if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == PopupNavigation.ai_infra_main) {
-          await Navigator.pushNamed(context, 'ai_infra_main');
+        } else if (result == PopupNavigation.ai_infrastructuur_main) {
+          await Navigator.pushNamed(context, 'ai_infrastructuur_main');
         } else if (result == PopupNavigation.ai_incidenten_main) {
           await Navigator.pushNamed(context, 'ai_incidenten_main');
         } else {
@@ -158,7 +158,7 @@ class WWInfrastructuurMainNavigation extends StatelessWidget {
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
-          value: PopupNavigation.ai_infra_main,
+          value: PopupNavigation.ai_infrastructuur_main,
           child: MenuItemContent(
             icon: Utils.iconAI,
             text: 'AI Infra',
