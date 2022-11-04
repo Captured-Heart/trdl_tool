@@ -82,19 +82,19 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(
-              icon: Icon(Utils.iconWW),
+              icon: Icon(IconUtils.iconWW),
               label: 'Werkwijze',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Utils.iconAI),
+              icon: Icon(IconUtils.iconAI),
               label: 'Achtergrond',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Utils.iconGame),
+              icon: Icon(IconUtils.iconGame),
               label: 'ProQuiz',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Utils.iconChat),
+              icon: Icon(IconUtils.iconChat),
               label: 'ProChat',
             ),
           ],

@@ -26,7 +26,7 @@ class AIGeplandeWerkzaamheden extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIGeplandeWerkzaamhedenNavigation(),
@@ -410,7 +410,7 @@ class AIGeplandeWerkzaamhedenNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIGeplandeWerkzaamheden>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIGeplandeWerkzaamheden result) async {
         if (result == WhereToGoFromAIGeplandeWerkzaamheden.home_screen) {
@@ -446,7 +446,7 @@ class AIGeplandeWerkzaamhedenNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
           value: WhereToGoFromAIGeplandeWerkzaamheden.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
@@ -454,42 +454,42 @@ class AIGeplandeWerkzaamhedenNavigation extends StatelessWidget {
           value: WhereToGoFromAIGeplandeWerkzaamheden
               .ww_geplande_werkzaamheden_main,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Geplande Werkzaamheden',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
           value: WhereToGoFromAIGeplandeWerkzaamheden.ai_controleren_wbi,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Controleren WBI',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
           value: WhereToGoFromAIGeplandeWerkzaamheden.ai_fouten_wbi,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Fouten in de WBI',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
           value: WhereToGoFromAIGeplandeWerkzaamheden.ai_aanvang_werkzaamheden,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Aanvang Werkzaamheden',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
           value: WhereToGoFromAIGeplandeWerkzaamheden.ai_werkzones,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Werkzones',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamheden>(
           value: WhereToGoFromAIGeplandeWerkzaamheden.ai_toelaten_werktreinen,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Toelaten Wertrein',
           ),
         ),

@@ -20,7 +20,7 @@ class WWWisselsMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWWisselsMainNavigation(),
@@ -81,10 +81,11 @@ class WWWisselsMain extends StatelessWidget {
 
 class WWWisselsMainNavigation extends StatelessWidget {
   const WWWisselsMainNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWWisselsMain>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWWisselsMain result) async {
         if (result == WhereToGoFromWWWisselsMain.home_screen) {
@@ -104,28 +105,28 @@ class WWWisselsMainNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWWisselsMain>(
           value: WhereToGoFromWWWisselsMain.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWWisselsMain>(
           value: WhereToGoFromWWWisselsMain.ai_wissels_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Wissels',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWWisselsMain>(
           value: WhereToGoFromWWWisselsMain.ai_infra_overig,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Infra Overig',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWWisselsMain>(
           value: WhereToGoFromWWWisselsMain.ai_incidenten_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Incidenten',
           ),
         ),

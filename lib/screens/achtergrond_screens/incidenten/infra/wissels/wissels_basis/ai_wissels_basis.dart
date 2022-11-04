@@ -24,7 +24,7 @@ class AIWisselsBasis extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIWisselsBasis>(
-            icon: const Icon(Utils.iconInfo),
+            icon: const Icon(IconUtils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIWisselsBasis result) async {
               if (result == WhereToGoFromAIWisselsBasis.home_screen) {
@@ -47,28 +47,28 @@ class AIWisselsBasis extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIWisselsBasis>(
                 value: WhereToGoFromAIWisselsBasis.home_screen,
                 child: MenuItemContent(
-                  icon: Utils.iconHome,
+                  icon: IconUtils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIWisselsBasis>(
                 value: WhereToGoFromAIWisselsBasis.ai_wissel_eindstand,
                 child: MenuItemContent(
-                  icon: Utils.iconAI,
+                  icon: IconUtils.iconAI,
                   text: 'AI Wissel Eindstand',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIWisselsBasis>(
                 value: WhereToGoFromAIWisselsBasis.ai_gestoord_wissel,
                 child: MenuItemContent(
-                  icon: Utils.iconAI,
+                  icon: IconUtils.iconAI,
                   text: 'AI Gestoord Wissel',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIWisselsBasis>(
                 value: WhereToGoFromAIWisselsBasis.ai_opengereden_wissel,
                 child: MenuItemContent(
-                  icon: Utils.iconAI,
+                  icon: IconUtils.iconAI,
                   text: 'AI Opengereden Wissel',
                 ),
               ),
@@ -81,7 +81,7 @@ class AIWisselsBasis extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(
@@ -106,7 +106,7 @@ class AIWisselsBasis extends StatelessWidget {
             ),
             //CARD #2
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(
@@ -203,7 +203,7 @@ class AIWisselsBasis extends StatelessWidget {
             ),
             //CARD #3
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(
@@ -259,7 +259,7 @@ class AIWisselsBasis extends StatelessWidget {
             ),
             //CARD #4
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(
@@ -335,7 +335,7 @@ class AIWisselsBasis extends StatelessWidget {
             ),
             //CARD #5
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(

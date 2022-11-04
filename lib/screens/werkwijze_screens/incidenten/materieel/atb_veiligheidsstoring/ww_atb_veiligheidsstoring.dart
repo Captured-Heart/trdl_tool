@@ -16,7 +16,7 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWATBVeiligheidsstoring(),
@@ -34,7 +34,7 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +47,7 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -59,7 +59,7 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -79,10 +79,11 @@ class WWAtbVeiligheidsstoring extends StatelessWidget {
 
 class WWATBVeiligheidsstoring extends StatelessWidget {
   const WWATBVeiligheidsstoring({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWAtbVeiligheidsstoring>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWAtbVeiligheidsstoring result) async {
         if (result == WhereToGoFromWWAtbVeiligheidsstoring.home_screen) {
@@ -98,14 +99,14 @@ class WWATBVeiligheidsstoring extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWAtbVeiligheidsstoring>(
           value: WhereToGoFromWWAtbVeiligheidsstoring.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWAtbVeiligheidsstoring>(
           value: WhereToGoFromWWAtbVeiligheidsstoring.ai_atb,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI ATB',
           ),
         ),

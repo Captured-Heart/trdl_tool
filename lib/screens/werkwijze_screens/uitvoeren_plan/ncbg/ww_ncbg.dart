@@ -16,7 +16,7 @@ class WWNcbg extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWNCBGNavigation(),
@@ -66,7 +66,7 @@ class WWNCBGNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<PopupNavigation>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (PopupNavigation result) async {
         if (result == PopupNavigation.home_screen) {
@@ -81,14 +81,14 @@ class WWNCBGNavigation extends StatelessWidget {
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconInfo,
+            icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ai_ncbg,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI NCBG',
           ),
         ),

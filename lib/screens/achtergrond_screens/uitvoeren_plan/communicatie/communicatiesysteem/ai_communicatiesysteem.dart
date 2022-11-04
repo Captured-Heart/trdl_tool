@@ -18,7 +18,7 @@ class AICommunicatieSysteem extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AICommunicatieSysteemNavigation(),
@@ -494,7 +494,7 @@ class AICommunicatieSysteemNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAICommunicatieSysteem>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAICommunicatieSysteem result) async {
         if (result == WhereToGoFromAICommunicatieSysteem.home_screen) {
@@ -514,21 +514,21 @@ class AICommunicatieSysteemNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
           value: WhereToGoFromAICommunicatieSysteem.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
           value: WhereToGoFromAICommunicatieSysteem.ww_communicatie_main,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Communicatie',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAICommunicatieSysteem>(
           value: WhereToGoFromAICommunicatieSysteem.ai_incidenten_basis,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Incidenten',
           ),
         ),

@@ -16,7 +16,7 @@ class WWIncidentenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWIncidentenMainNavigation(),
@@ -34,7 +34,7 @@ class WWIncidentenMain extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -97,7 +97,7 @@ class WWIncidentenMain extends StatelessWidget {
               const TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -110,7 +110,7 @@ class WWIncidentenMain extends StatelessWidget {
               const TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -130,10 +130,11 @@ class WWIncidentenMain extends StatelessWidget {
 
 class WWIncidentenMainNavigation extends StatelessWidget {
   const WWIncidentenMainNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWIncidentenMain>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWIncidentenMain result) async {
         if (result == WhereToGoFromWWIncidentenMain.home_screen) {
@@ -149,14 +150,14 @@ class WWIncidentenMainNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWIncidentenMain>(
           value: WhereToGoFromWWIncidentenMain.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWIncidentenMain>(
           value: WhereToGoFromWWIncidentenMain.ai_incidenten_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Incidenten',
           ),
         ),

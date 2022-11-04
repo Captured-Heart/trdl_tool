@@ -71,8 +71,8 @@ class _RegisterState extends State<Register> {
                                 keyboardType: TextInputType.emailAddress,
                                 textAlign: TextAlign.center,
                                 decoration: const InputDecoration(
-                                  labelText: Strings.registerEmail,
-                                  hintText: Strings.registerEmailHint,
+                                  labelText: StringUtils.registerEmail,
+                                  hintText: StringUtils.registerEmailHint,
                                 ),
                                 autocorrect: false,
                                 enableSuggestions: false,
@@ -90,8 +90,8 @@ class _RegisterState extends State<Register> {
                                 textAlign: TextAlign.center,
                                 obscureText: true,
                                 decoration: const InputDecoration(
-                                  labelText: Strings.registerPassword,
-                                  hintText: Strings.registerPasswordHint,
+                                  labelText: StringUtils.registerPassword,
+                                  hintText: StringUtils.registerPasswordHint,
                                 ),
                                 autocorrect: false,
                                 enableSuggestions: false,
@@ -109,8 +109,9 @@ class _RegisterState extends State<Register> {
                                 textAlign: TextAlign.center,
                                 obscureText: true,
                                 decoration: const InputDecoration(
-                                  labelText: Strings.registerPasswordCheck,
-                                  hintText: Strings.registerPasswordHintCheck,
+                                  labelText: StringUtils.registerPasswordCheck,
+                                  hintText:
+                                      StringUtils.registerPasswordHintCheck,
                                 ),
                                 autocorrect: false,
                                 enableSuggestions: false,
@@ -216,7 +217,7 @@ class _RegisterState extends State<Register> {
                       await Navigator.pushNamed(context, 'login_screen');
                     },
                     child: const Text(
-                      Strings.registerAlEenAccount,
+                      StringUtils.registerAlEenAccount,
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                   ),

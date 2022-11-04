@@ -16,7 +16,7 @@ class AIKetenpartners extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIKetenpartnersNavigation(),
@@ -98,7 +98,7 @@ class AIKetenpartnersNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIKetenpartners>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIKetenpartners result) async {
         if (result == WhereToGoFromAIKetenpartners.home_screen) {
@@ -118,14 +118,14 @@ class AIKetenpartnersNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIKetenpartners>(
           value: WhereToGoFromAIKetenpartners.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIKetenpartners>(
           value: WhereToGoFromAIKetenpartners.ww_mondelinge_communicatie,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Mondelinge Communicatie',
           ),
         ),

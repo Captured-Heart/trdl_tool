@@ -9,7 +9,7 @@ class AIIncidentenBasis extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIIncidentenBasisNavigation(),
@@ -1124,7 +1124,7 @@ class AIIncidentenBasisNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<PopupNavigation>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (PopupNavigation result) async {
         if (result == PopupNavigation.home_screen) {
@@ -1150,42 +1150,42 @@ class AIIncidentenBasisNavigation extends StatelessWidget {
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ww_incidenten_main,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Incidenten',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ai_infrastructuur_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Infrastructuur',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ai_derden_dieren,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Mensen, Dieren, Voorwerpen',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ai_materieel_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Materieel',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ai_overige_incidenten,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',
           ),
         ),

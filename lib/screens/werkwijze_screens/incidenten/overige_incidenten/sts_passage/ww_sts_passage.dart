@@ -18,7 +18,7 @@ class WWStsPassage extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWSTSPassage(),
@@ -36,7 +36,7 @@ class WWStsPassage extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -88,7 +88,7 @@ class WWStsPassage extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -101,7 +101,7 @@ class WWStsPassage extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -121,10 +121,11 @@ class WWStsPassage extends StatelessWidget {
 
 class WWSTSPassage extends StatelessWidget {
   const WWSTSPassage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWStsPassage>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWStsPassage result) async {
         if (result == WhereToGoFromWWStsPassage.home_screen) {
@@ -142,21 +143,21 @@ class WWSTSPassage extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWStsPassage>(
           value: WhereToGoFromWWStsPassage.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWStsPassage>(
           value: WhereToGoFromWWStsPassage.ai_sts_passage,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI STS Passage',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWStsPassage>(
           value: WhereToGoFromWWStsPassage.ai_overige_incidenten,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',
           ),
         ),

@@ -20,7 +20,7 @@ class WWOntruimenPost extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWOntruimenPostNavigation(),
@@ -38,7 +38,7 @@ class WWOntruimenPost extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -76,7 +76,7 @@ class WWOntruimenPost extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -89,7 +89,7 @@ class WWOntruimenPost extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -108,10 +108,11 @@ class WWOntruimenPost extends StatelessWidget {
 
 class WWOntruimenPostNavigation extends StatelessWidget {
   const WWOntruimenPostNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWOntruimenPost>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWOntruimenPost result) async {
         if (result == WhereToGoFromWWOntruimenPost.home_screen) {
@@ -133,28 +134,28 @@ class WWOntruimenPostNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWOntruimenPost>(
           value: WhereToGoFromWWOntruimenPost.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWOntruimenPost>(
           value: WhereToGoFromWWOntruimenPost.ai_ontruimen_post,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Ontruimen Post',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWOntruimenPost>(
           value: WhereToGoFromWWOntruimenPost.ai_stilleggen_treindienst,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Stilleggen Treindienst',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWOntruimenPost>(
           value: WhereToGoFromWWOntruimenPost.ai_overige_incidenten,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',
           ),
         ),

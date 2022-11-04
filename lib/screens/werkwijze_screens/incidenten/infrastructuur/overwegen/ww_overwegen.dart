@@ -9,7 +9,7 @@ class WWOverwegen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWOverwegenNavigation(),
@@ -27,7 +27,7 @@ class WWOverwegen extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -68,7 +68,7 @@ class WWOverwegen extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -81,7 +81,7 @@ class WWOverwegen extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -101,10 +101,11 @@ class WWOverwegen extends StatelessWidget {
 
 class WWOverwegenNavigation extends StatelessWidget {
   const WWOverwegenNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<PopupNavigation>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (PopupNavigation result) async {
         if (result == PopupNavigation.home_screen) {
@@ -123,28 +124,28 @@ class WWOverwegenNavigation extends StatelessWidget {
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ai_overwegen_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Overwegen',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ai_overwegen_storing,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Overwegen Storing',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ai_incidenten_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Incidenten',
           ),
         ),

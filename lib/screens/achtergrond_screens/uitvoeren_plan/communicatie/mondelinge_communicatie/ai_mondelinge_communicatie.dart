@@ -16,7 +16,7 @@ class AIMondelingeCommunicatie extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIMondelingeCommunicatieNavigation(),
@@ -1119,7 +1119,7 @@ class AIMondelingeCommunicatieNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIMondelingeCommunicatie>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIMondelingeCommunicatie result) async {
         if (result == WhereToGoFromAIMondelingeCommunicatie.home_screen) {
@@ -1139,7 +1139,7 @@ class AIMondelingeCommunicatieNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIMondelingeCommunicatie>(
           value: WhereToGoFromAIMondelingeCommunicatie.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
@@ -1147,7 +1147,7 @@ class AIMondelingeCommunicatieNavigation extends StatelessWidget {
           value:
               WhereToGoFromAIMondelingeCommunicatie.ww_mondelinge_communicatie,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Mondelinge Communicatie',
           ),
         ),

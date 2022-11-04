@@ -20,7 +20,7 @@ class AIVervoersregeling extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIVervoersregelingNavigation(),
@@ -284,7 +284,7 @@ class AIVervoersregelingNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIVervoersregeling>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIVervoersregeling result) async {
         if (result == WhereToGoFromAIVervoersregeling.home_screen) {
@@ -307,28 +307,28 @@ class AIVervoersregelingNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
           value: WhereToGoFromAIVervoersregeling.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
           value: WhereToGoFromAIVervoersregeling.ww_vervoersregeling,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Vervoersregeling',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
           value: WhereToGoFromAIVervoersregeling.ai_bijzonderheden_trein,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Trein',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
           value: WhereToGoFromAIVervoersregeling.ai_onjuiste_detectie,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Onjuiste Detectie',
           ),
         ),

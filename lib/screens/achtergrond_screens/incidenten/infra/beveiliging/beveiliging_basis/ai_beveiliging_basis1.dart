@@ -9,7 +9,7 @@ class AIBeveiligingBasis1 extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIBeveiligingBasis1Navigation(),
@@ -284,10 +284,11 @@ class AIBeveiligingBasis1 extends StatelessWidget {
 
 class AIBeveiligingBasis1Navigation extends StatelessWidget {
   const AIBeveiligingBasis1Navigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<PopupNavigation>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (PopupNavigation result) async {
         if (result == PopupNavigation.home_screen) {
@@ -304,21 +305,21 @@ class AIBeveiligingBasis1Navigation extends StatelessWidget {
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ww_beveiliging_main,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Beveiliging',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ai_beveiliging_basis2,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Beveiliging Basis 2',
           ),
         ),

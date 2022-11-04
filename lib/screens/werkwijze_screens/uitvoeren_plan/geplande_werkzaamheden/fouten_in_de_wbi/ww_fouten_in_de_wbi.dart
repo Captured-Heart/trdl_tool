@@ -16,7 +16,7 @@ class WWFoutenWBI extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWFoutenInDeWBINavigation(),
@@ -34,7 +34,7 @@ class WWFoutenWBI extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +47,7 @@ class WWFoutenWBI extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -60,7 +60,7 @@ class WWFoutenWBI extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -86,7 +86,7 @@ class WWFoutenInDeWBINavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWFoutenWBI>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWFoutenWBI result) async {
         if (result == WhereToGoFromWWFoutenWBI.home_screen) {
@@ -102,14 +102,14 @@ class WWFoutenInDeWBINavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWFoutenWBI>(
           value: WhereToGoFromWWFoutenWBI.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconInfo,
+            icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWFoutenWBI>(
           value: WhereToGoFromWWFoutenWBI.ai_fouten_wbi,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Fouten WBI',
           ),
         ),

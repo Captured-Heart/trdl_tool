@@ -16,7 +16,7 @@ class WWVervoersregeling extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWVervoersregelingNavigation(),
@@ -34,7 +34,7 @@ class WWVervoersregeling extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +47,7 @@ class WWVervoersregeling extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -60,7 +60,7 @@ class WWVervoersregeling extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -84,7 +84,7 @@ class WWVervoersregelingNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWVervoersregeling>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWVervoersregeling result) async {
         if (result == WhereToGoFromWWVervoersregeling.home_screen) {
@@ -101,14 +101,14 @@ class WWVervoersregelingNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWVervoersregeling>(
           value: WhereToGoFromWWVervoersregeling.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWVervoersregeling>(
           value: WhereToGoFromWWVervoersregeling.ai_vervoersregeling,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Treinen met Vervoersregeling',
           ),
         ),

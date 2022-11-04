@@ -18,7 +18,7 @@ class AIInzettenICB extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIInzettenICBNavigation(),
@@ -186,7 +186,7 @@ class AIInzettenICBNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIInzettenICB>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIInzettenICB result) async {
         if (result == WhereToGoFromAIInzettenICB.home_screen) {
@@ -208,21 +208,21 @@ class AIInzettenICBNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIInzettenICB>(
           value: WhereToGoFromAIInzettenICB.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIInzettenICB>(
           value: WhereToGoFromAIInzettenICB.ww_inzetten_icb,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Inzetten ICB',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIInzettenICB>(
           value: WhereToGoFromAIInzettenICB.ai_bijzonderheden_rijwegen_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Rijwegen',
           ),
         ),

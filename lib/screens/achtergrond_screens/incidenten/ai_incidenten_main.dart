@@ -18,7 +18,7 @@ class AIIncidentenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIIncidentenMainNavigation(),
@@ -96,7 +96,7 @@ class AIIncidentenMainNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIIncidentenMain>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIIncidentenMain result) async {
         if (result == WhereToGoFromAIIncidentenMain.home_screen) {
@@ -115,21 +115,21 @@ class AIIncidentenMainNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIIncidentenMain>(
           value: WhereToGoFromAIIncidentenMain.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIIncidentenMain>(
           value: WhereToGoFromAIIncidentenMain.ww_incidenten_main,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Incidenten',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIIncidentenMain>(
           value: WhereToGoFromAIIncidentenMain.ai_inzetten_railvoertuig,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Inzetten ICB',
           ),
         ),

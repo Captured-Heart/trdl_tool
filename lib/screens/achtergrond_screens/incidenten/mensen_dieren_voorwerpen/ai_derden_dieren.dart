@@ -9,7 +9,7 @@ class AIDerdenDieren extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <HomeButton>[
           HomeButton(),

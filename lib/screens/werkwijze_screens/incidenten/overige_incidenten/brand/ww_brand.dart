@@ -22,7 +22,7 @@ class WWBrand extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWBrandNavigation(),
@@ -40,7 +40,7 @@ class WWBrand extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -65,7 +65,7 @@ class WWBrand extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -78,7 +78,7 @@ class WWBrand extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -98,10 +98,11 @@ class WWBrand extends StatelessWidget {
 
 class WWBrandNavigation extends StatelessWidget {
   const WWBrandNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWBrand>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWBrand result) async {
         if (result == WhereToGoFromWWBrand.home_screen) {
@@ -123,35 +124,35 @@ class WWBrandNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWBrand>(
           value: WhereToGoFromWWBrand.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWBrand>(
           value: WhereToGoFromWWBrand.ai_brand,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Brand',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWBrand>(
           value: WhereToGoFromWWBrand.ai_ruclu,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Procedure RU/CLU',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWBrand>(
           value: WhereToGoFromWWBrand.ai_schakelen_bovenleiding,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Schakelen Bovenleiding',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWBrand>(
           value: WhereToGoFromWWBrand.ai_overige_incidenten,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',
           ),
         ),

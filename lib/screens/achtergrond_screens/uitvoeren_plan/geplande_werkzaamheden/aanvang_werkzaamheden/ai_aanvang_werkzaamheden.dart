@@ -24,7 +24,7 @@ class AIAanvangWerkzaamheden extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIAanvangWerkzaamhedenNavigation(),
@@ -249,7 +249,7 @@ class AIAanvangWerkzaamhedenNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIAanvangWerkzaamheden>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIAanvangWerkzaamheden result) async {
         if (result == WhereToGoFromAIAanvangWerkzaamheden.home_screen) {
@@ -278,42 +278,42 @@ class AIAanvangWerkzaamhedenNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
           value: WhereToGoFromAIAanvangWerkzaamheden.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
           value: WhereToGoFromAIAanvangWerkzaamheden.ww_aanvang_werkzaamheden,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Aanvang Werkzaamheden',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
           value: WhereToGoFromAIAanvangWerkzaamheden.ai_geplande_werkzaamheden,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Geplande Werkzaamheden',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
           value: WhereToGoFromAIAanvangWerkzaamheden.ai_controleren_wbi,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Controleren WBI',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
           value: WhereToGoFromAIAanvangWerkzaamheden.ai_fouten_wbi,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Fouten WBI',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
           value: WhereToGoFromAIAanvangWerkzaamheden.ai_bovenleiding_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Bovenleiding',
           ),
         ),

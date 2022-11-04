@@ -9,7 +9,7 @@ class AIStappenplanVersperringen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIStappenplanVersperringenNavigation(),
@@ -332,7 +332,7 @@ class AIStappenplanVersperringenNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<PopupNavigation>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (PopupNavigation result) async {
         if (result == PopupNavigation.home_screen) {
@@ -352,21 +352,21 @@ class AIStappenplanVersperringenNavigation extends StatelessWidget {
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ww_stappenplan_versperringen,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Stappenplan Versperringen',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ai_aanpassen_plan_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Aanpassen Plan',
           ),
         ),

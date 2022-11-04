@@ -18,7 +18,7 @@ class WWVasteRem extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWVasteRemNavigation(),
@@ -36,7 +36,7 @@ class WWVasteRem extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -55,7 +55,7 @@ class WWVasteRem extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -68,7 +68,7 @@ class WWVasteRem extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -88,10 +88,11 @@ class WWVasteRem extends StatelessWidget {
 
 class WWVasteRemNavigation extends StatelessWidget {
   const WWVasteRemNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWVasteRem>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWVasteRem result) async {
         if (result == WhereToGoFromWWVasteRem.home_screen) {
@@ -109,21 +110,21 @@ class WWVasteRemNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWVasteRem>(
           value: WhereToGoFromWWVasteRem.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWVasteRem>(
           value: WhereToGoFromWWVasteRem.ai_materieel_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Materieel',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWVasteRem>(
           value: WhereToGoFromWWVasteRem.ai_vaste_rem,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Vaste Rem',
           ),
         ),

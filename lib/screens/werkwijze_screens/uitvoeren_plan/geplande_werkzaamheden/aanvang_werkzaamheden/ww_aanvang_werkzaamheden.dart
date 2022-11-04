@@ -16,7 +16,7 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWAanvangWerkzaamhedenNavigation(),
@@ -34,7 +34,7 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +47,7 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -61,7 +61,7 @@ class WWAanvangWerkzaamheden extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -87,7 +87,7 @@ class WWAanvangWerkzaamhedenNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWAanvangWerkzaamheden>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWAanvangWerkzaamheden result) async {
         if (result == WhereToGoFromWWAanvangWerkzaamheden.home_screen) {
@@ -104,14 +104,14 @@ class WWAanvangWerkzaamhedenNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
           value: WhereToGoFromWWAanvangWerkzaamheden.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconInfo,
+            icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
           value: WhereToGoFromWWAanvangWerkzaamheden.ai_aanvang_werkzaamheden,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Aanvang Werkzaamheden',
           ),
         ),

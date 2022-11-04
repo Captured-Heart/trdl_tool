@@ -20,7 +20,7 @@ class AIOnjuisteDetectie extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIOnjuisteDetectieNavigation(),
@@ -104,7 +104,7 @@ class AIOnjuisteDetectieNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIOnjuisteDetectie>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIOnjuisteDetectie result) async {
         if (result == WhereToGoFromAIOnjuisteDetectie.home_screen) {
@@ -127,28 +127,28 @@ class AIOnjuisteDetectieNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
           value: WhereToGoFromAIOnjuisteDetectie.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
           value: WhereToGoFromAIOnjuisteDetectie.ww_onjuiste_detectie,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Onjuiste Detectie',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
           value: WhereToGoFromAIOnjuisteDetectie.ai_bijzonderheden_trein,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Trein',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
           value: WhereToGoFromAIOnjuisteDetectie.ai_vervoersregeling,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Vervoersregeling',
           ),
         ),

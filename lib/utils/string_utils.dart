@@ -1,4 +1,4 @@
-class Strings {
+class StringUtils {
   /*MAIN strings*/
   static const String mainTitle = 'TRDL-tool';
 
@@ -28,4 +28,11 @@ class Strings {
   static const String registerPasswordHintCheck =
       'Wachtwoord dient hetzelfde te zijn';
   static const String registerAlEenAccount = 'Heb je al een account?';
+
+  static const String appBarTitleWW = 'Werkwijze';
+  static const String appBarTitleAI = 'Achtergrondinformatie';
+
+  static const String textCardTitleProcedure = 'Procedure';
+  static const String textCardTitleRisico = "Risico('s)";
+  static const String textCardTitleContext = 'Context';
 }

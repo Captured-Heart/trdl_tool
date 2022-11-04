@@ -20,7 +20,7 @@ class AIRijwegenPlanopbouw extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIRijwegenPlanopbouwNavigation(),
@@ -591,7 +591,7 @@ class AIRijwegenPlanopbouwNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIRijwegenPlanopbouw>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIRijwegenPlanopbouw result) async {
         if (result == WhereToGoFromAIRijwegenPlanopbouw.home_screen) {
@@ -611,7 +611,7 @@ class AIRijwegenPlanopbouwNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
           value: WhereToGoFromAIRijwegenPlanopbouw.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
@@ -619,7 +619,7 @@ class AIRijwegenPlanopbouwNavigation extends StatelessWidget {
           value:
               WhereToGoFromAIRijwegenPlanopbouw.ww_bijzonderheden_rijwegen_main,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Bijzonderheden Rijwegen',
           ),
         ),
@@ -627,14 +627,14 @@ class AIRijwegenPlanopbouwNavigation extends StatelessWidget {
           value:
               WhereToGoFromAIRijwegenPlanopbouw.ai_bijzonderheden_rijwegen_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Rijwegen',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
           value: WhereToGoFromAIRijwegenPlanopbouw.ai_rijwegen_planscherm,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Rijwegen Planscherm',
           ),
         ),

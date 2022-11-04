@@ -22,7 +22,7 @@ class AIWisselsMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIWisselsMain>(
-            icon: const Icon(Utils.iconInfo),
+            icon: const Icon(IconUtils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIWisselsMain result) async {
               if (result == WhereToGoFromAIWisselsMain.home_screen) {
@@ -44,21 +44,21 @@ class AIWisselsMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIWisselsMain>(
                 value: WhereToGoFromAIWisselsMain.home_screen,
                 child: MenuItemContent(
-                  icon: Utils.iconHome,
+                  icon: IconUtils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIWisselsMain>(
                 value: WhereToGoFromAIWisselsMain.ww_wissels_main,
                 child: MenuItemContent(
-                  icon: Utils.iconWW,
+                  icon: IconUtils.iconWW,
                   text: 'WW Wissels',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIWisselsMain>(
                 value: WhereToGoFromAIWisselsMain.ai_overige_infra_elementen,
                 child: MenuItemContent(
-                  icon: Utils.iconAI,
+                  icon: IconUtils.iconAI,
                   text: 'AI Overige Infra',
                 ),
               ),
@@ -71,7 +71,7 @@ class AIWisselsMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(
@@ -91,7 +91,7 @@ class AIWisselsMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(

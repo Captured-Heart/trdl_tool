@@ -18,7 +18,7 @@ class WWStilleggenTreindienst extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWStilleggenTreindienstNavigation(),
@@ -36,7 +36,7 @@ class WWStilleggenTreindienst extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -66,7 +66,7 @@ class WWStilleggenTreindienst extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -79,7 +79,7 @@ class WWStilleggenTreindienst extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -99,10 +99,11 @@ class WWStilleggenTreindienst extends StatelessWidget {
 
 class WWStilleggenTreindienstNavigation extends StatelessWidget {
   const WWStilleggenTreindienstNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWStilleggenTreindienst>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWStilleggenTreindienst result) async {
         if (result == WhereToGoFromWWStilleggenTreindienst.home_screen) {
@@ -122,21 +123,21 @@ class WWStilleggenTreindienstNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
           value: WhereToGoFromWWStilleggenTreindienst.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
           value: WhereToGoFromWWStilleggenTreindienst.ai_stilleggen_treindienst,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Stilleggen Treindienst',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWStilleggenTreindienst>(
           value: WhereToGoFromWWStilleggenTreindienst.ai_overige_incidenten,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',
           ),
         ),

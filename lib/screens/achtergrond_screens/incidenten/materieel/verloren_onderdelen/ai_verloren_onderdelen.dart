@@ -18,7 +18,7 @@ class AIVerlorenOnderdelen extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIVerlorenOnderdelen>(
-            icon: const Icon(Utils.iconInfo),
+            icon: const Icon(IconUtils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIVerlorenOnderdelen result) async {
               if (result == WhereToGoFromAIVerlorenOnderdelen.home_screen) {
@@ -32,7 +32,7 @@ class AIVerlorenOnderdelen extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIVerlorenOnderdelen>(
                 value: WhereToGoFromAIVerlorenOnderdelen.home_screen,
                 child: MenuItemContent(
-                  icon: Utils.iconHome,
+                  icon: IconUtils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -45,7 +45,7 @@ class AIVerlorenOnderdelen extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(
@@ -60,7 +60,7 @@ class AIVerlorenOnderdelen extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(

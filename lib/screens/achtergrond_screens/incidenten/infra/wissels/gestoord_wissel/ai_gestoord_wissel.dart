@@ -18,7 +18,7 @@ class AIGestoordWissel extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIGestoordWissel>(
-            icon: const Icon(Utils.iconInfo),
+            icon: const Icon(IconUtils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIGestoordWissel result) async {
               if (result == WhereToGoFromAIGestoordWissel.home_screen) {
@@ -32,7 +32,7 @@ class AIGestoordWissel extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIGestoordWissel>(
                 value: WhereToGoFromAIGestoordWissel.home_screen,
                 child: MenuItemContent(
-                  icon: Utils.iconHome,
+                  icon: IconUtils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -46,7 +46,7 @@ class AIGestoordWissel extends StatelessWidget {
             children: <Card>[
               /*PROCEDURE CARD*/
               Card(
-                elevation: Utils.kCardElevation,
+                elevation: CardUtils.kCardElevation,
                 child: Padding(
                   padding: Utils.kCardPadding,
                   child: Column(

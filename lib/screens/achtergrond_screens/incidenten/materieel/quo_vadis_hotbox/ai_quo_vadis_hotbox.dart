@@ -18,7 +18,7 @@ class AIQuoVadisHotbox extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIQuoVadisHotbox>(
-            icon: const Icon(Utils.iconInfo),
+            icon: const Icon(IconUtils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIQuoVadisHotbox result) async {
               if (result == WhereToGoFromAIQuoVadisHotbox.home_screen) {
@@ -32,7 +32,7 @@ class AIQuoVadisHotbox extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIQuoVadisHotbox>(
                 value: WhereToGoFromAIQuoVadisHotbox.home_screen,
                 child: MenuItemContent(
-                  icon: Utils.iconHome,
+                  icon: IconUtils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -45,7 +45,7 @@ class AIQuoVadisHotbox extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(
@@ -60,7 +60,7 @@ class AIQuoVadisHotbox extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(

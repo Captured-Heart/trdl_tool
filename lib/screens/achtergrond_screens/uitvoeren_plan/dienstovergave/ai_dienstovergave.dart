@@ -16,7 +16,7 @@ class AIDienstovergave extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIDienstovergaveNavigation(),
@@ -92,7 +92,7 @@ class AIDienstovergaveNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIDienstovergave>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIDienstovergave result) async {
         if (result == WhereToGoFromAIDienstovergave.home_screen) {
@@ -108,14 +108,14 @@ class AIDienstovergaveNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIDienstovergave>(
           value: WhereToGoFromAIDienstovergave.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIDienstovergave>(
           value: WhereToGoFromAIDienstovergave.ww_dienstovergave,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Dienstovergave',
           ),
         ),

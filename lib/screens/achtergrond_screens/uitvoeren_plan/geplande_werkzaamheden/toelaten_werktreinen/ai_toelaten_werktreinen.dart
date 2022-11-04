@@ -24,7 +24,7 @@ class AIToelatenWerktreinen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIToelatenWerktreinenNavigation(),
@@ -122,7 +122,7 @@ class AIToelatenWerktreinenNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIToelatenWerktreinen>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIToelatenWerktreinen result) async {
         if (result == WhereToGoFromAIToelatenWerktreinen.home_screen) {
@@ -158,14 +158,14 @@ class AIToelatenWerktreinenNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
           value: WhereToGoFromAIToelatenWerktreinen.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
           value: WhereToGoFromAIToelatenWerktreinen.ww_toelaten_werktreinen,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Toelaten Werktreinen',
           ),
         ),
@@ -173,7 +173,7 @@ class AIToelatenWerktreinenNavigation extends StatelessWidget {
           value: WhereToGoFromAIToelatenWerktreinen
               .ai_bijzonderheden_rijwegen_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Rijwegen',
           ),
         ),
@@ -181,21 +181,21 @@ class AIToelatenWerktreinenNavigation extends StatelessWidget {
           value:
               WhereToGoFromAIToelatenWerktreinen.ai_geplande_werkzaamheden_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Geplande Werkzaamheden',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
           value: WhereToGoFromAIToelatenWerktreinen.ai_inzetten_icb,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Inzetten ICB',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
           value: WhereToGoFromAIToelatenWerktreinen.ai_onjuiste_detectie,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Onjuiste Detectie',
           ),
         ),

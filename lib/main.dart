@@ -28,7 +28,7 @@ class MainEntry extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: Strings.mainTitle,
+      title: StringUtils.mainTitle,
       //Theming starts from phonesetting, afterwards adjustable by user
       theme: ref.watch(themeLightProvider),
       darkTheme: ref.watch(themeDarkProvider),

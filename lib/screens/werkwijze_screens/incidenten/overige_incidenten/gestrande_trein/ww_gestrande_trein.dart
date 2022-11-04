@@ -18,7 +18,7 @@ class WWGestrandeTrein extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWGestrandeTreinNavigation(),
@@ -36,7 +36,7 @@ class WWGestrandeTrein extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -55,7 +55,7 @@ class WWGestrandeTrein extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -68,7 +68,7 @@ class WWGestrandeTrein extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -89,10 +89,11 @@ class WWGestrandeTrein extends StatelessWidget {
 
 class WWGestrandeTreinNavigation extends StatelessWidget {
   const WWGestrandeTreinNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWGestrandeTrein>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWGestrandeTrein result) async {
         if (result == WhereToGoFromWWGestrandeTrein.home_screen) {
@@ -111,21 +112,21 @@ class WWGestrandeTreinNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
           value: WhereToGoFromWWGestrandeTrein.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
           value: WhereToGoFromWWGestrandeTrein.ai_gestrande_trein,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Gestrande Trein',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
           value: WhereToGoFromWWGestrandeTrein.ai_overige_incidenten,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',
           ),
         ),

@@ -39,7 +39,7 @@ class AIBijzonderhedenTrein extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIBijzonderhedenTreinNavigation(),
@@ -803,7 +803,7 @@ class AIBijzonderhedenTreinNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIBijzonderhedenTrein>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIBijzonderhedenTrein result) async {
         if (result == WhereToGoFromAIBijzonderhedenTrein.home_screen) {
@@ -829,7 +829,7 @@ class AIBijzonderhedenTreinNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
           value: WhereToGoFromAIBijzonderhedenTrein.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
@@ -837,21 +837,21 @@ class AIBijzonderhedenTreinNavigation extends StatelessWidget {
           value:
               WhereToGoFromAIBijzonderhedenTrein.ww_bijzonderheden_trein_main,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Bijzonderheden Trein',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
           value: WhereToGoFromAIBijzonderhedenTrein.ai_vervoersregeling,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Vervoersregeling',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIBijzonderhedenTrein>(
           value: WhereToGoFromAIBijzonderhedenTrein.ai_onjuiste_detectie,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Onjuiste Detectie',
           ),
         ),

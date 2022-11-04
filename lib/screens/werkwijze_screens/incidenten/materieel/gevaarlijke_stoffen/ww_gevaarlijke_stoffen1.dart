@@ -18,7 +18,7 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWGevaarlijkeStoffen1Navigation(),
@@ -69,10 +69,11 @@ class WWGevaarlijkeStoffen1 extends StatelessWidget {
 
 class WWGevaarlijkeStoffen1Navigation extends StatelessWidget {
   const WWGevaarlijkeStoffen1Navigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWGevaarlijkeStoffen1>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWGevaarlijkeStoffen1 result) async {
         if (result == WhereToGoFromWWGevaarlijkeStoffen1.home_screen) {
@@ -91,21 +92,21 @@ class WWGevaarlijkeStoffen1Navigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen1>(
           value: WhereToGoFromWWGevaarlijkeStoffen1.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen1>(
           value: WhereToGoFromWWGevaarlijkeStoffen1.ai_ruclu,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Procedure RU/CLU',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen1>(
           value: WhereToGoFromWWGevaarlijkeStoffen1.ai_gevaarlijke_stoffen,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Gevaarlijke Stoffen',
           ),
         ),

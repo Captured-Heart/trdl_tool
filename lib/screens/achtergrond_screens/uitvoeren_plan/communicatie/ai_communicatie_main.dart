@@ -24,7 +24,7 @@ class AICommunicatieMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AICommunicatieMainNavigation(),
@@ -104,7 +104,7 @@ class AICommunicatieMainNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAICommunicatieMain>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAICommunicatieMain result) async {
         if (result == WhereToGoFromAICommunicatieMain.home_screen) {
@@ -138,42 +138,42 @@ class AICommunicatieMainNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
           value: WhereToGoFromAICommunicatieMain.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
           value: WhereToGoFromAICommunicatieMain.ww_mondelinge_communicatie,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Mondelinge Communicatie',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
           value: WhereToGoFromAICommunicatieMain.ai_mondelinge_communicatie,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Mondelinge Communicatie',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
           value: WhereToGoFromAICommunicatieMain.ai_communicatiemiddelen,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Communicatiemiddelen',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
           value: WhereToGoFromAICommunicatieMain.ai_communicatiesysteem,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Communicatiesysteem',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
           value: WhereToGoFromAICommunicatieMain.ai_ketenpartners,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Ketenpartners',
           ),
         ),

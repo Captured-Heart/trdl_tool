@@ -16,7 +16,7 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIGeplandeWerkzaamhedenMainNavigation(),
@@ -101,7 +101,7 @@ class AIGeplandeWerkzaamhedenMainNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIGeplandeWerkzaamhedenMain result) async {
         if (result == WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen) {
@@ -122,7 +122,7 @@ class AIGeplandeWerkzaamhedenMainNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
           value: WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
@@ -130,7 +130,7 @@ class AIGeplandeWerkzaamhedenMainNavigation extends StatelessWidget {
           value: WhereToGoFromAIGeplandeWerkzaamhedenMain
               .ww_geplande_werkzaamheden_main,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Geplande Werkzaamheden',
           ),
         ),

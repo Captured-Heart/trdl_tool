@@ -14,7 +14,7 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWKopVanTreinVoorbijSeinNavigation(),
@@ -32,7 +32,7 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -45,7 +45,7 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -58,7 +58,7 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -78,10 +78,11 @@ class WWKopVanTreinVoorbijSein extends StatelessWidget {
 
 class WWKopVanTreinVoorbijSeinNavigation extends StatelessWidget {
   const WWKopVanTreinVoorbijSeinNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWKopVanTreinVoorbijSein>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWKopVanTreinVoorbijSein result) async {
         if (result == WhereToGoFromWWKopVanTreinVoorbijSein.home_screen) {
@@ -95,7 +96,7 @@ class WWKopVanTreinVoorbijSeinNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWKopVanTreinVoorbijSein>(
           value: WhereToGoFromWWKopVanTreinVoorbijSein.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),

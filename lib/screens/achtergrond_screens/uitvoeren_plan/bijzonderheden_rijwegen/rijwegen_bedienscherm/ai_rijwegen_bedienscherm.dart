@@ -20,7 +20,7 @@ class AIRijwegenBedienscherm extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIRijwegenBedienschermNavigation(),
@@ -173,7 +173,7 @@ class AIRijwegenBedienschermNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIRijwegenBedienscherm>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIRijwegenBedienscherm result) async {
         if (result == WhereToGoFromAIRijwegenBedienscherm.home_screen) {
@@ -196,28 +196,28 @@ class AIRijwegenBedienschermNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
           value: WhereToGoFromAIRijwegenBedienscherm.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
           value: WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_planopbouw,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Rijwegen Planopbouw',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
           value: WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_planscherm,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Rijwegen Planscherm',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIRijwegenBedienscherm>(
           value: WhereToGoFromAIRijwegenBedienscherm.ai_rijwegen_ari,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Rijwegen ARI',
           ),
         ),

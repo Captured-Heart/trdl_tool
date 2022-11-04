@@ -18,7 +18,7 @@ class AIWerkzones extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIWerkzonesNavigation(),
@@ -396,7 +396,7 @@ class AIWerkzonesNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIWerkzones>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIWerkzones result) async {
         if (result == WhereToGoFromAIWerkzones.home_screen) {
@@ -419,21 +419,21 @@ class AIWerkzonesNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIWerkzones>(
           value: WhereToGoFromAIWerkzones.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIWerkzones>(
           value: WhereToGoFromAIWerkzones.ai_geplande_werkzaamheden_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Geplande Werkzaamheden',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIWerkzones>(
           value: WhereToGoFromAIWerkzones.ai_aanvang_werkzaamheden,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Aanvang Werkzaamheden',
           ),
         ),

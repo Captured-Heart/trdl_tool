@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import '/all_imports.dart';
 
 final User? alreadySignedInUser = FirebaseAuth.instance.currentUser;
@@ -73,7 +74,7 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 24.0,
             ),
             const Text(
-              Strings.poweredBy,
+              StringUtils.poweredBy,
               style: TextStyle(
                 fontSize: 12.0,
               ),
@@ -86,7 +87,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
             const Text(
-              Strings.and,
+              StringUtils.and,
               style: TextStyle(
                 fontSize: 12.0,
               ),

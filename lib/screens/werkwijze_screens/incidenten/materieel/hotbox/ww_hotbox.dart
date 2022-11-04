@@ -18,7 +18,7 @@ class WWHotBox extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWHotboxNav(),
@@ -36,7 +36,7 @@ class WWHotBox extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -55,7 +55,7 @@ class WWHotBox extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -68,7 +68,7 @@ class WWHotBox extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -88,10 +88,11 @@ class WWHotBox extends StatelessWidget {
 
 class WWHotboxNav extends StatelessWidget {
   const WWHotboxNav({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWHotBox>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWHotBox result) async {
         if (result == WhereToGoFromWWHotBox.home_screen) {
@@ -109,21 +110,21 @@ class WWHotboxNav extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWHotBox>(
           value: WhereToGoFromWWHotBox.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWHotBox>(
           value: WhereToGoFromWWHotBox.ai_hotbox,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Hotbox',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWHotBox>(
           value: WhereToGoFromWWHotBox.ai_materieel_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Materieel',
           ),
         ),

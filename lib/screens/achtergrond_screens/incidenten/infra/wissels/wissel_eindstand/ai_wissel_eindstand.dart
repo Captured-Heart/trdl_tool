@@ -18,7 +18,7 @@ class AIWisselEindstand extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIWisselEindstand>(
-            icon: const Icon(Utils.iconInfo),
+            icon: const Icon(IconUtils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIWisselEindstand result) async {
               if (result == WhereToGoFromAIWisselEindstand.home_screen) {
@@ -32,7 +32,7 @@ class AIWisselEindstand extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIWisselEindstand>(
                 value: WhereToGoFromAIWisselEindstand.home_screen,
                 child: MenuItemContent(
-                  icon: Utils.iconHome,
+                  icon: IconUtils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -46,7 +46,7 @@ class AIWisselEindstand extends StatelessWidget {
             children: <Card>[
               /*PROCEDURE CARD*/
               Card(
-                elevation: Utils.kCardElevation,
+                elevation: CardUtils.kCardElevation,
                 child: Padding(
                   padding: Utils.kCardPadding,
                   child: Column(

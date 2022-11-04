@@ -9,7 +9,7 @@ class WWMensenDierenVoorwerpenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWMensenDierenVoorwerpenMainNavigation(),
@@ -66,10 +66,11 @@ class WWMensenDierenVoorwerpenMain extends StatelessWidget {
 
 class WWMensenDierenVoorwerpenMainNavigation extends StatelessWidget {
   const WWMensenDierenVoorwerpenMainNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<PopupNavigation>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (PopupNavigation result) async {
         if (result == PopupNavigation.home_screen) {
@@ -87,14 +88,14 @@ class WWMensenDierenVoorwerpenMainNavigation extends StatelessWidget {
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ai_mensen_dieren_voorwerpen_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Mensen, dieren en voorwerpen',
           ),
         ),

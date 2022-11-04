@@ -16,7 +16,7 @@ class WWInzettenICB extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWInzettenICBNavigation(),
@@ -33,7 +33,7 @@ class WWInzettenICB extends StatelessWidget {
                 ),
                 SizedBoxH(),
                 SubTitleText(
-                  subtitle: Utils.textCardTitleProcedure,
+                  subtitle: StringUtils.textCardTitleProcedure,
                 ),
                 SizedBoxH(),
                 BodyText(
@@ -68,7 +68,7 @@ class WWInzettenICB extends StatelessWidget {
             TextCard(
               widgetList: <Widget>[
                 SubTitleText(
-                  subtitle: Utils.textCardTitleRisico,
+                  subtitle: StringUtils.textCardTitleRisico,
                 ),
                 SizedBoxH(),
                 BodyText(
@@ -81,7 +81,7 @@ class WWInzettenICB extends StatelessWidget {
             TextCard(
               widgetList: <Widget>[
                 SubTitleText(
-                  subtitle: Utils.textCardTitleContext,
+                  subtitle: StringUtils.textCardTitleContext,
                 ),
                 SizedBoxH(),
                 BodyText(
@@ -100,10 +100,11 @@ class WWInzettenICB extends StatelessWidget {
 
 class WWInzettenICBNavigation extends StatelessWidget {
   const WWInzettenICBNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWInzettenICB>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWInzettenICB result) async {
         if (result == WhereToGoFromWWInzettenICB.home_screen) {
@@ -120,14 +121,14 @@ class WWInzettenICBNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWInzettenICB>(
           value: WhereToGoFromWWInzettenICB.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWInzettenICB>(
           value: WhereToGoFromWWInzettenICB.ai_inzetten_railvoertuig,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Inzetten ICB',
           ),
         ),

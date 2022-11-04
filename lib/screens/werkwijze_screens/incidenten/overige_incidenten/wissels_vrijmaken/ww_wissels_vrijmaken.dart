@@ -16,7 +16,7 @@ class WWWisselsVrijmaken extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWWisselsVrijmakenNavigation(),
@@ -34,7 +34,7 @@ class WWWisselsVrijmaken extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -52,7 +52,7 @@ class WWWisselsVrijmaken extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -65,7 +65,7 @@ class WWWisselsVrijmaken extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -85,10 +85,11 @@ class WWWisselsVrijmaken extends StatelessWidget {
 
 class WWWisselsVrijmakenNavigation extends StatelessWidget {
   const WWWisselsVrijmakenNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWWisselsVrijmaken>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWWisselsVrijmaken result) async {
         if (result == WhereToGoFromWWWisselsVrijmaken.home_screen) {
@@ -104,14 +105,14 @@ class WWWisselsVrijmakenNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWWisselsVrijmaken>(
           value: WhereToGoFromWWWisselsVrijmaken.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWWisselsVrijmaken>(
           value: WhereToGoFromWWWisselsVrijmaken.ai_stroomstoring,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Stroomstoring',
           ),
         ),

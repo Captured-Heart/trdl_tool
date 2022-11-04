@@ -18,7 +18,7 @@ class AIUitvoerenPlan extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIUitvoerenPlanNavigation(),
@@ -292,7 +292,7 @@ class AIUitvoerenPlanNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIUitvoerenPlan>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIUitvoerenPlan result) async {
         if (result == WhereToGoFromAIUitvoerenPlan.home_screen) {
@@ -311,21 +311,21 @@ class AIUitvoerenPlanNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
           value: WhereToGoFromAIUitvoerenPlan.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
           value: WhereToGoFromAIUitvoerenPlan.ai_aanpassen_plan,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Aanpassen Plan',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
           value: WhereToGoFromAIUitvoerenPlan.ai_bovenleiding_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Bovenleiding',
           ),
         ),

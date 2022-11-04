@@ -20,7 +20,7 @@ class WWToelatenWerktreinen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWToelatenWerktreinenNavigation(),
@@ -38,7 +38,7 @@ class WWToelatenWerktreinen extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -51,7 +51,7 @@ class WWToelatenWerktreinen extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -64,7 +64,7 @@ class WWToelatenWerktreinen extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -84,10 +84,11 @@ class WWToelatenWerktreinen extends StatelessWidget {
 
 class WWToelatenWerktreinenNavigation extends StatelessWidget {
   const WWToelatenWerktreinenNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWToelatenWerktreinen>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWToelatenWerktreinen result) async {
         if (result == WhereToGoFromWWToelatenWerktreinen.home_screen) {
@@ -116,7 +117,7 @@ class WWToelatenWerktreinenNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
           value: WhereToGoFromWWToelatenWerktreinen.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
@@ -124,14 +125,14 @@ class WWToelatenWerktreinenNavigation extends StatelessWidget {
           value:
               WhereToGoFromWWToelatenWerktreinen.ww_geplande_werkzaamheden_main,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Geplande Werkzaamheden',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
           value: WhereToGoFromWWToelatenWerktreinen.ai_toelaten_werktreinen,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Toelaten Werktreinen',
           ),
         ),
@@ -139,7 +140,7 @@ class WWToelatenWerktreinenNavigation extends StatelessWidget {
           value:
               WhereToGoFromWWToelatenWerktreinen.ai_geplande_werkzaamheden_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Geplande Werkzaamheden',
           ),
         ),

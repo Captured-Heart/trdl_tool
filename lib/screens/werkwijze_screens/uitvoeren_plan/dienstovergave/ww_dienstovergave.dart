@@ -16,7 +16,7 @@ class WWDienstovergave extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWDienstovergaveNavigation(),
@@ -34,7 +34,7 @@ class WWDienstovergave extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +47,7 @@ class WWDienstovergave extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -60,7 +60,7 @@ class WWDienstovergave extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -86,7 +86,7 @@ class WWDienstovergaveNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWDienstovergave>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWDienstovergave result) async {
         if (result == WhereToGoFromWWDienstovergave.home_screen) {
@@ -102,14 +102,14 @@ class WWDienstovergaveNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWDienstovergave>(
           value: WhereToGoFromWWDienstovergave.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconInfo,
+            icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWDienstovergave>(
           value: WhereToGoFromWWDienstovergave.ai_dienstovergave,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Dienstovergave',
           ),
         ),

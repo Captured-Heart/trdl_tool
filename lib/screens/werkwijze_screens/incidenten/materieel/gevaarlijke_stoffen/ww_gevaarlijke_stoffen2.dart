@@ -16,7 +16,7 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWGevaarlijkeStoffen2Navigation(),
@@ -34,7 +34,7 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -75,7 +75,7 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -88,7 +88,7 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -108,10 +108,11 @@ class WWGevaarlijkeStoffen2 extends StatelessWidget {
 
 class WWGevaarlijkeStoffen2Navigation extends StatelessWidget {
   const WWGevaarlijkeStoffen2Navigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWGevaarlijkeStoffen2>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWGevaarlijkeStoffen2 result) async {
         if (result == WhereToGoFromWWGevaarlijkeStoffen2.home_screen) {
@@ -128,14 +129,14 @@ class WWGevaarlijkeStoffen2Navigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen2>(
           value: WhereToGoFromWWGevaarlijkeStoffen2.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWGevaarlijkeStoffen2>(
           value: WhereToGoFromWWGevaarlijkeStoffen2.ai_gevaarlijke_stoffen,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Gevaarlijke Stoffen',
           ),
         ),

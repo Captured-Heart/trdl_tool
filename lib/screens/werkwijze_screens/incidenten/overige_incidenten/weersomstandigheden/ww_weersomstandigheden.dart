@@ -18,7 +18,7 @@ class WWWeersomstandigheden extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWWeersomstandighedenNavigation(),
@@ -36,7 +36,7 @@ class WWWeersomstandigheden extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -49,7 +49,7 @@ class WWWeersomstandigheden extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -62,7 +62,7 @@ class WWWeersomstandigheden extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -82,10 +82,11 @@ class WWWeersomstandigheden extends StatelessWidget {
 
 class WWWeersomstandighedenNavigation extends StatelessWidget {
   const WWWeersomstandighedenNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWWeersomstandigheden>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWWeersomstandigheden result) async {
         if (result == WhereToGoFromWWWeersomstandigheden.home_screen) {
@@ -105,21 +106,21 @@ class WWWeersomstandighedenNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
           value: WhereToGoFromWWWeersomstandigheden.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
           value: WhereToGoFromWWWeersomstandigheden.ai_weersomstandigheden,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Weersomstandigheden',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
           value: WhereToGoFromWWWeersomstandigheden.ai_overige_incidenten,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',
           ),
         ),

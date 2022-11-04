@@ -16,7 +16,7 @@ class AINcbg extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AINcbgNavigation(),
@@ -685,7 +685,7 @@ class AINcbgNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAINcbg>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAINcbg result) async {
         if (result == WhereToGoFromAINcbg.home_screen) {
@@ -701,14 +701,14 @@ class AINcbgNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAINcbg>(
           value: WhereToGoFromAINcbg.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAINcbg>(
           value: WhereToGoFromAINcbg.ww_ncbg,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW NCBG',
           ),
         ),

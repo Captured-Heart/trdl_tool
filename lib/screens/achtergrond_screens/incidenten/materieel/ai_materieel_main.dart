@@ -20,7 +20,7 @@ class AIMaterieelMain extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIMaterieelMain>(
-            icon: const Icon(Utils.iconInfo),
+            icon: const Icon(IconUtils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIMaterieelMain result) async {
               if (result == WhereToGoFromAIMaterieelMain.home_screen) {
@@ -37,14 +37,14 @@ class AIMaterieelMain extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIMaterieelMain>(
                 value: WhereToGoFromAIMaterieelMain.home_screen,
                 child: MenuItemContent(
-                  icon: Utils.iconHome,
+                  icon: IconUtils.iconHome,
                   text: 'Home',
                 ),
               ),
               const PopupMenuItem<WhereToGoFromAIMaterieelMain>(
                 value: WhereToGoFromAIMaterieelMain.ww_materieel_main,
                 child: MenuItemContent(
-                  icon: Utils.iconWW,
+                  icon: IconUtils.iconWW,
                   text: 'WW Materieel',
                 ),
               ),
@@ -58,7 +58,7 @@ class AIMaterieelMain extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(
@@ -78,7 +78,7 @@ class AIMaterieelMain extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(

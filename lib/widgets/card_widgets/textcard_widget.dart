@@ -11,9 +11,9 @@ class TextCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: Utils.kCardElevation,
+      elevation: CardCardUtils.kCardElevation,
       child: Padding(
-        padding: Utils.kCardPadding,
+        padding: CardUtils.kCardPadding,
         child: Column(
           children: widgetList,
         ),

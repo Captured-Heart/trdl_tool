@@ -18,7 +18,7 @@ class AIGevaarlijkeStoffenMilieu extends StatelessWidget {
         ),
         actions: <Widget>[
           PopupMenuButton<WhereToGoFromAIGevaarlijkeStoffenMilieu>(
-            icon: const Icon(Utils.iconInfo),
+            icon: const Icon(IconUtils.iconInfo),
             tooltip: 'Meer informatie',
             onSelected: (WhereToGoFromAIGevaarlijkeStoffenMilieu result) async {
               if (result ==
@@ -33,7 +33,7 @@ class AIGevaarlijkeStoffenMilieu extends StatelessWidget {
               const PopupMenuItem<WhereToGoFromAIGevaarlijkeStoffenMilieu>(
                 value: WhereToGoFromAIGevaarlijkeStoffenMilieu.home_screen,
                 child: MenuItemContent(
-                  icon: Utils.iconHome,
+                  icon: IconUtils.iconHome,
                   text: 'Home',
                 ),
               ),
@@ -46,7 +46,7 @@ class AIGevaarlijkeStoffenMilieu extends StatelessWidget {
           children: <Card>[
             /*PROCEDURE CARD*/
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(
@@ -61,7 +61,7 @@ class AIGevaarlijkeStoffenMilieu extends StatelessWidget {
             ),
             /*NAVIGATION CARD*/
             Card(
-              elevation: Utils.kCardElevation,
+              elevation: CardUtils.kCardElevation,
               child: Padding(
                 padding: Utils.kCardPadding,
                 child: Column(

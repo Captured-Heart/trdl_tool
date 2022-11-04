@@ -16,7 +16,7 @@ class WWOverigeIncidentenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWOverigeIncidentenMainNavigation(),
@@ -102,10 +102,11 @@ class WWOverigeIncidentenMain extends StatelessWidget {
 
 class WWOverigeIncidentenMainNavigation extends StatelessWidget {
   const WWOverigeIncidentenMainNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWOverigeIncidentenMain>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWOverigeIncidentenMain result) async {
         if (result == WhereToGoFromWWOverigeIncidentenMain.home_screen) {
@@ -122,14 +123,14 @@ class WWOverigeIncidentenMainNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWOverigeIncidentenMain>(
           value: WhereToGoFromWWOverigeIncidentenMain.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWOverigeIncidentenMain>(
           value: WhereToGoFromWWOverigeIncidentenMain.ai_overige_incidenten,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',
           ),
         ),

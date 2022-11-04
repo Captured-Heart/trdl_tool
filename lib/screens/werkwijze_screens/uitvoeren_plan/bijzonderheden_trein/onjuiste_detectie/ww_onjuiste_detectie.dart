@@ -16,7 +16,7 @@ class WWOnjuisteDetectie extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWOnjuisteDetectieNavigation(),
@@ -34,7 +34,7 @@ class WWOnjuisteDetectie extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -53,7 +53,7 @@ class WWOnjuisteDetectie extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -66,7 +66,7 @@ class WWOnjuisteDetectie extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -86,10 +86,11 @@ class WWOnjuisteDetectie extends StatelessWidget {
 
 class WWOnjuisteDetectieNavigation extends StatelessWidget {
   const WWOnjuisteDetectieNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWOnjuisteDetectie>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWOnjuisteDetectie result) async {
         if (result == WhereToGoFromWWOnjuisteDetectie.home_screen) {
@@ -106,14 +107,14 @@ class WWOnjuisteDetectieNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWOnjuisteDetectie>(
           value: WhereToGoFromWWOnjuisteDetectie.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWOnjuisteDetectie>(
           value: WhereToGoFromWWOnjuisteDetectie.ai_onjuiste_detectie,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Onjuiste Detectie',
           ),
         ),

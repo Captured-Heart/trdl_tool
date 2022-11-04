@@ -24,7 +24,7 @@ class AIRijwegenTrots extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIRijwegenTrotsNavigation(),
@@ -242,7 +242,7 @@ class AIRijwegenTrotsNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIRijwegenTrots>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIRijwegenTrots result) async {
         if (result == WhereToGoFromAIRijwegenTrots.home_screen) {
@@ -273,42 +273,42 @@ class AIRijwegenTrotsNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
           value: WhereToGoFromAIRijwegenTrots.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
           value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_ari,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Rijwegen ARI',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
           value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planscherm,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Rijwegen Planscherm',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
           value: WhereToGoFromAIRijwegenTrots.ai_bijzonderheden_rijwegen_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Rijwegen',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
           value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planopbouw,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Rijwegen Planopbouw',
           ),
         ),
         const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
           value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_bedienscherm,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Rijwegen Bedienscherm',
           ),
         ),

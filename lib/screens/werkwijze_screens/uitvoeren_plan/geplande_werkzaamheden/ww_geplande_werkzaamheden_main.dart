@@ -86,7 +86,7 @@ class WWGeplandeWerkzaamhedenMainNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWGeplandeWerkzaamhedenMain result) async {
         if (result == WhereToGoFromWWGeplandeWerkzaamhedenMain.home_screen) {
@@ -107,7 +107,7 @@ class WWGeplandeWerkzaamhedenMainNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
           value: WhereToGoFromWWGeplandeWerkzaamhedenMain.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconInfo,
+            icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
@@ -115,7 +115,7 @@ class WWGeplandeWerkzaamhedenMainNavigation extends StatelessWidget {
           value: WhereToGoFromWWGeplandeWerkzaamhedenMain
               .ai_geplande_werkzaamheden_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Geplande Werkzaamheden',
           ),
         ),

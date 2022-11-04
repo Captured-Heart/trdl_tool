@@ -16,7 +16,7 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleAI,
+          title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
           AIBijzonderhedenTreinMainNavigation(),
@@ -90,7 +90,7 @@ class AIBijzonderhedenTreinMainNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromAIBijzonderhedenTreinMain>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromAIBijzonderhedenTreinMain result) async {
         if (result == WhereToGoFromAIBijzonderhedenTreinMain.home_screen) {
@@ -111,7 +111,7 @@ class AIBijzonderhedenTreinMainNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromAIBijzonderhedenTreinMain>(
           value: WhereToGoFromAIBijzonderhedenTreinMain.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
@@ -119,7 +119,7 @@ class AIBijzonderhedenTreinMainNavigation extends StatelessWidget {
           value: WhereToGoFromAIBijzonderhedenTreinMain
               .ww_bijzonderheden_trein_main,
           child: MenuItemContent(
-            icon: Utils.iconWW,
+            icon: IconUtils.iconWW,
             text: 'WW Bijzonderheden Trein',
           ),
         ),

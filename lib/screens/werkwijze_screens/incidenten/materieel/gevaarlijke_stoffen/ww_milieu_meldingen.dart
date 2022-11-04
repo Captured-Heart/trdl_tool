@@ -16,7 +16,7 @@ class WWMilieuMeldingen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWMilieuMeldingenNavigation(),
@@ -34,7 +34,7 @@ class WWMilieuMeldingen extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +47,7 @@ class WWMilieuMeldingen extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -59,7 +59,7 @@ class WWMilieuMeldingen extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -79,10 +79,11 @@ class WWMilieuMeldingen extends StatelessWidget {
 
 class WWMilieuMeldingenNavigation extends StatelessWidget {
   const WWMilieuMeldingenNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWMilieuMeldingen>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWMilieuMeldingen result) async {
         if (result == WhereToGoFromWWMilieuMeldingen.home_screen) {
@@ -99,14 +100,14 @@ class WWMilieuMeldingenNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWMilieuMeldingen>(
           value: WhereToGoFromWWMilieuMeldingen.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWMilieuMeldingen>(
           value: WhereToGoFromWWMilieuMeldingen.ai_gevaarlijke_stoffen,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Gevaarlijke Stoffen',
           ),
         ),

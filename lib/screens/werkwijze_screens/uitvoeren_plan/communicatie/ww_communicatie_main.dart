@@ -16,7 +16,7 @@ class WWCommunicatieMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWCommunicatieNavigation(),
@@ -69,7 +69,7 @@ class WWCommunicatieNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWCommunicatieMain>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWCommunicatieMain result) async {
         if (result == WhereToGoFromWWCommunicatieMain.home_screen) {
@@ -86,14 +86,14 @@ class WWCommunicatieNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
           value: WhereToGoFromWWCommunicatieMain.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconInfo,
+            icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
           value: WhereToGoFromWWCommunicatieMain.ai_communicatie_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Communicatie',
           ),
         ),

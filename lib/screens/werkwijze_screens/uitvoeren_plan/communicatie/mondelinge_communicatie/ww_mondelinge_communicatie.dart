@@ -16,7 +16,7 @@ class WWMondelingeCommunicatie extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWMondelingeCommunicatieNavigation(),
@@ -34,7 +34,7 @@ class WWMondelingeCommunicatie extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -47,7 +47,7 @@ class WWMondelingeCommunicatie extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -60,7 +60,7 @@ class WWMondelingeCommunicatie extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -86,7 +86,7 @@ class WWMondelingeCommunicatieNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWMondelingeCommunicatie>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWMondelingeCommunicatie result) async {
         if (result == WhereToGoFromWWMondelingeCommunicatie.home_screen) {
@@ -106,7 +106,7 @@ class WWMondelingeCommunicatieNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWMondelingeCommunicatie>(
           value: WhereToGoFromWWMondelingeCommunicatie.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconInfo,
+            icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
@@ -114,7 +114,7 @@ class WWMondelingeCommunicatieNavigation extends StatelessWidget {
           value:
               WhereToGoFromWWMondelingeCommunicatie.ai_mondelinge_communicatie,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Mondelinge Communicatie',
           ),
         ),

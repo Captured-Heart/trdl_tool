@@ -22,7 +22,7 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWAfhandelenSysteemstoringenNavigation(),
@@ -40,7 +40,7 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   SubTitleText(
-                    subtitle: Utils.textCardTitleProcedure,
+                    subtitle: StringUtils.textCardTitleProcedure,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -59,7 +59,7 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleRisico,
+                    subtitle: StringUtils.textCardTitleRisico,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -72,7 +72,7 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
               TextCard(
                 widgetList: <Widget>[
                   SubTitleText(
-                    subtitle: Utils.textCardTitleContext,
+                    subtitle: StringUtils.textCardTitleContext,
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -92,10 +92,11 @@ class WWAfhandelenSysteemstoringen extends StatelessWidget {
 
 class WWAfhandelenSysteemstoringenNavigation extends StatelessWidget {
   const WWAfhandelenSysteemstoringenNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWAfhandelenSysteemstoringen>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWAfhandelenSysteemstoringen result) async {
         if (result == WhereToGoFromWWAfhandelenSysteemstoringen.home_screen) {
@@ -121,21 +122,21 @@ class WWAfhandelenSysteemstoringenNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
           value: WhereToGoFromWWAfhandelenSysteemstoringen.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
           value: WhereToGoFromWWAfhandelenSysteemstoringen.ai_systeemstoringen,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Systeemstoringen',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
           value: WhereToGoFromWWAfhandelenSysteemstoringen.ai_systemen,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Systemen',
           ),
         ),
@@ -143,7 +144,7 @@ class WWAfhandelenSysteemstoringenNavigation extends StatelessWidget {
           value:
               WhereToGoFromWWAfhandelenSysteemstoringen.ai_systeemstoring_gsmr,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Systeemstoring GSM-R',
           ),
         ),
@@ -151,7 +152,7 @@ class WWAfhandelenSysteemstoringenNavigation extends StatelessWidget {
           value:
               WhereToGoFromWWAfhandelenSysteemstoringen.ai_overige_incidenten,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',
           ),
         ),

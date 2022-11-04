@@ -21,7 +21,7 @@ class AIKunstwerkenMain extends StatelessWidget {
             children: <Card>[
               /*PROCEDURE CARD*/
               Card(
-                elevation: Utils.kCardElevation,
+                elevation: CardUtils.kCardElevation,
                 child: Padding(
                   padding: Utils.kCardPadding,
                   child: Column(
@@ -41,7 +41,7 @@ class AIKunstwerkenMain extends StatelessWidget {
               ),
               /*NAVIGATION CARD*/
               Card(
-                elevation: Utils.kCardElevation,
+                elevation: CardUtils.kCardElevation,
                 child: Padding(
                   padding: Utils.kCardPadding,
                   child: Column(

@@ -16,7 +16,7 @@ class WWMaterieelMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWMaterieelMainNavigator(),
@@ -95,10 +95,11 @@ class WWMaterieelMain extends StatelessWidget {
 
 class WWMaterieelMainNavigator extends StatelessWidget {
   const WWMaterieelMainNavigator({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWMaterieelMain>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWMaterieelMain result) async {
         if (result == WhereToGoFromWWMaterieelMain.home_screen) {
@@ -114,14 +115,14 @@ class WWMaterieelMainNavigator extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWMaterieelMain>(
           value: WhereToGoFromWWMaterieelMain.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
         const PopupMenuItem<WhereToGoFromWWMaterieelMain>(
           value: WhereToGoFromWWMaterieelMain.ai_materieel_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Materieel',
           ),
         ),

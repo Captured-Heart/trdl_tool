@@ -16,7 +16,7 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: Utils.appBarTitleWW,
+          title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
           WWBijzonderhedenRijwegenMainNavigation(),
@@ -77,10 +77,11 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
 
 class WWBijzonderhedenRijwegenMainNavigation extends StatelessWidget {
   const WWBijzonderhedenRijwegenMainNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<WhereToGoFromWWBijzonderhedenRijwegenMain>(
-      icon: const Icon(Utils.iconInfo),
+      icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
       onSelected: (WhereToGoFromWWBijzonderhedenRijwegenMain result) async {
         if (result == WhereToGoFromWWBijzonderhedenRijwegenMain.home_screen) {
@@ -101,7 +102,7 @@ class WWBijzonderhedenRijwegenMainNavigation extends StatelessWidget {
         const PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
           value: WhereToGoFromWWBijzonderhedenRijwegenMain.home_screen,
           child: MenuItemContent(
-            icon: Utils.iconHome,
+            icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
@@ -109,7 +110,7 @@ class WWBijzonderhedenRijwegenMainNavigation extends StatelessWidget {
           value: WhereToGoFromWWBijzonderhedenRijwegenMain
               .ai_bijzonderheden_rijwegen_main,
           child: MenuItemContent(
-            icon: Utils.iconAI,
+            icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Rijwegen',
           ),
         ),

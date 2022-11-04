@@ -70,8 +70,8 @@ class _LoginState extends State<Login> {
                                 keyboardType: TextInputType.emailAddress,
                                 textAlign: TextAlign.center,
                                 decoration: const InputDecoration(
-                                  labelText: Strings.loginEmail,
-                                  hintText: Strings.loginEmailHint,
+                                  labelText: StringUtils.loginEmail,
+                                  hintText: StringUtils.loginEmailHint,
                                 ),
                                 autocorrect: false,
                                 enableSuggestions: false,
@@ -89,8 +89,8 @@ class _LoginState extends State<Login> {
                                 textAlign: TextAlign.center,
                                 obscureText: true,
                                 decoration: const InputDecoration(
-                                  labelText: Strings.loginPassword,
-                                  hintText: Strings.loginPasswordHint,
+                                  labelText: StringUtils.loginPassword,
+                                  hintText: StringUtils.loginPasswordHint,
                                 ),
                                 autocorrect: false,
                                 enableSuggestions: false,
@@ -164,7 +164,7 @@ class _LoginState extends State<Login> {
                       );
                     },
                     child: const Text(
-                      Strings.loginNogGeenAccount,
+                      StringUtils.loginNogGeenAccount,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -184,7 +184,7 @@ class _LoginState extends State<Login> {
                       );
                     },
                     child: const Text(
-                      Strings.loginWachtwoordVergeten,
+                      StringUtils.loginWachtwoordVergeten,
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
