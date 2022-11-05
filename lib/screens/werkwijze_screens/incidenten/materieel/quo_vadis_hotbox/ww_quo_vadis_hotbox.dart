@@ -9,8 +9,8 @@ enum WhereToGoFromWWHotBox {
   ai_materieel_main,
 }
 
-class WWHotBox extends StatelessWidget {
-  const WWHotBox({Key? key}) : super(key: key);
+class WWQuoVadisHotbox extends StatelessWidget {
+  const WWQuoVadisHotbox({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

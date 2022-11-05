@@ -140,7 +140,7 @@ export 'package:trdl_tool/screens/werkwijze_screens/incidenten/materieel/atb_vei
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/materieel/gevaarlijke_stoffen/ww_gevaarlijke_stoffen1.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/materieel/gevaarlijke_stoffen/ww_gevaarlijke_stoffen2.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/materieel/gevaarlijke_stoffen/ww_milieu_meldingen.dart';
-export 'package:trdl_tool/screens/werkwijze_screens/incidenten/materieel/hotbox/ww_hotbox.dart';
+export 'package:trdl_tool/screens/werkwijze_screens/incidenten/materieel/quo_vadis_hotbox/ww_quo_vadis_hotbox.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/materieel/vaste_rem/ww_vaste_rem.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/materieel/ww_materieel_main.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/mensen_dieren_voorwerpen/ww_derden_dieren.dart';

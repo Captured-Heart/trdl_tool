@@ -101,7 +101,7 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   'ww_gevaarlijke_stoffen2': (BuildContext context) =>
       const WWGevaarlijkeStoffen2(),
   'ww_milieumeldingen': (BuildContext context) => const WWMilieuMeldingen(),
-  'ww_hotbox': (BuildContext context) => const WWHotBox(),
+  'ww_quo_vadis_hotbox': (BuildContext context) => const WWQuoVadisHotbox(),
   'ww_vaste_rem': (BuildContext context) => const WWVasteRem(),
   'ww_overige_incidenten_main': (BuildContext context) =>
       const WWOverigeIncidentenMain(),
