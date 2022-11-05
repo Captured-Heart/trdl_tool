@@ -58,6 +58,7 @@ enum PopupNavigation {
   ww_incidenten_main,
   ww_infrastructuur_main,
   ww_kunstwerken_main,
+  ww_materieel_main,
   ww_mensen_dieren_voorwerpen_main,
   ww_ongepland_werk_main,
   ww_ongepland_werk_infra,
