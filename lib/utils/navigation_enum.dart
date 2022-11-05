@@ -37,6 +37,7 @@ enum PopupNavigation {
   ai_overige_incidenten,
   ai_overwegen_main,
   ai_overwegen_storing,
+  ai_quo_vadis_hotbox,
   ai_roestvorming,
   ai_sectie_main,
   ai_seinen_basis1,
@@ -66,5 +67,6 @@ enum PopupNavigation {
   ww_orderacceptatie,
   ww_reset_assenteller,
   ww_stappenplan_versperringen,
+  ww_vaste_rem,
   ww_vertragingen,
 }
