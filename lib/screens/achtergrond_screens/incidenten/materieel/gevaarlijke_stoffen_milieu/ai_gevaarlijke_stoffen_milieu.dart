@@ -1,10 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIGevaarlijkeStoffenMilieu {
-  // ignore: constant_identifier_names
-  home_screen,
-}
-
 class AIGevaarlijkeStoffenMilieu extends StatelessWidget {
   const AIGevaarlijkeStoffenMilieu({Key? key}) : super(key: key);
 
@@ -14,68 +9,64 @@ class AIGevaarlijkeStoffenMilieu extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: StringUtils.appBarTitleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIGevaarlijkeStoffenMilieu>(
-            icon: const Icon(IconUtils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIGevaarlijkeStoffenMilieu result) async {
-              if (result ==
-                  WhereToGoFromAIGevaarlijkeStoffenMilieu.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIGevaarlijkeStoffenMilieu>>[
-              const PopupMenuItem<WhereToGoFromAIGevaarlijkeStoffenMilieu>(
-                value: WhereToGoFromAIGevaarlijkeStoffenMilieu.home_screen,
-                child: MenuItemContent(
-                  icon: IconUtils.iconHome,
-                  text: 'Home',
-                ),
+        actions: const <Widget>[
+          AIGevaarlijkeStoffenMilieuNavigation(),
+          HomeButton(),
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: const <TextCard>[
+              TextCard(
+                widgetList: <Widget>[
+                  TitleText(
+                    title: 'Gevaarlijke Stoffen & Milieu',
+                  ),
+                  SizedBoxH(),
+                ],
+              ),
+              TextCard(
+                widgetList: <TitleText>[
+                  TitleText(
+                    title: 'Work In Progress...',
+                  ),
+                ],
               ),
             ],
           ),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Card>[
-            /*PROCEDURE CARD*/
-            Card(
-              elevation: CardUtils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    TitleText(
-                      title: 'Gevaarlijke Stoffen & Milieu',
-                    ),
-                    SizedBoxH(),
-                  ],
-                ),
-              ),
-            ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: CardUtils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <TitleText>[
-                    TitleText(
-                      title: 'Work In Progress...',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
         ),
       ),
+    );
+  }
+}
+
+class AIGevaarlijkeStoffenMilieuNavigation extends StatelessWidget {
+  const AIGevaarlijkeStoffenMilieuNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<PopupNavigation>(
+      icon: const Icon(IconUtils.iconInfo),
+      tooltip: 'Meer informatie',
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
+          await Navigator.pushNamed(context, 'home_screen');
+        } else {
+          Navigator.pop(context);
+        }
+      },
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
+          child: MenuItemContent(
+            icon: IconUtils.iconHome,
+            text: 'Home',
+          ),
+        ),
+      ],
     );
   }
 }

@@ -35,6 +35,7 @@ enum PopupNavigation {
   ai_onregelmatigheden_baan,
   ai_orderacceptatie,
   ai_overige_incidenten,
+  ai_overige_infra_elementen,
   ai_overwegen_main,
   ai_overwegen_storing,
   ai_quo_vadis_hotbox,
@@ -71,4 +72,5 @@ enum PopupNavigation {
   ww_stappenplan_versperringen,
   ww_vaste_rem,
   ww_vertragingen,
+  ww_wissels_main,
 }

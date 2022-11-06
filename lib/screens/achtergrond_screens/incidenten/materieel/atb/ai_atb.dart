@@ -1,10 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIATB {
-  // ignore: constant_identifier_names
-  home_screen,
-}
-
 class AIATB extends StatelessWidget {
   const AIATB({Key? key}) : super(key: key);
 
@@ -14,67 +9,64 @@ class AIATB extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Achtergrondinformatie',
+          title: StringUtils.appBarTitleAI,
         ),
-        actions: <Widget>[
-          PopupMenuButton<WhereToGoFromAIATB>(
-            icon: const Icon(IconUtils.iconInfo),
-            tooltip: 'Meer informatie',
-            onSelected: (WhereToGoFromAIATB result) async {
-              if (result == WhereToGoFromAIATB.home_screen) {
-                await Navigator.pushNamed(context, 'home_screen');
-              } else {
-                Navigator.pop(context);
-              }
-            },
-            itemBuilder: (BuildContext context) =>
-                <PopupMenuEntry<WhereToGoFromAIATB>>[
-              const PopupMenuItem<WhereToGoFromAIATB>(
-                value: WhereToGoFromAIATB.home_screen,
-                child: MenuItemContent(
-                  icon: IconUtils.iconHome,
-                  text: 'Home',
-                ),
+        actions: const <Widget>[
+          AIAtbNavigation(),
+          HomeButton(),
+        ],
+      ),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Column(
+            children: const <TextCard>[
+              TextCard(
+                widgetList: <Widget>[
+                  TitleText(
+                    title: 'Automatische TreinBeïnvloeding (ATB)',
+                  ),
+                  SizedBoxH(),
+                ],
+              ),
+              TextCard(
+                widgetList: <TitleText>[
+                  TitleText(
+                    title: 'Work In Progress...',
+                  ),
+                ],
               ),
             ],
           ),
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: <Card>[
-            /*PROCEDURE CARD*/
-            Card(
-              elevation: CardUtils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <Widget>[
-                    TitleText(
-                      title: 'Automatische TreinBeïnvloeding (ATB)',
-                    ),
-                    SizedBoxH(),
-                  ],
-                ),
-              ),
-            ),
-            /*NAVIGATION CARD*/
-            Card(
-              elevation: CardUtils.kCardElevation,
-              child: Padding(
-                padding: Utils.kCardPadding,
-                child: Column(
-                  children: const <TitleText>[
-                    TitleText(
-                      title: 'Work In Progress...',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
         ),
       ),
+    );
+  }
+}
+
+class AIAtbNavigation extends StatelessWidget {
+  const AIAtbNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<PopupNavigation>(
+      icon: const Icon(IconUtils.iconInfo),
+      tooltip: 'Meer informatie',
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
+          await Navigator.pushNamed(context, 'home_screen');
+        } else {
+          Navigator.pop(context);
+        }
+      },
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
+          child: MenuItemContent(
+            icon: IconUtils.iconHome,
+            text: 'Home',
+          ),
+        ),
+      ],
     );
   }
 }
