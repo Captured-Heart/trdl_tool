@@ -66,7 +66,7 @@ class AIKunstwerkenBasis extends StatelessWidget {
                 ],
               ),
               TextCard(
-                widgetList: [
+                widgetList: <Widget>[
                   SubTitleText(
                     subtitle: 'Viaduct',
                   ),
@@ -83,7 +83,7 @@ class AIKunstwerkenBasis extends StatelessWidget {
                 ],
               ),
               TextCard(
-                widgetList: [
+                widgetList: <Widget>[
                   SubTitleText(
                     subtitle: 'Fly-over',
                   ),
@@ -91,7 +91,7 @@ class AIKunstwerkenBasis extends StatelessWidget {
                   BodyText(
                     indents: 0,
                     text:
-                        'Een fly-over is een ongelijkvoerse kruising; een kunstwerk dat over andere sporen gaat. Als een kunstwerk onder andere sporen doorgaat, spreekt men van een \'dive-under\'. Een mooi voorbeeld van beide is te vinden rond Rotterdam Lombardijen. Van de beide HSL-sporen, die daar overgaan op bestaand spoor is er een spoor als \'fly-over\' uitgevoerd. Het andere spoor is als \'dive-under\' gebouwd.\n\nHet spoorviaduct, ter hoogte van de aftakking van het spoor naar Woerden - Gouda, maakt een vrije kruising van sporen mogelijk voor de spoorlijnen Harmelen - Woerden en Amsterdam - Utrecht. Dankzij de vrije kruising hoeven treinen straks niet meer op elkaar te wachten en neemt de kans op vertragingen af.',
+                        "Een fly-over is een ongelijkvoerse kruising; een kunstwerk dat over andere sporen gaat. Als een kunstwerk onder andere sporen doorgaat, spreekt men van een 'dive-under'. Een mooi voorbeeld van beide is te vinden rond Rotterdam Lombardijen. Van de beide HSL-sporen, die daar overgaan op bestaand spoor is er een spoor als 'fly-over' uitgevoerd. Het andere spoor is als 'dive-under' gebouwd.\n\nHet spoorviaduct, ter hoogte van de aftakking van het spoor naar Woerden - Gouda, maakt een vrije kruising van sporen mogelijk voor de spoorlijnen Harmelen - Woerden en Amsterdam - Utrecht. Dankzij de vrije kruising hoeven treinen straks niet meer op elkaar te wachten en neemt de kans op vertragingen af.",
                   ),
                   InsertImage(
                     image:
@@ -104,7 +104,7 @@ class AIKunstwerkenBasis extends StatelessWidget {
                 ],
               ),
               TextCard(
-                widgetList: [
+                widgetList: <Widget>[
                   SubTitleText(
                     subtitle: 'Tunnel',
                   ),

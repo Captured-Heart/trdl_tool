@@ -9,85 +9,72 @@ class AISpoorMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Spoor',
+          title: StringUtils.appBarTitleAI,
         ),
-        actions: const <HomeButton>[
+        actions: const <Widget>[
+          AISpoorMainNavigation(),
           HomeButton(),
         ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: <Card>[
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: CardUtils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
-                      TitleText(
-                        title: 'Spoor',
-                      ),
-                      SizedBoxH(),
-                      InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/spoor_achtergrond_main.jpg',
-                      ),
-                      SizedBoxH(),
-                    ],
+            children: const <TextCard>[
+              TextCard(
+                widgetList: <Widget>[
+                  TitleText(
+                    title: 'Spoor',
                   ),
-                ),
+                ],
               ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: CardUtils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: <Widget>[
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const <NavButton>[
-                          NavButton(
-                            buttontext: 'Werkwijze - Spoor',
-                            destination: 'spoor',
-                          ),
-                          //   SizedBoxH(),
-                          //   NavButton(
-                          //     buttontext: 'Wissels - basisinformatie',
-                          //     destination: 'wisselsbasisinformatie',
-                          //   ),
-                          //   SizedBoxH(),
-                          //   NavButton(
-                          //     buttontext: 'Wissel niet in eindstand',
-                          //     destination: 'wisselnietineindstandincidentenachtergrond',
-                          //   ),
-                          //   SizedBoxH(),
-                          //   NavButton(
-                          //     buttontext: 'Gestoord wissel',
-                          //     destination: 'gestoordwisselincidentenachtergrond',
-                          //   ),
-                          //   SizedBoxH(),
-                          //   NavButton(
-                          //     buttontext: 'Opengereden wissel',
-                          //     destination: 'opengeredenwisselincidentenachtergrond',
-                          //   ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                    ],
+              TextCard(
+                widgetList: <Widget>[
+                  SubTitleText(
+                    subtitle: 'Work in progress...',
                   ),
-                ),
+                ],
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class AISpoorMainNavigation extends StatelessWidget {
+  const AISpoorMainNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<PopupNavigation>(
+      icon: const Icon(IconUtils.iconInfo),
+      tooltip: 'Meer informatie',
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
+          await Navigator.pushNamed(context, 'home_screen');
+        } else if (result == PopupNavigation.ww_spoor_main) {
+          await Navigator.pushNamed(context, 'ww_spoor_main');
+        } else {
+          Navigator.pop(context);
+        }
+      },
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
+          child: MenuItemContent(
+            icon: IconUtils.iconHome,
+            text: 'Home',
+          ),
+        ),
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_spoor_main,
+          child: MenuItemContent(
+            icon: IconUtils.iconWW,
+            text: 'WW Spoor',
+          ),
+        ),
+      ],
     );
   }
 }

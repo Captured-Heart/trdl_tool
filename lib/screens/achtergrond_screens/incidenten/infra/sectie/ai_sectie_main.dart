@@ -9,65 +9,72 @@ class AIIncidentenSectieMain extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarText(
-          title: 'Overwegen',
+          title: StringUtils.appBarTitleAI,
         ),
-        actions: const <HomeButton>[
+        actions: const <Widget>[
+          AISectieMainNavigation(),
           HomeButton(),
         ],
       ),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            children: <Card>[
-              /*PROCEDURE CARD*/
-              Card(
-                elevation: CardUtils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: const <Widget>[
-                      TitleText(
-                        title: 'Sectie',
-                      ),
-                      SizedBoxH(),
-                      InsertImage(
-                        image:
-                            'assets/images/achtergrond_info/incidenten/overwegen_achtergrond_main.jpg',
-                      ),
-                      SizedBoxH(),
-                    ],
+            children: const <TextCard>[
+              TextCard(
+                widgetList: <Widget>[
+                  TitleText(
+                    title: 'Sectie',
                   ),
-                ),
+                ],
               ),
-              /*NAVIGATION CARD*/
-              Card(
-                elevation: CardUtils.kCardElevation,
-                child: Padding(
-                  padding: Utils.kCardPadding,
-                  child: Column(
-                    children: <Widget>[
-                      const TitleText(
-                        title: 'Ga snel naar',
-                      ),
-                      const SizedBoxH(),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const <NavButton>[
-                          NavButton(
-                            buttontext: 'Werkwijze - Overwegen',
-                            destination: 'overwegen',
-                          ),
-                        ],
-                      ),
-                      const SizedBoxH(),
-                    ],
+              TextCard(
+                widgetList: <Widget>[
+                  SubTitleText(
+                    subtitle: 'Work in progress...',
                   ),
-                ),
+                ],
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class AISectieMainNavigation extends StatelessWidget {
+  const AISectieMainNavigation({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton<PopupNavigation>(
+      icon: const Icon(IconUtils.iconInfo),
+      tooltip: 'Meer informatie',
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
+          await Navigator.pushNamed(context, 'home_screen');
+        } else if (result == PopupNavigation.ww_sectiestoring) {
+          await Navigator.pushNamed(context, 'ww_sectiestoring');
+        } else {
+          Navigator.pop(context);
+        }
+      },
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
+          child: MenuItemContent(
+            icon: IconUtils.iconHome,
+            text: 'Home',
+          ),
+        ),
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_sectiestoring,
+          child: MenuItemContent(
+            icon: IconUtils.iconWW,
+            text: 'WW Sectiestoring',
+          ),
+        ),
+      ],
     );
   }
 }

@@ -13,7 +13,15 @@ Future<dynamic> showVersionUpdatePopup(BuildContext context) {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const <Widget>[
                 CurrentVersion(
-                  versionNumber: '0.3.1',
+                  versionNumber: '0.3.2',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-11-06: 0.3.2',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Achtergrondinformatie verder uitgebreid (18);\n- Widgets verder ingekort en verplaatst;\n- Utils class uitgebreid;\n- Verder met refactor + enums verplaatsen.',
                 ),
                 SizedBoxH(),
                 DateChanged(
