@@ -1,7 +1,7 @@
 import '/all_imports.dart';
 
-class AIAanpassenPlanMain extends StatelessWidget {
-  const AIAanpassenPlanMain({Key? key}) : super(key: key);
+class AIVertragingenMain extends StatelessWidget {
+  const AIVertragingenMain({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class AIAanpassenPlanMain extends StatelessWidget {
           title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
-          AIAanpassenPlanMainNavigation(),
+          AIVertragingenMainNavigation(),
           HomeButton(),
         ],
       ),
@@ -23,7 +23,7 @@ class AIAanpassenPlanMain extends StatelessWidget {
               const TextCard(
                 widgetList: <TitleText>[
                   TitleText(
-                    title: 'Aanpassen Plan',
+                    title: 'Vertragingen',
                   ),
                 ],
               ),
@@ -37,42 +37,26 @@ class AIAanpassenPlanMain extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const <Widget>[
                       NavButton(
-                        buttontext: 'Aanpassen plan - basis',
-                        destination: 'ai_aanpassen_plan_basis',
+                        buttontext: 'Vertragingen Basis',
+                        destination: 'ai_vertragingen_basis',
+                      ),
+                      NavButton(
+                        buttontext: 'Vertragingen - Werkwijze',
+                        destination: 'ww_vertragingen',
                       ),
                       SizedBoxH(),
                       NavButton(
-                        buttontext: 'Stappenplan versperringen',
-                        destination: 'ai_stappenplan_versperringen',
+                        buttontext: 'Monitoring',
+                        destination: 'ai_monitoring',
                       ),
                       SizedBoxH(),
                       NavButton(
-                        buttontext: 'Orderacceptatie',
-                        destination: 'ai_orderacceptatie',
-                      ),
-                      SizedBoxH(),
-                      NavButton(
-                        buttontext: 'Ongepland werk',
-                        destination: 'ai_ongepland_werk_main',
-                      ),
-                      SizedBoxH(),
-                      NavButton(
-                        buttontext: 'Vertragingen',
-                        destination: 'ai_vertragingen_main',
+                        buttontext: 'Klanthinder',
+                        destination: 'ai_klanthinder',
                       ),
                     ],
                   ),
                   const SizedBoxH(),
-                ],
-              ),
-              const TextCard(
-                widgetList: <Widget>[
-                  SizedBoxH(),
-                  InsertImage(
-                    image:
-                        'assets/images/achtergrond_info/aanpassen_plan/info_bord.png',
-                  ),
-                  SizedBoxH(),
                 ],
               ),
             ],
@@ -83,8 +67,8 @@ class AIAanpassenPlanMain extends StatelessWidget {
   }
 }
 
-class AIAanpassenPlanMainNavigation extends StatelessWidget {
-  const AIAanpassenPlanMainNavigation({Key? key}) : super(key: key);
+class AIVertragingenMainNavigation extends StatelessWidget {
+  const AIVertragingenMainNavigation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -94,8 +78,8 @@ class AIAanpassenPlanMainNavigation extends StatelessWidget {
       onSelected: (PopupNavigation result) async {
         if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == PopupNavigation.ww_aanpassen_plan_main) {
-          await Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
+        } else if (result == PopupNavigation.ww_vertragingen) {
+          await Navigator.pushNamed(context, 'ww_vertragingen');
         } else {
           Navigator.pop(context);
         }
@@ -109,10 +93,10 @@ class AIAanpassenPlanMainNavigation extends StatelessWidget {
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
-          value: PopupNavigation.ww_aanpassen_plan_main,
+          value: PopupNavigation.ww_vertragingen,
           child: MenuItemContent(
-            icon: IconUtils.iconAI,
-            text: 'WW Aanpassen Plan',
+            icon: IconUtils.iconWW,
+            text: 'WW Vertragingen',
           ),
         ),
       ],

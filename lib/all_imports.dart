@@ -22,7 +22,7 @@ export 'package:trdl_tool/providers/themedata_provider.dart';
 export 'package:trdl_tool/providers/thememode_provider.dart';
 export 'package:trdl_tool/providers/thememodestring_provider.dart';
 export 'package:trdl_tool/routes.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/aanpassen_plan_basis/ai_aanpassen_plan.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/aanpassen_plan_basis/ai_aanpassen_plan_basis.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ai_aanpassen_plan_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ai_ongepland_werk_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/infra_ter_beschikking/ai_infra_ter_beschikking.dart';
@@ -32,7 +32,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/orderaccept
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/stappenplan_versperringen/ai_stappenplan_versperringen.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_klanthinder.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_monitoring.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_vertragingen.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_vertragingen_basis.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/ai_incidenten_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/incidenten_basis/ai_incidenten_basis.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/ai_infrastructuur_main.dart';

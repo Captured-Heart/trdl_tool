@@ -1,9 +1,5 @@
 import '/all_imports.dart';
 
-/// Firebase constants
-final FirebaseAuth _auth = FirebaseAuth.instance;
-String? emailCurrentUser = _auth.currentUser!.email;
-
 /// ProChat constants
 late String hintText;
 

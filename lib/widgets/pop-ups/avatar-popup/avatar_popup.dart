@@ -23,7 +23,7 @@ Future<dynamic> showAvatarPopup(BuildContext context) {
             ),
             ListTile(
               title: Text(
-                'Huidige gebruiker:\n$emailCurrentUser',
+                'Huidige gebruiker:\n${AuthService().emailCurrentUser}',
                 textAlign: TextAlign.center,
               ),
               onTap: () {
