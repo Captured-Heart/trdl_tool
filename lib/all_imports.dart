@@ -25,7 +25,7 @@ export 'package:trdl_tool/routes.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/aanpassen_plan_basis/ai_aanpassen_plan_basis.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ai_aanpassen_plan_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ai_ongepland_werk_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/infra_ter_beschikking/ai_infra_ter_beschikking.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/infra_beschikbaar_stellen/ai_infra_beschikbaar_stellen.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_infra/ai_ongepland_werk_infra.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ongepland_werk_materieel/ai_ongepland_werk_materieel.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/orderacceptatie/ai_orderacceptatie.dart';

@@ -133,8 +133,6 @@ class AIOngeplandWerkMaterieelNavigation extends StatelessWidget {
           );
         } else if (result == PopupNavigation.ai_infra_ter_beschikking) {
           await Navigator.pushNamed(context, 'ai_infra_ter_beschikking');
-        } else if (result == PopupNavigation.ai_ongepland_werk_main) {
-          await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
         } else {
           Navigator.pop(context);
         }
@@ -159,13 +157,6 @@ class AIOngeplandWerkMaterieelNavigation extends StatelessWidget {
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Infra ter beschikking stellen',
-          ),
-        ),
-        const PopupMenuItem<PopupNavigation>(
-          value: PopupNavigation.ai_ongepland_werk_main,
-          child: MenuItemContent(
-            icon: IconUtils.iconAI,
-            text: 'AI Ongepland Werk',
           ),
         ),
       ],

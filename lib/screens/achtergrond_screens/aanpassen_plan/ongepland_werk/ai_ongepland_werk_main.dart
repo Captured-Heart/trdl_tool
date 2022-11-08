@@ -37,6 +37,11 @@ class AIOngeplandWerkMain extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const <Widget>[
                       NavButton(
+                        buttontext: 'Ongepland Werk - Werkwijze',
+                        destination: 'ww_ongepland_werk_main',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
                         buttontext: 'Ongepland werk - Infra',
                         destination: 'ai_ongepland_werk_infra',
                       ),
@@ -48,7 +53,7 @@ class AIOngeplandWerkMain extends StatelessWidget {
                       SizedBoxH(),
                       NavButton(
                         buttontext: 'Infra ter beschikking stellen',
-                        destination: 'ai_infra_ter_beschikking',
+                        destination: 'ai_infra_beschikbaar_stellen',
                       ),
                       SizedBoxH(),
                       NavButton(
