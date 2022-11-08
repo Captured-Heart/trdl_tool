@@ -181,7 +181,7 @@ export 'package:trdl_tool/theme/theme_colors/greenmoney_colors.dart';
 export 'package:trdl_tool/theme/theme_colors/outerspace_colors.dart';
 export 'package:trdl_tool/theme/theme_colors/redredwine_colors.dart';
 export 'package:trdl_tool/utils/card_utils.dart';
-export 'package:trdl_tool/utils/constants.dart';
+export 'package:trdl_tool/utils/chat_utils.dart';
 export 'package:trdl_tool/utils/icon_utils.dart';
 export 'package:trdl_tool/utils/navigation_enum.dart';
 export 'package:trdl_tool/utils/questions.dart';

@@ -66,7 +66,7 @@ class ChatScreenState extends State<ChatScreen> {
                     onChanged: (String value) {
                       messageText = value;
                     },
-                    decoration: kMessageTextFieldDecoration,
+                    decoration: ChatUtils.kMessageTextFieldDecoration,
                   ),
                 ),
               ),
@@ -81,7 +81,7 @@ class ChatScreenState extends State<ChatScreen> {
                 },
                 child: const Text(
                   '✅',
-                  style: kSendButtonTextStyle,
+                  style: ChatUtils.kSendButtonTextStyle,
                 ),
               ),
             ],
