@@ -23,7 +23,7 @@ Future<dynamic> showAvatarPopup(BuildContext context) {
             ),
             ListTile(
               title: Text(
-                'Huidige gebruiker:\n${AuthService().emailCurrentUser}',
+                'Huidige gebruiker:\n${FirebaseUtils.emailCurrentUser}',
                 textAlign: TextAlign.center,
               ),
               onTap: () {

@@ -1,10 +1,8 @@
 import '/all_imports.dart';
 
-/// AuthService class to setup signing process
+//AuthService class to setup signing process
 class AuthService {
-  String? emailCurrentUser = FirebaseAuth.instance.currentUser!.email;
-
-  /// Sign UP user only with email and password
+  //Sign UP user only with email and password
   Future<void> signUp({required String email, required String password}) async {
     await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: email,
@@ -12,7 +10,7 @@ class AuthService {
     );
   }
 
-  /// Sign IN user only with email and password
+  //Sign IN user only with email and password
   Future<void> signIn({required String email, required String password}) async {
     await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: email,
@@ -20,7 +18,7 @@ class AuthService {
     );
   }
 
-  /// Send password reset email only with valid email
+  //Send password reset email only with valid email
   Future<void> resetPassword({required String email}) async {
     await FirebaseAuth.instance.sendPasswordResetEmail(
       email: email,

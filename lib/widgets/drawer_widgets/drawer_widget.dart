@@ -25,7 +25,7 @@ Widget drawerWidget =
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Text>[
                     const Text('Huidige gebruiker:'),
-                    Text('${AuthService().emailCurrentUser}'),
+                    Text(FirebaseUtils.emailCurrentUser!),
                   ],
                 ),
                 Row(

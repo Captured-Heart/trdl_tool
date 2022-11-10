@@ -3,6 +3,7 @@
 export 'dart:io';
 export 'dart:math';
 
+export 'package:trdl_tool/utils/firebase_utils.dart';
 export 'package:carousel_slider/carousel_slider.dart';
 export 'package:cloud_firestore/cloud_firestore.dart';
 export 'package:firebase_app_check/firebase_app_check.dart';

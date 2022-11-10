@@ -125,14 +125,13 @@ class _RegisterState extends State<Register> {
                           children: <ElevatedButton>[
                             ElevatedButton(
                               onPressed: () async {
-                                /*SUPERUSER ACCOUNT*/
+                                //Superuser account
                                 Logger().i(
                                   'Creating SUPERUSER plotsklapps... Going to VerifyScreen',
                                 );
                                 if (_emailCtrl.text
                                     .contains('plotsklapps@gmail.com')) {
-                                  await FirebaseAuth.instance
-                                      .createUserWithEmailAndPassword(
+                                  await AuthService().signUp(
                                     email: _emailCtrl.text,
                                     password: _password1Ctrl.text,
                                   );
@@ -145,7 +144,7 @@ class _RegisterState extends State<Register> {
                                     return;
                                   }
                                 }
-                                /*CHECK IF EMAIL IS EMPTY OR NOT PRORAIL*/
+                                //Check if email is empty or NOT @prorail.nl
                                 else if (_emailCtrl.text.isEmpty ||
                                     !_emailCtrl.text.contains('@prorail.nl')) {
                                   Logger()
@@ -154,14 +153,14 @@ class _RegisterState extends State<Register> {
                                     snackBarRegisterEmailWrong,
                                   );
                                 }
-                                /*CHECK PASSWORD LENGTH > 6 FOR FIREBASE*/
+                                //Check if password length = 6 or more for Firebase
                                 else if (_password1Ctrl.text.length < 6) {
                                   Logger().i('Wachtwoord is te kort');
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarRegisterPasswordShort,
                                   );
                                 }
-                                /*CHECK PASSWORD ARE THE SAME*/
+                                //Check if passwords are equal
                                 else if (_password1Ctrl.text !=
                                     _password2Ctrl.text) {
                                   Logger().i('Wachtwoorden zijn niet gelijk');
@@ -170,7 +169,7 @@ class _RegisterState extends State<Register> {
                                   );
                                 } else {
                                   try {
-                                    /*CREATE USER AND GO TO VERIFY_SCREEN*/
+                                    //Create user and go to VerifyScreen
                                     Logger().i(
                                       'Creating user... Going to VerifyScreen',
                                     );
@@ -187,7 +186,7 @@ class _RegisterState extends State<Register> {
                                       return;
                                     }
                                   }
-                                  /*CATCH ALL OTHER ERRORS*/
+                                  //Catch all other errors and show to log and to user via SnackBar
                                   catch (errorMessage) {
                                     Logger().i('Error: $errorMessage');
                                     ScaffoldMessenger.of(context).showSnackBar(

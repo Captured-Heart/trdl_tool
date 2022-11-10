@@ -107,8 +107,7 @@ class _LoginState extends State<Login> {
                                   Logger().i(
                                     'Signing in... Checking for verification...',
                                   );
-                                  await FirebaseAuth.instance
-                                      .signInWithEmailAndPassword(
+                                  await AuthService().signIn(
                                     email: _emailCtrl.text,
                                     password: _passwordCtrl.text,
                                   );
