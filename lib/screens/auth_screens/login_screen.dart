@@ -8,8 +8,6 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
-
   late final TextEditingController _emailCtrl;
   late final TextEditingController _passwordCtrl;
 
@@ -106,13 +104,20 @@ class _LoginState extends State<Login> {
                               onPressed: () async {
                                 try {
                                   /*SIGN IN METHOD*/
-                                  await AuthService().signIn(
+                                  Logger().i(
+                                    'Signing in... Checking for verification...',
+                                  );
+                                  await FirebaseAuth.instance
+                                      .signInWithEmailAndPassword(
                                     email: _emailCtrl.text,
                                     password: _passwordCtrl.text,
                                   );
-                                  /*IF USER CLICKED VERIFICATION EMAIL*/
-                                  if (_auth.currentUser!.emailVerified) {
+                                  if (FirebaseAuth
+                                      .instance.currentUser!.emailVerified) {
                                     if (mounted) {
+                                      Logger().i(
+                                        'User is verified... Going to HomeScreen',
+                                      );
                                       await Navigator.pushReplacementNamed(
                                         context,
                                         'home_screen',
@@ -122,8 +127,12 @@ class _LoginState extends State<Login> {
                                     }
                                   }
                                   /*IF USER DID NOT CLICK VERIFICATION EMAIL*/
-                                  else if (!_auth.currentUser!.emailVerified) {
+                                  else if (!FirebaseAuth
+                                      .instance.currentUser!.emailVerified) {
                                     if (mounted) {
+                                      Logger().i(
+                                        'User is NOT verified... Returning SnackBar',
+                                      );
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(
                                         snackBarLoginEmailVerificatie,
@@ -134,6 +143,7 @@ class _LoginState extends State<Login> {
                                   }
                                   /*ALL OTHER ERROR SITUATIONS*/
                                 } catch (e) {
+                                  Logger().w('Error: $e');
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarLoginErIsIetsMis,
                                   );

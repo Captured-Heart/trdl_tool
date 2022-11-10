@@ -16,6 +16,7 @@ export 'package:flutter_native_splash/flutter_native_splash.dart';
 export 'package:flutter_spinkit/flutter_spinkit.dart';
 export 'package:google_fonts/google_fonts.dart';
 export 'package:hooks_riverpod/hooks_riverpod.dart';
+export 'package:logger/logger.dart';
 export 'package:trdl_tool/providers/themecolor_provider.dart';
 export 'package:trdl_tool/providers/themecolorstring_provider.dart';
 export 'package:trdl_tool/providers/themedata_provider.dart';
