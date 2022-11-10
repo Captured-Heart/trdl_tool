@@ -62,7 +62,7 @@ class _LoginState extends State<Login> {
                         Row(
                           children: <Expanded>[
                             Expanded(
-                              /*EMAIL TEXTFIELD*/
+                              //Email textfield
                               child: TextField(
                                 controller: _emailCtrl,
                                 keyboardType: TextInputType.emailAddress,
@@ -81,7 +81,7 @@ class _LoginState extends State<Login> {
                         Row(
                           children: <Expanded>[
                             Expanded(
-                              /*PASSWORD TEXTFIELD*/
+                              //Password textfield
                               child: TextField(
                                 controller: _passwordCtrl,
                                 textAlign: TextAlign.center,
@@ -103,7 +103,7 @@ class _LoginState extends State<Login> {
                             ElevatedButton(
                               onPressed: () async {
                                 try {
-                                  /*SIGN IN METHOD*/
+                                  //Sign in method
                                   Logger().i(
                                     'Signing in... Checking for verification...',
                                   );
@@ -112,6 +112,7 @@ class _LoginState extends State<Login> {
                                     email: _emailCtrl.text,
                                     password: _passwordCtrl.text,
                                   );
+                                  //Check if user clicked on verification email, if so, continue to HomeScreen
                                   if (FirebaseAuth
                                       .instance.currentUser!.emailVerified) {
                                     if (mounted) {
@@ -126,7 +127,7 @@ class _LoginState extends State<Login> {
                                       return;
                                     }
                                   }
-                                  /*IF USER DID NOT CLICK VERIFICATION EMAIL*/
+                                  //If user did NOT click on verification email return SnackBar notifying user
                                   else if (!FirebaseAuth
                                       .instance.currentUser!.emailVerified) {
                                     if (mounted) {
@@ -141,9 +142,9 @@ class _LoginState extends State<Login> {
                                       return;
                                     }
                                   }
-                                  /*ALL OTHER ERROR SITUATIONS*/
-                                } catch (e) {
-                                  Logger().w('Error: $e');
+                                  //All other error situations, show in log and show SnackBar to notify user
+                                } catch (errorMessage) {
+                                  Logger().w('Error: $errorMessage');
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarLoginErIsIetsMis,
                                   );
@@ -167,7 +168,7 @@ class _LoginState extends State<Login> {
                 children: <TextButton>[
                   TextButton(
                     onPressed: () async {
-                      /*GO TO REGISTER_SCREEN*/
+                      //Go to RegisterScreen
                       await Navigator.pushNamed(
                         context,
                         'register_screen',
@@ -187,7 +188,7 @@ class _LoginState extends State<Login> {
                 children: <TextButton>[
                   TextButton(
                     onPressed: () async {
-                      /*GO TO WACHTWOORD_SCREEN*/
+                      //Go to WachtwoordScreen
                       await Navigator.pushNamed(
                         context,
                         'wachtwoord_screen',

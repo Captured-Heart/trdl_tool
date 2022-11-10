@@ -189,7 +189,7 @@ class _RegisterState extends State<Register> {
                                   }
                                   /*CATCH ALL OTHER ERRORS*/
                                   catch (errorMessage) {
-                                    Logger().i('Error: $e');
+                                    Logger().i('Error: $errorMessage');
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
                                         content: Text(
