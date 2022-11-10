@@ -32,10 +32,16 @@ dev_dependencies:
     sdk: flutter
 
 flutter_native_splash:
-  color: "#e8eaea"
+  color: "#93A0A9"
   image: assets/icons/plotsklappsLogoSmall.png
   color_dark: "#000000"
   image_dark: assets/icons/plotsklappsLogoSmall.png
+  android_12:
+    color: "#93A0A9"
+    color_dark: "#000000"
+  android_gravity: center
+  ios_content_mode: center
+  web_image_mode: center
   android: true
   ios: true
   fullscreen: true
