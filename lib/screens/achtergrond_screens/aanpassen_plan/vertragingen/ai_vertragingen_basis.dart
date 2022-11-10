@@ -525,8 +525,6 @@ class AIVertragingenNavigation extends StatelessWidget {
           await Navigator.pushNamed(context, 'home_screen');
         } else if (result == PopupNavigation.ww_vertragingen) {
           await Navigator.pushNamed(context, 'ww_vertragingen');
-        } else if (result == PopupNavigation.ai_aanpassen_plan_main) {
-          await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
         } else if (result == PopupNavigation.ai_monitoring) {
           await Navigator.pushNamed(context, 'ai_monitoring');
         } else if (result == PopupNavigation.ai_klanthinder) {
@@ -551,17 +549,10 @@ class AIVertragingenNavigation extends StatelessWidget {
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
-          value: PopupNavigation.ai_aanpassen_plan_main,
-          child: MenuItemContent(
-            icon: IconUtils.iconAI,
-            text: 'AI Aanpassen Plan',
-          ),
-        ),
-        const PopupMenuItem<PopupNavigation>(
           value: PopupNavigation.ai_monitoring,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
-            text: 'AI Vertraging en Monitoring',
+            text: 'AI Monitoring',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
