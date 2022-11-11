@@ -47,7 +47,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Personen;\n\n- Materieel;\n\n- Omgeving;\n\n- Spoorwegveiligheid.',
+                        '- Personen;\n- Materieel;\n- Omgeving;\n- Spoorwegveiligheid.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -85,7 +85,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Een veilig sein naar een spoor waar aan materieel gewerkt wordt;\n\n- Aanrijdgevaar op het spoor waarop de werkzaamheden moeten plaatsvinden;\n\n- Aanrijdgevaar op het nevenspoor.',
+                        '- Een veilig sein naar een spoor waar aan materieel gewerkt wordt;\n- Aanrijdgevaar op het spoor waarop de werkzaamheden moeten plaatsvinden;\n- Aanrijdgevaar op het nevenspoor.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -97,7 +97,7 @@ class AIOngeplandWerkMaterieel extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Controle aan de hand van een werkbeschrijving per materieel serie;\n\n- Herstellingen aan materieel.',
+                        '- Controle aan de hand van een werkbeschrijving per materieel serie;\n- Herstellingen aan materieel.',
                   ),
                   SizedBoxH(),
                   BodyText(

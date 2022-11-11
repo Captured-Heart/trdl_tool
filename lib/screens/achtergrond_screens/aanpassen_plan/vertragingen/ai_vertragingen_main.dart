@@ -37,12 +37,13 @@ class AIVertragingenMain extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const <Widget>[
                       NavButton(
-                        buttontext: 'Vertragingen Basis',
-                        destination: 'ai_vertragingen_basis',
-                      ),
-                      NavButton(
                         buttontext: 'Vertragingen - Werkwijze',
                         destination: 'ww_vertragingen',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Vertragingen Basis',
+                        destination: 'ai_vertragingen_basis',
                       ),
                       SizedBoxH(),
                       NavButton(

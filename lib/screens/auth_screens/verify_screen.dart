@@ -10,26 +10,48 @@ class VerifyScreen extends StatefulWidget {
 }
 
 class VerifyScreenState extends State<VerifyScreen> {
-  final FirebaseAuth _auth = FirebaseAuth.instance;
   User? currentUser = FirebaseAuth.instance.currentUser;
   late Timer timer;
 
   @override
   void initState() {
+    //In the initState, run _waitForEmailVerification() FIRST.
     Future<void>.delayed(Duration.zero, () async {
       await _waitForEmailVerification();
     });
     super.initState();
   }
 
+  //Function that checks if currentUser is NOT null and NOT emailverified -> Send verification email.
   Future<void> _waitForEmailVerification() async {
     if (currentUser != null && !currentUser!.emailVerified) {
       await currentUser!.sendEmailVerification();
     }
 
+    //Timer checks if user clicked on verification every 5 seconds
     timer = Timer.periodic(const Duration(seconds: 5), (Timer timer) {
       checkEmailVerified();
     });
+  }
+
+  //Function that checks if user clicked on the link in the verification email
+  Future<void> checkEmailVerified() async {
+    currentUser = FirebaseAuth.instance.currentUser;
+    //Refreshes the currentUser, if signed in
+    await currentUser!.reload();
+    //If user clicks on the link, stop the timer and return to LoginScreen
+    if (currentUser!.emailVerified) {
+      timer.cancel();
+      if (mounted) {
+        await Navigator.pushReplacementNamed(
+          context,
+          'login_screen',
+        );
+      } else {
+        //Keep waiting in limbo until user does click on the link
+        return;
+      }
+    }
   }
 
   @override
@@ -102,21 +124,5 @@ class VerifyScreenState extends State<VerifyScreen> {
         ),
       ),
     );
-  }
-
-  Future<void> checkEmailVerified() async {
-    currentUser = _auth.currentUser;
-    await currentUser!.reload();
-    if (currentUser!.emailVerified) {
-      timer.cancel();
-      if (mounted) {
-        await Navigator.pushReplacementNamed(
-          context,
-          'login_screen',
-        );
-      } else {
-        return;
-      }
-    }
   }
 }

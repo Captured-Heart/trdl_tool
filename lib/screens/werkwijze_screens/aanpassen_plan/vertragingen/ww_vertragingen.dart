@@ -59,7 +59,7 @@ class WWVertragingenNavigation extends StatelessWidget {
       onSelected: (PopupNavigation result) async {
         if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == PopupNavigation.ai_vertragingen) {
+        } else if (result == PopupNavigation.ai_vertragingen_main) {
           await Navigator.pushNamed(context, 'ai_vertragingen');
         } else {
           Navigator.pop(context);
@@ -74,7 +74,7 @@ class WWVertragingenNavigation extends StatelessWidget {
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
-          value: PopupNavigation.ai_vertragingen,
+          value: PopupNavigation.ai_vertragingen_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Vertragingen',

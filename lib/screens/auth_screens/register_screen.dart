@@ -1,13 +1,13 @@
 import '/all_imports.dart';
 
-class Register extends StatefulWidget {
-  const Register({Key? key}) : super(key: key);
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({Key? key}) : super(key: key);
 
   @override
-  State<Register> createState() => _RegisterState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _RegisterState extends State<Register> {
+class _RegisterScreenState extends State<RegisterScreen> {
   late final TextEditingController _emailCtrl;
   late final TextEditingController _password1Ctrl;
   late final TextEditingController _password2Ctrl;
@@ -65,7 +65,7 @@ class _RegisterState extends State<Register> {
                         Row(
                           children: <Widget>[
                             Expanded(
-                              /*EMAIL TEXTFIELD*/
+                              //Email textfield
                               child: TextField(
                                 controller: _emailCtrl,
                                 keyboardType: TextInputType.emailAddress,
@@ -84,7 +84,7 @@ class _RegisterState extends State<Register> {
                         Row(
                           children: <Expanded>[
                             Expanded(
-                              /*PASSWORD TEXTFIELD*/
+                              //Password1 textfield
                               child: TextField(
                                 controller: _password1Ctrl,
                                 textAlign: TextAlign.center,
@@ -103,7 +103,7 @@ class _RegisterState extends State<Register> {
                         Row(
                           children: <Expanded>[
                             Expanded(
-                              /*CHECK PASSWORD TEXTFIELD*/
+                              //Password2 textfield
                               child: TextField(
                                 controller: _password2Ctrl,
                                 textAlign: TextAlign.center,
@@ -125,7 +125,7 @@ class _RegisterState extends State<Register> {
                           children: <ElevatedButton>[
                             ElevatedButton(
                               onPressed: () async {
-                                //Superuser account
+                                //Superuser account plotsklapps
                                 Logger().i(
                                   'Creating SUPERUSER plotsklapps... Going to VerifyScreen',
                                 );
@@ -186,7 +186,7 @@ class _RegisterState extends State<Register> {
                                       return;
                                     }
                                   }
-                                  //Catch all other errors and show to log and to user via SnackBar
+                                  //Catch all other errors, show to log and return Snackbar notifying user
                                   catch (errorMessage) {
                                     Logger().i('Error: $errorMessage');
                                     ScaffoldMessenger.of(context).showSnackBar(
@@ -224,7 +224,7 @@ class _RegisterState extends State<Register> {
                 children: <TextButton>[
                   TextButton(
                     onPressed: () async {
-                      /// Back to loginscreen
+                      //Back to loginscreen
                       await Navigator.pushNamed(context, 'login_screen');
                     },
                     child: const Text(

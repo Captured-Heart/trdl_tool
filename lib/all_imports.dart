@@ -3,7 +3,6 @@
 export 'dart:io';
 export 'dart:math';
 
-export 'package:trdl_tool/utils/firebase_utils.dart';
 export 'package:carousel_slider/carousel_slider.dart';
 export 'package:cloud_firestore/cloud_firestore.dart';
 export 'package:firebase_app_check/firebase_app_check.dart';
@@ -25,6 +24,7 @@ export 'package:trdl_tool/providers/thememode_provider.dart';
 export 'package:trdl_tool/providers/thememodestring_provider.dart';
 export 'package:trdl_tool/routes.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/aanpassen_plan_basis/ai_aanpassen_plan_basis.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/aanpassen_plan_basis/ai_aanpassen_plan_basis.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ai_aanpassen_plan_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/ai_ongepland_werk_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_werk/infra_beschikbaar_stellen/ai_infra_beschikbaar_stellen.dart';
@@ -33,8 +33,12 @@ export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/ongepland_w
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/orderacceptatie/ai_orderacceptatie.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/stappenplan_versperringen/ai_stappenplan_versperringen.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_klanthinder.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_klanthinder.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_monitoring.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_monitoring.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_vertragingen_basis.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_vertragingen_basis.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/aanpassen_plan/vertragingen/ai_vertragingen_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/ai_incidenten_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/incidenten_basis/ai_incidenten_basis.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/infra/ai_infrastructuur_main.dart';
@@ -66,7 +70,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/incidenten/mensen_dieren_v
 export 'package:trdl_tool/screens/achtergrond_screens/incidenten/mensen_dieren_voorwerpen/ai_mensen_dieren_voorwerpen_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/ai_uitvoeren_plan_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/ai_bijzonderheden_rijwegen_main.dart';
-export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_icb/ai_inzetten_icb.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/inzet_railvoertuig_icb/ai_inzet_railvoertuig_icb.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_ari/ai_rijwegen_ari.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_bedienscherm/ai_rijwegen_bedienscherm.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_planopbouw/ai_rijwegen_planopbouw.dart';
@@ -184,6 +188,7 @@ export 'package:trdl_tool/theme/theme_colors/outerspace_colors.dart';
 export 'package:trdl_tool/theme/theme_colors/redredwine_colors.dart';
 export 'package:trdl_tool/utils/card_utils.dart';
 export 'package:trdl_tool/utils/chat_utils.dart';
+export 'package:trdl_tool/utils/firebase_utils.dart';
 export 'package:trdl_tool/utils/icon_utils.dart';
 export 'package:trdl_tool/utils/navigation_enum.dart';
 export 'package:trdl_tool/utils/questions.dart';

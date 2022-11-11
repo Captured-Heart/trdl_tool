@@ -50,7 +50,7 @@ class AIKlanthinder extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- HK1: >= 2400 min;\n\n- HK2: >= 680 < 2400 min;\n\n- HK3: >= 40 < 680 min.',
+                        '- HK1: >= 2400 min;\n- HK2: >= 680 < 2400 min;\n- HK3: >= 40 < 680 min.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -145,7 +145,7 @@ class AIKlanthinder extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Het technisch mogelijk is om meer infra beschikbaar te stellen voor het afhandelen van het treinverkeer zonder een vorm van herstel, of;\n\n- Het technisch mogelijk is om gedeeltelijk infra beschikbaar te stellen, door bijv. een noodoplossing toe te passen, waardoor de impact op het logistieke proces vermindert of er niet meer is. Of;\n\n- Het technisch mogelijk is om alle infra beschikbaar te stellen met een noodoplossing waardoor de impact op het logistieke proces er niet meer is.',
+                        '- Het technisch mogelijk is om meer infra beschikbaar te stellen voor het afhandelen van het treinverkeer zonder een vorm van herstel, of;\n- Het technisch mogelijk is om gedeeltelijk infra beschikbaar te stellen, door bijv. een noodoplossing toe te passen, waardoor de impact op het logistieke proces vermindert of er niet meer is. Of;\n- Het technisch mogelijk is om alle infra beschikbaar te stellen met een noodoplossing waardoor de impact op het logistieke proces er niet meer is.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -157,7 +157,7 @@ class AIKlanthinder extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- OvD-V van de getroffen post (telefonisch);\n\n-Verkeersleider CMBO;\n\n- Technische wachtdienst AM uit de getroffen regio (telefonisch);\n\n- Planner CMBO en medewerker 24/7 werkplekbeveiliging;\n\n- Regisseur Meldkamer Spoor;\n\n- OvD-S;\n\n- Optioneel bij derdenstoringen AL;\n\n- Optioneel Procesleider Besturing Operatie.',
+                        '- OvD-V van de getroffen post (telefonisch);\n-Verkeersleider CMBO;\n- Technische wachtdienst AM uit de getroffen regio (telefonisch);\n- Planner CMBO en medewerker 24/7 werkplekbeveiliging;\n- Regisseur Meldkamer Spoor;\n- OvD-S;\n- Optioneel bij derdenstoringen AL;\n- Optioneel Procesleider Besturing Operatie.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -247,8 +247,10 @@ class AIKlanthinderNavigation extends StatelessWidget {
           await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
         } else if (result == PopupNavigation.ai_aanpassen_plan_main) {
           await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
-        } else if (result == PopupNavigation.ai_vertragingen) {
-          await Navigator.pushNamed(context, 'ai_vertragingen');
+        } else if (result == PopupNavigation.ai_vertragingen_basis) {
+          await Navigator.pushNamed(context, 'ai_vertragingen_basis');
+        } else if (result == PopupNavigation.ai_monitoring) {
+          await Navigator.pushNamed(context, 'ai_monitoring');
         } else {
           Navigator.pop(context);
         }
@@ -269,17 +271,17 @@ class AIKlanthinderNavigation extends StatelessWidget {
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
-          value: PopupNavigation.ai_aanpassen_plan_main,
+          value: PopupNavigation.ai_vertragingen_basis,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
-            text: 'AI Aanpassen Plan',
+            text: 'AI Vertragingen Basis',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
-          value: PopupNavigation.ai_vertragingen,
+          value: PopupNavigation.ai_monitoring,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
-            text: 'AI Vertragingen',
+            text: 'AI Monitoring',
           ),
         ),
       ],

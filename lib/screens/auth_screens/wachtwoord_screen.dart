@@ -1,13 +1,13 @@
 import '/all_imports.dart';
 
-class Wachtwoord extends StatefulWidget {
-  const Wachtwoord({Key? key}) : super(key: key);
+class WachtwoordScreen extends StatefulWidget {
+  const WachtwoordScreen({Key? key}) : super(key: key);
 
   @override
-  State<Wachtwoord> createState() => _WachtwoordState();
+  State<WachtwoordScreen> createState() => _WachtwoordScreenState();
 }
 
-class _WachtwoordState extends State<Wachtwoord> {
+class _WachtwoordScreenState extends State<WachtwoordScreen> {
   late final TextEditingController _emailCtrl;
 
   @override
@@ -61,7 +61,7 @@ class _WachtwoordState extends State<Wachtwoord> {
                         Row(
                           children: <Expanded>[
                             Expanded(
-                              /*EMAIL TEXTFIELD*/
+                              //Email textfield
                               child: TextField(
                                 controller: _emailCtrl,
                                 keyboardType: TextInputType.emailAddress,
@@ -84,11 +84,18 @@ class _WachtwoordState extends State<Wachtwoord> {
                             ElevatedButton(
                               onPressed: () async {
                                 try {
-                                  /*SEND PASSWORD RESETLINK*/
+                                  //Send password reset link to email
+                                  Logger().i(
+                                    'Sending password reset link...',
+                                  );
                                   await AuthService().resetPassword(
                                     email: _emailCtrl.text,
                                   );
                                   if (mounted) {
+                                    //If succeeded, show SnackBar to user en go back to LoginScreen
+                                    Logger().i(
+                                      'Password reset link sent... Back to LoginScreen',
+                                    );
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       snackBarWachtwoordEmailVerzonden,
                                     );
@@ -100,8 +107,11 @@ class _WachtwoordState extends State<Wachtwoord> {
                                     return;
                                   }
                                 }
-                                /*CATCH ALL OTHER ERRORS*/
+                                //Catch all errors and show SnackBar notifying user
                                 catch (errorMessage) {
+                                  Logger().w(
+                                    'Error: $errorMessage',
+                                  );
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     snackBarWachtwoordErIsIetsMis,
                                   );
@@ -125,7 +135,7 @@ class _WachtwoordState extends State<Wachtwoord> {
                 children: <TextButton>[
                   TextButton(
                     onPressed: () async {
-                      /*BACK TO LOGIN_SCREEN*/
+                      //Back to LoginScreen
                       await Navigator.pushReplacementNamed(
                         context,
                         'login_screen',

@@ -6,9 +6,9 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   //Landing page routes
   '/': (BuildContext context) => const SplashScreen(),
   'welcome_screen': (BuildContext context) => const WelcomeScreen(),
-  'login_screen': (BuildContext context) => const Login(),
-  'register_screen': (BuildContext context) => const Register(),
-  'wachtwoord_screen': (BuildContext context) => const Wachtwoord(),
+  'login_screen': (BuildContext context) => const LoginScreen(),
+  'register_screen': (BuildContext context) => const RegisterScreen(),
+  'wachtwoord_screen': (BuildContext context) => const WachtwoordScreen(),
   'verify_screen': (BuildContext context) => const VerifyScreen(),
   'home_screen': (BuildContext context) => const HomeScreen(),
 
@@ -123,7 +123,8 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
       const AIUitvoerenPlanMain(),
   'ai_bijzonderheden_rijwegen_main': (BuildContext context) =>
       const AIBijzonderhedenRijwegenMain(),
-  'ai_inzetten_icb': (BuildContext context) => const AIInzettenICB(),
+  'ai_inzet_railvoertuig_icb': (BuildContext context) =>
+      const AIInzetRailvoertuigICB(),
   'ai_rijwegen_ari': (BuildContext context) => const AIRijwegenARI(),
   'ai_rijwegen_planopbouw': (BuildContext context) =>
       const AIRijwegenPlanopbouw(),
@@ -166,16 +167,21 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   //Achtergrondinfo aanpassen plan routes
   'ai_aanpassen_plan_main': (BuildContext context) =>
       const AIAanpassenPlanMain(),
-  'ai_aanpassen_plan': (BuildContext context) => const AIAanpassenPlan(),
+  'ai_aanpassen_plan_basis': (BuildContext context) =>
+      const AIAanpassenPlanBasis(),
   'ai_ongepland_werk_main': (BuildContext context) =>
       const AIOngeplandWerkMain(),
   'ai_infra_ter_beschikking': (BuildContext context) =>
-      const AIInfraTerBeschikking(),
+      const AIInfraBeschikbaarStellen(),
   'ai_ongepland_werk_infra': (BuildContext context) =>
       const AIOngeplandWerkInfra(),
   'ai_ongepland_werk_materieel': (BuildContext context) =>
       const AIOngeplandWerkMaterieel(),
-  'ai_vertragingen': (BuildContext context) => const AIVertragingen(),
+  'ai_infra_beschikbaar_stellen': (BuildContext context) =>
+      const AIInfraBeschikbaarStellen(),
+  'ai_vertragingen_main': (BuildContext context) => const AIVertragingenMain(),
+  'ai_vertragingen_basis': (BuildContext context) =>
+      const AIVertragingenBasis(),
   'ai_monitoring': (BuildContext context) => const AIMonitoring(),
   'ai_klanthinder': (BuildContext context) => const AIKlanthinder(),
   'ai_orderacceptatie': (BuildContext context) => const AIOrderacceptatie(),

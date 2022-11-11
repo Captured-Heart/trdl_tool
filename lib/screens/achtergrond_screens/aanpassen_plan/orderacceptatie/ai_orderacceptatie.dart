@@ -39,7 +39,7 @@ class AIOrderacceptatie extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Opheffen, wijzigen of inleggen van trein- en rangeerbewegingen;\n\n- Verzoeken om railinfracapaciteitsonttrekking voor werkzaamheden aan de infra of materieel;\n\n- Materieelwisselingen.',
+                        '- Opheffen, wijzigen of inleggen van trein- en rangeerbewegingen;\n- Verzoeken om railinfracapaciteitsonttrekking voor werkzaamheden aan de infra of materieel;\n- Materieelwisselingen.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -70,7 +70,7 @@ class AIOrderacceptatie extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        "- Trein-/rangeernummer;\n\n- Plan-/vertrektijd;\n\n- 'Van' spoor;\n\n- 'Via' sporen (indien van toepassing);\n\n- 'Naar' spoor;\n\n- Materieelrelatie;\n\n- Materieel- of tractiesoort;\n\n- Wel/Geen afwijken/beperkingen aan materieel gerelateerd aan infragebruik.",
+                        "- Trein-/rangeernummer;\n- Plan-/vertrektijd;\n- 'Van' spoor;\n- 'Via' sporen (indien van toepassing);\n- 'Naar' spoor;\n- Materieelrelatie;\n- Materieel- of tractiesoort;\n- Wel/Geen afwijken/beperkingen aan materieel gerelateerd aan infragebruik.",
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -114,7 +114,7 @@ class AIOrderacceptatie extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Voor het beoordelen van deze lokale orders, toets je deze op beschikbaarheid en verdringing;\n\n- Indien je de aanvraag niet accepteert, meld je dit aan de aanvrager. Deze kan dan een nieuwe aanvraag indienen;\n\n- Je verwerkt een goedgekeurd LOA via SBG++ in het ProcesPlan Rijwegen (PPR);\n\n- Je licht de belanghebbenden in over de planaanpassingen.',
+                        '- Voor het beoordelen van deze lokale orders, toets je deze op beschikbaarheid en verdringing;\n- Indien je de aanvraag niet accepteert, meld je dit aan de aanvrager. Deze kan dan een nieuwe aanvraag indienen;\n- Je verwerkt een goedgekeurd LOA via SBG++ in het ProcesPlan Rijwegen (PPR);\n- Je licht de belanghebbenden in over de planaanpassingen.',
                   ),
                 ],
               ),
@@ -157,7 +157,7 @@ class AIOrderacceptatie extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Treinnummer;\n\n- Begin- en eindpunt;\n\n- De te volgen route (volgens welke dienstregelingspunten);\n\n- Tijden (aankomst/vertrek of doorrijden);\n\n- Treinlengte;\n\n- Materieel of tractiesoort;\n\n- Eventuele bijzonderheden infra-gebruik.',
+                        '- Treinnummer;\n- Begin- en eindpunt;\n- De te volgen route (volgens welke dienstregelingspunten);\n- Tijden (aankomst/vertrek of doorrijden);\n- Treinlengte;\n- Materieel of tractiesoort;\n- Eventuele bijzonderheden infra-gebruik.',
                   ),
                   SizedBoxH(),
                   BodyText(

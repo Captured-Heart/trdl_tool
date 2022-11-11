@@ -75,7 +75,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Storingsgebied kan niet veilig bereden worden en herstel heeft een urgent karakter: direct herstel;\n\n- Storingsgebied kan niet veilig bereden worden en herstel heeft geen urgent karakter: niet urgent storingsherstel (BUTA) en alsnog er omheen rijden;\n\n- Storingsgebied kan bereden worden en herstel heeft urgent karakter vanwege impact op veiligheid, logistiek en/of werkbelasting TRDL: storingsherstel met tijdsafspraak;\n\n- Storingsgebied kan bereden worden en herstel heeft geen urgent karakter: niet urgent storingsherstel (BUTA)/onderhoudsrooster;\n\n- Direct functieherstel bij uitvoeren van analyse (binnen 25 minuten).',
+                        '- Storingsgebied kan niet veilig bereden worden en herstel heeft een urgent karakter: direct herstel;\n- Storingsgebied kan niet veilig bereden worden en herstel heeft geen urgent karakter: niet urgent storingsherstel (BUTA) en alsnog er omheen rijden;\n- Storingsgebied kan bereden worden en herstel heeft urgent karakter vanwege impact op veiligheid, logistiek en/of werkbelasting TRDL: storingsherstel met tijdsafspraak;\n- Storingsgebied kan bereden worden en herstel heeft geen urgent karakter: niet urgent storingsherstel (BUTA)/onderhoudsrooster;\n- Direct functieherstel bij uitvoeren van analyse (binnen 25 minuten).',
                   ),
                 ],
               ),
@@ -94,7 +94,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Storingsgebied wordt niet bereden;\n\n- Storingsgebied kan bereden worden en herstel heeft geen urgent karakter;\n\n- De onttrekking heeft een grotere impact op de logistiek dan het niet oplossen van de storing.',
+                        '- Storingsgebied wordt niet bereden;\n- Storingsgebied kan bereden worden en herstel heeft geen urgent karakter;\n- De onttrekking heeft een grotere impact op de logistiek dan het niet oplossen van de storing.',
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -126,7 +126,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                     boldtext: 'Ongeplande werkzaamheden met storingsWBI/WECO',
                   ),
                   BodyText(
-                    indents: 1,
+                    indents: 0,
                     text:
                         "De storingsWBI's zijn vooraf ontworpen 'beveiligde' werkplekken.  Zo is voor elk wissel een eigen storingsWBI/WECO gemaakt, waarbij ook rekening is gehouden met de aan- en aflooproute naar de werkplek. Dit type storingsWBI is niet bedoeld voor werkzaamheden aan de bovenleiding of inzet (rail)wegvoertuigen!",
                   ),
@@ -137,7 +137,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                         'Ongeplande werkzaamheden met maatwerk storingsWBI/WECO',
                   ),
                   BodyText(
-                    indents: 1,
+                    indents: 0,
                     text:
                         "In dit geval wordt op basis van een vastgesteld proces direct een passende storingsWBI gemaakt voor de storing door de medewerker 24/7 werkplekbeveiliging. Uitgangspunten hierbij zijn: er is altijd een WBI en een WOT nodig en soms ook een VTI (werktreinen).\n\nDe (maatwerk) storingsWBI's zijn ontwikkeld om een veilige route naar en van de werkplek te garanderen. Daarvoor moet gebruik gemaakt worden van een aan- en afvoerroute van en naar de werkplek die voor de duur van de herstelactiviteiten ongehinderd beschikbaar is.",
                   ),
@@ -147,7 +147,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                     boldtext: 'Ongeplande werkzaamheden zonder WBI/WECO',
                   ),
                   BodyText(
-                    indents: 1,
+                    indents: 0,
                     text:
                         'Als er geen (maatwerk) storingsWBI/WECO is, maar wel een RVO-nummer (Rapport van Onregelmatigheid) dan kun je samen met de LWB samen een WECO opstellen. De werkzaamheden vinden dan plaats onder een RVO-nummer. Dit mag alleen in een geval van een (dreigende) storing/onregelmatigheid.',
                   ),
@@ -161,7 +161,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Het niveau van de werkplekbeveiliging;\n\n- De te nemen veiligheidsmaatregelen van LWB;\n\n- De veiligheidsmaatregelen die jij moet nemen;\n\n- De exacte aanduiding van de werkplek.',
+                        '- Het niveau van de werkplekbeveiliging;\n- De te nemen veiligheidsmaatregelen van LWB;\n- De veiligheidsmaatregelen die jij moet nemen;\n- De exacte aanduiding van de werkplek.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -187,7 +187,7 @@ class AIOngeplandWerkInfra extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        "- De aanvraag is akkoord bevonden door Tracémanagement;\n\n- Valt in de categorie 'Noodzaak' of 'Spoed'.",
+                        "- De aanvraag is akkoord bevonden door Tracémanagement;\n- Valt in de categorie 'Noodzaak' of 'Spoed'.",
                   ),
                   SizedBoxH(),
                   BoldText(

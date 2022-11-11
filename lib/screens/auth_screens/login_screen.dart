@@ -1,13 +1,13 @@
 import '/all_imports.dart';
 
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<Login> createState() => _LoginState();
+  State<LoginScreen> createState() => _LoginScreenState();
 }
 
-class _LoginState extends State<Login> {
+class _LoginScreenState extends State<LoginScreen> {
   late final TextEditingController _emailCtrl;
   late final TextEditingController _passwordCtrl;
 
@@ -141,7 +141,7 @@ class _LoginState extends State<Login> {
                                       return;
                                     }
                                   }
-                                  //All other error situations, show in log and show SnackBar to notify user
+                                  //All other error situations, show on console and return SnackBar notifying user
                                 } catch (errorMessage) {
                                   Logger().w('Error: $errorMessage');
                                   ScaffoldMessenger.of(context).showSnackBar(

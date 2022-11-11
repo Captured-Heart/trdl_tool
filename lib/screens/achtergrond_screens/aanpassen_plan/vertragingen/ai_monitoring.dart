@@ -35,7 +35,7 @@ class AIMonitoring extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        "- Vertraging;\n\n- Planaanpassingen;\n\n- Veiligheidsrisico's.",
+                        "- Vertraging;\n- Planaanpassingen;\n- Veiligheidsrisico's.",
                   ),
                 ],
               ),
@@ -54,7 +54,7 @@ class AIMonitoring extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- de KPI Klanthinder wordt bepaald;\n\n- Inzicht wordt verschaft in vervoers- en onderhoudsprestaties;\n\n- De prestaties van de spoorsector (mede) verklaard kunnen worden (bijv. waarmee meer inzicht verkregen kan worden in de (dis)punctualiteit);\n\n- Sturing op de operationele processen (mede) kan plaatsvinden;- Informatie aangeleverd kan worden ter verantwoording van formele afspraken zoals:',
+                        '- de KPI Klanthinder wordt bepaald;\n- Inzicht wordt verschaft in vervoers- en onderhoudsprestaties;\n- De prestaties van de spoorsector (mede) verklaard kunnen worden (bijv. waarmee meer inzicht verkregen kan worden in de (dis)punctualiteit);\n- Sturing op de operationele processen (mede) kan plaatsvinden;- Informatie aangeleverd kan worden ter verantwoording van formele afspraken zoals:',
                   ),
                   BodyText(
                     indents: 2,
@@ -178,7 +178,7 @@ class AIMonitoring extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Registratie processtap 1 en 2;\n\n- Fiattering (Acceptatie, verificatie en arbitrage. Respectievelijk processtap 3, 4 en 5);\n\n- Rapportage processtap 6;\n\n- Analyse processtap 7.',
+                        '- Registratie processtap 1 en 2;\n- Fiattering (Acceptatie, verificatie en arbitrage. Respectievelijk processtap 3, 4 en 5);\n- Rapportage processtap 6;\n- Analyse processtap 7.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -199,7 +199,7 @@ class AIMonitoring extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        "- Het aanmaken van de primaire oorzaak;\n\n- Het koppelen van TVTA's aan de primaire oorzaak.",
+                        "- Het aanmaken van de primaire oorzaak;\n- Het koppelen van TVTA's aan de primaire oorzaak.",
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -209,7 +209,7 @@ class AIMonitoring extends StatelessWidget {
                   BodyText(
                     indents: 0,
                     text:
-                        '- Controle aangemaakte verklaringen;\n\n- Doorvoeren van eventueel noodzakelijke wijzigingen;\n\n- Vrijgeven van initiële registratie t.b.v. fiattering.',
+                        '- Controle aangemaakte verklaringen;\n- Doorvoeren van eventueel noodzakelijke wijzigingen;\n- Vrijgeven van initiële registratie t.b.v. fiattering.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -221,7 +221,7 @@ class AIMonitoring extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        "- Hierbij is er gekozen om vanaf een TVTA terug te redeneren;\n\n- Waar mogelijk zullen de vertragingen worden genormeerd, zodat de TVTA's automatisch verklaard worden door het systeem;\n\n- Vertragingssprongen worden gemeten en weergegeven op dienstregelpunten.",
+                        "- Hierbij is er gekozen om vanaf een TVTA terug te redeneren;\n- Waar mogelijk zullen de vertragingen worden genormeerd, zodat de TVTA's automatisch verklaard worden door het systeem;\n- Vertragingssprongen worden gemeten en weergegeven op dienstregelpunten.",
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -244,7 +244,7 @@ class AIMonitoring extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- ProRail Verkeersleiding (OvDV);\n\n- ProRail Assetmanagement (storingsrapporteur AM);\n\n- Vervoerder;\n\n- Derden.',
+                        '- ProRail Verkeersleiding (OvDV);\n- ProRail Assetmanagement (storingsrapporteur AM);\n- Vervoerder;\n- Derden.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -267,7 +267,7 @@ class AIMonitoring extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Toegewezen aan een partij die hem nog niet ter fiattering heeft gekregen;\n\n- Nogmaals toegewezen aan de partij die hem heeft afgewezen (dit kan slechts één keer. Hierna volgt voor de tweede maal fiattering door deze partij);\n\n- Doorverwezen naar arbitrage (automatisch indien te fiatteren items 2 keer zijn afgewezen door dezelfde partij).',
+                        '- Toegewezen aan een partij die hem nog niet ter fiattering heeft gekregen;\n- Nogmaals toegewezen aan de partij die hem heeft afgewezen (dit kan slechts één keer. Hierna volgt voor de tweede maal fiattering door deze partij);\n- Doorverwezen naar arbitrage (automatisch indien te fiatteren items 2 keer zijn afgewezen door dezelfde partij).',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -290,7 +290,7 @@ class AIMonitoring extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Geven van advies over de registratie in Monitoring;\n\n- Gevraagd en ongevraagd advies over hoe de registratie in Monitoring zou moeten (huidig en toekomstig);\n\n- Initiatie van kwaliteitsverbeteringen en aanpassingen in het Monitoringsproces;\n\n- Ondersteunen bij verbeterprojecten in Monitoring;\n\n- Instructie over Monitoring in diverse processtappen binnen Monitoring;\n\n- Ontwikkelen van nieuwe toewijzingsregels;\n\n- Bewaking van de afgesproken uitvoering van Monitoringsproces (registratie, fiattering, verificatie en arbitrage) volgens de richtlijnen van de toewijzingsregels.',
+                        '- Geven van advies over de registratie in Monitoring;\n- Gevraagd en ongevraagd advies over hoe de registratie in Monitoring zou moeten (huidig en toekomstig);\n- Initiatie van kwaliteitsverbeteringen en aanpassingen in het Monitoringsproces;\n- Ondersteunen bij verbeterprojecten in Monitoring;\n- Instructie over Monitoring in diverse processtappen binnen Monitoring;\n- Ontwikkelen van nieuwe toewijzingsregels;\n- Bewaking van de afgesproken uitvoering van Monitoringsproces (registratie, fiattering, verificatie en arbitrage) volgens de richtlijnen van de toewijzingsregels.',
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -317,7 +317,7 @@ class AIMonitoring extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Informatie over de ontwikkeling van de prestaties van ProRail;\n\n- Informatie voor analyse en onderzoek van incidenten en storingen;\n\n- Ontwerpen en ontwikkelen van maatregelen om de dienstverlening van ProRail en derden te verbeteren;\n\n- Onderbouwing van keuzes met betrekking tot investeringen.',
+                        '- Informatie over de ontwikkeling van de prestaties van ProRail;\n- Informatie voor analyse en onderzoek van incidenten en storingen;\n- Ontwerpen en ontwikkelen van maatregelen om de dienstverlening van ProRail en derden te verbeteren;\n- Onderbouwing van keuzes met betrekking tot investeringen.',
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -353,8 +353,8 @@ class AIMonitoringNavigation extends StatelessWidget {
           await Navigator.pushNamed(context, 'home_screen');
         } else if (result == PopupNavigation.ww_vertragingen) {
           await Navigator.pushNamed(context, 'ww_vertragingen');
-        } else if (result == PopupNavigation.ai_vertragingen) {
-          await Navigator.pushNamed(context, 'ai_vertragingen');
+        } else if (result == PopupNavigation.ai_vertragingen_basis) {
+          await Navigator.pushNamed(context, 'ai_vertragingen_basis');
         } else if (result == PopupNavigation.ai_klanthinder) {
           await Navigator.pushNamed(context, 'ai_klanthinder');
         } else {
@@ -377,7 +377,7 @@ class AIMonitoringNavigation extends StatelessWidget {
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
-          value: PopupNavigation.ai_vertragingen,
+          value: PopupNavigation.ai_vertragingen_basis,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Vertragingen',

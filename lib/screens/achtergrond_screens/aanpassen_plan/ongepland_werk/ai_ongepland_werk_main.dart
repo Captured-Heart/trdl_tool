@@ -63,7 +63,7 @@ class AIOngeplandWerkMain extends StatelessWidget {
                       SizedBoxH(),
                       NavButton(
                         buttontext: 'Inzetten railvoertuig (ICB)',
-                        destination: 'ai_inzetten_railvoertuig',
+                        destination: 'ai_inzet_railvoertuig_icb',
                       ),
                     ],
                   ),

@@ -1,7 +1,7 @@
 import '/all_imports.dart';
 
-class AIVertragingen extends StatelessWidget {
-  const AIVertragingen({Key? key}) : super(key: key);
+class AIVertragingenBasis extends StatelessWidget {
+  const AIVertragingenBasis({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class AIVertragingen extends StatelessWidget {
           title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
-          AIVertragingenNavigation(),
+          AIVertragingenBasisNavigation(),
           HomeButton(),
         ],
       ),
@@ -35,7 +35,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- N = Nader Bericht;\n\n- V = Voorwaardelijke vertraging;\n\n- E = Exacte vertraging.',
+                        '- N = Nader Bericht;\n- V = Voorwaardelijke vertraging;\n- E = Exacte vertraging.',
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -51,7 +51,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- TRDL voert NB in via PRL;\n\n- De DVL voert het in via VOS;\n\n- De Grensdisponent of de VLCG voert het in voor grens-in verkeer via VOS;\n\n- Een goederenvervoerder voert het in op een vertrekstation in Nederland via RMS.',
+                        '- TRDL voert NB in via PRL;\n- De DVL voert het in via VOS;\n- De Grensdisponent of de VLCG voert het in voor grens-in verkeer via VOS;\n- Een goederenvervoerder voert het in op een vertrekstation in Nederland via RMS.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -73,7 +73,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Jij voert de voorwaardelijke vertraging in via PRL na uitvraag van een prognose;\n\n- De DVL voert het in via VOS;\n\n- De Grensdisponent of de VLCG voert het in voor grens-in verkeer via VOS.',
+                        '- Jij voert de voorwaardelijke vertraging in via PRL na uitvraag van een prognose;\n- De DVL voert het in via VOS;\n- De Grensdisponent of de VLCG voert het in voor grens-in verkeer via VOS.',
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -102,7 +102,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Blijft het plan actueel;\n\n- Worden meekijkers automatisch op de hoogte gebracht;\n\n- Kan ARI opdracht blijven geven tot het instellen van rijwegen.',
+                        '- Blijft het plan actueel;\n- Worden meekijkers automatisch op de hoogte gebracht;\n- Kan ARI opdracht blijven geven tot het instellen van rijwegen.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -114,19 +114,19 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Verwerk vertraging;\n\n- Aansluitingen en gevolgen (TAD);\n\n- Stationnement;\n\n- Spoorgebruik (afwijken/treinlengte);\n\n- Volgorde vrije baan;\n\n- Invoer voorwaardelijke vertraging.',
+                        '- Verwerk vertraging;\n- Aansluitingen en gevolgen (TAD);\n- Stationnement;\n- Spoorgebruik (afwijken/treinlengte);\n- Volgorde vrije baan;\n- Invoer voorwaardelijke vertraging.',
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 0,
                     text:
-                        'Door deze stappen te doorlopen, ga je bewust om met de gevolgen van vertraging.\n\nWat houdt dit nu in:',
+                        'Door deze stappen te doorlopen, ga je bewust om met de gevolgen van vertraging.\nWat houdt dit nu in:',
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
-                        '- Allereerst Verwerk je de vertraging in het plan;\n\n- Check of er Aansluitingen zijn met andere treinen;\n\n- Check of er een Stationnement is dat ingekort kan worden;\n\n- Check of het aankomstspoor vrij is of dat je moet afwijken (Spoorgebruik;\n\n- Check of de trein(en) nog in dezelfde Volgorde vertrek(ken) naar de vrije baan;\n\n- Check of er treinen zijn die een aansluiting overnemen, of die keren onder een ander nummer en daardoor ook vertraging krijgen. Als dat het geval is moet je voorwaardelijke vertraging Invoeren.',
+                        '- Allereerst Verwerk je de vertraging in het plan;\n- Check of er Aansluitingen zijn met andere treinen;\n- Check of er een Stationnement is dat ingekort kan worden;\n- Check of het aankomstspoor vrij is of dat je moet afwijken (Spoorgebruik;\n- Check of de trein(en) nog in dezelfde Volgorde vertrek(ken) naar de vrije baan;\n- Check of er treinen zijn die een aansluiting overnemen, of die keren onder een ander nummer en daardoor ook vertraging krijgen. Als dat het geval is moet je voorwaardelijke vertraging Invoeren.',
                   ),
                 ],
               ),
@@ -150,7 +150,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- De rijweg leidt naar hetzelfde eindspoor;\n\n- De insteltijd is eerder dan de insteltijd van de in te stellen rijweg;\n\n- De insteltijd is gelijk aan de insteltijd van de in te stellen rijweg;\n\n- De plantijd is eerder of gelijk aan de plantijd van de in te stellen rijweg;\n\n- De rijweg is nog niet tot en met het conflictspoor ingesteld.',
+                        '- De rijweg leidt naar hetzelfde eindspoor;\n- De insteltijd is eerder dan de insteltijd van de in te stellen rijweg;\n- De insteltijd is gelijk aan de insteltijd van de in te stellen rijweg;\n- De plantijd is eerder of gelijk aan de plantijd van de in te stellen rijweg;\n- De rijweg is nog niet tot en met het conflictspoor ingesteld.',
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -185,32 +185,74 @@ class AIVertragingen extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   BodyText(
-                    indents: 1,
-                    text:
-                        '- Treingerelateerde afspraken - Deze zijn gebundeld in het TreinAfhandelingsDocument (TAD):',
+                    indents: 0,
+                    text: 'Treingerelateerde afspraken, gebundeld in:',
                   ),
-                  SizedBoxH(),
-                  BodyText(
-                    indents: 2,
-                    text:
-                        "* WRT (Wachttijden Reizigerstreinen);\n\n* Afhandelingsstrategieën per trein/treinserie;\n\n* If/Then scenario's.",
-                  ),
-                  SizedBoxH(),
                   BodyText(
                     indents: 1,
-                    text: '- Infragerelateerde afspraken:',
+                    text:
+                        "- Leidraden;\n- TAD'en, deze bevatten: WRT (Wachttijden Reizigerstreinen en Afhandelingsstrategieen per trein(serie) in de vorm van if/then scenario's.",
                   ),
                   SizedBoxH(),
                   BodyText(
-                    indents: 2,
+                    indents: 0,
+                    text: 'Infragerelateerde afspraken:',
+                  ),
+                  BodyText(
+                    indents: 1,
                     text:
-                        '* Versperringsmaatregelen;\n\n* Knooppuntmaatregelen;\n\n* Ontkoppelmaatregelen;\n\n* Maatregelen voor extreme weersomstandigheden.',
+                        '- Versperringsmaatregelen;\n- Knooppuntmaatregelen;\n- Ontkoppelmaatregelen;\n- Maatregelen voor extreme weersomstandigheden.',
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 0,
                     text:
-                        'Indien spoorwegondernemingen of de verkeersleider in concrete gevallen van de afspraken willen afwijken, dan vindt hierover tijdig afstemming plaats.',
+                        'Indien spoorwegondernemingen of de verkeersleider in concrete gevallen van de afspraken willen afwijken, dan vindt hierover tijdig afstemming plaats.\nDaarnaast zijn er maatregelen die in het hier en nu worden bedacht, maar wel onderdeel kunnen zijn van de leidraad voor een corridor:',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 1,
+                    text:
+                        '- Ontluchtingsmaatregelen t.b.v. Fase 1 of beperkingen in gebruik van de infra/werkdruk',
+                  ),
+                  SizedBoxH(),
+                  BoldText(
+                    indents: 0,
+                    boldtext: 'Treingerelateerde afspraken',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        "Om snel en adequaat de kunnen bijsturen, heeft VL zoveel mogelijk vooraf gedefinieerde afspraken gemaakt met vervoerders en AM bij treingerelateerde vertragingen, zoals TAD'en en leidraden voor bijsturing. Deze zijn bedoeld om snel en met een minimum aan communicatie te kunnen bijsturen bij planafwijkingen.\nDe bijsturingsbesluiten worden door de DVL onder gedelegeerde bevoegdheid en/of in afstemming met de VLC genomen. Omwille van slagvaardigheid en voorspelbaarheid is een deel van de bijsturingsbesluiten daarop weer gedelegeerd naar de TRDL.",
+                  ),
+                  SizedBoxH(),
+                  BoldText(
+                    indents: 0,
+                    boldtext: 'Leidraad',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text:
+                        'Er is per belangrijke reizigerscorridor een leidraad aanwezig waarin de bijsturingsdoelen van het treinverkeer in zijn opgenomen. Binnen deze leidraden zijn beschreven:',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 1,
+                    text:
+                        '- Landelijke bijsturingsdoelen;\n- Bijsturingsdoelen van de corridor;\n- Te hanteren kaders door Prorail VM;\n- Bijbehorende bijsturingsopdrachten en principes;\n- Logistieke kaart van de corridor met de logistieke mogelijkheden.',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 0,
+                    text: 'Uitgangspunten',
+                  ),
+                  SizedBoxH(),
+                  BodyText(
+                    indents: 1,
+                    text:
+                        '- Deze vooraf gedefinieerde afhandelingsafspraken worden toegepast (mits passend binnen het genomen verdelingsbesluit;\n- Er wordt zo min mogelijk van deze afspraken afgeweken;\n- Het plan wordt waar mogelijk door de DVL aangepast na besluitvorming binnen het proces VM.',
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -230,7 +272,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- De WRT geeft voor elk knooppunt aan hoe lang treinen mogen wachten op een aansluiting bij vertraagd aankomende treinen. En geeft weer wat de uiterlijke vertrektijd is van de wachtende trein.\n\n- Als twee treinen vertraagd zijn die normaliter aansluiting op elkaar overnemen, geldt de WRT niet;\n\n- De WRT bepaalt tevens de laatste aansluitingen van reizigerstreinen bij het einde van de reizigersdienst.',
+                        '- De WRT geeft voor elk knooppunt aan hoe lang treinen mogen wachten op een aansluiting bij vertraagd aankomende treinen. En geeft weer wat de uiterlijke vertrektijd is van de wachtende trein.\n- Als twee treinen vertraagd zijn die normaliter aansluiting op elkaar overnemen, geldt de WRT niet;\n- De WRT bepaalt tevens de laatste aansluitingen van reizigerstreinen bij het einde van de reizigersdienst.',
                   ),
                   SizedBoxH(),
                   InsertImage(
@@ -250,7 +292,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- In de afhandelingsstrategie is per station aangegeven wat er moet gebeuren met een oplopende vertraging;\n\n- Voorkomt het ontstaan van een domino-effect bij vertragingen;\n\n- Zorgt ervoor dat er geen verdringing plaatsvindt van andere spoorwegondernemingen.',
+                        '- In de afhandelingsstrategie is per station aangegeven wat er moet gebeuren met een oplopende vertraging;\n- Voorkomt het ontstaan van een domino-effect bij vertragingen;\n- Zorgt ervoor dat er geen verdringing plaatsvindt van andere spoorwegondernemingen.',
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -260,7 +302,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        "- If/Then-scenario's zijn bedoeld voor vertragingen in de treindienst die op de knoop ontstaan;\n\n- Ze worden van kracht als een trein een vooraf bepaalde vertragingsmarge overschrijdt;\n\n- De TRDL is bevoegd de treindienst op zijn knoop af te wikkelen volgens de if/then-scenario's.",
+                        "- If/Then-scenario's zijn bedoeld voor vertragingen in de treindienst die op de knoop ontstaan;\n- Ze worden van kracht als een trein een vooraf bepaalde vertragingsmarge overschrijdt;\n- De TRDL is bevoegd de treindienst op zijn knoop af te wikkelen volgens de if/then-scenario's.",
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -276,7 +318,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Een nieuw actueel plan te kunnen communiceren;\n\n- Transparant te zijn richting vervoerders en hun klanten betreffende dit nieuwe actuele plan en de eventuele omleidingsroutes;\n\n- Punctueel te zijn op de niet versperde baanvakken;\n\n- Reizigers via omleidingsroutes te laten leiden door vervoerders.',
+                        '- Een nieuw actueel plan te kunnen communiceren;\n- Transparant te zijn richting vervoerders en hun klanten betreffende dit nieuwe actuele plan en de eventuele omleidingsroutes;\n- Punctueel te zijn op de niet versperde baanvakken;\n- Reizigers via omleidingsroutes te laten leiden door vervoerders.',
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -325,7 +367,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- 1e trein reizigers - 2e trein reizigers: 3 minuten;\n\n- 1e trein reizigers - 2e trein goederen: 3 minuten;\n\n- 1e trein goederen - 2e trein reizigers: 4 minuten;\n\n- 1e trein goederen - 2e trein goederen: 4 minuten;',
+                        '- 1e trein reizigers - 2e trein reizigers: 3 minuten;\n- 1e trein reizigers - 2e trein goederen: 3 minuten;\n- 1e trein goederen - 2e trein reizigers: 4 minuten;\n- 1e trein goederen - 2e trein goederen: 4 minuten;',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -337,7 +379,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- 1e trein aankomst - 2e trein door: 2 minuten;\n\n- 1e trein door - 2e trein vertrek: 2 minuten;',
+                        '- 1e trein aankomst - 2e trein door: 2 minuten;\n- 1e trein door - 2e trein vertrek: 2 minuten;',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -412,7 +454,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Dat er moeilijkheden zijn met reizigers te laten in- of overstappen;\n\n- Dat er nog treinstellen gecombineerd moeten worden, of;\n\n- Dat een storingsmonteur tijdens de stop van een treinstel een storing verhelpt.',
+                        '- Dat er moeilijkheden zijn met reizigers te laten in- of overstappen;\n- Dat er nog treinstellen gecombineerd moeten worden, of;\n- Dat een storingsmonteur tijdens de stop van een treinstel een storing verhelpt.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -424,7 +466,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        "- Welke trein de klaarmelding moet ontvangen;\n\n- Waarom;\n\n- De prognose;\n\n- Wie er verantwoordelijk is voor het 'klaarmelden' van de trein op het moment dat deze weer gereed is voor vertrek.",
+                        "- Welke trein de klaarmelding moet ontvangen;\n- Waarom;\n- De prognose;\n- Wie er verantwoordelijk is voor het 'klaarmelden' van de trein op het moment dat deze weer gereed is voor vertrek.",
                   ),
                   SizedBoxH(),
                   BoldText(
@@ -440,7 +482,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        "- In je planscherm zoek je de planregel op van de betreffende trein. Deze muteer je naar het mutatievenster.\n\n- Klik in het mutatievenster op de 'K' van Klaarmelding. Er opent zich nu een pop-up venster.",
+                        "- In je planscherm zoek je de planregel op van de betreffende trein. Deze muteer je naar het mutatievenster.\n- Klik in het mutatievenster op de 'K' van Klaarmelding. Er opent zich nu een pop-up venster.",
                   ),
                   SizedBoxH(),
                   InsertImage(
@@ -451,7 +493,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        "- In het venster kun je één of meerdere klaarmeldingen aan de planregel toevoegen. Vul de reden van de klaarmelding in en noteer welke functionaris verantwoordelijk is.\n\n- Als je de melding hebt toegevoegd, klik je op 'Voer In'. De pop-up verdwijnt weer.",
+                        "- In het venster kun je één of meerdere klaarmeldingen aan de planregel toevoegen. Vul de reden van de klaarmelding in en noteer welke functionaris verantwoordelijk is.\n- Als je de melding hebt toegevoegd, klik je op 'Voer In'. De pop-up verdwijnt weer.",
                   ),
                   SizedBoxH(),
                   InsertImage(
@@ -462,7 +504,7 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        "- Je kunt nu in het mutatiescherm zien dat de planregel een klaarmelding heeft, omdat de 'K' dikgedrukt wordt weergegeven.\n\n- Je kunt de planregel nu weer invoeren in het plan met 'Voer in plan' of 'Voer alles in plan'.",
+                        "- Je kunt nu in het mutatiescherm zien dat de planregel een klaarmelding heeft, omdat de 'K' dikgedrukt wordt weergegeven.\n- Je kunt de planregel nu weer invoeren in het plan met 'Voer in plan' of 'Voer alles in plan'.",
                   ),
                   SizedBoxH(),
                   InsertImage(
@@ -488,19 +530,19 @@ class AIVertragingen extends StatelessWidget {
                   BodyText(
                     indents: 0,
                     text:
-                        'Wanneer een rijweg ingesteld wordt terwijl de klaarmelding(en) nog niet is afgevinkt, dan geeft PRL een waarschuwing.\n\nOm een klaarmelding af te vinken, handel je als volgt:',
+                        'Wanneer een rijweg ingesteld wordt terwijl de klaarmelding(en) nog niet is afgevinkt, dan geeft PRL een waarschuwing.\nOm een klaarmelding af te vinken, handel je als volgt:',
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 1,
                     text:
-                        "- Selecteer de betreffende planregel met de klaarmelding;\n\n- Ga nu naar de planmenubalk en klik op de functieknop 'Klaar'. Er opent een zelfde pop-up als bij de waarschuwing;\n\n- Klik op elke klaarmelding die voor deze treinactiviteit is binnengekomen op het ruitje onder 'Ja'.",
+                        "- Selecteer de betreffende planregel met de klaarmelding;\n- Ga nu naar de planmenubalk en klik op de functieknop 'Klaar'. Er opent een zelfde pop-up als bij de waarschuwing;\n- Klik op elke klaarmelding die voor deze treinactiviteit is binnengekomen op het ruitje onder 'Ja'.",
                   ),
                   SizedBoxH(),
                   BodyText(
                     indents: 0,
                     text:
-                        "Hierna kun je de pop-up sluiten door op 'Voer in' te klikken.\n\nAls alle klaarmeldingen zijn afgevinkt zal de 'K' in de planregel (in het planscherm) veranderen in een '-'.\n\nDoor op deze manier een klaarmelding af te handelen weet iedereen die met jou meekijkt ook dat de trein is klaargemeld. Als je de planregel zou instellen zonder de klaarmelding af te handelen, blijft de 'K' ook in de historie achter de planregel staan.",
+                        "Hierna kun je de pop-up sluiten door op 'Voer in' te klikken.\nAls alle klaarmeldingen zijn afgevinkt zal de 'K' in de planregel (in het planscherm) veranderen in een '-'.\nDoor op deze manier een klaarmelding af te handelen weet iedereen die met jou meekijkt ook dat de trein is klaargemeld. Als je de planregel zou instellen zonder de klaarmelding af te handelen, blijft de 'K' ook in de historie achter de planregel staan.",
                   ),
                 ],
               ),
@@ -512,8 +554,8 @@ class AIVertragingen extends StatelessWidget {
   }
 }
 
-class AIVertragingenNavigation extends StatelessWidget {
-  const AIVertragingenNavigation({Key? key}) : super(key: key);
+class AIVertragingenBasisNavigation extends StatelessWidget {
+  const AIVertragingenBasisNavigation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

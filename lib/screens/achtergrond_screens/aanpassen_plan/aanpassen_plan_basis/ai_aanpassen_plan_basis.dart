@@ -1,7 +1,7 @@
 import '/all_imports.dart';
 
-class AIAanpassenPlan extends StatelessWidget {
-  const AIAanpassenPlan({Key? key}) : super(key: key);
+class AIAanpassenPlanBasis extends StatelessWidget {
+  const AIAanpassenPlanBasis({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class AIAanpassenPlan extends StatelessWidget {
           title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
-          AIAanpassenPlanNavigation(),
+          AIAanpassenPlanBasisNavigation(),
           HomeButton(),
         ],
       ),
@@ -35,7 +35,7 @@ class AIAanpassenPlan extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Ter voorkoming van gevaar;\n\n- Bij lokale en bovenlokale aanvragen;\n\n- Bij een verzoek van de verkeersleider;\n\n- In geval van ontregelingen.',
+                        '- Ter voorkoming van gevaar;\n- Bij lokale en bovenlokale aanvragen;\n- Bij een verzoek van de verkeersleider;\n- In geval van ontregelingen.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -85,7 +85,7 @@ class AIAanpassenPlan extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- Houd de trein zoveel mogelijk rijdend;\n\n- Zet de trein niet aan de kant;\n\n- Zorg dat gewenste aanpassingen m.b.t. voorbrengen materieel via het lokale orderproces worden aangevraagd;\n\n- Zorg dat vertragings- en vervroegingsoorzaken worden verklaard in monitoring.',
+                        '- Houd de trein zoveel mogelijk rijdend;\n- Zet de trein niet aan de kant;\n- Zorg dat gewenste aanpassingen m.b.t. voorbrengen materieel via het lokale orderproces worden aangevraagd;\n- Zorg dat vertragings- en vervroegingsoorzaken worden verklaard in monitoring.',
                   ),
                 ],
               ),
@@ -225,7 +225,7 @@ class AIAanpassenPlan extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- 1e reizigerstrein - 2e reizigerstrein: 3 minuten;\n\n- 1e reizigerstrein - 2e goederentrein: 3 minuten;\n\n- 1e goederentrein - 2e reizigerstrein: 4 minuten;\n\n- 1e goederentrein - 2e goederentrein: 4 minuten.',
+                        '- 1e reizigerstrein - 2e reizigerstrein: 3 minuten;\n- 1e reizigerstrein - 2e goederentrein: 3 minuten;\n- 1e goederentrein - 2e reizigerstrein: 4 minuten;\n- 1e goederentrein - 2e goederentrein: 4 minuten.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -237,7 +237,7 @@ class AIAanpassenPlan extends StatelessWidget {
                   BodyText(
                     indents: 1,
                     text:
-                        '- 1e trein aankomst - 2e trein door: 2 minuten;\n\n- 1e trein door - 2e trein vertrek: 2 minuten.',
+                        '- 1e trein aankomst - 2e trein door: 2 minuten;\n- 1e trein door - 2e trein vertrek: 2 minuten.',
                   ),
                   SizedBoxH(),
                   BodyText(
@@ -304,7 +304,7 @@ class AIAanpassenPlan extends StatelessWidget {
                     boldtext: 'Corridor:',
                   ),
                   const BodyText(
-                    indents: 1,
+                    indents: 0,
                     text:
                         'Een belangrijke verbinding tussen drukke gebieden, waarover vervoer van goederen of personen plaatsvindt. Een spoorcorridor kan uit verschillende lijnen bestaan.',
                   ),
@@ -314,7 +314,7 @@ class AIAanpassenPlan extends StatelessWidget {
                     boldtext: 'Corridorsturing:',
                   ),
                   const BodyText(
-                    indents: 1,
+                    indents: 0,
                     text:
                         'Het onderling onafhankelijk plannen van verkeer uit verschillende corridors. Hierbij wordt de infrastructuur zoveel mogelijk gescheiden naar corridor. Verkeer over infra die tussen corridors ligt, wordt zoveel mogelijk vermeden. Concreet houdt dit in dat men de corridors zoveel mogelijk vrijhoudt voor de corridortreinen en andere (extra) treinen over andere sporen inlegt. Ook mogen treinen die corridors kruisen deze niet negatief beïnvloeden.',
                   ),
@@ -527,8 +527,8 @@ class AIAanpassenPlan extends StatelessWidget {
   }
 }
 
-class AIAanpassenPlanNavigation extends StatelessWidget {
-  const AIAanpassenPlanNavigation({Key? key}) : super(key: key);
+class AIAanpassenPlanBasisNavigation extends StatelessWidget {
+  const AIAanpassenPlanBasisNavigation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -542,8 +542,8 @@ class AIAanpassenPlanNavigation extends StatelessWidget {
           await Navigator.pushNamed(context, 'ww_aanpassen_plan_main');
         } else if (result == PopupNavigation.ai_orderacceptatie) {
           await Navigator.pushNamed(context, 'ai_orderacceptatie');
-        } else if (result == PopupNavigation.ai_vertragingen) {
-          await Navigator.pushNamed(context, 'ai_vertragingen');
+        } else if (result == PopupNavigation.ai_vertragingen_main) {
+          await Navigator.pushNamed(context, 'ai_vertragingen_main');
         } else if (result == PopupNavigation.ai_ongepland_werk_main) {
           await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
         } else if (result == PopupNavigation.ai_stappenplan_versperringen) {
@@ -578,7 +578,7 @@ class AIAanpassenPlanNavigation extends StatelessWidget {
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
-          value: PopupNavigation.ai_vertragingen,
+          value: PopupNavigation.ai_vertragingen_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Vertragingen',

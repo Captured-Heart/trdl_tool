@@ -1,7 +1,7 @@
 import '/all_imports.dart';
 
-class AIInfraTerBeschikking extends StatelessWidget {
-  const AIInfraTerBeschikking({Key? key}) : super(key: key);
+class AIInfraBeschikbaarStellen extends StatelessWidget {
+  const AIInfraBeschikbaarStellen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class AIInfraTerBeschikking extends StatelessWidget {
           title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
-          AIInfraTerBeschikkingNavigation(),
+          AIInfraBeschikbaarStellenNavigation(),
           HomeButton(),
         ],
       ),
@@ -78,8 +78,8 @@ class AIInfraTerBeschikking extends StatelessWidget {
   }
 }
 
-class AIInfraTerBeschikkingNavigation extends StatelessWidget {
-  const AIInfraTerBeschikkingNavigation({Key? key}) : super(key: key);
+class AIInfraBeschikbaarStellenNavigation extends StatelessWidget {
+  const AIInfraBeschikbaarStellenNavigation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -91,8 +91,6 @@ class AIInfraTerBeschikkingNavigation extends StatelessWidget {
           await Navigator.pushNamed(context, 'home_screen');
         } else if (result == PopupNavigation.ww_ongepland_werk_infra) {
           await Navigator.pushNamed(context, 'ww_ongepland_werk_infra');
-        } else if (result == PopupNavigation.ai_ongepland_werk_main) {
-          await Navigator.pushNamed(context, 'ai_ongepland_werk_main');
         } else if (result == PopupNavigation.ai_ongepland_werk_materieel) {
           await Navigator.pushNamed(
             context,
@@ -115,13 +113,6 @@ class AIInfraTerBeschikkingNavigation extends StatelessWidget {
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Ongepland Werk',
-          ),
-        ),
-        const PopupMenuItem<PopupNavigation>(
-          value: PopupNavigation.ai_ongepland_werk_main,
-          child: MenuItemContent(
-            icon: IconUtils.iconAI,
-            text: 'AI Ongepland Werk',
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
