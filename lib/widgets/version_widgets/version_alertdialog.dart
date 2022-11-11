@@ -13,7 +13,15 @@ Future<dynamic> showVersionUpdatePopup(BuildContext context) {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: const <Widget>[
                 CurrentVersion(
-                  versionNumber: '0.3.2',
+                  versionNumber: '0.3.3',
+                ),
+                SizedBoxH(),
+                DateChanged(
+                  date: '2022-11-11: 0.3.3',
+                ),
+                ChangesMade(
+                  changes:
+                      '- Achtergrondinformatie verder uitgebreid (18);\n- Alle enums tbv navigatie verplaatst;\n- Utils class verder uitgebreid;\n- Firebase hersteld en refactored.',
                 ),
                 SizedBoxH(),
                 DateChanged(
