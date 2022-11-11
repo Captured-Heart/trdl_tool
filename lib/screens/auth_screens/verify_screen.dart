@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import '/all_imports.dart';
 
 class VerifyScreen extends StatefulWidget {
@@ -25,11 +24,14 @@ class VerifyScreenState extends State<VerifyScreen> {
   //Function that checks if currentUser is NOT null and NOT emailverified -> Send verification email.
   Future<void> _waitForEmailVerification() async {
     if (currentUser != null && !currentUser!.emailVerified) {
+      Logger().i('Sending verification email...');
       await currentUser!.sendEmailVerification();
     }
 
     //Timer checks if user clicked on verification every 5 seconds
     timer = Timer.periodic(const Duration(seconds: 5), (Timer timer) {
+      Logger()
+          .i('Checking every 5 seconds if user pressed Verification Link...');
       checkEmailVerified();
     });
   }
@@ -43,6 +45,7 @@ class VerifyScreenState extends State<VerifyScreen> {
     if (currentUser!.emailVerified) {
       timer.cancel();
       if (mounted) {
+        Logger().i('Success! Going to LoginScreen()');
         await Navigator.pushReplacementNamed(
           context,
           'login_screen',

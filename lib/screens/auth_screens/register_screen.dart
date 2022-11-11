@@ -188,7 +188,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   }
                                   //Catch all other errors, show to log and return Snackbar notifying user
                                   catch (errorMessage) {
-                                    Logger().i('Error: $errorMessage');
+                                    Logger().w('Error: $errorMessage');
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
                                         content: Text(
