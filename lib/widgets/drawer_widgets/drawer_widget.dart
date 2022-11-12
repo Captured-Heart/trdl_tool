@@ -44,6 +44,17 @@ Widget drawerWidget =
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
+                const Text('Instellingen'),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.settings_outlined),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
                 //WATCH the themeModeStringProvider here, it
                 //returns the current String for the themeMode
                 Text('Theme: ${ref.watch(themeModeStringProvider)}'),
