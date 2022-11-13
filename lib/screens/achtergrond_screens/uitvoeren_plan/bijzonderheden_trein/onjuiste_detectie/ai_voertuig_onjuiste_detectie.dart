@@ -1,18 +1,7 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIOnjuisteDetectie {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_onjuiste_detectie,
-  // ignore: constant_identifier_names
-  ai_bijzonderheden_trein,
-  // ignore: constant_identifier_names
-  ai_vervoersregeling,
-}
-
-class AIOnjuisteDetectie extends StatelessWidget {
-  const AIOnjuisteDetectie({Key? key}) : super(key: key);
+class AIVoertuigOnjuistDetectie extends StatelessWidget {
+  const AIVoertuigOnjuistDetectie({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +12,7 @@ class AIOnjuisteDetectie extends StatelessWidget {
           title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
-          AIOnjuisteDetectieNavigation(),
+          AIVoertuigOnjuisteDetectieNavigation(),
           HomeButton(),
         ],
       ),
@@ -98,55 +87,51 @@ class AIOnjuisteDetectie extends StatelessWidget {
   }
 }
 
-class AIOnjuisteDetectieNavigation extends StatelessWidget {
-  const AIOnjuisteDetectieNavigation({Key? key}) : super(key: key);
+class AIVoertuigOnjuisteDetectieNavigation extends StatelessWidget {
+  const AIVoertuigOnjuisteDetectieNavigation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIOnjuisteDetectie>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIOnjuisteDetectie result) async {
-        if (result == WhereToGoFromAIOnjuisteDetectie.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIOnjuisteDetectie.ww_onjuiste_detectie) {
-          await Navigator.pushNamed(context, 'ww_onjuiste_detectie');
-        } else if (result ==
-            WhereToGoFromAIOnjuisteDetectie.ai_bijzonderheden_trein) {
+        } else if (result == PopupNavigation.ww_voertuig_onjuiste_detectie) {
+          await Navigator.pushNamed(context, 'ww_voertuig_onjuiste_detectie');
+        } else if (result == PopupNavigation.ai_bijzonderheden_trein) {
           await Navigator.pushNamed(context, 'ai_bijzonderheden_trein');
-        } else if (result ==
-            WhereToGoFromAIOnjuisteDetectie.ai_vervoersregeling) {
+        } else if (result == PopupNavigation.ai_vervoersregeling) {
           await Navigator.pushNamed(context, 'ai_vervoersregeling');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIOnjuisteDetectie>>[
-        const PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
-          value: WhereToGoFromAIOnjuisteDetectie.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
-          value: WhereToGoFromAIOnjuisteDetectie.ww_onjuiste_detectie,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_voertuig_onjuiste_detectie,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Onjuiste Detectie',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
-          value: WhereToGoFromAIOnjuisteDetectie.ai_bijzonderheden_trein,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bijzonderheden_trein,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Trein',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIOnjuisteDetectie>(
-          value: WhereToGoFromAIOnjuisteDetectie.ai_vervoersregeling,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_vervoersregeling,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Vervoersregeling',

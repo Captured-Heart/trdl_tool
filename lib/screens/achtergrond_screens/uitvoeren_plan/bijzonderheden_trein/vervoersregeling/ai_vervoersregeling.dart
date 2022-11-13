@@ -1,16 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIVervoersregeling {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_vervoersregeling,
-  // ignore: constant_identifier_names
-  ai_bijzonderheden_trein,
-  // ignore: constant_identifier_names
-  ai_onjuiste_detectie,
-}
-
 class AIVervoersregeling extends StatelessWidget {
   const AIVervoersregeling({Key? key}) : super(key: key);
 
@@ -283,50 +272,46 @@ class AIVervoersregelingNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIVervoersregeling>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIVervoersregeling result) async {
-        if (result == WhereToGoFromAIVervoersregeling.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIVervoersregeling.ww_vervoersregeling) {
+        } else if (result == PopupNavigation.ww_vervoersregeling) {
           await Navigator.pushNamed(context, 'ww_vervoersregeling');
-        } else if (result ==
-            WhereToGoFromAIVervoersregeling.ai_bijzonderheden_trein) {
-          await Navigator.pushNamed(context, 'ai_bijzonderheden_trein');
-        } else if (result ==
-            WhereToGoFromAIVervoersregeling.ai_onjuiste_detectie) {
-          await Navigator.pushNamed(context, 'ai_onjuiste_detectie');
+        } else if (result == PopupNavigation.ai_bijzonderheden_trein_basis) {
+          await Navigator.pushNamed(context, 'ai_bijzonderheden_trein_basis');
+        } else if (result == PopupNavigation.ai_voertuig_onjuiste_detectie) {
+          await Navigator.pushNamed(context, 'ai_voertuig_onjuiste_detectie');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIVervoersregeling>>[
-        const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
-          value: WhereToGoFromAIVervoersregeling.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
-          value: WhereToGoFromAIVervoersregeling.ww_vervoersregeling,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_vervoersregeling,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Vervoersregeling',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
-          value: WhereToGoFromAIVervoersregeling.ai_bijzonderheden_trein,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bijzonderheden_trein_basis,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Trein',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIVervoersregeling>(
-          value: WhereToGoFromAIVervoersregeling.ai_onjuiste_detectie,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_voertuig_onjuiste_detectie,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Onjuiste Detectie',

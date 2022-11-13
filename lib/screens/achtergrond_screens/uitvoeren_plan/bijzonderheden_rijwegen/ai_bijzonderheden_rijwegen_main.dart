@@ -1,14 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIBijzonderhedenRijwegenMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_bijzonderheden_rijwegen_main,
-  // ignore: constant_identifier_names
-  ww_kop_van_trein_voorbij_sein,
-}
-
 class AIBijzonderhedenRijwegenMain extends StatelessWidget {
   const AIBijzonderhedenRijwegenMain({Key? key}) : super(key: key);
 
@@ -46,6 +37,11 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const <Widget>[
                       NavButton(
+                        buttontext: 'Bijzonderheden Rijwegen - Werkwijze',
+                        destination: 'ww_bijzonderheden_rijwegen_main',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
                         buttontext: 'Inzetten railvoertuig (ICB)',
                         destination: 'ai_inzetten_icb',
                       ),
@@ -66,18 +62,18 @@ class AIBijzonderhedenRijwegenMain extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       NavButton(
+                        buttontext: 'Rijwegen - Bedienscherm',
+                        destination: 'ai_rijwegen_bedienscherm',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
                         buttontext: 'Rijwegen - ARI',
                         destination: 'ai_rijwegen_ari',
                       ),
                       SizedBoxH(),
                       NavButton(
                         buttontext: 'Rijwegen - TROTS en ABT',
-                        destination: 'ai_rijwegen_trots',
-                      ),
-                      SizedBoxH(),
-                      NavButton(
-                        buttontext: 'Rijwegen - Bedienscherm',
-                        destination: 'ai_rijwegen_bedienscherm',
+                        destination: 'ai_rijwegen_trots_abt',
                       ),
                     ],
                   ),
@@ -106,22 +102,18 @@ class AIBijzonderhedenRijwegenMainNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIBijzonderhedenRijwegenMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIBijzonderhedenRijwegenMain result) async {
-        if (result == WhereToGoFromAIBijzonderhedenRijwegenMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIBijzonderhedenRijwegenMain
-                .ww_bijzonderheden_rijwegen_main) {
+        } else if (result == PopupNavigation.ww_bijzonderheden_rijwegen_main) {
           await Navigator.pushNamed(
             context,
             'ww_bijzonderheden_rijwegen_main',
           );
-        } else if (result ==
-            WhereToGoFromAIBijzonderhedenRijwegenMain
-                .ww_kop_van_trein_voorbij_sein) {
+        } else if (result == PopupNavigation.ww_kop_van_trein_voorbij_sein) {
           await Navigator.pushNamed(
             context,
             'ww_kop_van_trein_voorbij_sein',
@@ -130,26 +122,23 @@ class AIBijzonderhedenRijwegenMainNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIBijzonderhedenRijwegenMain>>[
-        const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
-          value: WhereToGoFromAIBijzonderhedenRijwegenMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
-          value: WhereToGoFromAIBijzonderhedenRijwegenMain
-              .ww_bijzonderheden_rijwegen_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_bijzonderheden_rijwegen_main,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Bijzonderheden Rijwegen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIBijzonderhedenRijwegenMain>(
-          value: WhereToGoFromAIBijzonderhedenRijwegenMain
-              .ww_kop_van_trein_voorbij_sein,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_kop_van_trein_voorbij_sein,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Kop van Trein Voorbij Sein',

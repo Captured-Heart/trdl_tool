@@ -1,14 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIWerkzones {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_geplande_werkzaamheden_main,
-  // ignore: constant_identifier_names
-  ai_aanvang_werkzaamheden,
-}
-
 class AIWerkzones extends StatelessWidget {
   const AIWerkzones({Key? key}) : super(key: key);
 
@@ -395,43 +386,28 @@ class AIWerkzonesNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIWerkzones>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIWerkzones result) async {
-        if (result == WhereToGoFromAIWerkzones.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIWerkzones.ai_geplande_werkzaamheden_main) {
-          await Navigator.pushNamed(
-            context,
-            'ai_geplande_werkzaamheden_main',
-          );
-        } else if (result ==
-            WhereToGoFromAIWerkzones.ai_aanvang_werkzaamheden) {
+        } else if (result == PopupNavigation.ai_aanvang_werkzaamheden) {
           await Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIWerkzones>>[
-        const PopupMenuItem<WhereToGoFromAIWerkzones>(
-          value: WhereToGoFromAIWerkzones.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIWerkzones>(
-          value: WhereToGoFromAIWerkzones.ai_geplande_werkzaamheden_main,
-          child: MenuItemContent(
-            icon: IconUtils.iconAI,
-            text: 'AI Geplande Werkzaamheden',
-          ),
-        ),
-        const PopupMenuItem<WhereToGoFromAIWerkzones>(
-          value: WhereToGoFromAIWerkzones.ai_aanvang_werkzaamheden,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_aanvang_werkzaamheden,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Aanvang Werkzaamheden',

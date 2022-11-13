@@ -1,10 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWKopVanTreinVoorbijSein {
-  // ignore: constant_identifier_names
-  home_screen,
-}
-
 class WWKopVanTreinVoorbijSein extends StatelessWidget {
   const WWKopVanTreinVoorbijSein({Key? key}) : super(key: key);
 
@@ -81,20 +76,19 @@ class WWKopVanTreinVoorbijSeinNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWKopVanTreinVoorbijSein>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWKopVanTreinVoorbijSein result) async {
-        if (result == WhereToGoFromWWKopVanTreinVoorbijSein.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWKopVanTreinVoorbijSein>>[
-        const PopupMenuItem<WhereToGoFromWWKopVanTreinVoorbijSein>(
-          value: WhereToGoFromWWKopVanTreinVoorbijSein.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',

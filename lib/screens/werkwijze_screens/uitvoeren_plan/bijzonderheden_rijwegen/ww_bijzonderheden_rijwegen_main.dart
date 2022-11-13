@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWBijzonderhedenRijwegenMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_bijzonderheden_rijwegen_main,
-}
-
 class WWBijzonderhedenRijwegenMain extends StatelessWidget {
   const WWBijzonderhedenRijwegenMain({Key? key}) : super(key: key);
 
@@ -80,15 +73,13 @@ class WWBijzonderhedenRijwegenMainNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWBijzonderhedenRijwegenMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWBijzonderhedenRijwegenMain result) async {
-        if (result == WhereToGoFromWWBijzonderhedenRijwegenMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWBijzonderhedenRijwegenMain
-                .ai_bijzonderheden_rijwegen_main) {
+        } else if (result == PopupNavigation.ai_bijzonderheden_rijwegen_main) {
           await Navigator.pushNamed(
             context,
             'ai_bijzonderheden_rijwegen_main',
@@ -97,18 +88,16 @@ class WWBijzonderhedenRijwegenMainNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWBijzonderhedenRijwegenMain>>[
-        const PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
-          value: WhereToGoFromWWBijzonderhedenRijwegenMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWBijzonderhedenRijwegenMain>(
-          value: WhereToGoFromWWBijzonderhedenRijwegenMain
-              .ai_bijzonderheden_rijwegen_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bijzonderheden_rijwegen_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Rijwegen',

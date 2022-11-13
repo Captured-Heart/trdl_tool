@@ -12,7 +12,7 @@ class AIInzetRailvoertuigICB extends StatelessWidget {
           title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
-          AIOngeplandWerkMaterieelNavigation(),
+          AIInzetRailVoertuigICBNavigation(),
           HomeButton(),
         ],
       ),
@@ -169,8 +169,8 @@ class AIInzetRailvoertuigICB extends StatelessWidget {
   }
 }
 
-class AIInzetRailvoertuigICBNavigation extends StatelessWidget {
-  const AIInzetRailvoertuigICBNavigation({Key? key}) : super(key: key);
+class AIInzetRailVoertuigICBNavigation extends StatelessWidget {
+  const AIInzetRailVoertuigICBNavigation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

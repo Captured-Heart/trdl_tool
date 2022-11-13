@@ -130,16 +130,17 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
       const AIRijwegenPlanopbouw(),
   'ai_rijwegen_planscherm': (BuildContext context) =>
       const AIRijwegenPlanscherm(),
-  'ai_rijwegen_trots': (BuildContext context) => const AIRijwegenTrots(),
+  'ai_rijwegen_trots_abt': (BuildContext context) => const AIRijwegenTrotsABT(),
   'ai_rijwegen_bedienscherm': (BuildContext context) =>
       const AIRijwegenBedienscherm(),
   'ai_bijzonderheden_trein_main': (BuildContext context) =>
       const AIBijzonderhedenTreinMain(),
   'ai_bijzondere_aandacht': (BuildContext context) =>
       const AIBijzondereAandacht(),
-  'ai_bijzonderheden_trein': (BuildContext context) =>
-      const AIBijzonderhedenTrein(),
-  'ai_onjuiste_detectie': (BuildContext context) => const AIOnjuisteDetectie(),
+  'ai_bijzonderheden_trein_basis': (BuildContext context) =>
+      const AIBijzonderhedenTreinBasis(),
+  'ai_voertuig_onjuiste_detectie': (BuildContext context) =>
+      const AIVoertuigOnjuistDetectie(),
   'ai_vervoersregeling': (BuildContext context) => const AIVervoersregeling(),
   'ai_communicatie_main': (BuildContext context) => const AICommunicatieMain(),
   'ai_communicatiemiddelen': (BuildContext context) =>
@@ -154,14 +155,15 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   'ai_aanvang_werkzaamheden': (BuildContext context) =>
       const AIAanvangWerkzaamheden(),
   'ai_controleren_wbi': (BuildContext context) => const AIControlerenWBI(),
-  'ai_fouten_wbi': (BuildContext context) => const AIFoutenWBI(),
-  'ai_geplande_werkzaamheden': (BuildContext context) =>
-      const AIGeplandeWerkzaamheden(),
+  'ai_fouten_in_de_wbi': (BuildContext context) => const AIFoutenWBI(),
+  'ai_geplande_werkzaamheden_basis': (BuildContext context) =>
+      const AIGeplandeWerkzaamhedenBasis(),
   'ai_toelaten_werktreinen': (BuildContext context) =>
       const AIToelatenWerktreinen(),
   'ai_werkzones': (BuildContext context) => const AIWerkzones(),
   'ai_ncbg': (BuildContext context) => const AINcbg(),
-  'ai_uitvoeren_plan': (BuildContext context) => const AIUitvoerenPlan(),
+  'ai_uitvoeren_plan_basis': (BuildContext context) =>
+      const AIUitvoerenPlanBasis(),
   'ai_dienstovergave': (BuildContext context) => const AIDienstovergave(),
 
   //Achtergrondinfo aanpassen plan routes

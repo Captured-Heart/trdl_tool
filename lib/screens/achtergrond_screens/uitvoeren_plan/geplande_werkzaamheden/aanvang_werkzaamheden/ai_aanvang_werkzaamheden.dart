@@ -1,20 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIAanvangWerkzaamheden {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_aanvang_werkzaamheden,
-  // ignore: constant_identifier_names
-  ai_geplande_werkzaamheden,
-  // ignore: constant_identifier_names
-  ai_controleren_wbi,
-  // ignore: constant_identifier_names
-  ai_fouten_wbi,
-  // ignore: constant_identifier_names
-  ai_bovenleiding_main,
-}
-
 class AIAanvangWerkzaamheden extends StatelessWidget {
   const AIAanvangWerkzaamheden({Key? key}) : super(key: key);
 
@@ -248,70 +233,64 @@ class AIAanvangWerkzaamhedenNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIAanvangWerkzaamheden>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIAanvangWerkzaamheden result) async {
-        if (result == WhereToGoFromAIAanvangWerkzaamheden.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIAanvangWerkzaamheden.ww_aanvang_werkzaamheden) {
+        } else if (result == PopupNavigation.ww_aanvang_werkzaamheden) {
           await Navigator.pushNamed(context, 'ww_aanvang_werkzaamheden');
-        } else if (result ==
-            WhereToGoFromAIAanvangWerkzaamheden.ai_geplande_werkzaamheden) {
+        } else if (result == PopupNavigation.ai_geplande_werkzaamheden) {
           await Navigator.pushNamed(context, 'ai_geplande_werkzaamheden');
-        } else if (result ==
-            WhereToGoFromAIAanvangWerkzaamheden.ai_controleren_wbi) {
+        } else if (result == PopupNavigation.ai_controleren_wbi) {
           await Navigator.pushNamed(context, 'ai_controleren_wbi');
-        } else if (result ==
-            WhereToGoFromAIAanvangWerkzaamheden.ai_fouten_wbi) {
+        } else if (result == PopupNavigation.ai_fouten_wbi) {
           await Navigator.pushNamed(context, 'ai_fouten_wbi');
-        } else if (result ==
-            WhereToGoFromAIAanvangWerkzaamheden.ai_bovenleiding_main) {
+        } else if (result == PopupNavigation.ai_bovenleiding_main) {
           await Navigator.pushNamed(context, 'ai_bovenleiding_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIAanvangWerkzaamheden>>[
-        const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-          value: WhereToGoFromAIAanvangWerkzaamheden.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-          value: WhereToGoFromAIAanvangWerkzaamheden.ww_aanvang_werkzaamheden,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_aanvang_werkzaamheden,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Aanvang Werkzaamheden',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-          value: WhereToGoFromAIAanvangWerkzaamheden.ai_geplande_werkzaamheden,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_geplande_werkzaamheden,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Geplande Werkzaamheden',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-          value: WhereToGoFromAIAanvangWerkzaamheden.ai_controleren_wbi,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_controleren_wbi,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Controleren WBI',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-          value: WhereToGoFromAIAanvangWerkzaamheden.ai_fouten_wbi,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_fouten_wbi,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Fouten WBI',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIAanvangWerkzaamheden>(
-          value: WhereToGoFromAIAanvangWerkzaamheden.ai_bovenleiding_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bovenleiding_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Bovenleiding',

@@ -1,22 +1,7 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIRijwegenTrots {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_rijwegen_ari,
-  // ignore: constant_identifier_names
-  ai_rijwegen_planscherm,
-  // ignore: constant_identifier_names
-  ai_bijzonderheden_rijwegen_main,
-  // ignore: constant_identifier_names
-  ai_rijwegen_planopbouw,
-  // ignore: constant_identifier_names
-  ai_rijwegen_bedienscherm,
-}
-
-class AIRijwegenTrots extends StatelessWidget {
-  const AIRijwegenTrots({Key? key}) : super(key: key);
+class AIRijwegenTrotsABT extends StatelessWidget {
+  const AIRijwegenTrotsABT({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +12,7 @@ class AIRijwegenTrots extends StatelessWidget {
           title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
-          AIRijwegenTrotsNavigation(),
+          AIRijwegenTrotsABTNavigation(),
           HomeButton(),
         ],
       ),
@@ -236,77 +221,72 @@ class AIRijwegenTrots extends StatelessWidget {
   }
 }
 
-class AIRijwegenTrotsNavigation extends StatelessWidget {
-  const AIRijwegenTrotsNavigation({Key? key}) : super(key: key);
+class AIRijwegenTrotsABTNavigation extends StatelessWidget {
+  const AIRijwegenTrotsABTNavigation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIRijwegenTrots>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIRijwegenTrots result) async {
-        if (result == WhereToGoFromAIRijwegenTrots.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromAIRijwegenTrots.ai_rijwegen_ari) {
+        } else if (result == PopupNavigation.ai_rijwegen_ari) {
           await Navigator.pushNamed(context, 'ai_rijwegen_ari');
-        } else if (result ==
-            WhereToGoFromAIRijwegenTrots.ai_rijwegen_planscherm) {
+        } else if (result == PopupNavigation.ai_rijwegen_planscherm) {
           await Navigator.pushNamed(context, 'ai_rijwegen_planscherm');
-        } else if (result ==
-            WhereToGoFromAIRijwegenTrots.ai_bijzonderheden_rijwegen_main) {
+        } else if (result == PopupNavigation.ai_bijzonderheden_rijwegen_main) {
           await Navigator.pushNamed(
             context,
             'ai_bijzonderheden_rijwegen_main',
           );
-        } else if (result ==
-            WhereToGoFromAIRijwegenTrots.ai_rijwegen_planopbouw) {
+        } else if (result == PopupNavigation.ai_rijwegen_planopbouw) {
           await Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
-        } else if (result ==
-            WhereToGoFromAIRijwegenTrots.ai_rijwegen_bedienscherm) {
+        } else if (result == PopupNavigation.ai_rijwegen_bedienscherm) {
           await Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIRijwegenTrots>>[
-        const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-          value: WhereToGoFromAIRijwegenTrots.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-          value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_ari,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_rijwegen_ari,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Rijwegen ARI',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-          value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planscherm,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_rijwegen_planscherm,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Rijwegen Planscherm',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-          value: WhereToGoFromAIRijwegenTrots.ai_bijzonderheden_rijwegen_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bijzonderheden_rijwegen_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Rijwegen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-          value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_planopbouw,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_rijwegen_planopbouw,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Rijwegen Planopbouw',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenTrots>(
-          value: WhereToGoFromAIRijwegenTrots.ai_rijwegen_bedienscherm,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_rijwegen_bedienscherm,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Rijwegen Bedienscherm',

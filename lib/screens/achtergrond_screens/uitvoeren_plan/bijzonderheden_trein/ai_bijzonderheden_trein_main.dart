@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIBijzonderhedenTreinMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_bijzonderheden_trein_main,
-}
-
 class AIBijzonderhedenTreinMain extends StatelessWidget {
   const AIBijzonderhedenTreinMain({Key? key}) : super(key: key);
 
@@ -44,8 +37,13 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const <Widget>[
                       NavButton(
+                        buttontext: 'Bijzonderheden Trein - Werkwijze',
+                        destination: 'ww_bijzonderheden_trein_main',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
                         buttontext: 'Bijzonderheden Trein - Basis',
-                        destination: 'ai_bijzonderheden_trein',
+                        destination: 'ai_bijzonderheden_trein_basis',
                       ),
                       SizedBoxH(),
                       NavButton(
@@ -54,8 +52,8 @@ class AIBijzonderhedenTreinMain extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       NavButton(
-                        buttontext: 'Onjuiste detectie',
-                        destination: 'ai_onjuiste_detectie',
+                        buttontext: 'Voertuig onjuiste detectie',
+                        destination: 'ai_voertuig_onjuiste_detectie',
                       ),
                       SizedBoxH(),
                       NavButton(
@@ -89,15 +87,13 @@ class AIBijzonderhedenTreinMainNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIBijzonderhedenTreinMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIBijzonderhedenTreinMain result) async {
-        if (result == WhereToGoFromAIBijzonderhedenTreinMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIBijzonderhedenTreinMain
-                .ww_bijzonderheden_trein_main) {
+        } else if (result == PopupNavigation.ww_bijzonderheden_trein_main) {
           await Navigator.pushNamed(
             context,
             'ww_bijzonderheden_trein_main',
@@ -106,18 +102,16 @@ class AIBijzonderhedenTreinMainNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIBijzonderhedenTreinMain>>[
-        const PopupMenuItem<WhereToGoFromAIBijzonderhedenTreinMain>(
-          value: WhereToGoFromAIBijzonderhedenTreinMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIBijzonderhedenTreinMain>(
-          value: WhereToGoFromAIBijzonderhedenTreinMain
-              .ww_bijzonderheden_trein_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_bijzonderheden_trein_main,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Bijzonderheden Trein',
