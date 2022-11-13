@@ -1,16 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIRijwegenPlanopbouw {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_bijzonderheden_rijwegen_main,
-  // ignore: constant_identifier_names
-  ai_bijzonderheden_rijwegen_main,
-  // ignore: constant_identifier_names
-  ai_rijwegen_planscherm,
-}
-
 class AIRijwegenPlanopbouw extends StatelessWidget {
   const AIRijwegenPlanopbouw({Key? key}) : super(key: key);
 
@@ -590,49 +579,43 @@ class AIRijwegenPlanopbouwNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIRijwegenPlanopbouw>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIRijwegenPlanopbouw result) async {
-        if (result == WhereToGoFromAIRijwegenPlanopbouw.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIRijwegenPlanopbouw.ww_bijzonderheden_rijwegen_main) {
+        } else if (result == PopupNavigation.ww_bijzonderheden_rijwegen_main) {
           await Navigator.pushNamed(
             context,
             'ww_bijzonderheden_rijwegen_main',
+          );
+        } else if (result == PopupNavigation.ai_rijwegen_planscherm) {
+          await Navigator.pushNamed(
+            context,
+            'ai_rijwegen_planscherm',
           );
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIRijwegenPlanopbouw>>[
-        const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
-          value: WhereToGoFromAIRijwegenPlanopbouw.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
-          value:
-              WhereToGoFromAIRijwegenPlanopbouw.ww_bijzonderheden_rijwegen_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_bijzonderheden_rijwegen_main,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Bijzonderheden Rijwegen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
-          value:
-              WhereToGoFromAIRijwegenPlanopbouw.ai_bijzonderheden_rijwegen_main,
-          child: MenuItemContent(
-            icon: IconUtils.iconAI,
-            text: 'AI Bijzonderheden Rijwegen',
-          ),
-        ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenPlanopbouw>(
-          value: WhereToGoFromAIRijwegenPlanopbouw.ai_rijwegen_planscherm,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_rijwegen_planscherm,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Rijwegen Planscherm',

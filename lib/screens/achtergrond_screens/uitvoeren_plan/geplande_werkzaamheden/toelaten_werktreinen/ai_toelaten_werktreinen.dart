@@ -1,20 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIToelatenWerktreinen {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_toelaten_werktreinen,
-  // ignore: constant_identifier_names
-  ai_bijzonderheden_rijwegen_main,
-  // ignore: constant_identifier_names
-  ai_geplande_werkzaamheden_main,
-  // ignore: constant_identifier_names
-  ai_inzetten_icb,
-  // ignore: constant_identifier_names
-  ai_onjuiste_detectie,
-}
-
 class AIToelatenWerktreinen extends StatelessWidget {
   const AIToelatenWerktreinen({Key? key}) : super(key: key);
 
@@ -121,82 +106,73 @@ class AIToelatenWerktreinenNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIToelatenWerktreinen>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIToelatenWerktreinen result) async {
-        if (result == WhereToGoFromAIToelatenWerktreinen.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIToelatenWerktreinen.ww_toelaten_werktreinen) {
+        } else if (result == PopupNavigation.ww_toelaten_werktreinen) {
           await Navigator.pushNamed(context, 'ww_toelaten_werktreinen');
-        } else if (result ==
-            WhereToGoFromAIToelatenWerktreinen
-                .ai_bijzonderheden_rijwegen_main) {
+        } else if (result == PopupNavigation.ai_bijzonderheden_rijwegen_main) {
           await Navigator.pushNamed(
             context,
             'ai_bijzonderheden_rijwegen_main',
           );
-        } else if (result ==
-            WhereToGoFromAIToelatenWerktreinen.ai_geplande_werkzaamheden_main) {
+        } else if (result == PopupNavigation.ai_geplande_werkzaamheden_main) {
           await Navigator.pushNamed(
             context,
             'ai_geplande_werkzaamheden_main',
           );
-        } else if (result ==
-            WhereToGoFromAIToelatenWerktreinen.ai_inzetten_icb) {
-          await Navigator.pushNamed(context, 'ai_inzetten_icb');
-        } else if (result ==
-            WhereToGoFromAIToelatenWerktreinen.ai_onjuiste_detectie) {
-          await Navigator.pushNamed(context, 'ai_onjuiste_detectie');
+        } else if (result == PopupNavigation.ai_inzet_railvoertuig_icb) {
+          await Navigator.pushNamed(context, 'ai_inzet_railvoertuig_icb');
+        } else if (result == PopupNavigation.ai_voertuig_onjuiste_detectie) {
+          await Navigator.pushNamed(context, 'ai_voertuig_onjuiste_detectie');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIToelatenWerktreinen>>[
-        const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
-          value: WhereToGoFromAIToelatenWerktreinen.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
-          value: WhereToGoFromAIToelatenWerktreinen.ww_toelaten_werktreinen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_toelaten_werktreinen,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Toelaten Werktreinen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
-          value: WhereToGoFromAIToelatenWerktreinen
-              .ai_bijzonderheden_rijwegen_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bijzonderheden_rijwegen_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Rijwegen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
-          value:
-              WhereToGoFromAIToelatenWerktreinen.ai_geplande_werkzaamheden_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_geplande_werkzaamheden_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Geplande Werkzaamheden',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
-          value: WhereToGoFromAIToelatenWerktreinen.ai_inzetten_icb,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_inzet_railvoertuig_icb,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
-            text: 'AI Inzetten ICB',
+            text: 'AI Inzet Railvoertuig ICB',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIToelatenWerktreinen>(
-          value: WhereToGoFromAIToelatenWerktreinen.ai_onjuiste_detectie,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_voertuig_onjuiste_detectie,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
-            text: 'AI Onjuiste Detectie',
+            text: 'AI Voertuig Onjuiste Detectie',
           ),
         ),
       ],

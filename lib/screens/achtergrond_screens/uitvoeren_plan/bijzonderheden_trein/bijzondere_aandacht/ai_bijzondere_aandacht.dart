@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIBijzondereAandacht {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_bijzonderheden_trein_main,
-}
-
 class AIBijzondereAandacht extends StatelessWidget {
   const AIBijzondereAandacht({Key? key}) : super(key: key);
 
@@ -96,33 +89,31 @@ class AIBijzondereAandachtNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIBijzondereAandacht>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIBijzondereAandacht result) async {
-        if (result == WhereToGoFromAIBijzondereAandacht.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIBijzondereAandacht.ai_bijzonderheden_trein_main) {
+        } else if (result == PopupNavigation.ai_bijzonderheden_trein_basis) {
           await Navigator.pushNamed(
             context,
-            'ai_bijzonderheden_trein_main',
+            'ai_bijzonderheden_trein_basis',
           );
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIBijzondereAandacht>>[
-        const PopupMenuItem<WhereToGoFromAIBijzondereAandacht>(
-          value: WhereToGoFromAIBijzondereAandacht.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIBijzondereAandacht>(
-          value: WhereToGoFromAIBijzondereAandacht.ai_bijzonderheden_trein_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bijzonderheden_trein_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Trein',

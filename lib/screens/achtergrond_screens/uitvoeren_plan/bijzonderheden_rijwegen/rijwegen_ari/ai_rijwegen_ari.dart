@@ -1,22 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIRijwegenARI {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_uitvoeren_plan_main,
-  // ignore: constant_identifier_names
-  ai_rijwegen_trots,
-  // ignore: constant_identifier_names
-  ai_bijzonderheden_rijwegen,
-  // ignore: constant_identifier_names
-  ai_rijwegen_planopbouw,
-  // ignore: constant_identifier_names
-  ai_rijwegen_planscherm,
-  // ignore: constant_identifier_names
-  ai_rijwegen_bedienscherm,
-}
-
 class AIRijwegenARI extends StatelessWidget {
   const AIRijwegenARI({Key? key}) : super(key: key);
 
@@ -728,82 +711,76 @@ class AIRijwegenARINavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIRijwegenARI>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIRijwegenARI result) async {
-        if (result == WhereToGoFromAIRijwegenARI.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIRijwegenARI.ww_uitvoeren_plan_main) {
+        } else if (result == PopupNavigation.ww_uitvoeren_plan_main) {
           await Navigator.pushNamed(context, 'ww_uitvoeren_plan_main');
-        } else if (result == WhereToGoFromAIRijwegenARI.ai_rijwegen_trots) {
-          await Navigator.pushNamed(context, 'ai_rijwegen_trots');
-        } else if (result ==
-            WhereToGoFromAIRijwegenARI.ai_bijzonderheden_rijwegen) {
+        } else if (result == PopupNavigation.ai_rijwegen_trots_abt) {
+          await Navigator.pushNamed(context, 'ai_rijwegen_trots_abt');
+        } else if (result == PopupNavigation.ai_bijzonderheden_rijwegen_main) {
           await Navigator.pushNamed(
             context,
-            'ai_bijzonderheden_rijwegen',
+            'ai_bijzonderheden_rijwegen_main',
           );
-        } else if (result ==
-            WhereToGoFromAIRijwegenARI.ai_rijwegen_planopbouw) {
+        } else if (result == PopupNavigation.ai_rijwegen_planopbouw) {
           await Navigator.pushNamed(context, 'ai_rijwegen_planopbouw');
-        } else if (result ==
-            WhereToGoFromAIRijwegenARI.ai_rijwegen_planscherm) {
+        } else if (result == PopupNavigation.ai_rijwegen_planscherm) {
           await Navigator.pushNamed(context, 'ai_rijwegen_planscherm');
-        } else if (result ==
-            WhereToGoFromAIRijwegenARI.ai_rijwegen_bedienscherm) {
+        } else if (result == PopupNavigation.ai_rijwegen_bedienscherm) {
           await Navigator.pushNamed(context, 'ai_rijwegen_bedienscherm');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIRijwegenARI>>[
-        const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-          value: WhereToGoFromAIRijwegenARI.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-          value: WhereToGoFromAIRijwegenARI.ww_uitvoeren_plan_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_uitvoeren_plan_main,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Uitvoeren Plan',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-          value: WhereToGoFromAIRijwegenARI.ai_rijwegen_trots,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_rijwegen_trots_abt,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Rijwegen TROTS',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-          value: WhereToGoFromAIRijwegenARI.ai_bijzonderheden_rijwegen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bijzonderheden_rijwegen_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Rijwegen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-          value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planopbouw,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_rijwegen_planopbouw,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Rijwegen Planopbouw',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-          value: WhereToGoFromAIRijwegenARI.ai_rijwegen_planscherm,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_rijwegen_planscherm,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Rijwegen Planscherm',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIRijwegenARI>(
-          value: WhereToGoFromAIRijwegenARI.ai_rijwegen_bedienscherm,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_rijwegen_bedienscherm,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Rijwegen Bedienscherm',

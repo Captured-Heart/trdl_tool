@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIGeplandeWerkzaamhedenMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_geplande_werkzaamheden_main,
-}
-
 class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
   const AIGeplandeWerkzaamhedenMain({Key? key}) : super(key: key);
 
@@ -44,6 +37,11 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const <Widget>[
                       NavButton(
+                        buttontext: 'Geplande werkzaamheden - Werkwijze',
+                        destination: 'ww_geplande_werkzaamheden_main',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
                         buttontext: 'Geplande werkzaamheden - Basis',
                         destination: 'ai_geplande_werkzaamheden',
                       ),
@@ -55,7 +53,7 @@ class AIGeplandeWerkzaamhedenMain extends StatelessWidget {
                       SizedBoxH(),
                       NavButton(
                         buttontext: 'Fouten in de WBI',
-                        destination: 'ai_fouten_wbi',
+                        destination: 'ai_fouten_in_de_wbi',
                       ),
                       SizedBoxH(),
                       NavButton(
@@ -100,15 +98,13 @@ class AIGeplandeWerkzaamhedenMainNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIGeplandeWerkzaamhedenMain result) async {
-        if (result == WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIGeplandeWerkzaamhedenMain
-                .ww_geplande_werkzaamheden_main) {
+        } else if (result == PopupNavigation.ww_geplande_werkzaamheden_main) {
           await Navigator.pushNamed(
             context,
             'ww_geplande_werkzaamheden_main',
@@ -117,18 +113,16 @@ class AIGeplandeWerkzaamhedenMainNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIGeplandeWerkzaamhedenMain>>[
-        const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
-          value: WhereToGoFromAIGeplandeWerkzaamhedenMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIGeplandeWerkzaamhedenMain>(
-          value: WhereToGoFromAIGeplandeWerkzaamhedenMain
-              .ww_geplande_werkzaamheden_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_geplande_werkzaamheden_main,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Geplande Werkzaamheden',

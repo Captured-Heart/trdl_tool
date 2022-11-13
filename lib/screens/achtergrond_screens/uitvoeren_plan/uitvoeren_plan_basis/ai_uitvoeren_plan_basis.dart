@@ -1,16 +1,7 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIUitvoerenPlan {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_aanpassen_plan,
-  // ignore: constant_identifier_names
-  ai_bovenleiding_main,
-}
-
-class AIUitvoerenPlan extends StatelessWidget {
-  const AIUitvoerenPlan({Key? key}) : super(key: key);
+class AIUitvoerenPlanBasis extends StatelessWidget {
+  const AIUitvoerenPlanBasis({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +12,7 @@ class AIUitvoerenPlan extends StatelessWidget {
           title: StringUtils.appBarTitleAI,
         ),
         actions: const <Widget>[
-          AIUitvoerenPlanNavigation(),
+          AIUitvoerenPlanBasisNavigation(),
           HomeButton(),
         ],
       ),
@@ -286,44 +277,42 @@ class AIUitvoerenPlan extends StatelessWidget {
   }
 }
 
-class AIUitvoerenPlanNavigation extends StatelessWidget {
-  const AIUitvoerenPlanNavigation({Key? key}) : super(key: key);
+class AIUitvoerenPlanBasisNavigation extends StatelessWidget {
+  const AIUitvoerenPlanBasisNavigation({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIUitvoerenPlan>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIUitvoerenPlan result) async {
-        if (result == WhereToGoFromAIUitvoerenPlan.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromAIUitvoerenPlan.ai_aanpassen_plan) {
-          await Navigator.pushNamed(context, 'ai_aanpassen_plan');
-        } else if (result ==
-            WhereToGoFromAIUitvoerenPlan.ai_bovenleiding_main) {
+        } else if (result == PopupNavigation.ai_aanpassen_plan_main) {
+          await Navigator.pushNamed(context, 'ai_aanpassen_plan_main');
+        } else if (result == PopupNavigation.ai_bovenleiding_main) {
           await Navigator.pushNamed(context, 'ai_bovenleiding_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIUitvoerenPlan>>[
-        const PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
-          value: WhereToGoFromAIUitvoerenPlan.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
-          value: WhereToGoFromAIUitvoerenPlan.ai_aanpassen_plan,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_aanpassen_plan_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Aanpassen Plan',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIUitvoerenPlan>(
-          value: WhereToGoFromAIUitvoerenPlan.ai_bovenleiding_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bovenleiding_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Bovenleiding',

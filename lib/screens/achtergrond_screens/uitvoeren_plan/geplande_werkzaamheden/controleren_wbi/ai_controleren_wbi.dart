@@ -1,18 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIControlerenWBI {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_controleren_wbi,
-  // ignore: constant_identifier_names
-  ai_fouten_wbi,
-  // ignore: constant_identifier_names
-  ai_geplande_werkzaamheden,
-  // ignore: constant_identifier_names
-  ai_aanvang_werkzaamheden,
-}
-
 class AIControlerenWBI extends StatelessWidget {
   const AIControlerenWBI({Key? key}) : super(key: key);
 
@@ -85,58 +72,55 @@ class AIControlerenWBINavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIControlerenWBI>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIControlerenWBI result) async {
-        if (result == WhereToGoFromAIControlerenWBI.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromAIControlerenWBI.ww_controleren_wbi) {
+        } else if (result == PopupNavigation.ww_controleren_wbi) {
           await Navigator.pushNamed(context, 'ww_controleren_wbi');
-        } else if (result == WhereToGoFromAIControlerenWBI.ai_fouten_wbi) {
+        } else if (result == PopupNavigation.ai_fouten_wbi) {
           await Navigator.pushNamed(context, 'ai_fouten_wbi');
-        } else if (result ==
-            WhereToGoFromAIControlerenWBI.ai_geplande_werkzaamheden) {
-          await Navigator.pushNamed(context, 'ai_geplande_werkzaamheden');
-        } else if (result ==
-            WhereToGoFromAIControlerenWBI.ai_aanvang_werkzaamheden) {
+        } else if (result == PopupNavigation.ai_geplande_werkzaamheden_basis) {
+          await Navigator.pushNamed(context, 'ai_geplande_werkzaamheden_basis');
+        } else if (result == PopupNavigation.ai_aanvang_werkzaamheden) {
           await Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIControlerenWBI>>[
-        const PopupMenuItem<WhereToGoFromAIControlerenWBI>(
-          value: WhereToGoFromAIControlerenWBI.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIControlerenWBI>(
-          value: WhereToGoFromAIControlerenWBI.ww_controleren_wbi,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_controleren_wbi,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Controleren WBI',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIControlerenWBI>(
-          value: WhereToGoFromAIControlerenWBI.ai_fouten_wbi,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_fouten_wbi,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Fouten in de WBI',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIControlerenWBI>(
-          value: WhereToGoFromAIControlerenWBI.ai_geplande_werkzaamheden,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_geplande_werkzaamheden_basis,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Geplande Werkzaamheden',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIControlerenWBI>(
-          value: WhereToGoFromAIControlerenWBI.ai_aanvang_werkzaamheden,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_aanvang_werkzaamheden,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Aanvang Werkzaamheden',

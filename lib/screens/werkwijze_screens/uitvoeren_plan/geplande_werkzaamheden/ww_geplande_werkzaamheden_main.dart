@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWGeplandeWerkzaamhedenMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_geplande_werkzaamheden_main
-}
-
 class WWGeplandeWerkzaamhedenMain extends StatelessWidget {
   const WWGeplandeWerkzaamhedenMain({Key? key}) : super(key: key);
 
@@ -85,15 +78,13 @@ class WWGeplandeWerkzaamhedenMainNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWGeplandeWerkzaamhedenMain result) async {
-        if (result == WhereToGoFromWWGeplandeWerkzaamhedenMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWGeplandeWerkzaamhedenMain
-                .ai_geplande_werkzaamheden_main) {
+        } else if (result == PopupNavigation.ai_geplande_werkzaamheden_main) {
           await Navigator.pushNamed(
             context,
             'ai_geplande_werkzaamheden_main',
@@ -102,18 +93,16 @@ class WWGeplandeWerkzaamhedenMainNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWGeplandeWerkzaamhedenMain>>[
-        const PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
-          value: WhereToGoFromWWGeplandeWerkzaamhedenMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWGeplandeWerkzaamhedenMain>(
-          value: WhereToGoFromWWGeplandeWerkzaamhedenMain
-              .ai_geplande_werkzaamheden_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_geplande_werkzaamheden_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Geplande Werkzaamheden',
