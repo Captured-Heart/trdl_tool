@@ -83,7 +83,7 @@ List<String> searchStringsList = <String>[
   'ai_communicatie_main',
   'ai_communicatiemiddelen',
   'ai_communicatiesysteem',
-  'ai_mondelinge_veiligheidscommunicatie',
+  'ai_mondelinge_ommunicatie',
   'ai_ketenpartners',
   'ai_geplande_werkzaamheden_main',
   'ai_aanvang_werkzaamheden',

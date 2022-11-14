@@ -144,7 +144,7 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   'ai_vervoersregeling': (BuildContext context) => const AIVervoersregeling(),
   'ai_communicatie_main': (BuildContext context) => const AICommunicatieMain(),
   'ai_communicatiemiddelen': (BuildContext context) =>
-      const AICommmunicatieMiddelen(),
+      const AICommunicatieMiddelen(),
   'ai_communicatiesysteem': (BuildContext context) =>
       const AICommunicatieSysteem(),
   'ai_mondelinge_communicatie': (BuildContext context) =>

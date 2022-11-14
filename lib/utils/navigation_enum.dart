@@ -111,4 +111,11 @@ enum PopupNavigation {
   ai_rijwegen_planopbouw,
   ai_rijwegen_trots_abt,
   ai_rijwegen_bedienscherm,
+  ww_mondelinge_communicatie,
+  ai_communicatie_main,
+  ai_mondelinge_communicatie,
+  ai_communicatiemiddelen_oud,
+  ai_communicatiemiddelen,
+  ai_communicatiesysteem,
+  ai_ketenpartners,
 }

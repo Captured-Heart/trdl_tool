@@ -1,20 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAICommunicatieMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_mondelinge_communicatie,
-  // ignore: constant_identifier_names
-  ai_mondelinge_communicatie,
-  // ignore: constant_identifier_names
-  ai_communicatiemiddelen,
-  // ignore: constant_identifier_names
-  ai_communicatiesysteem,
-  // ignore: constant_identifier_names
-  ai_ketenpartners
-}
-
 class AICommunicatieMain extends StatelessWidget {
   const AICommunicatieMain({Key? key}) : super(key: key);
 
@@ -62,8 +47,13 @@ class AICommunicatieMain extends StatelessWidget {
                       ),
                       SizedBoxH(),
                       NavButton(
-                        buttontext: 'Communicatiemiddelen - Basis',
+                        buttontext: 'Communicatiemiddelen - Nieuw',
                         destination: 'ai_communicatiemiddelen',
+                      ),
+                      SizedBoxH(),
+                      NavButton(
+                        buttontext: 'Communicatiemiddelen - Oud',
+                        destination: 'ai_communicatiemiddelen_oud',
                       ),
                       SizedBoxH(),
                       NavButton(
@@ -103,75 +93,70 @@ class AICommunicatieMainNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAICommunicatieMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAICommunicatieMain result) async {
-        if (result == WhereToGoFromAICommunicatieMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAICommunicatieMain.ww_mondelinge_communicatie) {
+        } else if (result == PopupNavigation.ww_mondelinge_communicatie) {
           await Navigator.pushNamed(
             context,
             'ww_mondelinge_communicatie',
           );
-        } else if (result ==
-            WhereToGoFromAICommunicatieMain.ai_mondelinge_communicatie) {
+        } else if (result == PopupNavigation.ai_mondelinge_communicatie) {
           await Navigator.pushNamed(
             context,
             'ai_mondelinge_communicatie',
           );
-        } else if (result ==
-            WhereToGoFromAICommunicatieMain.ai_communicatiemiddelen) {
+        } else if (result == PopupNavigation.ai_communicatiemiddelen) {
           await Navigator.pushNamed(context, 'ai_communicatiemiddelen');
-        } else if (result ==
-            WhereToGoFromAICommunicatieMain.ai_communicatiesysteem) {
+        } else if (result == PopupNavigation.ai_communicatiesysteem) {
           await Navigator.pushNamed(context, 'ai_communicatiesysteem');
-        } else if (result == WhereToGoFromAICommunicatieMain.ai_ketenpartners) {
+        } else if (result == PopupNavigation.ai_ketenpartners) {
           await Navigator.pushNamed(context, 'ai_ketenpartners');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAICommunicatieMain>>[
-        const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
-          value: WhereToGoFromAICommunicatieMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
-          value: WhereToGoFromAICommunicatieMain.ww_mondelinge_communicatie,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_mondelinge_communicatie,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Mondelinge Communicatie',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
-          value: WhereToGoFromAICommunicatieMain.ai_mondelinge_communicatie,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_mondelinge_communicatie,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Mondelinge Communicatie',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
-          value: WhereToGoFromAICommunicatieMain.ai_communicatiemiddelen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_communicatiemiddelen,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Communicatiemiddelen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
-          value: WhereToGoFromAICommunicatieMain.ai_communicatiesysteem,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_communicatiesysteem,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Communicatiesysteem',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAICommunicatieMain>(
-          value: WhereToGoFromAICommunicatieMain.ai_ketenpartners,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_ketenpartners,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Ketenpartners',

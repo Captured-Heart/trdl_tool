@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWCommunicatieMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_communicatie_main,
-}
-
 class WWCommunicatieMain extends StatelessWidget {
   const WWCommunicatieMain({Key? key}) : super(key: key);
 
@@ -68,30 +61,28 @@ class WWCommunicatieNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWCommunicatieMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWCommunicatieMain result) async {
-        if (result == WhereToGoFromWWCommunicatieMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWCommunicatieMain.ai_communicatie_main) {
+        } else if (result == PopupNavigation.ai_communicatie_main) {
           await Navigator.pushNamed(context, 'ai_communicatie_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWCommunicatieMain>>[
-        const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
-          value: WhereToGoFromWWCommunicatieMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWCommunicatieMain>(
-          value: WhereToGoFromWWCommunicatieMain.ai_communicatie_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_communicatie_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Communicatie',

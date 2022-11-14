@@ -100,8 +100,8 @@ class AIVoertuigOnjuisteDetectieNavigation extends StatelessWidget {
           await Navigator.pushNamed(context, 'home_screen');
         } else if (result == PopupNavigation.ww_voertuig_onjuiste_detectie) {
           await Navigator.pushNamed(context, 'ww_voertuig_onjuiste_detectie');
-        } else if (result == PopupNavigation.ai_bijzonderheden_trein) {
-          await Navigator.pushNamed(context, 'ai_bijzonderheden_trein');
+        } else if (result == PopupNavigation.ai_bijzonderheden_trein_main) {
+          await Navigator.pushNamed(context, 'ai_bijzonderheden_trein_main');
         } else if (result == PopupNavigation.ai_vervoersregeling) {
           await Navigator.pushNamed(context, 'ai_vervoersregeling');
         } else {
@@ -124,7 +124,7 @@ class AIVoertuigOnjuisteDetectieNavigation extends StatelessWidget {
           ),
         ),
         const PopupMenuItem<PopupNavigation>(
-          value: PopupNavigation.ai_bijzonderheden_trein,
+          value: PopupNavigation.ai_bijzonderheden_trein_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Trein',
