@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWFoutenWBI {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_fouten_wbi,
-}
-
 class WWFoutenWBI extends StatelessWidget {
   const WWFoutenWBI({Key? key}) : super(key: key);
 
@@ -85,29 +78,28 @@ class WWFoutenInDeWBINavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWFoutenWBI>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWFoutenWBI result) async {
-        if (result == WhereToGoFromWWFoutenWBI.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWFoutenWBI.ai_fouten_wbi) {
+        } else if (result == PopupNavigation.ai_fouten_wbi) {
           await Navigator.pushNamed(context, 'ai_fouten_wbi');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWFoutenWBI>>[
-        const PopupMenuItem<WhereToGoFromWWFoutenWBI>(
-          value: WhereToGoFromWWFoutenWBI.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWFoutenWBI>(
-          value: WhereToGoFromWWFoutenWBI.ai_fouten_wbi,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_fouten_wbi,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Fouten WBI',

@@ -1,14 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWGestrandeTrein {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_gestrande_trein,
-  // ignore: constant_identifier_names
-  ai_overige_incidenten,
-}
-
 class WWGestrandeTrein extends StatelessWidget {
   const WWGestrandeTrein({Key? key}) : super(key: key);
 
@@ -92,39 +83,37 @@ class WWGestrandeTreinNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWGestrandeTrein>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWGestrandeTrein result) async {
-        if (result == WhereToGoFromWWGestrandeTrein.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWGestrandeTrein.ai_gestrande_trein) {
+        } else if (result == PopupNavigation.ai_gestrande_trein) {
           await Navigator.pushNamed(context, 'ai_gestrande_trein');
-        } else if (result ==
-            WhereToGoFromWWGestrandeTrein.ai_overige_incidenten) {
+        } else if (result == PopupNavigation.ai_overige_incidenten) {
           await Navigator.pushNamed(context, 'ai_overige_incidenten');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWGestrandeTrein>>[
-        const PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
-          value: WhereToGoFromWWGestrandeTrein.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
-          value: WhereToGoFromWWGestrandeTrein.ai_gestrande_trein,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_gestrande_trein,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Gestrande Trein',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWGestrandeTrein>(
-          value: WhereToGoFromWWGestrandeTrein.ai_overige_incidenten,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_overige_incidenten,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',

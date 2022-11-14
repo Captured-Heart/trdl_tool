@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWInzettenICB {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_inzetten_railvoertuig,
-}
-
 class WWInzettenICB extends StatelessWidget {
   const WWInzettenICB({Key? key}) : super(key: key);
 
@@ -103,33 +96,31 @@ class WWInzettenICBNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWInzettenICB>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWInzettenICB result) async {
-        if (result == WhereToGoFromWWInzettenICB.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWInzettenICB.ai_inzetten_railvoertuig) {
-          await Navigator.pushNamed(context, 'ai_inzetten_railvoertuig');
+        } else if (result == PopupNavigation.ai_inzet_railvoertuig_icb) {
+          await Navigator.pushNamed(context, 'ai_inzet_railvoertuig_icb');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWInzettenICB>>[
-        const PopupMenuItem<WhereToGoFromWWInzettenICB>(
-          value: WhereToGoFromWWInzettenICB.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWInzettenICB>(
-          value: WhereToGoFromWWInzettenICB.ai_inzetten_railvoertuig,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_inzet_railvoertuig_icb,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
-            text: 'AI Inzetten ICB',
+            text: 'AI Inzet Railvoertuig ICB',
           ),
         ),
       ],

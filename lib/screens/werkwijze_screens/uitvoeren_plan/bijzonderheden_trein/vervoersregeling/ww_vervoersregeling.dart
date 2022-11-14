@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWVervoersregeling {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_vervoersregeling,
-}
-
 class WWVervoersregeling extends StatelessWidget {
   const WWVervoersregeling({Key? key}) : super(key: key);
 
@@ -83,30 +76,28 @@ class WWVervoersregelingNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWVervoersregeling>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWVervoersregeling result) async {
-        if (result == WhereToGoFromWWVervoersregeling.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWVervoersregeling.ai_vervoersregeling) {
+        } else if (result == PopupNavigation.ai_vervoersregeling) {
           await Navigator.pushNamed(context, 'ai_vervoersregeling');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWVervoersregeling>>[
-        const PopupMenuItem<WhereToGoFromWWVervoersregeling>(
-          value: WhereToGoFromWWVervoersregeling.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWVervoersregeling>(
-          value: WhereToGoFromWWVervoersregeling.ai_vervoersregeling,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_vervoersregeling,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Treinen met Vervoersregeling',

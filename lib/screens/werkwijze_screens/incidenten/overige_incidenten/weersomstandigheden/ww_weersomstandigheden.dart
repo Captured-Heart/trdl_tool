@@ -1,14 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWWeersomstandigheden {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_weersomstandigheden,
-  // ignore: constant_identifier_names
-  ai_overige_incidenten,
-}
-
 class WWWeersomstandigheden extends StatelessWidget {
   const WWWeersomstandigheden({Key? key}) : super(key: key);
 
@@ -85,40 +76,37 @@ class WWWeersomstandighedenNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWWeersomstandigheden>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWWeersomstandigheden result) async {
-        if (result == WhereToGoFromWWWeersomstandigheden.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWWeersomstandigheden.ai_weersomstandigheden) {
+        } else if (result == PopupNavigation.ai_weersomstandigheden) {
           await Navigator.pushNamed(context, 'ai_weersomstandigheden');
-        } else if (result ==
-            WhereToGoFromWWWeersomstandigheden.ai_overige_incidenten) {
+        } else if (result == PopupNavigation.ai_overige_incidenten) {
           await Navigator.pushNamed(context, 'ai_overige_incidenten');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWWeersomstandigheden>>[
-        const PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
-          value: WhereToGoFromWWWeersomstandigheden.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
-          value: WhereToGoFromWWWeersomstandigheden.ai_weersomstandigheden,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_weersomstandigheden,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Weersomstandigheden',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWWeersomstandigheden>(
-          value: WhereToGoFromWWWeersomstandigheden.ai_overige_incidenten,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_overige_incidenten,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',

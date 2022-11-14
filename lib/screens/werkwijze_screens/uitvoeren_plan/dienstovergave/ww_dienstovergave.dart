@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWDienstovergave {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_dienstovergave,
-}
-
 class WWDienstovergave extends StatelessWidget {
   const WWDienstovergave({Key? key}) : super(key: key);
 
@@ -85,29 +78,28 @@ class WWDienstovergaveNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWDienstovergave>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWDienstovergave result) async {
-        if (result == WhereToGoFromWWDienstovergave.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWDienstovergave.ai_dienstovergave) {
+        } else if (result == PopupNavigation.ai_dienstovergave) {
           await Navigator.pushNamed(context, 'ai_dienstovergave');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWDienstovergave>>[
-        const PopupMenuItem<WhereToGoFromWWDienstovergave>(
-          value: WhereToGoFromWWDienstovergave.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWDienstovergave>(
-          value: WhereToGoFromWWDienstovergave.ai_dienstovergave,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_dienstovergave,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Dienstovergave',

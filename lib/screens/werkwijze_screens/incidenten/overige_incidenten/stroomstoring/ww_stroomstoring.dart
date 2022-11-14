@@ -1,14 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWStroomstoring {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_stroomstoring,
-  // ignore: constant_identifier_names
-  ai_overige_incidenten,
-}
-
 class WWStroomstoring extends StatelessWidget {
   const WWStroomstoring({Key? key}) : super(key: key);
 
@@ -91,16 +82,15 @@ class WWStroomstoringNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWStroomstoring>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWStroomstoring result) async {
-        if (result == WhereToGoFromWWStroomstoring.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWStroomstoring.ai_stroomstoring) {
+        } else if (result == PopupNavigation.ai_stroomstoring) {
           await Navigator.pushNamed(context, 'ai_stroomstoring');
-        } else if (result ==
-            WhereToGoFromWWStroomstoring.ai_overige_incidenten) {
+        } else if (result == PopupNavigation.ai_overige_incidenten) {
           await Navigator.pushNamed(
             context,
             'ai_overige_incidenten',
@@ -109,24 +99,23 @@ class WWStroomstoringNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWStroomstoring>>[
-        const PopupMenuItem<WhereToGoFromWWStroomstoring>(
-          value: WhereToGoFromWWStroomstoring.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWStroomstoring>(
-          value: WhereToGoFromWWStroomstoring.ai_stroomstoring,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_stroomstoring,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Stroomstoring',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWStroomstoring>(
-          value: WhereToGoFromWWStroomstoring.ai_overige_incidenten,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_overige_incidenten,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',

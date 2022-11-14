@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWIncidentenMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_incidenten_main,
-}
-
 class WWIncidentenMain extends StatelessWidget {
   const WWIncidentenMain({Key? key}) : super(key: key);
 
@@ -133,29 +126,28 @@ class WWIncidentenMainNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWIncidentenMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWIncidentenMain result) async {
-        if (result == WhereToGoFromWWIncidentenMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWIncidentenMain.ai_incidenten_main) {
+        } else if (result == PopupNavigation.ai_incidenten_main) {
           await Navigator.pushNamed(context, 'ai_incidenten_main');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWIncidentenMain>>[
-        const PopupMenuItem<WhereToGoFromWWIncidentenMain>(
-          value: WhereToGoFromWWIncidentenMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWIncidentenMain>(
-          value: WhereToGoFromWWIncidentenMain.ai_incidenten_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_incidenten_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Incidenten',

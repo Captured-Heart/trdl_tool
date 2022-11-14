@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWAanvangWerkzaamheden {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_aanvang_werkzaamheden,
-}
-
 class WWAanvangWerkzaamheden extends StatelessWidget {
   const WWAanvangWerkzaamheden({Key? key}) : super(key: key);
 
@@ -86,30 +79,28 @@ class WWAanvangWerkzaamhedenNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWAanvangWerkzaamheden>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWAanvangWerkzaamheden result) async {
-        if (result == WhereToGoFromWWAanvangWerkzaamheden.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWAanvangWerkzaamheden.ai_aanvang_werkzaamheden) {
+        } else if (result == PopupNavigation.ai_aanvang_werkzaamheden) {
           await Navigator.pushNamed(context, 'ai_aanvang_werkzaamheden');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWAanvangWerkzaamheden>>[
-        const PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
-          value: WhereToGoFromWWAanvangWerkzaamheden.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWAanvangWerkzaamheden>(
-          value: WhereToGoFromWWAanvangWerkzaamheden.ai_aanvang_werkzaamheden,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_aanvang_werkzaamheden,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Aanvang Werkzaamheden',

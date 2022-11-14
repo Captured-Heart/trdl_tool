@@ -1,16 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWOntruimenPost {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_ontruimen_post,
-  // ignore: constant_identifier_names
-  ai_stilleggen_treindienst,
-  // ignore: constant_identifier_names
-  ai_overige_incidenten,
-}
-
 class WWOntruimenPost extends StatelessWidget {
   const WWOntruimenPost({Key? key}) : super(key: key);
 
@@ -111,49 +100,46 @@ class WWOntruimenPostNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWOntruimenPost>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWOntruimenPost result) async {
-        if (result == WhereToGoFromWWOntruimenPost.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWOntruimenPost.ai_ontruimen_post) {
+        } else if (result == PopupNavigation.ai_ontruimen_post) {
           await Navigator.pushNamed(context, 'ai_ontruimen_post');
-        } else if (result ==
-            WhereToGoFromWWOntruimenPost.ai_stilleggen_treindienst) {
+        } else if (result == PopupNavigation.ai_stilleggen_treindienst) {
           await Navigator.pushNamed(context, 'ai_stilleggen_treindienst');
-        } else if (result ==
-            WhereToGoFromWWOntruimenPost.ai_overige_incidenten) {
+        } else if (result == PopupNavigation.ai_overige_incidenten) {
           await Navigator.pushNamed(context, 'ai_overige_incidenten');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWOntruimenPost>>[
-        const PopupMenuItem<WhereToGoFromWWOntruimenPost>(
-          value: WhereToGoFromWWOntruimenPost.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOntruimenPost>(
-          value: WhereToGoFromWWOntruimenPost.ai_ontruimen_post,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_ontruimen_post,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Ontruimen Post',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOntruimenPost>(
-          value: WhereToGoFromWWOntruimenPost.ai_stilleggen_treindienst,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_stilleggen_treindienst,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Stilleggen Treindienst',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOntruimenPost>(
-          value: WhereToGoFromWWOntruimenPost.ai_overige_incidenten,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_overige_incidenten,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',

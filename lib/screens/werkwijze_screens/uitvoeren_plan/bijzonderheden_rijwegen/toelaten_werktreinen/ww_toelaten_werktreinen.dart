@@ -1,16 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWToelatenWerktreinen {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_geplande_werkzaamheden_main,
-  // ignore: constant_identifier_names
-  ai_toelaten_werktreinen,
-  // ignore: constant_identifier_names
-  ai_geplande_werkzaamheden_main,
-}
-
 class WWToelatenWerktreinen extends StatelessWidget {
   const WWToelatenWerktreinen({Key? key}) : super(key: key);
 
@@ -87,23 +76,20 @@ class WWToelatenWerktreinenNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWToelatenWerktreinen>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWToelatenWerktreinen result) async {
-        if (result == WhereToGoFromWWToelatenWerktreinen.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWToelatenWerktreinen.ww_geplande_werkzaamheden_main) {
+        } else if (result == PopupNavigation.ww_geplande_werkzaamheden_main) {
           await Navigator.pushNamed(
             context,
             'ww_geplande_werkzaamheden_main',
           );
-        } else if (result ==
-            WhereToGoFromWWToelatenWerktreinen.ai_toelaten_werktreinen) {
+        } else if (result == PopupNavigation.ai_toelaten_werktreinen) {
           await Navigator.pushNamed(context, 'ai_toelaten_werktreinen');
-        } else if (result ==
-            WhereToGoFromWWToelatenWerktreinen.ai_geplande_werkzaamheden_main) {
+        } else if (result == PopupNavigation.ai_geplande_werkzaamheden_main) {
           await Navigator.pushNamed(
             context,
             'ai_geplande_werkzaamheden_main',
@@ -112,33 +98,30 @@ class WWToelatenWerktreinenNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWToelatenWerktreinen>>[
-        const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
-          value: WhereToGoFromWWToelatenWerktreinen.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
-          value:
-              WhereToGoFromWWToelatenWerktreinen.ww_geplande_werkzaamheden_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_geplande_werkzaamheden_main,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Geplande Werkzaamheden',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
-          value: WhereToGoFromWWToelatenWerktreinen.ai_toelaten_werktreinen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_toelaten_werktreinen,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Toelaten Werktreinen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWToelatenWerktreinen>(
-          value:
-              WhereToGoFromWWToelatenWerktreinen.ai_geplande_werkzaamheden_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_geplande_werkzaamheden_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Geplande Werkzaamheden',

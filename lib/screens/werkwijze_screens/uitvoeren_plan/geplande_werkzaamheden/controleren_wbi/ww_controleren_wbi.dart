@@ -1,14 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWControlerenWBI {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_controleren_wbi,
-  // ignore: constant_identifier_names
-  ai_fouten_wbi,
-}
-
 class WWControlerenWBI extends StatelessWidget {
   const WWControlerenWBI({Key? key}) : super(key: key);
 
@@ -92,38 +83,37 @@ class WWControlerenWBINavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWControlerenWBI>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWControlerenWBI result) async {
-        if (result == WhereToGoFromWWControlerenWBI.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWControlerenWBI.ai_controleren_wbi) {
+        } else if (result == PopupNavigation.ai_controleren_wbi) {
           await Navigator.pushNamed(context, 'ai_controleren_wbi');
-        } else if (result == WhereToGoFromWWControlerenWBI.ai_fouten_wbi) {
+        } else if (result == PopupNavigation.ai_fouten_wbi) {
           await Navigator.pushNamed(context, 'ai_fouten_wbi');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWControlerenWBI>>[
-        const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
-          value: WhereToGoFromWWControlerenWBI.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
-          value: WhereToGoFromWWControlerenWBI.ai_controleren_wbi,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_controleren_wbi,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Controleren WBI',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWControlerenWBI>(
-          value: WhereToGoFromWWControlerenWBI.ai_fouten_wbi,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_fouten_wbi,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Fouten WBI',

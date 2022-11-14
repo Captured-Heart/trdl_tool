@@ -1,14 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWStsPassage {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_sts_passage,
-  // ignore: constant_identifier_names
-  ai_overige_incidenten,
-}
-
 class WWStsPassage extends StatelessWidget {
   const WWStsPassage({Key? key}) : super(key: key);
 
@@ -124,38 +115,37 @@ class WWSTSPassage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWStsPassage>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWStsPassage result) async {
-        if (result == WhereToGoFromWWStsPassage.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWStsPassage.ai_sts_passage) {
+        } else if (result == PopupNavigation.ai_sts_passage) {
           await Navigator.pushNamed(context, 'ai_sts_passage');
-        } else if (result == WhereToGoFromWWStsPassage.ai_overige_incidenten) {
+        } else if (result == PopupNavigation.ai_overige_incidenten) {
           await Navigator.pushNamed(context, 'ai_overige_incidenten');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWStsPassage>>[
-        const PopupMenuItem<WhereToGoFromWWStsPassage>(
-          value: WhereToGoFromWWStsPassage.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWStsPassage>(
-          value: WhereToGoFromWWStsPassage.ai_sts_passage,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_sts_passage,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI STS Passage',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWStsPassage>(
-          value: WhereToGoFromWWStsPassage.ai_overige_incidenten,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_overige_incidenten,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',

@@ -164,7 +164,7 @@ export 'package:trdl_tool/screens/werkwijze_screens/incidenten/overige_incidente
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/overige_incidenten/wissels_vrijmaken/ww_wissels_vrijmaken.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/overige_incidenten/ww_overige_incidenten_main.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/incidenten/ww_incidenten_main.dart';
-export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderheden_rijwegen/inzetten_icb/ww_inzetten_icb.dart';
+export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderheden_rijwegen/inzet_railvoertuig_icb/ww_inzet_railvoertuig_icb.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderheden_rijwegen/kop_van_trein_voorbij_sein/ww_kop_van_trein_voorbij_sein.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderheden_rijwegen/rijwegen_exploitatie/ww_rijwegen_exploitatie.dart';
 export 'package:trdl_tool/screens/werkwijze_screens/uitvoeren_plan/bijzonderheden_rijwegen/toelaten_werktreinen/ww_toelaten_werktreinen.dart';

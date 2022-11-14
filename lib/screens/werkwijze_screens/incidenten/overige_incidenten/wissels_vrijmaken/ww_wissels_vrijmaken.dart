@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWWisselsVrijmaken {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_stroomstoring,
-}
-
 class WWWisselsVrijmaken extends StatelessWidget {
   const WWWisselsVrijmaken({Key? key}) : super(key: key);
 
@@ -88,29 +81,28 @@ class WWWisselsVrijmakenNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWWisselsVrijmaken>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWWisselsVrijmaken result) async {
-        if (result == WhereToGoFromWWWisselsVrijmaken.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWWisselsVrijmaken.ai_stroomstoring) {
+        } else if (result == PopupNavigation.ai_stroomstoring) {
           await Navigator.pushNamed(context, 'ai_stroomstoring');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWWisselsVrijmaken>>[
-        const PopupMenuItem<WhereToGoFromWWWisselsVrijmaken>(
-          value: WhereToGoFromWWWisselsVrijmaken.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWWisselsVrijmaken>(
-          value: WhereToGoFromWWWisselsVrijmaken.ai_stroomstoring,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_stroomstoring,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Stroomstoring',

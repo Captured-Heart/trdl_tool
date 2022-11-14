@@ -8,7 +8,7 @@ List<String> searchStringsList = <String>[
   'ww_bijzonderheden_rijwegen_main',
   'ww_rijwegen_exploitatie',
   'ww_kop_van_trein_voorbij_sein',
-  'ww_inzetten_icb',
+  'ww_inzet_railvoertuig_icb',
   'ww_toelaten_werktreinen',
   'ww_bijzonderheden_trein',
   'ww_communicatie_main',

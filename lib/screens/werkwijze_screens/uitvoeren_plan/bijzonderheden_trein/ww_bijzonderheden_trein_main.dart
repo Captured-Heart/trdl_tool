@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWBijzonderhedenTreinMain {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_bijzonderheden_trein_main,
-}
-
 class WWBijzonderhedenTreinMain extends StatelessWidget {
   const WWBijzonderhedenTreinMain({Key? key}) : super(key: key);
 
@@ -72,15 +65,13 @@ class WWBijzonderhedenTreinNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWBijzonderhedenTreinMain>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWBijzonderhedenTreinMain result) async {
-        if (result == WhereToGoFromWWBijzonderhedenTreinMain.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWBijzonderhedenTreinMain
-                .ai_bijzonderheden_trein_main) {
+        } else if (result == PopupNavigation.ai_bijzonderheden_trein_main) {
           await Navigator.pushNamed(
             context,
             'ai_bijzonderheden_trein_main',
@@ -89,18 +80,16 @@ class WWBijzonderhedenTreinNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWBijzonderhedenTreinMain>>[
-        const PopupMenuItem<WhereToGoFromWWBijzonderhedenTreinMain>(
-          value: WhereToGoFromWWBijzonderhedenTreinMain.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconInfo,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWBijzonderhedenTreinMain>(
-          value: WhereToGoFromWWBijzonderhedenTreinMain
-              .ai_bijzonderheden_trein_main,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_bijzonderheden_trein_main,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Bijzonderheden Trein',

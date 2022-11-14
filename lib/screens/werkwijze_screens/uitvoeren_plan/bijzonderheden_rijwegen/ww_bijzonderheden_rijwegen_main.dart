@@ -48,7 +48,7 @@ class WWBijzonderhedenRijwegenMain extends StatelessWidget {
                       SizedBoxH(),
                       NavButton(
                         buttontext: 'Inzetten railvoertuig ICB',
-                        destination: 'ww_inzetten_icb',
+                        destination: 'ww_inzet_railvoertuig_icb',
                       ),
                       SizedBoxH(),
                       NavButton(

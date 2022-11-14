@@ -1,18 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWAfhandelenSysteemstoringen {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_systeemstoringen,
-  // ignore: constant_identifier_names
-  ai_systemen,
-  // ignore: constant_identifier_names
-  ai_systeemstoring_gsmr,
-  // ignore: constant_identifier_names
-  ai_overige_incidenten,
-}
-
 class WWAfhandelenSysteemstoringen extends StatelessWidget {
   const WWAfhandelenSysteemstoringen({Key? key}) : super(key: key);
 
@@ -95,62 +82,55 @@ class WWAfhandelenSysteemstoringenNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWAfhandelenSysteemstoringen>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWAfhandelenSysteemstoringen result) async {
-        if (result == WhereToGoFromWWAfhandelenSysteemstoringen.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWAfhandelenSysteemstoringen.ai_systeemstoringen) {
+        } else if (result == PopupNavigation.ai_systeemstoringen) {
           await Navigator.pushNamed(context, 'ai_systeemstoringen');
-        } else if (result ==
-            WhereToGoFromWWAfhandelenSysteemstoringen.ai_systemen) {
+        } else if (result == PopupNavigation.ai_systemen) {
           await Navigator.pushNamed(context, 'ai_systemen');
-        } else if (result ==
-            WhereToGoFromWWAfhandelenSysteemstoringen.ai_systeemstoring_gsmr) {
+        } else if (result == PopupNavigation.ai_systeemstoring_gsmr) {
           await Navigator.pushNamed(context, 'ai_systeemstoring_gsmr');
-        } else if (result ==
-            WhereToGoFromWWAfhandelenSysteemstoringen.ai_overige_incidenten) {
+        } else if (result == PopupNavigation.ai_overige_incidenten) {
           await Navigator.pushNamed(context, 'ai_overige_incidenten');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWAfhandelenSysteemstoringen>>[
-        const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
-          value: WhereToGoFromWWAfhandelenSysteemstoringen.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
-          value: WhereToGoFromWWAfhandelenSysteemstoringen.ai_systeemstoringen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_systeemstoringen,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Systeemstoringen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
-          value: WhereToGoFromWWAfhandelenSysteemstoringen.ai_systemen,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_systemen,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Systemen',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
-          value:
-              WhereToGoFromWWAfhandelenSysteemstoringen.ai_systeemstoring_gsmr,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_systeemstoring_gsmr,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Systeemstoring GSM-R',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWAfhandelenSysteemstoringen>(
-          value:
-              WhereToGoFromWWAfhandelenSysteemstoringen.ai_overige_incidenten,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_overige_incidenten,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',

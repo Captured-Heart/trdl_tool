@@ -1,18 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWBrand {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_brand,
-  // ignore: constant_identifier_names
-  ai_ruclu,
-  // ignore: constant_identifier_names
-  ai_schakelen_bovenleiding,
-  // ignore: constant_identifier_names
-  ai_overige_incidenten,
-}
-
 class WWBrand extends StatelessWidget {
   const WWBrand({Key? key}) : super(key: key);
 
@@ -101,56 +88,55 @@ class WWBrandNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWBrand>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWBrand result) async {
-        if (result == WhereToGoFromWWBrand.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result == WhereToGoFromWWBrand.ai_brand) {
+        } else if (result == PopupNavigation.ai_brand) {
           await Navigator.pushNamed(context, 'ai_brand');
-        } else if (result == WhereToGoFromWWBrand.ai_ruclu) {
+        } else if (result == PopupNavigation.ai_ruclu) {
           await Navigator.pushNamed(context, 'ai_ruclu');
-        } else if (result == WhereToGoFromWWBrand.ai_schakelen_bovenleiding) {
+        } else if (result == PopupNavigation.ai_schakelen_bovenleiding) {
           await Navigator.pushNamed(context, 'ai_schakelen_bovenleiding');
-        } else if (result == WhereToGoFromWWBrand.ai_overige_incidenten) {
+        } else if (result == PopupNavigation.ai_overige_incidenten) {
           await Navigator.pushNamed(context, 'ai_overige_incidenten');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWBrand>>[
-        const PopupMenuItem<WhereToGoFromWWBrand>(
-          value: WhereToGoFromWWBrand.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWBrand>(
-          value: WhereToGoFromWWBrand.ai_brand,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_brand,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Brand',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWBrand>(
-          value: WhereToGoFromWWBrand.ai_ruclu,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_ruclu,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Procedure RU/CLU',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWBrand>(
-          value: WhereToGoFromWWBrand.ai_schakelen_bovenleiding,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_schakelen_bovenleiding,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Schakelen Bovenleiding',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWBrand>(
-          value: WhereToGoFromWWBrand.ai_overige_incidenten,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_overige_incidenten,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
             text: 'AI Overige Incidenten',

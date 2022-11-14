@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWOnjuisteDetectie {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_onjuiste_detectie,
-}
-
 class WWOnjuisteDetectie extends StatelessWidget {
   const WWOnjuisteDetectie({Key? key}) : super(key: key);
 
@@ -89,33 +82,31 @@ class WWOnjuisteDetectieNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromWWOnjuisteDetectie>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromWWOnjuisteDetectie result) async {
-        if (result == WhereToGoFromWWOnjuisteDetectie.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromWWOnjuisteDetectie.ai_onjuiste_detectie) {
-          await Navigator.pushNamed(context, 'ai_onjuiste_detectie');
+        } else if (result == PopupNavigation.ai_voertuig_onjuiste_detectie) {
+          await Navigator.pushNamed(context, 'ai_voertuig_onjuiste_detectie');
         } else {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromWWOnjuisteDetectie>>[
-        const PopupMenuItem<WhereToGoFromWWOnjuisteDetectie>(
-          value: WhereToGoFromWWOnjuisteDetectie.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromWWOnjuisteDetectie>(
-          value: WhereToGoFromWWOnjuisteDetectie.ai_onjuiste_detectie,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ai_voertuig_onjuiste_detectie,
           child: MenuItemContent(
             icon: IconUtils.iconAI,
-            text: 'AI Onjuiste Detectie',
+            text: 'AI Voertuig Onjuiste Detectie',
           ),
         ),
       ],

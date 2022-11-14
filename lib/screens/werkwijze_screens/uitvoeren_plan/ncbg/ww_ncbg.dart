@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromWWNcbg {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ai_ncbg,
-}
-
 class WWNcbg extends StatelessWidget {
   const WWNcbg({Key? key}) : super(key: key);
 
@@ -19,7 +12,7 @@ class WWNcbg extends StatelessWidget {
           title: StringUtils.appBarTitleWW,
         ),
         actions: const <Widget>[
-          WWNCBGNavigation(),
+          WWNcbgNavigation(),
           HomeButton(),
         ],
       ),
@@ -58,8 +51,8 @@ class WWNcbg extends StatelessWidget {
   }
 }
 
-class WWNCBGNavigation extends StatelessWidget {
-  const WWNCBGNavigation({
+class WWNcbgNavigation extends StatelessWidget {
+  const WWNcbgNavigation({
     Key? key,
   }) : super(key: key);
 
