@@ -1,12 +1,5 @@
 import '/all_imports.dart';
 
-enum WhereToGoFromAIMondelingeCommunicatie {
-  // ignore: constant_identifier_names
-  home_screen,
-  // ignore: constant_identifier_names
-  ww_mondelinge_communicatie,
-}
-
 class AIMondelingeCommunicatie extends StatelessWidget {
   const AIMondelingeCommunicatie({Key? key}) : super(key: key);
 
@@ -1118,14 +1111,13 @@ class AIMondelingeCommunicatieNavigation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PopupMenuButton<WhereToGoFromAIMondelingeCommunicatie>(
+    return PopupMenuButton<PopupNavigation>(
       icon: const Icon(IconUtils.iconInfo),
       tooltip: 'Meer informatie',
-      onSelected: (WhereToGoFromAIMondelingeCommunicatie result) async {
-        if (result == WhereToGoFromAIMondelingeCommunicatie.home_screen) {
+      onSelected: (PopupNavigation result) async {
+        if (result == PopupNavigation.home_screen) {
           await Navigator.pushNamed(context, 'home_screen');
-        } else if (result ==
-            WhereToGoFromAIMondelingeCommunicatie.ww_mondelinge_communicatie) {
+        } else if (result == PopupNavigation.ww_mondelinge_communicatie) {
           await Navigator.pushNamed(
             context,
             'ww_mondelinge_communicatie',
@@ -1134,18 +1126,16 @@ class AIMondelingeCommunicatieNavigation extends StatelessWidget {
           Navigator.pop(context);
         }
       },
-      itemBuilder: (BuildContext context) =>
-          <PopupMenuEntry<WhereToGoFromAIMondelingeCommunicatie>>[
-        const PopupMenuItem<WhereToGoFromAIMondelingeCommunicatie>(
-          value: WhereToGoFromAIMondelingeCommunicatie.home_screen,
+      itemBuilder: (BuildContext context) => <PopupMenuEntry<PopupNavigation>>[
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.home_screen,
           child: MenuItemContent(
             icon: IconUtils.iconHome,
             text: 'Home',
           ),
         ),
-        const PopupMenuItem<WhereToGoFromAIMondelingeCommunicatie>(
-          value:
-              WhereToGoFromAIMondelingeCommunicatie.ww_mondelinge_communicatie,
+        const PopupMenuItem<PopupNavigation>(
+          value: PopupNavigation.ww_mondelinge_communicatie,
           child: MenuItemContent(
             icon: IconUtils.iconWW,
             text: 'WW Mondelinge Communicatie',

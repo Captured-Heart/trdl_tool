@@ -83,6 +83,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderhe
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/bijzonderheden_trein/vervoersregeling/ai_vervoersregeling.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/ai_communicatie_main.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatiemiddelen/ai_communicatiemiddelen.dart';
+export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatiemiddelen/ai_communicatiemiddelen_oud.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/communicatiesysteem/ai_communicatiesysteem.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/ketenpartners/ai_ketenpartners.dart';
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/communicatie/mondelinge_communicatie/ai_mondelinge_communicatie.dart';
