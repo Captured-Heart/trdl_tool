@@ -99,6 +99,7 @@ export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/ncbg/ai_ncb
 export 'package:trdl_tool/screens/achtergrond_screens/uitvoeren_plan/uitvoeren_plan_basis/ai_uitvoeren_plan_basis.dart';
 export 'package:trdl_tool/screens/auth_screens/login_screen.dart';
 export 'package:trdl_tool/screens/auth_screens/register_screen.dart';
+export 'package:trdl_tool/screens/auth_screens/settings_screen.dart';
 export 'package:trdl_tool/screens/auth_screens/verify_screen.dart';
 export 'package:trdl_tool/screens/auth_screens/wachtwoord_screen.dart';
 export 'package:trdl_tool/screens/landing_screens/home_index0.dart';
