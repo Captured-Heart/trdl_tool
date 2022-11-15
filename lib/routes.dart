@@ -11,6 +11,7 @@ Map<String, WidgetBuilder> customRoutes = <String, WidgetBuilder>{
   'wachtwoord_screen': (BuildContext context) => const WachtwoordScreen(),
   'verify_screen': (BuildContext context) => const VerifyScreen(),
   'home_screen': (BuildContext context) => const HomeScreen(),
+  'settings_screen': (BuildContext context) => const SettingsScreen(),
 
   //Homepage routes
   'home_index0': (BuildContext context) => const HomeIndex0(),

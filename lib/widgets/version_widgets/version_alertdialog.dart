@@ -21,7 +21,7 @@ Future<dynamic> showVersionUpdatePopup(BuildContext context) {
                 ),
                 ChangesMade(
                   changes:
-                      '- Achtergrondinformatie verder uitgebreid (18);\n- Alle enums tbv navigatie verplaatst;\n- Utils class verder uitgebreid;\n- Firebase hersteld en refactored.',
+                      '- Achtergrondinformatie verder uitgebreid (19);\n- Alle enums tbv navigatie verplaatst;\n- Utils class verder uitgebreid;\n- Firebase hersteld en refactored.',
                 ),
                 SizedBoxH(),
                 DateChanged(

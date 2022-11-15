@@ -44,17 +44,6 @@ Widget drawerWidget =
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                const Text('Instellingen'),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.settings_outlined),
-                ),
-              ],
-            ),
-            const SizedBox(height: 10.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
                 //WATCH the themeModeStringProvider here, it
                 //returns the current String for the themeMode
                 Text('Theme: ${ref.watch(themeModeStringProvider)}'),
@@ -80,6 +69,22 @@ Widget drawerWidget =
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
+                const Text('Instellingen'),
+                IconButton(
+                  onPressed: () async {
+                    await Navigator.pushNamed(
+                      context,
+                      'settings_screen',
+                    );
+                  },
+                  icon: const Icon(Icons.settings_outlined),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
                 const Text('Versie & Updates:'),
                 Row(
                   children: <IconButton>[
@@ -87,7 +92,7 @@ Widget drawerWidget =
                       onPressed: () {
                         showVersionUpdatePopup(context);
                       },
-                      icon: const Icon(Icons.help),
+                      icon: const Icon(Icons.help_outlined),
                     ),
                   ],
                 ),

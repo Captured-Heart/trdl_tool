@@ -29,6 +29,7 @@ class StringUtils {
       'Wachtwoord dient hetzelfde te zijn';
   static const String registerAlEenAccount = 'Heb je al een account?';
 
+  static const String appBarTitleSettings = 'Settings';
   static const String appBarTitleWW = 'Werkwijze';
   static const String appBarTitleAI = 'Achtergrondinformatie';
 
