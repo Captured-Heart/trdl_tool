@@ -1,6 +1,6 @@
 import '/all_imports.dart';
 
-Future<dynamic> showLogOutPopup(BuildContext context) {
+Future<bool> showEditEmailPopup(BuildContext context) async {
   return showDialog(
     context: context,
     builder: (BuildContext context) {
@@ -12,7 +12,7 @@ Future<dynamic> showLogOutPopup(BuildContext context) {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               const Text(
-                'Wil je uitloggen?',
+                'Helaas kan je emailadres (nog) niet gewijzigd worden.',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -25,30 +25,10 @@ Future<dynamic> showLogOutPopup(BuildContext context) {
                   Expanded(
                     child: ElevatedButton(
                       onPressed: () {
-                        /*USER SELECTED YES. GO TO LOGINSCREEN*/
-                        AuthService().signOut();
-                        Navigator.pushReplacementNamed(
-                          context,
-                          'login_screen',
-                        );
+                        Navigator.pop(context);
                       },
                       child: const Text(
-                        'Ja',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ),
-                  const SizedBoxW(),
-                  Expanded(
-                    child: ElevatedButton(
-                      onPressed: () {
-                        /*USER SELECTED NO. CLOSE ALERTDIALOG.*/
-                        Navigator.of(context).pop();
-                      },
-                      child: const Text(
-                        'Nee',
+                        'OK',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
@@ -62,5 +42,5 @@ Future<dynamic> showLogOutPopup(BuildContext context) {
         ),
       );
     },
-  );
+  ) as bool;
 }

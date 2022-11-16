@@ -1,13 +1,13 @@
 import '/all_imports.dart';
 
-class RegisterScreen extends StatefulWidget {
+class RegisterScreen extends ConsumerStatefulWidget {
   const RegisterScreen({Key? key}) : super(key: key);
 
   @override
-  State<RegisterScreen> createState() => _RegisterScreenState();
+  RegisterScreenState createState() => RegisterScreenState();
 }
 
-class _RegisterScreenState extends State<RegisterScreen> {
+class RegisterScreenState extends ConsumerState<RegisterScreen> {
   late final TextEditingController _emailCtrl;
   late final TextEditingController _password1Ctrl;
   late final TextEditingController _password2Ctrl;
@@ -126,11 +126,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ElevatedButton(
                               onPressed: () async {
                                 //Superuser account plotsklapps
-                                Logger().i(
-                                  'Creating SUPERUSER plotsklapps... Going to VerifyScreen',
-                                );
                                 if (_emailCtrl.text
                                     .contains('plotsklapps@gmail.com')) {
+                                  Logger().i(
+                                    'Creating SUPERUSER plotsklapps... Going to VerifyScreen',
+                                  );
                                   await AuthService().signUp(
                                     email: _emailCtrl.text,
                                     password: _password1Ctrl.text,

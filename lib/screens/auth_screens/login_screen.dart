@@ -1,13 +1,13 @@
 import '/all_imports.dart';
 
-class LoginScreen extends StatefulWidget {
+class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  LoginScreenState createState() => LoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class LoginScreenState extends ConsumerState<LoginScreen> {
   late final TextEditingController _emailCtrl;
   late final TextEditingController _passwordCtrl;
 
@@ -15,8 +15,11 @@ class _LoginScreenState extends State<LoginScreen> {
   void initState() {
     _emailCtrl = TextEditingController();
     _passwordCtrl = TextEditingController();
+    ref.read(currentUserProvider);
     super.initState();
   }
+
+  //TODO: Fix unexpected null error!
 
   @override
   void dispose() {
@@ -112,8 +115,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                     password: _passwordCtrl.text,
                                   );
                                   //Check if user clicked on verification email, if so, continue to HomeScreen
-                                  if (FirebaseAuth
-                                      .instance.currentUser!.emailVerified) {
+                                  if (ref
+                                      .read(currentUserProvider)!
+                                      .emailVerified) {
                                     if (mounted) {
                                       Logger().i(
                                         'User is verified... Going to HomeScreen',
@@ -127,8 +131,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                     }
                                   }
                                   //If user did NOT click on verification email return SnackBar notifying user
-                                  else if (!FirebaseAuth
-                                      .instance.currentUser!.emailVerified) {
+                                  else if (!ref
+                                      .read(currentUserProvider)!
+                                      .emailVerified) {
                                     if (mounted) {
                                       Logger().i(
                                         'User is NOT verified... Returning SnackBar',

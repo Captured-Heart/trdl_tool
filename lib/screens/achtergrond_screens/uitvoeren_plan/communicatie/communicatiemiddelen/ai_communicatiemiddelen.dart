@@ -548,9 +548,10 @@ class AICommunicatieMiddelen extends StatelessWidget {
                   ),
                   SizedBoxH(),
                   BodyText(
-                      indents: 1,
-                      text:
-                          "- Daar waar door seingeving opgelegd wordt de snelheid te begrenzen tot 40 km/u of zoveel minder als nodig is om voor het eerstvolgende 'stop' tonende sein te kunnen stoppen;\n- Daar waar door seingeving of een aanwijzing opgelegd wordt de snelheid te beperken tot een snelheid van maximaal 40 km/u.")
+                    indents: 1,
+                    text:
+                        "- Daar waar door seingeving opgelegd wordt de snelheid te begrenzen tot 40 km/u of zoveel minder als nodig is om voor het eerstvolgende 'stop' tonende sein te kunnen stoppen;\n- Daar waar door seingeving of een aanwijzing opgelegd wordt de snelheid te beperken tot een snelheid van maximaal 40 km/u.",
+                  ),
                 ],
               ),
               TextCard(

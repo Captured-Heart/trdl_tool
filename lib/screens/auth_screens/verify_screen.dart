@@ -1,15 +1,14 @@
 import 'dart:async';
 import '/all_imports.dart';
 
-class VerifyScreen extends StatefulWidget {
+class VerifyScreen extends ConsumerStatefulWidget {
   const VerifyScreen({Key? key}) : super(key: key);
 
   @override
   VerifyScreenState createState() => VerifyScreenState();
 }
 
-class VerifyScreenState extends State<VerifyScreen> {
-  User? currentUser = FirebaseAuth.instance.currentUser;
+class VerifyScreenState extends ConsumerState<VerifyScreen> {
   late Timer timer;
 
   @override
@@ -18,14 +17,16 @@ class VerifyScreenState extends State<VerifyScreen> {
     Future<void>.delayed(Duration.zero, () async {
       await _waitForEmailVerification();
     });
+    ref.read(currentUserProvider);
     super.initState();
   }
 
   //Function that checks if currentUser is NOT null and NOT emailverified -> Send verification email.
   Future<void> _waitForEmailVerification() async {
-    if (currentUser != null && !currentUser!.emailVerified) {
+    final User? currentUser = ref.watch(currentUserProvider);
+    if (currentUser != null && !currentUser.emailVerified) {
       Logger().i('Sending verification email...');
-      await currentUser!.sendEmailVerification();
+      await currentUser.sendEmailVerification();
     }
 
     //Timer checks if user clicked on verification every 5 seconds
@@ -38,11 +39,11 @@ class VerifyScreenState extends State<VerifyScreen> {
 
   //Function that checks if user clicked on the link in the verification email
   Future<void> checkEmailVerified() async {
-    currentUser = FirebaseAuth.instance.currentUser;
+    final User? currentUser = ref.watch(currentUserProvider);
     //Refreshes the currentUser, if signed in
     await currentUser!.reload();
     //If user clicks on the link, stop the timer and return to LoginScreen
-    if (currentUser!.emailVerified) {
+    if (currentUser.emailVerified) {
       timer.cancel();
       if (mounted) {
         Logger().i('Success! Going to LoginScreen()');
@@ -82,7 +83,7 @@ class VerifyScreenState extends State<VerifyScreen> {
               height: 24.0,
             ),
             Text(
-              'Een verificatie email is verstuurd naar ${currentUser!.email}, controleer ook de junk-/spamfolder. U wordt doorgestuurd naar de inlogpagina als u op de verificatielink hebt geklikt.',
+              'Een verificatie email is verstuurd naar ${ref.read(currentUserProvider)!.email}, controleer ook de junk-/spamfolder. U wordt doorgestuurd naar de inlogpagina als u op de verificatielink hebt geklikt.',
               style: const TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.w700,
