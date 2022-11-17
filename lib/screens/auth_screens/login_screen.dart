@@ -1,6 +1,7 @@
 import '/all_imports.dart';
 
 class LoginScreen extends ConsumerStatefulWidget {
+  static const String routeName = 'login_screen';
   const LoginScreen({Key? key}) : super(key: key);
 
   @override
@@ -19,6 +20,9 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
   }
 
   //TODO: Fix unexpected null error!
+  //TODO(CAPTURED-HEART): [SUPPOSED FIX] => avoid declaring the text controller late.. you can declare them and dispose the when you are done, instead of on the dispose method
+  // E.G : final TextEditingController emailCtrl = TextEditingController();
+  ///[then when you have logged in, you can call the {emailCtrl.dispose() methods}]
 
   @override
   void dispose() {
@@ -104,52 +108,54 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
                           children: <ElevatedButton>[
                             ElevatedButton(
                               onPressed: () async {
-                                try {
-                                  //Sign in method
-                                  Logger().i(
-                                    'Signing in... Checking for verification...',
-                                  );
-                                  await AuthService().signIn(
-                                    email: _emailCtrl.text,
-                                    password: _passwordCtrl.text,
-                                  );
-                                  //Check if user clicked on verification email, if so, continue to HomeScreen
-                                  if (FirebaseAuth
-                                      .instance.currentUser!.emailVerified) {
-                                    if (mounted) {
-                                      Logger().i(
-                                        'User is verified... Going to HomeScreen',
-                                      );
-                                      await Navigator.pushReplacementNamed(
-                                        context,
-                                        'home_screen',
-                                      );
-                                    } else {
-                                      return;
-                                    }
-                                  }
-                                  //If user did NOT click on verification email return SnackBar notifying user
-                                  else if (!FirebaseAuth
-                                      .instance.currentUser!.emailVerified) {
-                                    if (mounted) {
-                                      Logger().i(
-                                        'User is NOT verified... Returning SnackBar',
-                                      );
-                                      ScaffoldMessenger.of(context)
-                                          .showSnackBar(
-                                        snackBarLoginEmailVerificatie,
-                                      );
-                                    } else {
-                                      return;
-                                    }
-                                  }
-                                  //All other error situations, show on console and return SnackBar notifying user
-                                } catch (errorMessage) {
-                                  Logger().w('Error: $errorMessage');
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    snackBarLoginErIsIetsMis,
-                                  );
-                                }
+                                // try {
+                                //   //Sign in method
+                                //   Logger().i(
+                                //     'Signing in... Checking for verification...',
+                                //   );
+
+                                await AuthService().signIn(
+                                  email: _emailCtrl.text,
+                                  password: _passwordCtrl.text,
+                                  context: context,
+                                );
+                                //   //Check if user clicked on verification email, if so, continue to HomeScreen
+                                //   if (FirebaseAuth
+                                //       .instance.currentUser!.emailVerified) {
+                                //     if (mounted) {
+                                //       Logger().i(
+                                //         'User is verified... Going to HomeScreen',
+                                //       );
+                                //       await Navigator.pushReplacementNamed(
+                                //         context,
+                                //         'home_screen',
+                                //       );
+                                //     } else {
+                                //       return;
+                                //     }
+                                //   }
+                                //   //If user did NOT click on verification email return SnackBar notifying user
+                                //   else if (!FirebaseAuth
+                                //       .instance.currentUser!.emailVerified) {
+                                //     if (mounted) {
+                                //       Logger().i(
+                                //         'User is NOT verified... Returning SnackBar',
+                                //       );
+                                //       ScaffoldMessenger.of(context)
+                                //           .showSnackBar(
+                                //         snackBarLoginEmailVerificatie,
+                                //       );
+                                //     } else {
+                                //       return;
+                                //     }
+                                //   }
+                                //   //All other error situations, show on console and return SnackBar notifying user
+                                // } catch (errorMessage) {
+                                //   Logger().w('Error: $errorMessage');
+                                //   ScaffoldMessenger.of(context).showSnackBar(
+                                //     snackBarLoginErIsIetsMis,
+                                //   );
+                                // }
                               },
                               child: const Text(
                                 'LOGIN',
