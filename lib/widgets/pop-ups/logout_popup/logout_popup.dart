@@ -24,9 +24,9 @@ Future<dynamic> showLogOutPopup(BuildContext context) {
                 children: <Widget>[
                   Expanded(
                     child: ElevatedButton(
-                      onPressed: () {
+                      onPressed: () async {
                         /*USER SELECTED YES. GO TO LOGINSCREEN*/
-                        AuthService().signOut();
+                        await AuthService().signOut();
                         Navigator.pushReplacementNamed(
                           context,
                           'login_screen',

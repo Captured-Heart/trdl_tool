@@ -15,7 +15,6 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
   void initState() {
     _emailCtrl = TextEditingController();
     _passwordCtrl = TextEditingController();
-    ref.read(currentUserProvider);
     super.initState();
   }
 
@@ -115,9 +114,8 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
                                     password: _passwordCtrl.text,
                                   );
                                   //Check if user clicked on verification email, if so, continue to HomeScreen
-                                  if (ref
-                                      .read(currentUserProvider)!
-                                      .emailVerified) {
+                                  if (FirebaseAuth
+                                      .instance.currentUser!.emailVerified) {
                                     if (mounted) {
                                       Logger().i(
                                         'User is verified... Going to HomeScreen',
@@ -131,9 +129,8 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
                                     }
                                   }
                                   //If user did NOT click on verification email return SnackBar notifying user
-                                  else if (!ref
-                                      .read(currentUserProvider)!
-                                      .emailVerified) {
+                                  else if (!FirebaseAuth
+                                      .instance.currentUser!.emailVerified) {
                                     if (mounted) {
                                       Logger().i(
                                         'User is NOT verified... Returning SnackBar',
