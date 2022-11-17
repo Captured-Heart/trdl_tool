@@ -9,12 +9,6 @@ class SettingsScreen extends ConsumerStatefulWidget {
 
 class SettingsScreenState extends ConsumerState<SettingsScreen> {
   @override
-  void initState() {
-    super.initState();
-    ref.read(currentUserProvider);
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -35,7 +29,7 @@ class SettingsScreenState extends ConsumerState<SettingsScreen> {
                   Icons.email_outlined,
                 ),
                 title: Text(
-                  'Emailadres: ${ref.watch(currentUserProvider)?.email}',
+                  'Emailadres: ${FirebaseUtils.emailCurrentUser}',
                 ),
                 trailing: IconButton(
                   onPressed: () async {
@@ -51,7 +45,7 @@ class SettingsScreenState extends ConsumerState<SettingsScreen> {
                   Icons.person_outlined,
                 ),
                 title: Text(
-                  'Gebruikersnaam: ${ref.watch(currentUserProvider)?.displayName}',
+                  'Gebruikersnaam: ${FirebaseUtils.displayNameCurrentUser}',
                 ),
                 trailing: IconButton(
                   onPressed: () {},

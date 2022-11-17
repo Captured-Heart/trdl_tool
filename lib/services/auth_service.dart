@@ -21,6 +21,7 @@ class AuthService {
   //Sign OUT user
   Future<void> signOut() async {
     await FirebaseAuth.instance.signOut();
+    Logger().i('Logging out user...');
   }
 
   //Send password reset email only with valid email

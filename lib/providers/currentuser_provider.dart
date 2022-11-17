@@ -1,5 +1,7 @@
 import '/all_imports.dart';
 
+//This provider is not used (yet). I need to figure out how to reset the currentUser when logging out first!
+
 final StateNotifierProvider<CurrentUser, User?> currentUserProvider =
 // ignore: always_specify_types
     StateNotifierProvider<CurrentUser, User?>((ref) {
