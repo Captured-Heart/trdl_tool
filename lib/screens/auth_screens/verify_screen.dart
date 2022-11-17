@@ -17,13 +17,12 @@ class VerifyScreenState extends ConsumerState<VerifyScreen> {
     Future<void>.delayed(Duration.zero, () async {
       await _waitForEmailVerification();
     });
-    ref.read(currentUserProvider);
     super.initState();
   }
 
   //Function that checks if currentUser is NOT null and NOT emailverified -> Send verification email.
   Future<void> _waitForEmailVerification() async {
-    final User? currentUser = ref.watch(currentUserProvider);
+    final User? currentUser = FirebaseAuth.instance.currentUser;
     if (currentUser != null && !currentUser.emailVerified) {
       Logger().i('Sending verification email...');
       await currentUser.sendEmailVerification();
@@ -39,7 +38,7 @@ class VerifyScreenState extends ConsumerState<VerifyScreen> {
 
   //Function that checks if user clicked on the link in the verification email
   Future<void> checkEmailVerified() async {
-    final User? currentUser = ref.watch(currentUserProvider);
+    final User? currentUser = FirebaseAuth.instance.currentUser;
     //Refreshes the currentUser, if signed in
     await currentUser!.reload();
     //If user clicks on the link, stop the timer and return to LoginScreen
@@ -83,7 +82,7 @@ class VerifyScreenState extends ConsumerState<VerifyScreen> {
               height: 24.0,
             ),
             Text(
-              'Een verificatie email is verstuurd naar ${ref.read(currentUserProvider)!.email}, controleer ook de junk-/spamfolder. U wordt doorgestuurd naar de inlogpagina als u op de verificatielink hebt geklikt.',
+              'Een verificatie email is verstuurd naar ${FirebaseAuth.instance.currentUser?.email}, controleer ook de junk-/spamfolder. U wordt doorgestuurd naar de inlogpagina als u op de verificatielink hebt geklikt.',
               style: const TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.w700,

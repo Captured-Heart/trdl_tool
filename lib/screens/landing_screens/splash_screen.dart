@@ -2,8 +2,6 @@ import 'dart:async';
 
 import '/all_imports.dart';
 
-final User? alreadySignedInUser = FirebaseAuth.instance.currentUser;
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
@@ -17,7 +15,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     /*USER IS KNOWN => HOME_SCREEN*/
-    if (alreadySignedInUser != null) {
+    if (FirebaseAuth.instance.currentUser != null) {
       timer = Timer(
         /*SET TIMER TO ... SECONDS*/
         const Duration(seconds: 3),

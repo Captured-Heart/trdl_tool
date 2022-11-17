@@ -1,5 +1,7 @@
 import 'all_imports.dart';
 
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+
 Future<void> main() async {
   //Make sure everything is in place, before running the app
   WidgetsFlutterBinding.ensureInitialized();
