@@ -26,11 +26,12 @@ Future<dynamic> showLogOutPopup(BuildContext context) {
                     child: ElevatedButton(
                       onPressed: () async {
                         /*USER SELECTED YES. GO TO LOGINSCREEN*/
-                        await AuthService().signOut();
-                        Navigator.pushReplacementNamed(
-                          context,
-                          'login_screen',
-                        );
+                        await AuthService().signOut().whenComplete(
+                              () => Navigator.pushReplacementNamed(
+                                context,
+                                'login_screen',
+                              ),
+                            );
                       },
                       child: const Text(
                         'Ja',
