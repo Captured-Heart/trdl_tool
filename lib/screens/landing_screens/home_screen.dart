@@ -1,5 +1,10 @@
 import '/all_imports.dart';
 
+
+//TODO: YOU COULD DECLARE THE PAGECONTROLLER LIKE THIS AND USE IN ANY PART OF YOUR APP
+// final pageControllerProvider = Provider<PageController>((ref) {
+//   return PageController(initialPage:0 );
+// });
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -18,11 +23,15 @@ class BottomNavigationScreen extends StatefulWidget {
 
 class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int _selectedIndex = 0;
+
+  //
   late PageController _pageController;
 
   Future<void> _onItemTapped(int index) async {
     setState(() {
       _selectedIndex = index;
+
+      //TODO: BELOW METHOD, CAN BE OUTSIDE OF THE SETSTATE
       _pageController.animateToPage(
         index,
         duration: const Duration(
@@ -31,6 +40,8 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
         //Set curve to choose animationstyle
         curve: Curves.easeInOutCubicEmphasized,
       );
+
+      
     });
   }
 

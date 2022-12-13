@@ -26,11 +26,16 @@ Future<dynamic> showLogOutPopup(BuildContext context) {
                     child: ElevatedButton(
                       onPressed: () async {
                         /*USER SELECTED YES. GO TO LOGINSCREEN*/
-                        await AuthService().signOut();
-                        Navigator.pushReplacementNamed(
-                          context,
-                          'login_screen',
-                        );
+
+                        //: WE CAN IMPLEMENT THE WHEN COMPLETE METHOD TO CHECK IF THE SIGNOUT METHOD COMPLETES BEFORE NAVIGATING
+                        await AuthService().signOut().whenComplete(
+                              () => Navigator.pushReplacementNamed(
+                                context,
+//we can actually make out routeNames static, so we don't have to remember it all the time
+                                LoginScreen.routeName,
+                                // 'login_screen',
+                              ),
+                            );
                       },
                       child: const Text(
                         'Ja',

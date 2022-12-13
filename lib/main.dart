@@ -1,3 +1,6 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
+
 import 'all_imports.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -15,8 +18,11 @@ Future<void> main() async {
   );
   runApp(
     //ProviderScope manages Riverpod Providers
-    const ProviderScope(
-      child: MainEntry(),
+    ProviderScope(
+      child: DevicePreview(
+        enabled: !kReleaseMode,
+        builder: (BuildContext context) => const MainEntry(),
+      ),
     ),
   );
 }
@@ -31,11 +37,14 @@ class MainEntry extends ConsumerWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: StringUtils.mainTitle,
+       useInheritedMediaQuery: true,
+      builder: DevicePreview.appBuilder,
       //Theming starts from phonesetting, afterwards adjustable by user
       theme: ref.watch(themeLightProvider),
       darkTheme: ref.watch(themeDarkProvider),
       themeMode: ref.watch(themeModeProvider),
       //Load SplashScreen FIRST
+      
       initialRoute: '/',
       //See routes.dart
       routes: customRoutes,
