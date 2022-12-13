@@ -63,7 +63,8 @@ class AuthService {
   Future<void> signOut() async {
     await FirebaseAuth.instance.signOut();
     Logger().i(
-        'Signing out currentUser... Currentuser: ${FirebaseAuth.instance.currentUser!.email} should ');
+      'Signing out currentUser... Currentuser: ${FirebaseAuth.instance.currentUser!.email} <- Should be null!',
+    );
   }
 
   //Send password reset email only with valid email
